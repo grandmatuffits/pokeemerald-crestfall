@@ -16877,3 +16877,522 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_UMBRA_OPENING ===
+Name: UMBRA
+Class: Pkmn Trainer 1
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Gyarados @ Choice Band
+Level: 50
+- Ice Fang
+- Ice Fang
+- Ice Fang
+- Ice Fang
+
+=== TRAINER_RIVALCF_1 ===
+Name: RIVAL
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Mienfoo @ None
+Level: 5
+- Pound
+- Meditate
+
+=== TRAINER_BOBBY_101 ===
+Name: BOBBY
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sentret
+Level: 4
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Scratch
+- Defense Curl
+
+=== TRAINER_SALLY_101 ===
+Name: SALLY
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Starly
+Level: 5
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Tackle
+- Growl
+- Quick Attack
+
+Nidoran F
+Level: 6
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Poison Sting
+- Growl
+- Scratch
+
+=== TRAINER_JARED_ALLENWOOD ===
+Name: JARED
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Weedle @ None
+Level: 7
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Poison Sting
+- String Shot
+
+=== TRAINER_DYLAN_ALLENWOOD ===
+Name: DYLAN
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Mareep @ None
+Level: 7
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Tackle
+- Growl
+
+Oddish @ None
+Level: 7
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Absorb
+- Growl
+
+=== TRAINER_GABE_ALLENWOOD ===
+Name: GABE
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Kakuna @ None
+Level: 8
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Harden
+
+=== TRAINER_BETH_ALLENWOOD ===
+Name: BETH
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Marill @ None
+Level: 6
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Tackle
+- Tail Whip
+- Water Gun
+
+Vulpix @ None
+Level: 6
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Ember
+- Tail Whip
+
+Pikachu @ None
+Level: 7
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Thunder Shock
+- Tail Whip
+- Quick Attack
+
+=== TRAINER_KINNERET_GYM_TOBY ===
+Name: TOBY
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Starly @ None
+Level: 10
+
+Ducklett @ None
+Level: 11
+
+=== TRAINER_KINNERET_GYM_CHELSEA ===
+Name: CHELSEA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Woobat @ None
+Level: 11
+
+=== TRAINER_KINNERET_GYM_ERWIN ===
+Name: ERWIN
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Vullaby @ None
+Level: 12
+
+
+=== TRAINER_ROBIN_1 ===
+Name: ROBIN
+Class: Leader
+Pic: Leader Roxanne
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Check Bad Move / Try To Faint
+
+Starly@ None
+Level: 12
+- Quick Attack
+- Aerial Ace
+- Double Team
+- Whirlwind
+
+Gligar @ None
+Level: 14
+- Stealth Rock
+- Sand Attack
+- Aerial Ace
+- Knock Off
+
+=== TRAINER_ROUTE_2_TWINS ===
+Name: PAM & CAM
+Class: Twins
+Pic: Twins
+Gender: Female
+Music: Girl
+Double Battle: Yes
+AI: Check Bad Move
+
+Horsea @ None
+Level: 12
+
+Tangela @ None
+Level: 12
+
+=== TRAINER_ROUTE_2_JORDAN ===
+Name: JORDAN
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Tentacool @ None
+Level: 11
+
+=== TRAINER_ROUTE_2_LISA ===
+Name: LISA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Oddish @ None
+Level: 12
+
+Shroomish @ None
+Level: 12
+
+Starly @ None
+Level: 12
+
+=== TRAINER_ROUTE_2_BEN ===
+Name: BEN
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Nidoran M @ None
+Level: 13
+
+Nidoran F @ None
+Level: 13
+
+=== TRAINER_ROUTE_2_JOE ===
+Name: JOE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Roggenrola @ None
+Level: 13
+
+Diglett @ None
+Level: 14
+
+Aron @ None
+Level: 14
+
+=== TRAINER_RIDLEY_CAVE_MARTY ===
+Name: MARTY
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Sandshrew @ None
+Level: 14
+
+Dwebble @ None
+Level: 14
+
+=== TRAINER_RIDLEY_CAVE_MAC ===
+Name: MAC
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Furret @ None
+Level: 15
+
+=== TRAINER_RIDLEY_CAVE_DON ===
+Name: DON
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Roggenrola @ None
+Level: 14
+
+Drilbur @ None
+Level: 14
+
+=== TRAINER_RIDLEY_CAVE_SHELBY ===
+Name: SHELBY
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Foongus @ None
+Level: 13
+
+Togepi @ None
+Level: 13
+
+Ducklett @ None
+Level: 13
+
+=== TRAINER_RIDLEY_CAVE_GEORGE ===
+Name: GEORGE
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Baltoy @ None
+Level: 14
+
+Voltorb @ None
+Level: 15
+
+=== TRAINER_RIDLEY_CAVE_SHEILA ===
+Name: SHEILA
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Meditite @ None
+Level: 14
+
+Riolu @ None
+Level: 15
+
+=== TRAINER_RIDLEY_CAVE_EXIT_DAISY ===
+Name: DAISY
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Budew @ None
+Level: 15
+
+=== TRAINER_RIDLEY_CAVE_EXIT_JON ===
+Name: JON
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Larvitar @ None
+Level: 16
+
+=== TRAINER_ALLENWOOD_BETSY ===
+Name: BETSY
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Foongus @ None
+Level: 6
+
+Starly @ None
+Level: 6
+
+Sentret @ None
+Level: 6
+
+=== TRAINER_ALLENWOOD_CHET ===
+Name: CHET
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Venipede @ None
+Level: 7
+
+Yanma @ None
+Level: 8
+
+=== TRAINER_ROUTE_3_BOB ===
+Name: BOB
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Diglett @ None
+Level: 13
+
+Sandshrew @ None
+Level: 13
+
+=== TRAINER_ROUTE_3_TIFF ===
+Name: TIFF
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+Togepi @ None
+Level: 13
+
+Starly @ None
+Level: 14
+
+=== TRAINER_ROUTE_3_BLAKE ===
+Name: BLAKE
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Houndour @ None
+Level: 15
+
+=== TRAINER_ROUTE_3_JEFF ===
+Name: JEFF
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Magnemite @ None
+Level: 16
+
+=== TRAINER_ROUTE_3_JONAS ===
+Name: JONAS
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Staryu @ None
+Level: 15
+
+Carvanha @ None
+Level: 16
+
+=== TRAINER_ROUTE_3_LEMMY ===
+Name: LEMMY
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Voltorb @ None
+Level: 16
+
+Emolga @ None
+Level: 16

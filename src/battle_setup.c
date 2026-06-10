@@ -1480,6 +1480,16 @@ static void CB2_EndTrainerBattle(void)
     {
         if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()) || FlagGet(B_FLAG_NO_WHITEOUT))
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+        else if (FlagGet(FLAG_UNUSED_0x026))
+        {
+            FlagClear(FLAG_UNUSED_0x026);
+            FlagSet(FLAG_UNUSED_0x025);
+            FlagSet(FLAG_UNUSED_0x027);
+            VarSet(VAR_ROUTE103_STATE, 1);
+            HealPlayerParty();
+            SetWarpDestination(MAP_GROUP(MAP_MINSI_LAB), MAP_NUM(MAP_MINSI_LAB), WARP_ID_NONE, 6, 12);
+            SetMainCallback2(CB2_ReturnToField);
+        }
         else
             SetMainCallback2(CB2_WhiteOut);
     }

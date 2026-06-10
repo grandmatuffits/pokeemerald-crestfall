@@ -1,0 +1,190 @@
+
+MINSI_CITY_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MINSI_CITY_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MINSI_CITY_OnFrame
+	.byte 0
+
+MINSI_CITY_OnTransition:
+	goto_if_set FLAG_UNUSED_0x021, MINSI_CITY_OnTransition_End
+	setflag FLAG_UNUSED_0x021
+	clearflag FLAG_UNUSED_0x020
+	special Special_ClearPlayerParty
+MINSI_CITY_OnTransition_End:
+	end
+
+MINSI_CITY_OnFrame:
+	map_script_2 VAR_VERDANTURF_TOWN_STATE, 0, MINSI_CITY_Intro
+	.2byte 0
+
+MINSI_CITY_Intro::
+	setvar VAR_VERDANTURF_TOWN_STATE, 1
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerFaceBrutus
+	waitmovement 0
+	setspeaker MINSI_CITY_Text_BrutusName
+	msgbox MINSI_CITY_Text_Brutus1, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_BRUTUS_MINSI, MINSI_CITY_Movement_BrutusLeave
+	waitmovement 0
+	removeobject LOCALID_BRUTUS_MINSI
+	setflag FLAG_UNUSED_0x029
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerWalkSouth
+	waitmovement 0
+	end
+
+MINSI_CITY_Movement_PlayerFaceBrutus::
+	face_right
+	step_end
+
+MINSI_CITY_Movement_BrutusLeave::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MINSI_CITY_Movement_PlayerWalkSouth::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+MINSI_CITY_Text_BrutusName:
+	.string "Brutus$"
+
+MINSI_CITY_Text_Brutus1:
+	.string "I'm very disappointed in you,\n{PLAYER}. You brought shame to\lthis family.\pDon't come back home to Veldtmoor\nwithout 8 gym badges, the required\lamount to challenge the Pokemon\lLeague.$"
+
+MINSI_CITY_EventScript_NorthGuard::
+	lock
+	faceplayer
+	setspeaker MINSI_CITY_Text_GuardName
+	msgbox MINSI_CITY_Text_Guard1, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+MINSI_CITY_Text_GuardName:
+	.string "Guard$"
+
+MINSI_CITY_Text_Guard1:
+	.string "Sorry kid, you can't come\nthrough without 8 badges.$"
+
+MINSI_CITY_EventScript_NorthTrigger::
+	lockall
+	applymovement LOCALID_MINSI_NORTHGUARD, MINSI_CITY_Movement_GuardFacePlayer
+	waitmovement 0
+	setspeaker MINSI_CITY_Text_GuardName
+	msgbox MINSI_CITY_Text_Guard1, MSGBOX_SIGN
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerPushedSouth
+	waitmovement 0
+	releaseall
+	end
+
+MINSI_CITY_Movement_PlayerPushedSouth::
+	walk_down
+	step_end
+
+MINSI_CITY_Movement_GuardFacePlayer::
+	face_left
+	step_end
+
+MINSI_CITY_Movement_PlayerFaceSouth::
+	face_down
+	step_end
+
+MINSI_CITY_EventScript_GymDoor::
+	goto_if_unset FLAG_BADGE01_GET, MINSI_CITY_EventScript_GymLocked
+	goto_if_unset FLAG_BADGE02_GET, MINSI_CITY_EventScript_GymLocked
+	goto_if_unset FLAG_BADGE03_GET, MINSI_CITY_EventScript_GymLocked
+	goto_if_unset FLAG_BADGE04_GET, MINSI_CITY_EventScript_GymLocked
+	goto_if_unset FLAG_BADGE05_GET, MINSI_CITY_EventScript_GymLocked
+	goto_if_unset FLAG_BADGE06_GET, MINSI_CITY_EventScript_GymLocked
+	goto_if_unset FLAG_BADGE07_GET, MINSI_CITY_EventScript_GymLocked
+	end
+
+MINSI_CITY_EventScript_GymLocked::
+	lockall
+	msgbox MINSI_CITY_Text_GymLocked, MSGBOX_SIGN
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerStepBack
+	waitmovement 0
+	releaseall
+	end
+
+MINSI_CITY_Movement_PlayerStepBack::
+	walk_down
+	step_end
+	
+MINSI_CITY_Text_GymLocked:
+	.string "The gym is locked.\nYou need 7 badges to enter.$"
+
+MINSI_CITY_EventScript_SouthTrigger::
+	goto_if_set FLAG_SYS_POKEDEX_GET, MINSI_CITY_EventScript_SouthTrigger_End
+	lockall
+	applymovement LOCALID_POKELABGUY, MINSI_CITY_Movement_PokeLabGuyFace
+	waitmovement 0
+	msgbox MINSI_CITY_Text_SouthTrigger, MSGBOX_SIGN
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerStepNorth
+	waitmovement 0
+	releaseall
+MINSI_CITY_EventScript_SouthTrigger_End:
+	end
+
+MINSI_CITY_Movement_PokeLabGuyFace::
+	face_left
+	step_end
+
+MINSI_CITY_Movement_PlayerStepNorth::
+	walk_up
+	step_end
+
+MINSI_CITY_Text_SouthTrigger:
+	.string "Hey, you're a new face!\nYou should go check out\lthe Pokemon Lab!$"
+
+	MINSI_CITY_EventScript_PokeCenterBlock::
+	lock
+	faceplayer
+	goto_if_set FLAG_SYS_POKEDEX_GET, MINSI_CITY_EventScript_PokeCenterBlock_Move
+	msgbox MINSI_CITY_Text_PokeCenterBlock, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+MINSI_CITY_EventScript_PokeCenterBlock_Move::
+	release
+	end
+
+MINSI_CITY_Text_PokeCenterBlock:
+	.string "Are you new here? You should go\ncheck out the Pokemon Lab just\ldown the street.\pProfessor Hemlock is so dreamy...$"
+
+MINSI_CITY_EventScript_TMGuy::
+	lock
+	faceplayer
+	goto_if_set FLAG_UNUSED_0x02C, MINSI_CITY_EventScript_TMGuy_Repeat
+	msgbox MINSI_CITY_Text_TMGuy1, MSGBOX_SIGN
+	closemessage
+	giveitem ITEM_TM_REST
+	setflag FLAG_UNUSED_0x02C
+	release
+	end
+
+MINSI_CITY_EventScript_TMGuy_Repeat::
+	msgbox MINSI_CITY_Text_TMGuy2, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+MINSI_CITY_Text_TMGuy1:
+	.string "You deserve a break!\nHave a rest! Heh heh!$"
+MINSI_CITY_Text_TMGuy2:
+	.string "Now go take a rest so you\ncan get back to business!$"

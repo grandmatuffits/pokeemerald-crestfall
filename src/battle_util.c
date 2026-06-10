@@ -5588,22 +5588,22 @@ enum Obedience GetAttackerObedienceForAction(void)
     if (FlagGet(FLAG_BADGE08_GET)) // Rain Badge, ignore obedience altogether
         return OBEYS;
 
-    obedienceLevel = 10;
+    obedienceLevel = 15;
 
     if (FlagGet(FLAG_BADGE01_GET)) // Stone Badge
-        obedienceLevel = 20;
+        obedienceLevel = 25;
     if (FlagGet(FLAG_BADGE02_GET)) // Knuckle Badge
-        obedienceLevel = 30;
+        obedienceLevel = 35;
     if (FlagGet(FLAG_BADGE03_GET)) // Dynamo Badge
-        obedienceLevel = 40;
+        obedienceLevel = 45;
     if (FlagGet(FLAG_BADGE04_GET)) // Heat Badge
-        obedienceLevel = 50;
+        obedienceLevel = 55;
     if (FlagGet(FLAG_BADGE05_GET)) // Balance Badge
-        obedienceLevel = 60;
+        obedienceLevel = 65;
     if (FlagGet(FLAG_BADGE06_GET)) // Feather Badge
-        obedienceLevel = 70;
+        obedienceLevel = 75;
     if (FlagGet(FLAG_BADGE07_GET)) // Mind Badge
-        obedienceLevel = 80;
+        obedienceLevel = 85;
 
     if (B_OBEDIENCE_MECHANICS >= GEN_8
      && !IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
@@ -9153,20 +9153,14 @@ void TryRestoreHeldItems(void)
 {
     u32 i;
     bool32 returnNPCItems = B_RETURN_STOLEN_NPC_ITEMS >= GEN_5 && gBattleTypeFlags & BATTLE_TYPE_TRAINER;
-
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        // Check if held items should be restored after battle based on generation
         if (B_RESTORE_HELD_BATTLE_ITEMS >= GEN_9 || gBattleStruct->itemLost[B_SIDE_PLAYER][i].stolen || returnNPCItems)
         {
             u16 lostItem = gBattleStruct->itemLost[B_SIDE_PLAYER][i].originalItem;
-
-            // Check if the lost item is a berry and the mon is not holding it
-            if (GetItemPocket(lostItem) == POCKET_BERRIES && GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM) != lostItem)
-                lostItem = ITEM_NONE;
-
-            // Check if the lost item should be restored
-            if ((lostItem != ITEM_NONE || returnNPCItems) && GetItemPocket(lostItem) != POCKET_BERRIES)
+            if (GetItemPocket(lostItem) == POCKET_BERRIES)
+                SetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM, &lostItem);
+            else if ((lostItem != ITEM_NONE || returnNPCItems) && GetItemPocket(lostItem) != POCKET_BERRIES)
                 SetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM, &lostItem);
         }
     }

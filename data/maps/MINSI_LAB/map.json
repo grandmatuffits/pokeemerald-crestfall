@@ -1,0 +1,122 @@
+{
+  "id": "MAP_MINSI_LAB",
+  "name": "MINSI_LAB",
+  "layout": "LAYOUT_MINSI_LAB",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_STARTERBALL_1",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 8,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MINSI_LAB_EventScript_StarterBall1",
+      "flag": "FLAG_UNUSED_0x022"
+    },
+    {
+      "local_id": "LOCALID_STARTERBALL_2",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 9,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MINSI_LAB_EventScript_StarterBall2",
+      "flag": "FLAG_UNUSED_0x022"
+    },
+    {
+      "local_id": "LOCALID_STARTERBALL_3",
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MINSI_LAB_EventScript_StarterBall3",
+      "flag": "FLAG_UNUSED_0x022"
+    },
+    {
+      "local_id": "LOCALID_HEMLOCK",
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MINSI_LAB_EventScript_Hemlock",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_RIVALCF",
+      "graphics_id": "OBJ_EVENT_GFX_BOY_3",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_UNUSED_0x028"
+    },
+    {
+      "local_id": "LOCALID_POKEDEXCF1",
+      "graphics_id": "OBJ_EVENT_GFX_MOVING_BOX",
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_SYS_POKEDEX_GET"
+    }
+  ],
+  "warp_events": [
+    {
+      "warp_id": "WARP_ID_MINSI_LAB1",
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_MINSI_CITY",
+      "dest_warp_id": "0"
+    },
+    {
+      "warp_id": "WARP_ID_MINSI_LAB2",
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_MINSI_CITY",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

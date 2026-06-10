@@ -1211,7 +1211,23 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_PONYTA
-    }
+    },
+    [INGAME_TRADE_SNORUNT] =
+    {
+        .nickname = _("Chiru"),
+        .species = SPECIES_SNORUNT,
+        .ivs = {5, 5, 5, 5, 5, 5},
+        .abilityNum = 0,
+        .otId = 12345,
+        .conditions = {5, 5, 5, 5, 5},
+        .personality = 0x88,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("Calvin"),
+        .otGender = MALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_SHROOMISH
+    },
 };
 
 static const u16 sIngameTradeMail[][MAIL_WORDS_COUNT + 1] =

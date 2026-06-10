@@ -1,0 +1,44 @@
+{
+  "id": "MAP_ENPALE_LEAGUE_ARENA",
+  "name": "ENPALE_LEAGUE_ARENA",
+  "layout": "LAYOUT_ENPALE_LEAGUE_ARENA",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_UMBRA",
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "warp_id": "WARP_ID_ENPALE_LEAUGUE_ARENA",
+      "x": 3,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ENPALE_LEAGUE_INTRO_ROOM",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

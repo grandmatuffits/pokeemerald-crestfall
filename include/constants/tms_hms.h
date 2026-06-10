@@ -1,6 +1,5 @@
 #ifndef GUARD_CONSTANTS_TMS_HMS_H
 #define GUARD_CONSTANTS_TMS_HMS_H
-
 #define FOREACH_TM(F) \
     F(FOCUS_PUNCH) \
     F(DRAGON_CLAW) \
@@ -44,15 +43,64 @@
     F(AERIAL_ACE) \
     F(TORMENT) \
     F(FACADE) \
-    F(SECRET_POWER) \
     F(REST) \
-    F(ATTRACT) \
     F(THIEF) \
     F(STEEL_WING) \
     F(SKILL_SWAP) \
-    F(SNATCH) \
-    F(OVERHEAT)
-
+    F(OVERHEAT) \
+    F(BULLDOZE) \
+    F(DUAL_WINGBEAT) \
+    F(AQUA_JET) \
+    F(POWER_UP_PUNCH) \
+    F(ACROBATICS) \
+    F(GRASS_KNOT) \
+    F(FLASH_CANNON) \
+    F(TRICK_ROOM) \
+    F(DARK_PULSE) \
+    F(DAZZLING_GLEAM) \
+    F(SUBSTITUTE) \
+    F(POWER_GEM) \
+    F(SCALD) \
+    F(WILL_O_WISP) \
+    F(HEX) \
+    F(DRAIN_PUNCH) \
+    F(FOUL_PLAY) \
+    F(FOCUS_BLAST) \
+    F(DRAGON_PULSE) \
+    F(ENERGY_BALL) \
+    F(U_TURN) \
+    F(VOLT_SWITCH) \
+    F(SHADOW_CLAW) \
+    F(X_SCISSOR) \
+    F(STONE_EDGE) \
+    F(POISON_JAB) \
+    F(AVALANCHE) \
+    F(SWORDS_DANCE) \
+    F(INFESTATION) \
+    F(SLEEP_TALK) \
+    F(ROCK_SLIDE) \
+    F(FIRE_FANG) \
+    F(THUNDER_FANG) \
+    F(ICE_FANG) \
+    F(FLAME_CHARGE) \
+    F(STORED_POWER) \
+    F(BODY_SLAM) \
+    F(FIRE_PUNCH) \
+    F(THUNDER_PUNCH) \
+    F(ICE_PUNCH) \
+    F(ELECTRO_BALL) \
+    F(ROCK_BLAST) \
+    F(BODY_PRESS) \
+    F(SPIKES) \
+    F(STEALTH_ROCK) \
+    F(TOXIC_SPIKES) \
+    F(LEECH_LIFE) \
+    F(DRILL_RUN) \
+    F(TRICK) \
+    F(LIQUIDATION) \
+    F(NASTY_PLOT) \
+    F(PHANTOM_FORCE) \
+    F(OUTRAGE)
 #define FOREACH_HM(F) \
     F(CUT) \
     F(FLY) \
@@ -62,9 +110,7 @@
     F(ROCK_SMASH) \
     F(WATERFALL) \
     F(DIVE)
-
 #define FOREACH_TMHM(F) \
     FOREACH_TM(F) \
     FOREACH_HM(F)
-
 #endif

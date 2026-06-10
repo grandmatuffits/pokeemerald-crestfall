@@ -470,7 +470,6 @@ const u32 gObjectEventPic_ApricornTree[] = INCGFX_U32("graphics/object_events/pi
 
 const u32 gFieldEffectObjectPic_ShinySparkle[] = INCGFX_U32("graphics/field_effects/pics/shiny_sparkle.png", ".4bpp", "-mwidth 2 -mheight 4");
 
-#if IS_FRLG
 
 const u16 gObjectEventPic_RedNormal[] = INCGFX_U16("graphics/object_events/pics/people/red/red_normal.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_RedBike[] = INCGFX_U16("graphics/object_events/pics/people/red/red_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
@@ -636,4 +635,3 @@ const u16 gObjectEventPic_JigglypuffOld[] = INCGFX_U16("graphics/object_events/p
 const u16 gObjectEventPic_PidgeyOld[] = INCGFX_U16("graphics/object_events/pics/pokemon_old/pidgey.png", ".4bpp", "-mwidth 2 -mheight 2");
 const u16 gObjectEventPic_ClefairyOld[] = INCGFX_U16("graphics/object_events/pics/pokemon_old/clefairy.png", ".4bpp", "-mwidth 2 -mheight 2");
 
-#endif // IS_FRLG

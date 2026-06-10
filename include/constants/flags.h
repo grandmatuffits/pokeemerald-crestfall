@@ -1221,6 +1221,22 @@
 #define FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE                       0x490
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
+#define FLAG_ITEM_ENPALE_ROUTE_1_POKE_BALL                          0x493
+#define FLAG_ITEM_ENPALE_ROUTE_1_POTION                             0x494
+#define FLAG_ITEM_ENPALE_ALLENWOOD_ANTIDOTE                         0x495
+#define FLAG_ITEM_ENPALE_ALLENWOOD_POKEBALL                         0x496
+#define FLAG_HIDDEN_ITEM_ALLENWOOD_FOREST_NUGGET                    0x497
+#define FLAG_ITEM_ENPALE_ROUTE_2_SUPER_POTION               0x498
+#define FLAG_ITEM_ENPALE_ROUTE_2_GREAT_BALL                 0x49A
+#define FLAG_HIDDEN_ITEM_ROUTE_2_RARE_CANDY                 0x499
+#define FLAG_HIDDEN_ITEM_RIDLEY_CAVE_ENTRANCE_MOON_STONE    0x49B
+#define FLAG_HIDDEN_ITEM_RIDLEY_CAVE_BF1_EVIOLITE          0x49C
+#define FLAG_ITEM_RIDLEY_CAVE_BF1_RARE_CANDY               0x49E
+#define FLAG_ITEM_RIDLEY_CAVE_BF1_TM_DIG                   0x49F
+#define FLAG_ITEM_RIDLEY_CAVE_BF1_ESCAPE_ROPE              0x4A0
+#define FLAG_ITEM_RIDLEY_CAVE_BF1_ETHER                    0x4A1
+#define FLAG_ITEM_RIDLEY_CAVE_EXIT_REVIVE                  0x4A2
+#define FLAG_HIDDEN_ITEM_RIDLEY_CAVE_BF1_MOON_STONE         0x49D
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
@@ -1646,7 +1662,7 @@
 #define FLAG_HIDE_MAP_NAME_POPUP                (SPECIAL_FLAGS_START + 0x0)
 #define FLAG_DONT_TRANSITION_MUSIC              (SPECIAL_FLAGS_START + 0x1)
 #define FLAG_ENABLE_MULTI_CORRIDOR_DOOR         (SPECIAL_FLAGS_START + 0x2)
-#define FLAG_SPECIAL_FLAG_UNUSED_0x4003         (SPECIAL_FLAGS_START + 0x3) // Unused Flag
+#define FLAG_ENPALE_INTRO_DONE          (SPECIAL_FLAGS_START + 0x3)
 #define FLAG_STORING_ITEMS_IN_PYRAMID_BAG       (SPECIAL_FLAGS_START + 0x4)
 #define FLAG_SAFE_FOLLOWER_MOVEMENT             (SPECIAL_FLAGS_START + 0x5) // When set, applymovement does not put the follower inside a pokeball
                                                                             // Also, scripted movements on the player will move follower(s), too

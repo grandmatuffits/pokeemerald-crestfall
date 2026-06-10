@@ -51,6 +51,7 @@
 #include "constants/items.h"
 #include "difficulty.h"
 #include "follower_npc.h"
+#include "script_pokemon_util.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 extern const u8 EventScript_ResetAllMapFlagsFrlg[];
@@ -138,7 +139,7 @@ static void WarpToTruck(void)
     if (IS_FRLG)
         SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 6, 6);
     else
-        SetWarpDestination(MAP_GROUP(MAP_INSIDE_OF_TRUCK), MAP_NUM(MAP_INSIDE_OF_TRUCK), WARP_ID_NONE, -1, -1);
+        SetWarpDestination(MAP_GROUP(MAP_ENPALE_LEAGUE_INTRO_ROOM), MAP_NUM(MAP_ENPALE_LEAGUE_INTRO_ROOM), WARP_ID_NONE, 6, 6);
     WarpIntoMap();
 }
 
@@ -184,6 +185,7 @@ void NewGameInitData(void)
     PlayTimeCounter_Reset();
     ClearPokedexFlags();
     InitEventData();
+    FlagSet(FLAG_SYS_B_DASH);
     ClearTVShowData();
     ResetGabbyAndTy();
     ClearSecretBases();
@@ -204,6 +206,7 @@ void NewGameInitData(void)
     ClearBag();
     NewGameInitPCItems();
     ClearPokeblocks();
+    AddBagItem(ITEM_EXP_SHARE, 1);
     ClearDecorationInventories();
     InitEasyChatPhrases();
     SetMauvilleOldMan();
@@ -234,6 +237,7 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+    
 }
 
 static void ResetMiniGamesRecords(void)

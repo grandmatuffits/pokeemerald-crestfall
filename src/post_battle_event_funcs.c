@@ -9,6 +9,8 @@
 #include "script_pokemon_util.h"
 #include "tv.h"
 #include "constants/heal_locations.h"
+#include "pokemon.h"
+#include "constants/flags.h"
 
 int GameClear(void)
 {
@@ -88,6 +90,26 @@ int GameClear(void)
 
 bool8 SetCB2WhiteOut(void)
 {
+    if (FlagGet(FLAG_UNUSED_0x020))
+    {
+        FlagClear(FLAG_UNUSED_0x020);
+        ZeroPlayerPartyMons();
+        gSaveBlock1Ptr->playerPartyCount = 0;
+        gPartiesCount[B_TRAINER_PLAYER] = 0;
+        SetWarpDestination(MAP_GROUP(MAP_MINSI_CITY), MAP_NUM(MAP_MINSI_CITY), WARP_ID_NONE, 19, 0);
+        SetMainCallback2(CB2_ReturnToField);
+        return FALSE;
+    }
+    if (FlagGet(FLAG_UNUSED_0x026))
+    {
+        FlagClear(FLAG_UNUSED_0x026);
+        FlagSet(FLAG_UNUSED_0x025);
+        FlagSet(FLAG_UNUSED_0x027);
+        HealPlayerParty();
+        SetWarpDestination(MAP_GROUP(MAP_MINSI_LAB), MAP_NUM(MAP_MINSI_LAB), WARP_ID_NONE, 6, 12);
+        SetMainCallback2(CB2_ReturnToField);
+        return FALSE;
+    }
     SetMainCallback2(CB2_WhiteOut);
     return FALSE;
 }

@@ -307,6 +307,9 @@ static inline const u8 *GetTrainerClassNameFromId(u16 trainerId)
 
 static inline const u8 *GetTrainerNameFromId(u16 trainerId)
 {
+    extern struct SaveBlock2 *gSaveBlock2Ptr;
+    if (trainerId == TRAINER_RIVALCF_1)
+        return gSaveBlock2Ptr->rivalName;
     return GetTrainerStructFromId(trainerId)->trainerName;
 }
 

@@ -30,6 +30,7 @@
 #include "constants/abilities.h"
 #include "constants/items.h"
 #include "constants/battle_frontier.h"
+#include "naming_screen.h"
 
 static void CB2_ReturnFromChooseHalfParty(void);
 static void CB2_ReturnFromChooseBattleFrontierParty(void);
@@ -480,7 +481,6 @@ u32 ScriptGiveMon(enum Species species, u8 level, enum Item item)
 {
     struct Pokemon mon;
     u8 heldItem[2];
-
     CreateRandomMon(&mon, species, level);
     if (item)
     {
@@ -488,10 +488,18 @@ u32 ScriptGiveMon(enum Species species, u8 level, enum Item item)
         heldItem[1] = item >> 8;
         SetMonData(&mon, MON_DATA_HELD_ITEM, heldItem);
     }
-
     return GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
 }
 
+void Special_GiveSalamence(void)
+{
+    gSpecialVar_Result = ScriptGiveMon(SPECIES_SALAMENCE, 50, ITEM_NONE);
+}
+void Special_ClearPlayerParty(void)
+{
+    ZeroPlayerPartyMons();
+    gSaveBlock1Ptr->playerPartyCount = 0;
+}
 #define PARSE_FLAG(n, default_) (flags & (1 << (n))) ? VarGet(ScriptReadHalfword(ctx)) : (default_)
 
 /* Give or create a mon to either player or opponent
@@ -662,4 +670,9 @@ void Script_GiveRandomBerry(struct ScriptContext *ctx)
     enum BerryId hiBerry = ScriptReadByte(ctx);
 
     gSpecialVar_Result = BerryTypeToItemId(RandomUniform(RNG_RANDOM_BERRY, loBerry, hiBerry));
+}
+
+void Special_NameRival(void)
+{
+    DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->rivalName, MALE, 0, 0, CB2_ReturnToFieldContinueScript);
 }

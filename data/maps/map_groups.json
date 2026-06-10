@@ -74,7 +74,8 @@
     "gMapGroup_IndoorFiveIslandRoute_Frlg",
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
-    "gMapGroup_IndoorSevenIslandRoute_Frlg"
+    "gMapGroup_IndoorSevenIslandRoute_Frlg",
+    "gMapGroup_IndoorEnpale"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -133,7 +134,13 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "MINSI_CITY",
+    "ENPALE_ROUTE_1",
+    "ALLENWOOD__FOREST",
+    "KINNERET_TOWN",
+    "ENPALE_ROUTE_2",
+    "ENPALE_ROUTE_3"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -470,7 +477,10 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "RIDLEY_CAVE_ENTRANCE",
+    "RIDLEY_CAVE_BF1",
+    "RIDLEY_CAVE_EXIT"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -1160,5 +1170,13 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
+  ],
+  "gMapGroup_IndoorEnpale": [
+    "ENPALE_LEAGUE_INTRO_ROOM",
+    "ENPALE_LEAGUE_ARENA",
+    "MINSI_LAB",
+    "ALLENWOOD_FOREST_HOUSE",
+    "KINNERET_TOWN_FARMHOUSE",
+    "KINNERET_TOWN_GYM"
   ]
 }

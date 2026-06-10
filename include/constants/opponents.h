@@ -859,13 +859,46 @@
 #define TRAINER_LEAF                        852
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
+#define TRAINER_UMBRA_OPENING               855
+#define TRAINER_RIVALCF_1                   856
+#define TRAINER_BOBBY_101                   857
+#define TRAINER_SALLY_101                   858
+#define TRAINER_JARED_ALLENWOOD             859
+#define TRAINER_DYLAN_ALLENWOOD             860
+#define TRAINER_GABE_ALLENWOOD              861
+#define TRAINER_BETH_ALLENWOOD              862
+#define TRAINER_KINNERET_GYM_TOBY           863
+#define TRAINER_KINNERET_GYM_CHELSEA        864
+#define TRAINER_KINNERET_GYM_ERWIN          865
+#define TRAINER_ROBIN_1                     866
+#define TRAINER_ROUTE_2_TWINS               867
+#define TRAINER_ROUTE_2_JORDAN              868
+#define TRAINER_ROUTE_2_LISA                869
+#define TRAINER_ROUTE_2_BEN                 870
+#define TRAINER_ROUTE_2_JOE                 871
+#define TRAINER_RIDLEY_CAVE_MARTY               872
+#define TRAINER_RIDLEY_CAVE_MAC                 873
+#define TRAINER_RIDLEY_CAVE_DON                 874
+#define TRAINER_RIDLEY_CAVE_SHELBY              875
+#define TRAINER_RIDLEY_CAVE_GEORGE              876
+#define TRAINER_RIDLEY_CAVE_SHEILA              877
+#define TRAINER_RIDLEY_CAVE_EXIT_DAISY          878
+#define TRAINER_RIDLEY_CAVE_EXIT_JON            879
+#define TRAINER_ALLENWOOD_BETSY                 880
+#define TRAINER_ALLENWOOD_CHET                  881
+#define TRAINER_ROUTE_3_BOB                     882
+#define TRAINER_ROUTE_3_TIFF                    883
+#define TRAINER_ROUTE_3_BLAKE                   884
+#define TRAINER_ROUTE_3_JEFF                    885
+#define TRAINER_ROUTE_3_JONAS                   886
+#define TRAINER_ROUTE_3_LEMMY                   887
+#define TRAINERS_COUNT_EMERALD                  888
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     855
-#define MAX_TRAINERS_COUNT_EMERALD 864
+#define MAX_TRAINERS_COUNT_EMERALD 900
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG

@@ -1,0 +1,25 @@
+mapscripts ENPALE_LEAGUE_INTRO_ROOM_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_ENPALE_INTRO_STATE, 0: ENPALE_LEAGUE_INTRO_ROOM_Intro
+    ]
+}
+
+script ENPALE_LEAGUE_INTRO_ROOM_Intro {
+    setvar(VAR_ENPALE_INTRO_STATE, 1)
+    applymovement(LOCALID_BRUTUS, ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkIn)
+    waitmovement(0)
+    msgbox(ENPALE_LEAGUE_INTRO_ROOM_Text_Brutus1, MSGBOX_DEFAULT)
+    releaseall
+    end
+}
+
+movement ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkIn {
+    walk_up
+    walk_up
+    walk_up
+    face_down
+}
+
+text ENPALE_LEAGUE_INTRO_ROOM_Text_Brutus1 {
+    format("You are late getting ready.\nThe battle begins soon.")
+}

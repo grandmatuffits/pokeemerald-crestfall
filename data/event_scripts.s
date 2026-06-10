@@ -129,6 +129,20 @@ gStdScripts::
 gStdScripts_End::
 
 
+        .include "data/maps/ENPALE_LEAGUE_INTRO_ROOM/scripts.inc"
+        .include "data/maps/ENPALE_LEAGUE_ARENA/scripts.inc"
+        .include "data/maps/MINSI_LAB/scripts.inc"
+        .include "data/maps/MINSI_CITY/scripts.inc"
+        .include "data/maps/ENPALE_ROUTE_1/scripts.inc"
+        .include "data/maps/ALLENWOOD__FOREST/scripts.inc"
+        .include "data/maps/ALLENWOOD_FOREST_HOUSE/scripts.inc"
+        .include "data/maps/KINNERET_TOWN_GYM/scripts.inc"
+        .include "data/maps/KINNERET_TOWN/scripts.inc"
+        .include "data/maps/KINNERET_TOWN_FARMHOUSE/scripts.inc"
+        .include "data/maps/RIDLEY_CAVE_ENTRANCE/scripts.inc"
+        .include "data/maps/RIDLEY_CAVE_BF1/scripts.inc"
+        .include "data/maps/RIDLEY_CAVE_EXIT/scripts.inc"
+        .include "data/maps/ENPALE_ROUTE_2/scripts.inc"
 	.include "data/maps/PetalburgCity/scripts.inc"
 	.include "data/maps/SlateportCity/scripts.inc"
 	.include "data/maps/MauvilleCity/scripts.inc"
@@ -1737,3 +1751,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/wild_encounter.inc"
+
+
+
+	.include "data/maps/ENPALE_ROUTE_3/scripts.inc"

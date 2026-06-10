@@ -1878,7 +1878,7 @@ static void ItemMenu_UseOutOfBattle(u8 taskId)
             if (gBagPosition.pocket != POCKET_BERRIES)
                 GetItemFieldFunc(gSpecialVar_ItemId)(taskId);
             else
-                ItemUseOutOfBattle_Berry(taskId);
+                DisplayItemMessage(taskId, FONT_NORMAL, gText_BerriesHeldItemsOnly, HandleErrorMessage);
         }
     }
 }
