@@ -214,6 +214,10 @@ DirectSoundWaveData_sc88pro_flute::
 DirectSoundWaveData_sc88pro_fingered_bass::
 	.incbin "sound/direct_sound_samples/sc88pro_fingered_bass.bin"
 
+DirectSoundWaveData_distguitar::
+     .incbin "sound/direct_sound_samples/distguitar.bin"
+      .align 2
+
 	.align 2
 DirectSoundWaveData_unknown_koto_high::
 	.incbin "sound/direct_sound_samples/unknown_koto_high.bin"
