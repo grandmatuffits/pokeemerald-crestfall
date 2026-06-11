@@ -623,6 +623,7 @@ gSongTable::
         song mus_enpale_trainer, MUSIC_PLAYER_BGM, 0
         song mus_enpale_lab, MUSIC_PLAYER_BGM, 0
         song mus_enpale_pkmncenter, MUSIC_PLAYER_BGM, 0
+        song mus_enpale_pokemart, MUSIC_PLAYER_BGM, 0
 	
 	.align 2
 dummy_song_header:

@@ -2,7 +2,7 @@
   "id": "MAP_PETALBURG_CITY_MART",
   "name": "PetalburgCity_Mart",
   "layout": "LAYOUT_MART",
-  "music": "MUS_POKE_MART",
+  "music": "MUS_ENPALE_POKEMART",
   "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
