@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ENPALE_ROUTE_2",
-      "offset": 35,
+      "offset": 20,
       "direction": "up"
     }
   ],
@@ -23,7 +23,7 @@
     {
       "local_id": "ROUTE_3_NURSE",
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
-      "x": 73,
+      "x": 93,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -37,7 +37,7 @@
     {
       "local_id": "ROUTE_3_HIKER_BOB",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 67,
+      "x": 87,
       "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -51,7 +51,7 @@
     {
       "local_id": "ROUTE_3_LASS_TIFF",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 59,
+      "x": 79,
       "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -65,8 +65,8 @@
     {
       "local_id": "ROUTE_3_CAMPER_BLAKE",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 46,
-      "y": 11,
+      "x": 44,
+      "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
       "movement_range_x": 5,
@@ -79,8 +79,8 @@
     {
       "local_id": "ROUTE_3_WORKER_JEFF",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
-      "x": 36,
-      "y": 13,
+      "x": 44,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
       "movement_range_x": 5,
@@ -93,8 +93,8 @@
     {
       "local_id": "ROUTE_3_SAILER_JONAS",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 24,
-      "y": 11,
+      "x": 29,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
       "movement_range_x": 5,
@@ -107,8 +107,8 @@
     {
       "local_id": "ROUTE_3_ROCKER_LEMMY",
       "graphics_id": "OBJ_EVENT_GFX_ROCKER",
-      "x": 11,
-      "y": 16,
+      "x": 24,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -120,8 +120,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 44,
-      "y": 17,
+      "x": 25,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -133,8 +133,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 24,
-      "y": 8,
+      "x": 44,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -145,15 +145,7 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-    {
-      "x": 72,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_RIDLEY_CAVE_EXIT",
-      "dest_warp_id": "1"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

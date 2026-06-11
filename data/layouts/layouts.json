@@ -9427,8 +9427,8 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_2",
       "name": "ENPALE_ROUTE_2_Layout",
-      "width": 32,
-      "height": 50,
+      "width": 68,
+      "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/ENPALE_ROUTE_2/border.bin",
@@ -9467,7 +9467,7 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_3",
       "name": "ENPALE_ROUTE_3_Layout",
-      "width": 80,
+      "width": 64,
       "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -9483,6 +9483,16 @@
       "secondary_tileset": "gTileset_EverGrande",
       "border_filepath": "data/layouts/VELDTMOOR_CITY/border.bin",
       "blockdata_filepath": "data/layouts/VELDTMOOR_CITY/map.bin"
+    },
+    {
+      "id": "LAYOUT_COPPERGATE_CITY",
+      "name": "COPPERGATE_CITY_Layout",
+      "width": 48,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/COPPERGATE_CITY/border.bin",
+      "blockdata_filepath": "data/layouts/COPPERGATE_CITY/map.bin"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "id": "MAP_ENPALE_LEAGUE_INTRO_ROOM",
   "name": "ENPALE_LEAGUE_INTRO_ROOM",
   "layout": "LAYOUT_ENPALE_LEAGUE_INTRO_ROOM",
-  "music": "MUS_ENPALE_MINSI",
+  "music": "MUS_ENPALE_INTRO",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

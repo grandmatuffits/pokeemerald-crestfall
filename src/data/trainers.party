@@ -17035,10 +17035,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Starly @ None
-Level: 10
+Level: 9
 
 Ducklett @ None
-Level: 11
+Level: 10
 
 === TRAINER_KINNERET_GYM_CHELSEA ===
 Name: CHELSEA
@@ -17050,7 +17050,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Woobat @ None
-Level: 11
+Level: 10
 
 === TRAINER_KINNERET_GYM_ERWIN ===
 Name: ERWIN
@@ -17062,7 +17062,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Vullaby @ None
-Level: 12
+Level: 11
 
 
 === TRAINER_ROBIN_1 ===
@@ -17098,10 +17098,10 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Horsea @ None
-Level: 12
+Level: 10
 
 Tangela @ None
-Level: 12
+Level: 10
 
 === TRAINER_ROUTE_2_JORDAN ===
 Name: JORDAN
@@ -17113,7 +17113,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Tentacool @ None
-Level: 11
+Level: 10
 
 === TRAINER_ROUTE_2_LISA ===
 Name: LISA
@@ -17125,13 +17125,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Oddish @ None
-Level: 12
+Level: 10
 
 Shroomish @ None
-Level: 12
+Level: 10
 
 Starly @ None
-Level: 12
+Level: 10
 
 === TRAINER_ROUTE_2_BEN ===
 Name: BEN
@@ -17143,10 +17143,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Nidoran M @ None
-Level: 13
+Level: 11
 
 Nidoran F @ None
-Level: 13
+Level: 11
 
 === TRAINER_ROUTE_2_JOE ===
 Name: JOE
@@ -17158,13 +17158,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Roggenrola @ None
-Level: 13
+Level: 11
 
 Diglett @ None
-Level: 14
+Level: 11
 
 Aron @ None
-Level: 14
+Level: 12
 
 === TRAINER_RIDLEY_CAVE_MARTY ===
 Name: MARTY
@@ -17176,10 +17176,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Sandshrew @ None
-Level: 14
+Level: 11
 
 Dwebble @ None
-Level: 14
+Level: 12
 
 === TRAINER_RIDLEY_CAVE_MAC ===
 Name: MAC
@@ -17190,8 +17190,8 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Furret @ None
-Level: 15
+Sentret @ None
+Level: 12
 
 === TRAINER_RIDLEY_CAVE_DON ===
 Name: DON
@@ -17203,10 +17203,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Roggenrola @ None
-Level: 14
+Level: 12
 
 Drilbur @ None
-Level: 14
+Level: 12
 
 === TRAINER_RIDLEY_CAVE_SHELBY ===
 Name: SHELBY
@@ -17218,13 +17218,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Foongus @ None
-Level: 13
+Level: 11
 
 Togepi @ None
-Level: 13
+Level: 11
 
 Ducklett @ None
-Level: 13
+Level: 11
 
 === TRAINER_RIDLEY_CAVE_GEORGE ===
 Name: GEORGE
@@ -17236,10 +17236,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Baltoy @ None
-Level: 14
+Level: 12
 
 Voltorb @ None
-Level: 15
+Level: 13
 
 === TRAINER_RIDLEY_CAVE_SHEILA ===
 Name: SHEILA
@@ -17251,10 +17251,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Meditite @ None
-Level: 14
+Level: 12
 
 Riolu @ None
-Level: 15
+Level: 13
 
 === TRAINER_RIDLEY_CAVE_EXIT_DAISY ===
 Name: DAISY

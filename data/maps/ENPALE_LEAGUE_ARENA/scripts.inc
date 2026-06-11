@@ -28,6 +28,7 @@ ENPALE_LEAGUE_ARENA_Intro::
 	setrespawn HEAL_LOCATION_MINSI_CITY
 	setflag FLAG_UNUSED_0x020
 	createmon 0, 0, SPECIES_SALAMENCE, 50
+	playbgm MUS_ENPALE_UMBRA, TRUE
 	trainerbattle_no_intro TRAINER_UMBRA_OPENING, ENPALE_LEAGUE_ARENA_Text_Dummy
 	end
 
@@ -83,4 +84,4 @@ ENPALE_LEAGUE_ARENA_Movement_CameraPanToPlayer::
 	step_end
 
 ENPALE_LEAGUE_ARENA_Text_Umbra1:
-	.string "So Brutus won't face me himself…\nand instead sends his child to do\nhis dirty work.\pFine. I'll crush you just the same.$"
+	.string "So Brutus won't face me himself…\nand instead sends his child.\pFine. I'll crush you just the same.$"

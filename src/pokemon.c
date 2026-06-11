@@ -5254,6 +5254,10 @@ bool32 IsSpeciesInHoennDex(enum Species species)
 
 u16 GetBattleBGM(void)
 {
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        && TRAINER_BATTLE_PARAM.opponentA == TRAINER_UMBRA_OPENING)
+        return MUS_ENPALE_UMBRA;
+
     if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
     {
         switch (GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_SPECIES))
