@@ -2,7 +2,7 @@
   "id": "MAP_MINSI_LAB",
   "name": "MINSI_LAB",
   "layout": "LAYOUT_MINSI_LAB",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_LAB",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

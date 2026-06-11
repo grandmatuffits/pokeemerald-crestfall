@@ -621,6 +621,7 @@ gSongTable::
         song mus_enpale_minsi, MUSIC_PLAYER_BGM, 0
         song mus_enpale_wild, MUSIC_PLAYER_BGM, 0
         song mus_enpale_trainer, MUSIC_PLAYER_BGM, 0
+        song mus_enpale_lab, MUSIC_PLAYER_BGM, 0
 	
 	.align 2
 dummy_song_header:
