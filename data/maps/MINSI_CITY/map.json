@@ -2,7 +2,7 @@
   "id": "MAP_MINSI_CITY",
   "name": "MINSI_CITY",
   "layout": "LAYOUT_MINSI_CITY",
-  "music": "MUS_ENPALE_MINSI",
+  "music": "MUS_ENPALE_RIVAL",
   "region_map_section": "MAPSEC_RUSTBORO_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
