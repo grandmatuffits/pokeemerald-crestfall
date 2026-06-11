@@ -2,7 +2,7 @@
   "id": "MAP_ENPALE_LEAGUE_ARENA",
   "name": "ENPALE_LEAGUE_ARENA",
   "layout": "LAYOUT_ENPALE_LEAGUE_ARENA",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_INTRO",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
