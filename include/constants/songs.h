@@ -546,6 +546,7 @@
 #define MUS_ENPALE_UMBRA            611
 #define MUS_ENPALE_MINSI            612
 #define MUS_ENPALE_WILD             613
+#define MUS_ENPALE_TRAINER          614
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

@@ -5330,9 +5330,9 @@ u16 GetBattleBGM(void)
             return MUS_VS_FRONTIER_BRAIN;
         default:
             if (GetCurrentRegion() == REGION_KANTO)
-                return MUS_RG_VS_TRAINER;
+                return MUS_ENPALE_TRAINER;
             else
-                return MUS_VS_TRAINER;
+                return MUS_ENPALE_TRAINER;
         }
     }
     else
