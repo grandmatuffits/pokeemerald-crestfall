@@ -551,6 +551,8 @@
 #define MUS_ENPALE_PKMNCENTER       616
 #define MUS_ENPALE_POKEMART         617
 #define MUS_ENPALE_RIVAL            618
+#define MUS_ENPALE_ROUTE            619
+#define MUS_ENPALE_ALLENWOOD        620
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

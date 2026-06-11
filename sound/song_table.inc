@@ -625,7 +625,8 @@ gSongTable::
         song mus_enpale_pkmncenter, MUSIC_PLAYER_BGM, 0
         song mus_enpale_pokemart, MUSIC_PLAYER_BGM, 0
         song mus_enpale_rival, MUSIC_PLAYER_BGM, 0
-        song mus_enpale_rival, MUSIC_PLAYER_BGM, 0
+        song mus_enpale_route, MUSIC_PLAYER_BGM, 0
+        song mus_enpale_allenwood, MUSIC_PLAYER_BGM, 0
 	
 	.align 2
 dummy_song_header:
