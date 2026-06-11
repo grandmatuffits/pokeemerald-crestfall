@@ -9357,8 +9357,8 @@
     {
       "id": "LAYOUT_MINSI_CITY",
       "name": "MINSI_CITY_Layout",
-      "width": 40,
-      "height": 34,
+      "width": 48,
+      "height": 38,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/MINSI_CITY/border.bin",
@@ -9473,6 +9473,16 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/ENPALE_ROUTE_3/border.bin",
       "blockdata_filepath": "data/layouts/ENPALE_ROUTE_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_VELDTMOOR_CITY",
+      "name": "VELDTMOOR_CITY_Layout",
+      "width": 32,
+      "height": 33,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/VELDTMOOR_CITY/border.bin",
+      "blockdata_filepath": "data/layouts/VELDTMOOR_CITY/map.bin"
     }
   ]
 }

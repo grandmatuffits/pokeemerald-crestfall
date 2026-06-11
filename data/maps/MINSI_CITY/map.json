@@ -15,18 +15,23 @@
   "connections": [
     {
       "map": "MAP_ENPALE_ROUTE_1",
-      "offset": 10,
+      "offset": 12,
       "direction": "down"
+    },
+    {
+      "map": "MAP_VELDTMOOR_CITY",
+      "offset": 11,
+      "direction": "up"
     }
   ],
   "object_events": [
     {
       "local_id": "LOCALID_MINSIRANDO",
-      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 17,
+      "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
+      "x": 47,
       "y": 18,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -37,8 +42,8 @@
     {
       "local_id": "LOCALID_MINSI_NORTHGUARD",
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 21,
-      "y": 5,
+      "x": 24,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -51,8 +56,8 @@
     {
       "local_id": "LOCALID_BRUTUS_MINSI",
       "graphics_id": "OBJ_EVENT_GFX_DRAKE",
-      "x": 19,
-      "y": 1,
+      "x": 22,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -65,8 +70,8 @@
     {
       "local_id": "LOCALID_POKELABGUY",
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 21,
-      "y": 30,
+      "x": 24,
+      "y": 34,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -79,8 +84,8 @@
     {
       "local_id": "LOCALID_POKECENTERBLOCK",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
-      "x": 26,
-      "y": 15,
+      "x": 29,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -92,8 +97,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 31,
-      "y": 26,
+      "x": 34,
+      "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -105,8 +110,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
-      "x": 32,
-      "y": 26,
+      "x": 35,
+      "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -119,8 +124,8 @@
     {
       "local_id": "LOCALID_MINSITMGUY",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 35,
-      "y": 7,
+      "x": 27,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -131,9 +136,22 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
-      "x": 17,
-      "y": 27,
+      "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
+      "x": 47,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 36,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -147,29 +165,29 @@
   "warp_events": [
     {
       "warp_id": "WARP_ID_MINSICITY1",
-      "x": 11,
-      "y": 14,
+      "x": 14,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_MINSI_LAB",
       "dest_warp_id": "0"
     },
     {
-      "x": 26,
-      "y": 14,
+      "x": 29,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 32,
-      "y": 14,
+      "x": 35,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 12,
-      "y": 25,
+      "x": 15,
+      "y": 28,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_GYM_1F",
       "dest_warp_id": "0"
@@ -178,8 +196,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 18,
-      "y": 5,
+      "x": 21,
+      "y": 7,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -187,8 +205,8 @@
     },
     {
       "type": "trigger",
-      "x": 19,
-      "y": 5,
+      "x": 22,
+      "y": 7,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -196,8 +214,8 @@
     },
     {
       "type": "trigger",
-      "x": 20,
-      "y": 5,
+      "x": 23,
+      "y": 7,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -205,8 +223,8 @@
     },
     {
       "type": "trigger",
-      "x": 12,
-      "y": 26,
+      "x": 15,
+      "y": 29,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -214,8 +232,8 @@
     },
     {
       "type": "trigger",
-      "x": 18,
-      "y": 30,
+      "x": 21,
+      "y": 34,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -223,8 +241,8 @@
     },
     {
       "type": "trigger",
-      "x": 19,
-      "y": 30,
+      "x": 22,
+      "y": 34,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -232,8 +250,8 @@
     },
     {
       "type": "trigger",
-      "x": 20,
-      "y": 30,
+      "x": 23,
+      "y": 34,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",

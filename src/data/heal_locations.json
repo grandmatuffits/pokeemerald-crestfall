@@ -353,8 +353,8 @@
     {
       "id": "HEAL_LOCATION_MINSI_CITY",
       "map": "MAP_MINSI_CITY",
-      "x": 18,
-      "y": 1
+      "x": 21,
+      "y": 3
     }
   ]
 }
