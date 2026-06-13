@@ -556,6 +556,7 @@
 #define MUS_ENPALE_KINNERET         621
 #define MUS_ENPALE_ROBIN            622
 #define MUS_ENPALE_COPPERGATE       623
+#define MUS_ENPALE_OMAR             624
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

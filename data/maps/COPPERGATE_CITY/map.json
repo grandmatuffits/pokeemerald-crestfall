@@ -2,7 +2,7 @@
   "id": "MAP_COPPERGATE_CITY",
   "name": "COPPERGATE_CITY",
   "layout": "LAYOUT_COPPERGATE_CITY",
-  "music": "MUS_ENPALE_COPPERGATE",
+  "music": "MUS_ENPALE_OMAR",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
