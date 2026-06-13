@@ -9367,7 +9367,7 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_1",
       "name": "ENPALE_ROUTE_1_Layout",
-      "width": 30,
+      "width": 32,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
@@ -9448,7 +9448,7 @@
       "id": "LAYOUT_RIDLEY_CAVE_BF1",
       "name": "RIDLEY_CAVE_BF1_Layout",
       "width": 20,
-      "height": 36,
+      "height": 37,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/RIDLEY_CAVE_BF1/border.bin",
@@ -9467,10 +9467,10 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_3",
       "name": "ENPALE_ROUTE_3_Layout",
-      "width": 64,
+      "width": 80,
       "height": 32,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/ENPALE_ROUTE_3/border.bin",
       "blockdata_filepath": "data/layouts/ENPALE_ROUTE_3/map.bin"
     },

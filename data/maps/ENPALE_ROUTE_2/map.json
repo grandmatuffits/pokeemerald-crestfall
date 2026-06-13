@@ -2,7 +2,7 @@
   "id": "MAP_ENPALE_ROUTE_2",
   "name": "ENPALE_ROUTE_2",
   "layout": "LAYOUT_ENPALE_ROUTE_2",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_ROUTE",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -25,8 +25,8 @@
     },
     {
       "map": "MAP_ENPALE_ROUTE_3",
-      "offset": -20,
-      "direction": "down"
+      "offset": -55,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -75,8 +75,8 @@
     {
       "local_id": "ENPALE_ROUTE_2_CAMPER",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 51,
-      "y": 26,
+      "x": 55,
+      "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -117,7 +117,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 55,
-      "y": 24,
+      "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -129,8 +129,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 52,
-      "y": 26,
+      "x": 44,
+      "y": 47,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -139,6 +139,76 @@
       "trainer_sight_or_berry_tree_id": "ITEM_SUPER_POTION",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ENPALE_ROUTE_2_SUPER_POTION"
+    },
+    {
+      "local_id": "ENPALE_ROUTE_2_MAN_4_BARNEY",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 59,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "EnpaleRoute2_EventScript_Barney",
+      "flag": "0"
+    },
+    {
+      "local_id": "ENPALE_ROUTE_2_POKEFAN_F_JULIA",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+      "x": 59,
+      "y": 42,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "EnpaleRoute2_EventScript_Julia",
+      "flag": "0"
+    },
+    {
+      "local_id": "ENPALE_ROUTE_2_MANIAC_CARL",
+      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "x": 42,
+      "y": 41,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+      "movement_range_x": 5,
+      "movement_range_y": 5,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "EnpaleRoute2_EventScript_Carl",
+      "flag": "0"
+    },
+    {
+      "local_id": "ENPALE_ROUTE2_PKM_BREEDER_MIKE",
+      "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
+      "x": 25,
+      "y": 43,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+      "movement_range_x": 5,
+      "movement_range_y": 5,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "EnpaleRoute2_EventScript_Mike",
+      "flag": "0"
+    },
+    {
+      "local_id": "ENPALE_ROUTE_2_ROCKER_KIRK",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 7,
+      "y": 48,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "EnpaleRoute2_EventScript_Kirk",
+      "flag": "0"
     }
   ],
   "warp_events": [

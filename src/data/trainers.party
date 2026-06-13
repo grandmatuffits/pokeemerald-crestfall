@@ -17396,3 +17396,78 @@ Level: 16
 
 Emolga @ None
 Level: 16
+
+=== TRAINER_BARNEY_R2 ===
+Name: Barney
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Murkrow
+Level: 11
+
+=== TRAINER_JULIA_R2 ===
+Name: Julia
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Sentret
+Level: 11
+
+Pikachu
+Level: 11
+
+Growlithe
+Level: 11
+
+=== TRAINER_CARL_R2 ===
+Name: Carl
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Pikachu
+Level: 12
+
+Piplup
+Level: 12
+
+=== TRAINER_MIKE_R2 ===
+Name: Mike
+Class: Pkmn Breeder
+Pic: Pokemon Breeder M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Magby
+Level: 9
+
+Elekid
+Level: 9
+
+Smoochum
+Level: 9
+
+=== TRAINER_KIRK_R2 ===
+Name: Kirk
+Class: Rocker
+Pic: Rocker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Voltorb
+Level: 13

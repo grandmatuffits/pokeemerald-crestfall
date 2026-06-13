@@ -38,7 +38,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 16,
+      "x": 17,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_RIDLEY_CAVE_BF1",
@@ -49,7 +49,7 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 16,
+      "x": 17,
       "y": 6,
       "elevation": 0,
       "item": "ITEM_MOON_STONE",

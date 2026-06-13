@@ -343,6 +343,9 @@ const u16 gTrainerPalette_PsychicMFrlg[] = INCGFX_U16("graphics/trainers/palette
 const u32 gTrainerFrontPic_RockerFrlg[] = INCGFX_U32("graphics/trainers/front_pics/rocker_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_RockerFrlg[] = INCGFX_U16("graphics/trainers/palettes/rocker_frlg.pal", ".gbapal");
 
+const u32 gTrainerFrontPic_Rocker[] = INCGFX_U32("graphics/trainers/front_pics/rocker_frlg.png", ".4bpp.smol");
+const u16 gTrainerPalette_Rocker[] = INCGFX_U16("graphics/trainers/palettes/rocker_frlg.pal", ".gbapal");
+
 const u32 gTrainerFrontPic_JugglerFrlg[] = INCGFX_U32("graphics/trainers/front_pics/juggler_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_JugglerFrlg[] = INCGFX_U16("graphics/trainers/palettes/juggler_frlg.pal", ".gbapal");
 
@@ -1057,6 +1060,10 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_ROCKER_FRLG] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_RockerFrlg, gTrainerPalette_RockerFrlg),
+    },
+    [TRAINER_PIC_ROCKER] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Rocker, gTrainerPalette_Rocker),
     },
     [TRAINER_PIC_JUGGLER_FRLG] =
     {

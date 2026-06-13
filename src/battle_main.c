@@ -388,6 +388,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_SWIMMER_F_FRLG] =       { _("SWIMMER♀"), 1, BALL_DIVE },
     [TRAINER_CLASS_PSYCHIC_FRLG] =         { _("PSYCHIC"), 5 },
     [TRAINER_CLASS_ROCKER_FRLG] =          { _("ROCKER"), 6 },
+    [TRAINER_CLASS_ROCKER] =               { _("ROCKER"), 6 },
     [TRAINER_CLASS_JUGGLER_FRLG] =         { _("JUGGLER"), 10 },
     [TRAINER_CLASS_TAMER_FRLG] =           { _("TAMER"), 10 },
     [TRAINER_CLASS_BIRD_KEEPER_FRLG] =     { _("BIRD KEEPER"), 6 },

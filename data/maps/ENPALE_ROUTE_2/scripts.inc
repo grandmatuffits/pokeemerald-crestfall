@@ -79,4 +79,64 @@ ENPALE_ROUTE_2_EventScript_Sign::
 	end
 
 ENPALE_ROUTE_2_Text_Sign:
-	.string "Route 2\nRidley Cave {DOWN_ARROW}$"
+	.string "Route 2\nRidley Bridge to Coppergate City {DOWN_ARROW}$"
+
+EnpaleRoute2_EventScript_Barney::
+	trainerbattle_single TRAINER_BARNEY_R2, EnpaleRoute2_Text_BarneyIntro, EnpaleRoute2_Text_BarneyDefeat
+	msgbox EnpaleRoute2_Text_BarneyPost, MSGBOX_AUTOCLOSE
+	end
+
+EnpaleRoute2_EventScript_Julia::
+	trainerbattle_single TRAINER_JULIA_R2, EnpaleRoute2_Text_JuliaIntro, EnpaleRoute2_Text_JuliaDefeat
+	msgbox EnpaleRoute2_Text_JuliaPost, MSGBOX_AUTOCLOSE
+	end
+
+EnpaleRoute2_EventScript_Carl::
+	trainerbattle_single TRAINER_CARL_R2, EnpaleRoute2_Text_CarlIntro, EnpaleRoute2_Text_CarlDefeat
+	msgbox EnpaleRoute2_Text_CarlPost, MSGBOX_AUTOCLOSE
+	end
+
+EnpaleRoute2_EventScript_Mike::
+	trainerbattle_single TRAINER_MIKE_R2, EnpaleRoute2_Text_MikeIntro, EnpaleRoute2_Text_MikeDefeat
+	msgbox EnpaleRoute2_Text_MikePost, MSGBOX_AUTOCLOSE
+	end
+
+EnpaleRoute2_EventScript_Kirk::
+	trainerbattle_single TRAINER_KIRK_R2, EnpaleRoute2_Text_KirkIntro, EnpaleRoute2_Text_KirkDefeat
+	msgbox EnpaleRoute2_Text_KirkPost, MSGBOX_AUTOCLOSE
+	end
+
+EnpaleRoute2_Text_BarneyIntro:
+	.string "Flying Pokémon are the best!$"
+EnpaleRoute2_Text_BarneyDefeat:
+	.string "I'll never be like Robin!$"
+EnpaleRoute2_Text_BarneyPost:
+	.string "Soar high!$"
+
+EnpaleRoute2_Text_JuliaIntro:
+	.string "Look at my cute Pokémon!$"
+EnpaleRoute2_Text_JuliaDefeat:
+	.string "My babies!$"
+EnpaleRoute2_Text_JuliaPost:
+	.string "You're rude!$"
+
+EnpaleRoute2_Text_CarlIntro:
+	.string "I LOVE POKEMON!$"
+EnpaleRoute2_Text_CarlDefeat:
+	.string "I think I got a little excited there…$"
+EnpaleRoute2_Text_CarlPost:
+	.string "Safe travels!$"
+
+EnpaleRoute2_Text_MikeIntro:
+	.string "You should try breeding!$"
+EnpaleRoute2_Text_MikeDefeat:
+	.string "I guess I should've raised them first!$"
+EnpaleRoute2_Text_MikePost:
+	.string "Baby Pokémon are cute, but they're not\nvery strong.$"
+
+EnpaleRoute2_Text_KirkIntro:
+	.string "I was born to raise hell!$"
+EnpaleRoute2_Text_KirkDefeat:
+	.string "Overkill!$"
+EnpaleRoute2_Text_KirkPost:
+	.string "Stay clean!$"

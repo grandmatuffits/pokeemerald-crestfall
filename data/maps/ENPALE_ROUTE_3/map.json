@@ -2,7 +2,7 @@
   "id": "MAP_ENPALE_ROUTE_3",
   "name": "ENPALE_ROUTE_3",
   "layout": "LAYOUT_ENPALE_ROUTE_3",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_ROUTE",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -15,16 +15,16 @@
   "connections": [
     {
       "map": "MAP_ENPALE_ROUTE_2",
-      "offset": 20,
-      "direction": "up"
+      "offset": 55,
+      "direction": "down"
     }
   ],
   "object_events": [
     {
       "local_id": "ROUTE_3_NURSE",
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
-      "x": 93,
-      "y": 10,
+      "x": 54,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -37,8 +37,8 @@
     {
       "local_id": "ROUTE_3_HIKER_BOB",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 87,
-      "y": 12,
+      "x": 122,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -51,8 +51,8 @@
     {
       "local_id": "ROUTE_3_LASS_TIFF",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 79,
-      "y": 13,
+      "x": 114,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -65,10 +65,10 @@
     {
       "local_id": "ROUTE_3_CAMPER_BLAKE",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 44,
-      "y": 22,
+      "x": 36,
+      "y": 12,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
       "movement_range_x": 5,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -78,11 +78,11 @@
     },
     {
       "local_id": "ROUTE_3_WORKER_JEFF",
-      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
-      "x": 44,
-      "y": 20,
+      "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
+      "x": 33,
+      "y": 23,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 5,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -93,8 +93,8 @@
     {
       "local_id": "ROUTE_3_SAILER_JONAS",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 29,
-      "y": 19,
+      "x": 46,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
       "movement_range_x": 5,
@@ -107,10 +107,10 @@
     {
       "local_id": "ROUTE_3_ROCKER_LEMMY",
       "graphics_id": "OBJ_EVENT_GFX_ROCKER",
-      "x": 24,
-      "y": 18,
+      "x": 19,
+      "y": 17,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -120,21 +120,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 25,
-      "y": 18,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_TM_BULLET_SEED",
-      "script": "Common_EventScript_FindItem",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 44,
-      "y": 23,
+      "x": 19,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -145,7 +132,15 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 67,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_RIDLEY_CAVE_EXIT",
+      "dest_warp_id": "1"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }
