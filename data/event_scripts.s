@@ -1759,3 +1759,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/VELDTMOOR_CITY/scripts.inc"
 
 	.include "data/maps/COPPERGATE_CITY/scripts.inc"
+
+	.include "data/maps/COPPERGATE_CITY_GYM/scripts.inc"

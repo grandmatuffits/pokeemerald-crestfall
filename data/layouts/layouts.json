@@ -9487,12 +9487,22 @@
     {
       "id": "LAYOUT_COPPERGATE_CITY",
       "name": "COPPERGATE_CITY_Layout",
-      "width": 48,
+      "width": 54,
       "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/COPPERGATE_CITY/border.bin",
       "blockdata_filepath": "data/layouts/COPPERGATE_CITY/map.bin"
+    },
+    {
+      "id": "LAYOUT_COPPERGATE_CITY_GYM",
+      "name": "COPPERGATE_CITY_GYM_Layout",
+      "width": 20,
+      "height": 28,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MauvilleGym",
+      "border_filepath": "data/layouts/COPPERGATE_CITY_GYM/border.bin",
+      "blockdata_filepath": "data/layouts/COPPERGATE_CITY_GYM/map.bin"
     }
   ]
 }

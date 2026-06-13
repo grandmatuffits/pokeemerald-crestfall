@@ -17471,3 +17471,40 @@ AI: Check Bad Move / Try To Faint
 
 Voltorb
 Level: 13
+
+=== TRAINER_RIVALCF_2 ===
+Name: RIVAL
+Class: Rival
+Pic: Youngster
+Gender: Male
+Music: Male
+Items: Potion / Potion
+
+Murkrow
+Level: 14
+
+Mienfoo
+Level: 16
+
+=== TRAINER_COVENANT_GRUNT_1 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+
+Stufful
+Level: 10
+
+Pineco
+Level: 10
+
+=== TRAINER_COVENANT_GRUNT_2 ===
+Name: GRUNT
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+
+Swirlix
+Level: 12

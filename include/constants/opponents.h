@@ -897,7 +897,10 @@
 #define TRAINER_CARL_R2                         890
 #define TRAINER_MIKE_R2                         891
 #define TRAINER_KIRK_R2                         892
-#define TRAINERS_COUNT_EMERALD                  893
+#define TRAINER_RIVALCF_2                       893
+#define TRAINER_COVENANT_GRUNT_1                894
+#define TRAINER_COVENANT_GRUNT_2                895
+#define TRAINERS_COUNT_EMERALD                  896
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
