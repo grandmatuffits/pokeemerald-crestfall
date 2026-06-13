@@ -144,3 +144,53 @@ COPPERGATE_CITY_Text_RivalDefeat:
 
 COPPERGATE_CITY_Text_RivalAfter:
 	.string "This isn't over!$"
+
+@ ======== GRUNTS ========
+#define LOCALID_COPPERGATE_GRUNT_1 6
+#define LOCALID_COPPERGATE_GRUNT_2 7
+
+COPPERGATE_CITY_EventScript_Grunt1::
+	trainerbattle_single TRAINER_COVENANT_GRUNT_1, COPPERGATE_CITY_Text_Grunt1Intro, COPPERGATE_CITY_Text_Grunt1Defeat, COPPERGATE_CITY_EventScript_GruntPostBattle
+	end
+
+COPPERGATE_CITY_EventScript_Grunt2::
+	trainerbattle_single TRAINER_COVENANT_GRUNT_2, COPPERGATE_CITY_Text_Grunt2Intro, COPPERGATE_CITY_Text_Grunt2Defeat, COPPERGATE_CITY_EventScript_GruntPostBattle
+	end
+
+@ runs after EITHER grunt is beaten; fires admin scene only when BOTH are down
+COPPERGATE_CITY_EventScript_GruntPostBattle::
+	checktrainerflag TRAINER_COVENANT_GRUNT_1
+	goto_if_eq VAR_RESULT, 0, COPPERGATE_CITY_EventScript_GruntStillOne
+	checktrainerflag TRAINER_COVENANT_GRUNT_2
+	goto_if_eq VAR_RESULT, 0, COPPERGATE_CITY_EventScript_GruntStillOne
+	goto COPPERGATE_CITY_EventScript_AdminScene
+	end
+
+COPPERGATE_CITY_EventScript_GruntStillOne::
+	releaseall
+	end
+
+@ ======== ADMIN SCENE (stub — full scene next session) ========
+COPPERGATE_CITY_EventScript_AdminScene::
+	msgbox COPPERGATE_CITY_Text_AdminStub, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_UNUSED_0x02B
+	releaseall
+	end
+
+COPPERGATE_CITY_Text_Grunt1Intro:
+	.string "Pardon us, we were just having a\n"
+	.string "friendly conversation.$"
+
+COPPERGATE_CITY_Text_Grunt1Defeat:
+	.string "Oh, dear...$"
+
+COPPERGATE_CITY_Text_Grunt2Intro:
+	.string "Can we help you?$"
+
+COPPERGATE_CITY_Text_Grunt2Defeat:
+	.string "Well, then.$"
+
+COPPERGATE_CITY_Text_AdminStub:
+	.string "An admin appears and threatens\n"
+	.string "you. Full scene coming soon.$"
