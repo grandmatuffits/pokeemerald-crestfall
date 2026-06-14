@@ -70,3 +70,15 @@ RIDLEY_CAVE_BF1_Text_SheilaDefeat:
 
 RIDLEY_CAVE_BF1_Text_SheilaRepeat:
 	.string "I must train harder!$"
+
+RIDLEY_CAVE_BF1_EventScript_Blocker::
+	lock
+	faceplayer
+	msgbox RIDLEY_CAVE_BF1_Text_Blocker, MSGBOX_DEFAULT
+	release
+	end
+
+RIDLEY_CAVE_BF1_Text_Blocker:
+	.string "Sorry, I can't let you through.\n"
+	.string "The other side of the cave is\l"
+	.string "being worked on. Come back later.$"
