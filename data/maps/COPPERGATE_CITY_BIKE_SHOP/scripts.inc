@@ -1,0 +1,2 @@
+COPPERGATE_CITY_BIKE_SHOP_MapScripts::
+	.byte 0

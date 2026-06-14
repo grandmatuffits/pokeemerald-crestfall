@@ -61,11 +61,6 @@ COPPERGATE_CITY_EventScript_RivalTalk::
 	return
 
 @ ======== shared finish ========
-COPPERGATE_CITY_EventScript_RivalFinish::
-	removeobject LOCALID_COPPERGATE_RIVAL
-	setflag FLAG_UNUSED_0x02A
-	releaseall
-	end
 
 COPPERGATE_CITY_EventScript_RivalDone::
 	releaseall
@@ -145,35 +140,59 @@ COPPERGATE_CITY_Text_RivalDefeat:
 COPPERGATE_CITY_Text_RivalAfter:
 	.string "This isn't over!$"
 
+COPPERGATE_CITY_EventScript_RivalFinish::
+	removeobject LOCALID_COPPERGATE_RIVAL
+	setflag FLAG_UNUSED_0x02A
+	setflag FLAG_UNUSED_0x02C
+	releaseall
+	end
+
 @ ======== GRUNTS ========
 #define LOCALID_COPPERGATE_GRUNT_1 6
 #define LOCALID_COPPERGATE_GRUNT_2 7
 
 COPPERGATE_CITY_EventScript_Grunt1::
-	trainerbattle_single TRAINER_COVENANT_GRUNT_1, COPPERGATE_CITY_Text_Grunt1Intro, COPPERGATE_CITY_Text_Grunt1Defeat, COPPERGATE_CITY_EventScript_GruntPostBattle
+	trainerbattle_single TRAINER_COVENANT_GRUNT_1, COPPERGATE_CITY_Text_Grunt1Intro, COPPERGATE_CITY_Text_Grunt1Defeat, COPPERGATE_CITY_EventScript_Grunt1Leave
 	end
 
-COPPERGATE_CITY_EventScript_Grunt2::
-	trainerbattle_single TRAINER_COVENANT_GRUNT_2, COPPERGATE_CITY_Text_Grunt2Intro, COPPERGATE_CITY_Text_Grunt2Defeat, COPPERGATE_CITY_EventScript_GruntPostBattle
-	end
-
-@ runs after EITHER grunt is beaten; fires admin scene only when BOTH are down
-COPPERGATE_CITY_EventScript_GruntPostBattle::
-	checktrainerflag TRAINER_COVENANT_GRUNT_1
-	goto_if_eq VAR_RESULT, 0, COPPERGATE_CITY_EventScript_GruntStillOne
-	checktrainerflag TRAINER_COVENANT_GRUNT_2
-	goto_if_eq VAR_RESULT, 0, COPPERGATE_CITY_EventScript_GruntStillOne
-	goto COPPERGATE_CITY_EventScript_AdminScene
-	end
-
-COPPERGATE_CITY_EventScript_GruntStillOne::
+COPPERGATE_CITY_EventScript_Grunt1Leave::
+	applymovement LOCALID_COPPERGATE_GRUNT_1, COPPERGATE_CITY_Movement_GruntExitWest
+	waitmovement 0
+	setflag FLAG_UNUSED_0x02D
+	removeobject LOCALID_COPPERGATE_GRUNT_1
 	releaseall
 	end
 
-@ ======== ADMIN SCENE (stub — full scene next session) ========
+COPPERGATE_CITY_EventScript_Grunt2::
+	trainerbattle_single TRAINER_COVENANT_GRUNT_2, COPPERGATE_CITY_Text_Grunt2Intro, COPPERGATE_CITY_Text_Grunt2Defeat, COPPERGATE_CITY_EventScript_Grunt2Leave
+	end
+
+COPPERGATE_CITY_EventScript_Grunt2Leave::
+	applymovement LOCALID_COPPERGATE_GRUNT_2, COPPERGATE_CITY_Movement_GruntExitWest
+	waitmovement 0
+	setflag FLAG_UNUSED_0x02E
+	removeobject LOCALID_COPPERGATE_GRUNT_2
+	goto COPPERGATE_CITY_EventScript_AdminScene
+	end
+
 COPPERGATE_CITY_EventScript_AdminScene::
-	msgbox COPPERGATE_CITY_Text_AdminStub, MSGBOX_DEFAULT
+	addobject LOCALID_COPPERGATE_ADMIN
+	applymovement LOCALID_COPPERGATE_ADMIN, COPPERGATE_CITY_Movement_AdminEnter
+	waitmovement 0
+	msgbox COPPERGATE_CITY_Text_AdminThreat, MSGBOX_DEFAULT
 	closemessage
+	applymovement LOCALID_COPPERGATE_ADMIN, COPPERGATE_CITY_Movement_AdminLeave
+	waitmovement 0
+	setflag FLAG_UNUSED_0x02C
+	removeobject LOCALID_COPPERGATE_ADMIN
+	applymovement COPPERGATE_BIKE_SALESMAN, COPPERGATE_CITY_Movement_FacePlayerDown
+	waitmovement 0
+	msgbox COPPERGATE_CITY_Text_SalesmanThanks, MSGBOX_DEFAULT
+	closemessage
+	applymovement COPPERGATE_BIKE_SALESMAN, COPPERGATE_CITY_Movement_SalesmanIntoShop
+	waitmovement 0
+	setflag FLAG_UNUSED_0x02F
+	removeobject COPPERGATE_BIKE_SALESMAN
 	setflag FLAG_UNUSED_0x02B
 	releaseall
 	end
@@ -194,3 +213,78 @@ COPPERGATE_CITY_Text_Grunt2Defeat:
 COPPERGATE_CITY_Text_AdminStub:
 	.string "An admin appears and threatens\n"
 	.string "you. Full scene coming soon.$"
+
+@ ======== movements ========
+COPPERGATE_CITY_Movement_GruntExitWest:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+COPPERGATE_CITY_Movement_AdminEnter:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_right
+	step_end
+
+COPPERGATE_CITY_Movement_AdminLeave:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+COPPERGATE_CITY_Movement_FacePlayerDown:
+	face_down
+	step_end
+
+COPPERGATE_CITY_Movement_SalesmanIntoShop:
+	walk_up
+	step_end
+
+@ ======== text ========
+COPPERGATE_CITY_Text_AdminThreat:
+	.string "Hey, kid, leave us alone!\n"
+	.string "We're conducting private Team\l"
+	.string "Covenant business!\p"
+	.string "You've been warned…$"
+
+COPPERGATE_CITY_Text_SalesmanThanks:
+	.string "Thanks, kid! Those weirdos kept\n"
+	.string "hassling me about giving all of\l"
+	.string "them bikes.\p"
+	.string "Come inside and I'll get you set\n"
+	.string "up with one!$"
+
+COPPERGATE_CITY_Text_Blocker:
+	.string "It looks like a shake-up is going\n"
+	.string "on at the bike shop…$"	
+
+COPPERGATE_CITY_EventScript_Blocker::
+	lock
+	faceplayer
+	msgbox COPPERGATE_CITY_Text_Blocker, MSGBOX_DEFAULT
+	release
+	end
+
+setflag FLAG_UNUSED_0x02C
+	removeobject LOCALID_COPPERGATE_ADMIN
+setflag FLAG_UNUSED_0x02F
+	removeobject COPPERGATE_BIKE_SALESMAN

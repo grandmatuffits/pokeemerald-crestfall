@@ -9503,6 +9503,16 @@
       "secondary_tileset": "gTileset_MauvilleGym",
       "border_filepath": "data/layouts/COPPERGATE_CITY_GYM/border.bin",
       "blockdata_filepath": "data/layouts/COPPERGATE_CITY_GYM/map.bin"
+    },
+    {
+      "id": "LAYOUT_COPPERGATE_CITY_BIKE_SHOP",
+      "name": "COPPERGATE_CITY_BIKE_SHOP_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/COPPERGATE_CITY_BIKE_SHOP/border.bin",
+      "blockdata_filepath": "data/layouts/COPPERGATE_CITY_BIKE_SHOP/map.bin"
     }
   ]
 }

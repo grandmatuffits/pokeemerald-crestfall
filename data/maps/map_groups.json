@@ -142,7 +142,8 @@
     "ENPALE_ROUTE_2",
     "ENPALE_ROUTE_3",
     "VELDTMOOR_CITY",
-    "COPPERGATE_CITY"
+    "COPPERGATE_CITY",
+    "COPPERGATE_CITY_BIKE_SHOP"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

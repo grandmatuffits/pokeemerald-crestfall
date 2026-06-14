@@ -60,6 +60,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_COPPERGATE_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
       "x": 48,
       "y": 29,
@@ -69,11 +70,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "flag": "FLAG_UNUSED_0x02A",
       "script": "0x0",
-      "local_id": "LOCALID_COPPERGATE_RIVAL"
+      "flag": "FLAG_UNUSED_0x02A"
     },
     {
+      "local_id": "COPPERGATE_BIKE_SALESMAN",
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 19,
       "y": 10,
@@ -84,7 +85,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x02F"
     },
     {
       "local_id": "LOCALID_COPPERGATE_GRUNT_1",
@@ -98,7 +99,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "COPPERGATE_CITY_EventScript_Grunt1",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x02D"
     },
     {
       "local_id": "LOCALID_COPPERGATE_GRUNT_2",
@@ -112,7 +113,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "COPPERGATE_CITY_EventScript_Grunt2",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x02E"
     },
     {
       "local_id": "LOCALID_COPPERGATE_ADMIN",
@@ -126,7 +127,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_UNUSED_0x02C"
     },
     {
       "local_id": "LOCALID_COPPERGATE_BLOCKER",
@@ -139,8 +140,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "COPPERGATE_CITY_EventScript_Blocker",
+      "flag": "FLAG_UNUSED_0x02B"
     }
   ],
   "warp_events": [
@@ -149,6 +150,13 @@
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_COPPERGATE_CITY_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_COPPERGATE_CITY_BIKE_SHOP",
       "dest_warp_id": "0"
     }
   ],
@@ -159,7 +167,7 @@
       "y": 28,
       "elevation": 3,
       "var": "VAR_TEMP_1",
-      "var_value": 0,
+      "var_value": "0",
       "script": "COPPERGATE_CITY_EventScript_RivalScene28"
     },
     {
@@ -168,7 +176,7 @@
       "y": 29,
       "elevation": 3,
       "var": "VAR_TEMP_1",
-      "var_value": 0,
+      "var_value": "0",
       "script": "COPPERGATE_CITY_EventScript_RivalScene29"
     },
     {
@@ -177,7 +185,7 @@
       "y": 30,
       "elevation": 3,
       "var": "VAR_TEMP_1",
-      "var_value": 0,
+      "var_value": "0",
       "script": "COPPERGATE_CITY_EventScript_RivalScene30"
     },
     {
@@ -186,7 +194,7 @@
       "y": 31,
       "elevation": 3,
       "var": "VAR_TEMP_1",
-      "var_value": 0,
+      "var_value": "0",
       "script": "COPPERGATE_CITY_EventScript_RivalScene31"
     }
   ],
