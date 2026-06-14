@@ -17508,3 +17508,74 @@ Music: Aqua
 
 Swirlix
 Level: 12
+
+=== TRAINER_LENNOX_GYM2 ===
+Name: LENNOX
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Rich
+
+Voltorb
+Level: 14
+
+=== TRAINER_LISA_GYM2 ===
+Name: LISA
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
+
+Shinx
+Level: 13
+
+Pikachu
+Level: 13
+
+=== TRAINER_DAVE_GYM2 ===
+Name: DAVE
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Intense
+
+Elekid
+Level: 12
+
+Magnemite
+Level: 12
+
+Joltik
+Level: 12
+
+=== TRAINER_HAL_GYM2 ===
+Name: HAL
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+
+Luxio
+Level: 15
+
+=== TRAINER_OMAR_1 ===
+Name: OMAR
+Class: Leader
+Pic: Leader Wattson
+Gender: Male
+Music: Intense
+
+Magnemite
+Level: 17
+Ability: Sturdy
+- Volt Switch
+- Magnet Rise
+- Magnet Bomb
+- Thunder Wave
+
+Emolga
+Level: 20
+- Volt Switch
+- Quick Attack
+- Thunder Wave
+- Pursuit

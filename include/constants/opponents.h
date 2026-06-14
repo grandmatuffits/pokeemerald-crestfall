@@ -900,13 +900,18 @@
 #define TRAINER_RIVALCF_2                       893
 #define TRAINER_COVENANT_GRUNT_1                894
 #define TRAINER_COVENANT_GRUNT_2                895
-#define TRAINERS_COUNT_EMERALD                  896
+#define TRAINER_LENNOX_GYM2                     896
+#define TRAINER_LISA_GYM2                       897
+#define TRAINER_DAVE_GYM2                       898
+#define TRAINER_HAL_GYM2                        899
+#define TRAINER_OMAR_1                          900
+#define TRAINERS_COUNT_EMERALD                  901
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define MAX_TRAINERS_COUNT_EMERALD 900
+#define MAX_TRAINERS_COUNT_EMERALD 950
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG

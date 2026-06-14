@@ -5257,9 +5257,12 @@ u16 GetBattleBGM(void)
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         && TRAINER_BATTLE_PARAM.opponentA == TRAINER_UMBRA_OPENING)
         return MUS_ENPALE_UMBRA;
-if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         && TRAINER_BATTLE_PARAM.opponentA == TRAINER_ROBIN_1)
         return MUS_ENPALE_ROBIN;;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+		&& TRAINER_BATTLE_PARAM.opponentA == TRAINER_OMAR_1)
+		return MUS_ENPALE_OMAR;
 
     if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
     {

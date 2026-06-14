@@ -1,11 +1,12 @@
 #define LOCALID_COPPERGATE_RIVAL 4
+#define LOCALID_COPPERGATE_BLOCKER 9
 
 COPPERGATE_CITY_MapScripts::
 	.byte 0
 
 @ ======== ROW 28 ========
 COPPERGATE_CITY_EventScript_RivalScene28::
-	goto_if_set FLAG_UNUSED_0x02A, COPPERGATE_CITY_EventScript_RivalDone
+	goto_if_set FLAG_UNUSED_0x030, COPPERGATE_CITY_EventScript_RivalDone
 	lockall
 	applymovement LOCALID_COPPERGATE_RIVAL, COPPERGATE_CITY_Movement_RivalTo28
 	waitmovement 0
@@ -17,7 +18,7 @@ COPPERGATE_CITY_EventScript_RivalScene28::
 
 @ ======== ROW 29 ========
 COPPERGATE_CITY_EventScript_RivalScene29::
-	goto_if_set FLAG_UNUSED_0x02A, COPPERGATE_CITY_EventScript_RivalDone
+	goto_if_set FLAG_UNUSED_0x030, COPPERGATE_CITY_EventScript_RivalDone
 	lockall
 	applymovement LOCALID_COPPERGATE_RIVAL, COPPERGATE_CITY_Movement_RivalTo29
 	waitmovement 0
@@ -29,7 +30,7 @@ COPPERGATE_CITY_EventScript_RivalScene29::
 
 @ ======== ROW 30 ========
 COPPERGATE_CITY_EventScript_RivalScene30::
-	goto_if_set FLAG_UNUSED_0x02A, COPPERGATE_CITY_EventScript_RivalDone
+	goto_if_set FLAG_UNUSED_0x030, COPPERGATE_CITY_EventScript_RivalDone
 	lockall
 	applymovement LOCALID_COPPERGATE_RIVAL, COPPERGATE_CITY_Movement_RivalTo30
 	waitmovement 0
@@ -41,7 +42,7 @@ COPPERGATE_CITY_EventScript_RivalScene30::
 
 @ ======== ROW 31 (bottom — leaves UP) ========
 COPPERGATE_CITY_EventScript_RivalScene31::
-	goto_if_set FLAG_UNUSED_0x02A, COPPERGATE_CITY_EventScript_RivalDone
+	goto_if_set FLAG_UNUSED_0x030, COPPERGATE_CITY_EventScript_RivalDone
 	lockall
 	applymovement LOCALID_COPPERGATE_RIVAL, COPPERGATE_CITY_Movement_RivalTo31
 	waitmovement 0
@@ -142,8 +143,8 @@ COPPERGATE_CITY_Text_RivalAfter:
 
 COPPERGATE_CITY_EventScript_RivalFinish::
 	removeobject LOCALID_COPPERGATE_RIVAL
-	setflag FLAG_UNUSED_0x02A
-	setflag FLAG_UNUSED_0x02C
+	setflag FLAG_UNUSED_0x030
+	setflag FLAG_UNUSED_0x032
 	releaseall
 	end
 
@@ -158,7 +159,7 @@ COPPERGATE_CITY_EventScript_Grunt1::
 COPPERGATE_CITY_EventScript_Grunt1Leave::
 	applymovement LOCALID_COPPERGATE_GRUNT_1, COPPERGATE_CITY_Movement_GruntExitWest
 	waitmovement 0
-	setflag FLAG_UNUSED_0x02D
+	setflag FLAG_UNUSED_0x033
 	removeobject LOCALID_COPPERGATE_GRUNT_1
 	releaseall
 	end
@@ -170,7 +171,7 @@ COPPERGATE_CITY_EventScript_Grunt2::
 COPPERGATE_CITY_EventScript_Grunt2Leave::
 	applymovement LOCALID_COPPERGATE_GRUNT_2, COPPERGATE_CITY_Movement_GruntExitWest
 	waitmovement 0
-	setflag FLAG_UNUSED_0x02E
+	setflag FLAG_UNUSED_0x034
 	removeobject LOCALID_COPPERGATE_GRUNT_2
 	goto COPPERGATE_CITY_EventScript_AdminScene
 	end
@@ -183,7 +184,7 @@ COPPERGATE_CITY_EventScript_AdminScene::
 	closemessage
 	applymovement LOCALID_COPPERGATE_ADMIN, COPPERGATE_CITY_Movement_AdminLeave
 	waitmovement 0
-	setflag FLAG_UNUSED_0x02C
+	setflag FLAG_UNUSED_0x032
 	removeobject LOCALID_COPPERGATE_ADMIN
 	applymovement COPPERGATE_BIKE_SALESMAN, COPPERGATE_CITY_Movement_FacePlayerDown
 	waitmovement 0
@@ -191,9 +192,10 @@ COPPERGATE_CITY_EventScript_AdminScene::
 	closemessage
 	applymovement COPPERGATE_BIKE_SALESMAN, COPPERGATE_CITY_Movement_SalesmanIntoShop
 	waitmovement 0
-	setflag FLAG_UNUSED_0x02F
+	setflag FLAG_UNUSED_0x035
 	removeobject COPPERGATE_BIKE_SALESMAN
-	setflag FLAG_UNUSED_0x02B
+	setflag FLAG_UNUSED_0x031
+	removeobject LOCALID_COPPERGATE_BLOCKER
 	releaseall
 	end
 
@@ -284,7 +286,7 @@ COPPERGATE_CITY_EventScript_Blocker::
 	release
 	end
 
-setflag FLAG_UNUSED_0x02C
+setflag FLAG_UNUSED_0x032
 	removeobject LOCALID_COPPERGATE_ADMIN
-setflag FLAG_UNUSED_0x02F
+setflag FLAG_UNUSED_0x035
 	removeobject COPPERGATE_BIKE_SALESMAN

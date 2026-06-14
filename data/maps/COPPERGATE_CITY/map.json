@@ -85,7 +85,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_UNUSED_0x02F"
+      "flag": "FLAG_UNUSED_0x035"
     },
     {
       "local_id": "LOCALID_COPPERGATE_GRUNT_1",
@@ -99,7 +99,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "COPPERGATE_CITY_EventScript_Grunt1",
-      "flag": "FLAG_UNUSED_0x02D"
+      "flag": "FLAG_UNUSED_0x033"
     },
     {
       "local_id": "LOCALID_COPPERGATE_GRUNT_2",
@@ -113,7 +113,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "COPPERGATE_CITY_EventScript_Grunt2",
-      "flag": "FLAG_UNUSED_0x02E"
+      "flag": "FLAG_UNUSED_0x034"
     },
     {
       "local_id": "LOCALID_COPPERGATE_ADMIN",
@@ -158,6 +158,13 @@
       "elevation": 0,
       "dest_map": "MAP_COPPERGATE_CITY_BIKE_SHOP",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_DEWFORD_TOWN_POKEMON_CENTER_1F",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
