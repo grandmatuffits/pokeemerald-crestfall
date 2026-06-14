@@ -9513,6 +9513,16 @@
       "secondary_tileset": "gTileset_BikeShop",
       "border_filepath": "data/layouts/COPPERGATE_CITY_BIKE_SHOP/border.bin",
       "blockdata_filepath": "data/layouts/COPPERGATE_CITY_BIKE_SHOP/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARREN_TOWN",
+      "name": "QUARREN_TOWN_Layout",
+      "width": 30,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/QUARREN_TOWN/border.bin",
+      "blockdata_filepath": "data/layouts/QUARREN_TOWN/map.bin"
     }
   ]
 }

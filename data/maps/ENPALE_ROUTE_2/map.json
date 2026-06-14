@@ -184,7 +184,7 @@
     },
     {
       "local_id": "ENPALE_ROUTE2_PKM_BREEDER_MIKE",
-      "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
       "x": 25,
       "y": 43,
       "elevation": 0,

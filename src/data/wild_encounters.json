@@ -35429,7 +35429,7 @@
               {
                 "min_level": 9,
                 "max_level": 10,
-                "species": "SPECIES_STARLY"
+                "species": "SPECIES_SENTRET"
               },
               {
                 "min_level": 9,
@@ -35444,42 +35444,42 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_ABRA"
+                "species": "SPECIES_MURKROW"
               },
               {
                 "min_level": 9,
                 "max_level": 10,
-                "species": "SPECIES_DUCKLETT"
+                "species": "SPECIES_TRAPINCH"
               },
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_ROSELIA"
+                "species": "SPECIES_TRAPINCH"
               },
               {
                 "min_level": 9,
                 "max_level": 10,
-                "species": "SPECIES_YANMA"
+                "species": "SPECIES_HOUNDOUR"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_STARLY"
+                "species": "SPECIES_HOUNDOUR"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_SENTRET"
+                "species": "SPECIES_NINCADA"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_DUCKLETT"
+                "species": "SPECIES_NINCADA"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_YANMA"
+                "species": "SPECIES_VULLABY"
               }
             ]
           }
