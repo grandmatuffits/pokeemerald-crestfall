@@ -311,11 +311,13 @@ MINSI_LAB_Text_Hemlock6:
 
 MINSI_LAB_Movement_RivalToRowlet::
 	walk_up
+	walk_up
 	walk_right
 	face_up
 	step_end
 
 MINSI_LAB_Movement_RivalToFennekin::
+	walk_up
 	walk_up
 	walk_right
 	walk_right
@@ -323,6 +325,7 @@ MINSI_LAB_Movement_RivalToFennekin::
 	step_end
 
 MINSI_LAB_Movement_RivalToPiplup::
+	walk_up
 	walk_up
 	walk_right
 	walk_right

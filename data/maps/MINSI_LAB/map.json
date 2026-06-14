@@ -74,7 +74,7 @@
       "local_id": "LOCALID_RIVALCF",
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
       "x": 7,
-      "y": 6,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,

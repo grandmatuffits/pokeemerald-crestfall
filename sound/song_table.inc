@@ -631,6 +631,7 @@ gSongTable::
         song mus_enpale_robin, MUSIC_PLAYER_BGM, 0
         song mus_enpale_coppergate, MUSIC_PLAYER_BGM, 0
         song mus_enpale_omar, MUSIC_PLAYER_BGM, 0
+        song mus_enpale_introspeech, MUSIC_PLAYER_BGM, 0
 	
 	.align 2
 dummy_song_header:
