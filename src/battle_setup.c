@@ -1488,6 +1488,7 @@ static void CB2_EndTrainerBattle(void)
             VarSet(VAR_ROUTE103_STATE, 1);
             HealPlayerParty();
             SetWarpDestination(MAP_GROUP(MAP_MINSI_LAB), MAP_NUM(MAP_MINSI_LAB), WARP_ID_NONE, 6, 12);
+            gFieldCallback = FieldCB_WarpExitFadeFromBlack;
             SetMainCallback2(CB2_ReturnToField);
         }
         else

@@ -14,17 +14,14 @@ PetalburgCity_Mart_EventScript_Clerk::
 
 	.align 2
 PetalburgCity_Mart_Pokemart_Basic:
+	.align 2
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
-	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_ORANGE_MAIL
+	.2byte ITEM_TM_SAFEGUARD
 	pokemartlistend
 
 PetalburgCity_Mart_EventScript_ExpandedItems::
@@ -42,12 +39,8 @@ PetalburgCity_Mart_Pokemart_Expanded:
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
-	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_REPEL
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_ORANGE_MAIL
+	.2byte ITEM_TM_SAFEGUARD
 	pokemartlistend
 
 PetalburgCity_Mart_EventScript_Woman::
