@@ -144,7 +144,8 @@
     "VELDTMOOR_CITY",
     "COPPERGATE_CITY",
     "COPPERGATE_CITY_BIKE_SHOP",
-    "QUARREN_TOWN"
+    "QUARREN_TOWN",
+    "LEHIGH_TUNNEL"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

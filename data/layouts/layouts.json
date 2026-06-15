@@ -9523,6 +9523,16 @@
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/QUARREN_TOWN/border.bin",
       "blockdata_filepath": "data/layouts/QUARREN_TOWN/map.bin"
+    },
+    {
+      "id": "LAYOUT_LEHIGH_TUNNEL",
+      "name": "LEHIGH_TUNNEL_Layout",
+      "width": 22,
+      "height": 41,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/LEHIGH_TUNNEL/border.bin",
+      "blockdata_filepath": "data/layouts/LEHIGH_TUNNEL/map.bin"
     }
   ]
 }
