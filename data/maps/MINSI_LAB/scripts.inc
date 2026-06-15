@@ -7,9 +7,19 @@
 
 MINSI_LAB_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MINSI_LAB_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, MINSI_LAB_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, MINSI_LAB_OnFrame
 	.byte 0
-
+MINSI_LAB_OnLoad:
+	goto_if_set FLAG_UNUSED_0x022, MINSI_LAB_OnLoad_End
+	compare VAR_ROUTE102_STATE, 1
+	goto_if_eq MINSI_LAB_OnLoad_PlaceHemlock
+MINSI_LAB_OnLoad_End:
+	end
+MINSI_LAB_OnLoad_PlaceHemlock:
+	setobjectxyperm LOCALID_HEMLOCK, 6, 5
+	setobjectmovementtype LOCALID_HEMLOCK, MOVEMENT_TYPE_FACE_DOWN
+	end
 MINSI_LAB_OnTransition:
 	goto_if_set FLAG_UNUSED_0x022, MINSI_LAB_OnTransition_CheckRivalLost
 	setflag FLAG_UNUSED_0x028
