@@ -66,7 +66,9 @@ MINSI_LAB_Movement_HemlockApproach::
 MINSI_LAB_EventScript_StarterBall1::
 	goto_if_set FLAG_UNUSED_0x022, MINSI_LAB_EventScript_StarterGone
 	lockall
+	showmonpic SPECIES_ROWLET, 10, 3
 	msgbox MINSI_LAB_Text_StarterBall1, MSGBOX_YESNO
+	hidemonpic
 	compare VAR_RESULT, YES
 	goto_if_eq MINSI_LAB_EventScript_ChooseRowlet
 	releaseall
@@ -75,7 +77,9 @@ MINSI_LAB_EventScript_StarterBall1::
 MINSI_LAB_EventScript_StarterBall2::
 	goto_if_set FLAG_UNUSED_0x022, MINSI_LAB_EventScript_StarterGone
 	lockall
+	showmonpic SPECIES_FENNEKIN, 10, 3
 	msgbox MINSI_LAB_Text_StarterBall2, MSGBOX_YESNO
+	hidemonpic
 	compare VAR_RESULT, YES
 	goto_if_eq MINSI_LAB_EventScript_ChooseFennekin
 	releaseall
@@ -84,7 +88,9 @@ MINSI_LAB_EventScript_StarterBall2::
 MINSI_LAB_EventScript_StarterBall3::
 	goto_if_set FLAG_UNUSED_0x022, MINSI_LAB_EventScript_StarterGone
 	lockall
+	showmonpic SPECIES_PIPLUP, 10, 3
 	msgbox MINSI_LAB_Text_StarterBall3, MSGBOX_YESNO
+	hidemonpic
 	compare VAR_RESULT, YES
 	goto_if_eq MINSI_LAB_EventScript_ChoosePiplup
 	releaseall

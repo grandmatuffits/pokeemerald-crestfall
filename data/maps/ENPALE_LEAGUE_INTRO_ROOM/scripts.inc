@@ -58,8 +58,8 @@ ENPALE_LEAGUE_INTRO_ROOM_Text_BrutusName:
 	.string "Brutus$"
 
 ENPALE_LEAGUE_INTRO_ROOM_Text_Brutus1:
-	.string "You are late getting ready.\n"
-	.string "The battle begins soon.$"
+	.string "You're late.\n"
+	.string "The battle's already starting.$"
 
 ENPALE_LEAGUE_INTRO_ROOM_Text_Brutus2:
 	.string "What!? You didn't pick a Pokemon\n"
