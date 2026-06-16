@@ -113,6 +113,9 @@ MINSI_LAB_EventScript_StarterGone::
 
 MINSI_LAB_EventScript_ChooseRowlet::
 	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_UNUSED_0x022
+	setflag FLAG_UNUSED_0x036
+	removeobject LOCALID_STARTERBALL_1
 	givemon SPECIES_ROWLET, 5, ITEM_NONE
 	bufferspeciesname STR_VAR_1, SPECIES_ROWLET
 	message MINSI_LAB_Text_ChoseRowlet
@@ -126,6 +129,9 @@ MINSI_LAB_EventScript_ChooseRowlet::
 MINSI_LAB_EventScript_ChooseFennekin::
 	setflag FLAG_UNUSED_0x023
 	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_UNUSED_0x022
+	setflag FLAG_UNUSED_0x037
+	removeobject LOCALID_STARTERBALL_2
 	givemon SPECIES_FENNEKIN, 5, ITEM_NONE
 	bufferspeciesname STR_VAR_1, SPECIES_FENNEKIN
 	message MINSI_LAB_Text_ChoseFennekin
@@ -139,6 +145,9 @@ MINSI_LAB_EventScript_ChooseFennekin::
 MINSI_LAB_EventScript_ChoosePiplup::
 	setflag FLAG_UNUSED_0x024
 	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_UNUSED_0x022
+	setflag FLAG_UNUSED_0x038
+	removeobject LOCALID_STARTERBALL_3
 	givemon SPECIES_PIPLUP, 5, ITEM_NONE
 	bufferspeciesname STR_VAR_1, SPECIES_PIPLUP
 	message MINSI_LAB_Text_ChosePiplup
@@ -203,9 +212,6 @@ MINSI_LAB_EventScript_HemlockToPiplup::
 	goto MINSI_LAB_EventScript_GivePokedex
 
 MINSI_LAB_EventScript_GivePokedex::
-	removeobject LOCALID_STARTERBALL_1
-	removeobject LOCALID_STARTERBALL_2
-	removeobject LOCALID_STARTERBALL_3
 	setflag FLAG_UNUSED_0x022
 	setspeaker MINSI_LAB_Text_HemlockName
 	msgbox MINSI_LAB_Text_Hemlock3, MSGBOX_SIGN

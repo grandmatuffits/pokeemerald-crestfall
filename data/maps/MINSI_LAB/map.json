@@ -26,7 +26,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MINSI_LAB_EventScript_StarterBall1",
-      "flag": "FLAG_UNUSED_0x022"
+      "flag": "FLAG_UNUSED_0x036"
     },
     {
       "local_id": "LOCALID_STARTERBALL_2",
@@ -40,7 +40,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MINSI_LAB_EventScript_StarterBall2",
-      "flag": "FLAG_UNUSED_0x022"
+      "flag": "FLAG_UNUSED_0x037"
     },
     {
       "local_id": "LOCALID_STARTERBALL_3",
@@ -54,7 +54,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MINSI_LAB_EventScript_StarterBall3",
-      "flag": "FLAG_UNUSED_0x022"
+      "flag": "FLAG_UNUSED_0x038"
     },
     {
       "local_id": "LOCALID_HEMLOCK",
