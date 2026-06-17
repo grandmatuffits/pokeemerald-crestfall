@@ -540,6 +540,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_NpcGreen,              OBJ_EVENT_PAL_TAG_NPC_GREEN},
     {gObjectEventPal_Brutus,                OBJ_EVENT_PAL_TAG_BRUTUS},
     {gObjectEventPal_UmbraOw,                OBJ_EVENT_PAL_TAG_UMBRA},
+    {gObjectEventPal_RobinOw,               OBJ_EVENT_PAL_TAG_ROBIN},
     {gObjectEventPal_NpcWhite,              OBJ_EVENT_PAL_TAG_NPC_WHITE},
     {gObjectEventPal_NpcBlueReflection,     OBJ_EVENT_PAL_TAG_NPC_BLUE_REFLECTION},
     {gObjectEventPal_NpcPinkReflection,     OBJ_EVENT_PAL_TAG_NPC_PINK_REFLECTION},
