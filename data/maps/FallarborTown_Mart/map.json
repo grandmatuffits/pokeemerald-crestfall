@@ -3,7 +3,6 @@
   "name": "FallarborTown_Mart",
   "layout": "LAYOUT_MART",
   "music": "MUS_POKE_MART",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_FALLARBOR_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -87,17 +86,18 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_FALLARBOR_TOWN",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_QUARREN_TOWN",
+      "dest_warp_id": "1"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_FALLARBOR_TOWN",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_QUARREN_TOWN",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }
