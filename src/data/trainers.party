@@ -16911,7 +16911,7 @@ Level: 50
 === TRAINER_RIVALCF_1 ===
 Name: RIVAL
 Class: Rival
-Pic: Youngster
+Pic: Rival Early Frlg
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17489,7 +17489,7 @@ Level: 13
 === TRAINER_RIVALCF_2 ===
 Name: RIVAL
 Class: Rival
-Pic: Youngster
+Pic: Rival Early Frlg
 Gender: Male
 Music: Male
 Items: Potion / Potion

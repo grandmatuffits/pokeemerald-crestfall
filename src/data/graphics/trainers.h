@@ -359,7 +359,7 @@ const u32 gTrainerFrontPic_BlackBeltFrlg[] = INCGFX_U32("graphics/trainers/front
 const u16 gTrainerPalette_BlackBeltFrlg[] = INCGFX_U16("graphics/trainers/palettes/black_belt_frlg.pal", ".gbapal");
 
 const u32 gTrainerFrontPic_RivalEarlyFrlg[] = INCGFX_U32("graphics/trainers/front_pics/rival_early_frlg.png", ".4bpp.smol");
-const u16 gTrainerPalette_RivalEarlyFrlg[] = INCGFX_U16("graphics/trainers/palettes/rival_early_frlg.pal", ".gbapal");
+const u16 gTrainerPalette_RivalEarlyFrlg[] = INCGFX_U16("graphics/trainers/front_pics/rival_early_frlg.png", ".gbapal");
 
 const u32 gTrainerFrontPic_ScientistFrlg[] = INCGFX_U32("graphics/trainers/front_pics/scientist_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_ScientistFrlg[] = INCGFX_U16("graphics/trainers/palettes/scientist_frlg.pal", ".gbapal");

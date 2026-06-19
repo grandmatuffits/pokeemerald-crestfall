@@ -656,7 +656,7 @@ void CB2_InitTitleScreen(void)
                                     | DISPCNT_BG0_ON
                                     | DISPCNT_BG2_ON
                                     | DISPCNT_OBJ_ON);
-        m4aSongNumStart(MUS_ENPALE_TITLE);
+        m4aSongNumStart(MUS_ENPALE_TITLE); 
         gMain.state = 5;
         break;
     case 5:
