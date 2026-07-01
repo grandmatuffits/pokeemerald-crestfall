@@ -9750,9 +9750,19 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_DelmarkWest",
       "border_filepath": "data/layouts/DELMARK_CITY_WEST/border.bin",
       "blockdata_filepath": "data/layouts/DELMARK_CITY_WEST/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORYTILES_PRIMARY_TUTORIAL",
+      "name": "PorytilesPrimaryTutorial_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PorytilesPrimaryTutorial",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/PorytilesPrimaryTutorial/border.bin",
+      "blockdata_filepath": "data/layouts/PorytilesPrimaryTutorial/map.bin"
     }
   ]
 }

@@ -150,7 +150,8 @@
     "ENPALE_ROUTE_5",
     "ENPALE_ROUTE_6",
     "LENOX_TOWN",
-    "DELMARK_CITY_WEST"
+    "DELMARK_CITY_WEST",
+    "PorytilesPrimaryTutorial"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

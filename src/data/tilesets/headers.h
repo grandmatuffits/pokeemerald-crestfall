@@ -50,6 +50,16 @@ const struct Tileset gTileset_Delmark =
     .metatileAttributes = gMetatileAttributes_Delmark,
     .callback = InitTilesetAnim_General,
 };
+const struct Tileset gTileset_DelmarkWest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DelmarkWest,
+    .palettes = gTilesetPalettes_DelmarkWest,
+    .metatiles = gMetatiles_DelmarkWest,
+    .metatileAttributes = gMetatileAttributes_DelmarkWest,
+    .callback = NULL,
+};
 
 const struct Tileset gTileset_Petalburg =
 {
@@ -1575,3 +1585,14 @@ const struct Tileset gTileset_Test1 =
 };
 
 
+
+const struct Tileset gTileset_PorytilesPrimaryTutorial =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesPrimaryTutorial,
+    .palettes = gTilesetPalettes_PorytilesPrimaryTutorial,
+    .metatiles = gMetatiles_PorytilesPrimaryTutorial,
+    .metatileAttributes = gMetatileAttributes_PorytilesPrimaryTutorial,
+    .callback = NULL,
+};

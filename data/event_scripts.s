@@ -1812,3 +1812,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/LENOX_TOWN_TRADE_HOUSE/scripts.inc"
 
 	.include "data/maps/DELMARK_CITY_WEST/scripts.inc"
+
+	.include "data/maps/PorytilesPrimaryTutorial/scripts.inc"

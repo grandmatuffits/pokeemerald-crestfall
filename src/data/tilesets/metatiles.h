@@ -15,6 +15,9 @@ const u16 gMetatileAttributes_Delmark[] = INCBIN_U16("data/tilesets/primary/delm
 const u16 gMetatiles_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatiles.bin");
 const u16 gMetatileAttributes_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatile_attributes.bin");
 
+const u16 gMetatiles_DelmarkWest[] = INCBIN_U16("data/tilesets/secondary/delmark_west/metatiles.bin");
+const u16 gMetatileAttributes_DelmarkWest[] = INCBIN_U16("data/tilesets/secondary/delmark_west/metatile_attributes.bin");
+
 const u16 gMetatiles_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatiles.bin");
 const u16 gMetatileAttributes_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatile_attributes.bin");
 
@@ -419,3 +422,6 @@ const u16 gMetatiles_Test1[] = INCBIN_U16("data/tilesets/primary/test_1/metatile
 const u16 gMetatileAttributes_Test1[] = INCBIN_U16("data/tilesets/primary/test_1/metatile_attributes.bin");
 
 
+
+const u16 gMetatiles_PorytilesPrimaryTutorial[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_tutorial/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesPrimaryTutorial[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_tutorial/metatile_attributes.bin");
