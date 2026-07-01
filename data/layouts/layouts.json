@@ -9747,8 +9747,8 @@
     {
       "id": "LAYOUT_DELMARK_CITY_WEST",
       "name": "DELMARK_CITY_WEST_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 50,
+      "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_DelmarkWest",
       "border_filepath": "data/layouts/DELMARK_CITY_WEST/border.bin",
