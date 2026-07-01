@@ -9,6 +9,9 @@ const u16 gMetatileAttributes_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/
 const u16 gMetatiles_General[] = INCBIN_U16("data/tilesets/primary/general/metatiles.bin");
 const u16 gMetatileAttributes_General[] = INCBIN_U16("data/tilesets/primary/general/metatile_attributes.bin");
 
+const u16 gMetatiles_Delmark[] = INCBIN_U16("data/tilesets/primary/delmark/metatiles.bin");
+const u16 gMetatileAttributes_Delmark[] = INCBIN_U16("data/tilesets/primary/delmark/metatile_attributes.bin");
+
 const u16 gMetatiles_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatiles.bin");
 const u16 gMetatileAttributes_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatile_attributes.bin");
 
@@ -408,3 +411,11 @@ const u16 gMetatiles_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_
 const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatile_attributes.bin");
 
 #endif // IS_FRLG
+
+const u16 gMetatiles_Snow[] = INCBIN_U16("data/tilesets/secondary/snow/metatiles.bin");
+const u16 gMetatileAttributes_Snow[] = INCBIN_U16("data/tilesets/secondary/snow/metatile_attributes.bin");
+
+const u16 gMetatiles_Test1[] = INCBIN_U16("data/tilesets/primary/test_1/metatiles.bin");
+const u16 gMetatileAttributes_Test1[] = INCBIN_U16("data/tilesets/primary/test_1/metatile_attributes.bin");
+
+

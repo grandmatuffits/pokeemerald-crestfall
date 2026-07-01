@@ -2,7 +2,7 @@
   "id": "MAP_COPPERGATE_CITY_BIKE_SHOP",
   "name": "COPPERGATE_CITY_BIKE_SHOP",
   "layout": "LAYOUT_COPPERGATE_CITY_BIKE_SHOP",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_LAB",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -10,7 +10,7 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "COPPERGATE_CITY_BIKE_SHOP_EventScript_Rydel",
       "flag": "0"
     }
   ],
@@ -46,5 +46,22 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "COPPERGATE_CITY_BIKE_SHOP_EventScript_MachBikeHandbook"
+    },
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "COPPERGATE_CITY_BIKE_SHOP_EventScript_AcroBikeHandbook"
+    }
+  ]
 }

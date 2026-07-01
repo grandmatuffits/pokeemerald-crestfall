@@ -544,6 +544,8 @@ extern const u16 gItemIconPalette_SuperLure[];
 extern const u16 gItemIconPalette_MaxLure[];
 extern const u32 gItemIcon_EscapeRope[];
 extern const u16 gItemIconPalette_EscapeRope[];
+extern const u32 gItemIcon_Pickaxe[];
+extern const u16 gItemIconPalette_Pickaxe[];
 // X Items
 extern const u32 gItemIcon_BattleStatItem[];
 extern const u16 gItemIconPalette_XAttack[];

@@ -80,6 +80,7 @@ static void Task_CloseCantUseKeyItemMessage(u8);
 static void SetDistanceOfClosestHiddenItem(u8, s16, s16);
 static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
+static void ItemUseOnFieldCB_Flash(u8 taskId);
 static bool32 IsValidLocationForVsSeeker(void);
 
 static const u8 sText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
@@ -1137,6 +1138,26 @@ void ItemUseOutOfBattle_EscapeRope(u8 taskId)
     }
 }
 
+void ItemUseOutOfBattle_Flash(u8 taskId)
+{
+    if (gMapHeader.cave == TRUE && !FlagGet(FLAG_SYS_USE_FLASH))
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Flash;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+    {
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+}
+
+static void ItemUseOnFieldCB_Flash(u8 taskId)
+{
+    PlaySE(SE_M_REFLECT);
+    FlagSet(FLAG_SYS_USE_FLASH);
+    ScriptContext_SetupScript(EventScript_UseFlash);
+    DestroyTask(taskId);
+}
 void ItemUseOutOfBattle_EvolutionStone(u8 taskId)
 {
     gItemUseCB = ItemUseCB_EvolutionStone;

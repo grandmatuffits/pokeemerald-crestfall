@@ -287,6 +287,8 @@ const u16 gItemIconPalette_MaxLure[] = INCGFX_U16("graphics/items/icon_palettes/
 
 const u32 gItemIcon_EscapeRope[] = INCGFX_U32("graphics/items/icons/escape_rope.png", ".4bpp.smol");
 const u16 gItemIconPalette_EscapeRope[] = INCGFX_U16("graphics/items/icon_palettes/escape_rope.pal", ".gbapal");
+const u32 gItemIcon_Pickaxe[] = INCGFX_U32("graphics/items/icons/pickaxe.png", ".4bpp.smol");
+const u16 gItemIconPalette_Pickaxe[] = INCGFX_U16("graphics/items/icon_palettes/pickaxe.pal", ".gbapal");
 
 // X Items
 

@@ -17,14 +17,8 @@ FallarborTown_Mart_Pokemart:
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_REVIVE
 	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_X_SP_ATK
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_DIRE_HIT
-	.2byte ITEM_GUARD_SPEC
 	pokemartlistend
 
 FallarborTown_Mart_EventScript_Woman::
@@ -47,7 +41,7 @@ FallarborTown_Mart_EventScript_Skitty::
 
 FallarborTown_Mart_Text_DecidingSkittyEvolve:
 	.string "I'm having a hard time deciding if I\n"
-	.string "should make my SKITTY evolve or not.\p"
+	.string "should make my NIDORINO evolve or not.\p"
 	.string "I only have to use this MOON STONE,\n"
 	.string "but it's so hard to decide…\p"
 	.string "If I make it evolve, it will become\n"

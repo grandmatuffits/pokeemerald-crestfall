@@ -3,7 +3,7 @@
   "name": "COPPERGATE_CITY",
   "layout": "LAYOUT_COPPERGATE_CITY",
   "music": "MUS_ENPALE_COPPERGATE",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
@@ -30,7 +30,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MINSI_CITY_EventScript_Machop",
       "flag": "0"
     },
     {
@@ -43,7 +43,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MINSI_CITY_EventScript_Poliwrath",
       "flag": "0"
     },
     {
@@ -56,7 +56,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "COPPERGATE_CITY_EventScript_Policeman",
       "flag": "0"
     },
     {
@@ -84,7 +84,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "COPPERGATE_CITY_EventScript_BikeSalesman",
       "flag": "FLAG_UNUSED_0x035"
     },
     {
@@ -98,7 +98,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "COPPERGATE_CITY_EventScript_Grunt1",
+      "script": "COPPERGATE_CITY_EventScript_GruntBusy",
       "flag": "FLAG_UNUSED_0x033"
     },
     {
@@ -112,7 +112,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "COPPERGATE_CITY_EventScript_Grunt2",
+      "script": "COPPERGATE_CITY_EventScript_GruntBusy",
       "flag": "FLAG_UNUSED_0x034"
     },
     {
@@ -127,7 +127,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_UNUSED_0x02C"
+      "flag": "FLAG_UNUSED_0x032"
     },
     {
       "local_id": "LOCALID_COPPERGATE_BLOCKER",
@@ -141,7 +141,33 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "COPPERGATE_CITY_EventScript_Blocker",
-      "flag": "FLAG_UNUSED_0x02B"
+      "flag": "FLAG_UNUSED_0x031"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "x": 24,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "COPPERGATE_CITY_EventScript_Woman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 5,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "COPPERGATE_CITY_EventScript_Policeman",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -171,6 +197,27 @@
       "y": 26,
       "elevation": 0,
       "dest_map": "MAP_RUSTBORO_CITY_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_COPPERCITY_FISHERMAN_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_COPPERGATE_CITY_TM_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_COPPERGATE_CITY_TRADE_HOUSE",
       "dest_warp_id": "0"
     }
   ],
@@ -212,5 +259,30 @@
       "script": "COPPERGATE_CITY_EventScript_RivalScene31"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "COPPERGATE_CITY_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "COPPERGATE_CITY_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "COPPERGATE_CITY_EventScript_BikeShopSign"
+    }
+  ]
 }

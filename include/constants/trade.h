@@ -22,6 +22,8 @@ enum InGameTradeID
     INGAME_TRADE_TANGELA,
     INGAME_TRADE_SEEL,
     INGAME_TRADE_SNORUNT,
+    INGAME_TRADE_SHELLDER,
+    INGAME_TRADE_AXEW,
 };
 
 // Return values for CanTradeSelectedMon and CanSpinTradeMon

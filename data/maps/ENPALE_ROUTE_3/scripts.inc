@@ -1,19 +1,6 @@
 ENPALE_ROUTE_3_MapScripts::
 	.byte 0
 
-ENPALE_ROUTE_3_EventScript_Nurse::
-	lock
-	faceplayer
-	setvar VAR_0x800B, ROUTE_3_NURSE
-	call Common_EventScript_PkmnCenterNurse
-	waitmessage
-	waitbuttonpress
-	release
-	end
-
-ROUTE_3_Text_NURSE:
-	.string "Your Pokemon look tired!\nLet me heal them up!$"
-
 ENPALE_ROUTE_3_EventScript_Bob::
 	trainerbattle_single TRAINER_ROUTE_3_BOB, ENPALE_ROUTE_3_Text_BobIntro, ENPALE_ROUTE_3_Text_BobDefeat
 	msgbox ENPALE_ROUTE_3_Text_BobRepeat, MSGBOX_AUTOCLOSE

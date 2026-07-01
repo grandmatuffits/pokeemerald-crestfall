@@ -1751,6 +1751,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/wild_encounter.inc"
+	.include "data/scripts/mining.inc"
 
 
 
@@ -1767,3 +1768,47 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/QUARREN_TOWN/scripts.inc"
 
 	.include "data/maps/LEHIGH_TUNNEL/scripts.inc"
+
+	.include "data/maps/LEHIGH_TUNNEL_BF1/scripts.inc"
+
+	.include "data/maps/LEHIGH_TUNNEL_EXIT/scripts.inc"
+
+	.include "data/maps/MINSI_CITY_REST_HOUSE/scripts.inc"
+
+	.include "data/maps/COPPERCITY_FISHERMAN_HOUSE/scripts.inc"
+
+	.include "data/maps/COPPERGATE_CITY_TM_HOUSE/scripts.inc"
+
+	.include "data/maps/COPPERGATE_CITY_TRADE_HOUSE/scripts.inc"
+
+	.include "data/maps/QUARREN_TOWN_OLD_MAN_HOUSE/scripts.inc"
+
+	.include "data/maps/QUARREN_TOWN_HOUSE/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_4/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_5/scripts.inc"
+
+	.include "data/maps/WHITECAPS/scripts.inc"
+
+	.include "data/maps/WHITECAPS_2F/scripts.inc"
+
+	.include "data/maps/WHITECAPS_EXTERIOR/scripts.inc"
+
+	.include "data/maps/WHITECAPS_EXIT/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_6/scripts.inc"
+
+	.include "data/maps/LENOX_TOWN/scripts.inc"
+
+	.include "data/maps/LENOX_TOWN_CUT_HOUSE/scripts.inc"
+
+	.include "data/maps/LENOX_TOWN_GYM/scripts.inc"
+
+	.include "data/maps/LENOX_GYM_BF1/scripts.inc"
+
+	.include "data/maps/LENOX_TOWN_SHIPYARD/scripts.inc"
+
+	.include "data/maps/LENOX_TOWN_TRADE_HOUSE/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_WEST/scripts.inc"

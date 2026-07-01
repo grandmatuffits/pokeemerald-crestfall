@@ -148,37 +148,48 @@ COPPERGATE_CITY_EventScript_RivalFinish::
 	releaseall
 	end
 
-@ ======== GRUNTS ========
+@ ======== GRUNTS / COVENANT SCENE (salesman-triggered) ========
 #define LOCALID_COPPERGATE_GRUNT_1 6
 #define LOCALID_COPPERGATE_GRUNT_2 7
 
-COPPERGATE_CITY_EventScript_Grunt1::
-	trainerbattle_single TRAINER_COVENANT_GRUNT_1, COPPERGATE_CITY_Text_Grunt1Intro, COPPERGATE_CITY_Text_Grunt1Defeat, COPPERGATE_CITY_EventScript_Grunt1Leave
-	end
+@ Master cutscene — runs off the bike salesman's interaction.
+COPPERGATE_CITY_EventScript_BikeSalesman::
+	goto_if_set FLAG_UNUSED_0x031, COPPERGATE_CITY_EventScript_SalesmanShop
+	lockall
+	applymovement COPPERGATE_BIKE_SALESMAN, COPPERGATE_CITY_Movement_FacePlayerDown
+	waitmovement 0
 
-COPPERGATE_CITY_EventScript_Grunt1Leave::
+	@ --- Grunt 1 approaches, battles, leaves ---
+	applymovement LOCALID_COPPERGATE_GRUNT_1, COPPERGATE_CITY_Movement_Grunt1Approach
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, COPPERGATE_CITY_Movement_PlayerFaceDown
+	waitmovement 0
+	msgbox COPPERGATE_CITY_Text_Grunt1Intro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_COVENANT_GRUNT_1, COPPERGATE_CITY_Text_Grunt1Defeat
 	applymovement LOCALID_COPPERGATE_GRUNT_1, COPPERGATE_CITY_Movement_GruntExitWest
 	waitmovement 0
 	setflag FLAG_UNUSED_0x033
 	removeobject LOCALID_COPPERGATE_GRUNT_1
-	releaseall
-	end
 
-COPPERGATE_CITY_EventScript_Grunt2::
-	trainerbattle_single TRAINER_COVENANT_GRUNT_2, COPPERGATE_CITY_Text_Grunt2Intro, COPPERGATE_CITY_Text_Grunt2Defeat, COPPERGATE_CITY_EventScript_Grunt2Leave
-	end
-
-COPPERGATE_CITY_EventScript_Grunt2Leave::
+	@ --- Grunt 2 approaches, battles, leaves ---
+	applymovement LOCALID_COPPERGATE_GRUNT_2, COPPERGATE_CITY_Movement_Grunt2Approach
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, COPPERGATE_CITY_Movement_PlayerFaceDown
+	waitmovement 0
+	msgbox COPPERGATE_CITY_Text_Grunt2Intro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_COVENANT_GRUNT_2, COPPERGATE_CITY_Text_Grunt2Defeat
 	applymovement LOCALID_COPPERGATE_GRUNT_2, COPPERGATE_CITY_Movement_GruntExitWest
 	waitmovement 0
 	setflag FLAG_UNUSED_0x034
 	removeobject LOCALID_COPPERGATE_GRUNT_2
-	goto COPPERGATE_CITY_EventScript_AdminScene
-	end
 
-COPPERGATE_CITY_EventScript_AdminScene::
+	@ --- Admin approaches, threatens, leaves ---
 	addobject LOCALID_COPPERGATE_ADMIN
 	applymovement LOCALID_COPPERGATE_ADMIN, COPPERGATE_CITY_Movement_AdminEnter
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, COPPERGATE_CITY_Movement_PlayerFaceLeft
 	waitmovement 0
 	msgbox COPPERGATE_CITY_Text_AdminThreat, MSGBOX_DEFAULT
 	closemessage
@@ -186,7 +197,11 @@ COPPERGATE_CITY_EventScript_AdminScene::
 	waitmovement 0
 	setflag FLAG_UNUSED_0x032
 	removeobject LOCALID_COPPERGATE_ADMIN
-	applymovement COPPERGATE_BIKE_SALESMAN, COPPERGATE_CITY_Movement_FacePlayerDown
+
+	@ --- Salesman thanks, walks into shop, scene ends ---
+	applymovement COPPERGATE_BIKE_SALESMAN, COPPERGATE_CITY_Movement_PlayerFaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, COPPERGATE_CITY_Movement_PlayerFaceRight
 	waitmovement 0
 	msgbox COPPERGATE_CITY_Text_SalesmanThanks, MSGBOX_DEFAULT
 	closemessage
@@ -197,6 +212,31 @@ COPPERGATE_CITY_EventScript_AdminScene::
 	setflag FLAG_UNUSED_0x031
 	removeobject LOCALID_COPPERGATE_BLOCKER
 	releaseall
+	end
+
+COPPERGATE_CITY_Movement_PlayerFaceLeft:
+	face_left
+	step_end
+
+COPPERGATE_CITY_Movement_PlayerFaceRight:
+	face_right
+	step_end
+
+COPPERGATE_CITY_Movement_PlayerFaceDown:
+	face_down
+	step_end
+
+@ Post-scene: salesman already despawned, but guard is here for safety.
+COPPERGATE_CITY_EventScript_SalesmanShop::
+	releaseall
+	end
+
+@ Grunts before the scene — point both grunt objects' script field here.
+COPPERGATE_CITY_EventScript_GruntBusy::
+	lock
+	faceplayer
+	msgbox COPPERGATE_CITY_Text_GruntBusy, MSGBOX_DEFAULT
+	release
 	end
 
 COPPERGATE_CITY_Text_Grunt1Intro:
@@ -212,11 +252,25 @@ COPPERGATE_CITY_Text_Grunt2Intro:
 COPPERGATE_CITY_Text_Grunt2Defeat:
 	.string "Well, then.$"
 
-COPPERGATE_CITY_Text_AdminStub:
-	.string "An admin appears and threatens\n"
-	.string "you. Full scene coming soon.$"
+COPPERGATE_CITY_Text_GruntBusy:
+	.string "We're a little busy at the moment.\n"
+	.string "Do you mind?.$"
 
 @ ======== movements ========
+COPPERGATE_CITY_Movement_Grunt1Approach:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_up
+	face_up
+	step_end
+
+COPPERGATE_CITY_Movement_Grunt2Approach:
+	walk_left
+	face_up
+	step_end
+
 COPPERGATE_CITY_Movement_GruntExitWest:
 	walk_left
 	walk_left
@@ -231,6 +285,7 @@ COPPERGATE_CITY_Movement_GruntExitWest:
 	step_end
 
 COPPERGATE_CITY_Movement_AdminEnter:
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -277,7 +332,7 @@ COPPERGATE_CITY_Text_SalesmanThanks:
 
 COPPERGATE_CITY_Text_Blocker:
 	.string "It looks like a shake-up is going\n"
-	.string "on at the bike shop…$"	
+	.string "on at the bike shop…$"
 
 COPPERGATE_CITY_EventScript_Blocker::
 	lock
@@ -286,7 +341,75 @@ COPPERGATE_CITY_EventScript_Blocker::
 	release
 	end
 
-setflag FLAG_UNUSED_0x032
-	removeobject LOCALID_COPPERGATE_ADMIN
-setflag FLAG_UNUSED_0x035
-	removeobject COPPERGATE_BIKE_SALESMAN
+MINSI_CITY_EventScript_Policeman::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_Policeman, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_Policeman:
+	.string "Road's closed for now.$"
+
+MINSI_CITY_EventScript_Machop::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_Machop, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_Machop:
+	.string "Chop!$"
+
+MINSI_CITY_EventScript_Poliwrath::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_Poliwrath, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_Poliwrath:
+	.string "Poli!$"	
+
+COPPERGATE_CITY_EventScript_TownSign::
+	msgbox COPPERGATE_CITY_Text_TownSign, MSGBOX_SIGN
+	end
+
+COPPERGATE_CITY_Text_TownSign:
+	.string "Coppergate City\n"
+
+COPPERGATE_CITY_EventScript_GymSign::
+	msgbox COPPERGATE_CITY_Text_GymSign, MSGBOX_SIGN
+	end
+
+COPPERGATE_CITY_Text_GymSign:
+	.string "Coppergate Gym$"
+
+COPPERGATE_CITY_EventScript_BikeShopSign::
+	msgbox COPPERGATE_CITY_Text_BikeShopSign, MSGBOX_SIGN
+	end
+
+COPPERGATE_CITY_Text_BikeShopSign:
+	.string "Coppergate Bikes\n"
+	.string "Ride like the wind!$"	
+
+COPPERGATE_CITY_EventScript_Policeman::
+	lock
+	faceplayer
+	msgbox COPPERGATE_CITY_Text_Policeman, MSGBOX_DEFAULT
+	release
+	end
+
+COPPERGATE_CITY_Text_Policeman:
+	.string "Road's closed for now\ndue to construction.$"
+
+COPPERGATE_CITY_EventScript_Woman::
+	lock
+	faceplayer
+	msgbox COPPERGATE_CITY_Text_Woman, MSGBOX_DEFAULT
+	release
+	end
+
+COPPERGATE_CITY_Text_Woman:
+	.string "Coppergate is still\nup and coming.\p"
+	.string "There's a Safari Zone being built\njust down the road!$"	

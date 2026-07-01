@@ -40,6 +40,16 @@ const struct Tileset gTileset_General =
     .metatileAttributes = gMetatileAttributes_General,
     .callback = InitTilesetAnim_General,
 };
+const struct Tileset gTileset_Delmark =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Delmark,
+    .palettes = gTilesetPalettes_Delmark,
+    .metatiles = gMetatiles_Delmark,
+    .metatileAttributes = gMetatileAttributes_Delmark,
+    .callback = InitTilesetAnim_General,
+};
 
 const struct Tileset gTileset_Petalburg =
 {
@@ -1541,3 +1551,27 @@ const struct Tileset gTileset_HallOfFame =
 };
 
 #endif // IS_FRLG
+
+const struct Tileset gTileset_Snow =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Snow,
+    .palettes = gTilesetPalettes_Snow,
+    .metatiles = gMetatiles_Snow,
+    .metatileAttributes = gMetatileAttributes_Snow,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Test1 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Test1,
+    .palettes = gTilesetPalettes_Test1,
+    .metatiles = gMetatiles_Test1,
+    .metatileAttributes = gMetatileAttributes_Test1,
+    .callback = NULL,
+};
+
+

@@ -34,7 +34,7 @@
     },
     {
       "id": "MAPSEC_FALLARBOR_TOWN",
-      "name": "FALLARBOR TOWN",
+      "name": "Quarren Town",
       "x": 3,
       "y": 0,
       "width": 1,
@@ -74,7 +74,7 @@
     },
     {
       "id": "MAPSEC_MAUVILLE_CITY",
-      "name": "MAUVILLE CITY",
+      "name": "Coppergate City",
       "x": 8,
       "y": 6,
       "width": 2,
@@ -122,7 +122,7 @@
     },
     {
       "id": "MAPSEC_EVER_GRANDE_CITY",
-      "name": "EVER GRANDE CITY",
+      "name": "Veldtmoor City",
       "x": 27,
       "y": 8,
       "width": 1,
@@ -450,7 +450,7 @@
     },
     {
       "id": "MAPSEC_MT_CHIMNEY",
-      "name": "MT. CHIMNEY",
+      "name": "Ridley Cave",
       "x": 6,
       "y": 2,
       "width": 1,
@@ -490,7 +490,7 @@
     },
     {
       "id": "MAPSEC_ABANDONED_SHIP",
-      "name": "Coppergate City",
+      "name": "Kinneret Town",
       "x": 6,
       "y": 14,
       "width": 1,
@@ -578,7 +578,7 @@
     },
     {
       "id": "MAPSEC_CAVE_OF_ORIGIN",
-      "name": "CAVE OF ORIGIN",
+      "name": "Whitecaps",
       "x": 21,
       "y": 7,
       "width": 1,
@@ -733,7 +733,7 @@
     },
     {
       "id": "MAPSEC_VERMILION_CITY",
-      "name": "VERMILION CITY",
+      "name": "Lenox Town",
       "x": 14,
       "y": 9,
       "width": 1,
@@ -805,7 +805,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_2",
-      "name": "Allenwood Forest",
+      "name": "Route 2",
       "x": 4,
       "y": 5,
       "width": 1,
@@ -813,7 +813,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_3",
-      "name": "ROUTE 3",
+      "name": "Route 3",
       "x": 5,
       "y": 4,
       "width": 4,
@@ -821,7 +821,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_4",
-      "name": "ROUTE 4",
+      "name": "Route 4",
       "x": 8,
       "y": 3,
       "width": 6,
@@ -829,7 +829,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_5",
-      "name": "ROUTE 5",
+      "name": "Route 5",
       "x": 14,
       "y": 4,
       "width": 1,
@@ -1005,7 +1005,7 @@
     },
     {
       "id": "MAPSEC_MT_MOON",
-      "name": "MT. MOON",
+      "name": "Lehigh Tunnel",
       "x": 9,
       "y": 3,
       "width": 1,
@@ -1093,7 +1093,7 @@
     },
     {
       "id": "MAPSEC_ROCK_TUNNEL",
-      "name": "ROCK TUNNEL",
+      "name": "Lehigh Tunnel",
       "x": 18,
       "y": 5,
       "width": 1,

@@ -1,0 +1,56 @@
+{
+  "id": "MAP_LENOX_TOWN_GYM",
+  "name": "LENOX_TOWN_GYM",
+  "layout": "LAYOUT_LENOX_TOWN_GYM",
+  "music": "MUS_ENPALE_INGRID",
+  "region_map_section": "MAPSEC_VERMILION_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WATTSON",
+      "x": 6,
+      "y": 0,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LENOX_TOWN_GYM_EventScript_Ingrid",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_LENOX_TOWN",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 5,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_LENOX_GYM_BF1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_LENOX_GYM_BF1",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

@@ -355,6 +355,18 @@
       "map": "MAP_MINSI_CITY",
       "x": 21,
       "y": 3
+    },
+    {
+      "id": "HEAL_LOCATION_ENPALE_ROUTE_5",
+      "map": "MAP_ENPALE_ROUTE_5",
+      "x": 16,
+      "y": 8
+    },
+    {
+      "id": "HEAL_LOCATION_OLDALE_TOWN_2",
+      "map": "MAP_OLDALE_TOWN",
+      "x": 10,
+      "y": 8
     }
   ]
 }

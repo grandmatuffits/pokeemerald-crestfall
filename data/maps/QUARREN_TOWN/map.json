@@ -2,8 +2,8 @@
   "id": "MAP_QUARREN_TOWN",
   "name": "QUARREN_TOWN",
   "layout": "LAYOUT_QUARREN_TOWN",
-  "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "music": "MUS_ENPALE_COPPERGATE",
+  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
@@ -19,7 +19,21 @@
       "direction": "right"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "QUARREN_TOWN_EventScript_Scientist",
+      "flag": "0"
+    }
+  ],
   "warp_events": [
     {
       "x": 19,
@@ -41,8 +55,31 @@
       "elevation": 0,
       "dest_map": "MAP_LEHIGH_TUNNEL",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_QUARREN_TOWN_OLD_MAN_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_QUARREN_TOWN_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "QUARREN_TOWN_EventScript_TownSign"
+    }
+  ]
 }

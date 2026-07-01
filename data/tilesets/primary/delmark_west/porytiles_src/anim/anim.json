@@ -1,0 +1,16 @@
+{
+  "flower": {
+    "frames": [
+      "center",
+      "right",
+      "left"
+    ],
+    "frame_order": [
+      "center",
+      "right",
+      "center",
+      "left"
+    ],
+    "tile_offset": 1
+  }
+}

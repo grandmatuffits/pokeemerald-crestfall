@@ -40,4 +40,6 @@ void InitTilesetAnim_CeladonGym(void);
 void InitTilesetAnim_SilphCo(void);
 void InitTilesetAnim_MtEmber(void);
 
+// [Porytiles] Auto-generated declaration. Do not remove.
+
 #endif // GUARD_TILESET_ANIMS_H

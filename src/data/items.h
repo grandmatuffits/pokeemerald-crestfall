@@ -159,6 +159,7 @@ static const u8 sGenericMulchDesc[]   = _("A fertilizer that\n"
                                           "is unsuitable for\n"
                                           "local soil.");
 
+
 const struct ItemInfo gItemsInfo[] =
 {
     [ITEM_NONE] =
@@ -2404,6 +2405,7 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_EscapeRope,
         .iconPalette = gItemIconPalette_EscapeRope,
     },
+
 
 // X Items
 
@@ -12841,6 +12843,19 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
+    [ITEM_TM_BULLDOZE] =
+    {
+        .name = ITEM_NAME("TM48"),
+        .price = 3000,
+        .description = COMPOUND_STRING(
+            "Stomps the ground\n"
+            "to harm all around\n"
+            "and lower Speed."),
+        .importance = I_REUSABLE_TMS,
+        .pocket = POCKET_TM_HM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+    },
 
     [ITEM_TM51] =
     {
@@ -13397,13 +13412,13 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("HM01"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Attacks the foe\n"
-            "with sharp blades\n"
-            "or claws."),
+            "A device that lets\n"
+            "you CUT down small\n"
+            "trees anytime."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_HM_FLY] =
@@ -13416,8 +13431,8 @@ const struct ItemInfo gItemsInfo[] =
             "attacks next turn."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_HM_SURF] =
@@ -13430,8 +13445,8 @@ const struct ItemInfo gItemsInfo[] =
             "it down on the foe."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_HM_STRENGTH] =
@@ -13444,8 +13459,8 @@ const struct ItemInfo gItemsInfo[] =
             "the foe."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_HM_FLASH] =
@@ -13458,8 +13473,8 @@ const struct ItemInfo gItemsInfo[] =
             "reduces accuracy."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Flash,
     },
 
     [ITEM_HM_ROCK_SMASH] =
@@ -13472,8 +13487,8 @@ const struct ItemInfo gItemsInfo[] =
             "may lower Defense."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_HM_WATERFALL] =
@@ -13486,8 +13501,8 @@ const struct ItemInfo gItemsInfo[] =
             "to climb waterfalls."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
     [ITEM_HM_DIVE] =
@@ -13500,8 +13515,8 @@ const struct ItemInfo gItemsInfo[] =
             "attacks next turn."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
 
@@ -15789,6 +15804,22 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
+    },
+    [ITEM_PICKAXE] =
+    {
+        .name = ITEM_NAME("Pickaxe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A sturdy tool for\n"
+            "mining ore clusters\n"
+            "found in caves."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .importance = 1,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Pickaxe,
+        .iconPalette = gItemIconPalette_Pickaxe,
     },
 };
 

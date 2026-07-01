@@ -26,7 +26,7 @@
   ],
   "object_events": [
     {
-      "local_id": "LOCALID_MINSIRANDO",
+      "local_id": "MINSI_CITY_MACHOKE",
       "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
       "x": 47,
       "y": 18,
@@ -36,12 +36,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MINSI_CITY_EventScript_Machoke",
       "flag": "0"
     },
     {
       "local_id": "LOCALID_MINSI_NORTHGUARD",
-      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
       "x": 24,
       "y": 7,
       "elevation": 0,
@@ -96,6 +96,7 @@
       "flag": "FLAG_SYS_POKEDEX_GET"
     },
     {
+      "local_id": "MINSI_CITY_KIRLIA_LADY",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
       "x": 34,
       "y": 29,
@@ -105,10 +106,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MINSI_CITY_EventScript_KirliaLady",
       "flag": "0"
     },
     {
+      "local_id": "MINSI_CITY_KIRLIA",
       "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
       "x": 35,
       "y": 29,
@@ -118,24 +120,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MINSI_CITY_EventScript_Kirlia",
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_MINSITMGUY",
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 27,
-      "y": 12,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MINSI_CITY_EventScript_TMGuy",
-      "flag": "0"
-    },
-    {
+      "local_id": "MINSI_CITY_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
       "x": 47,
       "y": 19,
@@ -145,20 +134,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MINSI_CITY_EventScript_Worker",
       "flag": "0"
     },
     {
+      "local_id": "MINSI_CITY_WALKING_GUY",
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
       "x": 38,
       "y": 12,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MINSI_CITY_EventScript_FountainGuy",
       "flag": "0"
     }
   ],
@@ -190,6 +180,13 @@
       "y": 28,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_GYM_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_MINSI_CITY_REST_HOUSE",
       "dest_warp_id": "0"
     }
   ],
@@ -267,5 +264,22 @@
       "script": "MINSI_CITY_EventScript_NorthTrigger"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MINSI_CITY_EventScript_PokemonLabSign"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MINSI_CITY_EventScript_CitySign"
+    }
+  ]
 }

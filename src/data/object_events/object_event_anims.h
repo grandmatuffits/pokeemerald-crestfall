@@ -1574,6 +1574,10 @@ static const union AnimCmd *const sAnimTable_BreakableRock[] = {
     [ANIM_REMOVE_OBSTACLE] = sAnim_RockBreak,
 };
 
+static const union AnimCmd *const sAnimTable_MiningRock[] = {
+    [ANIM_STAY_STILL] = sAnim_StayStill,
+};
+
 static const union AnimCmd *const sAnimTable_CuttableTree[] = {
     [ANIM_STAY_STILL] = sAnim_StayStill,
     [ANIM_REMOVE_OBSTACLE] = sAnim_TreeCut,

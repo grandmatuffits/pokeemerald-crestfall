@@ -167,24 +167,76 @@ MINSI_CITY_EventScript_PokeCenterBlock_Move::
 MINSI_CITY_Text_PokeCenterBlock:
 	.string "Are you new here? You should go\ncheck out the Pokemon Lab just\ldown the street.\pProfessor Hemlock is so dreamy...$"
 
-MINSI_CITY_EventScript_TMGuy::
+MINSI_CITY_EventScript_FountainGuy::
 	lock
 	faceplayer
-	goto_if_set FLAG_UNUSED_0x02C, MINSI_CITY_EventScript_TMGuy_Repeat
-	msgbox MINSI_CITY_Text_TMGuy1, MSGBOX_SIGN
-	closemessage
-	giveitem ITEM_TM_REST
-	setflag FLAG_UNUSED_0x02C
+	msgbox MINSI_CITY_Text_FountainGuy, MSGBOX_DEFAULT
 	release
 	end
 
-MINSI_CITY_EventScript_TMGuy_Repeat::
-	msgbox MINSI_CITY_Text_TMGuy2, MSGBOX_SIGN
-	closemessage
+MINSI_CITY_Text_FountainGuy:
+	.string "Minsi City is great!\n"
+	.string "But our gym leader has\p"
+	.string "been gone for a while.$"
+
+MINSI_CITY_EventScript_KirliaLady::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_KirliaLady, MSGBOX_DEFAULT
 	release
 	end
 
-MINSI_CITY_Text_TMGuy1:
-	.string "You deserve a break!\nHave a rest! Heh heh!$"
-MINSI_CITY_Text_TMGuy2:
-	.string "Now go take a rest so you\ncan get back to business!$"
+MINSI_CITY_Text_KirliaLady:
+	.string "Minsi City doesn't need\n"
+	.string "the Pokemon League like\p"
+	.string "Veldtmoor City. We have\n"
+	.string "actual culture.$"
+
+MINSI_CITY_EventScript_Kirlia::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_Kirlia, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_Kirlia:
+	.string "Kir...$"
+
+MINSI_CITY_EventScript_Worker::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_Worker, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_Worker:
+	.string "Baynoe Bridge is down for repairs\n"
+	.string "for now. But you can use the\p"
+	.string "bridge through Delmark City in the\n"
+	.string "meantime.$"
+
+MINSI_CITY_EventScript_Machoke::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_Machoke, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_Machoke:
+	.string "...choke...$"
+
+MINSI_CITY_EventScript_PokemonLabSign::
+	msgbox MINSI_CITY_Text_PokemonLab_Sign, MSGBOX_SIGN
+	end
+
+MINSI_CITY_Text_PokemonLab_Sign:
+	.string "Professor Hemlock's\n"
+	.string "Pokemon Laboratory$"
+
+MINSI_CITY_EventScript_CitySign::
+	msgbox MINSI_CITY_Text_City_Sign, MSGBOX_SIGN
+	end
+
+MINSI_CITY_Text_City_Sign:
+	.string "Minsi City\n"
+	.string "Fresh air and fresh beginnings$"

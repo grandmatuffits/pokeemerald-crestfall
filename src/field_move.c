@@ -1,4 +1,5 @@
 #include "global.h"
+#include "item.h"
 #include "event_data.h"
 #include "field_move.h"
 #include "fldeff.h"

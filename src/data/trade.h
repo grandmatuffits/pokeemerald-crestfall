@@ -1224,9 +1224,41 @@ static const struct InGameTrade sIngameTrades[] =
         .heldItem = ITEM_NONE,
         .mailNum = -1,
         .otName = _("Calvin"),
-        .otGender = MALE,
+        .otGender = FEMALE,
         .sheen = 0,
         .requestedSpecies = SPECIES_SHROOMISH
+    },
+    [INGAME_TRADE_SHELLDER] =
+    {
+        .nickname = _("Clamps"),
+        .species = SPECIES_SHELLDER,
+        .ivs = {15, 15, 15, 15, 15, 15},
+        .abilityNum = 0,
+        .otId = 54321,
+        .conditions = {0, 0, 0, 0, 0},
+        .personality = 0x00000000,
+        .heldItem = ITEM_NONE,
+        .mailNum = 0xFF,
+        .otName = _("CHEF"),
+        .otGender = MALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_GROWLITHE,
+    },
+    [INGAME_TRADE_AXEW] =
+    {
+        .nickname = _("Hax"),
+        .species = SPECIES_AXEW,
+        .ivs = {15, 15, 15, 15, 15, 15},
+        .abilityNum = 0,
+        .otId = 41021,
+        .conditions = {0, 0, 0, 0, 0},
+        .personality = 0x00000000,
+        .heldItem = ITEM_NONE,
+        .mailNum = 0xFF,
+        .otName = _("Reggie"),
+        .otGender = MALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_CLEFAIRY,
     },
 };
 

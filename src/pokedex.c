@@ -4539,6 +4539,11 @@ s8 GetSetPokedexFlag(enum NationalDexOrder nationalDexNo, u8 caseID)
     return retVal;
 }
 
+void GetCaughtPokedexCount(void)
+{
+    gSpecialVar_Result = GetNationalPokedexCount(FLAG_GET_CAUGHT);
+}
+
 u16 GetNationalPokedexCount(u8 caseID)
 {
     u16 count = 0;

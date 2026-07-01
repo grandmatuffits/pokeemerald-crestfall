@@ -7,6 +7,9 @@ const u16 gTrainerPalette_None[] = INCGFX_U16("graphics/trainers/palettes/none.p
 const u32 gTrainerFrontPic_Hiker[] = INCGFX_U32("graphics/trainers/front_pics/hiker.png", ".4bpp.smol");
 const u16 gTrainerPalette_Hiker[] = INCGFX_U16("graphics/trainers/front_pics/hiker.png", ".gbapal");
 
+const u32 gTrainerFrontPic_Ferrus[] = INCGFX_U32("graphics/trainers/front_pics/ferrus_front.png", ".4bpp.smol");
+const u16 gTrainerPalette_Ferrus[] = INCGFX_U16("graphics/trainers/front_pics/ferrus_front.png", ".gbapal");
+
 const u32 gTrainerFrontPic_AquaGruntM[] = INCGFX_U32("graphics/trainers/front_pics/aqua_grunt_m.png", ".4bpp.smol");
 const u16 gTrainerPalette_AquaGruntM[] = INCGFX_U16("graphics/trainers/front_pics/aqua_grunt_m.png", ".gbapal");
 
@@ -640,6 +643,10 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_OLD_MAN] =
     {
         .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_OldMan, gTrainerBackPicPalette_OldMan, sBackAnims_OldManPokedude),
+    },
+    [TRAINER_PIC_FERRUS] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Ferrus, gTrainerPalette_Ferrus),
     },
     [TRAINER_PIC_HIKER] =
     {

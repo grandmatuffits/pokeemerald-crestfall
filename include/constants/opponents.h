@@ -905,7 +905,37 @@
 #define TRAINER_DAVE_GYM2                       898
 #define TRAINER_HAL_GYM2                        899
 #define TRAINER_OMAR_1                          900
-#define TRAINERS_COUNT_EMERALD                  901
+#define TRAINER_HIKER_BILL                      901
+#define TRAINER_CAMPER_WILL                     902
+#define TRAINER_CRUSH_GIRL_KELLY                903
+#define TRAINER_HIKER_CLEM                      904
+#define TRAINER_HEX_MANIAC_RO                   905
+#define TRAINER_ROUTE_4_COOL_TRAINER_F          906
+#define TRAINER_ROUTE_4_GENTLEMAN               907
+#define TRAINER_ROUTE_5_MANIAC                  908
+#define TRAINER_ROUTE_5_COOLTRAINER_M           909
+#define TRAINER_WHITECAPS_ROCKER_DAVE           910
+#define TRAINER_WHITECAPS_HIKER_SAL             911
+#define TRAINER_WHITECAPS_COOLTRAINER_DOUG      912
+#define TRAINER_WHITECAPS_BLACKBELT_HERCULE     913
+#define TRAINER_WHITECAPS_PSYCHIC_PETER         914
+#define TRAINER_WHITECAPS_LASS_SHELBY           915
+#define TRAINER_WHITECAPS_HIKER_BRAD            916
+#define TRAINER_WHITECAPS_COOLTRAINER_LISA      917
+#define TRAINER_WHITECAPS_CAMPER_DONNY          918
+#define TRAINER_WHITECAPS_HIKER_HUELL           919
+#define TRAINER_COVENANT_ELDER_FERRUS           920
+#define TRAINER_LENOX_ACOLYTE_1                 921
+#define TRAINER_LENOX_ACOLYTE_2                 922
+#define TRAINER_LENOX_ACOLYTE_3                 923
+#define TRAINER_LENOX_ACOLYTE_4                 924
+#define TRAINER_LEADER_INGRID                   925
+#define TRAINER_LENOX_GYM_FLORENCE              926
+#define TRAINER_LENOX_GYM_CARL                  927
+#define TRAINER_LENOX_GYM_JIM                   928
+#define TRAINER_LENOX_GYM_MARTY                 929
+#define TRAINER_LENOX_GYM_BECCA                 930
+#define TRAINERS_COUNT_EMERALD                  931
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

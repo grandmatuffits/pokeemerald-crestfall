@@ -17371,15 +17371,15 @@ Level: 15
 
 === TRAINER_ROUTE_3_JEFF ===
 Name: JEFF
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Collector
+Pic: Collector
 Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move
 
 Magnemite @ None
-Level: 16
+Level: 15
 
 === TRAINER_ROUTE_3_JONAS ===
 Name: JONAS
@@ -17391,25 +17391,25 @@ Double Battle: No
 AI: Check Bad Move
 
 Staryu @ None
-Level: 15
+Level: 14
 
 Carvanha @ None
-Level: 16
+Level: 15
 
 === TRAINER_ROUTE_3_LEMMY ===
 Name: LEMMY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+Class: Guitarist
+Pic: Guitarist
 Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move
 
 Voltorb @ None
-Level: 16
+Level: 15
 
-Emolga @ None
-Level: 16
+Shinx @ None
+Level: 15
 
 === TRAINER_BARNEY_R2 ===
 Name: Barney
@@ -17502,7 +17502,7 @@ Level: 16
 
 === TRAINER_COVENANT_GRUNT_1 ===
 Name: GRUNT
-Class: Team Aqua
+Class: Covenant Grunt
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
@@ -17515,7 +17515,7 @@ Level: 10
 
 === TRAINER_COVENANT_GRUNT_2 ===
 Name: GRUNT
-Class: Team Aqua
+Class: Covenant Grunt
 Pic: Aqua Grunt F
 Gender: Male
 Music: Aqua
@@ -17593,3 +17593,445 @@ Level: 20
 - Quick Attack
 - Thunder Wave
 - Pursuit
+
+
+=== TRAINER_HIKER_BILL ===
+Name: BILL
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Numel @ None
+Level: 16
+
+=== TRAINER_CAMPER_WILL ===
+Name: WILL
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Flaaffy @ None
+Level: 15
+
+Furret @ None
+Level: 15
+
+=== TRAINER_CRUSH_GIRL_KELLY ===
+Name: KELLY
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Meditite @ None
+Level: 17
+
+=== TRAINER_HIKER_CLEM ===
+Name: CLEM
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Rockruff @ None
+Level: 16
+
+=== TRAINER_HEX_MANIAC_RO ===
+Name: RO
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Gastly @ None
+Level: 15
+
+Shuppet @ None
+Level: 16
+
+=== TRAINER_ROUTE_4_COOL_TRAINER_F ===
+Name: MIRANDA
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Kadabra @ None
+Level: 17
+
+=== TRAINER_ROUTE_4_GENTLEMAN ===
+Name: ALFRED
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sableye @ None
+Level: 16
+
+Mawile @ None
+Level: 16
+
+=== TRAINER_ROUTE_5_MANIAC ===
+Name: MARTIN
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Woobat @ None
+Level: 14
+
+Carbink @ None
+Level: 14
+
+Voltorb @ None
+Level: 14
+
+=== TRAINER_ROUTE_5_COOLTRAINER_M ===
+Name: MAX
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Houndour @ None
+Level: 17
+
+Salandit @ None
+Level: 17
+
+=== TRAINER_WHITECAPS_ROCKER_DAVE ===
+Name: DAVE
+Class: Rocker
+Pic: Rocker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Luxio @ None
+Level: 18
+
+=== TRAINER_WHITECAPS_HIKER_SAL ===
+Name: SAL
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Aron @ None
+Level: 16
+
+Machop @ None
+Level: 16
+
+=== TRAINER_WHITECAPS_COOLTRAINER_DOUG ===
+Name: DOUG
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Skarmory @ None
+Level: 20
+
+=== TRAINER_WHITECAPS_BLACKBELT_HERCULE ===
+Name: HERCULE
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Croagunk @ None
+Level: 19
+
+=== TRAINER_WHITECAPS_PSYCHIC_PETER ===
+Name: PETER
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Espurr @ None
+Level: 17
+
+Munna @ None
+Level: 17
+
+=== TRAINER_WHITECAPS_LASS_SHELBY ===
+Name: SHELBY
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Clefairy @ None
+Level: 18
+
+=== TRAINER_WHITECAPS_HIKER_BRAD ===
+Name: BRAD
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Rhyhorn @ None
+Level: 17
+
+Scraggy @ None
+Level: 17
+
+=== TRAINER_WHITECAPS_COOLTRAINER_LISA ===
+Name: LISA
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Vulpix @ None
+Level: 18
+
+Litwick @ None
+Level: 18
+
+=== TRAINER_WHITECAPS_CAMPER_DONNY ===
+Name: DONNY
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Cottonee @ None
+Level: 17
+
+Staravia @ None
+Level: 17
+
+Sandshrew @ None
+Level: 17
+
+=== TRAINER_WHITECAPS_HIKER_HUELL ===
+Name: HUELL
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Falinks @ None
+Level: 18
+
+Roggenrola @ None
+Level: 18
+
+=== TRAINER_COVENANT_ELDER_FERRUS ===
+Name: FERRUS
+Class: Covenant Elder
+Pic: Ferrus
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move
+
+Ferroseed @ None
+Level: 20
+
+Foongus @ None
+Level: 20
+
+Lileep @ None
+Level: 22
+
+=== TRAINER_LENOX_ACOLYTE_1 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Happiny @ None
+Level: 18
+
+Exeggcute @ None
+Level: 18
+
+=== TRAINER_LENOX_ACOLYTE_2 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Horsea @ None
+Level: 19
+
+=== TRAINER_LENOX_ACOLYTE_3 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Tangela @ None
+Level: 18
+
+Marill @ None
+Level: 18
+
+Grimer @ None
+Level: 18
+
+=== TRAINER_LENOX_ACOLYTE_4 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Misdreavus @ None
+Level: 20
+
+=== TRAINER_LEADER_INGRID ===
+Name: INGRID
+Class: Leader
+Pic: Leader Wattson
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Swinub @ None
+Level: 23
+- Bulldoze
+- Ice Shard
+- Stealth Rock
+- Mist
+
+Quagsire @ None
+Level: 24
+- Surf
+- Bulldoze
+- Yawn
+- Amnesia
+
+Nidoking @ None
+Level: 26
+- Bulldoze
+- Poison Jab
+- Megahorn
+- Fire Punch
+
+=== TRAINER_LENOX_GYM_FLORENCE ===
+Name: FLORENCE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Diglett @ None
+Level: 19
+
+Numel @ None
+Level: 19
+
+=== TRAINER_LENOX_GYM_CARL ===
+Name: CARL
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Sandshrew @ None
+Level: 20
+
+=== TRAINER_LENOX_GYM_JIM ===
+Name: JIM
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Rhyhorn @ None
+Level: 21
+
+=== TRAINER_LENOX_GYM_MARTY ===
+Name: MARTY
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+Baltoy @ None
+Level: 19
+
+Nincada @ None
+Level: 19
+
+=== TRAINER_LENOX_GYM_BECCA ===
+Name: BECCA
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Sandygast @ None
+Level: 20
+
+Gible @ None
+Level: 20

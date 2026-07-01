@@ -9533,6 +9533,226 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/LEHIGH_TUNNEL/border.bin",
       "blockdata_filepath": "data/layouts/LEHIGH_TUNNEL/map.bin"
+    },
+    {
+      "id": "LAYOUT_LEHIGH_TUNNEL_BF1",
+      "name": "LEHIGH_TUNNEL_BF1_Layout",
+      "width": 11,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/LEHIGH_TUNNEL_BF1/border.bin",
+      "blockdata_filepath": "data/layouts/LEHIGH_TUNNEL_BF1/map.bin"
+    },
+    {
+      "id": "LAYOUT_LEHIGH_TUNNEL_EXIT",
+      "name": "LEHIGH_TUNNEL_EXIT_Layout",
+      "width": 16,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/LEHIGH_TUNNEL_EXIT/border.bin",
+      "blockdata_filepath": "data/layouts/LEHIGH_TUNNEL_EXIT/map.bin"
+    },
+    {
+      "id": "LAYOUT_MINSI_CITY_REST_HOUSE",
+      "name": "MINSI_CITY_REST_HOUSE_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MINSI_CITY_REST_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/MINSI_CITY_REST_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_COPPERCITY_FISHERMAN_HOUSE",
+      "name": "COPPERCITY_FISHERMAN_HOUSE_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/COPPERCITY_FISHERMAN_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/COPPERCITY_FISHERMAN_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_COPPERGATE_CITY_TM_HOUSE",
+      "name": "COPPERGATE_CITY_TM_HOUSE_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/COPPERGATE_CITY_TM_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/COPPERGATE_CITY_TM_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_COPPERGATE_CITY_TRADE_HOUSE",
+      "name": "COPPERGATE_CITY_TRADE_HOUSE_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/COPPERGATE_CITY_TRADE_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/COPPERGATE_CITY_TRADE_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARREN_TOWN_OLD_MAN_HOUSE",
+      "name": "QUARREN_TOWN_OLD_MAN_HOUSE_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/QUARREN_TOWN_OLD_MAN_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/QUARREN_TOWN_OLD_MAN_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARREN_TOWN_HOUSE",
+      "name": "QUARREN_TOWN_HOUSE_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/QUARREN_TOWN_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/QUARREN_TOWN_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_4",
+      "name": "ENPALE_ROUTE_4_Layout",
+      "width": 24,
+      "height": 65,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_4/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_5",
+      "name": "ENPALE_ROUTE_5_Layout",
+      "width": 28,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Snow",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_5/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_5/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECAPS",
+      "name": "WHITECAPS_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WHITECAPS/border.bin",
+      "blockdata_filepath": "data/layouts/WHITECAPS/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECAPS_2F",
+      "name": "WHITECAPS_2F_Layout",
+      "width": 38,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WHITECAPS_2F/border.bin",
+      "blockdata_filepath": "data/layouts/WHITECAPS_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECAPS_EXTERIOR",
+      "name": "WHITECAPS_EXTERIOR_Layout",
+      "width": 67,
+      "height": 46,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Snow",
+      "border_filepath": "data/layouts/WHITECAPS_EXTERIOR/border.bin",
+      "blockdata_filepath": "data/layouts/WHITECAPS_EXTERIOR/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECAPS_EXIT",
+      "name": "WHITECAPS_EXIT_Layout",
+      "width": 16,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WHITECAPS_EXIT/border.bin",
+      "blockdata_filepath": "data/layouts/WHITECAPS_EXIT/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_6",
+      "name": "ENPALE_ROUTE_6_Layout",
+      "width": 21,
+      "height": 41,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_6/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_6/map.bin"
+    },
+    {
+      "id": "LAYOUT_LENOX_TOWN",
+      "name": "LENOX_TOWN_Layout",
+      "width": 68,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/LENOX_TOWN/border.bin",
+      "blockdata_filepath": "data/layouts/LENOX_TOWN/map.bin"
+    },
+    {
+      "id": "LAYOUT_LENOX_TOWN_CUT_HOUSE",
+      "name": "LENOX_TOWN_CUT_HOUSE_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LENOX_TOWN_CUT_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/LENOX_TOWN_CUT_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_LENOX_TOWN_GYM",
+      "name": "LENOX_TOWN_GYM_Layout",
+      "width": 14,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/LENOX_TOWN_GYM/border.bin",
+      "blockdata_filepath": "data/layouts/LENOX_TOWN_GYM/map.bin"
+    },
+    {
+      "id": "LAYOUT_LENOX_GYM_BF1",
+      "name": "LENOX_GYM_BF1_Layout",
+      "width": 14,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/LENOX_GYM_BF1/border.bin",
+      "blockdata_filepath": "data/layouts/LENOX_GYM_BF1/map.bin"
+    },
+    {
+      "id": "LAYOUT_LENOX_TOWN_SHIPYARD",
+      "name": "LENOX_TOWN_SHIPYARD_Layout",
+      "width": 24,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LENOX_TOWN_SHIPYARD/border.bin",
+      "blockdata_filepath": "data/layouts/LENOX_TOWN_SHIPYARD/map.bin"
+    },
+    {
+      "id": "LAYOUT_LENOX_TOWN_TRADE_HOUSE",
+      "name": "LENOX_TOWN_TRADE_HOUSE_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LENOX_TOWN_TRADE_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/LENOX_TOWN_TRADE_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_WEST",
+      "name": "DELMARK_CITY_WEST_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/DELMARK_CITY_WEST/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_WEST/map.bin"
     }
   ]
 }
