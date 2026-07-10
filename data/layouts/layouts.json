@@ -9407,8 +9407,8 @@
     {
       "id": "LAYOUT_KINNERET_TOWN",
       "name": "KINNERET_TOWN_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 24,
+      "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/KINNERET_TOWN/border.bin",
@@ -9739,7 +9739,7 @@
       "name": "LENOX_TOWN_TRADE_HOUSE_Layout",
       "width": 10,
       "height": 9,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LENOX_TOWN_TRADE_HOUSE/border.bin",
       "blockdata_filepath": "data/layouts/LENOX_TOWN_TRADE_HOUSE/map.bin"
@@ -9747,7 +9747,7 @@
     {
       "id": "LAYOUT_DELMARK_CITY_WEST",
       "name": "DELMARK_CITY_WEST_Layout",
-      "width": 50,
+      "width": 65,
       "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_DelmarkWest",
@@ -9763,6 +9763,256 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PorytilesPrimaryTutorial/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesPrimaryTutorial/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_FERRY_HOUSE",
+      "name": "DELMARK_CITY_FERRY_HOUSE_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_FERRY_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_FERRY_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_NAME_RATER_HOUSE",
+      "name": "DELMARK_CITY_NAME_RATER_HOUSE_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_NAME_RATER_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_NAME_RATER_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_WEST_HOUSE",
+      "name": "DELMARK_CITY_WEST_HOUSE_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_WEST_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_WEST_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_WEST_HOUSE_2F",
+      "name": "DELMARK_CITY_WEST_HOUSE_2F_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_WEST_HOUSE_2F/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_WEST_HOUSE_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_WEST_MANSION_2F",
+      "name": "DELMARK_CITY_WEST_MANSION_2F_Layout",
+      "width": 20,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_WEST_MANSION_2F/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_WEST_MANSION_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_WEST_MANSION",
+      "name": "DELMARK_CITY_WEST_MANSION_Layout",
+      "width": 20,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_WEST_MANSION/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_WEST_MANSION/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_7",
+      "name": "ENPALE_ROUTE_7_Layout",
+      "width": 53,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_7/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_7/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_8",
+      "name": "ENPALE_ROUTE_8_Layout",
+      "width": 29,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_8/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_8/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_EAST",
+      "name": "DELMARK_CITY_EAST_Layout",
+      "width": 65,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DelmarkEast",
+      "border_filepath": "data/layouts/DELMARK_CITY_EAST/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_EAST/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_EAST_APARTMENT_BUILDING_2F",
+      "name": "DELMARK_CITY_EAST_APARTMENT_BUILDING_2F_Layout",
+      "width": 19,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/DELMARK_CITY_EAST_APARTMENT_BUILDING_2F/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_EAST_APARTMENT_BUILDING_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_EAST_APARTMENT_BUILDING",
+      "name": "DELMARK_CITY_EAST_APARTMENT_BUILDING_Layout",
+      "width": 19,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/DELMARK_CITY_EAST_APARTMENT_BUILDING/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_EAST_APARTMENT_BUILDING/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_EAST_APARTMENT_BUILDING_3F",
+      "name": "DELMARK_CITY_EAST_APARTMENT_BUILDING_3F_Layout",
+      "width": 19,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/DELMARK_CITY_EAST_APARTMENT_BUILDING_3F/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_EAST_APARTMENT_BUILDING_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_101",
+      "name": "DELMARK_CITY_APT_101_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_101/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_101/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_102",
+      "name": "DELMARK_CITY_APT_102_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_102/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_102/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_104",
+      "name": "DELMARK_CITY_APT_104_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_104/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_104/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_200",
+      "name": "DELMARK_CITY_APT_200_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_200/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_200/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_206",
+      "name": "DELMARK_CITY_APT_206_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_206/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_206/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_207",
+      "name": "DELMARK_CITY_APT_207_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_207/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_207/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_304",
+      "name": "DELMARK_CITY_APT_304_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_304/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_304/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_301",
+      "name": "DELMARK_CITY_APT_301_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_301/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_301/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_307",
+      "name": "DELMARK_CITY_APT_307_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_307/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_307/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_APT_302",
+      "name": "DELMARK_CITY_APT_302_Layout",
+      "width": 8,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_APT_302/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_APT_302/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_SOUTH",
+      "name": "DELMARK_CITY_SOUTH_Layout",
+      "width": 130,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DelmarkSouth",
+      "border_filepath": "data/layouts/DELMARK_CITY_SOUTH/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_SOUTH/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_SOUTH_CARETAKER_HOUSE",
+      "name": "DELMARK_CITY_SOUTH_CARETAKER_HOUSE_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/DELMARK_CITY_SOUTH_CARETAKER_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_SOUTH_CARETAKER_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_9",
+      "name": "ENPALE_ROUTE_9_Layout",
+      "width": 90,
+      "height": 38,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_9/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_9/map.bin"
     }
   ]
 }

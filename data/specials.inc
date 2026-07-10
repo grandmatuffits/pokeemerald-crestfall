@@ -643,3 +643,4 @@ gSpecials::
 	def_special Special_ClearPlayerParty
 	def_special Special_NameRival
 	def_special GetCaughtPokedexCount
+	def_special CheckCaughtFeebas

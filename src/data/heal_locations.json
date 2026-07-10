@@ -367,6 +367,12 @@
       "map": "MAP_OLDALE_TOWN",
       "x": 10,
       "y": 8
+    },
+    {
+      "id": "HEAL_LOCATION_PETALBURG_CITY_2",
+      "map": "MAP_PETALBURG_CITY",
+      "x": 15,
+      "y": 15
     }
   ]
 }

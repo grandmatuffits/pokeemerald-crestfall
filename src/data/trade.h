@@ -1239,7 +1239,7 @@ static const struct InGameTrade sIngameTrades[] =
         .personality = 0x00000000,
         .heldItem = ITEM_NONE,
         .mailNum = 0xFF,
-        .otName = _("CHEF"),
+        .otName = _("Boyrd"),
         .otGender = MALE,
         .sheen = 0,
         .requestedSpecies = SPECIES_GROWLITHE,
@@ -1259,6 +1259,62 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = MALE,
         .sheen = 0,
         .requestedSpecies = SPECIES_CLEFAIRY,
+    },
+    [INGAME_TRADE_ROCKRUFF] = {
+        .nickname = _("Pebbles"),
+        .species = SPECIES_ROCKRUFF,
+        .ivs = {15, 15, 15, 15, 15, 15},
+        .abilityNum = 0,
+        .otId = 86753,
+        .conditions = {0, 0, 0, 0, 0},
+        .personality = 0,
+        .heldItem = ITEM_NONE,
+        .mailNum = 0xFF,
+        .otName = _("Larry"),
+        .otGender = MALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_HAWLUCHA,
+    },
+    [INGAME_TRADE_ZORUA] = {
+        .nickname = _("Meemee"),
+        .species = SPECIES_ZORUA,
+        .ivs = {15, 15, 15, 15, 15, 15},
+        .abilityNum = 0,
+        .otId = 00002,
+        .conditions = {0, 0, 0, 0, 0},
+        .personality = 0,
+        .heldItem = ITEM_NONE,
+        .mailNum = 0xFF,
+        .otName = _("Hayden"),
+        .otGender = FEMALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_HONEDGE,
+    },
+    [INGAME_TRADE_TAUROS] =
+    {
+        .nickname = _("Wunner"),        // or a custom nickname
+        .species = SPECIES_TAUROS,
+        .ivs = {15, 15, 15, 15, 15, 15},                   // copy the spread style you used for Zorua
+        .abilityNum = 0,
+        .otId = 51792,                  // ⚠ NO leading zero (octal trap that bit you)
+        .conditions = {0, 0, 0, 0, 0},
+        .otName = _("Samuel"),
+        .otGender = MALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_EEVEE,
+    },
+    [INGAME_TRADE_MILTANK] =
+    {
+        .nickname = _("Mooey"),
+        .species = SPECIES_MILTANK,
+        .ivs = {15, 15, 15, 15, 15, 15},                    // copy your Tauros/Zorua spread style
+        .abilityNum = 0,
+        .otId = 41027,                   // ⚠ NO leading zero (octal trap)
+        .conditions = {0, 0, 0, 0, 0},
+        .otName = _("Lisa"),
+        .otGender = FEMALE,              // she's a young girl
+        .sheen = 0,
+        .requestedSpecies = SPECIES_HORSEA,
     },
 };
 

@@ -18,6 +18,12 @@ const u16 gMetatileAttributes_Petalburg[] = INCBIN_U16("data/tilesets/secondary/
 const u16 gMetatiles_DelmarkWest[] = INCBIN_U16("data/tilesets/secondary/delmark_west/metatiles.bin");
 const u16 gMetatileAttributes_DelmarkWest[] = INCBIN_U16("data/tilesets/secondary/delmark_west/metatile_attributes.bin");
 
+const u16 gMetatiles_DelmarkEast[] = INCBIN_U16("data/tilesets/secondary/delmark_east/metatiles.bin");
+const u16 gMetatileAttributes_DelmarkEast[] = INCBIN_U16("data/tilesets/secondary/delmark_east/metatile_attributes.bin");
+
+const u16 gMetatiles_DelmarkSouth[] = INCBIN_U16("data/tilesets/secondary/delmark_south/metatiles.bin");
+const u16 gMetatileAttributes_DelmarkSouth[] = INCBIN_U16("data/tilesets/secondary/delmark_south/metatile_attributes.bin");
+
 const u16 gMetatiles_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatiles.bin");
 const u16 gMetatileAttributes_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatile_attributes.bin");
 

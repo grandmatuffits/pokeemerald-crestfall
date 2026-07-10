@@ -75,7 +75,8 @@
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
-    "gMapGroup_IndoorEnpale"
+    "gMapGroup_IndoorEnpale",
+    "gMapGroup_Indoor_Delmark"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -151,7 +152,12 @@
     "ENPALE_ROUTE_6",
     "LENOX_TOWN",
     "DELMARK_CITY_WEST",
-    "PorytilesPrimaryTutorial"
+    "PorytilesPrimaryTutorial",
+    "ENPALE_ROUTE_7",
+    "ENPALE_ROUTE_8",
+    "DELMARK_CITY_EAST",
+    "DELMARK_CITY_SOUTH",
+    "ENPALE_ROUTE_9"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1207,5 +1213,27 @@
     "LENOX_GYM_BF1",
     "LENOX_TOWN_SHIPYARD",
     "LENOX_TOWN_TRADE_HOUSE"
+  ],
+  "gMapGroup_Indoor_Delmark": [
+    "DELMARK_CITY_FERRY_HOUSE",
+    "DELMARK_CITY_NAME_RATER_HOUSE",
+    "DELMARK_CITY_WEST_HOUSE",
+    "DELMARK_CITY_WEST_HOUSE_2F",
+    "DELMARK_CITY_WEST_MANSION",
+    "DELMARK_CITY_WEST_MANSION_2F",
+    "DELMARK_CITY_EAST_APARTMENT_BUILDING",
+    "DELMARK_CITY_EAST_APARTMENT_BUILDING_2F",
+    "DELMARK_CITY_EAST_APARTMENT_BUILDING_3F",
+    "DELMARK_CITY_APT_101",
+    "DELMARK_CITY_APT_102",
+    "DELMARK_CITY_APT_104",
+    "DELMARK_CITY_APT_200",
+    "DELMARK_CITY_APT_206",
+    "DELMARK_CITY_APT_207",
+    "DELMARK_CITY_APT_304",
+    "DELMARK_CITY_APT_301",
+    "DELMARK_CITY_APT_307",
+    "DELMARK_CITY_APT_302",
+    "DELMARK_CITY_SOUTH_CARETAKER_HOUSE"
   ]
 }

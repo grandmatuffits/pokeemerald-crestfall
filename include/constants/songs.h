@@ -562,6 +562,7 @@
 #define MUS_ENPALE_CAVE             627
 #define MUS_ENPALE_INGRID           628
 #define MUS_ENPALE_LENOX            629
+#define MUS_ENPALE_DELMARK          630
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

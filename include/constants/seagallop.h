@@ -12,6 +12,8 @@
 #define SEAGALLOP_CINNABAR_ISLAND  8
 #define SEAGALLOP_NAVEL_ROCK       9
 #define SEAGALLOP_BIRTH_ISLAND    10
+#define SEAGALLOP_DELMARK         11
+#define SEAGALLOP_LENOX           12
 
 #define SEAGALLOP_MORE           254
 

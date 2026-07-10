@@ -610,11 +610,14 @@ enum
 #define OBJ_EVENT_PAL_TAG_ROBIN                   0x116D
 #define OBJ_EVENT_PAL_TAG_OMAR                    0x116E
 #define OBJ_EVENT_PAL_TAG_RIVAL                   0x116F
+#define OBJ_EVENT_PAL_TAG_HEMLOCK                 0x1175
 #define OBJ_EVENT_PAL_TAG_MINING_ROCK             0x1173
-#define OBJ_EVENT_PAL_TAG_COVENANT_GRUNT_M       0x1170
-#define OBJ_EVENT_PAL_TAG_COVENANT_GRUNT_F       0x1171
-#define OBJ_EVENT_PAL_TAG_COVENANT_GRUNT_MAGMA_M 0x1172
-#define OBJ_EVENT_PAL_TAG_INGRID 0x1174
+#define OBJ_EVENT_PAL_TAG_COVENANT_GRUNT_M        0x1170
+#define OBJ_EVENT_PAL_TAG_COVENANT_GRUNT_F        0x1171
+#define OBJ_EVENT_PAL_TAG_COVENANT_GRUNT_MAGMA_M  0x1172
+#define OBJ_EVENT_PAL_TAG_INGRID                  0x1174
+#define OBJ_EVENT_PAL_TAG_BRIGHAM                 0x1176
+#define OBJ_EVENT_PAL_TAG_IRRUS                   0x1177
 #endif //OW_FOLLOWERS_POKEBALLS
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611

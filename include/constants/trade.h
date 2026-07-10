@@ -24,6 +24,10 @@ enum InGameTradeID
     INGAME_TRADE_SNORUNT,
     INGAME_TRADE_SHELLDER,
     INGAME_TRADE_AXEW,
+    INGAME_TRADE_ROCKRUFF,
+    INGAME_TRADE_ZORUA,
+    INGAME_TRADE_TAUROS,
+    INGAME_TRADE_MILTANK,
 };
 
 // Return values for CanTradeSelectedMon and CanSpinTradeMon

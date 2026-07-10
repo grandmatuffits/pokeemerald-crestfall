@@ -443,6 +443,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LENOX_TOWN_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 42,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LENOX_TOWN_EventScript_GymSign"
     }
   ]
 }

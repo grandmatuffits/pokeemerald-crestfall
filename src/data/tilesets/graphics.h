@@ -38,6 +38,44 @@ const u16 gTilesetPalettes_DelmarkWest[][16] =
 };
 const u32 gTilesetTiles_DelmarkWest[] = INCGFX_U32("data/tilesets/secondary/delmark_west/tiles.png", ".4bpp.fastSmol", "-num_tiles 368 -Wnum_tiles");
 
+const u16 gTilesetPalettes_DelmarkEast[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_east/palettes/12.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_DelmarkEast[] = INCGFX_U32("data/tilesets/secondary/delmark_east/tiles.png", ".4bpp.fastSmol", "-num_tiles 480 -Wnum_tiles");
+
+const u16 gTilesetPalettes_DelmarkSouth[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/12.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_DelmarkSouth[] = INCGFX_U32("data/tilesets/secondary/delmark_south/tiles.png", ".4bpp.fastSmol", "-num_tiles 272 -Wnum_tiles");
+
 const u32 gTilesetTiles_Rustboro[] = INCGFX_U32("data/tilesets/secondary/rustboro/tiles.png", ".4bpp.fastSmol", "-num_tiles 498 -Wnum_tiles");
 
 const u16 gTilesetPalettes_Rustboro[][16] =

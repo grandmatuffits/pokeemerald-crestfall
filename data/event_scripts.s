@@ -1814,3 +1814,53 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/DELMARK_CITY_WEST/scripts.inc"
 
 	.include "data/maps/PorytilesPrimaryTutorial/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_FERRY_HOUSE/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_NAME_RATER_HOUSE/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_WEST_HOUSE/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_WEST_HOUSE_2F/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_WEST_MANSION/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_WEST_MANSION_2F/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_7/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_8/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_EAST/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_EAST_APARTMENT_BUILDING_2F/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_EAST_APARTMENT_BUILDING/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_EAST_APARTMENT_BUILDING_3F/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_101/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_102/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_104/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_200/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_206/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_207/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_304/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_301/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_307/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_APT_302/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_SOUTH/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_SOUTH_CARETAKER_HOUSE/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_9/scripts.inc"

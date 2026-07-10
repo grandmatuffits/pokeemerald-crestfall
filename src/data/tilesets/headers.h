@@ -60,7 +60,26 @@ const struct Tileset gTileset_DelmarkWest =
     .metatileAttributes = gMetatileAttributes_DelmarkWest,
     .callback = NULL,
 };
-
+const struct Tileset gTileset_DelmarkEast =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DelmarkEast,
+    .palettes = gTilesetPalettes_DelmarkEast,
+    .metatiles = gMetatiles_DelmarkEast,
+    .metatileAttributes = gMetatileAttributes_DelmarkEast,
+    .callback = NULL,
+};
+const struct Tileset gTileset_DelmarkSouth =
+{
+    .isCompressed = TRUE,       
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DelmarkSouth,
+    .palettes = gTilesetPalettes_DelmarkSouth,
+    .metatiles = gMetatiles_DelmarkSouth,
+    .metatileAttributes = gMetatileAttributes_DelmarkSouth,
+    .callback = NULL,            
+};
 const struct Tileset gTileset_Petalburg =
 {
     .isCompressed = TRUE,

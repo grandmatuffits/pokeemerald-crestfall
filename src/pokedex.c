@@ -4543,6 +4543,10 @@ void GetCaughtPokedexCount(void)
 {
     gSpecialVar_Result = GetNationalPokedexCount(FLAG_GET_CAUGHT);
 }
+void CheckCaughtFeebas(void)
+{
+    gSpecialVar_Result = GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_FEEBAS), FLAG_GET_CAUGHT);
+}
 
 u16 GetNationalPokedexCount(u8 caseID)
 {

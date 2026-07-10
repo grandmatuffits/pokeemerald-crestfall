@@ -3,7 +3,6 @@
   "name": "SlateportCity_Mart",
   "layout": "LAYOUT_MART",
   "music": "MUS_POKE_MART",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_SLATEPORT_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -61,17 +60,18 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_DELMARK_CITY_WEST",
+      "dest_warp_id": "5"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_DELMARK_CITY_WEST",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

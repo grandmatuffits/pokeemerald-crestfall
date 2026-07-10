@@ -18035,3 +18035,275 @@ Level: 20
 
 Gible @ None
 Level: 20
+
+=== TRAINER_DELMARK_AROMA_LADY ===
+Name: Rosie
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Oddish @ Lum Berry
+Level: 20
+
+Gloom @ Lum Berry
+Level: 23
+
+Vileplume @ Lum Berry
+Level: 26
+
+Bellossom @ Lum Berry
+Level: 29
+
+=== TRAINER_DELMARK_RAMSEY ===
+Name: Ramsey
+Class: Gentleman
+Pic: Gentleman Frlg
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Check Bad Move
+
+Magmar @ None
+Level: 23
+
+=== TRAINER_DELMARK_SALLY ===
+Name: Sally
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F 
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Marill @ None
+Level: 22
+
+Togetic @ None
+Level: 23
+
+=== TRAINER_DELMARK_GEORGIA ===
+Name: Georgia
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Scraggy @ None
+Level: 22
+
+Roselia @ None
+Level: 24
+
+Haunter @ None
+Level: 26
+
+=== TRAINER_ROUTE7_MARSHA ===
+Name: Marsha
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Piplup @ None
+Level: 22
+
+Luxio @ None
+Level: 23
+
+=== TRAINER_ROUTE7_GAVIN ===
+Name: Gavin
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Houndour @ None
+Level: 24
+
+=== TRAINER_ROUTE8_LILY ===
+Name: Lily
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Whimsicott @ None
+Level: 25
+
+
+=== TRAINER_ROUTE8_DREW ===
+Name: Drew
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Rockruff @ None
+Level: 22
+
+Machop @ None
+Level: 22
+
+Aron @ None
+Level: 22
+
+=== TRAINER_DELMARK_GREG ===
+Name: Greg
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Magnemite @ None
+Level: 25
+
+=== TRAINER_JACK_AND_JILL ===
+Name: Jack&Jill
+Class: Twins
+Pic: Sis And Bro
+Gender: Male
+Music: Female
+Double Battle: Yes
+AI: Check Bad Move
+
+Eevee @ None
+Level: 23
+
+Pikachu @ None
+Level: 23
+
+=== TRAINER_DELMARK_SAITAMA ===
+Name: Saitama
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Machop @ Black Belt
+Level: 27
+- Focus Punch
+- Leer
+- Focus Energy
+- Bulk Up
+
+=== TRAINER_DELMARK_JANE ===
+Name: Jane
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Haunter @ None
+Level: 25
+
+=== TRAINER_DELMARK_HARRY ===
+Name: Harry
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Kadabra @ None
+Level: 25
+
+=== TRAINER_DELMARK_LUCAS ===
+Name: Lucas
+Class: Rocker
+Pic: Rocker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Ninjask @ None
+Level: 24
+
+Pawniard @ None
+Level: 25
+
+Flareon @ None
+Level: 26
+
+=== TRAINER_DELMARK_ELDER_IRRUS ===
+Name: IRRUS
+Class: Covenant Elder
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Frillish
+Level: 25
+
+Carvanha
+Level: 27
+
+Tirtouga
+Level: 28
+
+=== TRAINER_DELMARK_COVENANT_ACOLYTE ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Swinub
+Level: 21
+
+Staravia
+Level: 22
+
+=== TRAINER_DELMARK_SOUTH_YOUNGSTER ===
+Name: JEB
+Class: Youngster
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Eevee @ None
+Level: 22
+
+Trapinch @ None
+Level: 22
+
+=== TRAINER_DELMARK_SOUTH_HEX_MANIAC ===
+Name: AISHA
+Class: Hex Maniac 
+Pic: Hex Maniac
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Gastly @ None
+Level: 21
+
+Honedge @ None
+Level: 23

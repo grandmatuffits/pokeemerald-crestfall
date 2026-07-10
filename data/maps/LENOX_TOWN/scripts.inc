@@ -347,3 +347,11 @@ LENOX_TOWN_EventScript_TownSign::
 LENOX_TOWN_Text_TownSign:
 	.string "Lenox Town\n"
 	.string "Friendliness tucked between\p Whitecaps and Ridley River$"	
+
+LENOX_TOWN_EventScript_GymSign::
+	msgbox LENOX_TOWN_Text_GymSign, MSGBOX_SIGN
+	end
+
+LENOX_TOWN_Text_GymSign:
+	.string "Lenox Town Gym\n"
+	.string "Caution: Unstable ground!$"		

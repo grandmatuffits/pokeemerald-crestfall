@@ -935,13 +935,31 @@
 #define TRAINER_LENOX_GYM_JIM                   928
 #define TRAINER_LENOX_GYM_MARTY                 929
 #define TRAINER_LENOX_GYM_BECCA                 930
-#define TRAINERS_COUNT_EMERALD                  931
+#define TRAINER_DELMARK_AROMA_LADY              931
+#define TRAINER_DELMARK_RAMSEY                  932
+#define TRAINER_DELMARK_SALLY                   933
+#define TRAINER_DELMARK_GEORGIA                 934
+#define TRAINER_ROUTE7_MARSHA                   935
+#define TRAINER_ROUTE7_GAVIN                    936
+#define TRAINER_ROUTE8_DREW                     937
+#define TRAINER_ROUTE8_LILY                     938
+#define TRAINER_DELMARK_GREG                    939
+#define TRAINER_JACK_AND_JILL                   940
+#define TRAINER_DELMARK_SAITAMA                 941
+#define TRAINER_DELMARK_JANE                    942
+#define TRAINER_DELMARK_HARRY                   943
+#define TRAINER_DELMARK_LUCAS                   944
+#define TRAINER_DELMARK_COVENANT_ACOLYTE        945
+#define TRAINER_DELMARK_ELDER_IRRUS             946
+#define TRAINER_DELMARK_SOUTH_HEX_MANIAC        947
+#define TRAINER_DELMARK_SOUTH_YOUNGSTER         948
+#define TRAINERS_COUNT_EMERALD                  949
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define MAX_TRAINERS_COUNT_EMERALD 950
+#define MAX_TRAINERS_COUNT_EMERALD 999
 
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG
