@@ -64,6 +64,8 @@ MoveRelearner_EventScript_TeachTutorMoves:
 MoveRelearner_EventScript_TeachMove::
 	getpartysize
 	goto_if_eq VAR_RESULT, 0, MoveRelearner_EventScript_NoPkmn
+	checkitem ITEM_HEART_SCALE
+	goto_if_eq VAR_RESULT, FALSE, MoveRelearner_EventScript_NeedHeartScale
 	msgbox MoveRelearner_Text_ChoosePkmn, MSGBOX_DEFAULT
 	chooseboxmon SELECT_PC_MON_MOVE_RELEARNER
 	waitstate
@@ -74,7 +76,15 @@ MoveRelearner_EventScript_TeachMove::
 	call_if_eq VAR_RESULT, FALSE, MoveRelearner_EventScript_CantTeachMoveToPkmn
 	msgbox MoveRelearner_Text_WhichXmoveShouldTeach, MSGBOX_DEFAULT
 	special TeachMoveRelearnerMove
+	goto_if_eq VAR_RESULT, FALSE, MoveRelearner_EventScript_AnythingElse
+	msgbox MoveRelearner_Text_HandedOverHeartScale, MSGBOX_DEFAULT
+	removeitem ITEM_HEART_SCALE
 	goto MoveRelearner_EventScript_AnythingElse
+	end
+
+MoveRelearner_EventScript_NeedHeartScale::
+	msgbox MoveRelearner_Text_NeedHeartScale, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 MoveRelearner_EventScript_NoPkmn:

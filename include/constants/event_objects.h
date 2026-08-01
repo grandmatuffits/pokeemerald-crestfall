@@ -618,6 +618,11 @@ enum
 #define OBJ_EVENT_PAL_TAG_INGRID                  0x1174
 #define OBJ_EVENT_PAL_TAG_BRIGHAM                 0x1176
 #define OBJ_EVENT_PAL_TAG_IRRUS                   0x1177
+#define OBJ_EVENT_PAL_TAG_FRIEDE                  0x1178
+#define OBJ_EVENT_PAL_TAG_SAXUS                   0x1179
+#define OBJ_EVENT_PAL_TAG_SILVIO                  0x1180
+#define OBJ_EVENT_PAL_TAG_RANDALL                 0x117B
+#define OBJ_EVENT_PAL_TAG_PRAETUS                 0x117C
 #endif //OW_FOLLOWERS_POKEBALLS
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611

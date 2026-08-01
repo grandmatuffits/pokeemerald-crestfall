@@ -1212,10 +1212,10 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_PONYTA
     },
-    [INGAME_TRADE_SNORUNT] =
+    [INGAME_TRADE_ESPURR] =
     {
-        .nickname = _("Chiru"),
-        .species = SPECIES_SNORUNT,
+        .nickname = _("Miso"),
+        .species = SPECIES_ESPURR,
         .ivs = {5, 5, 5, 5, 5, 5},
         .abilityNum = 0,
         .otId = 12345,
@@ -1315,6 +1315,32 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = FEMALE,              // she's a young girl
         .sheen = 0,
         .requestedSpecies = SPECIES_HORSEA,
+    },
+    [INGAME_TRADE_GIBLE] =
+    {
+        .nickname = _("Gabbers"),
+        .species = SPECIES_GIBLE,
+        .ivs = {15, 15, 15, 15, 15, 15},                    // mirror your Miltank/Tauros spread
+        .abilityNum = 0,
+        .otId = 51724,                   // ⚠ NO leading zero (octal trap)
+        .conditions = {0, 0, 0, 0, 0},
+        .otName = _("Sven"),
+        .otGender = MALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_EMOLGA,
+    },
+    [INGAME_TRADE_DRATINI] =
+    {
+        .nickname = _("Tina"),
+        .species = SPECIES_DRATINI,
+        .ivs = {15, 15, 15, 15, 15, 15},                    // mirror your Miltank/Tauros spread
+        .abilityNum = 0,
+        .otId = 87565,                   // ⚠ NO leading zero (octal trap)
+        .conditions = {0, 0, 0, 0, 0},
+        .otName = _("Tina"),
+        .otGender = FEMALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_MIMIKYU,
     },
 };
 

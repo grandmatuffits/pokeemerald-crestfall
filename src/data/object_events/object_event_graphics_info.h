@@ -2178,7 +2178,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagmaMemberM = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagmaMemberF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
+    .paletteTag = OBJ_EVENT_PAL_TAG_SAXUS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2358,7 +2358,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Norman = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Winona = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_FRIEDE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2412,7 +2412,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tate = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wallace = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_PRAETUS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -5685,7 +5685,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rocker = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MrFuji = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_SILVIO,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -5704,7 +5704,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MrFuji = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bruno = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_RANDALL,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,

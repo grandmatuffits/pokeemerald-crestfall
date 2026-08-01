@@ -1,0 +1,50 @@
+{
+  "id": "MAP_ROSEBANK_TOWN_MOVE_REMINDER_HOUSE",
+  "name": "ROSEBANK_TOWN_MOVE_REMINDER_HOUSE",
+  "layout": "LAYOUT_ROSEBANK_TOWN_MOVE_REMINDER_HOUSE",
+  "music": "MUS_ENPALE_LAB",
+  "region_map_section": "MAPSEC_DEWFORD_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_ROSEBANK_MOVE_REMINDER",
+      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_MOVE_REMINDER_HOUSE_EventScript_MoveReminder",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROSEBANK_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROSEBANK_TOWN",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

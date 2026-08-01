@@ -45,7 +45,7 @@
     F(FACADE) \
     F(REST) \
     F(THIEF) \
-    F(STEEL_WING) \
+    F(IRON_HEAD) \
     F(SKILL_SWAP) \
     F(OVERHEAT) \
     F(BULLDOZE) \

@@ -1,0 +1,26 @@
+{
+  "id": "MAP_DELMARK_CITY_SOUTH_UNDERWATER",
+  "name": "DELMARK_CITY_SOUTH_UNDERWATER",
+  "layout": "LAYOUT_DELMARK_CITY_SOUTH_UNDERWATER",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_CELADON_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERWATER",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_DELMARK_CITY_SOUTH",
+      "offset": 0,
+      "direction": "emerge"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

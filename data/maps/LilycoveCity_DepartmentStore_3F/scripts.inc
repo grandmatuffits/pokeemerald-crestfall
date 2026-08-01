@@ -69,3 +69,37 @@ LilycoveCity_DepartmentStore_3F_Text_GaveCarbosToSpeedUpMon:
 	.string "I gave a CARBOS to my POKéMON,\n"
 	.string "and its SPEED went up.$"
 
+DelmarkCityMall3F_EventScript_Vesna::
+	trainerbattle_single TRAINER_COVENANT_VESNA, DelmarkCityMall3F_Text_VesnaIntro, DelmarkCityMall3F_Text_VesnaDefeat
+	msgbox DelmarkCityMall3F_Text_VesnaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DelmarkCityMall3F_Text_VesnaIntro:
+	.string "This floor sold flowers. Cut ones.\p"
+	.string "People paid for beauty already dying.\n"
+	.string "Does that not strike you as sad?$"
+
+DelmarkCityMall3F_Text_VesnaDefeat:
+	.string "Mine bloomed too long.$"
+
+DelmarkCityMall3F_Text_VesnaPostBattle:
+	.string "When the CELEBI is ours, nothing will\n"
+	.string "have to be cut to be kept.$"
+
+
+DelmarkCityMall3F_EventScript_Odric::
+	trainerbattle_single TRAINER_COVENANT_ODRIC, DelmarkCityMall3F_Text_OdricIntro, DelmarkCityMall3F_Text_OdricDefeat
+	msgbox DelmarkCityMall3F_Text_OdricPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DelmarkCityMall3F_Text_OdricIntro:
+	.string "The mayor came back, they say.\n"
+	.string "Walked into his own city like a guest.\p"
+	.string "He will find it much improved.$"
+
+DelmarkCityMall3F_Text_OdricDefeat:
+	.string "He brought you. Of course.$"
+
+DelmarkCityMall3F_Text_OdricPostBattle:
+	.string "SILVIO is somewhere in this building.\n"
+	.string "So are a great many of us.$"

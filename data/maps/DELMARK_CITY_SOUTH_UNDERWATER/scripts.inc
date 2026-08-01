@@ -1,0 +1,2 @@
+DELMARK_CITY_SOUTH_UNDERWATER_MapScripts::
+	.byte 0

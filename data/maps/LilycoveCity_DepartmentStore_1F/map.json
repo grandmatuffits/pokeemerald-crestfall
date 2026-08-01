@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_1F_EventScript_Greeter",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
     },
     {
       "local_id": "LOCALID_LOTTERY_CLERK",
@@ -39,7 +39,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_1F_EventScript_LotteryClerk",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
@@ -52,7 +52,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_1F_EventScript_PokefanF",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
@@ -65,7 +65,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_1F_EventScript_LittleGirl",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
@@ -78,7 +78,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_1F_EventScript_PokefanM",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AZUMARILL",
@@ -91,7 +91,46 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_1F_EventScript_Azumarill",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 12,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "DelmarkCityMall1F_EventScript_Marlo",
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 13,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "DelmarkCityMall1F_EventScript_Pia",
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 9,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DELMARK_MALL_1F_EventScript_Acolyte",
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
     }
   ],
   "warp_events": [
@@ -114,13 +153,6 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_2F",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 2,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ELEVATOR",
       "dest_warp_id": "0"
     }
   ],

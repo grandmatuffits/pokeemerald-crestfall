@@ -9408,7 +9408,7 @@
       "id": "LAYOUT_KINNERET_TOWN",
       "name": "KINNERET_TOWN_Layout",
       "width": 24,
-      "height": 30,
+      "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/KINNERET_TOWN/border.bin",
@@ -9647,8 +9647,8 @@
     {
       "id": "LAYOUT_WHITECAPS_2F",
       "name": "WHITECAPS_2F_Layout",
-      "width": 38,
-      "height": 40,
+      "width": 48,
+      "height": 44,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/WHITECAPS_2F/border.bin",
@@ -9658,7 +9658,7 @@
       "id": "LAYOUT_WHITECAPS_EXTERIOR",
       "name": "WHITECAPS_EXTERIOR_Layout",
       "width": 67,
-      "height": 46,
+      "height": 86,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Snow",
       "border_filepath": "data/layouts/WHITECAPS_EXTERIOR/border.bin",
@@ -9667,8 +9667,8 @@
     {
       "id": "LAYOUT_WHITECAPS_EXIT",
       "name": "WHITECAPS_EXIT_Layout",
-      "width": 16,
-      "height": 14,
+      "width": 30,
+      "height": 22,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/WHITECAPS_EXIT/border.bin",
@@ -9748,7 +9748,7 @@
       "id": "LAYOUT_DELMARK_CITY_WEST",
       "name": "DELMARK_CITY_WEST_Layout",
       "width": 65,
-      "height": 50,
+      "height": 54,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_DelmarkWest",
       "border_filepath": "data/layouts/DELMARK_CITY_WEST/border.bin",
@@ -9847,8 +9847,8 @@
     {
       "id": "LAYOUT_DELMARK_CITY_EAST",
       "name": "DELMARK_CITY_EAST_Layout",
-      "width": 65,
-      "height": 50,
+      "width": 73,
+      "height": 54,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_DelmarkEast",
       "border_filepath": "data/layouts/DELMARK_CITY_EAST/border.bin",
@@ -10010,9 +10010,269 @@
       "width": 90,
       "height": 38,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fortree",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/ENPALE_ROUTE_9/border.bin",
       "blockdata_filepath": "data/layouts/ENPALE_ROUTE_9/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROSEBANK_TOWN",
+      "name": "ROSEBANK_TOWN_Layout",
+      "width": 62,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/ROSEBANK_TOWN/border.bin",
+      "blockdata_filepath": "data/layouts/ROSEBANK_TOWN/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROSEBANK_TOWN_MINER_HOUSE",
+      "name": "ROSEBANK_TOWN_MINER_HOUSE_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ROSEBANK_TOWN_MINER_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/ROSEBANK_TOWN_MINER_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROSEBANK_TOWN_MOVE_REMINDER_HOUSE",
+      "name": "ROSEBANK_TOWN_MOVE_REMINDER_HOUSE_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ROSEBANK_TOWN_MOVE_REMINDER_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/ROSEBANK_TOWN_MOVE_REMINDER_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROSEBANK_TOWN_TRADE_HOUSE",
+      "name": "ROSEBANK_TOWN_TRADE_HOUSE_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ROSEBANK_TOWN_TRADE_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/ROSEBANK_TOWN_TRADE_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROSEBANK_TOWN_GYM",
+      "name": "ROSEBANK_TOWN_GYM_Layout",
+      "width": 18,
+      "height": 37,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ROSEBANK_TOWN_GYM/border.bin",
+      "blockdata_filepath": "data/layouts/ROSEBANK_TOWN_GYM/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_10",
+      "name": "ENPALE_ROUTE_10_Layout",
+      "width": 36,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_WallarMarshlands",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_10/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_10/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALLAR_MARSHLANDS",
+      "name": "WALLAR_MARSHLANDS_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_WallarMarshlands",
+      "border_filepath": "data/layouts/WALLAR_MARSHLANDS/border.bin",
+      "blockdata_filepath": "data/layouts/WALLAR_MARSHLANDS/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALLAR_BELL_TOWER",
+      "name": "WALLAR_BELL_TOWER_Layout",
+      "width": 11,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/WALLAR_BELL_TOWER/border.bin",
+      "blockdata_filepath": "data/layouts/WALLAR_BELL_TOWER/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALLAR_BELL_TOWER_2F",
+      "name": "WALLAR_BELL_TOWER_2F_Layout",
+      "width": 11,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/WALLAR_BELL_TOWER_2F/border.bin",
+      "blockdata_filepath": "data/layouts/WALLAR_BELL_TOWER_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALLAR_BELL_TOWER_3F",
+      "name": "WALLAR_BELL_TOWER_3F_Layout",
+      "width": 11,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/WALLAR_BELL_TOWER_3F/border.bin",
+      "blockdata_filepath": "data/layouts/WALLAR_BELL_TOWER_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALLAR_BELL_TOWER_4F",
+      "name": "WALLAR_BELL_TOWER_4F_Layout",
+      "width": 11,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/WALLAR_BELL_TOWER_4F/border.bin",
+      "blockdata_filepath": "data/layouts/WALLAR_BELL_TOWER_4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_11",
+      "name": "ENPALE_ROUTE_11_Layout",
+      "width": 32,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_WallarMarshlands",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_11/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_11/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALERYTOWN",
+      "name": "VALERYTOWN_Layout",
+      "width": 28,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/VALERYTOWN/border.bin",
+      "blockdata_filepath": "data/layouts/VALERYTOWN/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALERYTOWN_SMALL_HOUSE",
+      "name": "VALERYTOWN_SMALL_HOUSE_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VALERYTOWN_SMALL_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/VALERYTOWN_SMALL_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALERYTOWN_BIG_HOUSE",
+      "name": "VALERYTOWN_BIG_HOUSE_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VALERYTOWN_BIG_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/VALERYTOWN_BIG_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALERYTOWN_GYM",
+      "name": "VALERYTOWN_GYM_Layout",
+      "width": 8,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleArena",
+      "border_filepath": "data/layouts/VALERYTOWN_GYM/border.bin",
+      "blockdata_filepath": "data/layouts/VALERYTOWN_GYM/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_12",
+      "name": "ENPALE_ROUTE_12_Layout",
+      "width": 56,
+      "height": 98,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_12/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_12/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_GYM",
+      "name": "DELMARK_CITY_GYM_Layout",
+      "width": 12,
+      "height": 36,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SootopolisGym",
+      "border_filepath": "data/layouts/DELMARK_CITY_GYM/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_GYM/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_13",
+      "name": "ENPALE_ROUTE_13_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_13/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_13/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANT_ISLAND",
+      "name": "GRANT_ISLAND_Layout",
+      "width": 80,
+      "height": 75,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/GRANT_ISLAND/border.bin",
+      "blockdata_filepath": "data/layouts/GRANT_ISLAND/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANT_CAVE",
+      "name": "GRANT_CAVE_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GRANT_CAVE/border.bin",
+      "blockdata_filepath": "data/layouts/GRANT_CAVE/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANT_CAVE_2F",
+      "name": "GRANT_CAVE_2F_Layout",
+      "width": 43,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GRANT_CAVE_2F/border.bin",
+      "blockdata_filepath": "data/layouts/GRANT_CAVE_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANT_CAVE_BF1",
+      "name": "GRANT_CAVE_BF1_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GRANT_CAVE_BF1/border.bin",
+      "blockdata_filepath": "data/layouts/GRANT_CAVE_BF1/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANT_CAVE_BF2",
+      "name": "GRANT_CAVE_BF2_Layout",
+      "width": 13,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GRANT_CAVE_BF2/border.bin",
+      "blockdata_filepath": "data/layouts/GRANT_CAVE_BF2/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANT_CAVE_CHAMBER",
+      "name": "GRANT_CAVE_CHAMBER_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GRANT_CAVE_CHAMBER/border.bin",
+      "blockdata_filepath": "data/layouts/GRANT_CAVE_CHAMBER/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_SOUTH_UNDERWATER",
+      "name": "DELMARK_CITY_SOUTH_UNDERWATER_Layout",
+      "width": 130,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/DELMARK_CITY_SOUTH_UNDERWATER/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_SOUTH_UNDERWATER/map.bin"
     }
   ]
 }

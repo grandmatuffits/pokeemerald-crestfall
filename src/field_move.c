@@ -27,10 +27,7 @@ static bool32 IsFieldMoveUnlocked_Flash(void)
 
 static bool32 IsFieldMoveUnlocked_RockSmash(void)
 {
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE06_GET);
-
-    return FlagGet(FLAG_BADGE03_GET);
+    return CheckBagHasItem(ITEM_HM_ROCK_SMASH, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_Strength(void)
@@ -53,15 +50,12 @@ static bool32 IsFieldMoveUnlocked_Fly(void)
 
 static bool32 IsFieldMoveUnlocked_Dive(void)
 {
-    return FlagGet(FLAG_BADGE07_GET);
+    return CheckBagHasItem(ITEM_HM_DIVE, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_Waterfall(void)
 {
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE07_GET);
-
-    return FlagGet(FLAG_BADGE08_GET);
+    return CheckBagHasItem(ITEM_HM_WATERFALL, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_RockClimb(void)

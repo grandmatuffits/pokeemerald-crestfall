@@ -39,13 +39,16 @@ DELMARK_CITY_SOUTH_Text_CemeterySign:
 	.string "DELMARK CEMETERY\p"
 
 DELMARK_CITY_SOUTH_EventScript_BridgeBlock::
+	goto_if_set FLAG_BADGE05_GET, DELMARK_CITY_SOUTH_EventScript_BridgePass
 	lockall
 	msgbox DELMARK_CITY_SOUTH_Text_BridgeBlock, MSGBOX_DEFAULT
-	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, DELMARK_CITY_SOUTH_Movement_StepBackFromBridge
 	waitmovement 0
 	releaseall
 	end
+
+DELMARK_CITY_SOUTH_EventScript_BridgePass::
+	return
 
 DELMARK_CITY_SOUTH_Movement_StepBackFromBridge:
 	walk_up

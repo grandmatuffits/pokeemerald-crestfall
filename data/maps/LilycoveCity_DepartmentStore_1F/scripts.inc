@@ -181,3 +181,51 @@ LilycoveCity_DepartmentStore_1F_Text_SpreadWordAboutWirelessComm:
 	.string "I want to spread the word about how\n"
 	.string "fun Wireless Communication can be.$"
 
+DelmarkCityMall1F_EventScript_Marlo::
+	trainerbattle_single TRAINER_COVENANT_MARLO, DelmarkCityMall1F_Text_MarloIntro, DelmarkCityMall1F_Text_MarloDefeat
+	msgbox DelmarkCityMall1F_Text_MarloPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DelmarkCityMall1F_Text_MarloIntro:
+	.string "The doors are open. They were never\n"
+	.string "locked.\p"
+	.string "You may go up. You simply go up\n"
+	.string "through us.$"
+
+DelmarkCityMall1F_Text_MarloDefeat:
+	.string "Through, then.$"
+
+DelmarkCityMall1F_Text_MarloPostBattle:
+	.string "Listen to this floor. No registers.\n"
+	.string "No footsteps. No hurry.\p"
+	.string "We did that. Peacefully.$"
+
+
+DelmarkCityMall1F_EventScript_Pia::
+	trainerbattle_single TRAINER_COVENANT_PIA, DelmarkCityMall1F_Text_PiaIntro, DelmarkCityMall1F_Text_PiaDefeat
+	msgbox DelmarkCityMall1F_Text_PiaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DelmarkCityMall1F_Text_PiaIntro:
+	.string "I worked here. Six years, this counter.\p"
+	.string "I never once looked up.\n"
+	.string "Now I do nothing else.$"
+
+DelmarkCityMall1F_Text_PiaDefeat:
+	.string "You move so quickly…$"
+
+DelmarkCityMall1F_Text_PiaPostBattle:
+	.string "Nobody fought us for this building.\n"
+	.string "They set down their things and left.\p"
+	.string "Ask yourself why that was easy.$"
+
+DELMARK_MALL_1F_EventScript_Acolyte::
+	lock
+	faceplayer
+	msgbox DELMARK_MALL_1F_Text_Acolyte, MSGBOX_DEFAULT
+	release
+	end
+
+
+DELMARK_MALL_1F_Text_Acolyte:
+	.string "Hey! You shouldn't be here!\p"

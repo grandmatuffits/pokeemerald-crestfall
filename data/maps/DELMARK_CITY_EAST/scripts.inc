@@ -1,4 +1,8 @@
+
+#define LOCALID_DELMARK_CITY_RIVAL 30
+
 DELMARK_CITY_EAST_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, DELMARK_CITY_EAST_OnTransition
 	.byte 0
 
 DELMARK_CITY_EAST_EventScript_TruckSign::
@@ -279,7 +283,6 @@ DELMARK_CITY_EAST_EventScript_Citizen10::
 
 DELMARK_CITY_EAST_EventScript_Citizen11::
 	lock
-	faceplayer
 	msgbox DELMARK_CITY_EAST_Text_Citizen11, MSGBOX_DEFAULT
 	release
 	end	
@@ -396,6 +399,8 @@ DELMARK_CITY_EAST_Text_CitySign:
 	.string "Enpale.$"	
 
 DELMARK_CITY_EventScript_GymLocked::
+	compare VAR_DELMARK_REVISIT_STATE, 4
+	goto_if_ge DELMARK_CITY_EventScript_GymOpenNow
 	lockall
 	msgbox DELMARK_CITY_Text_GymLocked, MSGBOX_SIGN
 	closemessage
@@ -404,9 +409,256 @@ DELMARK_CITY_EventScript_GymLocked::
 	releaseall
 	end
 
+DELMARK_CITY_EventScript_GymOpenNow::
+	end
+
 DELMARK_CITY_Movement_PlayerStepBack::
 	walk_down
 	step_end
 	
 DELMARK_CITY_Text_GymLocked:
 	.string "The gym is closed.$"	
+
+
+DELMARK_CITY_EAST_OnTransition::
+	call DelmarkCityEast_RevisitStateCheck
+	goto_if_set FLAG_DELMARK_EAST_RIVAL_DONE, DELMARK_CITY_EAST_OnTransitionDone
+	setflag FLAG_HIDE_DELMARK_EAST_RIVAL
+	
+DELMARK_CITY_EAST_OnTransitionDone::
+	end
+
+@ ======== RIVAL BATTLE (bridge to Route 9) ========
+
+@ ROW 9
+DELMARK_CITY_EAST_EventScript_RivalScene9::
+	goto_if_set FLAG_DELMARK_EAST_RIVAL_DONE, DELMARK_CITY_EAST_EventScript_RivalDone
+	lockall
+	clearflag FLAG_HIDE_DELMARK_EAST_RIVAL
+	addobject LOCALID_DELMARK_CITY_RIVAL
+	applymovement LOCALID_DELMARK_CITY_RIVAL, DELMARK_CITY_EAST_Movement_RivalTo9
+	waitmovement 0
+	call DELMARK_CITY_EAST_EventScript_RivalTalk
+	applymovement LOCALID_DELMARK_CITY_RIVAL, DELMARK_CITY_EAST_Movement_RivalWalkPast9
+	waitmovement 0
+	goto DELMARK_CITY_EAST_EventScript_RivalFinish
+	end
+
+@ ROW 10
+DELMARK_CITY_EAST_EventScript_RivalScene10::
+	goto_if_set FLAG_DELMARK_EAST_RIVAL_DONE, DELMARK_CITY_EAST_EventScript_RivalDone
+	lockall
+	clearflag FLAG_HIDE_DELMARK_EAST_RIVAL
+	addobject LOCALID_DELMARK_CITY_RIVAL
+	applymovement LOCALID_DELMARK_CITY_RIVAL, DELMARK_CITY_EAST_Movement_RivalTo10
+	waitmovement 0
+	call DELMARK_CITY_EAST_EventScript_RivalTalk
+	applymovement LOCALID_DELMARK_CITY_RIVAL, DELMARK_CITY_EAST_Movement_RivalWalkPast10
+	waitmovement 0
+	goto DELMARK_CITY_EAST_EventScript_RivalFinish
+	end
+
+@ ROW 11
+DELMARK_CITY_EAST_EventScript_RivalScene11::
+	goto_if_set FLAG_DELMARK_EAST_RIVAL_DONE, DELMARK_CITY_EAST_EventScript_RivalDone
+	lockall
+	clearflag FLAG_HIDE_DELMARK_EAST_RIVAL
+	addobject LOCALID_DELMARK_CITY_RIVAL
+	applymovement LOCALID_DELMARK_CITY_RIVAL, DELMARK_CITY_EAST_Movement_RivalTo11
+	waitmovement 0
+	call DELMARK_CITY_EAST_EventScript_RivalTalk
+	applymovement LOCALID_DELMARK_CITY_RIVAL, DELMARK_CITY_EAST_Movement_RivalWalkPast11
+	waitmovement 0
+	goto DELMARK_CITY_EAST_EventScript_RivalFinish
+	end
+
+@ ======== shared talk + battle ========
+DELMARK_CITY_EAST_EventScript_RivalTalk::
+	msgbox DELMARK_CITY_EAST_Text_RivalIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_RIVALCF_3, DELMARK_CITY_EAST_Text_RivalDefeat
+	msgbox DELMARK_CITY_EAST_Text_RivalAfter, MSGBOX_DEFAULT
+	closemessage
+	return
+
+@ ======== already-done branch ========
+DELMARK_CITY_EAST_EventScript_RivalDone::
+	releaseall
+	end
+
+@ ======== finish: remove rival, set flags ========
+DELMARK_CITY_EAST_EventScript_RivalFinish::
+	removeobject LOCALID_DELMARK_CITY_RIVAL
+	setflag FLAG_HIDE_DELMARK_EAST_RIVAL
+	setflag FLAG_DELMARK_EAST_RIVAL_DONE
+	releaseall
+	end
+
+@ ======== approach movements (rival hidden at 61,10 -> stops at 54,row facing player) ========
+DELMARK_CITY_EAST_Movement_RivalTo9:
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_left
+	step_end
+
+DELMARK_CITY_EAST_Movement_RivalTo10:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_left
+	step_end
+
+DELMARK_CITY_EAST_Movement_RivalTo11:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_left
+	step_end
+
+@ ======== walk-past movements (detour around player, continue west off-bridge) ========
+@ Row 9 (top): detour DOWN to row 10, past player, back up, continue west
+DELMARK_CITY_EAST_Movement_RivalWalkPast9:
+	walk_down
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+@ Row 10 (middle): detour UP to row 9
+DELMARK_CITY_EAST_Movement_RivalWalkPast10:
+	walk_up
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+@ Row 11 (bottom): detour UP to row 10
+DELMARK_CITY_EAST_Movement_RivalWalkPast11:
+	walk_up
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+@ ======== text ========
+DELMARK_CITY_EAST_Text_RivalIntro:
+	.string "Oh, it's you.\p"
+	.string "I was gonna check out the Delmark\n"
+	.string "Mall, but I guess I'll have to teach\l"
+	.string "you a lesson first.\p"
+	.string "This time won't be so easy.$"
+
+DELMARK_CITY_EAST_Text_RivalDefeat:
+	.string "No!$"
+
+DELMARK_CITY_EAST_Text_RivalAfter:
+	.string "What!? How do you keep getting so\n"
+	.string "lucky?! This isn't fair at all!$"
+
+DelmarkCityEast_RevisitStateCheck::
+	compare VAR_DELMARK_REVISIT_STATE, 0
+	goto_if_eq DelmarkCityEast_MaybeStartRevisit
+	compare VAR_DELMARK_REVISIT_STATE, 1
+	goto_if_eq DelmarkCityEast_StageOccupied
+	return
+
+DelmarkCityEast_MaybeStartRevisit::
+	goto_if_unset FLAG_WALLAR_SAXUS_DONE, DelmarkCityEast_StagePreRevisit
+	goto_if_unset FLAG_BADGE05_GET, DelmarkCityEast_StagePreRevisit
+	setvar VAR_DELMARK_REVISIT_STATE, 1
+	@ fallthrough
+
+DelmarkCityEast_StageOccupied::
+	clearflag FLAG_HIDE_DELMARK_SILVIO_DOOR
+	clearflag FLAG_HIDE_DELMARK_EAST_OCCUPIERS
+	clearflag FLAG_HIDE_DELMARK_MALL_COVENANT
+	setflag FLAG_HIDE_DELMARK_MALL_CIVILIANS
+	return
+
+DelmarkCityEast_StagePreRevisit::
+	setflag FLAG_HIDE_DELMARK_SILVIO_DOOR
+	setflag FLAG_HIDE_DELMARK_EAST_OCCUPIERS
+	setflag FLAG_HIDE_DELMARK_MALL_COVENANT
+	clearflag FLAG_HIDE_DELMARK_MALL_CIVILIANS
+	return
+
+DelmarkCityEast_EventScript_SilvioDoor::
+	lock
+	applymovement LOCALID_DELMARK_SILVIO, Movement_SilvioTurnAround
+	waitmovement 0
+	setspeaker DelmarkCityEast_Text_SilvioName
+	msgbox DelmarkCityEast_Text_SilvioRevisit, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_DELMARK_SILVIO, Movement_SilvioFaceDoor
+	waitmovement 0
+	delay 20
+	opendoor 25, 14                      @ his own coords
+	waitdooranim
+	applymovement LOCALID_DELMARK_SILVIO, Movement_SilvioEnterMall
+	waitmovement 0
+	closedoor 25, 14
+	waitdooranim
+	removeobject LOCALID_DELMARK_SILVIO
+	setflag FLAG_HIDE_DELMARK_SILVIO_DOOR
+	setvar VAR_DELMARK_REVISIT_STATE, 2
+	release
+	end
+
+Movement_SilvioTurnAround:
+	walk_in_place_down
+	delay_16
+	step_end
+
+Movement_SilvioFaceDoor:
+	face_up
+	step_end
+
+Movement_SilvioEnterMall:
+	walk_up
+	set_invisible
+	step_end	
+
+DelmarkCityEast_Text_SilvioName:
+	.string "SILVIO$"
+
+DelmarkCityEast_Text_SilvioRevisit:
+	.string "You came back.\p"
+	.string "While I was gone, they took the city.\n"
+	.string "Not by force. People simply… let them.\p"
+	.string "Delmark City is theirs now. It seems they're.\n"
+	.string "headquarted here, in the mall.\p"
+	.string "We're going take them down.\n"
+	.string "{PLAYER}, Let's do this.$"	

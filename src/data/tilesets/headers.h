@@ -80,6 +80,16 @@ const struct Tileset gTileset_DelmarkSouth =
     .metatileAttributes = gMetatileAttributes_DelmarkSouth,
     .callback = NULL,            
 };
+const struct Tileset gTileset_WallarMarshlands =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_WallarMarshlands,
+    .palettes = gTilesetPalettes_WallarMarshlands,
+    .metatiles = gMetatiles_WallarMarshlands,
+    .metatileAttributes = gMetatileAttributes_WallarMarshlands,
+    .callback = NULL,
+};
 const struct Tileset gTileset_Petalburg =
 {
     .isCompressed = TRUE,

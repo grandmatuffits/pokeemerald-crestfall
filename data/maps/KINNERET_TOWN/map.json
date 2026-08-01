@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_ENPALE_ROUTE_2",
-      "offset": 10,
+      "offset": 14,
       "direction": "left"
     },
     {
@@ -34,7 +34,7 @@
       "local_id": "LOCALID_KINNERET_TOWN_FARMER",
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 12,
-      "y": 6,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -48,7 +48,7 @@
       "local_id": "LOCALID_KINNERET_TAUROS",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TAUROS)",
       "x": 14,
-      "y": 3,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -62,7 +62,7 @@
       "local_id": "LOCALID_KINNERET_MILTANK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MILTANK)",
       "x": 17,
-      "y": 3,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -75,7 +75,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 6,
-      "y": 22,
+      "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -88,7 +88,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 7,
-      "y": 22,
+      "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -102,28 +102,28 @@
   "warp_events": [
     {
       "x": 5,
-      "y": 12,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_KINNERET_TOWN_GYM",
       "dest_warp_id": "1"
     },
     {
       "x": 12,
-      "y": 17,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 17,
-      "y": 17,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_MART",
       "dest_warp_id": "0"
     },
     {
       "x": 15,
-      "y": 10,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_KINNERET_TOWN_FARMHOUSE",
       "dest_warp_id": "0"
@@ -134,7 +134,7 @@
     {
       "type": "sign",
       "x": 10,
-      "y": 2,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "KINNERET_TOWN_EventScript_Sign"
@@ -142,7 +142,7 @@
     {
       "type": "sign",
       "x": 8,
-      "y": 12,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "KINNERET_GYM_EventScript_Sign"

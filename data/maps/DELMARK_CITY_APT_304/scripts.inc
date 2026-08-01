@@ -10,43 +10,41 @@ DELMARK_CITY_APT_304_OnTransition::
 DELMARK_CITY_APT_304_EventScript_Note::
 	lock
 	goto_if_set FLAG_DELMARK_APARTMENT_AMBUSH_DONE, DELMARK_CITY_APT_304_EventScript_NoteAfter
-	msgbox DELMARK_CITY_APT_304_Text_Note, MSGBOX_DEFAULT
+	msgbox DELMARK_CITY_APT_304_Text_Note, MSGBOX_DEFAULT       @ note stays plain (no speaker)
 	closemessage
-	@ --- ambush: reveal both at the doorway ---
 	playse SE_PIN
 	clearflag FLAG_HIDE_DELMARK_APT_AMBUSHERS
 	addobject LOCALID_DELMARK_304_ACOLYTE
 	addobject LOCALID_DELMARK_304_ELDER_IRRUS
 	delay 20
-	msgbox DELMARK_CITY_APT_304_Text_IrrusAmbush, MSGBOX_DEFAULT
+	setspeaker DELMARK_CITY_APT_304_Text_IrrusName
+	msgbox DELMARK_CITY_APT_304_Text_IrrusAmbush, MSGBOX_SIGN
 	closemessage
-	@ --- acolyte strides forward to (5,3), then battles ---
+	@ acolyte battle
 	applymovement LOCALID_DELMARK_304_ACOLYTE, DELMARK_CITY_APT_304_Movement_AcolyteApproach
 	waitmovement 0
 	trainerbattle_no_intro TRAINER_DELMARK_COVENANT_ACOLYTE, DELMARK_CITY_APT_304_Text_AcolyteDefeat
-	@ --- Irrus dismisses the acolyte; acolyte steps aside ---
-	msgbox DELMARK_CITY_APT_304_Text_IrrusPreBattle, MSGBOX_DEFAULT
+	@ irrus dismisses, acolyte steps aside
+	setspeaker DELMARK_CITY_APT_304_Text_IrrusName
+	msgbox DELMARK_CITY_APT_304_Text_IrrusPreBattle, MSGBOX_SIGN
 	closemessage
 	applymovement LOCALID_DELMARK_304_ACOLYTE, DELMARK_CITY_APT_304_Movement_AcolyteAside
 	waitmovement 0
-	@ --- Irrus takes the front tile, then battles ---
 	applymovement LOCALID_DELMARK_304_ELDER_IRRUS, DELMARK_CITY_APT_304_Movement_IrrusApproach
 	waitmovement 0
 	trainerbattle_no_intro TRAINER_DELMARK_ELDER_IRRUS, DELMARK_CITY_APT_304_Text_IrrusDefeat
-msgbox DELMARK_CITY_APT_304_Text_IrrusParting, MSGBOX_DEFAULT
+	setspeaker DELMARK_CITY_APT_304_Text_IrrusName
+	msgbox DELMARK_CITY_APT_304_Text_IrrusParting, MSGBOX_SIGN
 	closemessage
-	@ --- they walk out, then vanish ---
-	applymovement LOCALID_DELMARK_304_ACOLYTE, DELMARK_CITY_APT_304_Movement_AcolyteExit
-	waitmovement 0
-	applymovement LOCALID_DELMARK_304_ELDER_IRRUS, DELMARK_CITY_APT_304_Movement_IrrusExit
-	waitmovement 0
 	removeobject LOCALID_DELMARK_304_ACOLYTE
 	removeobject LOCALID_DELMARK_304_ELDER_IRRUS
-	@ --- resolve ---
 	setflag FLAG_COVENANT_DELMARK_CLEARED
 	setflag FLAG_DELMARK_APARTMENT_AMBUSH_DONE
 	release
 	end
+
+DELMARK_CITY_APT_304_Text_IrrusName:
+	.string "Irrus$"	
 
 DELMARK_CITY_APT_304_EventScript_NoteAfter::
 	msgbox DELMARK_CITY_APT_304_Text_NoteAfter, MSGBOX_DEFAULT
@@ -94,13 +92,12 @@ DELMARK_CITY_APT_304_Text_Note:
 	.string "They mean to lure it out and bend\n"
 	.string "it to their will, using me as bait.\p"
 	.string "They're taking me south, past\n"
-	.string "Brackwall. Please, don't let them\l"
+	.string "Rosebank. Please, don't let them\l"
 	.string "reach the marsh.'$"
 
 DELMARK_CITY_APT_304_Text_NoteAfter:
-	.string "The desk is bare now.\p"
-	.string "Silvio's warning still echoes.\n"
-	.string "Cross the bridge.$"
+	.string "A sound comes from behind.\p"
+	.string "Footsteps are heard at the door.$"
 
 DELMARK_CITY_APT_304_Text_IrrusAmbush:
 	.string "…You should not have read that.\p"

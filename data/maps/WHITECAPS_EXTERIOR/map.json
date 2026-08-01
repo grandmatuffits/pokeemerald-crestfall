@@ -17,7 +17,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 8,
-      "y": 23,
+      "y": 63,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -30,7 +30,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 50,
-      "y": 12,
+      "y": 52,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -43,7 +43,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
       "x": 14,
-      "y": 23,
+      "y": 63,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -56,7 +56,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 49,
-      "y": 29,
+      "y": 69,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 0,
@@ -69,7 +69,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER_FRLG",
       "x": 39,
-      "y": 13,
+      "y": 53,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -78,38 +78,163 @@
       "trainer_sight_or_berry_tree_id": "5",
       "script": "WHITECAPS_EXTERIOR_EventScript_Huell",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 15,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Whitecaps_EventScript_Acolyte5",
+      "flag": "FLAG_HIDE_WHITECAPS_ACOLYTES"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 7,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "Whitecaps_EventScript_Acolyte6",
+      "flag": "FLAG_HIDE_WHITECAPS_ACOLYTES"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 20,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Whitecaps_EventScript_Acolyte7",
+      "flag": "FLAG_HIDE_WHITECAPS_ACOLYTES"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 30,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Whitecaps_EventScript_Acolyte8",
+      "flag": "FLAG_HIDE_WHITECAPS_ACOLYTES"
+    },
+    {
+      "local_id": "LOCALID_WHITECAPS_FERRUS",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "x": 30,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_WHITECAPS_FERRUS"
+    },
+    {
+      "local_id": "LOCALID_WHITECAPS_SAXUS",
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+      "x": 31,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_WHITECAPS_SAXUS"
+    },
+    {
+      "local_id": "LOCALID_WHITECAPS_BRIGHAM",
+      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "x": 30,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_WHITECAPS_BRIGHAM"
+    },
+    {
+      "local_id": "LOCALID_WHITECAPS_SILVIO",
+      "graphics_id": "OBJ_EVENT_GFX_MR_FUJI",
+      "x": 30,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_WHITECAPS_SILVIO"
     }
   ],
   "warp_events": [
     {
       "x": 19,
-      "y": 35,
+      "y": 75,
       "elevation": 0,
       "dest_map": "MAP_WHITECAPS_2F",
       "dest_warp_id": "2"
     },
     {
       "x": 22,
-      "y": 22,
+      "y": 62,
       "elevation": 0,
       "dest_map": "MAP_WHITECAPS_2F",
       "dest_warp_id": "3"
     },
     {
       "x": 45,
-      "y": 28,
+      "y": 68,
       "elevation": 0,
       "dest_map": "MAP_WHITECAPS_2F",
       "dest_warp_id": "4"
     },
     {
       "x": 7,
-      "y": 7,
+      "y": 47,
       "elevation": 0,
       "dest_map": "MAP_WHITECAPS_2F",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 23,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECAPS_2F",
+      "dest_warp_id": "8"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_WHITECAPS_STATE",
+      "var_value": "0",
+      "script": "Whitecaps_EventScript_SummitScene"
+    }
+  ],
   "bg_events": []
 }

@@ -353,7 +353,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte2",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
@@ -366,7 +366,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte3",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
@@ -379,7 +379,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte1",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -392,7 +392,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte5",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
@@ -405,7 +405,35 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte4",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
+    },
+    {
+      "local_id": "DELMARK_CITY_RIVAL",
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 61,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_DELMARK_EAST_RIVAL"
+    },
+    {
+      "local_id": "LOCALID_DELMARK_SILVIO",
+      "graphics_id": "OBJ_EVENT_GFX_MR_FUJI",
+      "x": 35,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DelmarkCityEast_EventScript_SilvioDoor",
+      "flag": "FLAG_HIDE_DELMARK_SILVIO_DOOR"
     }
   ],
   "warp_events": [
@@ -425,7 +453,7 @@
     },
     {
       "x": 35,
-      "y": 15,
+      "y": 27,
       "elevation": 0,
       "dest_map": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_1F",
       "dest_warp_id": "0"
@@ -435,6 +463,13 @@
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_DELMARK_CITY_EAST_APARTMENT_BUILDING",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_DELMARK_CITY_GYM",
       "dest_warp_id": "0"
     }
   ],
@@ -447,6 +482,33 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "DELMARK_CITY_EventScript_GymLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "DELMARK_CITY_EAST_EventScript_RivalScene9"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "DELMARK_CITY_EAST_EventScript_RivalScene10"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "DELMARK_CITY_EAST_EventScript_RivalScene11"
     }
   ],
   "bg_events": [

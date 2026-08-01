@@ -1,13 +1,25 @@
 LilycoveCity_DepartmentStoreRooftop_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_DepartmentStoreRooftop_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LilycoveCity_DepartmentStoreRooftop_OnFrame
+	@ ...any existing lines stay
 	.byte 0
 
-LilycoveCity_DepartmentStoreRooftop_OnTransition:
-	getpokenewsactive POKENEWS_LILYCOVE
-	call_if_eq VAR_RESULT, TRUE, LilycoveCity_DepartmentStoreRooftop_EventScript_ShowSaleWoman
-	call_if_eq VAR_RESULT, FALSE, LilycoveCity_DepartmentStoreRooftop_EventScript_HideSaleWoman
+LilycoveCity_DepartmentStoreRooftop_OnFrame::
+	map_script_2 VAR_DELMARK_REVISIT_STATE, 3, DelmarkMallRooftop_EventScript_PraetusScene
+	.2byte 0
+
+LilycoveCity_DepartmentStoreRooftop_OnTransition::
+	setflag FLAG_HIDE_DELMARK_ROOFTOP_BRIGHAM
+	compare VAR_DELMARK_REVISIT_STATE, 3
+	goto_if_eq LilycoveCity_DepartmentStoreRooftop_StageScene
+	setflag FLAG_HIDE_DELMARK_ROOFTOP_PRAETUS
+	setflag FLAG_HIDE_DELMARK_ROOFTOP_SILVIO
 	end
 
+LilycoveCity_DepartmentStoreRooftop_StageScene::
+	clearflag FLAG_HIDE_DELMARK_ROOFTOP_PRAETUS
+	clearflag FLAG_HIDE_DELMARK_ROOFTOP_SILVIO
+	end
 LilycoveCity_DepartmentStoreRooftop_EventScript_ShowSaleWoman::
 	clearflag FLAG_HIDE_LILYCOVE_DEPARTMENT_STORE_ROOFTOP_SALE_WOMAN
 	return
@@ -217,3 +229,216 @@ LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney:
 
 LilycoveCity_DepartmentStoreRooftop_Text_DecidedAgainstBuyingDrink:
 	.string "Decided against buying a drink.$"
+
+DelmarkMallRooftop_EventScript_PraetusScene::
+	lockall
+
+	@ --- Praetus turns from LEFT to face the player, approaches -
+	applymovement LOCALID_DELMARK_PRAETUS, Movement_Rooftop_PraetusTurnRight
+	waitmovement 0
+	delay 20
+	applymovement LOCALID_PLAYER, Movement_Rooftop_PlayerFacePraetus
+	applymovement LOCALID_DELMARK_PRAETUS, Movement_Rooftop_PraetusApproach
+	waitmovement 0
+
+	setspeaker DelmarkMallRooftop_Text_PraetusName
+	msgbox DelmarkMallRooftop_Text_PraetusIntro, MSGBOX_SIGN
+	closemessage
+	msgbox DelmarkMallRooftop_Text_PraetusChallenge, MSGBOX_SIGN
+	closemessage
+
+	trainerbattle_no_intro TRAINER_ELDER_PRAETUS, DelmarkMallRooftop_Text_PraetusDefeat
+
+	setspeaker DelmarkMallRooftop_Text_PraetusName
+	msgbox DelmarkMallRooftop_Text_PraetusPostBattle, MSGBOX_SIGN
+	closemessage
+	delay 30
+
+	@ --- Brigham emerges from the stairwell and shoves the player
+	@ ORDER MATTERS: player slides FIRST (vacates the tile), THEN
+	@ Brigham is added onto the now-empty entry tile. See notes.
+	playse SE_M_STRENGTH
+	applymovement LOCALID_PLAYER, Movement_Rooftop_PlayerShoved
+	waitmovement 0
+	clearflag FLAG_HIDE_DELMARK_ROOFTOP_BRIGHAM
+	addobject LOCALID_DELMARK_BRIGHAM
+	delay 15
+
+	@ Brigham addresses Praetus (west), then the player
+	setspeaker DelmarkMallRooftop_Text_BrighamName
+	msgbox DelmarkMallRooftop_Text_BrighamToPraetus, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_PLAYER, Movement_Rooftop_PlayerFaceDown
+	applymovement LOCALID_DELMARK_BRIGHAM, Movement_Rooftop_BrighamFaceUp
+	waitmovement 0
+	msgbox DelmarkMallRooftop_Text_BrighamToPlayer, MSGBOX_SIGN
+	closemessage
+	msgbox DelmarkMallRooftop_Text_BrighamWhitecaps, MSGBOX_SIGN
+	closemessage
+
+	@ --- both leave DOWN the stairs, single file (sequential!) ----
+@ --- Brigham leaves first, Praetus follows ------------------
+	applymovement LOCALID_DELMARK_BRIGHAM, Movement_Rooftop_BrighamExit
+	waitmovement 0
+	removeobject LOCALID_DELMARK_BRIGHAM
+	setflag FLAG_HIDE_DELMARK_ROOFTOP_BRIGHAM
+	delay 20
+	applymovement LOCALID_DELMARK_PRAETUS, Movement_Rooftop_PraetusExit
+	waitmovement 0
+	removeobject LOCALID_DELMARK_PRAETUS
+	setflag FLAG_HIDE_DELMARK_ROOFTOP_PRAETUS
+	delay 40
+
+	@ --- Silvio approaches, gym reopens, departs down the stairs --
+	applymovement LOCALID_DELMARK_SILVIO_ROOF, Movement_Rooftop_SilvioApproach,
+	waitmovement 0
+	setspeaker DelmarkMallRooftop_Text_SilvioName
+	msgbox DelmarkMallRooftop_Text_SilvioThanks, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_DELMARK_SILVIO_ROOF, Movement_Rooftop_SilvioExit
+	waitmovement 0
+	removeobject LOCALID_DELMARK_SILVIO_ROOF
+	setflag FLAG_HIDE_DELMARK_ROOFTOP_SILVIO
+
+	clearflag FLAG_HIDE_DELMARK_MALL_CIVILIANS
+	setflag FLAG_HIDE_DELMARK_MALL_COVENANT
+	setflag FLAG_HIDE_DELMARK_EAST_OCCUPIERS
+	setvar VAR_DELMARK_REVISIT_STATE, 4
+	releaseall
+	end
+
+
+@ ============================================================
+@ MOVEMENTS - every step count/direction is a PLACEHOLDER
+@ ============================================================
+
+Movement_Rooftop_PraetusTurnRight:
+	walk_in_place_right
+	delay_16
+	step_end
+
+Movement_Rooftop_PraetusApproach:
+	walk_right
+	walk_right
+	walk_right
+	step_end
+	
+Movement_Rooftop_PlayerFacePraetus:
+	walk_in_place_left
+	step_end
+
+Movement_Rooftop_PlayerShoved:
+	slide_down
+	face_up
+	step_end
+
+Movement_Rooftop_PlayerFaceDown:
+	walk_in_place_down
+	face_up
+	step_end
+
+Movement_Rooftop_BrighamFaceUp:
+	walk_down
+	step_end
+
+Movement_Rooftop_PraetusExit:
+	walk_right
+	walk_up
+	set_invisible
+	step_end
+
+Movement_Rooftop_BrighamExit:
+	walk_up
+	set_invisible
+	step_end
+
+Movement_Rooftop_SilvioApproach:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+Movement_Rooftop_SilvioExit:
+	walk_up
+	set_invisible
+	step_end
+
+
+@ ============================================================
+@ TEXT  (Jared rewrites to taste)
+@ ============================================================
+
+DelmarkMallRooftop_Text_PraetusName:
+	.string "ELDER PRAETUS$"
+
+DelmarkMallRooftop_Text_SilvioName:
+	.string "SILVIO$"
+
+DelmarkMallRooftop_Text_BrighamName:
+	.string "BRIGHAM$"
+
+DelmarkMallRooftop_Text_PraetusIntro:
+	.string "Thirteen floors.\p"
+	.string "I did not move for any of them.\n"
+	.string "I have not moved since the morning we\l"
+	.string "walked into this city.$"
+
+DelmarkMallRooftop_Text_PraetusChallenge:
+	.string "Your mayor stood where you are\n"
+	.string "standing. He had the whole city behind\l"
+	.string "him and he could not move me an inch.\p"
+	.string "So tell me, child…\p"
+	.string "what is it you think you have that\n"
+	.string "SILVIO did not?$"
+
+DelmarkMallRooftop_Text_PraetusDefeat:
+	.string "…I did not move.$"
+
+DelmarkMallRooftop_Text_PraetusPostBattle:
+	.string "I do not understand.\p"
+	.string "Stillness was the whole of it. The\n"
+	.string "whole of what we were promised.\p"
+	.string "And you simply… came up the stairs.$"
+
+DelmarkMallRooftop_Text_BrighamToPraetus:
+	.string "Get up, PRAETUS.\p"
+	.string "FERRUS in the market. IRRUS in a\n"
+	.string "stairwell. SAXUS in the mud.\p"
+	.string "And now you, on a roof, explaining\n"
+	.string "yourself to a child.\p"
+	.string "Four brothers. Four excuses.$"
+
+DelmarkMallRooftop_Text_BrighamToPlayer:
+	.string "You have the day. Take it.\p"
+	.string "We will be out of DELMARK by morning.\n"
+	.string "The doors open, the lights come back,\l"
+	.string "and everyone goes back to hurrying.\p"
+	.string "But understand what you actually won.\p"
+	.string "You won a building.\n"
+	.string "The CELEBI is ours. It was ours in the\l"
+	.string "marsh and it is ours tonight.$"
+
+DelmarkMallRooftop_Text_BrighamWhitecaps:
+	.string "If you want it back, you already know\n"
+	.string "where we are going.\p"
+	.string "North. Past the WHITECAPS, where the\n"
+	.string "real work is being done.\p"
+	.string "Come and find out what stillness is\n"
+	.string "actually for.$"
+
+DelmarkMallRooftop_Text_SilvioThanks:
+	.string "…it is quiet up here now.\p"
+	.string "Eleven years I have been mayor of this\n"
+	.string "city. I could not hold it for eleven\l"
+	.string "days.\p"
+	.string "You did in one afternoon what I could\n"
+	.string "not. I will not pretend that sits\l"
+	.string "easily.\p"
+	.string "But it is done, and you did it.\p"
+	.string "Come find me when you are ready. The\n"
+	.string "GYM has been closed since this began.\p"
+	.string "It opens tonight. Come and earn your\n"
+	.string "badge.$"

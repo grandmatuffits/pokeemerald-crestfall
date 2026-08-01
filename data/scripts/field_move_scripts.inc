@@ -226,7 +226,6 @@ EventScript_UseStrength::
 
 EventScript_ActivateStrength::
 	setflag FLAG_SYS_USE_STRENGTH
-	msgbox Text_MonUsedStrength, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -265,13 +264,11 @@ Text_StrengthActivated:
 
 EventScript_UseWaterfall::
 	lockall
-	checkfieldmove FIELD_MOVE_WATERFALL
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantWaterfall
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	setfieldeffectargument 0, VAR_RESULT
+	checkitem ITEM_HM_WATERFALL
+	goto_if_eq VAR_RESULT, FALSE, EventScript_EndWaterfall
 	msgbox Text_WantToWaterfall, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
-	msgbox Text_MonUsedWaterfall, MSGBOX_DEFAULT
+	setfieldeffectargument 0, 0
 	hidefollowernpc
 	dofieldeffect FLDEFF_USE_WATERFALL
 	callnative FollowerNPC_WarpSetEnd
@@ -300,17 +297,14 @@ Text_MonUsedWaterfall:
 
 EventScript_UseDive::
 	lockall
-	checkfieldmove FIELD_MOVE_DIVE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantDive
-	copyvar 0x8004 VAR_RESULT
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	setfieldeffectargument 0, VAR_RESULT
+	checkitem ITEM_HM_DIVE
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantDive
+	setfieldeffectargument 0, 0
 	setfieldeffectargument 1, 1
 	msgbox Text_WantToDive, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndDive
-	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
 	hidefollowernpc
-	setfieldeffectargument 0, VAR_0x8004
+	setfieldeffectargument 0, 0
 	setfieldeffectargument 1, 1
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndDive
@@ -327,14 +321,12 @@ EventScript_EndDive::
 
 EventScript_UseDiveUnderwater::
 	lockall
-	checkfieldmove FIELD_MOVE_DIVE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSurface
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	setfieldeffectargument 0, VAR_RESULT
+	checkitem ITEM_HM_DIVE
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantSurface
+	setfieldeffectargument 0, 0
 	setfieldeffectargument 1, 1
 	msgbox Text_WantToSurface, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_NoSurface
-	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
 	hidefollowernpc
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface

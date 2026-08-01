@@ -66,3 +66,59 @@ LilycoveCity_DepartmentStore_4F_Text_PokemonOnlyHaveFourMoves:
 	.string "I'd like to get all the different TMs,\n"
 	.string "but a POKéMON learns only four moves.$"
 
+
+DelmarkCityMall4F_EventScript_Thessa::
+	trainerbattle_single TRAINER_COVENANT_THESSA, DelmarkCityMall4F_Text_ThessaIntro, DelmarkCityMall4F_Text_ThessaDefeat
+	msgbox DelmarkCityMall4F_Text_ThessaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DelmarkCityMall4F_Text_ThessaIntro:
+	.string "Four of them. None of them strong.\p"
+	.string "I kept every one I was given.\n"
+	.string "I let nothing go. That is the whole\n"
+	.string "of the faith, really.$"
+
+DelmarkCityMall4F_Text_ThessaDefeat:
+	.string "I kept them too long.$"
+
+DelmarkCityMall4F_Text_ThessaPostBattle:
+	.string "You trade yours away. Grow them,\n"
+	.string "replace them, grow them again.\p"
+	.string "You call that care.$"
+
+
+DelmarkCityMall4F_EventScript_Grieg::
+	trainerbattle_single TRAINER_COVENANT_GRIEG, DelmarkCityMall4F_Text_GriegIntro, DelmarkCityMall4F_Text_GriegDefeat
+	msgbox DelmarkCityMall4F_Text_GriegPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DelmarkCityMall4F_Text_GriegIntro:
+	.string "Enough talking. Two floors above me\n"
+	.string "there are people who talk.\p"
+	.string "I am not one of them.$"
+
+DelmarkCityMall4F_Text_GriegDefeat:
+	.string "Quick. Fine.$"
+
+DelmarkCityMall4F_Text_GriegPostBattle:
+	.string "Go up. You will get your explanations.\n"
+	.string "You will not enjoy them.$"
+
+
+DelmarkCityMall4F_EventScript_Noor::
+	trainerbattle_single TRAINER_COVENANT_NOOR, DelmarkCityMall4F_Text_NoorIntro, DelmarkCityMall4F_Text_NoorDefeat
+	msgbox DelmarkCityMall4F_Text_NoorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DelmarkCityMall4F_Text_NoorIntro:
+	.string "You have climbed a long way to reach\n"
+	.string "someone who will not move.\p"
+	.string "Think about that as you keep climbing.$"
+
+DelmarkCityMall4F_Text_NoorDefeat:
+	.string "You are still climbing.$"
+
+DelmarkCityMall4F_Text_NoorPostBattle:
+	.string "BRIGHAM is up there as well. He does\n"
+	.string "the speaking for the Elders.\p"
+	.string "He is very good at it.$"

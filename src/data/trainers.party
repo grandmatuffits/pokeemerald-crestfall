@@ -17501,7 +17501,7 @@ Mienfoo
 Level: 16
 
 === TRAINER_COVENANT_GRUNT_1 ===
-Name: GRUNT
+Name: ACOLYTE
 Class: Covenant Grunt
 Pic: Aqua Grunt M
 Gender: Male
@@ -17514,7 +17514,7 @@ Pineco
 Level: 10
 
 === TRAINER_COVENANT_GRUNT_2 ===
-Name: GRUNT
+Name: ACOLYTE
 Class: Covenant Grunt
 Pic: Aqua Grunt F
 Gender: Male
@@ -18307,3 +18307,1540 @@ Level: 21
 
 Honedge @ None
 Level: 23
+
+=== TRAINER_RIVALCF_3 ===
+Name: RIVAL
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Items: Super Potion / Super Potion
+
+Murkrow
+Level: 24
+
+Munna
+Level: 25
+
+Mienfoo
+Level: 28
+
+=== TRAINER_ROUTE9_ATHLETE ===
+Name: Jordan
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Ninjask @ None
+Level: 24
+
+Staryu @ None
+Level: 25
+
+=== TRAINER_ROUTE_9_PICNICKER ===
+Name: Chelsea
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Togetic @ None
+Level: 26
+
+=== TRAINER_ROUTE_9_BIRDKEEPER ===
+Name: Adam
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Dartrix @ None
+Level: 24
+
+Scyther @ None
+Level: 25
+
+Gligar @ None
+Level: 25
+
+=== TRAINER_LEADER_FRIEDE ===
+Name: FRIEDE
+Class: Leader
+Pic: Leader Winona
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Sneasel @ Focus Sash
+Level: 29
+- Avalanche
+- Night Slash
+- Swords Dance
+- Ice Shard
+
+Cloyster @ Focus Sash
+Level: 30
+- Shell Smash
+- Icicle Spear
+- Rock Blast
+- Scald
+
+Froslass @ Focus Sash
+Level: 32
+- Shadow Ball
+- Ice Beam
+- Destiny Bond
+- Will-O-Wisp
+
+
+=== TRAINER_ROSEBANK_SALLY ===
+Name: SALLY
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Glaceon
+Level: 26
+
+=== TRAINER_ROSEBANK_BETH ===
+Name: BETH
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Swinub
+Level: 24
+
+Snorunt
+Level: 24
+
+=== TRAINER_ROSEBANK_GWEN ===
+Name: GWEN
+Class: Beauty
+Pic: Beauty Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Jynx
+Level: 27
+
+=== TRAINER_ROSEBANK_CORA ===
+Name: CORA
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Cubchoo
+Level: 25
+
+Smoochum
+Level: 25
+
+=== TRAINER_ROSEBANK_MABEL ===
+Name: MABEL
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Lapras
+Level: 27
+
+=== TRAINER_ROSEBANK_RUE ===
+Name: RUE
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Sneasel
+Level: 25
+
+Sneasel
+Level: 25
+
+=== TRAINER_ROSEBANK_JANNA ===
+Name: JANNA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Smoochum
+Level: 26
+
+Jynx
+Level: 26
+
+=== TRAINER_ENPALE_ROUTE_10_BECKA ===
+Name: BECKA
+Class: Triathlete
+Pic: Running Triathlete F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Voltorb @ None
+Level: 27
+
+=== TRAINER_ROUTE_10_JANICE ===
+Name: JANICE
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Leafeon @ None
+Level: 26
+
+Vaporeon @ None
+Level: 26
+
+=== TRAINER_ROUTE_10_RODNEY ===
+Name: RODNEY
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Metang @ Sitrus Berry
+Level: 28
+
+=== TRAINER_WALLAR_ACOLYTE_1 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Beedrill @ None
+Level: 25
+
+Grimer @ None
+Level: 25
+
+=== TRAINER_WALLAR_ACOLYTE_2 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Aron @ None
+Level: 26
+
+=== TRAINER_WALLAR_ACOLYTE_3 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Bewear @ None
+Level: 27
+
+=== TRAINER_WALLAR_ACOLYTE_4 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Snorunt @ None
+Level: 25
+
+Cubchoo @ None
+Level: 25
+
+Smoochum @ None
+Level: 25
+
+=== TRAINER_WALLAR_ACOLYTE_5 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Vileplume @ None
+Level: 27
+
+=== TRAINER_WALLAR_ACOLYTE_6 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Jolteon @ None
+Level: 26
+
+=== TRAINER_WALLAR_ACOLYTE_7 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Sandygast @ None
+Level: 25
+
+Haunter @ None
+Level: 25
+
+=== TRAINER_WALLAR_ACOLYTE_8 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Arcanine @ None
+Level: 30
+
+=== TRAINER_WALLAR_ACOLYTE_9 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: Yes
+AI: Check Bad Move
+
+Gyarados @ None
+Level: 30
+
+=== TRAINER_ELDER_SAXUS ===
+Name: SAXUS
+Class: Covenant Grunt
+Pic: Magma Grunt F
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Rhyhorn @ Sitrus Berry
+Level: 29
+
+Boldore @ Lum Berry
+Level: 30
+
+Archen @ Life Orb
+Level: 32
+
+=== TRAINER_WALLAR_BELL_TOWER_HEX_MANIAC ===
+Name: Claire
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Misdreavus @ None
+Level: 26
+
+Gastly @ None
+Level: 26
+
+=== TRAINER_WALLAR_BELL_TOWER_FAYE ===
+Name: FAYE
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Mismagius @ None
+Level: 28
+
+=== TRAINER_WALLAR_BELL_TOWER_PHOEBE ===
+Name: PHOEBE
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Litwick @ None
+Level: 27
+
+Haunter @ None
+Level: 27
+
+=== TRAINER_WALLAR_BELL_TOWER_MARCI ===
+Name: MARCI
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Mimikyu @ None
+Level: 29
+
+=== TRAINER_ENPALE_ROUTE_11_PICNICKER ===
+Name: ANNE
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Staravia @ None
+Level: 28
+
+=== TRAINER_ROUTE_11_TRIATHLETE ===
+Name: JANET
+Class: Triathlete
+Pic: Running Triathlete F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Wimpod @ None
+Level: 27
+
+Emolga @ None
+Level: 27
+
+=== TRAINER_LEADER_RANDALL ===
+Name: Randall
+Class: Leader
+Pic: Elite Four Bruno Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT / AI_FLAG_CHECK_VIABILITY
+
+Hawlucha @ Flying Gem
+Level: 32
+Ability: Unburden
+- Acrobatics
+- Drain Punch
+- Swords Dance
+- Roost
+
+Heracross @ Choice Band
+Level: 33
+- Drain Punch
+- Megahorn
+- Rock Slide
+- Earthquake
+
+Lucario @ Lum Berry
+Level: 34
+- Aura Sphere
+- Bullet Punch
+- Nasty Plot
+- Extreme Speed
+
+Gallade @ Life Orb
+Level: 36
+- Drain Punch
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
+
+=== TRAINER_VALERYTOWN_BLACKBELT_1 ===
+Name: Cad
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Mienfoo
+Level: 26
+
+=== TRAINER_VALERYTOWN_HIKER ===
+Name: Dov
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Machop
+Level: 26
+
+=== TRAINER_VALERYTOWN_BLACKBELT_2 ===
+Name: Rell
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Croagunk
+Level: 27
+
+=== TRAINER_VALERYTOWN_GUITARIST ===
+Name: Sy
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Male
+Double Battle: No
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Riolu
+Level: 27
+
+=== TRAINER_VALERYTOWN_EXPERT ===
+Name: Marn
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Meditite
+Level: 28
+
+Scraggy
+Level: 28
+
+=== TRAINER_VALERYTOWN_BLACKBELT_3 ===
+Name: Osk
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Machoke
+Level: 29
+
+=== TRAINER_VALERYTOWN_ROCKER ===
+Name: Vex
+Class: Rocker
+Pic: Guitarist
+Gender: Male
+Music: Male
+Double Battle: No
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Grapploct
+Level: 30
+
+=== TRAINER_VALERYTOWN_BLACKBELT_4 ===
+Name: Grull
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Machamp
+Level: 30
+
+=== TRAINER_ROUTE_12_BUGCATCHER ===
+Name: Gideon
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Yanmega
+Level: 29
+
+Whirlipede
+Level: 29
+
+=== TRAINER_ROUTE_12_COOLTRAINER ===
+Name: Rosa
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Braixen @ None
+Level: 32
+
+=== TRAINER_ROUTE_12_NINJABOY ===
+Name: Troy
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Ninjask @ None
+Level: 30
+
+Sneasel @ None
+Level: 30
+
+=== TRAINER_ROUTE_12_CAMPER ===
+Name: Jay
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Quagsire @ None
+Level: 31
+
+=== TRAINER_COVENANT_MARLO ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Furret @ None
+Level: 28
+
+=== TRAINER_COVENANT_PIA ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Ducklett @ None
+Level: 28
+
+Beedrill @ None
+Level: 28
+
+=== TRAINER_COVENANT_CORVIN ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Tentacool @ None
+Level: 29
+
+Staravia @ None
+Level: 28
+
+=== TRAINER_COVENANT_ESTELA ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Togetic @ None
+Level: 28
+
+Pikachu @ None
+Level: 28
+
+=== TRAINER_COVENANT_HOBB ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Magneton @ None
+Level: 30
+
+=== TRAINER_COVENANT_VESNA ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Bellossom @ None
+Level: 29
+
+=== TRAINER_COVENANT_ODRIC ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Dratini @ None
+Level: 28
+
+Swinub @ None
+Level: 28
+
+=== TRAINER_COVENANT_THESSA ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Murkrow @ None
+Level: 27
+
+Meditite @ None
+Level: 27
+
+Marill @ None
+Level: 27
+
+Mareanie @ None
+Level: 27
+
+=== TRAINER_COVENANT_GRIEG ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Scyther @ None
+Level: 29
+
+=== TRAINER_COVENANT_NOOR ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Trapinch @ None
+Level: 28
+
+Roselia @ None
+Level: 28
+
+=== TRAINER_COVENANT_ABBAN ===
+Name: Abban
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Dragonair @ None
+Level: 30
+
+=== TRAINER_COVENANT_SERAI ===
+Name: Serai
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Jynx @ None
+Level: 29
+
+Bewear @ None
+Level: 29
+
+=== TRAINER_COVENANT_CASTOR ===
+Name: Castor
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Lycanroc @ None
+Level: 32
+
+=== TRAINER_RIVALCF_4 ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Honchkrow @ None
+Level: 34
+
+Musharna @ None
+Level: 35
+
+Shuppet @ None
+Level: 36
+
+Mienfoo @ None
+Level: 38
+
+=== TRAINER_ELDER_PRAETUS ===
+Name: Praetus
+Class: Covenant Elder
+Pic: Champion Wallace
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ferroseed @ None
+Level: 36
+
+Durant @ None
+Level: 36
+
+Magneton @ None
+Level: 38
+
+Bastiodon @ None
+Level: 40
+
+=== TRAINER_LEADER_SILVIO ===
+Name: Silvio
+Class: Leader
+Pic: Leader Koga Frlg
+Gender: Male
+Music: Male 
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Skarmory @ Rocky Helmet
+Level: 38
+-Roost
+-Spikes
+-Whirlwind
+-Toxic
+
+Bisharp @ Life Orb
+Level: 38
+-Swords Dance
+-Knock Off
+-Iron Head
+-Sucker Punch
+
+Excadrill @ Leftovers
+Level: 40
+-Swords Dance
+-Earthquake
+-Iron Head
+-Rock Slide
+
+Aegislash @ Leftovers
+Level: 42
+-King's Shield
+-Toxic
+-Gyro Ball
+-Shadow Ball
+
+=== TRAINER_DELMARK_GYM_1 ===
+Name: Eugene
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Metang @ None
+Level: 31
+
+Lairon @ None
+Level: 32
+
+=== TRAINER_DELMARK_GYM_2 ===
+Name: Leonard
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Magneton @ None
+Level: 30
+
+Honedge @ None
+Level: 32
+
+=== TRAINER_DELMARK_GYM_3 ===
+Name: Reid
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Doublade @ None
+Level: 35
+
+=== TRAINER_COVENANT_WC_1 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Clobbopus @ None
+Level: 32
+
+Prinplup @ None
+Level: 32
+
+=== TRAINER_COVENANT_WC_2 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Voltorb @ None
+Level: 33
+
+=== TRAINER_COVENANT_WC_3 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Swinub @ None
+Level: 31
+
+Carbink @ None
+Level: 32
+
+=== TRAINER_COVENANT_WC_4 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Gligar @ None
+Level: 34
+
+=== TRAINER_COVENANT_WC_5 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Kirlia @ None
+Level: 32
+
+Munna @ None
+Level: 32
+
+=== TRAINER_COVENANT_WC_6 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Sableye @ None
+Level: 35
+
+=== TRAINER_COVENANT_WC_7 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Whirlipede @ None
+Level: 33
+
+Sandygast @ None
+Level: 33
+
+=== TRAINER_COVENANT_WC_8 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Gengar @ None
+Level: 36
+
+=== TRAINER_ELDER_FERRUS_2 ===
+Name: Ferrus
+Class: Covenant Elder
+Pic: Ferrus
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ferroseed @ None
+Level: 38
+
+Amoonguss @ None
+Level: 39
+
+Breloom @ None
+Level: 40
+
+Cradily @ None
+Level: 42
+
+=== TRAINER_ELDER_SAXUS_2 ===
+Name: Saxus
+Class: Covenant Elder
+Pic: Magma Grunt F
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Rhyhorn @ None
+Level: 38
+
+Gigalith @ None
+Level: 39
+
+Crustle @ None
+Level: 40
+
+Archeops @ None
+Level: 42
+
+=== TRAINER_ROUTE13_SWIMMERF_1 ===
+Name: Mary
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Staryu @ None
+Level: 34
+
+Shellder @ None
+Level: 34
+
+=== TRAINER_ROUTE13_SWIMMERM_2 ===
+Name: Todd
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Azumarill @ None
+Level: 36
+
+=== TRAINER_ROUTE13_SWIMMERF_3 ===
+Name: Joan
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Horsea @ None
+Level: 33
+
+Horsea @ None
+Level: 33
+
+Seadra @ None
+Level: 34
+
+=== TRAINER_ROUTE13_SWIMMERM_4 ===
+Name: Paul
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Carvanha @ None
+Level: 34
+
+Sharpedo @ None
+Level: 34
+
+=== TRAINER_ROUTE13_SWIMMERF_5 ===
+Name: Fran
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Tentacruel @ None
+Level: 37
+
+=== TRAINER_ROUTE13_SWIMMERM_6 ===
+Name: Chet
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Vaporeon @ None
+Level: 36
+
+=== TRAINER_ROUTE13_SAILOR ===
+Name: Buck
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Lapras @ None
+Level: 37
+
+=== TRAINER_ROUTE13_FISHERMAN ===
+Name: Howard
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Magikarp @ None
+Level: 16
+
+Gyarados @ None
+Level: 26
+
+Gyarados @ None
+Level: 36
+
+=== TRAINER_GRANT_SWIMMERF_1 ===
+Name: Issa
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Azumarill @ None
+Level: 37
+
+Vaporeon @ None
+Level: 37
+
+=== TRAINER_GRANT_SWIMMERM_1 ===
+Name: Tom
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Wailmer @ None
+Level: 38
+
+=== TRAINER_GRANT_FISHERMAN ===
+Name: Ralph
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Gyarados @ None
+Level: 36
+
+Whiscash @ None
+Level: 38
+
+=== TRAINER_GRANT_ACOLYTE_1 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Marill @ None
+Level: 36
+
+Roselia @ None
+Level: 37
+
+=== TRAINER_GRANT_ACOLYTE_2 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Staravia @ None
+Level: 37
+
+Piloswine @ None
+Level: 38
+
+
+=== TRAINER_GRANT_ACOLYTE_3 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Kirlia @ None
+Level: 37
+
+Swoobat @ None
+Level: 38
+
+=== TRAINER_GRANT_ACOLYTE_4 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Pikachu @ None
+Level: 38
+
+=== TRAINER_GRANT_ACOLYTE_5 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Clefairy @ None
+Level: 37
+
+Whimsicott @ None
+Level: 38
+
+=== TRAINER_GRANT_SWIMMERM_2 ===
+Name: Chris
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Tentacruel @ None
+Level: 38
+
+=== TRAINER_GRANT_HIKER_1 ===
+Name: Dudley
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Graveler @ None
+Level: 37
+
+Lairon @ None
+Level: 38
+
+
+=== TRAINER_GRANT_ACOLYTE_6 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Furret @ None
+Level: 38
+
+Beartic @ None
+Level: 39
+
+=== TRAINER_GRANT_ACOLYTE_7 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Togetic @ None
+Level: 38
+
+Slurpuff @ None
+Level: 38
+
+=== TRAINER_GRANT_ACOLYTE_8 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Claydol @ None
+Level: 39
+
+=== TRAINER_GRANT_ACOLYTE_9 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Meowstic @ None
+Level: 38
+
+Ninetales @ None
+Level: 39
+
+=== TRAINER_GRANT_ACOLYTE_10 ===
+Name: ACOLYTE
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ampharos @ None
+Level: 38
+
+Banette @ None
+Level: 39
+
+
+=== TRAINER_GRANT_SWIMMERF_2 ===
+Name: Farrah
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Milotic @ None
+Level: 39
+
+=== TRAINER_GRANT_SWIMMERM_3 ===
+Name: Gavin
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Kingler @ None
+Level: 38
+
+Lanturn @ None
+Level: 39
+
+=== TRAINER_GRANT_HIKER_2 ===
+Name: Fred
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Onix @ None
+Level: 38
+
+Golem @ None
+Level: 39
+
+=== TRAINER_GRANT_HIKER_3 ===
+Name: Bill
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Mamoswine @ None
+Level: 39
+
+=== TRAINER_GRANT_COOLTRAINER ===
+Name: Alex
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Gardevoir @ None
+Level: 39
+
+Bewear @ None
+Level: 39
+
+Milotic @ None
+Level: 40
+
+
+=== TRAINER_ELDER_IRRUS_2 ===
+Name: Irrus
+Class: Covenant Elder
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Jellicent @ None
+Level: 40
+
+Tentacruel @ None
+Level: 41
+
+Sharpedo @ None
+Level: 42
+
+Carracosta @ None
+Level: 44
+
+=== TRAINER_ELDER_PRAETUS_2 ===
+Name: Praetus
+Class: Covenant Elder
+Pic: Champion Wallace
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ferrothorn @ None
+Level: 40
+
+Durant @ None
+Level: 41
+
+Magnezone @ None
+Level: 42
+
+Bastiodon @ None
+Level: 44

@@ -22,6 +22,16 @@
       "map": "MAP_DELMARK_CITY_EAST",
       "offset": 65,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_12",
+      "offset": 18,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_DELMARK_CITY_SOUTH_UNDERWATER",
+      "offset": 0,
+      "direction": "dive"
     }
   ],
   "object_events": [
@@ -36,7 +46,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_BADGE05_GET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",

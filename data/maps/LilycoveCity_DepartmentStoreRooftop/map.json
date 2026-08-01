@@ -15,56 +15,46 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 4,
+      "local_id": "LOCALID_DELMARK_PRAETUS",
+      "graphics_id": "OBJ_EVENT_GFX_WALLACE",
+      "x": 9,
       "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LilycoveCity_DepartmentStoreRooftop_EventScript_Man",
-      "flag": "0"
+      "script": "NULL",
+      "flag": "FLAG_HIDE_DELMARK_ROOFTOP_PRAETUS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 7,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
-      "movement_range_x": 1,
+      "local_id": "LOCALID_DELMARK_BRIGHAM",
+      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "x": 13,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LilycoveCity_DepartmentStoreRooftop_EventScript_ThirstyMan",
-      "flag": "0"
+      "script": "NULL",
+      "flag": "FLAG_HIDE_DELMARK_ROOFTOP_BRIGHAM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN",
-      "x": 6,
-      "y": 1,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman",
-      "flag": "FLAG_HIDE_LILYCOVE_DEPARTMENT_STORE_ROOFTOP_SALE_WOMAN"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
-      "x": 15,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
+      "local_id": "LOCALID_DELMARK_SILVIO_ROOF",
+      "graphics_id": "OBJ_EVENT_GFX_MR_FUJI",
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LilycoveCity_DepartmentStoreRooftop_EventScript_SubstituteTutor",
-      "flag": "0"
+      "script": "NULL",
+      "flag": "FLAG_HIDE_DELMARK_ROOFTOP_SILVIO"
     }
   ],
   "warp_events": [
@@ -73,7 +63,7 @@
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_5F",
-      "dest_warp_id": "2"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

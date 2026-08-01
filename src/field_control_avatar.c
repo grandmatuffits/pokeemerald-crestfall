@@ -645,7 +645,6 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
         return EventScript_UseSurf;
 
     if (MetatileBehavior_IsWaterfall(metatileBehavior) == TRUE
-     && CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_WATERFALL)
      )
     {
         if (IsFieldMoveUnlocked(FIELD_MOVE_WATERFALL) && IsPlayerSurfingNorth() == TRUE)
@@ -658,9 +657,6 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
 
 static bool32 TrySetupDiveDownScript(void)
 {
-    if (!CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_DIVE))
-        return FALSE;
-
     if (IsFieldMoveUnlocked(FIELD_MOVE_DIVE) && TrySetDiveWarp() == 2)
     {
         ScriptContext_SetupScript(EventScript_UseDive);
@@ -671,8 +667,6 @@ static bool32 TrySetupDiveDownScript(void)
 
 static bool32 TrySetupDiveEmergeScript(void)
 {
-    if (!CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_DIVE))
-        return FALSE;
 
     if (IsFieldMoveUnlocked(FIELD_MOVE_DIVE) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
     {

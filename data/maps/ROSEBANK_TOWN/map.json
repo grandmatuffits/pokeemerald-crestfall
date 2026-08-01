@@ -1,0 +1,318 @@
+{
+  "id": "MAP_ROSEBANK_TOWN",
+  "name": "ROSEBANK_TOWN",
+  "layout": "LAYOUT_ROSEBANK_TOWN",
+  "music": "MUS_ENPALE_ROSEBANK",
+  "region_map_section": "MAPSEC_DEWFORD_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ENPALE_ROUTE_9",
+      "offset": 14,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_10",
+      "offset": -20,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_13",
+      "offset": 22,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 29,
+      "y": 46,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_DrinkVendor",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 12,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_Officer",
+      "flag": "FLAG_BADGE04_GET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 13,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_Officer",
+      "flag": "FLAG_BADGE04_GET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 14,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_Officer",
+      "flag": "FLAG_BADGE04_GET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
+      "x": 36,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+      "movement_range_x": 8,
+      "movement_range_y": 8,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_TriathleteM",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 30,
+      "y": 51,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_FatGuy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 49,
+      "y": 39,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_Twin1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 50,
+      "y": 39,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_Twin2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "x": 50,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_OldMan",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_LAND",
+      "x": 43,
+      "y": 52,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_SwimmerFLand",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_3",
+      "x": 37,
+      "y": 51,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_LittleBoy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 50,
+      "y": 48,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_Fisherman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
+      "x": 31,
+      "y": 55,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_SwimmerF",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",
+      "x": 47,
+      "y": 47,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_TriathleteF",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "x": 55,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_SwimmerM",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TUBER_M_SWIMMING",
+      "x": 40,
+      "y": 56,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_TuberM",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TUBER_M_WATER",
+      "x": 47,
+      "y": 55,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ROSEBANK_TOWN_EventScript_TuberF",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 31,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROSEBANK_TOWN_MOVE_REMINDER_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 33,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_ROSEBANK_TOWN_MINER_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 48,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_ROSEBANK_TOWN_TRADE_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_ROSEBANK_TOWN_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_FORTREE_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_FORTREE_CITY_MART",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 27,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ROSEBANK_TOWN_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 41,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ROSEBANK_TOWN_EventScript_GymSign"
+    }
+  ]
+}

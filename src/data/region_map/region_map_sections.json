@@ -18,7 +18,7 @@
     },
     {
       "id": "MAPSEC_DEWFORD_TOWN",
-      "name": "DEWFORD TOWN",
+      "name": "Rosebank Town",
       "x": 2,
       "y": 14,
       "width": 1,
@@ -26,7 +26,7 @@
     },
     {
       "id": "MAPSEC_LAVARIDGE_TOWN",
-      "name": "LAVARIDGE TOWN",
+      "name": "Valerytown",
       "x": 5,
       "y": 3,
       "width": 1,
@@ -570,7 +570,7 @@
     },
     {
       "id": "MAPSEC_MIRAGE_ISLAND",
-      "name": "MIRAGE ISLAND",
+      "name": "Grant Island",
       "x": 17,
       "y": 10,
       "width": 1,
@@ -869,7 +869,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_10",
-      "name": "ROUTE 10",
+      "name": "Route 10",
       "x": 18,
       "y": 3,
       "width": 1,
@@ -877,7 +877,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_11",
-      "name": "ROUTE 11",
+      "name": "Route 11",
       "x": 15,
       "y": 9,
       "width": 3,
@@ -885,7 +885,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_12",
-      "name": "ROUTE 12",
+      "name": "Route 12",
       "x": 18,
       "y": 7,
       "width": 1,
@@ -893,7 +893,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_13",
-      "name": "ROUTE 13",
+      "name": "Route 13",
       "x": 16,
       "y": 11,
       "width": 2,
@@ -1365,7 +1365,7 @@
     },
     {
       "id": "MAPSEC_BERRY_FOREST",
-      "name": "BERRY FOREST",
+      "name": "Wallar Marshlands",
       "x": 14,
       "y": 12,
       "width": 1,

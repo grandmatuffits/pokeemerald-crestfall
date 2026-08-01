@@ -56,3 +56,11 @@ MoveRelearner_Text_WhichXmoveShouldTeach:
 MoveRelearner_Text_ThankYouComeAgain:
 	.string "Thank you for using our services.\n"
 	.string "Please come again!$"
+
+MoveRelearner_Text_HandedOverHeartScale:
+	.string "{PLAYER} handed over one HEART\n"
+	.string "SCALE in exchange.$"
+
+MoveRelearner_Text_NeedHeartScale:
+	.string "Ah, I'll need a HEART SCALE before\n"
+	.string "I can remind a POKéMON of a move.$"	

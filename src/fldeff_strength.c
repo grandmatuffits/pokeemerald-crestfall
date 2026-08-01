@@ -34,12 +34,19 @@ static void FieldCallback_Strength(void)
     ScriptContext_SetupScript(EventScript_UseStrength);
 }
 
+static void Task_StrengthNoBanner(u8 taskId)
+{
+    // wait one frame so the script's waitstate is fully armed
+    if (gTasks[taskId].data[0]++ < 1)
+        return;
+    StartStrengthFieldEffect();
+    DestroyTask(taskId);
+}
+
 bool8 FldEff_UseStrength(void)
 {
-    u8 taskId = CreateFieldMoveTask();
-    gTasks[taskId].data[8] = (u32)StartStrengthFieldEffect >> 16;
-    gTasks[taskId].data[9] = (u32)StartStrengthFieldEffect;
-    GetMonNickname(&gParties[B_TRAINER_PLAYER][gFieldEffectArguments[0]], gStringVar1);
+    u8 taskId = CreateTask(Task_StrengthNoBanner, 8);
+    gTasks[taskId].data[0] = 0;
     return FALSE;
 }
 

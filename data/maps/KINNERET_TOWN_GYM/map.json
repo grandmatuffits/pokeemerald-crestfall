@@ -2,7 +2,7 @@
   "id": "MAP_KINNERET_TOWN_GYM",
   "name": "KINNERET_TOWN_GYM",
   "layout": "LAYOUT_KINNERET_TOWN_GYM",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_KINNERET",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_COPPERGATE_CITY_TM_HOUSE",
   "name": "COPPERGATE_CITY_TM_HOUSE",
   "layout": "LAYOUT_COPPERGATE_CITY_TM_HOUSE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_LAB",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

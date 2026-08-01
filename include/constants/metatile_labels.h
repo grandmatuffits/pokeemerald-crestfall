@@ -956,9 +956,11 @@
 #define METATILE_Sootopolis_RoughWater       0x290
 
 // gTileset_SootopolisGym
-#define METATILE_SootopolisGym_Ice_Broken   0x206
-#define METATILE_SootopolisGym_Ice_Cracked  0x20E
-#define METATILE_SootopolisGym_Stairs       0x207
+#define METATILE_SootopolisGym_Gate_Closed_Bottom  0x253
+#define METATILE_SootopolisGym_Gate_Closed_Top     0x24B
+#define METATILE_SootopolisGym_Ice_Broken          0x206
+#define METATILE_SootopolisGym_Ice_Cracked         0x20E
+#define METATILE_SootopolisGym_Stairs              0x207
 
 // gTileset_TrainerHill
 #define METATILE_TrainerHill_CounterDoor          0x334

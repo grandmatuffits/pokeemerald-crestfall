@@ -2072,7 +2072,7 @@ static bool8 WaterfallFieldEffect_Init(struct Task *task, struct ObjectEvent *ob
 {
     LockPlayerFieldControls();
     gPlayerAvatar.preventStep = TRUE;
-    task->tState++;
+    task->tState = 3;
     return FALSE;
 }
 
@@ -2146,10 +2146,9 @@ void Task_UseDive(u8 taskId)
 static bool8 DiveFieldEffect_Init(struct Task *task)
 {
     gPlayerAvatar.preventStep = TRUE;
-    task->data[0]++;
+    task->data[0] = 2;
     return FALSE;
 }
-
 static bool8 DiveFieldEffect_ShowMon(struct Task *task)
 {
     LockPlayerFieldControls();

@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_3F_EventScript_TriathleteM",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_3F_EventScript_PokefanM",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_3F_EventScript_Woman",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
@@ -64,7 +64,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_3F_EventScript_ClerkLeft",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
@@ -77,12 +77,38 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_MALL_CIVILIANS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 9,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "DelmarkCityMall3F_EventScript_Vesna",
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "DelmarkCityMall3F_EventScript_Odric",
+      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
     }
   ],
   "warp_events": [
     {
-      "x": 13,
+      "x": 2,
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_2F",
@@ -93,13 +119,6 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_4F",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 2,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ELEVATOR",
       "dest_warp_id": "0"
     }
   ],

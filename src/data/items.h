@@ -12802,14 +12802,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_STEEL_WING] =
+    [ITEM_TM_IRON_HEAD] =
     {
-        .name = ITEM_NAME("TM47"),
+        .name = ITEM_NAME("TM45"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Spreads hard-\n"
-            "edged wings and\n"
-            "slams into the foe."),
+            "Slams the foe with\n"
+            "a hard head. May\n"
+            "cause flinching."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13130,7 +13130,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM74"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "The user waits, then hits\n"
+            "back double against the\n"
+            "foe that struck it."), // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13423,8 +13426,8 @@ const struct ItemInfo gItemsInfo[] =
             "trees anytime."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
     [ITEM_HM_FLY] =
@@ -13437,8 +13440,8 @@ const struct ItemInfo gItemsInfo[] =
             "attacks next turn."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
     [ITEM_HM_SURF] =
@@ -13451,8 +13454,8 @@ const struct ItemInfo gItemsInfo[] =
             "it down on the foe."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
     [ITEM_HM_STRENGTH] =
@@ -13465,8 +13468,8 @@ const struct ItemInfo gItemsInfo[] =
             "the foe."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
     [ITEM_HM_FLASH] =
@@ -13479,7 +13482,7 @@ const struct ItemInfo gItemsInfo[] =
             "reduces accuracy."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_FIELD,
+        .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Flash,
     },
 
@@ -13493,8 +13496,8 @@ const struct ItemInfo gItemsInfo[] =
             "may lower Defense."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
     [ITEM_HM_WATERFALL] =
@@ -13507,8 +13510,8 @@ const struct ItemInfo gItemsInfo[] =
             "to climb waterfalls."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
     [ITEM_HM_DIVE] =
@@ -13521,8 +13524,8 @@ const struct ItemInfo gItemsInfo[] =
             "attacks next turn."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
 

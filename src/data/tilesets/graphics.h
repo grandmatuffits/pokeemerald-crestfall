@@ -74,7 +74,27 @@ const u16 gTilesetPalettes_DelmarkSouth[][16] =
     INCGFX_U16("data/tilesets/secondary/delmark_south/palettes/12.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_DelmarkSouth[] = INCGFX_U32("data/tilesets/secondary/delmark_south/tiles.png", ".4bpp.fastSmol", "-num_tiles 272 -Wnum_tiles");
+const u32 gTilesetTiles_DelmarkSouth[] = INCGFX_U32("data/tilesets/secondary/delmark_south/tiles.png", ".4bpp.fastSmol", "-num_tiles 208 -Wnum_tiles");
+
+const u16 gTilesetPalettes_WallarMarshlands[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/wallar_marshlands/palettes/12.pal", ".gbapal"),
+    // one line per .pal, exactly matching the ls output
+};
+
+const u32 gTilesetTiles_WallarMarshlands[] = INCGFX_U32("data/tilesets/secondary/wallar_marshlands/tiles.png", ".4bpp.fastSmol", "-num_tiles 192 -Wnum_tiles");
 
 const u32 gTilesetTiles_Rustboro[] = INCGFX_U32("data/tilesets/secondary/rustboro/tiles.png", ".4bpp.fastSmol", "-num_tiles 498 -Wnum_tiles");
 

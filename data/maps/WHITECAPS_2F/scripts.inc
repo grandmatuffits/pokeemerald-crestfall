@@ -1,5 +1,21 @@
 WHITECAPS_2F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Whitecaps_2F_OnTransition
 	.byte 0
+
+Whitecaps_2F_OnTransition::
+	goto_if_set FLAG_BADGE06_GET, Whitecaps_2F_CheckAcolytes
+	setflag FLAG_HIDE_WHITECAPS_ACOLYTES
+	end
+
+Whitecaps_2F_CheckAcolytes::
+	compare VAR_WHITECAPS_STATE, 2
+	goto_if_ge Whitecaps_2F_HideAcolytes
+	clearflag FLAG_HIDE_WHITECAPS_ACOLYTES
+	end
+
+Whitecaps_2F_HideAcolytes::
+	setflag FLAG_HIDE_WHITECAPS_ACOLYTES
+	end
 
 WHITECAPS_2F_EventScript_Hercule::
 	trainerbattle_single TRAINER_WHITECAPS_BLACKBELT_HERCULE, WHITECAPS_2F_Text_HerculeIntro, WHITECAPS_2F_Text_HerculeDefeat
@@ -44,3 +60,20 @@ WHITECAPS_2F_Text_BradDefeat:
 	.string "That wasn't funny!$"
 WHITECAPS_2F_Text_BradPost:
 	.string "Don't laugh at me!$"
+
+Whitecaps_EventScript_Acolyte4::
+	trainerbattle_single TRAINER_COVENANT_WC_4, Whitecaps_Text_Acolyte4Intro, Whitecaps_Text_Acolyte4Defeat
+	msgbox Whitecaps_Text_Acolyte4PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Whitecaps_Text_Acolyte4Intro:
+	.string "Out here on the rock face there is\n"
+	.string "nowhere to run.\p"
+	.string "Good. I never liked chasing.$"
+
+Whitecaps_Text_Acolyte4Defeat:
+	.string "Down the mountain it goes.$"
+
+Whitecaps_Text_Acolyte4PostBattle:
+	.string "The ELDERS came back for this one.\n"
+	.string "Both of them. Think on that.$"

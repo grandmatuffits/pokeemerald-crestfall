@@ -1280,7 +1280,39 @@
 #define FLAG_DELMARK_SOUTH_SITRUS_GIFT                    0x4D4
 #define FLAG_DELMARK_SOUTH_CLEANSE_GIFT                   0x4D5
 #define FLAG_DELMARK_SOUTH_TRADE_DONE                     0x4D6
-
+#define FLAG_DELMARK_EAST_RIVAL_DONE       0x4D7
+#define FLAG_HIDE_DELMARK_EAST_RIVAL       0x4D8
+#define FLAG_ITEM_ENPALE_ROUTE_9_ULTRA_BALL               0x4C0 
+#define FLAG_ROSEBANK_PICKAXE_RECEIVED                    0x4D9
+#define FLAG_ROSEBANK_GIBLE_TRADE_DONE                    0x4C1
+#define FLAG_DEFEATED_ROSEBANK_GYM                        0x4DA
+#define FLAG_ROSEBANK_TM74_RECEIVED                       0x4DB
+#define FLAG_WALLAR_SAXUS_DONE                            0x4DE
+#define FLAG_HIDE_WALLAR_SILVIO                           0x4DF
+#define FLAG_ITEM_WALLAR_BELL_TOWER_MAX_REVIVE            0x4E0
+#define FLAG_ITEM_WALLAR_BELL_TOWER_DUSK_STONE            0x4E1
+#define FLAG_VALERYTOWN_DRATINI_TRADE                     0x4E2  
+#define FLAG_VALERYTOWN_FLY_RECEIVED                      0x4E3
+#define FLAG_HIDE_DELMARK_SILVIO_DOOR                     0x4E4  // Silvio's object; set = hidden
+#define FLAG_HIDE_DELMARK_EAST_OCCUPIERS                  0x4E5  // street acolytes; starts SET
+#define FLAG_HIDE_DELMARK_MALL_CIVILIANS                  0x4E6  // normal shoppers; starts CLEAR
+#define FLAG_HIDE_DELMARK_MALL_COVENANT                   0x4E7  // mall acolytes; starts SET
+#define FLAG_HIDE_DELMARK_MALL_RIVAL                      0x4E8
+#define FLAG_HIDE_DELMARK_ROOFTOP_PRAETUS                 0x4E9 
+#define FLAG_HIDE_DELMARK_ROOFTOP_SILVIO                  0x4EA
+#define FLAG_HIDE_DELMARK_ROOFTOP_BRIGHAM                 0x4EB
+#define FLAG_HIDE_WHITECAPS_FERRUS                        0x4EC
+#define	FLAG_HIDE_WHITECAPS_SAXUS                         0x4ED
+#define	FLAG_HIDE_WHITECAPS_BRIGHAM                       0x4EE
+#define FLAG_HIDE_WHITECAPS_ACOLYTES                      0x4EF
+#define FLAG_HIDE_WHITECAPS_SILVIO                        0x4F9
+#define FLAG_HIDE_GRANT_IRRUS                             0x4F1  // forced SET until scene
+#define FLAG_HIDE_GRANT_PRAETUS                           0x4F2  // forced SET until scene
+#define FLAG_HIDE_GRANT_BRIGHAM                           0x4F3  // forced SET until scene
+#define FLAG_HIDE_GRANT_SILVIO                            0x4F4  // forced SET; added mid-scene
+#define FLAG_HIDE_GRANT_ACOLYTES                          0x4F5  // all Covenant acolytes; badge-6 gated, hide post-scene
+#define FLAG_HIDE_GRANT_BLOCKER                           0x4F6  // non-battle blocker on the lower path
+#define FLAG_CAUGHT_REGIROCK                              0x4F7
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag

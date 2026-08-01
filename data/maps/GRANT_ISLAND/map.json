@@ -1,0 +1,167 @@
+{
+  "id": "MAP_GRANT_ISLAND",
+  "name": "GRANT_ISLAND",
+  "layout": "LAYOUT_GRANT_ISLAND",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_MIRAGE_ISLAND",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_OCEAN_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ENPALE_ROUTE_13",
+      "offset": -20,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
+      "x": 31,
+      "y": 71,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 5,
+      "movement_range_y": 5,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "GrantIsland_EventScript_SwimmerF1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 42,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GrantIsland_EventScript_Fisherman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "x": 58,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 5,
+      "movement_range_y": 5,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "GrantIsland_EventScript_SwimmerM1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 22,
+      "y": 61,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "GrantIsland_EventScript_Acolyte1",
+      "flag": "FLAG_HIDE_GRANT_ACOLYTES"
+    },
+    {
+      "local_id": "LOCALID_GRANT_IRRUS",
+      "graphics_id": "OBJ_EVENT_GFX_MAXIE",
+      "x": 28,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_GRANT_IRRUS"
+    },
+    {
+      "local_id": "LOCALID_GRANT_PRAETUS",
+      "graphics_id": "OBJ_EVENT_GFX_WALLACE",
+      "x": 29,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_GRANT_PRAETUS"
+    },
+    {
+      "local_id": "LOCALID_GRANT_BRIGHAM",
+      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "x": 28,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_GRANT_BRIGHAM"
+    },
+    {
+      "local_id": "LOCALID_GRANT_SILVIO",
+      "graphics_id": "OBJ_EVENT_GFX_MR_FUJI",
+      "x": 26,
+      "y": 42,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_GRANT_SILVIO"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 60,
+      "elevation": 0,
+      "dest_map": "MAP_GRANT_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 42,
+      "elevation": 0,
+      "dest_map": "MAP_GRANT_CAVE_2F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 51,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_GRANT_CAVE",
+      "dest_warp_id": "4"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_GRANT_STATE",
+      "var_value": "0",
+      "script": "GrantPeak_EventScript_Scene"
+    }
+  ],
+  "bg_events": []
+}

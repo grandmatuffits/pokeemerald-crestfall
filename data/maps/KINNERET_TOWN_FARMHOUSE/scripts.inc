@@ -5,7 +5,7 @@ KINNERET_TOWN_FARMHOUSE_EventScript_TradeCalvin::
 	lock
 	faceplayer
 	goto_if_set FLAG_UNUSED_0x02A, KINNERET_TOWN_FARMHOUSE_EventScript_TradeCompleted
-	ingame_trade INGAME_TRADE_SNORUNT, KINNERET_TOWN_FARMHOUSE_Text_TradeOffer, KINNERET_TOWN_FARMHOUSE_EventScript_DeclineTrade, KINNERET_TOWN_FARMHOUSE_EventScript_NotRequestedMon, KINNERET_TOWN_FARMHOUSE_Text_TakeCare
+	ingame_trade INGAME_TRADE_ESPURR, KINNERET_TOWN_FARMHOUSE_Text_TradeOffer, KINNERET_TOWN_FARMHOUSE_EventScript_DeclineTrade, KINNERET_TOWN_FARMHOUSE_EventScript_NotRequestedMon, KINNERET_TOWN_FARMHOUSE_Text_TakeCare
 	setflag FLAG_UNUSED_0x02A
 	release
 	end
@@ -31,14 +31,14 @@ KINNERET_TOWN_FARMHOUSE_EventScript_TradeCompleted::
 
 KINNERET_TOWN_FARMHOUSE_Text_TradeOffer:
 	.string "Hey there! I'm Calvin!\n"
-	.string "I've got a Snorunt I'd love\l"
+	.string "I've got a Espurr I'd love\l"
 	.string "to trade!\p"
 	.string "I'm looking for a Shroomish.\n"
 	.string "Do we have a deal?$"
 
 KINNERET_TOWN_FARMHOUSE_Text_TakeCare:
 	.string "Wonderful! Take good care\n"
-	.string "of Chiru!$"
+	.string "of Miso!$"
 
 KINNERET_TOWN_FARMHOUSE_Text_WrongMon:
 	.string "Hmm, that's not quite what\n"
@@ -48,7 +48,7 @@ KINNERET_TOWN_FARMHOUSE_Text_NoTrade:
 	.string "Aw, maybe next time!$"
 
 KINNERET_TOWN_FARMHOUSE_Text_AfterTrade:
-	.string "I hope Chiru is treating\n"
+	.string "I hope Miso is treating\n"
 	.string "you well!$"
 
 	KINNERET_TOWN_FARMHOUSE_EventScript_FarmGirl::

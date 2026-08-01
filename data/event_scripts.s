@@ -1864,3 +1864,55 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/DELMARK_CITY_SOUTH_CARETAKER_HOUSE/scripts.inc"
 
 	.include "data/maps/ENPALE_ROUTE_9/scripts.inc"
+
+	.include "data/maps/ROSEBANK_TOWN/scripts.inc"
+
+	.include "data/maps/ROSEBANK_TOWN_MINER_HOUSE/scripts.inc"
+
+	.include "data/maps/ROSEBANK_TOWN_MOVE_REMINDER_HOUSE/scripts.inc"
+
+	.include "data/maps/ROSEBANK_TOWN_TRADE_HOUSE/scripts.inc"
+
+	.include "data/maps/ROSEBANK_TOWN_GYM/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_10/scripts.inc"
+
+	.include "data/maps/WALLAR_MARSHLANDS/scripts.inc"
+
+	.include "data/maps/WALLAR_BELL_TOWER/scripts.inc"
+
+	.include "data/maps/WALLAR_BELL_TOWER_2F/scripts.inc"
+
+	.include "data/maps/WALLAR_BELL_TOWER_3F/scripts.inc"
+
+	.include "data/maps/WALLAR_BELL_TOWER_4F/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_11/scripts.inc"
+
+	.include "data/maps/VALERYTOWN/scripts.inc"
+
+	.include "data/maps/VALERYTOWN_SMALL_HOUSE/scripts.inc"
+
+	.include "data/maps/VALERYTOWN_BIG_HOUSE/scripts.inc"
+
+	.include "data/maps/VALERYTOWN_GYM/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_12/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_GYM/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_13/scripts.inc"
+
+	.include "data/maps/GRANT_ISLAND/scripts.inc"
+
+	.include "data/maps/GRANT_CAVE/scripts.inc"
+
+	.include "data/maps/GRANT_CAVE_2F/scripts.inc"
+
+	.include "data/maps/GRANT_CAVE_BF1/scripts.inc"
+
+	.include "data/maps/GRANT_CAVE_BF2/scripts.inc"
+
+	.include "data/maps/GRANT_CAVE_CHAMBER/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_SOUTH_UNDERWATER/scripts.inc"

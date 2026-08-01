@@ -1,0 +1,116 @@
+{
+  "id": "MAP_DELMARK_CITY_GYM",
+  "name": "DELMARK_CITY_GYM",
+  "layout": "LAYOUT_DELMARK_CITY_GYM",
+  "music": "MUS_ENPALE_DELMARK",
+  "region_map_section": "MAPSEC_CELADON_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MR_FUJI",
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DELMARK_CITY_GYM_EventScript_Silvio",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_DELMARK_GYM_TRAINER3",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 7,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_DELMARK_GYM_TRAINER2",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+      "x": 7,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_DELMARK_GYM_TRAINER1",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER_FRLG",
+      "x": 7,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_DELMARK_CITY_EAST",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 6,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_DELMARK_CITY_EAST",
+      "dest_warp_id": "4"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DelmarkCityGym_EventScript_Quiz1"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 22,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DelmarkCityGym_EventScript_Quiz2"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DelmarkCityGym_EventScript_Quiz3"
+    }
+  ]
+}
