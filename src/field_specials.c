@@ -5729,6 +5729,10 @@ void ForcePlayerToStartSurfing(void)
     SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_SURFING);
 }
 
+void CheckPlayerHasGyarados(void)
+{
+    gSpecialVar_Result = CheckPartyHasSpecies(SPECIES_GYARADOS);
+}
 void UpdateTrainerCardPhotoIcons(void)
 {
     enum Species species[PARTY_SIZE];

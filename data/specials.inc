@@ -644,3 +644,4 @@ gSpecials::
 	def_special Special_NameRival
 	def_special GetCaughtPokedexCount
 	def_special CheckCaughtFeebas
+	def_special CheckPlayerHasGyarados
