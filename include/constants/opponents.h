@@ -1056,7 +1056,8 @@
 #define TRAINER_GRANT_COOLTRAINER              1050
 #define TRAINER_ELDER_IRRUS_2                  1051
 #define TRAINER_ELDER_PRAETUS_2                1052
-#define TRAINERS_COUNT_EMERALD                 1053
+#define TRAINER_RIVALCF_5                      1053
+#define TRAINERS_COUNT_EMERALD                 1054
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

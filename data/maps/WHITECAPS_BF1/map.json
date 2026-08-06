@@ -1,0 +1,70 @@
+{
+  "id": "MAP_WHITECAPS_BF1",
+  "name": "WHITECAPS_BF1",
+  "layout": "LAYOUT_WHITECAPS_BF1",
+  "music": "MUS_ENPALE_CAVE",
+  "region_map_section": "MAPSEC_CAVE_OF_ORIGIN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 14,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "local_id": "LOCALID_REGICE",
+      "graphics_id": "OBJ_EVENT_GFX_BIG_REGICE_DOLL",
+      "x": 24,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DelmarkOrWhitecaps_EventScript_Regice",
+      "flag": "FLAG_CAUGHT_REGICE"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 1,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECAPS",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECAPS_BF1",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 24,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECAPS_BF1",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

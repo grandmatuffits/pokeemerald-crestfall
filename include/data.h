@@ -311,7 +311,8 @@ static inline const u8 *GetTrainerNameFromId(u16 trainerId)
     if (trainerId == TRAINER_RIVALCF_1
      || trainerId == TRAINER_RIVALCF_2
      || trainerId == TRAINER_RIVALCF_3
-     || trainerId == TRAINER_RIVALCF_4)
+     || trainerId == TRAINER_RIVALCF_4
+     || trainerId == TRAINER_RIVALCF_5)
         return gSaveBlock2Ptr->rivalName;
     return GetTrainerStructFromId(trainerId)->trainerName;
 }

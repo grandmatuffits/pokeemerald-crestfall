@@ -776,3 +776,72 @@ MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase:
 	.string "You can't play if you don't have\n"
 	.string "a COIN CASE.$"
 
+
+Miraveil_Casino_EventScript_RedeemNPC::
+	lock
+	faceplayer
+	checkitem ITEM_HM_VOUCHER
+	goto_if_eq VAR_RESULT, FALSE, Miraveil_Casino_EventScript_NoVoucherToRedeem
+	msgbox Miraveil_Casino_Text_WhichHM, MSGBOX_DEFAULT
+	multichoice 0, 0, MULTI_MIRAVEIL_HMS, FALSE
+	switch VAR_RESULT
+	case 0, Miraveil_Casino_EventScript_GiveRockSmash
+	case 1, Miraveil_Casino_EventScript_GiveStrength
+	case 2, Miraveil_Casino_EventScript_GiveDive
+	case MULTI_B_PRESSED, Miraveil_Casino_EventScript_CancelRedeem
+	end
+
+Miraveil_Casino_EventScript_GiveRockSmash::
+	goto_if_set FLAG_MIRAVEIL_GOT_ROCKSMASH, Miraveil_Casino_EventScript_AlreadyHave
+	removeitem ITEM_HM_VOUCHER, 1
+	giveitem ITEM_HM_ROCK_SMASH
+	setflag FLAG_MIRAVEIL_GOT_ROCKSMASH
+	addvar VAR_MIRAVEIL_HMS_CLAIMED, 1
+	release
+	end
+
+Miraveil_Casino_EventScript_GiveStrength::
+	goto_if_set FLAG_MIRAVEIL_GOT_STRENGTH, Miraveil_Casino_EventScript_AlreadyHave
+	removeitem ITEM_HM_VOUCHER, 1
+	giveitem ITEM_HM_STRENGTH
+	setflag FLAG_MIRAVEIL_GOT_STRENGTH
+	addvar VAR_MIRAVEIL_HMS_CLAIMED, 1
+	release
+	end
+
+Miraveil_Casino_EventScript_GiveDive::
+	goto_if_set FLAG_MIRAVEIL_GOT_DIVE, Miraveil_Casino_EventScript_AlreadyHave
+	removeitem ITEM_HM_VOUCHER, 1
+	giveitem ITEM_HM_DIVE
+	setflag FLAG_MIRAVEIL_GOT_DIVE
+	addvar VAR_MIRAVEIL_HMS_CLAIMED, 1
+	release
+	end
+
+Miraveil_Casino_EventScript_AlreadyHave::
+	msgbox Miraveil_Casino_Text_AlreadyHaveThat, MSGBOX_DEFAULT
+	release
+	end
+
+Miraveil_Casino_EventScript_CancelRedeem::
+	release
+	end
+
+Roulette_Text_WonVoucher:
+	.string "Three wins! The house owes you an\n"
+	.string "HM Voucher. …How quaint.$"
+
+Miraveil_Casino_EventScript_NoVoucherToRedeem::
+	msgbox Miraveil_Casino_Text_NoVoucher, MSGBOX_DEFAULT
+	release
+	end
+
+Miraveil_Casino_Text_WhichHM:
+	.string "Which prize will it be?$"
+
+Miraveil_Casino_Text_AlreadyHaveThat:
+	.string "You've already claimed that one.$"
+
+Miraveil_Casino_Text_NoVoucher:
+	.string "Come back when you've a voucher to\n"
+	.string "spend.$"		

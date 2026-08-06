@@ -13482,7 +13482,7 @@ const struct ItemInfo gItemsInfo[] =
             "reduces accuracy."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
+        .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_Flash,
     },
 
@@ -15829,6 +15829,21 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_Pickaxe,
         .iconPalette = gItemIconPalette_Pickaxe,
+    },
+    [ITEM_HM_VOUCHER] =
+    {
+        .name = ITEM_NAME("HM Voucher"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A voucher good for\n"
+            "one HM prize at\n"
+            "the casino."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BikeVoucher,
+        .iconPalette = gItemIconPalette_BikeVoucher,
     },
 };
 

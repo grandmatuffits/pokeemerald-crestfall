@@ -1122,6 +1122,17 @@ static const struct MenuAction sMultichoiceList_HOF_Eggs_Victories_Quit[] = {
     {gText_ShopQuit}
 };
 
+static const u8 gText_RockSmash[] = _("ROCK SMASH");
+static const u8 gText_Strength[] = _("STRENGTH");
+static const u8 gText_Dive[] = _("DIVE");
+
+static const struct MenuAction MultichoiceList_MiraveilHMs[] =
+{
+    {gText_RockSmash},
+    {gText_Strength},
+    {gText_Dive},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -1294,6 +1305,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOF_VICTORIES_QUIT]                         = MULTICHOICE(sMultichoiceList_HOF_Victories_Quit),
     [MULTI_EGGS_VICTORIES_QUIT]                        = MULTICHOICE(sMultichoiceList_Eggs_Victories_Quit),
     [MULTI_HOF_EGGS_VICTORIES_QUIT]                    = MULTICHOICE(sMultichoiceList_HOF_Eggs_Victories_Quit),
+    [MULTI_MIRAVEIL_HMS]                               = MULTICHOICE(MultichoiceList_MiraveilHMs),
 };
 
 const u8 *const gStdStrings[] =

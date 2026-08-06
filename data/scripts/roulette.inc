@@ -20,4 +20,10 @@ Roulette_EventScript_Table2::
 
 Roulette_EventScript_Play::
 	special PlayRoulette
+	waitstate
+	goto_if_unset FLAG_MIRAVEIL_VOUCHER_PENDING, Roulette_EventScript_PlayEnd
+	clearflag FLAG_MIRAVEIL_VOUCHER_PENDING
+	additem ITEM_HM_VOUCHER, 1
+	msgbox Roulette_Text_WonVoucher, MSGBOX_DEFAULT
+Roulette_EventScript_PlayEnd::
 	end

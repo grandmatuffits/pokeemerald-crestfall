@@ -10273,6 +10273,96 @@
       "secondary_tileset": "gTileset_Underwater",
       "border_filepath": "data/layouts/DELMARK_CITY_SOUTH_UNDERWATER/border.bin",
       "blockdata_filepath": "data/layouts/DELMARK_CITY_SOUTH_UNDERWATER/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_UNDERGROUND",
+      "name": "DELMARK_CITY_UNDERGROUND_Layout",
+      "width": 19,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DELMARK_CITY_UNDERGROUND/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_UNDERGROUND/map.bin"
+    },
+    {
+      "id": "LAYOUT_DELMARK_CITY_UNDERWATER_CHAMBER",
+      "name": "DELMARK_CITY_UNDERWATER_CHAMBER_Layout",
+      "width": 19,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/DELMARK_CITY_UNDERWATER_CHAMBER/border.bin",
+      "blockdata_filepath": "data/layouts/DELMARK_CITY_UNDERWATER_CHAMBER/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHITECAPS_BF1",
+      "name": "WHITECAPS_BF1_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WHITECAPS_BF1/border.bin",
+      "blockdata_filepath": "data/layouts/WHITECAPS_BF1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_14",
+      "name": "ENPALE_ROUTE_14_Layout",
+      "width": 82,
+      "height": 62,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_14/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_14/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRAVEIL_ISLAND",
+      "name": "MIRAVEIL_ISLAND_Layout",
+      "width": 86,
+      "height": 72,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/MIRAVEIL_ISLAND/border.bin",
+      "blockdata_filepath": "data/layouts/MIRAVEIL_ISLAND/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRAVEIL_ISLAND_HOUSE_1",
+      "name": "MIRAVEIL_ISLAND_HOUSE_1_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MIRAVEIL_ISLAND_HOUSE_1/border.bin",
+      "blockdata_filepath": "data/layouts/MIRAVEIL_ISLAND_HOUSE_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRAVEIL_ISLAND_HOUSE_2",
+      "name": "MIRAVEIL_ISLAND_HOUSE_2_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MIRAVEIL_ISLAND_HOUSE_2/border.bin",
+      "blockdata_filepath": "data/layouts/MIRAVEIL_ISLAND_HOUSE_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRAVEIL_ISLAND_HALL",
+      "name": "MIRAVEIL_ISLAND_HALL_Layout",
+      "width": 30,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MIRAVEIL_ISLAND_HALL/border.bin",
+      "blockdata_filepath": "data/layouts/MIRAVEIL_ISLAND_HALL/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRAVEIL_ISLAND_HALL_2F",
+      "name": "MIRAVEIL_ISLAND_HALL_2F_Layout",
+      "width": 30,
+      "height": 18,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MIRAVEIL_ISLAND_HALL_2F/border.bin",
+      "blockdata_filepath": "data/layouts/MIRAVEIL_ISLAND_HALL_2F/map.bin"
     }
   ]
 }

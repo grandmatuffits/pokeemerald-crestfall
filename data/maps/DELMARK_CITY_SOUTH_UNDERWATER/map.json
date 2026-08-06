@@ -20,7 +20,15 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 46,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_DELMARK_CITY_UNDERWATER_CHAMBER",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

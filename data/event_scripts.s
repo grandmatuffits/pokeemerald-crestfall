@@ -1916,3 +1916,21 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/GRANT_CAVE_CHAMBER/scripts.inc"
 
 	.include "data/maps/DELMARK_CITY_SOUTH_UNDERWATER/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_UNDERGROUND/scripts.inc"
+
+	.include "data/maps/DELMARK_CITY_UNDERWATER_CHAMBER/scripts.inc"
+
+	.include "data/maps/WHITECAPS_BF1/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_14/scripts.inc"
+
+	.include "data/maps/MIRAVEIL_ISLAND/scripts.inc"
+
+	.include "data/maps/MIRAVEIL_ISLAND_HOUSE_1/scripts.inc"
+
+	.include "data/maps/MIRAVEIL_ISLAND_HOUSE_2/scripts.inc"
+
+	.include "data/maps/MIRAVEIL_ISLAND_HALL/scripts.inc"
+
+	.include "data/maps/MIRAVEIL_ISLAND_HALL_2F/scripts.inc"

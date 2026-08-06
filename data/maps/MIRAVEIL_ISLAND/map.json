@@ -1,0 +1,110 @@
+{
+  "id": "MAP_MIRAVEIL_ISLAND",
+  "name": "MIRAVEIL_ISLAND",
+  "layout": "LAYOUT_MIRAVEIL_ISLAND",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_LILYCOVE_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ENPALE_ROUTE_14",
+      "offset": -44,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_MIRAVEIL_RIVAL",
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 32,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MIRAVEIL_CITY_EventScript_Rival",
+      "flag": "FLAG_MIRAVEIL_RIVAL_DONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MG_DELIVERYMAN",
+      "x": 44,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 25,
+      "y": 51,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 56,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_MIRAVEIL_ISLAND_HOUSE_2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 45,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_MIRAVEIL_ISLAND_HALL",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 46,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_MIRAVEIL_ISLAND_HALL",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

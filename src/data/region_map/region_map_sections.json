@@ -98,7 +98,7 @@
     },
     {
       "id": "MAPSEC_LILYCOVE_CITY",
-      "name": "LILYCOVE CITY",
+      "name": "Miraveil Island",
       "x": 18,
       "y": 3,
       "width": 2,
@@ -901,7 +901,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_14",
-      "name": "ROUTE 14",
+      "name": "Route 14",
       "x": 15,
       "y": 11,
       "width": 1,

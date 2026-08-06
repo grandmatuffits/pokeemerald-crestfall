@@ -1,0 +1,31 @@
+{
+  "id": "MAP_ENPALE_ROUTE_14",
+  "name": "ENPALE_ROUTE_14",
+  "layout": "LAYOUT_ENPALE_ROUTE_14",
+  "music": "MUS_ENPALE_CAVE",
+  "region_map_section": "MAPSEC_ROUTE_14",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_GRANT_ISLAND",
+      "offset": -43,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_MIRAVEIL_ISLAND",
+      "offset": 44,
+      "direction": "up"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

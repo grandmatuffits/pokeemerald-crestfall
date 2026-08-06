@@ -1876,6 +1876,7 @@ static void Task_GivePayout(u8 taskId)
 
 static void Task_PrintPayout(u8 taskId)
 {
+    VarSet(VAR_MIRAVEIL_ROULETTE_WINS, VarGet(VAR_MIRAVEIL_ROULETTE_WINS) + 1);
     ConvertIntToDecimalStringN(gStringVar1, (sRoulette->minBet * gTasks[taskId].tMultiplier), STR_CONV_MODE_LEFT_ALIGN, 2);
     StringExpandPlaceholders(gStringVar4, Roulette_Text_YouveWonXCoins);
     DrawStdWindowFrame(sTextWindowId, FALSE);
@@ -1950,6 +1951,9 @@ static void Task_ClearBoard(u8 taskId)
     gTasks[taskId].tBallNum = 0;
     ResetBallDataForNewSpin(taskId);
     ResetHits();
+    if (VarGet(VAR_MIRAVEIL_ROULETTE_WINS) >= 3 && VarGet(VAR_MIRAVEIL_HMS_CLAIMED) < 3)
+        FlagSet(FLAG_MIRAVEIL_VOUCHER_PENDING);
+    VarSet(VAR_MIRAVEIL_ROULETTE_WINS, 0);
     HideWheelBalls();
     DrawGridBackground(SELECTION_NONE);
     SetBallCounterNumLeft(BALLS_PER_ROUND);

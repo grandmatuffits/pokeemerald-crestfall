@@ -141,6 +141,13 @@
       "elevation": 0,
       "dest_map": "MAP_WHITECAPS_EXIT",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_WHITECAPS_BF1",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

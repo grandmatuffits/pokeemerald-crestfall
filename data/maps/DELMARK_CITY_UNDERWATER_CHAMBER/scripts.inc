@@ -1,0 +1,2 @@
+DELMARK_CITY_UNDERWATER_CHAMBER_MapScripts::
+	.byte 0

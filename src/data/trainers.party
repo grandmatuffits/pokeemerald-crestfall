@@ -19844,3 +19844,27 @@ Level: 42
 
 Bastiodon @ None
 Level: 44
+
+=== TRAINER_RIVALCF_5 ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Honchkrow @ None
+Level: 40
+
+Musharna @ None
+Level: 41
+
+Raichu @ None
+Level: 41
+
+Banette @ None
+Level: 42
+
+Mienfoo @ None
+Level: 44
