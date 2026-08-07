@@ -271,7 +271,7 @@
 #define VAR_GRANT_STATE                                  0x40F9
 #define VAR_MIRAVEIL_ROULETTE_WINS                       0x40FA
 #define VAR_MIRAVEIL_HMS_CLAIMED                         0x40FB
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
+#define VAR_MIRAVEIL_DOORMAN_TRIGGER                     0x40FC
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var

@@ -6141,7 +6141,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Daisy = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lorelei = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_MERYL,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,

@@ -1057,7 +1057,16 @@
 #define TRAINER_ELDER_IRRUS_2                  1051
 #define TRAINER_ELDER_PRAETUS_2                1052
 #define TRAINER_RIVALCF_5                      1053
-#define TRAINERS_COUNT_EMERALD                 1054
+#define TRAINER_MIRAVEIL_DOORMAN               1054
+#define TRAINER_MIRAVEIL_EXPERT_M              1055
+#define TRAINER_MIRAVEIL_EXPERT_F              1056
+#define TRAINER_MIRAVEIL_AROMA_LADY            1057
+#define TRAINER_MIRAVEIL_BEAUTY                1058
+#define TRAINER_MIRAVEIL_SAILOR                1059
+#define TRAINER_MIRAVEIL_RICH_BOY              1060
+#define TRAINER_MIRAVEIL_GENTLEMAN             1061
+#define TRAINER_MERYL                          1062
+#define TRAINERS_COUNT_EMERALD                 1063
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

@@ -568,6 +568,8 @@
 #define MUS_ENPALE_RANDALL          633
 #define MUS_ENPALE_WALLAR           634
 #define MUS_ENPALE_SILVIO           635
+#define MUS_ENPALE_MIRAVEIL         636
+#define MUS_ENPALE_MERYL            637
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

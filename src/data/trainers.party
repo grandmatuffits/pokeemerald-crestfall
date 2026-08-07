@@ -19868,3 +19868,152 @@ Level: 42
 
 Mienfoo @ None
 Level: 44
+
+=== TRAINER_MIRAVEIL_DOORMAN ===
+Name: Jameson
+Class: Gentleman
+Pic: Gentleman Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Tauros @ None
+Level: 38
+
+Miltank @ None
+Level: 38
+
+=== TRAINER_MIRAVEIL_EXPERT_M ===
+Name: Lou
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Mawile @ None
+Level: 40
+
+=== TRAINER_MIRAVEIL_EXPERT_F ===
+Name: Beatrice
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Gardevoir @ None
+Level: 40
+
+=== TRAINER_MIRAVEIL_AROMA_LADY ===
+Name: Cass
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Whimsicott @ None
+Level: 38
+
+Carbink @ None
+Level: 38
+
+=== TRAINER_MIRAVEIL_BEAUTY ===
+Name: Shandra
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Clefable @ None
+Level: 40
+
+=== TRAINER_MIRAVEIL_SAILOR ===
+Name: Reginald
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Azumarill @ None
+Level: 41
+
+=== TRAINER_MIRAVEIL_RICH_BOY ===
+Name: Mikey
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Mawile @ None
+Level: 42
+
+=== TRAINER_MIRAVEIL_GENTLEMAN ===
+Name: Francisco
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Sylveon @ None
+Level: 41
+
+Slurpuff @ None
+Level: 41
+
+=== TRAINER_MERYL ===
+Name: Meryl
+Class: Leader
+Pic: Elite Four Lorelei Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Togekiss @ Focus Sash
+Level: 42
+- Air Slash
+- Moonblast
+- Thunder Wave
+- Aura Sphere
+
+Gardevoir @ Choice Specs
+Level: 42
+- Moonblast
+- Psychic
+- Thunderbolt
+- Shadow Ball
+
+Clefable @ Leftovers
+Level: 43
+- Stealth Rock
+- Moonblast
+- Soft-Boiled
+- Heal Bell
+
+Sylveon @ Life Orb
+Level: 44
+- Moonblast
+- Shadow Ball
+- Calm Mind
+- Hyper Voice
+
+Mimikyu @ Lum Berry
+Level: 46
+- Play Rough
+- Shadow Sneak
+- Swords Dance
+- Wood Hammer

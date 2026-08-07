@@ -2,7 +2,7 @@
   "id": "MAP_MIRAVEIL_ISLAND",
   "name": "MIRAVEIL_ISLAND",
   "layout": "LAYOUT_MIRAVEIL_ISLAND",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_MERYL",
   "region_map_section": "MAPSEC_LILYCOVE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -35,6 +35,7 @@
       "flag": "FLAG_MIRAVEIL_RIVAL_DONE"
     },
     {
+      "local_id": "LOCALID_MIRAVEIL_DOORMAN",
       "graphics_id": "OBJ_EVENT_GFX_MG_DELIVERYMAN",
       "x": 44,
       "y": 24,
@@ -57,7 +58,33 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MIRAVEIL_ISLAND_EventScript_FatGuy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 22,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MIRAVEIL_ISLAND_EventScript_Lady",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 50,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MIRAVEIL_ISLAND_EventScript_Man",
       "flag": "0"
     }
   ],
@@ -105,6 +132,58 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 45,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_MIRAVEIL_DOORMAN_TRIGGER",
+      "var_value": "0",
+      "script": "MIRAVEIL_BANQUET_EXT_EventScript_DoormanTriggerL"
+    },
+    {
+      "type": "trigger",
+      "x": 46,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_MIRAVEIL_DOORMAN_TRIGGER",
+      "var_value": "0",
+      "script": "MIRAVEIL_BANQUET_EXT_EventScript_DoormanTriggerR"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 37,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MIRAVEIL_ISLAND_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 35,
+      "y": 32,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MIRAVEIL_ISLAND_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 47,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MIRAVEIL_ISLAND_EventScript_HallSign"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 38,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MIRAVEIL_ISLAND_EventScript_CasinoSign"
+    }
+  ]
 }

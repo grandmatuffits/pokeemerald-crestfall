@@ -69,3 +69,125 @@ MIRAVEIL_CITY_Text_RivalAfter:
 MIRAVEIL_CITY_EventScript_RivalDone::
 	release
 	end
+
+MIRAVEIL_BANQUET_EXT_EventScript_DoormanTriggerL::
+	lockall
+	goto_if_set FLAG_MIRAVEIL_DOORMAN_DEFEATED, MIRAVEIL_BANQUET_EXT_EventScript_DoormanDone
+	applymovement LOCALID_MIRAVEIL_DOORMAN, MIRAVEIL_BANQUET_EXT_Movement_FaceRight
+	waitmovement 0
+	call MIRAVEIL_BANQUET_EXT_EventScript_DoormanBattle
+	applymovement LOCALID_MIRAVEIL_DOORMAN, MIRAVEIL_BANQUET_EXT_Movement_FaceDown
+	waitmovement 0
+	goto MIRAVEIL_BANQUET_EXT_EventScript_DoormanFinish
+	end
+
+MIRAVEIL_BANQUET_EXT_EventScript_DoormanTriggerR::
+	lockall
+	goto_if_set FLAG_MIRAVEIL_DOORMAN_DEFEATED, MIRAVEIL_BANQUET_EXT_EventScript_DoormanDone
+	applymovement LOCALID_MIRAVEIL_DOORMAN, MIRAVEIL_BANQUET_EXT_Movement_StepRight
+	waitmovement 0
+	call MIRAVEIL_BANQUET_EXT_EventScript_DoormanBattle
+	applymovement LOCALID_MIRAVEIL_DOORMAN, MIRAVEIL_BANQUET_EXT_Movement_StepLeftFaceDown
+	waitmovement 0
+	goto MIRAVEIL_BANQUET_EXT_EventScript_DoormanFinish
+	end
+
+MIRAVEIL_BANQUET_EXT_EventScript_DoormanBattle::
+	msgbox MIRAVEIL_BANQUET_EXT_Text_DoormanBlock, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_MIRAVEIL_DOORMAN, MIRAVEIL_BANQUET_EXT_Text_DoormanDefeat
+	msgbox MIRAVEIL_BANQUET_EXT_Text_DoormanAfter, MSGBOX_DEFAULT
+	closemessage
+	return
+
+MIRAVEIL_BANQUET_EXT_EventScript_DoormanFinish::
+	setflag FLAG_MIRAVEIL_DOORMAN_DEFEATED
+	releaseall
+	end
+
+MIRAVEIL_BANQUET_EXT_EventScript_DoormanDone::
+	releaseall
+	end
+
+MIRAVEIL_BANQUET_EXT_Movement_FaceRight:
+	face_right
+	step_end
+MIRAVEIL_BANQUET_EXT_Movement_FaceDown:
+	face_down
+	step_end
+MIRAVEIL_BANQUET_EXT_Movement_StepRight:
+	walk_right
+	step_end
+MIRAVEIL_BANQUET_EXT_Movement_StepLeftFaceDown:
+	walk_left
+	face_down
+	step_end
+
+MIRAVEIL_BANQUET_EXT_Text_DoormanBlock:
+	.string "Halt. This is a private affair.\n"
+	.string "Invitation only.\p"
+	.string "…You have none? Then you'll not set\n"
+	.string "one foot past me.$"
+
+MIRAVEIL_BANQUET_EXT_Text_DoormanDefeat:
+	.string "Ngh… you fight like someone with\n"
+	.string "nothing to lose.$"
+
+MIRAVEIL_BANQUET_EXT_Text_DoormanAfter:
+	.string "…Fine. Go in, then. I never saw you.\p"
+	.string "Whatever happens in there is no\n"
+	.string "concern of mine.$"	
+
+MIRAVEIL_ISLAND_EventScript_TownSign::
+	msgbox MIRAVEIL_ISLAND_Text_TownSign, MSGBOX_SIGN
+	end
+
+MIRAVEIL_ISLAND_Text_TownSign:
+	.string "MIRAVEIL ISLAND\p"
+	.string "Lavish Luxury$"
+
+MIRAVEIL_ISLAND_EventScript_GymSign::
+	msgbox MIRAVEIL_ISLAND_Text_GymSign, MSGBOX_SIGN
+	end
+
+MIRAVEIL_ISLAND_Text_GymSign:
+	.string "MIRAVEIL ISLAND GYM\n"
+	.string "LEADER: MERYL\p"
+	.string "Closed.$"	
+
+MIRAVEIL_ISLAND_EventScript_HallSign::
+	msgbox MIRAVEIL_ISLAND_Text_HallSign, MSGBOX_SIGN
+	end
+
+MIRAVEIL_ISLAND_Text_HallSign:
+	.string "MIRAVEIL BANQUET HALL\p"
+	.string "MUST BE ON INVITATION LIST /n TO ENTER$"
+
+MIRAVEIL_ISLAND_EventScript_CasinoSign::
+	msgbox MIRAVEIL_ISLAND_Text_CasinoSign, MSGBOX_SIGN
+	end
+
+MIRAVEIL_ISLAND_Text_CasinoSign:
+	.string "MIRAVEIL CASINO\p"
+	.string "Your future riches await.$"	
+
+MIRAVEIL_ISLAND_EventScript_FatGuy::
+	msgbox MIRAVEIL_ISLAND_Text_FatGuy, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_FatGuy:
+	.string "Pardon me, I'm tanning.$"
+
+MIRAVEIL_ISLAND_EventScript_Lady::
+	msgbox MIRAVEIL_ISLAND_Text_Lady, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_Lady:
+	.string "Brigham is quite the philanthropist. /n His aunt likes to keep her money to herself.$"	
+
+MIRAVEIL_ISLAND_EventScript_Man::
+	msgbox MIRAVEIL_ISLAND_Text_Man, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_Man:
+	.string "That Meryl is quite the snoot, but she sure is fancy.$"		
