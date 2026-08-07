@@ -20017,3 +20017,48 @@ Level: 46
 - Shadow Sneak
 - Swords Dance
 - Wood Hammer
+
+=== TRAINER_ROUTE_14_PAIGE ===
+Name: Paige
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Lapras @ None
+Level: 36
+
+=== TRAINER_ROUTE_14_RANDY ===
+Name: Randy
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Cloyster @ None
+Level: 34
+
+Seadra @ None
+Level: 34
+
+=== TRAINER_ROUTE_14_SHELLY ===
+Name: Shelly
+Class: Swimmer F
+Pic: Swimmer F Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Feebas @ None
+Level: 25
+
+Feebas @ None
+Level: 30
+
+Milotic @ None
+Level: 35

@@ -1066,7 +1066,10 @@
 #define TRAINER_MIRAVEIL_RICH_BOY              1060
 #define TRAINER_MIRAVEIL_GENTLEMAN             1061
 #define TRAINER_MERYL                          1062
-#define TRAINERS_COUNT_EMERALD                 1063
+#define TRAINER_ROUTE_14_PAIGE                 1063
+#define TRAINER_ROUTE_14_RANDY                 1064
+#define TRAINER_ROUTE_14_SHELLY                1065
+#define TRAINERS_COUNT_EMERALD                 1066
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
