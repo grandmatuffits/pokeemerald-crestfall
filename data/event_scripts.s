@@ -1934,3 +1934,13 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/MIRAVEIL_ISLAND_HALL/scripts.inc"
 
 	.include "data/maps/MIRAVEIL_ISLAND_HALL_2F/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_15/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_16/scripts.inc"
+
+	.include "data/maps/BAYNOE_TOWN/scripts.inc"
+
+	.include "data/maps/BAYNOE_TOWN_HOUSE_1/scripts.inc"
+
+	.include "data/maps/BERGEN_HILL/scripts.inc"

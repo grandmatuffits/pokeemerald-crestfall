@@ -166,7 +166,10 @@
     "ENPALE_ROUTE_12",
     "ENPALE_ROUTE_13",
     "ENPALE_ROUTE_14",
-    "MIRAVEIL_ISLAND"
+    "MIRAVEIL_ISLAND",
+    "ENPALE_ROUTE_15",
+    "ENPALE_ROUTE_16",
+    "BAYNOE_TOWN"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -678,7 +681,8 @@
     "NavelRock_Down10",
     "NavelRock_Down11",
     "NavelRock_Bottom",
-    "TrainerHill_Elevator"
+    "TrainerHill_Elevator",
+    "BERGEN_HILL"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",
@@ -1242,7 +1246,8 @@
     "DELMARK_CITY_GYM",
     "WHITECAPS_BF1",
     "MIRAVEIL_ISLAND_HALL",
-    "MIRAVEIL_ISLAND_HALL_2F"
+    "MIRAVEIL_ISLAND_HALL_2F",
+    "BAYNOE_TOWN_HOUSE_1"
   ],
   "gMapGroup_Indoor_Delmark": [
     "DELMARK_CITY_FERRY_HOUSE",

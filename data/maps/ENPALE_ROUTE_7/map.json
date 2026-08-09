@@ -20,7 +20,12 @@
     },
     {
       "map": "MAP_ENPALE_ROUTE_8",
-      "offset": 41,
+      "offset": 39,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_2",
+      "offset": -25,
       "direction": "up"
     }
   ],

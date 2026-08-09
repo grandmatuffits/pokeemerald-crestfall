@@ -20062,3 +20062,166 @@ Level: 30
 
 Milotic @ None
 Level: 35
+
+=== TRAINER_ENPALE_ROUTE_15_MADISON ===
+Name: Madison
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Seadra @ None
+Level: 38
+
+=== TRAINER_ENPALE_ROUTE_15_JAUN ===
+Name: Jaun
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Empoleon @ None
+Level: 38
+
+Gyarados @ None
+Level: 38
+
+=== TRAINER_ENPALE_ROUTE_15_MAYA ===
+Name: Maya
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Starmie
+Level: 38
+
+Jellicent
+Level: 38
+
+=== TRAINER_ENPALE_ROUTE_15_GERALD ===
+Name: Gerald
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Gyarados @ None
+Level: 40
+
+=== TRAINER_ENPALE_ROUTE_15_MABEL ===
+Name: Mabel
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Azumarill @ None
+Level: 41
+
+
+=== TRAINER_ENPALE_ROUTE_15_HAZEL ===
+Name: Hazel
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Vaporeon @ None
+Level: 41
+
+=== TRAINER_ENPALE_ROUTE_16_BIRDKEEPER ===
+Name: Allen
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Staraptor @ None
+Level: 40
+
+=== TRAINER_ROUTE_16_AROMALADY ===
+Name: Claire
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Tangrowth @ None
+Level: 39
+
+Vileplume
+Level: 39
+
+=== TRAINER_ENPALE_ROUTE_16_COOLM ===
+Name: Burt
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Fraxure @ None
+Level: 40
+
+=== TRAINER_ENPALE_ROUTE_16_COOLF ===
+Name: Erica
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Zweilous @ None
+Level: 40
+
+=== TRAINER_ENPALE_ROUTE_16_CRUSHGIRL ===
+Name: Bella
+Class: Crush Girl Frlg
+Pic: Crush Girl Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Toxicroak
+Level: 41
+
+Medicham @ None
+Level: 42
+
+=== TRAINER_ENPALE_ROUTE_16_ROCKER ===
+Name: Dave
+Class: Rocker Frlg
+Pic: Rocker Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Galvantula @ None
+Level: 40
+
+Luxray
+Level: 40
+
+Electivire
+Level: 40

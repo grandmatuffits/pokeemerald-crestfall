@@ -27,6 +27,9 @@ const u16 gMetatileAttributes_DelmarkSouth[] = INCBIN_U16("data/tilesets/seconda
 const u16 gMetatiles_WallarMarshlands[] = INCBIN_U16("data/tilesets/secondary/wallar_marshlands/metatiles.bin");
 const u16 gMetatileAttributes_WallarMarshlands[] = INCBIN_U16("data/tilesets/secondary/wallar_marshlands/metatile_attributes.bin");
 
+const u16 gMetatiles_baynoe_town[] = INCBIN_U16("data/tilesets/secondary/baynoe_town/metatiles.bin");
+const u16 gMetatileAttributes_baynoe_town[] = INCBIN_U16("data/tilesets/secondary/baynoe_town/metatile_attributes.bin");
+
 const u16 gMetatiles_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatiles.bin");
 const u16 gMetatileAttributes_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatile_attributes.bin");
 

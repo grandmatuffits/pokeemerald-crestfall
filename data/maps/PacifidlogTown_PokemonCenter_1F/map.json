@@ -3,7 +3,6 @@
   "name": "PacifidlogTown_PokemonCenter_1F",
   "layout": "LAYOUT_POKEMON_CENTER_1F",
   "music": "MUS_POKE_CENTER",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_PACIFIDLOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -87,15 +86,15 @@
       "x": 7,
       "y": 8,
       "elevation": 3,
-      "dest_map": "MAP_PACIFIDLOG_TOWN",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_BAYNOE_TOWN",
+      "dest_warp_id": "1"
     },
     {
       "x": 6,
       "y": 8,
       "elevation": 3,
-      "dest_map": "MAP_PACIFIDLOG_TOWN",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_BAYNOE_TOWN",
+      "dest_warp_id": "1"
     },
     {
       "x": 1,
@@ -106,5 +105,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

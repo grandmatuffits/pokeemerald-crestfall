@@ -1322,6 +1322,8 @@
 #define FLAG_MIRAVEIL_GOT_DIVE                            0x4C6
 #define FLAG_MIRAVEIL_SUPER_ROD_RECEIVED                  0x4C7
 #define FLAG_MIRAVEIL_DOORMAN_DEFEATED                    0x4C8
+#define FLAG_BAYNOE_BERGEN_DONE                           0x4C9
+#define FLAG_BAYNOE_OLDWOMAN_GAVE_ITEM                    0x4B7
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag

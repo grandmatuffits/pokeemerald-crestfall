@@ -3,7 +3,6 @@
   "name": "LavaridgeTown_Mart",
   "layout": "LAYOUT_MART",
   "music": "MUS_POKE_MART",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -61,17 +60,18 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_LAVARIDGE_TOWN",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_BAYNOE_TOWN",
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_LAVARIDGE_TOWN",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_BAYNOE_TOWN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

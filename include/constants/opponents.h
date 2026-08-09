@@ -1069,7 +1069,19 @@
 #define TRAINER_ROUTE_14_PAIGE                 1063
 #define TRAINER_ROUTE_14_RANDY                 1064
 #define TRAINER_ROUTE_14_SHELLY                1065
-#define TRAINERS_COUNT_EMERALD                 1066
+#define TRAINER_ENPALE_ROUTE_15_MADISON        1066
+#define TRAINER_ENPALE_ROUTE_15_JAUN           1067
+#define TRAINER_ENPALE_ROUTE_15_MAYA           1068
+#define TRAINER_ENPALE_ROUTE_15_GERALD         1069
+#define TRAINER_ENPALE_ROUTE_15_MABEL          1070
+#define TRAINER_ENPALE_ROUTE_15_HAZEL          1071
+#define TRAINER_ENPALE_ROUTE_16_BIRDKEEPER     1072
+#define TRAINER_ROUTE_16_AROMALADY             1073
+#define TRAINER_ENPALE_ROUTE_16_COOLM          1074
+#define TRAINER_ENPALE_ROUTE_16_COOLF          1075
+#define TRAINER_ENPALE_ROUTE_16_CRUSHGIRL      1076
+#define TRAINER_ENPALE_ROUTE_16_ROCKER         1077
+#define TRAINERS_COUNT_EMERALD                 1078
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

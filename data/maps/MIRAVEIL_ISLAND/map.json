@@ -17,6 +17,11 @@
       "map": "MAP_ENPALE_ROUTE_14",
       "offset": -44,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_15",
+      "offset": 44,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -129,7 +134,7 @@
       "y": 19,
       "elevation": 0,
       "dest_map": "MAP_MIRAVEIL_ISLAND_HALL",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

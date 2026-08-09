@@ -96,6 +96,24 @@ const u16 gTilesetPalettes_WallarMarshlands[][16] =
 
 const u32 gTilesetTiles_WallarMarshlands[] = INCGFX_U32("data/tilesets/secondary/wallar_marshlands/tiles.png", ".4bpp.fastSmol", "-num_tiles 192 -Wnum_tiles");
 
+const u16 gTilesetPalettes_baynoe_town[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/baynoe_town/palettes/12.pal", ".gbapal"),
+};
+const u32 gTilesetTiles_baynoe_town[] = INCGFX_U32("data/tilesets/secondary/baynoe_town/tiles.png", ".4bpp.fastSmol", "-num_tiles 144 -Wnum_tiles");
+
 const u32 gTilesetTiles_Rustboro[] = INCGFX_U32("data/tilesets/secondary/rustboro/tiles.png", ".4bpp.fastSmol", "-num_tiles 498 -Wnum_tiles");
 
 const u16 gTilesetPalettes_Rustboro[][16] =

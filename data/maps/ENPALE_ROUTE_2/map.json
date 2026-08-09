@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_KINNERET_TOWN",
-      "offset": -10,
+      "offset": -14,
       "direction": "right"
     },
     {
@@ -27,6 +27,11 @@
       "map": "MAP_ENPALE_ROUTE_3",
       "offset": -55,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_7",
+      "offset": 25,
+      "direction": "down"
     }
   ],
   "object_events": [

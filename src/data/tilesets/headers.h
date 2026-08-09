@@ -90,6 +90,16 @@ const struct Tileset gTileset_WallarMarshlands =
     .metatileAttributes = gMetatileAttributes_WallarMarshlands,
     .callback = NULL,
 };
+const struct Tileset gTileset_baynoe_town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_baynoe_town,
+    .palettes = gTilesetPalettes_baynoe_town,
+    .metatiles = gMetatiles_baynoe_town,
+    .metatileAttributes = gMetatileAttributes_baynoe_town,
+    .callback = NULL,
+};
 const struct Tileset gTileset_Petalburg =
 {
     .isCompressed = TRUE,

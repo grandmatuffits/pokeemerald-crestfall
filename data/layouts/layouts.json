@@ -9467,7 +9467,7 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_3",
       "name": "ENPALE_ROUTE_3_Layout",
-      "width": 80,
+      "width": 111,
       "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fallarbor",
@@ -9837,7 +9837,7 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_8",
       "name": "ENPALE_ROUTE_8_Layout",
-      "width": 29,
+      "width": 28,
       "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
@@ -10363,6 +10363,56 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/MIRAVEIL_ISLAND_HALL_2F/border.bin",
       "blockdata_filepath": "data/layouts/MIRAVEIL_ISLAND_HALL_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_15",
+      "name": "ENPALE_ROUTE_15_Layout",
+      "width": 120,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_15/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_15/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_16",
+      "name": "ENPALE_ROUTE_16_Layout",
+      "width": 103,
+      "height": 72,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_16/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_16/map.bin"
+    },
+    {
+      "id": "LAYOUT_BAYNOE_TOWN",
+      "name": "BAYNOE_TOWN_Layout",
+      "width": 40,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/BAYNOE_TOWN/border.bin",
+      "blockdata_filepath": "data/layouts/BAYNOE_TOWN/map.bin"
+    },
+    {
+      "id": "LAYOUT_BAYNOE_TOWN_HOUSE_1",
+      "name": "BAYNOE_TOWN_HOUSE_1_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BAYNOE_TOWN_HOUSE_1/border.bin",
+      "blockdata_filepath": "data/layouts/BAYNOE_TOWN_HOUSE_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_BERGEN_HILL",
+      "name": "BERGEN_HILL_Layout",
+      "width": 40,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/BERGEN_HILL/border.bin",
+      "blockdata_filepath": "data/layouts/BERGEN_HILL/map.bin"
     }
   ]
 }

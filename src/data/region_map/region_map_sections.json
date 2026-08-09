@@ -10,7 +10,7 @@
     },
     {
       "id": "MAPSEC_OLDALE_TOWN",
-      "name": "OLDALE TOWN",
+      "name": "Baynoe Town",
       "x": 4,
       "y": 9,
       "width": 1,
@@ -909,7 +909,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_15",
-      "name": "ROUTE 15",
+      "name": "Route 15",
       "x": 13,
       "y": 12,
       "width": 2,
@@ -917,7 +917,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_16",
-      "name": "ROUTE 16",
+      "name": "Route 16",
       "x": 7,
       "y": 6,
       "width": 4,
@@ -1549,7 +1549,7 @@
     },
     {
       "id": "MAPSEC_BIRTH_ISLAND",
-      "name": "BIRTH ISLAND"
+      "name": "Bergen Hill"
     },
     {
       "id": "MAPSEC_FARAWAY_ISLAND",
