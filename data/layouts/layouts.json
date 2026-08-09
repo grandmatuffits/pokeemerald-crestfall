@@ -10410,7 +10410,7 @@
       "width": 40,
       "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_DelmarkSouth",
       "border_filepath": "data/layouts/BERGEN_HILL/border.bin",
       "blockdata_filepath": "data/layouts/BERGEN_HILL/map.bin"
     }

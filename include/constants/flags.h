@@ -1324,6 +1324,8 @@
 #define FLAG_MIRAVEIL_DOORMAN_DEFEATED                    0x4C8
 #define FLAG_BAYNOE_BERGEN_DONE                           0x4C9
 #define FLAG_BAYNOE_OLDWOMAN_GAVE_ITEM                    0x4B7
+#define FLAG_HIDE_BERGEN_UMBRA                            0x4B8
+#define FLAG_BERGEN_HILL_DONE                             0x4B9
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag

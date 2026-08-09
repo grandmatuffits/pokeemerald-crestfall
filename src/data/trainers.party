@@ -20225,3 +20225,132 @@ Level: 40
 
 Electivire
 Level: 40
+
+=== TRAINER_BERGEN_ACOLYTE_1 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Furret @ None
+Level: 40
+
+Staravia @ None
+Level: 41
+
+=== TRAINER_BERGEN_ACOLYTE_2 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ampharos @ None
+Level: 41
+
+Swoobat @ None
+Level: 41
+
+=== TRAINER_BERGEN_ACOLYTE_3 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Whimsicott @ None
+Level: 42
+
+Roserade @ None
+Level: 42
+
+=== TRAINER_BERGEN_ACOLYTE_4 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Mamoswine @ None
+Level: 43
+
+Milotic @ None
+Level: 43
+
+=== TRAINER_BERGEN_ACOLYTE_5 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Bewear @ None
+Level: 43
+
+Gardevoir @ None
+Level: 44
+
+Togekiss @ None
+Level: 44
+
+=== TRAINER_UMBRA_BERGEN ===
+Name: Umbra
+Class: Covenant Grunt
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Skarmory @ Leftovers
+Level: 45
+-Spikes
+-Toxic
+-Roar
+-Drill Peck
+
+Tyranitar @ Leftovers
+Level: 46
+-Dragon Dance
+-Earthquake
+-Rock Slide
+-Crunch
+
+Swampert @ Leftovers
+Level: 46
+-Stealth Rock
+-Earthquake
+-Waterfall
+-Ice Punch
+
+Gengar @ Black Sludge
+Level: 47
+-Will-O-Wisp
+-Taunt
+-Thunderbolt
+-Shadow Ball
+
+Blissey @ Leftovers
+Level: 47
+-Soft-Boiled
+-Seismic Toss
+-Thunder Wave
+-Heal Bell
+
+Gyarados @ Gyaradosite
+Level: 48
+-Dragon Dance
+-Waterfall
+-Ice Fang
+-Earthquake

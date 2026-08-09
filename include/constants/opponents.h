@@ -1081,7 +1081,13 @@
 #define TRAINER_ENPALE_ROUTE_16_COOLF          1075
 #define TRAINER_ENPALE_ROUTE_16_CRUSHGIRL      1076
 #define TRAINER_ENPALE_ROUTE_16_ROCKER         1077
-#define TRAINERS_COUNT_EMERALD                 1078
+#define TRAINER_BERGEN_ACOLYTE_1               1078
+#define TRAINER_BERGEN_ACOLYTE_2               1079
+#define TRAINER_BERGEN_ACOLYTE_3               1080
+#define TRAINER_BERGEN_ACOLYTE_4               1081
+#define TRAINER_BERGEN_ACOLYTE_5               1082
+#define TRAINER_UMBRA_BERGEN                   1083
+#define TRAINERS_COUNT_EMERALD                 1084
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
