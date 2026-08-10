@@ -1944,3 +1944,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/BAYNOE_TOWN_HOUSE_1/scripts.inc"
 
 	.include "data/maps/BERGEN_HILL/scripts.inc"
+
+	.include "data/maps/BAYNOE_TEMPLE/scripts.inc"
+
+	.include "data/maps/BAYNOE_TEMPLE_2F/scripts.inc"

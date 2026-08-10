@@ -20354,3 +20354,52 @@ Level: 48
 -Waterfall
 -Ice Fang
 -Earthquake
+
+=== TRAINER_BRIGHAM ===
+Name: Brigham
+Class: Pkmn Trainer 1
+Pic: Leader Lt Surge Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Celebi @ None
+Level: 50
+-Leech Seed
+-Recover
+-Calm Mind
+-Psychic
+
+Jirachi @ None
+Level: 50
+-Iron Head
+-Body Slam
+-Fire Punch
+-Wish
+
+Shaymin @ None
+Level: 50
+-Seed Flare
+-Earth Power
+-Air Slash
+-Synthesis
+
+Mew @ None
+Level: 50
+-Rock Polish
+-Nasty Plot
+-Psychic
+-Focus Blast
+
+Wobbuffet @ None
+Level: 50
+Ability: Shadow Tag
+-Counter
+-Mirror Coat
+-Encore
+-Destiny Bond
+
+Ditto @ None
+Level: 50
+Ability: Imposter

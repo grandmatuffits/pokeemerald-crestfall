@@ -512,6 +512,7 @@ const u16 gObjectEventPal_Silvio[] = INCGFX_U16("graphics/object_events/palettes
 const u16 gObjectEventPal_Randall[] = INCGFX_U16("graphics/object_events/palettes/randall.pal", ".gbapal");
 const u16 gObjectEventPal_Praetus[] = INCGFX_U16("graphics/object_events/palettes/praetus.pal", ".gbapal");
 const u16 gObjectEventPal_Meryl[] = INCGFX_U16("graphics/object_events/palettes/meryl.pal", ".gbapal");
+const u16 gObjectEventPalette_Ross[] = INCGFX_U16("graphics/object_events/palettes/ross.pal", ".gbapal");
 const u16 gObjectEventPal_NpcBlueReflection[] = INCGFX_U16("graphics/object_events/palettes/npc_blue_reflection.pal", ".gbapal");
 const u16 gObjectEventPal_NpcPinkReflection[] = INCGFX_U16("graphics/object_events/palettes/npc_pink_reflection.pal", ".gbapal");
 const u16 gObjectEventPal_NpcGreenReflection[] = INCGFX_U16("graphics/object_events/palettes/npc_green_reflection.pal", ".gbapal");

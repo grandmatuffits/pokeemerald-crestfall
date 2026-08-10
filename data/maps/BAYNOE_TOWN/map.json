@@ -62,7 +62,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BAYNOE_TOWN_EventScript_AcolyteGirl2",
-      "flag": "0"
+      "flag": "FLAG_BERGEN_HILL_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -151,6 +151,13 @@
       "elevation": 0,
       "dest_map": "MAP_BAYNOE_TOWN_HOUSE_1",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_BAYNOE_TEMPLE",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],

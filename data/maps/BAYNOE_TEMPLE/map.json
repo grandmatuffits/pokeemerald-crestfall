@@ -1,0 +1,147 @@
+{
+  "id": "MAP_BAYNOE_TEMPLE",
+  "name": "BAYNOE_TEMPLE",
+  "layout": "LAYOUT_BAYNOE_TEMPLE",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_BAYNOE_BRIGHAM",
+      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "x": 10,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BAYNOE_TEMPLE_EventScript_Brigham",
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CLIPBOARD",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_BAYNOE_ROSS",
+      "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+      "x": 10,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_BAYNOE_ROSS"
+    },
+    {
+      "local_id": "LOCALID_BAYNOE_CELEBI",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CELEBI)",
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_BAYNOE_CELEBI"
+    },
+    {
+      "local_id": "LOCALID_BAYNOE_JIRACHI",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(JIRACHI)",
+      "x": 9,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_BAYNOE_JIRACHI"
+    },
+    {
+      "local_id": "LOCALID_BAYNOE_SHAYMIN",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHAYMIN)",
+      "x": 11,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_BAYNOE_SHAYMIN"
+    },
+    {
+      "local_id": "LOCALID_BAYNOE_MEW",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MEW)",
+      "x": 12,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_BAYNOE_MEW"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_BAYNOE_TEMPLE_2F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_BAYNOE_TEMPLE_2F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_BAYNOE_TOWN",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_BAYNOE_TOWN",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

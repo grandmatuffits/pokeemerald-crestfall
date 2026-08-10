@@ -10413,6 +10413,26 @@
       "secondary_tileset": "gTileset_DelmarkSouth",
       "border_filepath": "data/layouts/BERGEN_HILL/border.bin",
       "blockdata_filepath": "data/layouts/BERGEN_HILL/map.bin"
+    },
+    {
+      "id": "LAYOUT_BAYNOE_TEMPLE",
+      "name": "BAYNOE_TEMPLE_Layout",
+      "width": 22,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BAYNOE_TEMPLE/border.bin",
+      "blockdata_filepath": "data/layouts/BAYNOE_TEMPLE/map.bin"
+    },
+    {
+      "id": "LAYOUT_BAYNOE_TEMPLE_2F",
+      "name": "BAYNOE_TEMPLE_2F_Layout",
+      "width": 22,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BAYNOE_TEMPLE_2F/border.bin",
+      "blockdata_filepath": "data/layouts/BAYNOE_TEMPLE_2F/map.bin"
     }
   ]
 }

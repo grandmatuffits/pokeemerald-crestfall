@@ -1326,6 +1326,12 @@
 #define FLAG_BAYNOE_OLDWOMAN_GAVE_ITEM                    0x4B7
 #define FLAG_HIDE_BERGEN_UMBRA                            0x4B8
 #define FLAG_BERGEN_HILL_DONE                             0x4B9
+#define FLAG_BAYNOE_TEMPLE_DONE                           0x4CA
+#define FLAG_HIDE_BAYNOE_ROSS                             0x4CB
+#define FLAG_HIDE_BAYNOE_CELEBI                           0X4CC
+#define FLAG_HIDE_BAYNOE_JIRACHI                          0x4CD
+#define FLAG_HIDE_BAYNOE_SHAYMIN                          0x4CE
+#define FLAG_HIDE_BAYNOE_MEW                              0x4CF
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
