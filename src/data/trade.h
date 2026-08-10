@@ -1342,6 +1342,54 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 0,
         .requestedSpecies = SPECIES_MIMIKYU,
     },
+    [INGAME_TRADE_BAYNOE_ROWLET] =
+    {
+        .nickname = _("Rowlet"),
+        .species = SPECIES_ROWLET,
+        .ivs = {10, 10, 10, 10, 10, 10},
+        .abilityNum = 0,
+        .otId = 41001,
+        .conditions = {0, 0, 0, 0, 0},
+        .personality = 0x00000001,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("Marty"),
+        .otGender = MALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_FENNEKIN
+    },
+    [INGAME_TRADE_BAYNOE_FENNEKIN] =
+    {
+        .nickname = _("Fennekin"),
+        .species = SPECIES_FENNEKIN,
+        .ivs = {10, 10, 10, 10, 10, 10},
+        .abilityNum = 0,
+        .otId = 41002,
+        .conditions = {0, 0, 0, 0, 0},
+        .personality = 0x00000002,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("Jeff"),
+        .otGender = MALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_PIPLUP
+    },
+    [INGAME_TRADE_BAYNOE_PIPLUP] =
+    {
+        .nickname = _("Piplup"),
+        .species = SPECIES_PIPLUP,
+        .ivs = {10, 10, 10, 10, 10, 10},
+        .abilityNum = 0,
+        .otId = 41003,
+        .conditions = {0, 0, 0, 0, 0},
+        .personality = 0x00000003,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("Paul"),
+        .otGender = MALE,
+        .sheen = 0,
+        .requestedSpecies = SPECIES_ROWLET
+    },
 };
 
 static const u16 sIngameTradeMail[][MAIL_WORDS_COUNT + 1] =

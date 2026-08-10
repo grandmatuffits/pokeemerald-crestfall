@@ -41,15 +41,20 @@ BAYNOE_TEMPLE_EventScript_Brigham::
 	addobject LOCALID_BAYNOE_SHAYMIN
 	addobject LOCALID_BAYNOE_MEW
 	playse SE_M_MORNING_SUN
-	delay 90
-	@ --- they vanish in an instant ---
+	delay 60
+	applymovement LOCALID_BAYNOE_CELEBI, BAYNOE_TEMPLE_Movement_Spin
+	applymovement LOCALID_BAYNOE_JIRACHI, BAYNOE_TEMPLE_Movement_Spin
+	applymovement LOCALID_BAYNOE_SHAYMIN, BAYNOE_TEMPLE_Movement_Spin
+	applymovement LOCALID_BAYNOE_MEW, BAYNOE_TEMPLE_Movement_Spin
+	waitmovement 0
 	playse SE_M_TELEPORT
 	removeobject LOCALID_BAYNOE_CELEBI
 	removeobject LOCALID_BAYNOE_JIRACHI
 	removeobject LOCALID_BAYNOE_SHAYMIN
 	removeobject LOCALID_BAYNOE_MEW
-	delay 30
-	@ Brigham breaks down
+	delay 20
+	applymovement LOCALID_BAYNOE_BRIGHAM, BAYNOE_TEMPLE_Movement_BrighamLookAround
+	waitmovement 0
 	msgbox BAYNOE_TEMPLE_Text_BrighamBreakdown, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, BAYNOE_TEMPLE_Movement_PlayerStepLeft
@@ -97,6 +102,8 @@ BAYNOE_TEMPLE_Movement_RossApproach:
 	walk_up
 	walk_up
 	walk_up
+	walk_up
+	face_left
 	step_end
 
 BAYNOE_TEMPLE_Movement_RossLeave:
@@ -111,6 +118,24 @@ BAYNOE_TEMPLE_Movement_PlayerStepLeft:
 	walk_left
 	face_right
 	step_end
+
+BAYNOE_TEMPLE_Movement_Spin:
+	walk_in_place_fast_left
+	walk_in_place_fast_up
+	walk_in_place_fast_right
+	walk_in_place_fast_down
+	step_end
+
+BAYNOE_TEMPLE_Movement_BrighamLookAround:
+	delay_16
+	face_left
+	delay_16
+	face_right
+	delay_16
+	face_up
+	delay_16
+	face_down
+	step_end	
 
 BAYNOE_TEMPLE_Text_BrighamSpeech:
 	.string "…You. Of course it's you.\p"

@@ -1,0 +1,31 @@
+{
+  "id": "MAP_ENPALE_ROUTE_17",
+  "name": "ENPALE_ROUTE_17",
+  "layout": "LAYOUT_ENPALE_ROUTE_17",
+  "music": "MUS_ENPALE_ROUTE",
+  "region_map_section": "MAPSEC_ROUTE_17",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_BAYNOE_TOWN",
+      "offset": -16,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_MINSI_CITY",
+      "offset": -2,
+      "direction": "left"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

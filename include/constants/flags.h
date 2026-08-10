@@ -1332,6 +1332,9 @@
 #define FLAG_HIDE_BAYNOE_JIRACHI                          0x4CD
 #define FLAG_HIDE_BAYNOE_SHAYMIN                          0x4CE
 #define FLAG_HIDE_BAYNOE_MEW                              0x4CF
+#define FLAG_BAYNOE_TRADE_1_DONE                          0x4DC
+#define FLAG_BAYNOE_TRADE_2_DONE                          0x4DD
+#define FLAG_BAYNOE_TRADE_3_DONE                          0x4FA
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag

@@ -4,7 +4,7 @@ BAYNOE_TOWN_HOUSE_1_MapScripts::
 BAYNOE_HOUSE_EventScript_OldWoman::
 	lock
 	faceplayer
-	goto_if_set FLAG_BAYNOE_BERGEN_DONE, BAYNOE_HOUSE_EventScript_OldWomanReward
+	goto_if_set FLAG_BAYNOE_TEMPLE_DONE, BAYNOE_HOUSE_EventScript_OldWomanReward
 	msgbox BAYNOE_HOUSE_Text_OldWomanFlavor, MSGBOX_DEFAULT
 	release
 	end

@@ -10387,7 +10387,7 @@
     {
       "id": "LAYOUT_BAYNOE_TOWN",
       "name": "BAYNOE_TOWN_Layout",
-      "width": 40,
+      "width": 50,
       "height": 48,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
@@ -10433,6 +10433,36 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/BAYNOE_TEMPLE_2F/border.bin",
       "blockdata_filepath": "data/layouts/BAYNOE_TEMPLE_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_BAYNOE_TOWN_HOUSE_2",
+      "name": "BAYNOE_TOWN_HOUSE_2_Layout",
+      "width": 17,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BAYNOE_TOWN_HOUSE_2/border.bin",
+      "blockdata_filepath": "data/layouts/BAYNOE_TOWN_HOUSE_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_BAYNOE_TOWN_HOUSE_3",
+      "name": "BAYNOE_TOWN_HOUSE_3_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BAYNOE_TOWN_HOUSE_3/border.bin",
+      "blockdata_filepath": "data/layouts/BAYNOE_TOWN_HOUSE_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_17",
+      "name": "ENPALE_ROUTE_17_Layout",
+      "width": 80,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DelmarkSouth",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_17/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_17/map.bin"
     }
   ]
 }

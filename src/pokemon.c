@@ -5275,6 +5275,9 @@ u16 GetBattleBGM(void)
     return MUS_ENPALE_SILVIO;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_MERYL)
     return MUS_ENPALE_MERYL;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        && TRAINER_BATTLE_PARAM.opponentA == TRAINER_BRIGHAM)
+        return MUS_ENPALE_BRIGHAM;
 
     if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
     {

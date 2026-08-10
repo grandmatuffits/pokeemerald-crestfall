@@ -2,7 +2,7 @@
   "id": "MAP_BAYNOE_TOWN",
   "name": "BAYNOE_TOWN",
   "layout": "LAYOUT_BAYNOE_TOWN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_ALLENWOOD",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -27,7 +27,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 23,
+      "x": 33,
       "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -36,11 +36,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BAYNOE_TOWN_EventScript_AcolyteBoy1",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
-      "x": 15,
+      "x": 25,
       "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -49,11 +49,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BAYNOE_TOWN_EventScript_AcolyteGirl1",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
-      "x": 27,
+      "x": 37,
       "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -66,7 +66,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 23,
+      "x": 33,
       "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -75,11 +75,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BAYNOE_TOWN_EventScript_AcolyteBoy3",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 16,
+      "x": 26,
       "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -88,11 +88,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BAYNOE_TOWN_EventScript_AcolyteBoy4",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 6,
+      "x": 16,
       "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -101,11 +101,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BAYNOE_TOWN_EventScript_AcolyteBoy2",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 19,
+      "x": 29,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -114,11 +114,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BAYNOE_TOWN_EventScript_OldWoman",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 6,
+      "x": 16,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -127,44 +127,58 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BAYNOE_TOWN_EventScript_Man",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     }
   ],
   "warp_events": [
     {
-      "x": 3,
+      "x": 13,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDGE_TOWN_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 25,
+      "x": 35,
       "y": 26,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 10,
+      "x": 20,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_BAYNOE_TOWN_HOUSE_1",
       "dest_warp_id": "0"
     },
     {
-      "x": 27,
+      "x": 37,
       "y": 10,
       "elevation": 0,
       "dest_map": "MAP_BAYNOE_TEMPLE",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 33,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_BAYNOE_TOWN_HOUSE_2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_BAYNOE_TOWN_HOUSE_3",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 18,
+      "x": 28,
       "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -172,7 +186,7 @@
     },
     {
       "type": "sign",
-      "x": 29,
+      "x": 39,
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -180,7 +194,7 @@
     },
     {
       "type": "sign",
-      "x": 11,
+      "x": 21,
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
