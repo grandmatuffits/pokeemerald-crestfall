@@ -9357,7 +9357,7 @@
     {
       "id": "LAYOUT_MINSI_CITY",
       "name": "MINSI_CITY_Layout",
-      "width": 48,
+      "width": 61,
       "height": 38,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
@@ -10458,11 +10458,21 @@
       "id": "LAYOUT_ENPALE_ROUTE_17",
       "name": "ENPALE_ROUTE_17_Layout",
       "width": 80,
-      "height": 20,
+      "height": 86,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_DelmarkSouth",
+      "secondary_tileset": "gTileset_DelmarkEast",
       "border_filepath": "data/layouts/ENPALE_ROUTE_17/border.bin",
       "blockdata_filepath": "data/layouts/ENPALE_ROUTE_17/map.bin"
+    },
+    {
+      "id": "LAYOUT_MINSI_CITY_GYM",
+      "name": "MINSI_CITY_GYM_Layout",
+      "width": 6,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/MINSI_CITY_GYM/border.bin",
+      "blockdata_filepath": "data/layouts/MINSI_CITY_GYM/map.bin"
     }
   ]
 }

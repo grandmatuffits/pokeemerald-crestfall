@@ -22,6 +22,11 @@
       "map": "MAP_VELDTMOOR_CITY",
       "offset": 11,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_17",
+      "offset": -14,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -37,7 +42,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MINSI_CITY_EventScript_Machoke",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     },
     {
       "local_id": "LOCALID_MINSI_NORTHGUARD",
@@ -135,7 +140,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MINSI_CITY_EventScript_Worker",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     },
     {
       "local_id": "MINSI_CITY_WALKING_GUY",
@@ -179,7 +184,7 @@
       "x": 15,
       "y": 28,
       "elevation": 0,
-      "dest_map": "MAP_SOOTOPOLIS_CITY_GYM_1F",
+      "dest_map": "MAP_MINSI_CITY_GYM",
       "dest_warp_id": "0"
     },
     {
@@ -220,7 +225,7 @@
     },
     {
       "type": "trigger",
-      "x": 15,
+      "x": 13,
       "y": 29,
       "elevation": 0,
       "var": "VAR_TEMP_0",

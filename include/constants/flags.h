@@ -1335,6 +1335,8 @@
 #define FLAG_BAYNOE_TRADE_1_DONE                          0x4DC
 #define FLAG_BAYNOE_TRADE_2_DONE                          0x4DD
 #define FLAG_BAYNOE_TRADE_3_DONE                          0x4FA
+#define FLAG_HIDE_BAYNOE_COVENANT_BLOCK_1                 0x4FB
+#define FLAG_HIDE_BAYNOE_COVENANT_BLOCK_2                 0x4FC
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag

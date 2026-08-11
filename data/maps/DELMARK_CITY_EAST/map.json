@@ -27,6 +27,11 @@
       "map": "MAP_ENPALE_ROUTE_9",
       "offset": -7,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_17",
+      "offset": 23,
+      "direction": "up"
     }
   ],
   "object_events": [

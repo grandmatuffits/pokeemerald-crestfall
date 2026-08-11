@@ -22,6 +22,11 @@
       "map": "MAP_BERGEN_HILL",
       "offset": 2,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_17",
+      "offset": 0,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -127,6 +132,32 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BAYNOE_TOWN_EventScript_Man",
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 6,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BAYNOE_TOWN_EventScript_CovenantBlock1",
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 6,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BAYNOE_TOWN_EventScript_CovenantBlock2",
       "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     }
   ],

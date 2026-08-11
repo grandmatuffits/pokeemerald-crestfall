@@ -15,16 +15,74 @@
   "connections": [
     {
       "map": "MAP_BAYNOE_TOWN",
-      "offset": -16,
+      "offset": 0,
       "direction": "right"
     },
     {
       "map": "MAP_MINSI_CITY",
-      "offset": -2,
+      "offset": 14,
       "direction": "left"
+    },
+    {
+      "map": "MAP_DELMARK_CITY_EAST",
+      "offset": -23,
+      "direction": "down"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+      "x": 66,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ROUTE17_EventScript_Sailor",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",
+      "x": 47,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ROUTE17_EventScript_TriathleteF",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
+      "x": 29,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 5,
+      "movement_range_y": 5,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ROUTE17_EventScript_TriathleteM",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER_FRLG",
+      "x": 8,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ROUTE17_EventScript_Hiker",
+      "flag": "0"
+    }
+  ],
   "warp_events": [],
   "coord_events": [],
   "bg_events": []

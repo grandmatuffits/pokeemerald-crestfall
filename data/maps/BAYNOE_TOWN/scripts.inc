@@ -1,5 +1,15 @@
 BAYNOE_TOWN_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, BAYNOE_TOWN_OnTransition
 	.byte 0
+
+BAYNOE_TOWN_OnTransition::
+	goto_if_set FLAG_BAYNOE_TEMPLE_DONE, BAYNOE_TOWN_OnTransition_CovenantGone
+	end
+
+BAYNOE_TOWN_OnTransition_CovenantGone::
+	setflag FLAG_HIDE_BAYNOE_COVENANT_BLOCK_1
+	setflag FLAG_HIDE_BAYNOE_COVENANT_BLOCK_2
+	end	
 
 BAYNOE_TOWN_EventScript_AcolyteBoy1::
 	msgbox BAYNOE_TOWN_Text_AcolyteBoy1, MSGBOX_NPC
@@ -108,3 +118,23 @@ BAYNOE_TOWN_Text_BergenSign:
 	.string "NORTH TO BERGEN HILL\p"
 	.string "A nature park. Please tread\n"
 	.string "lightly.$"	
+
+BAYNOE_TOWN_EventScript_CovenantBlock1::
+	msgbox BAYNOE_TOWN_Text_CovenantBlock1, MSGBOX_NPC
+	end
+
+BAYNOE_TOWN_EventScript_CovenantBlock2::
+	msgbox BAYNOE_TOWN_Text_CovenantBlock2, MSGBOX_NPC
+	end
+
+BAYNOE_TOWN_Text_CovenantBlock1:
+	.string "This road's closed. Covenant\n"
+	.string "business up ahead.\p"
+	.string "Turn around. Nothing past here\n"
+	.string "concerns you.$"
+
+BAYNOE_TOWN_Text_CovenantBlock2:
+	.string "The path north is ours for now.\n"
+	.string "Leader's orders.\p"
+	.string "Go on back to town. You'll only\n"
+	.string "get in the way out here.$"	

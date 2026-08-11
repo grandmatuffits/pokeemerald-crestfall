@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BAYNOE_HOUSE_ELDERS_Text_OldWoman",
+      "script": "BAYNOE_HOUSE_ELDERS_EventScript_OldWoman",
       "flag": "0"
     }
   ],

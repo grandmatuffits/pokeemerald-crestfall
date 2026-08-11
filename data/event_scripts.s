@@ -1954,3 +1954,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/BAYNOE_TOWN_HOUSE_3/scripts.inc"
 
 	.include "data/maps/ENPALE_ROUTE_17/scripts.inc"
+
+	.include "data/maps/MINSI_CITY_GYM/scripts.inc"

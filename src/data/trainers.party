@@ -20403,3 +20403,129 @@ Ability: Shadow Tag
 Ditto @ None
 Level: 50
 Ability: Imposter
+
+=== TRAINER_ROUTE17_SAILOR ===
+Name: Dwyer
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Gyarados @ None
+Level: 48
+
+Tentacruel @ None
+Level: 48
+
+Kingdra @ None
+Level: 49
+
+=== TRAINER_ROUTE17_TRIATHLETE_F ===
+Name: Kira
+Class: Triathlete
+Pic: Running Triathlete F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Staraptor @ None
+Level: 49
+
+Luxray @ None
+Level: 49
+
+=== TRAINER_ROUTE17_TRIATHLETE_M ===
+Name: Devin
+Class: Triathlete
+Pic: Cycling Triathlete M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ninjask @ None
+Level: 49
+
+Electrode @ None
+Level: 49
+
+Galvantula @ None
+Level: 49
+
+=== TRAINER_ROUTE17_HIKER ===
+Name: Boone
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Aggron @ None
+Level: 50
+
+Torkoal @ None
+Level: 49
+
+Gigalith @ None
+Level: 49
+
+=== TRAINER_ROSS ===
+Name: Ross
+Class: Leader
+Pic: Leader Juan
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Amoonguss @ None
+Level: 52
+Ability: Effect Spore
+- Spore
+- Giga Drain
+- Sludge Bomb
+- Clear Smog
+
+Toxicroak @ None
+Level: 52
+Ability: Dry Skin
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Ice Punch
+
+Toxapex @ None
+Level: 53
+Ability: Merciless
+- Sludge Wave
+- Scald
+- Baneful Bunker
+- Recover
+
+Tentacruel @ None
+Level: 54
+Ability: Liquid Ooze
+- Scald
+- Sludge Wave
+- Rapid Spin
+- Ice Beam
+
+Muk @ None
+Level: 54
+Ability: Poison Touch
+- Toxic
+- Sludge Wave
+- Minimize
+- Shadow Sneak
+
+Salazzle @ None
+Level: 55
+Ability: Corrosion
+- Flamethrower
+- Sludge Wave
+- Dragon Pulse
+- Nasty Plot
