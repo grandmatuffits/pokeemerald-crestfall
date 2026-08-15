@@ -645,6 +645,7 @@ gSongTable::
 			song mus_enpale_miraveil, MUSIC_PLAYER_BGM, 0
 			song mus_enpale_meryl, MUSIC_PLAYER_BGM, 0
 			song mus_enpale_brigham, MUSIC_PLAYER_BGM, 0
+			song mus_enpale_ross, MUSIC_PLAYER_BGM, 0
 	
 	.align 2
 dummy_song_header:

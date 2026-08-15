@@ -1093,7 +1093,25 @@
 #define TRAINER_ROUTE17_TRIATHLETE_M           1087
 #define TRAINER_ROUTE17_HIKER                  1088
 #define TRAINER_ROSS                           1089
-#define TRAINERS_COUNT_EMERALD                 1090
+#define TRAINER_VICTORY_ROAD_1                 1090
+#define TRAINER_VICTORY_ROAD_2                 1091
+#define TRAINER_VICTORY_ROAD_3                 1092
+#define TRAINER_VICTORY_ROAD_4                 1093
+#define TRAINER_VICTORY_ROAD_5                 1094
+#define TRAINER_VICTORY_ROAD_6                 1095
+#define TRAINER_VICTORY_ROAD_7                 1096
+#define TRAINER_VICTORY_ROAD_8                 1097
+#define TRAINER_VICTORY_ROAD_9                 1098
+#define TRAINER_VICTORY_ROAD_10                1099
+#define TRAINER_VICTORY_ROAD_11                1100
+#define TRAINER_VICTORY_ROAD_12                1101
+#define TRAINER_RIVALCF_FINAL                  1102
+#define TRAINER_ENPALE_E4_FIRE                 1103
+#define TRAINER_ENPALE_E4_WATER                1104
+#define TRAINER_ENPALE_E4_GRASS                1105
+#define TRAINER_ENPALE_E4_BUG                  1106
+#define TRAINER_BRUTUS                         1107
+#define TRAINERS_COUNT_EMERALD                 1108
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

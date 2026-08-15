@@ -1337,15 +1337,17 @@
 #define FLAG_BAYNOE_TRADE_3_DONE                          0x4FA
 #define FLAG_HIDE_BAYNOE_COVENANT_BLOCK_1                 0x4FB
 #define FLAG_HIDE_BAYNOE_COVENANT_BLOCK_2                 0x4FC
+#define FLAG_HIDE_VELDTMOOR_RIVAL                         0x4FD
+#define FLAG_VELDTMOOR_RIVAL_DONE                         0x4FE
+#define FLAG_DEFEATED_E4_FIRE                             0x4FF
+#define FLAG_DEFEATED_E4_WATER                            0x4BA
+#define FLAG_DEFEATED_E4_GRASS                            0x264
+#define FLAG_DEFEATED_E4_BUG                              0x265
+#define FLAG_HIDE_ARENA_BRUTUS                            0x266
+#define FLAG_HIDE_ARENA_HEMLOCK                           0x267
+#define FLAG_HIDE_ARENA_UMBRA                             0x268
+#define FLAG_DEFEATED_ENPALE_CHAMP                        0x269
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag

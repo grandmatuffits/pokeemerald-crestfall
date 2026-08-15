@@ -20529,3 +20529,555 @@ Ability: Corrosion
 - Sludge Wave
 - Dragon Pulse
 - Nasty Plot
+
+=== TRAINER_VICTORY_ROAD_1 ===
+Name: Marla
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Tentacruel @ None
+Level: 48
+
+Starmie @ None
+Level: 49
+
+Gyarados @ None
+Level: 50
+
+=== TRAINER_VICTORY_ROAD_2 ===
+Name: Boyd
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Cloyster @ None
+Level: 49
+
+Sharpedo @ None
+Level: 49
+
+Kingdra @ None
+Level: 50
+
+=== TRAINER_VICTORY_ROAD_3 ===
+Name: Nadia
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Jellicent @ None
+Level: 49
+
+Milotic @ None
+Level: 50
+
+Toxapex @ None
+Level: 51
+
+=== TRAINER_VICTORY_ROAD_4 ===
+Name: Reef
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Golisopod @ None
+Level: 50
+
+Quagsire @ None
+Level: 50
+
+Lapras @ None
+Level: 51
+
+=== TRAINER_VICTORY_ROAD_5 ===
+Name: Kent
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Staraptor @ None
+Level: 48
+
+Luxray @ None
+Level: 49
+
+Gigalith @ None
+Level: 49
+
+=== TRAINER_VICTORY_ROAD_6 ===
+Name: Lena
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Ninetales @ None
+Level: 49
+
+Roserade @ None
+Level: 49
+
+Gardevoir @ None
+Level: 50
+
+=== TRAINER_VICTORY_ROAD_7 ===
+Name: Dusan
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Machamp @ None
+Level: 50
+
+Toxicroak @ None
+Level: 50
+
+Lucario @ None
+Level: 51
+
+=== TRAINER_VICTORY_ROAD_8 ===
+Name: Iris
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Alakazam @ None
+Level: 50
+
+Musharna @ None
+Level: 50
+
+Aegislash @ None
+Level: 51
+
+=== TRAINER_VICTORY_ROAD_9 ===
+Name: Lance
+Class: Dragon Tamer
+Pic: Dragon Tamer
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Flygon @ None
+Level: 51
+
+Kingdra @ None
+Level: 51
+
+Salamence @ None
+Level: 52
+
+=== TRAINER_VICTORY_ROAD_10 ===
+Name: Gideon
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Chandelure @ None
+Level: 51
+
+Mismagius @ None
+Level: 52
+
+Tyranitar @ None
+Level: 52
+
+=== TRAINER_VICTORY_ROAD_11 ===
+Name: Odette
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Bewear @ None
+Level: 52
+
+Mamoswine @ None
+Level: 52
+
+Garchomp @ None
+Level: 53
+
+=== TRAINER_VICTORY_ROAD_12 ===
+Name: Rourke
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Aggron @ None
+Level: 52
+
+Hydreigon @ None
+Level: 53
+
+Metagross @ None
+Level: 53
+
+=== TRAINER_RIVALCF_FINAL ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Honchkrow @ Life Orb
+Level: 52
+-Brave Bird
+-Sucker Punch
+-Pursuit
+-Superpower
+
+Musharna @ Leftovers
+Level: 52
+-Future Sight
+-Dazzling Gleam
+-Moonlight
+-Healing Wish
+
+Raichu @ Life Orb
+Level: 52
+-Nasty Plot
+-Thunderbolt
+-Grass Knot
+-Focus Blast
+
+Sandslash-Alola @ Shuca Berry
+Level: 53
+-Swords Dance
+-Icicle Crash
+-Iron Head
+-Earthquake  
+
+Banette @ Banettite
+Level: 53
+-Destiny Bond
+-Shadow Claw
+-Gunk Shot
+-Knock Off
+
+Mienshao @ Assault Vest
+Level: 54
+-High Jump Kick
+-Knock Off
+-U-Turn
+-Fake Out
+
+=== TRAINER_ENPALE_E4_FIRE ===
+Name: Redding
+Class: Elite Four
+Pic: Elite Four Sidney
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Ninetales @ Heat Rock
+Level: 55
+Ability: Drought
+- Flamethrower
+- Nasty Plot
+- Dark Pulse
+- Solar Beam
+
+Camerupt @ Leftovers
+Level: 55
+Ability: Solid Rock
+- Eruption
+- Earth Power
+- Flash Cannon
+- Will-O-Wisp
+
+Chandelure @ Choice Specs
+Level: 56
+Ability: Flash Fire
+- Shadow Ball
+- Flamethrower
+- Energy Ball
+- Trick
+
+Houndoom @ Life Orb
+Level: 56
+Ability: Flash Fire
+- Fire Blast
+- Nasty Plot
+- Dark Pulse
+- Sludge Bomb
+
+Blaziken @ Life Orb
+Level: 57
+Ability: Speed Boost
+- Close Combat
+- Flare Blitz
+- Stone Edge
+- Swords Dance
+
+Charizard @ Charizardite Y
+Level: 58
+Ability: Blaze
+- Flamethrower
+- Air Slash
+- Dragon Pulse
+- Roost
+
+=== TRAINER_ENPALE_E4_WATER ===
+Name: Bluto
+Class: Elite Four
+Pic: Elite Four Phoebe
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Cloyster @ Focus Sash
+Level: 57
+Ability: Skill Link
+- Shell Smash
+- Icicle Spear
+- Rock Blast
+- Hydro Pump
+
+Azumarill @ Sitrus Berry
+Level: 57
+Ability: Huge Power
+- Belly Drum
+- Aqua Jet
+- Play Rough
+- Knock Off
+
+Toxapex @ Leftovers
+Level: 58
+Ability: Regenerator
+- Scald
+- Recover
+- Toxic
+- Haze
+
+Milotic @ Leftovers
+Level: 58
+Ability: Marvel Scale
+- Scald
+- Ice Beam
+- Recover
+- Dragon Pulse
+
+Swampert @ Leftovers
+Level: 59
+Ability: Torrent
+- Earthquake
+- Waterfall
+- Ice Punch
+- Stealth Rock
+
+Blastoise @ Blastoisinite
+Level: 60
+Ability: Torrent
+- Scald
+- Ice Beam
+- Dark Pulse
+- Aura Sphere
+
+=== TRAINER_ENPALE_E4_GRASS ===
+Name: Gretle
+Class: Elite Four
+Pic: Elite Four Glacia
+Gender: Female    
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Ferrothorn @ Rocky Helmet
+Level: 58
+Ability: Iron Barbs
+- Stealth Rock
+- Spikes
+- Power Whip
+- Gyro Ball
+
+Tangrowth @ Leftovers
+Level: 59
+Ability: Regenerator
+- Giga Drain
+- Knock Off
+- Sleep Powder
+- Ancient Power
+
+Vileplume @ Leftovers
+Level: 60
+Ability: Effect Spore
+- Giga Drain
+- Sludge Bomb
+- Strength Sap
+- Sleep Powder
+
+Whimsicott @ Pixie Plate
+Level: 61
+Ability: Prankster
+- Moonblast
+- Taunt
+- Tailwind
+- Stun Spore
+
+Sceptile @ None
+Level: 62
+Ability: Overgrow
+- Leaf Storm
+- Dragon Pulse
+- Focus Blast
+- Acrobatics
+
+Venusaur @ Venusaurite
+Level: 64
+Ability: Overgrow
+- Sludge Bomb
+- Giga Drain
+- Leech Seed
+- Synthesis
+
+=== TRAINER_ENPALE_E4_BUG ===
+Name: Rick
+Class: Elite Four
+Pic: Elite Four Drake
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Galvantula @ Focus Sash
+Level: 61
+Ability: Compound Eyes
+- Thunder
+- Bug Buzz
+- Energy Ball
+- Sticky Web
+
+Volcarona @ Focus Sash
+Level: 62
+Ability: Flame Body
+- Quiver Dance
+- Flamethrower
+- Bug Buzz
+- Giga Drain
+
+Golisopod @ Insect Plate
+Level: 62
+Ability: Emergency Exit
+- First Impression
+- Leech Life
+- Aqua Jet
+- Liquidation
+
+Durant @ Leftovers
+Level: 63
+Ability: Truant
+- Entrainment
+- Iron Head
+- X-Scissor
+- Superpower
+
+Shedinja @ Heavy Duty Boots
+Level: 63
+Ability: Wonder Guard
+- Shadow Sneak
+- X-Scissor
+- Will-O-Wisp
+- Protect
+
+Scizor @ Scizorite
+Level: 64
+Ability: Technician
+- Bullet Punch
+- U-turn
+- Swords Dance
+- Dual Wingbeat
+
+=== TRAINER_BRUTUS ===
+Name: Brutus
+Class: Champion
+Pic: Leader Giovanni Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Dragonite @ Leftovers
+Level: 63
+Ability: Multiscale
+- Outrage
+- Dragon Dance
+- Fire Punch
+- Extreme Speed
+
+Kingdra @ Choice Specs
+Level: 63
+Ability: Sniper
+- Flip Turn
+- Hydro Pump
+- Ice Beam
+- Draco Meteor
+
+Garchomp @ Life Orb
+Level: 64
+Ability: Rough Skin
+- Earthquake
+- Scale Shot
+- Stone Edge
+- Swords Dance
+
+Hydreigon @ Choice Scarf
+Level: 64
+Ability: Levitate
+- Draco Meteor
+- Dark Pulse
+- U-turn
+- Fire Blast
+
+Haxorus @ Life Orb
+Level: 65
+Ability: Mold Breaker
+- Dragon Dance
+- Outrage
+- Earthquake
+- Poison Jab
+
+Salamence @ Salamencite
+Level: 66
+Ability: Intimidate
+- Hyper Voice
+- Dragon Dance
+- Earthquake
+- Dragon Claw

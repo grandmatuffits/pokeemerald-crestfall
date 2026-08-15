@@ -17,6 +17,16 @@
       "map": "MAP_ENPALE_ROUTE_6",
       "offset": 15,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_18",
+      "offset": 44,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_19",
+      "offset": 40,
+      "direction": "up"
     }
   ],
   "object_events": [

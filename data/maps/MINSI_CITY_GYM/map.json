@@ -33,15 +33,15 @@
       "x": 2,
       "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_MINSI_CITY",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_MINSI_CITY_GYM_2F",
+      "dest_warp_id": "2"
     },
     {
       "x": 3,
       "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_MINSI_CITY",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_MINSI_CITY_GYM_2F",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],

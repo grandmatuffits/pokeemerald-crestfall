@@ -3,7 +3,6 @@
   "name": "EverGrandeCity_Hall3",
   "layout": "LAYOUT_EVER_GRANDE_CITY_SHORT_HALL",
   "music": "MUS_VICTORY_ROAD",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -27,7 +26,7 @@
       "x": 5,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_EVER_GRANDE_CITY_DRAKES_ROOM",
+      "dest_map": "MAP_ENPALE_LEAGUE_BUG",
       "dest_warp_id": "0"
     },
     {
@@ -46,5 +45,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

@@ -77,6 +77,10 @@ MINSI_CITY_Text_GuardName:
 MINSI_CITY_Text_Guard1:
 	.string "Sorry kid, you can't come\nthrough without 8 badges.$"
 
+MINSI_CITY_EventScript_NorthCheckpoint::
+	goto_if_unset FLAG_BADGE04_GET, MINSI_CITY_EventScript_NorthTrigger
+	end
+
 MINSI_CITY_EventScript_NorthTrigger::
 	lockall
 	applymovement LOCALID_MINSI_NORTHGUARD, MINSI_CITY_Movement_GuardFacePlayer
@@ -102,13 +106,7 @@ MINSI_CITY_Movement_PlayerFaceSouth::
 	step_end
 
 MINSI_CITY_EventScript_GymDoor::
-	goto_if_unset FLAG_BADGE01_GET, MINSI_CITY_EventScript_GymLocked
-	goto_if_unset FLAG_BADGE02_GET, MINSI_CITY_EventScript_GymLocked
-	goto_if_unset FLAG_BADGE03_GET, MINSI_CITY_EventScript_GymLocked
-	goto_if_unset FLAG_BADGE04_GET, MINSI_CITY_EventScript_GymLocked
-	goto_if_unset FLAG_BADGE05_GET, MINSI_CITY_EventScript_GymLocked
-	goto_if_unset FLAG_BADGE06_GET, MINSI_CITY_EventScript_GymLocked
-	goto_if_unset FLAG_BADGE07_GET, MINSI_CITY_EventScript_GymLocked
+	goto_if_unset FLAG_BAYNOE_TEMPLE_DONE, MINSI_CITY_EventScript_GymLocked
 	end
 
 MINSI_CITY_EventScript_GymLocked::
@@ -125,7 +123,7 @@ MINSI_CITY_Movement_PlayerStepBack::
 	step_end
 	
 MINSI_CITY_Text_GymLocked:
-	.string "The gym is locked.\nYou need 7 badges to enter.$"
+	.string "The gym is currently closed.$"
 
 MINSI_CITY_EventScript_SouthTrigger::
 	goto_if_set FLAG_SYS_POKEDEX_GET, MINSI_CITY_EventScript_SouthTrigger_End
@@ -240,3 +238,13 @@ MINSI_CITY_EventScript_CitySign::
 MINSI_CITY_Text_City_Sign:
 	.string "Minsi City\n"
 	.string "Fresh air and fresh beginnings$"
+
+MINSI_CITY_EventScript_SouthBlock::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_SouthBlock, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_SouthBlock:
+	.string "Good luck, champ!$"	

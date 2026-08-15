@@ -1956,3 +1956,21 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/ENPALE_ROUTE_17/scripts.inc"
 
 	.include "data/maps/MINSI_CITY_GYM/scripts.inc"
+
+	.include "data/maps/MINSI_CITY_GYM_2F/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_18/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_19/scripts.inc"
+
+	.include "data/maps/ENPALE_ROUTE_20/scripts.inc"
+
+	.include "data/maps/ENPALE_POKEMON_LEAGUE_1F/scripts.inc"
+
+	.include "data/maps/ENPALE_LEAGUE_FIRE/scripts.inc"
+
+	.include "data/maps/ENPALE_LEAGUE_WATER/scripts.inc"
+
+	.include "data/maps/ENPALE_LEAGUE_GRASS/scripts.inc"
+
+	.include "data/maps/ENPALE_LEAGUE_BUG/scripts.inc"

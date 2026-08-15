@@ -571,6 +571,7 @@
 #define MUS_ENPALE_MIRAVEIL         636
 #define MUS_ENPALE_MERYL            637
 #define MUS_ENPALE_BRIGHAM          638
+#define MUS_ENPALE_ROSS             639
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

@@ -9377,7 +9377,7 @@
     {
       "id": "LAYOUT_ALLENWOOD_FOREST",
       "name": "ALLENWOOD__FOREST_Layout",
-      "width": 42,
+      "width": 50,
       "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
@@ -9477,7 +9477,7 @@
     {
       "id": "LAYOUT_VELDTMOOR_CITY",
       "name": "VELDTMOOR_CITY_Layout",
-      "width": 32,
+      "width": 44,
       "height": 33,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_EverGrande",
@@ -10473,6 +10473,96 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/MINSI_CITY_GYM/border.bin",
       "blockdata_filepath": "data/layouts/MINSI_CITY_GYM/map.bin"
+    },
+    {
+      "id": "LAYOUT_MINSI_CITY_GYM_2F",
+      "name": "MINSI_CITY_GYM_2F_Layout",
+      "width": 13,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/MINSI_CITY_GYM_2F/border.bin",
+      "blockdata_filepath": "data/layouts/MINSI_CITY_GYM_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_18",
+      "name": "ENPALE_ROUTE_18_Layout",
+      "width": 24,
+      "height": 120,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_18/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_18/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_19",
+      "name": "ENPALE_ROUTE_19_Layout",
+      "width": 32,
+      "height": 70,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_19/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_19/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_ROUTE_20",
+      "name": "ENPALE_ROUTE_20_Layout",
+      "width": 68,
+      "height": 66,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/ENPALE_ROUTE_20/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_ROUTE_20/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_POKEMON_LEAGUE_1F",
+      "name": "ENPALE_POKEMON_LEAGUE_1F_Layout",
+      "width": 17,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ENPALE_POKEMON_LEAGUE_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_POKEMON_LEAGUE_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_LEAGUE_FIRE",
+      "name": "ENPALE_LEAGUE_FIRE_Layout",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/ENPALE_LEAGUE_FIRE/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_LEAGUE_FIRE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_LEAGUE_WATER",
+      "name": "ENPALE_LEAGUE_WATER_Layout",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/ENPALE_LEAGUE_WATER/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_LEAGUE_WATER/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_LEAGUE_GRASS",
+      "name": "ENPALE_LEAGUE_GRASS_Layout",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/ENPALE_LEAGUE_GRASS/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_LEAGUE_GRASS/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_LEAGUE_BUG",
+      "name": "ENPALE_LEAGUE_BUG_Layout",
+      "width": 13,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/ENPALE_LEAGUE_BUG/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_LEAGUE_BUG/map.bin"
     }
   ]
 }
