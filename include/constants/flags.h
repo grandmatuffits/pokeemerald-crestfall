@@ -1348,6 +1348,16 @@
 #define FLAG_HIDE_ARENA_UMBRA                             0x268
 #define FLAG_DEFEATED_ENPALE_CHAMP                        0x269
 #define FLAG_MINSI_EXP_SHARE_RECEIVED                     0x26A
+#define FLAG_MINSI_SHINY_CHARM_RECEIVED                   0x26B
+#define FLAG_MINSI_OVAL_STARTED                           0x27C
+#define FLAG_MINSI_OVAL_DELIVERED                         0x27D
+#define FLAG_MINSI_OVAL_RECEIVED                          0x27E
+#define FLAG_MINSI_NATDEX_RECEIVED                        0x27F
+#define FLAG_MINSI_CATCHING_CHARM_RECEIVED                0x280
+#define FLAG_PORYGON_QUEST_STARTED                        0x281
+#define FLAG_PORYGON_MODULE_FOUND                         0x282
+#define FLAG_PORYGON_RECEIVED                             0x283
+#define FLAG_HIDE_MINSI_LAB_RIVAL                         0x276
 
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag

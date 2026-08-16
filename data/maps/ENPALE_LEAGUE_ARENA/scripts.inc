@@ -107,9 +107,8 @@ ENPALE_LEAGUE_ARENA_PostBattle::
 	setspeaker ENPALE_LEAGUE_ARENA_Text_BrutusName
 	msgbox ENPALE_LEAGUE_ARENA_Text_BrutusPreBattle, MSGBOX_SIGN
 	closemessage
-	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanToPlayer
-	waitmovement 0
 	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanBackToPlayer
+	waitmovement 0
 	special RemoveCameraObject
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, TRUE
 	trainerbattle_no_intro TRAINER_BRUTUS, ENPALE_LEAGUE_ARENA_Text_Dummy
@@ -225,15 +224,15 @@ ENPALE_LEAGUE_ARENA_Movement_CameraPanToBrutus:
 	step_end
 
 ENPALE_LEAGUE_ARENA_Movement_CameraPanToPlayer:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 	ENPALE_LEAGUE_ARENA_Movement_CameraPanBackToPlayer:

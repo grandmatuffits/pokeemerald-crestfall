@@ -89,3 +89,22 @@ ALLENWOOD__FOREST_Text_ChetDefeat:
 
 ALLENWOOD__FOREST_Text_ChetRepeat:
 	.string "How could I lose!? Bug Pokemon\nare the strongest!$"
+
+ALLENWOOD_FOREST_EventScript_Module::
+	lockall
+	goto_if_set FLAG_PORYGON_MODULE_FOUND, ALLENWOOD_FOREST_EventScript_ModuleGone
+	goto_if_unset FLAG_PORYGON_QUEST_STARTED, ALLENWOOD_FOREST_EventScript_ModuleUnknown
+	msgbox ALLENWOOD_FOREST_Text_ModuleFound, MSGBOX_DEFAULT
+	setflag FLAG_PORYGON_MODULE_FOUND
+	releaseall
+	end
+
+ALLENWOOD_FOREST_EventScript_ModuleUnknown::
+	msgbox ALLENWOOD_FOREST_Text_ModuleUnknown, MSGBOX_DEFAULT
+	releaseall
+	end
+
+ALLENWOOD_FOREST_EventScript_ModuleGone::
+	msgbox ALLENWOOD_FOREST_Text_ModuleGone, MSGBOX_DEFAULT
+	releaseall
+	end	

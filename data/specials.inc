@@ -645,3 +645,5 @@ gSpecials::
 	def_special GetCaughtPokedexCount
 	def_special CheckCaughtFeebas
 	def_special CheckPlayerHasGyarados
+	def_special CheckPartyForShiny
+	def_special CheckCaughtSpecies

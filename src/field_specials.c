@@ -4417,7 +4417,26 @@ void PreparePartyForSkyBattle(void)
     VarSet(B_VAR_SKY_BATTLE,participatingPokemonSlot);
     CompactPartySlots();
 }
+void CheckCaughtSpecies(void)
+{
+    gSpecialVar_Result = GetSetPokedexFlag(SpeciesToNationalPokedexNum(gSpecialVar_0x8004), FLAG_GET_CAUGHT);
+}
+void CheckPartyForShiny(void)
+{
+    u32 i;
 
+    gSpecialVar_Result = FALSE;
+    for (i = 0; i < CalculatePlayerPartyCount(); i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SANITY_HAS_SPECIES)
+         && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG)
+         && GetMonData(&gPlayerParty[i], MON_DATA_IS_SHINY))
+        {
+            gSpecialVar_Result = TRUE;
+            break;
+        }
+    }
+}
 void GetObjectPosition(u16* xPointer, u16* yPointer, u32 localId, u32 useTemplate)
 {
     u32 objectId;

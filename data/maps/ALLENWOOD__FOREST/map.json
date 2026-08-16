@@ -154,6 +154,14 @@
       "elevation": 0,
       "item": "ITEM_NUGGET",
       "flag": "FLAG_HIDDEN_ITEM_ALLENWOOD_FOREST_NUGGET"
+    },
+    {
+      "type": "sign",
+      "x": 49,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ALLENWOOD_FOREST_EventScript_Module"
     }
   ]
 }

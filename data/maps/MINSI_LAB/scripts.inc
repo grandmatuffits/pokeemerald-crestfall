@@ -274,16 +274,22 @@ MINSI_LAB_EventScript_PostRivalBattle::
 MINSI_LAB_EventScript_RivalLeaveRowlet::
 	applymovement LOCALID_RIVALCF, MINSI_LAB_Movement_RivalLeaveRowlet
 	waitmovement 0
+	setflag FLAG_UNUSED_0x028
+	removeobject LOCALID_RIVALCF
 	goto MINSI_LAB_EventScript_HemlockClosing
 
 MINSI_LAB_EventScript_RivalLeaveFennekin::
 	applymovement LOCALID_RIVALCF, MINSI_LAB_Movement_RivalLeaveFennekin
 	waitmovement 0
+	setflag FLAG_UNUSED_0x028
+	removeobject LOCALID_RIVALCF
 	goto MINSI_LAB_EventScript_HemlockClosing
 
 MINSI_LAB_EventScript_RivalLeavePiplup::
 	applymovement LOCALID_RIVALCF, MINSI_LAB_Movement_RivalLeavePiplup
 	waitmovement 0
+	setflag FLAG_UNUSED_0x028
+	removeobject LOCALID_RIVALCF
 	goto MINSI_LAB_EventScript_HemlockClosing
 
 MINSI_LAB_EventScript_HemlockClosing::
@@ -410,9 +416,6 @@ MINSI_LAB_Text_Hemlock1:
 MINSI_LAB_Text_Hemlock2:
 	.string "Oh! Don't forget your Pokedex!\nA Pokemon Trainer is never fully\ldressed without one!$"
 
-MINSI_LAB_Text_Hemlock3:
-	.string "Now go out there\nand explore Enpale!$"
-
 MINSI_LAB_Text_Hemlock4:
 	.string "Who are you?$"
 
@@ -525,7 +528,368 @@ MINSI_LAB_EventScript_HemlockRepeat::
 	lock
 	faceplayer
 	setspeaker MINSI_LAB_Text_HemlockName
+	goto_if_set FLAG_MINSI_NATDEX_RECEIVED, MINSI_LAB_EventScript_HemlockPostDex
+	special GetCaughtPokedexCount
+	compare VAR_RESULT, 100
+	goto_if_ge MINSI_LAB_EventScript_HemlockAwardDex
 	msgbox MINSI_LAB_Text_Hemlock3, MSGBOX_SIGN
 	closemessage
 	release
 	end
+
+MINSI_LAB_EventScript_HemlockAwardDex::
+	msgbox MINSI_LAB_Text_HemlockMilestone, MSGBOX_SIGN
+	closemessage
+	setflag FLAG_SYS_NATIONAL_DEX
+	special EnableNationalPokedex
+	setflag FLAG_MINSI_NATDEX_RECEIVED
+	msgbox MINSI_LAB_Text_HemlockAwarded, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+MINSI_LAB_EventScript_HemlockPostDex::
+	msgbox MINSI_LAB_Text_HemlockPostDex, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+
+MINSI_LAB_Text_HemlockMilestone:
+	.string "Let me see that POKéDEX a moment.\p"
+	.string "…One hundred species. You've filled\n"
+	.string "these pages with the living ENPALE,\l"
+	.string "corner to corner.\p"
+	.string "That is not a number most trainers\n"
+	.string "ever reach.$"
+
+MINSI_LAB_Text_HemlockAwarded:
+	.string "I've upgraded it to NATIONAL mode.\p"
+	.string "It records species from far beyond\n"
+	.string "our borders. Even ones long gone\l"
+	.string "from the living world.\p"
+	.string "Which, as it happens, is why I keep\n"
+	.string "that machine in the back running.\p"
+	.string "Bring me a fossil sometime.$"
+
+MINSI_LAB_Text_HemlockNotYet:
+	.string "A regional POKéDEX should hold what\n"
+	.string "LIVES here. What you can actually\l"
+	.string "meet, out in the grass.\p"
+	.string "Fill a hundred of its pages and come\n"
+	.string "see me. I'll have something for you.$"
+
+MINSI_LAB_Text_HemlockPostDex:
+	.string "The NATIONAL DEX suits you.\p"
+	.string "And the fossil machine is yours to\n"
+	.string "use whenever you find something\l"
+	.string "worth reviving.$"
+
+MINSI_LAB_Text_Hemlock3:
+	.string "A regional POKéDEX should hold what\n"
+	.string "LIVES here. What you can actually\l"
+	.string "meet, out in the grass.\p"
+	.string "Fill a hundred of its pages and come\n"
+	.string "see me. I'll have something for you.$"	
+
+MINSI_LAB_EventScript_FossilMachine::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SYS_NATIONAL_DEX, MINSI_LAB_EventScript_FossilNoDex
+	checkitem ITEM_HELIX_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilHelix
+	checkitem ITEM_DOME_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilDome
+	checkitem ITEM_OLD_AMBER
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilAmber
+	checkitem ITEM_ROOT_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilRoot
+	checkitem ITEM_CLAW_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilClaw
+	checkitem ITEM_ARMOR_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilArmor
+	checkitem ITEM_SKULL_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilSkull
+	checkitem ITEM_COVER_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilCover
+	checkitem ITEM_PLUME_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilPlume
+	checkitem ITEM_JAW_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilJaw
+	checkitem ITEM_SAIL_FOSSIL
+	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilSail
+	msgbox MINSI_LAB_Text_FossilNone, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_EventScript_FossilHelix::
+	bufferitemname STR_VAR_1, ITEM_HELIX_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_OMANYTE
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_OMANYTE, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_HELIX_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilDome::
+	bufferitemname STR_VAR_1, ITEM_DOME_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_KABUTO
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_KABUTO, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_DOME_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilAmber::
+	bufferitemname STR_VAR_1, ITEM_OLD_AMBER
+	bufferspeciesname STR_VAR_2, SPECIES_AERODACTYL
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_AERODACTYL, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_OLD_AMBER
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilRoot::
+	bufferitemname STR_VAR_1, ITEM_ROOT_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_LILEEP
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_LILEEP, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_ROOT_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilClaw::
+	bufferitemname STR_VAR_1, ITEM_CLAW_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_ANORITH
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_ANORITH, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_CLAW_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilArmor::
+	bufferitemname STR_VAR_1, ITEM_ARMOR_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_SHIELDON
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_SHIELDON, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_ARMOR_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilSkull::
+	bufferitemname STR_VAR_1, ITEM_SKULL_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_CRANIDOS
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_CRANIDOS, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_SKULL_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilCover::
+	bufferitemname STR_VAR_1, ITEM_COVER_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_TIRTOUGA
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_TIRTOUGA, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_COVER_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilPlume::
+	bufferitemname STR_VAR_1, ITEM_PLUME_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_ARCHEN
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_ARCHEN, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_PLUME_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilJaw::
+	bufferitemname STR_VAR_1, ITEM_JAW_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_TYRUNT
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_TYRUNT, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_JAW_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilSail::
+	bufferitemname STR_VAR_1, ITEM_SAIL_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_AMAURA
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_AMAURA, 20
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_SAIL_FOSSIL
+	goto MINSI_LAB_EventScript_FossilSuccess
+
+MINSI_LAB_EventScript_FossilSuccess::
+	msgbox MINSI_LAB_Text_FossilRevived, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_EventScript_FossilNoRoom::
+	msgbox MINSI_LAB_Text_FossilNoRoom, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_EventScript_FossilDecline::
+	msgbox MINSI_LAB_Text_FossilDecline, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_EventScript_FossilNoDex::
+	msgbox MINSI_LAB_Text_FossilNoDex, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_Text_FossilNoDex:
+	.string "This machine? Reconstruction work.\p"
+	.string "Ancient tissue, rebuilt from stone.\n"
+	.string "Same principle as the synthetic\l"
+	.string "POKéMON we grow here, only older.\p"
+	.string "Not much use to you yet, mind. Your\n"
+	.string "POKéDEX has no pages for things that\l"
+	.string "stopped living.$"
+
+MINSI_LAB_Text_FossilNone:
+	.string "Bring me a fossil and I'll see what\n"
+	.string "sleeps inside it.$"
+
+MINSI_LAB_Text_FossilConfirm:
+	.string "That's a {STR_VAR_1}.\p"
+	.string "There's a {STR_VAR_2} in there. Faint,\n"
+	.string "but it's there.\p"
+	.string "Shall I wake it?$"
+
+MINSI_LAB_Text_FossilRevived:
+	.string "…There. Breathing.\p"
+	.string "Millions of years, and it opens its\n"
+	.string "eyes in MINSI CITY. Remarkable.$"
+
+MINSI_LAB_Text_FossilDecline:
+	.string "It's waited this long. It can wait\n"
+	.string "a little longer.$"
+
+MINSI_LAB_Text_FossilNoRoom:
+	.string "You've nowhere to put it. Come back\n"
+	.string "when you've made room.\p"
+	.string "The fossil's still yours. I've not\n"
+	.string "touched it.$"
+
+MINSI_LAB_EventScript_Synth::
+	lock
+	faceplayer
+	goto_if_set FLAG_PORYGON_RECEIVED, MINSI_LAB_EventScript_SynthDone
+	goto_if_set FLAG_PORYGON_MODULE_FOUND, MINSI_LAB_EventScript_SynthReturn
+	goto_if_set FLAG_PORYGON_QUEST_STARTED, MINSI_LAB_EventScript_SynthWaiting
+	msgbox MINSI_LAB_Text_SynthAsk, MSGBOX_DEFAULT
+	setflag FLAG_PORYGON_QUEST_STARTED
+	release
+	end
+
+MINSI_LAB_EventScript_SynthWaiting::
+	msgbox MINSI_LAB_Text_SynthWaiting, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_EventScript_SynthReturn::
+	msgbox MINSI_LAB_Text_SynthReturn, MSGBOX_DEFAULT
+	givemon SPECIES_PORYGON, 5
+	setflag FLAG_PORYGON_RECEIVED
+	msgbox MINSI_LAB_Text_SynthAfter, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_EventScript_SynthDone::
+	msgbox MINSI_LAB_Text_SynthEpilogue, MSGBOX_DEFAULT
+	release
+	end	
+
+MINSI_LAB_Text_SynthAsk:
+	.string "You're the one heading for ROUTE 1,\n"
+	.string "aren't you? Good. Good.\p"
+	.string "We build POKéMON here. Not raise.\n"
+	.string "BUILD. Code and light, given a body.\p"
+	.string "One of ours is nearly finished. But\n"
+	.string "during a field test a piece of it\l"
+	.string "got… loose.\p"
+	.string "It went into ALLENWOOD FOREST. A\n"
+	.string "data module. Ugly little thing, and\l"
+	.string "I can't complete the project without\l"
+	.string "it.\p"
+	.string "Folk in the forest have been talking\n"
+	.string "about odd goings-on. Ask around.$"
+
+MINSI_LAB_Text_SynthWaiting:
+	.string "ALLENWOOD FOREST. Ask about the\n"
+	.string "strange occurrences. Someone will\l"
+	.string "have seen where it settled.$"
+
+MINSI_LAB_Text_SynthReturn:
+	.string "You have it! Oh, look at the state\n"
+	.string "of it. Sap in the housing.\p"
+	.string "Give me a moment…\p"
+	.string "…Loading. Loading. There.$"
+
+MINSI_LAB_Text_SynthAfter:
+	.string "It's awake. Say hello to PORYGON.\p"
+	.string "It's yours. Field data is worth more\n"
+	.string "to me than a specimen in a case.\p"
+	.string "Take it far. See what it becomes.$"
+
+MINSI_LAB_Text_SynthEpilogue:
+	.string "How's it running? No fragmenting?\n"
+	.string "Wonderful. Wonderful.$"
+
+ALLENWOOD_FOREST_Text_ModuleUnknown:
+	.string "The air here hums.\p"
+	.string "Not insects. Something flatter than\n"
+	.string "that. Like a held note.$"
+
+ALLENWOOD_FOREST_Text_ModuleFound:
+	.string "The hum is louder here.\p"
+	.string "Something is half-buried in the\n"
+	.string "leaf litter, and the leaves above it\l"
+	.string "aren't quite the right green.\p"
+	.string "You brush the dirt away. A grey box,\n"
+	.string "warm to the touch, its lights\l"
+	.string "cycling in a pattern that never\l"
+	.string "repeats.\p"
+	.string "The forest goes quiet for exactly one\n"
+	.string "second. Then the birds start again.$"
+
+ALLENWOOD_FOREST_Text_ModuleGone:
+	.string "The leaf litter is just leaf litter\n"
+	.string "now. The hum is gone.$"	
