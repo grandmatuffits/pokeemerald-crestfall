@@ -2,7 +2,7 @@
   "id": "MAP_MIRAVEIL_ISLAND_HALL",
   "name": "MIRAVEIL_ISLAND_HALL",
   "layout": "LAYOUT_MIRAVEIL_ISLAND_HALL",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_MIRAVEIL",
   "region_map_section": "MAPSEC_LILYCOVE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

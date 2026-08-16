@@ -2,7 +2,7 @@
   "id": "MAP_ENPALE_POKEMON_LEAGUE_1F",
   "name": "ENPALE_POKEMON_LEAGUE_1F",
   "layout": "LAYOUT_ENPALE_POKEMON_LEAGUE_1F",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_INTRO",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

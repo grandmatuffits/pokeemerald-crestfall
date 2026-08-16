@@ -10563,6 +10563,36 @@
       "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/ENPALE_LEAGUE_BUG/border.bin",
       "blockdata_filepath": "data/layouts/ENPALE_LEAGUE_BUG/map.bin"
+    },
+    {
+      "id": "LAYOUT_MINSI_CITY_APARTMENT",
+      "name": "MINSI_CITY_APARTMENT_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MINSI_CITY_APARTMENT/border.bin",
+      "blockdata_filepath": "data/layouts/MINSI_CITY_APARTMENT/map.bin"
+    },
+    {
+      "id": "LAYOUT_MINSI_CITY_APARTMENT_2F",
+      "name": "MINSI_CITY_APARTMENT_2F_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MINSI_CITY_APARTMENT_2F/border.bin",
+      "blockdata_filepath": "data/layouts/MINSI_CITY_APARTMENT_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MINSI_CITY_APARTMENT_3F",
+      "name": "MINSI_CITY_APARTMENT_3F_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MINSI_CITY_APARTMENT_3F/border.bin",
+      "blockdata_filepath": "data/layouts/MINSI_CITY_APARTMENT_3F/map.bin"
     }
   ]
 }

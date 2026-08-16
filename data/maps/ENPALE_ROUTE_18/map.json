@@ -2,7 +2,7 @@
   "id": "MAP_ENPALE_ROUTE_18",
   "name": "ENPALE_ROUTE_18",
   "layout": "LAYOUT_ENPALE_ROUTE_18",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_ROUTE",
   "region_map_section": "MAPSEC_ROUTE_18",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

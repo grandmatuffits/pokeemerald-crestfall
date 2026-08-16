@@ -200,6 +200,13 @@
       "elevation": 0,
       "dest_map": "MAP_MINSI_LAB",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 37,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_MINSI_CITY_APARTMENT",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -279,7 +286,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 17,
+      "x": 19,
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

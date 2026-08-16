@@ -1102,6 +1102,10 @@ enum NationalDexOrder
     F(EMPOLEON) \
     F(SENTRET) \
     F(FURRET) \
+    F(RATTATA) \
+    F(RATICATE) \
+    F(GLAMEOW) \
+    F(PURUGLY) \
     F(STARLY) \
     F(STARAVIA) \
     F(STARAPTOR) \
@@ -1111,8 +1115,16 @@ enum NationalDexOrder
     F(PICHU) \
     F(PIKACHU) \
     F(RAICHU) \
+    F(SHINX) \
+    F(LUXIO) \
+    F(LUXRAY) \
     F(SANDSHREW) \
     F(SANDSLASH) \
+    F(MACHOP) \
+    F(MACHOKE) \
+    F(MACHAMP) \
+    F(MAKUHITA) \
+    F(HARIYAMA) \
     F(NIDORAN_F) \
     F(NIDORINA) \
     F(NIDOQUEEN) \
@@ -1125,6 +1137,9 @@ enum NationalDexOrder
     F(CLEFFA) \
     F(CLEFAIRY) \
     F(CLEFABLE) \
+    F(IGGLYBUFF) \
+    F(JIGGLYPUFF) \
+    F(WIGGLYTUFF) \
     F(VULPIX) \
     F(NINETALES) \
     F(MAREEP) \
@@ -1149,6 +1164,9 @@ enum NationalDexOrder
     F(ALAKAZAM) \
     F(TENTACOOL) \
     F(TENTACRUEL) \
+    F(GEODUDE) \
+    F(GRAVELER) \
+    F(GOLEM) \
     F(ROGGENROLA) \
     F(BOLDORE) \
     F(GIGALITH) \
@@ -1164,6 +1182,12 @@ enum NationalDexOrder
     F(GENGAR) \
     F(VOLTORB) \
     F(ELECTRODE) \
+    F(ELEKID) \
+    F(ELECTABUZZ) \
+    F(ELECTIVIRE) \
+    F(MAGBY) \
+    F(MAGMAR) \
+    F(MAGMORTAR) \
     F(EXEGGCUTE) \
     F(EXEGGUTOR) \
     F(AZURILL) \
@@ -1179,6 +1203,7 @@ enum NationalDexOrder
     F(KINGDRA) \
     F(STARYU) \
     F(STARMIE) \
+    F(LAPRAS) \
     F(SCYTHER) \
     F(SCIZOR) \
     F(PINSIR) \
@@ -1199,6 +1224,10 @@ enum NationalDexOrder
     F(WOBBUFFET) \
     F(SWIRLIX) \
     F(SLURPUFF) \
+    F(CUTIEFLY) \
+    F(RIBOMBEE) \
+    F(SNUBBULL) \
+    F(GRANBULL) \
     F(PINECO) \
     F(FORRETRESS) \
     F(GLIGAR) \
@@ -1223,6 +1252,7 @@ enum NationalDexOrder
     F(SHEDINJA) \
     F(SABLEYE) \
     F(MAWILE) \
+    F(CARBINK) \
     F(SANDYGAST) \
     F(PALOSSAND) \
     F(MEDITITE) \
@@ -1240,6 +1270,9 @@ enum NationalDexOrder
     F(FLYGON) \
     F(BALTOY) \
     F(CLAYDOL) \
+    F(BRONZOR) \
+    F(BRONZONG) \
+    F(KLEFKI) \
     F(FEEBAS) \
     F(MILOTIC) \
     F(SHUPPET) \
@@ -1247,6 +1280,10 @@ enum NationalDexOrder
     F(SNORUNT) \
     F(GLALIE) \
     F(FROSLASS) \
+    F(CUBCHOO) \
+    F(BEARTIC) \
+    F(BERGMITE) \
+    F(AVALUGG) \
     F(RIOLU) \
     F(LUCARIO) \
     F(CROAGUNK) \
@@ -1259,6 +1296,9 @@ enum NationalDexOrder
     F(WHIMSICOTT) \
     F(DWEBBLE) \
     F(CRUSTLE) \
+    F(SHUCKLE) \
+    F(ROCKRUFF) \
+    F(LYCANROC) \
     F(ZORUA) \
     F(ZOROARK) \
     F(EMOLGA) \
@@ -1275,8 +1315,15 @@ enum NationalDexOrder
     F(CHANDELURE) \
     F(MIENFOO) \
     F(MIENSHAO) \
+    F(STUFFUL) \
+    F(BEWEAR) \
+    F(FALINKS) \
+    F(CLOBBOPUS) \
+    F(GRAPPLOCT) \
     F(PAWNIARD) \
     F(BISHARP) \
+    F(SCRAGGY) \
+    F(SCRAFTY) \
     F(VULLABY) \
     F(MANDIBUZZ) \
     F(RHYHORN) \
@@ -1337,6 +1384,9 @@ enum NationalDexOrder
     F(DEINO) \
     F(ZWEILOUS) \
     F(HYDREIGON) \
+    F(VIRIZION) \
+    F(TERRAKION) \
+    F(COBALION) \
     F(REGIROCK) \
     F(REGICE) \
     F(REGISTEEL) \

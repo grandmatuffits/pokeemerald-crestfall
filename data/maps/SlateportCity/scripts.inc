@@ -537,7 +537,6 @@ SlateportCity_EventScript_PowerTMClerk::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_TM_HIDDEN_POWER
 	.2byte ITEM_TM_FACADE
 	pokemartlistend
 

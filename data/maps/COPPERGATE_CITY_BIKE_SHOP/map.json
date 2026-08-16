@@ -2,7 +2,7 @@
   "id": "MAP_COPPERGATE_CITY_BIKE_SHOP",
   "name": "COPPERGATE_CITY_BIKE_SHOP",
   "layout": "LAYOUT_COPPERGATE_CITY_BIKE_SHOP",
-  "music": "MUS_ENPALE_LAB",
+  "music": "MUS_ENPALE_COPPERGATE",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_ENPALE_LEAGUE_GRASS",
   "name": "ENPALE_LEAGUE_GRASS",
   "layout": "LAYOUT_ENPALE_LEAGUE_GRASS",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_INTRO",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_LENOX_TOWN_SHIPYARD",
   "name": "LENOX_TOWN_SHIPYARD",
   "layout": "LAYOUT_LENOX_TOWN_SHIPYARD",
-  "music": "MUS_ENPALE_LAB",
+  "music": "MUS_ENPALE_LENOX",
   "region_map_section": "MAPSEC_VERMILION_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

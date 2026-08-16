@@ -206,7 +206,6 @@ void NewGameInitData(void)
     ClearBag();
     NewGameInitPCItems();
     ClearPokeblocks();
-    AddBagItem(ITEM_EXP_SHARE, 1);
     ClearDecorationInventories();
     InitEasyChatPhrases();
     SetMauvilleOldMan();

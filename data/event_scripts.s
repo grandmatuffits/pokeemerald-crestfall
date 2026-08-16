@@ -1974,3 +1974,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/ENPALE_LEAGUE_GRASS/scripts.inc"
 
 	.include "data/maps/ENPALE_LEAGUE_BUG/scripts.inc"
+
+	.include "data/maps/MINSI_CITY_APARTMENT/scripts.inc"
+
+	.include "data/maps/MINSI_CITY_APARTMENT_2F/scripts.inc"
+
+	.include "data/maps/MINSI_CITY_APARTMENT_3F/scripts.inc"

@@ -1347,6 +1347,7 @@
 #define FLAG_HIDE_ARENA_HEMLOCK                           0x267
 #define FLAG_HIDE_ARENA_UMBRA                             0x268
 #define FLAG_DEFEATED_ENPALE_CHAMP                        0x269
+#define FLAG_MINSI_EXP_SHARE_RECEIVED                     0x26A
 
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag

@@ -2,7 +2,7 @@
   "id": "MAP_VELDTMOOR_CITY",
   "name": "VELDTMOOR_CITY",
   "layout": "LAYOUT_VELDTMOOR_CITY",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_STARVED",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

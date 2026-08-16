@@ -5281,6 +5281,26 @@ u16 GetBattleBGM(void)
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         && TRAINER_BATTLE_PARAM.opponentA == TRAINER_ROSS)
         return MUS_ENPALE_ROSS;    
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        && TRAINER_BATTLE_PARAM.opponentA == TRAINER_BRUTUS)
+        return MUS_ENPALE_BRUTUS;    
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        && (TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_FIRE
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_WATER
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_GRASS
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_BUG))
+        return MUS_ENPALE_E4;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        && (TRAINER_BATTLE_PARAM.opponentA == TRAINER_COVENANT_ELDER_FERRUS
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_DELMARK_ELDER_IRRUS
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ELDER_SAXUS
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ELDER_PRAETUS
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ELDER_FERRUS_2
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ELDER_IRRUS_2
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ELDER_SAXUS_2
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ELDER_PRAETUS_2))
+        return MUS_ENPALE_ELDER;
+    
 
     if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
     {
