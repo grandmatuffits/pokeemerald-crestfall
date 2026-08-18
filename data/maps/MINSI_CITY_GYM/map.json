@@ -3,7 +3,7 @@
   "name": "MINSI_CITY_GYM",
   "layout": "LAYOUT_MINSI_CITY_GYM",
   "music": "MUS_ENPALE_MINSI",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_RUSTBORO_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

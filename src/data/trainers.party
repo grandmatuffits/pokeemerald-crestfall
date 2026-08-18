@@ -16924,8 +16924,8 @@ Level: 5
 
 === TRAINER_BOBBY_101 ===
 Name: BOBBY
-Class: School Kid
-Pic: School Kid M
+Class: Youngster
+Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
@@ -16985,13 +16985,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Mareep @ None
-Level: 7
+Level: 6
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 - Tackle
 - Growl
 
 Oddish @ None
-Level: 7
+Level: 6
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 - Absorb
 - Growl
@@ -17304,7 +17304,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Foongus @ None
-Level: 6
+Level: 5
 
 Starly @ None
 Level: 6
@@ -17325,7 +17325,7 @@ Venipede @ None
 Level: 7
 
 Yanma @ None
-Level: 8
+Level: 7
 
 === TRAINER_ROUTE_3_BOB ===
 Name: BOB
@@ -21081,3 +21081,15 @@ Ability: Intimidate
 - Dragon Dance
 - Earthquake
 - Dragon Claw
+
+=== TRAINER_DOLLY_101 ===
+Name: Dolly
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Snubbull
+Level: 5

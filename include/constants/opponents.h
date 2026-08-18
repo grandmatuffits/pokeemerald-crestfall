@@ -1111,7 +1111,8 @@
 #define TRAINER_ENPALE_E4_GRASS                1105
 #define TRAINER_ENPALE_E4_BUG                  1106
 #define TRAINER_BRUTUS                         1107
-#define TRAINERS_COUNT_EMERALD                 1108
+#define TRAINER_DOLLY_101                      1108
+#define TRAINERS_COUNT_EMERALD                 1109
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

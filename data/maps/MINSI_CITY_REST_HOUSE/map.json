@@ -3,7 +3,7 @@
   "name": "MINSI_CITY_REST_HOUSE",
   "layout": "LAYOUT_MINSI_CITY_REST_HOUSE",
   "music": "MUS_ENPALE_LAB",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_RUSTBORO_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -32,6 +32,13 @@
   "warp_events": [
     {
       "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_MINSI_CITY",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 3,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_MINSI_CITY",

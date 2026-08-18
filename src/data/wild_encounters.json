@@ -23,11 +23,11 @@
         {
           "type": "water_mons",
           "encounter_rates": [
-            60,
-            30,
-            5,
-            4,
-            1
+            35,
+            22,
+            18,
+            15,
+            10
           ]
         },
         {
@@ -34989,48 +34989,48 @@
                 "species": "SPECIES_STARLY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_SENTRET"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_STARLY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_SENTRET"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_STARLY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_SENTRET"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_STARLY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_SENTRET"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_STARLY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 2,
+                "max_level": 4,
                 "species": "SPECIES_RALTS"
               }
             ]
@@ -35065,7 +35065,7 @@
               {
                 "min_level": 4,
                 "max_level": 5,
-                "species": "SPECIES_TANGELA"
+                "species": "SPECIES_PINECO"
               },
               {
                 "min_level": 4,
@@ -35095,7 +35095,7 @@
               {
                 "min_level": 3,
                 "max_level": 5,
-                "species": "SPECIES_PINECO"
+                "species": "SPECIES_TANGELA"
               }
             ]
           }
@@ -35226,6 +35226,91 @@
                 "species": "SPECIES_SENTRET"
               }
             ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
           }
         },
         {
@@ -35354,6 +35439,91 @@
                 "species": "SPECIES_SABLEYE"
               }
             ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 19,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 10,
+                "max_level": 17,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_AZUMARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_WIMPOD"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TOXAPEX"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_GOLISOPOD"
+              },
+              {
+                "min_level": 29,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
           }
         },
         {
@@ -35480,6 +35650,91 @@
                 "min_level": 10,
                 "max_level": 10,
                 "species": "SPECIES_VULLABY"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
               }
             ]
           }
@@ -35733,8 +35988,8 @@
                 "species": "SPECIES_STUFFUL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_RALTS"
               }
             ]
@@ -35777,28 +36032,28 @@
                 "species": "SPECIES_RALTS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 11,
+                "max_level": 12,
                 "species": "SPECIES_MURKROW"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 13,
+                "max_level": 13,
                 "species": "SPECIES_MURKROW"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 11,
+                "max_level": 12,
                 "species": "SPECIES_DURANT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 11,
+                "max_level": 13,
                 "species": "SPECIES_EMOLGA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 11,
+                "max_level": 14,
                 "species": "SPECIES_MISDREAVUS"
               }
             ]
@@ -35999,6 +36254,36 @@
         {
           "map": "MAP_DELMARK_CITY_WEST",
           "base_label": "gDELMARK_CITY_WEST",
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
           "fishing_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -36015,42 +36300,42 @@
               {
                 "min_level": 10,
                 "max_level": 15,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_FEEBAS"
               },
               {
                 "min_level": 10,
                 "max_level": 15,
-                "species": "SPECIES_SHELLDER"
+                "species": "SPECIES_FEEBAS"
               },
               {
                 "min_level": 10,
                 "max_level": 15,
-                "species": "SPECIES_HORSEA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_MAGIKARP"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_MAGIKARP"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
                 "species": "SPECIES_FEEBAS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 15,
+                "max_level": 20,
                 "species": "SPECIES_FEEBAS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 21,
+                "max_level": 25,
                 "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 35,
+                "max_level": 35,
+                "species": "SPECIES_MILOTIC"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_DRAGONITE"
               }
             ]
           }
@@ -36115,6 +36400,91 @@
                 "min_level": 15,
                 "max_level": 15,
                 "species": "SPECIES_EEVEE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
               }
             ]
           }
@@ -36245,6 +36615,91 @@
                 "species": "SPECIES_RIOLU"
               }
             ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
           }
         },
         {
@@ -36307,6 +36762,91 @@
                 "min_level": 15,
                 "max_level": 18,
                 "species": "SPECIES_HONEDGE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_FRILLISH"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
               }
             ]
           }
@@ -36488,7 +37028,7 @@
               {
                 "min_level": 15,
                 "max_level": 18,
-                "species": "SPECIES_EEVEE"
+                "species": "SPECIES_HERACROSS"
               },
               {
                 "min_level": 17,
@@ -36880,6 +37420,91 @@
                 "species": "SPECIES_MAGMAR"
               }
             ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
           }
         },
         {
@@ -36942,6 +37567,91 @@
                 "min_level": 20,
                 "max_level": 25,
                 "species": "SPECIES_BELDUM"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 19,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 10,
+                "max_level": 17,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_AZUMARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_WIMPOD"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TOXAPEX"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_GOLISOPOD"
+              },
+              {
+                "min_level": 29,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
               }
             ]
           }
@@ -37040,6 +37750,1698 @@
                 "min_level": 20,
                 "max_level": 25,
                 "species": "SPECIES_GYARADOS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_COPPERGATE_CITY",
+          "base_label": "gCOPPERGATE_CITY",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 7,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 6,
+                "max_level": 7,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 6,
+                "max_level": 7,
+                "species": "SPECIES_GLAMEOW"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_GLAMEOW"
+              },
+              {
+                "min_level": 6,
+                "max_level": 7,
+                "species": "SPECIES_SNUBBULL"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_SNUBBULL"
+              },
+              {
+                "min_level": 6,
+                "max_level": 7,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 6,
+                "max_level": 8,
+                "species": "SPECIES_KLEFKI"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_6",
+          "base_label": "gENPALE_ROUTE_6",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 13,
+                "max_level": 14,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 13,
+                "max_level": 14,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 14,
+                "max_level": 15,
+                "species": "SPECIES_STARAVIA"
+              },
+              {
+                "min_level": 13,
+                "max_level": 14,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 14,
+                "max_level": 15,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 13,
+                "max_level": 14,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 13,
+                "max_level": 15,
+                "species": "SPECIES_GLAMEOW"
+              },
+              {
+                "min_level": 13,
+                "max_level": 15,
+                "species": "SPECIES_SNUBBULL"
+              },
+              {
+                "min_level": 13,
+                "max_level": 15,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 15,
+                "species": "SPECIES_CROAGUNK"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_LENOX_TOWN",
+          "base_label": "gLENOX_TOWN",
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROSEBANK_TOWN",
+          "base_label": "gROSEBANK_TOWN",
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_TENTACRUEL"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_11",
+          "base_label": "gENPALE_ROUTE_11",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_STARAVIA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_SNUBBULL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_SNUBBULL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_GLAMEOW"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_GLAMEOW"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_KLEFKI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_DITTO"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_13",
+          "base_label": "gENPALE_ROUTE_13",
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_TENTACRUEL"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_14",
+          "base_label": "gENPALE_ROUTE_14",
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_TENTACRUEL"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MIRAVEIL_ISLAND",
+          "base_label": "gMIRAVEIL_ISLAND",
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_TENTACRUEL"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_15",
+          "base_label": "gENPALE_ROUTE_15",
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_TENTACRUEL"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_16",
+          "base_label": "gENPALE_ROUTE_16",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_STARAVIA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_STARAVIA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_LUXIO"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_LUXIO"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_BRELOOM"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_BRELOOM"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_SHUCKLE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 30,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 29,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_TENTACRUEL"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_17",
+          "base_label": "gENPALE_ROUTE_17",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_STARAVIA"
+              },
+              {
+                "min_level": 34,
+                "max_level": 34,
+                "species": "SPECIES_STARAPTOR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_GLAMEOW"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_GLAMEOW"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_GRANBULL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_GRANBULL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 35,
+                "max_level": 35,
+                "species": "SPECIES_VIBRAVA"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_18",
+          "base_label": "gENPALE_ROUTE_18",
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_19",
+          "base_label": "gENPALE_ROUTE_19",
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 10,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ENPALE_ROUTE_20",
+          "base_label": "gENPALE_ROUTE_20",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_FURRET"
+              },
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_STARAPTOR"
+              },
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_PURUGLY"
+              },
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_GRANBULL"
+              },
+              {
+                "min_level": 36,
+                "max_level": 37,
+                "species": "SPECIES_AXEW"
+              },
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_BAGON"
+              },
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_PINSIR"
+              },
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_SCYTHER"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_SHELGON"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_FRAXURE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 36,
+                "max_level": 40,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 36,
+                "max_level": 37,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TOXAPEX"
+              },
+              {
+                "min_level": 28,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 40,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 40,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 31,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 29,
+                "species": "SPECIES_CARVANHA"
+              },
+              {
+                "min_level": 32,
+                "max_level": 40,
+                "species": "SPECIES_SEADRA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_GRANT_CAVE_BF1",
+          "base_label": "gGRANT_CAVE_BF1",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_SANDYGAST"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_ROGGENROLA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_BOLDORE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_RHYHORN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GIBLE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_BELDUM"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 19,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 10,
+                "max_level": 17,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_AZUMARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_WIMPOD"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 38,
+                "max_level": 40,
+                "species": "SPECIES_TOXAPEX"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_GOLISOPOD"
+              },
+              {
+                "min_level": 29,
+                "max_level": 29,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_WHITECAPS_BF1",
+          "base_label": "gWHITECAPS_BF1",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_BERGMITE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_BERGMITE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_JYNX"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_JYNX"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_SWOOBAT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_BERGEN_HILL",
+          "base_label": "gBERGEN_HILL",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_MUNNA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_KIRLIA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_KADABRA"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_MEOWSTIC"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_STUFFUL"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_BEWEAR"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_DITTO"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_CHANSEY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 30,
+                "species": "SPECIES_SNORLAX"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_WHITECAPS_EXIT",
+          "base_label": "gWHITECAPS_EXIT",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
               }
             ]
           }

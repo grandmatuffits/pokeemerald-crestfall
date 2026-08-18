@@ -191,3 +191,17 @@ MIRAVEIL_ISLAND_EventScript_Man::
 
 MIRAVEIL_ISLAND_Text_Man:
 	.string "That Meryl is quite the snoot, but she sure is fancy.$"		
+
+MIRAVEIL_ISLAND_EventScript_Block1::
+	msgbox MIRAVEIL_ISLAND_Text_Block1, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_Block1:
+	.string "Is this where Meryl's hosting her next party?$"		
+
+MIRAVEIL_ISLAND_EventScript_Block2::
+	msgbox MIRAVEIL_ISLAND_Text_Block2, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_Block2:
+	.string "I haven't a clue dear...$"		

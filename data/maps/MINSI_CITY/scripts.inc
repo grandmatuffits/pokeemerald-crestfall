@@ -248,3 +248,11 @@ MINSI_CITY_EventScript_SouthBlock::
 
 MINSI_CITY_Text_SouthBlock:
 	.string "Good luck, champ!$"	
+
+MINSI_CITY_EventScript_GymSign::
+	msgbox MINSI_CITY_Text_Gym_Sign, MSGBOX_SIGN
+	end
+
+MINSI_CITY_Text_Gym_Sign:
+	.string "Minsi Gym\n"
+	.string "Don't forget your Antidotes!$"	

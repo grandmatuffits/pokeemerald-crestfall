@@ -28,3 +28,17 @@ Route1_Text_SallyDefeat:
 
 Route1_Text_SallyPostBattle:
 	.string "Be careful!$"
+
+Route1_EventScript_Dolly::
+	trainerbattle_single TRAINER_DOLLY_101, Route1_Text_DollyIntro, Route1_Text_DollyDefeat
+	msgbox Route1_Text_DollyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route1_Text_DollyIntro:
+	.string "Isn't nature great!?$"
+
+Route1_Text_DollyDefeat:
+	.string "Aww!$"
+
+Route1_Text_DollyPostBattle:
+	.string "I like your pokemon!$"	
