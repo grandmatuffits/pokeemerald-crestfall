@@ -6,7 +6,25 @@ BAYNOE_HOUSE_ELDERS_EventScript_OldMan::
 	end
 
 BAYNOE_HOUSE_ELDERS_EventScript_OldWoman::
-	msgbox BAYNOE_HOUSE_ELDERS_Text_OldWoman, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_BAYNOE_FOCUS_SASH_RECEIVED, BAYNOE_HOUSE_ELDERS_EventScript_OldWomanDone
+	msgbox BAYNOE_HOUSE_ELDERS_Text_OldWoman, MSGBOX_DEFAULT
+	giveitem ITEM_FOCUS_SASH
+	compare VAR_RESULT, FALSE
+	goto_if_eq BAYNOE_HOUSE_ELDERS_EventScript_OldWomanBagFull
+	setflag FLAG_BAYNOE_FOCUS_SASH_RECEIVED
+	release
+	end
+
+BAYNOE_HOUSE_ELDERS_EventScript_OldWomanBagFull::
+	msgbox BAYNOE_HOUSE_ELDERS_Text_BagFull, MSGBOX_DEFAULT
+	release
+	end
+
+BAYNOE_HOUSE_ELDERS_EventScript_OldWomanDone::
+	msgbox BAYNOE_HOUSE_ELDERS_Text_OldWomanAfter, MSGBOX_DEFAULT
+	release
 	end
 
 BAYNOE_HOUSE_ELDERS_Text_OldMan:
@@ -32,3 +50,11 @@ BAYNOE_HOUSE_ELDERS_Text_OldWoman:
 	.string "Maybe now the temple can be what it\n"
 	.string "was meant to be again. Thanks to\l"
 	.string "you.$"
+
+BAYNOE_HOUSE_ELDERS_Text_OldWomanAfter:
+	.string "The temple breathes easier now.\n"
+	.string "So do we all. Bless you.$"
+
+BAYNOE_HOUSE_ELDERS_Text_BagFull:
+	.string "Your bag is full, child. Make room,\n"
+	.string "and I'll give you what's owed.$"	

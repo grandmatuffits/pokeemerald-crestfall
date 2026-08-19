@@ -25,6 +25,8 @@ RustboroCity_Mart_Pokemart_Basic:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_ETHER
 	.2byte ITEM_REPEL
+	.2byte ITEM_TM_SHOCK_WAVE
+	.2byte ITEM_MAGNET
 	pokemartlistend
 
 RustboroCity_Mart_EventScript_PokemartExpanded::

@@ -20,7 +20,7 @@ SlateportCity_Mart_Pokemart:
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_REPEL
-	.2byte ITEM_HARBOR_MAIL
+	.2byte ITEM_METAL_COAT
 	pokemartlistend
 
 SlateportCity_Mart_EventScript_BlackBelt::

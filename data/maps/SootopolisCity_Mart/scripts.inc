@@ -19,6 +19,12 @@ SootopolisCity_Mart_Pokemart:
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_TM65
+	.2byte ITEM_TM72
+	.2byte ITEM_TM100
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_CHOICE_SPECS
+	.2byte ITEM_CHOICE_SCARF
 	pokemartlistend
 
 SootopolisCity_Mart_EventScript_FatMan::

@@ -22,6 +22,7 @@ PetalburgCity_Mart_Pokemart_Basic:
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_REPEL
 	.2byte ITEM_TM_SAFEGUARD
+	.2byte ITEM_SHARP_BEAK
 	pokemartlistend
 
 PetalburgCity_Mart_EventScript_ExpandedItems::

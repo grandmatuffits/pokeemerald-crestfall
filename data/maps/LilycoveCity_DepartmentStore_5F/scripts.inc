@@ -33,18 +33,10 @@ LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarLeft::
 
 	.align 2
 LilycoveCity_DepartmentStore_5F_Pokemart_Dolls:
-	.2byte DECOR_PICHU_DOLL
-	.2byte DECOR_PIKACHU_DOLL
-	.2byte DECOR_MARILL_DOLL
-	.2byte DECOR_JIGGLYPUFF_DOLL
-	.2byte DECOR_DUSKULL_DOLL
-	.2byte DECOR_WYNAUT_DOLL
-	.2byte DECOR_BALTOY_DOLL
-	.2byte DECOR_KECLEON_DOLL
-	.2byte DECOR_AZURILL_DOLL
-	.2byte DECOR_SKITTY_DOLL
-	.2byte DECOR_SWABLU_DOLL
-	.2byte DECOR_GULPIN_DOLL
+	.2byte ITEM_LINKING_CORD,
+    .2byte ITEM_DRAGON_SCALE,
+    .2byte ITEM_PROTECTOR,
+    .2byte ITEM_METAL_COAT,
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidLeft::
@@ -59,15 +51,10 @@ LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidLeft::
 
 	.align 2
 LilycoveCity_DepartmentStore_5F_Pokemart_Cushions:
-	.2byte DECOR_PIKA_CUSHION
-	.2byte DECOR_ROUND_CUSHION
-	.2byte DECOR_ZIGZAG_CUSHION
-	.2byte DECOR_SPIN_CUSHION
-	.2byte DECOR_DIAMOND_CUSHION
-	.2byte DECOR_BALL_CUSHION
-	.2byte DECOR_GRASS_CUSHION
-	.2byte DECOR_FIRE_CUSHION
-	.2byte DECOR_WATER_CUSHION
+	.2byte ITEM_ELECTIRIZER,
+    .2byte ITEM_MAGMARIZER,
+    .2byte ITEM_UPGRADE,
+    .2byte ITEM_DUBIOUS_DISC,
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidRight::
@@ -82,15 +69,11 @@ LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidRight::
 
 	.align 2
 LilycoveCity_DepartmentStore_5F_Pokemart_Posters:
-	.2byte DECOR_BALL_POSTER
-	.2byte DECOR_GREEN_POSTER
-	.2byte DECOR_RED_POSTER
-	.2byte DECOR_BLUE_POSTER
-	.2byte DECOR_CUTE_POSTER
-	.2byte DECOR_PIKA_POSTER
-	.2byte DECOR_LONG_POSTER
-	.2byte DECOR_SEA_POSTER
-	.2byte DECOR_SKY_POSTER
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_ICE_STONE
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarRight::
@@ -105,16 +88,12 @@ LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarRight::
 
 	.align 2
 LilycoveCity_DepartmentStore_5F_Pokemart_Mats:
-	.2byte DECOR_SURF_MAT
-	.2byte DECOR_THUNDER_MAT
-	.2byte DECOR_FIRE_BLAST_MAT
-	.2byte DECOR_POWDER_SNOW_MAT
-	.2byte DECOR_ATTRACT_MAT
-	.2byte DECOR_FISSURE_MAT
-	.2byte DECOR_SPIKES_MAT
-	.2byte DECOR_GLITTER_MAT
-	.2byte DECOR_JUMP_MAT
-	.2byte DECOR_SPIN_MAT
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_DAWN_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_OVAL_STONE
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_5F_EventScript_PokefanF::

@@ -19,9 +19,10 @@ FortreeCity_Mart_Pokemart:
 	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_REVIVE
-	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_TM_SHADOW_BALL
+	.2byte ITEM_TM67
+	.2byte ITEM_TM88
+	.2byte ITEM_NEVER_MELT_ICE
 	pokemartlistend
 
 FortreeCity_Mart_EventScript_Woman::

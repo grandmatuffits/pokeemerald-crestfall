@@ -63,6 +63,19 @@
       "trainer_sight_or_berry_tree_id": "6",
       "script": "ENPALE_ROUTE_14_EventScript_Shelly",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 69,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM97",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ENPALE_ROUTE_14_TM97"
     }
   ],
   "warp_events": [],

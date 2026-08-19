@@ -19,6 +19,10 @@ MauvilleCity_Mart_Pokemart:
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
+	.2byte ITEM_TM_SKILL_SWAP
+	.2byte ITEM_TM55
+	.2byte ITEM_TM96
+	.2byte ITEM_SOFT_SAND
 	pokemartlistend
 
 MauvilleCity_Mart_EventScript_ExpertM::

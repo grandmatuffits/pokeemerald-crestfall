@@ -20,6 +20,10 @@ MossdeepCity_Mart_Pokemart:
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_TM_THUNDERBOLT
+	.2byte ITEM_TM_FLAMETHROWER
+	.2byte ITEM_TM_ICE_BEAM
+	.2byte ITEM_FAIRY_FEATHER
 	pokemartlistend
 
 MossdeepCity_Mart_EventScript_Woman::

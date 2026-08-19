@@ -1378,6 +1378,41 @@
 #define FLAG_ITEM_GRANT_ISLAND_TM_FIRE_PUNCH              0x294
 #define FLAG_ITEM_GRANT_ISLAND_TM_DRAGON_PULSE            0x295
 #define FLAG_ROUTE13_SCALD_RECEIVED                       0x296
+#define FLAG_ITEM_GRANT_CAVE_TM_POWER_GEM                 0x297
+#define FLAG_ITEM_GRANT_CAVE_TM_BODY_PRESS                0x298
+#define FLAG_ITEM_ENPALE_ROUTE_14_TM97                    0x299
+#define FLAG_ITEM_MIRAVEIL_TM78                           0x300
+#define FLAG_ITEM_BAYNOE_TEMPLE_TM61                      0x301
+#define FLAG_ITEM_BERGEN_HILL_TM83                        0x302
+#define FLAG_ITEM_ENPALE_ROUTE_17_TM84                    0x303
+#define FLAG_ITEM_ENPALE_ROUTE_20_TM_DRAGON_CLAW          0x304
+#define FLAG_ITEM_LEHIGH_TUNNEL_TM85                      0x305
+#define FLAG_VALERYTOWN_PUP_RECEIVED                      0x306
+#define FLAG_VALERYTOWN_BULKUP_RECEIVED                   0x307
+#define FLAG_ITEM_ENPALE_ROUTE_19_TM10                    0x308
+#define FLAG_ITEM_ROUTE_18_TM95                           0x309
+#define FLAG_ITEM_DELMARK_SOUTH_TM99                      0x310
+#define FLAG_ITEM_ROUTE7_TM52                             0x311
+#define FLAG_ALLENWOOD_FOREST_TM76                        0x312
+#define FLAG_ITEM_TM_36                                   0x313
+#define FLAG_ITEM_WALLAR_TM56                             0x314
+#define FLAG_ITEM_ROUTE6_TM68                             0x315
+#define FLAG_ITEM_MIRAVEIL_TM27                           0x316
+#define FLAG_ITEM_ENPALE_ROUTE_17_TM26                    0x317
+#define FLAG_ITEM_ENPALE_ROUTE_12_TM47                    0x318
+#define FLAG_ITEM_ENPALE_ROUTE_1_TM47                     0x319
+#define FLAG_ITEM_ROUTE_16_SOFT_SAND                      0x320
+#define FLAG_ITEM_MINSI_CITY_EVIOLITE                     0x321
+#define FLAG_ITEM_KINNERET_SHELL_BELL                     0x322
+#define FLAG_ITEM_VALERYTOWN_BLACK_GLASSES                0x323
+#define FLAG_ITEM_BERGEN_HILL_DRAGON_FANG                 0x324
+#define FLAG_ITEM_WALLAR_BLACK_SLUDGE                     0x325
+#define FLAG_BAYNOE_FOCUS_SASH_RECEIVED                   0x326
+#define FLAG_ITEM_MIRAVEIL_EXPERT_BELT                    0x327
+#define FLAG_ITEM_WHITECAPS_EXT_WEAKNESS_POLICY           0x328
+#define FLAG_ITEM_GRANT_ISLAND_ASSAULT_VEST               0x329
+#define FLAG_ITEM_BERGEN_HILL_LIFE_ORB                    0x330
+#define FLAG_ITEM_RIDLEY_CAVE_BF2_ROCKY_HELMET            0x331
 
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag

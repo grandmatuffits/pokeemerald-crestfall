@@ -186,6 +186,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_WHITECAPS_SILVIO"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 36,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_WEAKNESS_POLICY",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_WHITECAPS_EXT_WEAKNESS_POLICY"
     }
   ],
   "warp_events": [

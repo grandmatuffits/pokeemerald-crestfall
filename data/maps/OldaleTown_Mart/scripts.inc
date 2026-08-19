@@ -6,7 +6,7 @@ OldaleTown_Mart_EventScript_Clerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_Mart_ExpandedItems
+	goto_if_set FLAG_BAYNOE_TEMPLE_DONE, OldaleTown_Mart_ExpandedItems
 	pokemart OldaleTown_Mart_Pokemart_Basic
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
@@ -28,11 +28,16 @@ OldaleTown_Mart_ExpandedItems::
 
 	.align 2
 OldaleTown_Mart_Pokemart_Expanded:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_MAX_POTION
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
+	.2byte ITEM_TM_GIGA_DRAIN
+	.2byte ITEM_TM94
+	.2byte ITEM_TM21
+	.2byte ITEM_POISON_BARB
+	.2byte ITEM_BLACK_SLUDGE
 	pokemartlistend
 
 OldaleTown_Mart_EventScript_Woman::

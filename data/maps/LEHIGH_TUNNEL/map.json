@@ -55,14 +55,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 19,
-      "y": 21,
+      "x": 6,
+      "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_SUPER_POTION",
+      "trainer_sight_or_berry_tree_id": "ITEM_HARD_STONE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_LEHIGH_TUNNEL_SUPER_POTION"
     },
@@ -78,6 +78,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EnpaleScript_MineRock01",
       "flag": "FLAG_TEMP_11"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 13,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM86",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_LEHIGH_TUNNEL_TM85"
     }
   ],
   "warp_events": [

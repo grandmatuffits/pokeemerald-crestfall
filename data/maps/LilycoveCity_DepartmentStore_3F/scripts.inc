@@ -13,12 +13,12 @@ LilycoveCity_DepartmentStore_3F_EventScript_ClerkLeft::
 
 	.align 2
 LilycoveCity_DepartmentStore_3F_Pokemart_Vitamins:
-	.2byte ITEM_PROTEIN
-	.2byte ITEM_CALCIUM
-	.2byte ITEM_IRON
-	.2byte ITEM_ZINC
-	.2byte ITEM_CARBOS
-	.2byte ITEM_HP_UP
+	.2byte ITEM_HEAT_ROCK
+	.2byte ITEM_DAMP_ROCK
+	.2byte ITEM_SMOOTH_ROCK
+	.2byte ITEM_ICY_ROCK
+	.2byte ITEM_TERRAIN_EXTENDER
+	.2byte ITEM_LIGHT_CLAY
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight::
@@ -33,12 +33,9 @@ LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight::
 
 	.align 2
 LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters:
-	.2byte ITEM_PROTEIN
-	.2byte ITEM_CALCIUM
-	.2byte ITEM_IRON
-	.2byte ITEM_ZINC
-	.2byte ITEM_CARBOS
-	.2byte ITEM_HP_UP
+	.2byte ITEM_MENTAL_HERB
+	.2byte ITEM_WHITE_HERB
+	.2byte ITEM_POWER_HERB
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_3F_EventScript_TriathleteM::
