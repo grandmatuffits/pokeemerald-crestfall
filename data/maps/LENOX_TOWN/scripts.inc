@@ -249,7 +249,6 @@ LENOX_TOWN_Mart_Merchant1:
 	.2byte ITEM_TM_SUNNY_DAY
 	.2byte ITEM_TM_RAIN_DANCE
 	.2byte ITEM_TM_SANDSTORM
-	.2byte ITEM_NONE
 	pokemartlistend
 
 @ --- Merchant 2: Type-boost held items ---

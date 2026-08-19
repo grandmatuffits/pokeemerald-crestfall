@@ -9537,8 +9537,8 @@
     {
       "id": "LAYOUT_LEHIGH_TUNNEL_BF1",
       "name": "LEHIGH_TUNNEL_BF1_Layout",
-      "width": 11,
-      "height": 32,
+      "width": 16,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/LEHIGH_TUNNEL_BF1/border.bin",
@@ -10593,6 +10593,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/MINSI_CITY_APARTMENT_3F/border.bin",
       "blockdata_filepath": "data/layouts/MINSI_CITY_APARTMENT_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIDLEY_CAVE_BF2",
+      "name": "RIDLEY_CAVE_BF2_Layout",
+      "width": 20,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/RIDLEY_CAVE_BF2/border.bin",
+      "blockdata_filepath": "data/layouts/RIDLEY_CAVE_BF2/map.bin"
+    },
+    {
+      "id": "LAYOUT_COPPERGATE_CITY_APARTMENT",
+      "name": "COPPERGATE_CITY_APARTMENT_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/COPPERGATE_CITY_APARTMENT/border.bin",
+      "blockdata_filepath": "data/layouts/COPPERGATE_CITY_APARTMENT/map.bin"
     }
   ]
 }

@@ -1112,7 +1112,13 @@
 #define TRAINER_ENPALE_E4_BUG                  1106
 #define TRAINER_BRUTUS                         1107
 #define TRAINER_DOLLY_101                      1108
-#define TRAINERS_COUNT_EMERALD                 1109
+#define TRAINER_RIDLEY_EXPLORER_1              1109
+#define TRAINER_RIDLEY_EXPLORER_2              1110
+#define TRAINER_RIDLEY_EXPLORER_3              1111
+#define TRAINER_RIDLEY_EXPLORER_4              1112
+#define TRAINER_RIDLEY_EXPLORER_5              1113
+#define TRAINER_RIDLEY_EXPLORER_6              1114
+#define TRAINERS_COUNT_EMERALD                 1115
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

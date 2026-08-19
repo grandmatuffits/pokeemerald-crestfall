@@ -18,7 +18,9 @@ FallarborTown_Mart_Pokemart:
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_REVIVE
-	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_TM17
+	.2byte ITEM_TM31
+	.2byte ITEM_TM42
 	pokemartlistend
 
 FallarborTown_Mart_EventScript_Woman::

@@ -219,6 +219,13 @@
       "elevation": 0,
       "dest_map": "MAP_COPPERGATE_CITY_TRADE_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 44,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_COPPERGATE_CITY_APARTMENT",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

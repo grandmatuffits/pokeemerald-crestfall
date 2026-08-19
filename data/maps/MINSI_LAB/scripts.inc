@@ -595,7 +595,7 @@ MINSI_LAB_Text_Hemlock3:
 MINSI_LAB_EventScript_FossilMachine::
 	lock
 	faceplayer
-	goto_if_unset FLAG_SYS_NATIONAL_DEX, MINSI_LAB_EventScript_FossilNoDex
+	goto_if_unset FLAG_BADGE06_GET, MINSI_LAB_EventScript_FossilNoDex
 	checkitem ITEM_HELIX_FOSSIL
 	goto_if_eq VAR_RESULT, TRUE, MINSI_LAB_EventScript_FossilHelix
 	checkitem ITEM_DOME_FOSSIL
@@ -629,10 +629,11 @@ MINSI_LAB_EventScript_FossilHelix::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_OMANYTE, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_HELIX_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilDome::
 	bufferitemname STR_VAR_1, ITEM_DOME_FOSSIL
@@ -641,10 +642,11 @@ MINSI_LAB_EventScript_FossilDome::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_KABUTO, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_DOME_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilAmber::
 	bufferitemname STR_VAR_1, ITEM_OLD_AMBER
@@ -653,10 +655,11 @@ MINSI_LAB_EventScript_FossilAmber::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_AERODACTYL, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_OLD_AMBER
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilRoot::
 	bufferitemname STR_VAR_1, ITEM_ROOT_FOSSIL
@@ -665,10 +668,11 @@ MINSI_LAB_EventScript_FossilRoot::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_LILEEP, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_ROOT_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilClaw::
 	bufferitemname STR_VAR_1, ITEM_CLAW_FOSSIL
@@ -677,22 +681,11 @@ MINSI_LAB_EventScript_FossilClaw::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_ANORITH, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_CLAW_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
-
-MINSI_LAB_EventScript_FossilArmor::
-	bufferitemname STR_VAR_1, ITEM_ARMOR_FOSSIL
-	bufferspeciesname STR_VAR_2, SPECIES_SHIELDON
-	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq MINSI_LAB_EventScript_FossilDecline
-	givemon SPECIES_SHIELDON, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
-	removeitem ITEM_ARMOR_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilSkull::
 	bufferitemname STR_VAR_1, ITEM_SKULL_FOSSIL
@@ -701,10 +694,24 @@ MINSI_LAB_EventScript_FossilSkull::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_CRANIDOS, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_SKULL_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
+
+MINSI_LAB_EventScript_FossilArmor::
+	bufferitemname STR_VAR_1, ITEM_ARMOR_FOSSIL
+	bufferspeciesname STR_VAR_2, SPECIES_SHIELDON
+	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_FossilDecline
+	givemon SPECIES_SHIELDON, 20
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	removeitem ITEM_ARMOR_FOSSIL
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilCover::
 	bufferitemname STR_VAR_1, ITEM_COVER_FOSSIL
@@ -713,10 +720,11 @@ MINSI_LAB_EventScript_FossilCover::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_TIRTOUGA, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_COVER_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilPlume::
 	bufferitemname STR_VAR_1, ITEM_PLUME_FOSSIL
@@ -725,10 +733,11 @@ MINSI_LAB_EventScript_FossilPlume::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_ARCHEN, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_PLUME_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilJaw::
 	bufferitemname STR_VAR_1, ITEM_JAW_FOSSIL
@@ -737,10 +746,11 @@ MINSI_LAB_EventScript_FossilJaw::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_TYRUNT, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_JAW_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilSail::
 	bufferitemname STR_VAR_1, ITEM_SAIL_FOSSIL
@@ -749,10 +759,11 @@ MINSI_LAB_EventScript_FossilSail::
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_AMAURA, 20
-	compare VAR_RESULT, MON_CANT_GIVE
-	goto_if_eq MINSI_LAB_EventScript_FossilNoRoom
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_SAIL_FOSSIL
-	goto MINSI_LAB_EventScript_FossilSuccess
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	end
 
 MINSI_LAB_EventScript_FossilSuccess::
 	msgbox MINSI_LAB_Text_FossilRevived, MSGBOX_DEFAULT
@@ -893,3 +904,35 @@ ALLENWOOD_FOREST_Text_ModuleFound:
 ALLENWOOD_FOREST_Text_ModuleGone:
 	.string "The leaf litter is just leaf litter\n"
 	.string "now. The hum is gone.$"	
+
+MINSI_LAB_EventScript_FossilNameParty::
+	playfanfare MUS_LEVEL_UP
+	message MINSI_LAB_Text_FossilReceived
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MINSI_LAB_EventScript_FossilSuccess
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto MINSI_LAB_EventScript_FossilSuccess
+	end
+
+MINSI_LAB_EventScript_FossilNamePC::
+	playfanfare MUS_LEVEL_UP
+	message MINSI_LAB_Text_FossilReceived
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MINSI_LAB_EventScript_FossilSentToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto MINSI_LAB_EventScript_FossilSentToPC
+	end
+
+MINSI_LAB_EventScript_FossilSentToPC::
+	call Common_EventScript_TransferredToPC
+	goto MINSI_LAB_EventScript_FossilSuccess
+	end	
+
+MINSI_LAB_Text_FossilReceived:
+	.string "You received the revived\n"
+	.string "{STR_VAR_2}!$"	

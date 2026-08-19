@@ -76,6 +76,19 @@
       "trainer_sight_or_berry_tree_id": "4",
       "script": "ENPALE_ROUTE_12_EventScript_NinjaBoy",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 27,
+      "y": 83,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_PSYCHIC",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ENPALE_ROUTE_12_TM_PSYCHIC"
     }
   ],
   "warp_events": [],

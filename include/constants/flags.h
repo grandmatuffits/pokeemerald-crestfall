@@ -1358,6 +1358,26 @@
 #define FLAG_PORYGON_MODULE_FOUND                         0x282
 #define FLAG_PORYGON_RECEIVED                             0x283
 #define FLAG_HIDE_MINSI_LAB_RIVAL                         0x276
+#define FLAG_RIDLEY_FOSSIL_1                              0x277
+#define FLAG_RIDLEY_FOSSIL_2                              0x278
+#define FLAG_RIDLEY_FOSSIL_3                              0x279
+#define FLAG_RIDLEY_FOSSIL_4                              0x280
+#define FLAG_RIDLEY_FOSSIL_5                              0x281
+#define FLAG_RIDLEY_FOSSIL_6                              0x282
+#define FLAG_ALLENWOOD_FOREST_TM_BULLET_SEED              0x283
+#define FLAG_ENPALE_ROUTE_2_TM_WATER_PULSE                0x284
+#define FLAG_ENPALE_ROUTE_3_TM_ROCK_TOMB                  0x285
+#define FLAG_LEHIGH_TUNNET_TM_FOUL_PLAY                   0x286
+#define FLAG_ENPALE_ROUTE_5_TM_GRASS_KNOT                 0x287
+#define FLAG_ITEM_ENPALE_ROUTE_9_TM_SOLAR_BEAM            0x288
+#define FLAG_ROSEBANK_AQUA_JET_RECEIVED                   0x289
+#define FLAG_ENPALE_ROUTE_10_TM_XSCISSOR                  0x290
+#define FLAG_ITEM_WALLAR_BELL_TOWER_TM_70                 0x291
+#define FLAG_ITEM_WALLAR_TM_POISON_JAB                    0x292
+#define FLAG_ITEM_ENPALE_ROUTE_12_TM_PSYCHIC              0x293
+#define FLAG_ITEM_GRANT_ISLAND_TM_FIRE_PUNCH              0x294
+#define FLAG_ITEM_GRANT_ISLAND_TM_DRAGON_PULSE            0x295
+#define FLAG_ROUTE13_SCALD_RECEIVED                       0x296
 
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag

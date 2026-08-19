@@ -134,6 +134,19 @@
       "trainer_sight_or_berry_tree_id": "5",
       "script": "ALLENWOOD__FOREST_EventScript_Chet",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 29,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM09",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ALLENWOOD_FOREST_TM_BULLET_SEED"
     }
   ],
   "warp_events": [
@@ -147,14 +160,6 @@
   ],
   "coord_events": [],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 29,
-      "y": 31,
-      "elevation": 0,
-      "item": "ITEM_NUGGET",
-      "flag": "FLAG_HIDDEN_ITEM_ALLENWOOD_FOREST_NUGGET"
-    },
     {
       "type": "sign",
       "x": 49,

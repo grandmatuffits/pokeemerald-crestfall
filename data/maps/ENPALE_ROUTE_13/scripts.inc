@@ -140,3 +140,44 @@ Route13_Text_FishermanDefeat:
 Route13_Text_FishermanPostBattle:
 	.string "Fish have been fleeing south all\n"
 	.string "morning. Something up at the island\lhas them spooked.$"
+
+ROUTE13_EventScript_FishermanScald::
+	trainerbattle_single TRAINER_ROUTE13_FISHERMAN, ROUTE13_Text_FishermanIntro, ROUTE13_Text_FishermanDefeat, ROUTE13_EventScript_FishermanGiveScald
+
+ROUTE13_EventScript_FishermanGiveScald::
+	goto_if_set FLAG_ROUTE13_SCALD_RECEIVED, ROUTE13_EventScript_FishermanPostBattle
+	giveitem ITEM_TM_SCALD
+	compare VAR_RESULT, FALSE
+	goto_if_eq ROUTE13_EventScript_FishermanBagFull
+	setflag FLAG_ROUTE13_SCALD_RECEIVED
+	msgbox ROUTE13_Text_FishermanGaveScald, MSGBOX_DEFAULT
+	release
+	end
+
+ROUTE13_EventScript_FishermanBagFull::
+	msgbox ROUTE13_Text_FishermanBagFull, MSGBOX_DEFAULT
+	release
+	end
+
+ROUTE13_EventScript_FishermanPostBattle::
+	msgbox ROUTE13_Text_FishermanPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+ROUTE13_Text_FishermanIntro:
+	.string "The current's strong today, and so am\n"
+	.string "I! Let's see what you've got!$"
+
+ROUTE13_Text_FishermanDefeat:
+	.string "Hah! Reeled in a big one this time.$"
+
+ROUTE13_Text_FishermanGaveScald:
+	.string "A trainer like you deserves this.\n"
+	.string "SCALD… boils 'em and burns 'em both!$"
+
+ROUTE13_Text_FishermanBagFull:
+	.string "Your BAG's full to bursting! Clear some\n"
+	.string "space and talk to me again.$"
+
+ROUTE13_Text_FishermanPostBattle:
+	.string "The sea's been good to me. Tight lines!$"	

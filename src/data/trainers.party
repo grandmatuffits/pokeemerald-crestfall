@@ -21093,3 +21093,89 @@ AI: Check Bad Move
 
 Snubbull
 Level: 5
+
+=== TRAINER_RIDLEY_EXPLORER_1 ===
+Name: Kane
+Class: Pokemaniac
+Pic: Pokemaniac Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Rhyhorn
+Level: 40
+
+Golem
+Level: 42
+
+=== TRAINER_RIDLEY_EXPLORER_2===
+Name: Heath
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Camerupt
+Level: 40
+
+Aggron
+Level: 42
+
+
+
+=== TRAINER_RIDLEY_EXPLORER_3 ===
+Name: Sheldon
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Gabite
+Level: 42
+
+Gliscor @ None
+Level: 44
+
+=== TRAINER_RIDLEY_EXPLORER_4 ===
+Name: Ursula
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Crustle
+Level: 42
+
+Gigalith @ None
+Level: 43
+
+=== TRAINER_RIDLEY_EXPLORER_5 ===
+Name: Kal
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Carbink @ None
+Level: 46
+
+=== TRAINER_RIDLEY_EXPLORER_6 ===
+Name: Kevin
+Class: Hiker
+Pic: Hiker Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Rhydon @ None
+Level: 47

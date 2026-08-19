@@ -72,10 +72,6 @@ ROSEBANK_TOWN_EventScript_SwimmerM::
 	msgbox ROSEBANK_TOWN_Text_SwimmerM, MSGBOX_NPC
 	end
 
-ROSEBANK_TOWN_EventScript_Fisherman::
-	msgbox ROSEBANK_TOWN_Text_Fisherman, MSGBOX_NPC
-	end
-
 ROSEBANK_TOWN_EventScript_TriathleteM::
 	msgbox ROSEBANK_TOWN_Text_TriathleteM, MSGBOX_NPC
 	end
@@ -135,14 +131,6 @@ ROSEBANK_TOWN_Text_SwimmerM:
 	.string "Well. Best swimming that's still\n"
 	.string "open.$"
 
-ROSEBANK_TOWN_Text_Fisherman:
-	.string "Been casting this spot thirty years.\p"
-	.string "Week or so back, folks in robes came\n"
-	.string "down the beach road, heading south\l"
-	.string "toward the marsh.\p"
-	.string "Officers waved them straight past\n"
-	.string "the barricade. Never said a word.$"
-
 ROSEBANK_TOWN_Text_TriathleteM:
 	.string "Sand running! Builds the calves like\n"
 	.string "nothing else!\p"
@@ -188,3 +176,44 @@ ROSEBANK_TOWN_Text_Officer:
 	.string "Public safety matter. Nothing for\n"
 	.string "you down there.\p"
 	.string "Enjoy the beach.$"	
+
+ROSEBANK_TOWN_EventScript_Fisherman::
+	lock
+	faceplayer
+	goto_if_set FLAG_ROSEBANK_AQUA_JET_RECEIVED, ROSEBANK_TOWN_EventScript_FishermanGotIt
+	msgbox ROSEBANK_TOWN_Text_FishermanIntro, MSGBOX_DEFAULT
+	giveitem ITEM_TM_AQUA_JET
+	compare VAR_RESULT, FALSE
+	goto_if_eq ROSEBANK_TOWN_EventScript_FishermanBagFull
+	setflag FLAG_ROSEBANK_AQUA_JET_RECEIVED
+	msgbox ROSEBANK_TOWN_Text_FishermanGave, MSGBOX_DEFAULT
+	release
+	end
+
+ROSEBANK_TOWN_EventScript_FishermanBagFull::
+	msgbox ROSEBANK_TOWN_Text_FishermanBagFull, MSGBOX_DEFAULT
+	release
+	end
+
+ROSEBANK_TOWN_EventScript_FishermanGotIt::
+	msgbox ROSEBANK_TOWN_Text_FishermanGotIt, MSGBOX_DEFAULT
+	release
+	end	
+
+ROSEBANK_TOWN_Text_FishermanIntro:
+	.string "Ahh, nothing beats castin' a line on a\n"
+	.string "day like this.\p"
+	.string "Say, you look like you know your way\n"
+	.string "around a battle. Here, a strong current\l"
+	.string "move for a strong trainer. Take it!$"
+
+ROSEBANK_TOWN_Text_FishermanGave:
+	.string "AQUA JET strikes first, quick as a\n"
+	.string "riptide. Put it to good use!$"
+
+ROSEBANK_TOWN_Text_FishermanBagFull:
+	.string "Whoa, your BAG's stuffed full. Make\n"
+	.string "some room and come find me.$"
+
+ROSEBANK_TOWN_Text_FishermanGotIt:
+	.string "Tides are good today. Catchin' plenty!$"	

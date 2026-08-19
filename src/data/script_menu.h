@@ -1138,6 +1138,22 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+static const u8 sText_RootFossil[]  = _("ROOT FOSSIL");
+static const u8 sText_ClawFossil[]  = _("CLAW FOSSIL");
+static const u8 sText_SkullFossil[] = _("SKULL FOSSIL");
+static const u8 sText_ArmorFossil[] = _("ARMOR FOSSIL");
+static const u8 sText_CoverFossil[] = _("COVER FOSSIL");
+static const u8 sText_PlumeFossil[] = _("PLUME FOSSIL");
+static const u8 sText_JawFossil[]   = _("JAW FOSSIL");
+static const u8 sText_SailFossil[]  = _("SAIL FOSSIL");
+
+static const struct MenuAction sMultiChoice_FossilGen1[] = {{sText_HelixFossil}, {sText_DomeFossil}};
+static const struct MenuAction sMultiChoice_FossilGen3[] = {{sText_RootFossil},  {sText_ClawFossil}};
+static const struct MenuAction sMultiChoice_FossilGen4[] = {{sText_SkullFossil}, {sText_ArmorFossil}};
+static const struct MenuAction sMultiChoice_FossilGen5[] = {{sText_CoverFossil}, {sText_PlumeFossil}};
+static const struct MenuAction sMultiChoice_FossilGen6[] = {{sText_JawFossil},   {sText_SailFossil}};
+
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -1306,6 +1322,11 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_EGGS_VICTORIES_QUIT]                        = MULTICHOICE(sMultichoiceList_Eggs_Victories_Quit),
     [MULTI_HOF_EGGS_VICTORIES_QUIT]                    = MULTICHOICE(sMultichoiceList_HOF_Eggs_Victories_Quit),
     [MULTI_MIRAVEIL_HMS]                               = MULTICHOICE(MultichoiceList_MiraveilHMs),
+    [MULTI_FOSSIL_GEN1] = MULTICHOICE(sMultiChoice_FossilGen1),
+    [MULTI_FOSSIL_GEN3] = MULTICHOICE(sMultiChoice_FossilGen3),
+    [MULTI_FOSSIL_GEN4] = MULTICHOICE(sMultiChoice_FossilGen4),
+    [MULTI_FOSSIL_GEN5] = MULTICHOICE(sMultiChoice_FossilGen5),
+    [MULTI_FOSSIL_GEN6] = MULTICHOICE(sMultiChoice_FossilGen6),
 };
 
 const u8 *const gStdStrings[] =
