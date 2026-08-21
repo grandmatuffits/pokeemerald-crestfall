@@ -12,6 +12,7 @@ MINSI_CITY_OnTransition:
 MINSI_CITY_OnTransition_End:
 	end
 
+
 MINSI_CITY_OnFrame:
 	map_script_2 VAR_VERDANTURF_TOWN_STATE, 0, MINSI_CITY_Intro
 	.2byte 0
@@ -49,11 +50,7 @@ MINSI_CITY_Movement_BrutusLeave::
 	step_end
 
 MINSI_CITY_Movement_PlayerWalkSouth::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	face_down
 	step_end
 
 MINSI_CITY_Text_BrutusName:

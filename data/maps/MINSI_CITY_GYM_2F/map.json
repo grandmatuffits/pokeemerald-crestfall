@@ -3,7 +3,7 @@
   "name": "MINSI_CITY_GYM_2F",
   "layout": "LAYOUT_MINSI_CITY_GYM_2F",
   "music": "MUS_ENPALE_MINSI",
-  "region_map_section": "MAPSEC_RUSTBORO_CITY",
+  "region_map_section": "MAPSEC_SAFFRON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

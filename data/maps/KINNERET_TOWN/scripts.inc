@@ -1,5 +1,10 @@
 KINNERET_TOWN_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, KINNERET_TOWN_OnTransition
 	.byte 0
+
+KINNERET_TOWN_OnTransition::
+	setflag FLAG_WORLD_MAP_PALLET_TOWN
+	end
 
 KINNERET_TOWN_EventScript_Farmer::
 	lock

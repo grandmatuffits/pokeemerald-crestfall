@@ -3,7 +3,7 @@
   "name": "VALERYTOWN",
   "layout": "LAYOUT_VALERYTOWN",
   "music": "MUS_ENPALE_CAVE",
-  "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
+  "region_map_section": "MAPSEC_VIRIDIAN_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_TOWN",

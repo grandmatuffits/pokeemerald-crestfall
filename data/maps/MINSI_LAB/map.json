@@ -3,15 +3,15 @@
   "name": "MINSI_LAB",
   "layout": "LAYOUT_MINSI_LAB",
   "music": "MUS_ENPALE_LAB",
-  "region_map_section": "MAPSEC_RUSTBORO_CITY",
+  "region_map_section": "MAPSEC_SAFFRON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
-  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "battle_scene": "MAP_BATTLE_SCENE_INDOOR_1",
   "connections": null,
   "object_events": [
     {

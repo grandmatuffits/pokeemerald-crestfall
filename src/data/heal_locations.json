@@ -353,8 +353,8 @@
     {
       "id": "HEAL_LOCATION_MINSI_CITY",
       "map": "MAP_MINSI_CITY",
-      "x": 21,
-      "y": 3
+      "x": 22,
+      "y": 10
     },
     {
       "id": "HEAL_LOCATION_ENPALE_ROUTE_5",
@@ -373,6 +373,66 @@
       "map": "MAP_PETALBURG_CITY",
       "x": 15,
       "y": 15
+    },
+    {
+      "id": "HEAL_LOCATION_BAYNOE_TOWN",
+      "map": "MAP_BAYNOE_TOWN",
+      "x": 35,
+      "y": 27
+    },
+    {
+      "id": "HEAL_LOCATION_COPPERGATE_CITY",
+      "map": "MAP_COPPERGATE_CITY",
+      "x": 34,
+      "y": 27
+    },
+    {
+      "id": "HEAL_LOCATION_DELMARK_CITY_WEST",
+      "map": "MAP_DELMARK_CITY_WEST",
+      "x": 22,
+      "y": 18
+    },
+    {
+      "id": "HEAL_LOCATION_KINNERET_TOWN",
+      "map": "MAP_KINNERET_TOWN",
+      "x": 12,
+      "y": 22
+    },
+    {
+      "id": "HEAL_LOCATION_LENOX_TOWN",
+      "map": "MAP_LENOX_TOWN",
+      "x": 22,
+      "y": 30
+    },
+    {
+      "id": "HEAL_LOCATION_MIRAVEIL_ISLAND",
+      "map": "MAP_MIRAVEIL_ISLAND",
+      "x": 22,
+      "y": 22
+    },
+    {
+      "id": "HEAL_LOCATION_QUARREN_TOWN",
+      "map": "MAP_QUARREN_TOWN",
+      "x": 19,
+      "y": 10
+    },
+    {
+      "id": "HEAL_LOCATION_ROSEBANK_TOWN",
+      "map": "MAP_ROSEBANK_TOWN",
+      "x": 22,
+      "y": 32
+    },
+    {
+      "id": "HEAL_LOCATION_VALERYTOWN",
+      "map": "MAP_VALERYTOWN",
+      "x": 14,
+      "y": 11
+    },
+    {
+      "id": "HEAL_LOCATION_VELDTMOOR_CITY",
+      "map": "MAP_VELDTMOOR_CITY",
+      "x": 20,
+      "y": 16
     }
   ]
 }

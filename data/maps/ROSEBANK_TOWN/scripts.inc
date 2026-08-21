@@ -1,5 +1,10 @@
 ROSEBANK_TOWN_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ROSEBANK_TOWN_OnTransition
 	.byte 0
+
+ROSEBANK_TOWN_OnTransition::
+	setflag FLAG_WORLD_MAP_FUCHSIA_CITY
+	end
 
 ROSEBANK_TOWN_EventScript_DrinkVendor::
 	lock

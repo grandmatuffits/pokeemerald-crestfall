@@ -3,7 +3,7 @@
   "name": "ROSEBANK_TOWN_MINER_HOUSE",
   "layout": "LAYOUT_ROSEBANK_TOWN_MINER_HOUSE",
   "music": "MUS_ENPALE_ROSEBANK",
-  "region_map_section": "MAPSEC_DEWFORD_TOWN",
+  "region_map_section": "MAPSEC_FUCHSIA_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

@@ -1,5 +1,10 @@
 VALERYTOWN_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VALERYTOWN_OnTransition
 	.byte 0
+
+VALERYTOWN_OnTransition::
+	setflag FLAG_WORLD_MAP_VIRIDIAN_CITY
+	end
 
 VALERYTOWN_EventScript_ToughGuy1::
 	lock

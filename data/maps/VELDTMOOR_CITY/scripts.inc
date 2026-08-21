@@ -3,6 +3,7 @@ VELDTMOOR_CITY_MapScripts::
 	.byte 0
 
 VELDTMOOR_CITY_OnTransition::
+	setflag FLAG_WORLD_MAP_CERULEAN_CITY
 	goto_if_set FLAG_VELDTMOOR_RIVAL_DONE, VELDTMOOR_CITY_OnTransition_Done
 	setflag FLAG_HIDE_VELDTMOOR_RIVAL
 	end

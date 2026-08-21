@@ -2,7 +2,12 @@
 #define LOCALID_COPPERGATE_BLOCKER 9
 
 COPPERGATE_CITY_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, COPPERGATE_CITY_OnTransition
 	.byte 0
+
+COPPERGATE_CITY_OnTransition::
+	setflag FLAG_WORLD_MAP_LAVENDER_TOWN
+	end
 
 @ ======== ROW 28 ========
 COPPERGATE_CITY_EventScript_RivalScene28::

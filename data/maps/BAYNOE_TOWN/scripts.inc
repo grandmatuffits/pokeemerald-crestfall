@@ -3,6 +3,7 @@ BAYNOE_TOWN_MapScripts::
 	.byte 0
 
 BAYNOE_TOWN_OnTransition::
+	setflag FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR
 	goto_if_set FLAG_BAYNOE_TEMPLE_DONE, BAYNOE_TOWN_OnTransition_CovenantGone
 	end
 

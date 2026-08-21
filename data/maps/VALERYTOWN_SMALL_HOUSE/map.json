@@ -3,7 +3,7 @@
   "name": "VALERYTOWN_SMALL_HOUSE",
   "layout": "LAYOUT_VALERYTOWN_SMALL_HOUSE",
   "music": "MUS_ENPALE_CAVE",
-  "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
+  "region_map_section": "MAPSEC_VIRIDIAN_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

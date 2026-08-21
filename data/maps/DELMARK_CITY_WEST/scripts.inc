@@ -1,5 +1,10 @@
 DELMARK_CITY_WEST_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, DELMARK_CITY_WEST_OnTransition
 	.byte 0
+
+DELMARK_CITY_WEST_OnTransition::
+	setflag FLAG_WORLD_MAP_CELADON_CITY
+	end
 
 DELMARK_CITY_WEST_EventScript_Fisherman::
 	lock

@@ -1,0 +1,273 @@
+
+MINSI_CITY_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MINSI_CITY_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MINSI_CITY_OnFrame
+	.byte 0
+
+MINSI_CITY_OnTransition:
+	goto_if_set FLAG_UNUSED_0x021, MINSI_CITY_OnTransition_End
+	setflag FLAG_UNUSED_0x021
+	clearflag FLAG_UNUSED_0x020
+	special Special_ClearPlayerParty
+MINSI_CITY_OnTransition_End:
+	call MINSI_CITY_TEST_FlyUnlockAll
+	end
+
+@ TEMP TEST: light up all 11 Enpale towns. Remove after Fly is verified.
+MINSI_CITY_TEST_FlyUnlockAll:
+	goto_if_set FLAG_TEMP_1F, MINSI_CITY_TEST_FlyUnlockAll_End
+	setflag FLAG_TEMP_1F
+	setflag FLAG_WORLD_MAP_PALLET_TOWN
+	setflag FLAG_WORLD_MAP_VIRIDIAN_CITY
+	setflag FLAG_WORLD_MAP_PEWTER_CITY
+	setflag FLAG_WORLD_MAP_CERULEAN_CITY
+	setflag FLAG_WORLD_MAP_LAVENDER_TOWN
+	setflag FLAG_WORLD_MAP_VERMILION_CITY
+	setflag FLAG_WORLD_MAP_CELADON_CITY
+	setflag FLAG_WORLD_MAP_FUCHSIA_CITY
+	setflag FLAG_WORLD_MAP_CINNABAR_ISLAND
+	setflag FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR
+	setflag FLAG_WORLD_MAP_SAFFRON_CITY
+MINSI_CITY_TEST_FlyUnlockAll_End:
+	return
+
+MINSI_CITY_OnFrame:
+	map_script_2 VAR_VERDANTURF_TOWN_STATE, 0, MINSI_CITY_Intro
+	.2byte 0
+
+MINSI_CITY_Intro::
+	setvar VAR_VERDANTURF_TOWN_STATE, 1
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerFaceBrutus
+	waitmovement 0
+	setspeaker MINSI_CITY_Text_BrutusName
+	msgbox MINSI_CITY_Text_Brutus1, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_BRUTUS_MINSI, MINSI_CITY_Movement_BrutusLeave
+	waitmovement 0
+	removeobject LOCALID_BRUTUS_MINSI
+	setflag FLAG_UNUSED_0x029
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerWalkSouth
+	waitmovement 0
+	end
+
+MINSI_CITY_Movement_PlayerFaceBrutus::
+	face_right
+	step_end
+
+MINSI_CITY_Movement_BrutusLeave::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MINSI_CITY_Movement_PlayerWalkSouth::
+	face_down
+	step_end
+
+MINSI_CITY_Text_BrutusName:
+	.string "Brutus$"
+
+MINSI_CITY_Text_Brutus1:
+	.string "I'm very disappointed in you,\n{PLAYER}. You brought shame to\lthis family.\pDon't come back home to Veldtmoor\nwithout 8 gym badges, the required\lamount to challenge the Pokemon\lLeague.$"
+
+MINSI_CITY_EventScript_NorthGuard::
+	lock
+	faceplayer
+	setspeaker MINSI_CITY_Text_GuardName
+	msgbox MINSI_CITY_Text_Guard1, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+MINSI_CITY_Text_GuardName:
+	.string "Guard$"
+
+MINSI_CITY_Text_Guard1:
+	.string "Sorry kid, you can't come\nthrough without 8 badges.$"
+
+MINSI_CITY_EventScript_NorthCheckpoint::
+	goto_if_unset FLAG_BADGE04_GET, MINSI_CITY_EventScript_NorthTrigger
+	end
+
+MINSI_CITY_EventScript_NorthTrigger::
+	lockall
+	applymovement LOCALID_MINSI_NORTHGUARD, MINSI_CITY_Movement_GuardFacePlayer
+	waitmovement 0
+	setspeaker MINSI_CITY_Text_GuardName
+	msgbox MINSI_CITY_Text_Guard1, MSGBOX_SIGN
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerPushedSouth
+	waitmovement 0
+	releaseall
+	end
+
+MINSI_CITY_Movement_PlayerPushedSouth::
+	walk_down
+	step_end
+
+MINSI_CITY_Movement_GuardFacePlayer::
+	face_left
+	step_end
+
+MINSI_CITY_Movement_PlayerFaceSouth::
+	face_down
+	step_end
+
+MINSI_CITY_EventScript_GymDoor::
+	goto_if_unset FLAG_BAYNOE_TEMPLE_DONE, MINSI_CITY_EventScript_GymLocked
+	end
+
+MINSI_CITY_EventScript_GymLocked::
+	lockall
+	msgbox MINSI_CITY_Text_GymLocked, MSGBOX_SIGN
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerStepBack
+	waitmovement 0
+	releaseall
+	end
+
+MINSI_CITY_Movement_PlayerStepBack::
+	walk_down
+	step_end
+	
+MINSI_CITY_Text_GymLocked:
+	.string "The gym is currently closed.$"
+
+MINSI_CITY_EventScript_SouthTrigger::
+	goto_if_set FLAG_SYS_POKEDEX_GET, MINSI_CITY_EventScript_SouthTrigger_End
+	lockall
+	applymovement LOCALID_POKELABGUY, MINSI_CITY_Movement_PokeLabGuyFace
+	waitmovement 0
+	msgbox MINSI_CITY_Text_SouthTrigger, MSGBOX_SIGN
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerStepNorth
+	waitmovement 0
+	releaseall
+MINSI_CITY_EventScript_SouthTrigger_End:
+	end
+
+MINSI_CITY_Movement_PokeLabGuyFace::
+	face_left
+	step_end
+
+MINSI_CITY_Movement_PlayerStepNorth::
+	walk_up
+	step_end
+
+MINSI_CITY_Text_SouthTrigger:
+	.string "Hey, you're a new face!\nYou should go check out\lthe Pokemon Lab!$"
+
+	MINSI_CITY_EventScript_PokeCenterBlock::
+	lock
+	faceplayer
+	goto_if_set FLAG_SYS_POKEDEX_GET, MINSI_CITY_EventScript_PokeCenterBlock_Move
+	msgbox MINSI_CITY_Text_PokeCenterBlock, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+MINSI_CITY_EventScript_PokeCenterBlock_Move::
+	release
+	end
+
+MINSI_CITY_Text_PokeCenterBlock:
+	.string "Are you new here? You should go\ncheck out the Pokemon Lab just\ldown the street.\pProfessor Hemlock is so dreamy...$"
+
+MINSI_CITY_EventScript_FountainGuy::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_FountainGuy, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_FountainGuy:
+	.string "Minsi City is great!\n"
+	.string "But our gym leader has\p"
+	.string "been gone for a while.$"
+
+MINSI_CITY_EventScript_KirliaLady::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_KirliaLady, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_KirliaLady:
+	.string "Minsi City doesn't need\n"
+	.string "the Pokemon League like\p"
+	.string "Veldtmoor City. We have\n"
+	.string "actual culture.$"
+
+MINSI_CITY_EventScript_Kirlia::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_Kirlia, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_Kirlia:
+	.string "Kir...$"
+
+MINSI_CITY_EventScript_Worker::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_Worker, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_Worker:
+	.string "Baynoe Bridge is down for repairs\n"
+	.string "for now. But you can use the\p"
+	.string "bridge through Delmark City in the\n"
+	.string "meantime.$"
+
+MINSI_CITY_EventScript_Machoke::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_Machoke, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_Machoke:
+	.string "...choke...$"
+
+MINSI_CITY_EventScript_PokemonLabSign::
+	msgbox MINSI_CITY_Text_PokemonLab_Sign, MSGBOX_SIGN
+	end
+
+MINSI_CITY_Text_PokemonLab_Sign:
+	.string "Professor Hemlock's\n"
+	.string "Pokemon Laboratory$"
+
+MINSI_CITY_EventScript_CitySign::
+	msgbox MINSI_CITY_Text_City_Sign, MSGBOX_SIGN
+	end
+
+MINSI_CITY_Text_City_Sign:
+	.string "Minsi City\n"
+	.string "Fresh air and fresh beginnings$"
+
+MINSI_CITY_EventScript_SouthBlock::
+	lock
+	faceplayer
+	msgbox MINSI_CITY_Text_SouthBlock, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_Text_SouthBlock:
+	.string "Good luck, champ!$"	
+
+MINSI_CITY_EventScript_GymSign::
+	msgbox MINSI_CITY_Text_Gym_Sign, MSGBOX_SIGN
+	end
+
+MINSI_CITY_Text_Gym_Sign:
+	.string "Minsi Gym\n"
+	.string "Don't forget your Antidotes!$"	

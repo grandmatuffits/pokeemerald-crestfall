@@ -1,6 +1,11 @@
 LENOX_TOWN_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LENOX_TOWN_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, LENOX_TOWN_OnLoad
 	.byte 0
+
+LENOX_TOWN_OnTransition::
+	setflag FLAG_WORLD_MAP_VERMILION_CITY
+	end
 
 LENOX_TOWN_OnLoad:
 	goto_if_set FLAG_LENOX_COVENANT_DONE, LENOX_TOWN_OnLoad_End

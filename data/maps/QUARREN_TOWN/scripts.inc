@@ -1,5 +1,10 @@
 QUARREN_TOWN_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, QUARREN_TOWN_OnTransition
 	.byte 0
+
+QUARREN_TOWN_OnTransition::
+	setflag FLAG_WORLD_MAP_PEWTER_CITY
+	end
 
 QUARREN_TOWN_EventScript_TownSign::
 	msgbox QUARREN_TOWN_Text_TownSign, MSGBOX_SIGN

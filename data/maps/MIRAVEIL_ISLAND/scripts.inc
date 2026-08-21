@@ -1,7 +1,12 @@
 #define LOCALID_MIRAVEIL_RIVAL 1
 
 MIRAVEIL_ISLAND_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MIRAVEIL_ISLAND_OnTransition
 	.byte 0
+
+MIRAVEIL_ISLAND_OnTransition::
+	setflag FLAG_WORLD_MAP_CINNABAR_ISLAND
+	end
 
 MIRAVEIL_CITY_EventScript_Rival::
 	goto_if_set FLAG_MIRAVEIL_RIVAL_DONE, MIRAVEIL_CITY_EventScript_RivalDone

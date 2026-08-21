@@ -1691,17 +1691,17 @@
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
-#define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
-#define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
-#define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag
-#define FLAG_UNUSED_0x8EE                           (SYSTEM_FLAGS + 0x8E) // Unused Flag
-#define FLAG_UNUSED_0x8EF                           (SYSTEM_FLAGS + 0x8F) // Unused Flag
+// FLAG_UNUSED_0x8E5 claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8E6 claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8E7 claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8E8 claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8E9 claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8EA claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8EB claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8EC claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8ED claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8EE claimed as a FLAG_WORLD_MAP_* visited flag
+// FLAG_UNUSED_0x8EF claimed as a FLAG_WORLD_MAP_* visited flag
 #define FLAG_UNUSED_0x8F0                           (SYSTEM_FLAGS + 0x90) // Unused Flag
 #define FLAG_UNUSED_0x8F1                           (SYSTEM_FLAGS + 0x91) // Unused Flag
 #define FLAG_UNUSED_0x8F2                           (SYSTEM_FLAGS + 0x92) // Unused Flag
@@ -2566,17 +2566,17 @@
 #define FLAG_SYS_UNLOCKED_TANOBY_RUINS                              0
 
 // World Map Flags
-#define FLAG_WORLD_MAP_PALLET_TOWN                                  0
-#define FLAG_WORLD_MAP_VIRIDIAN_CITY                                0
-#define FLAG_WORLD_MAP_PEWTER_CITY                                  0
-#define FLAG_WORLD_MAP_CERULEAN_CITY                                0
-#define FLAG_WORLD_MAP_LAVENDER_TOWN                                0
-#define FLAG_WORLD_MAP_VERMILION_CITY                               0
-#define FLAG_WORLD_MAP_CELADON_CITY                                 0
-#define FLAG_WORLD_MAP_FUCHSIA_CITY                                 0
-#define FLAG_WORLD_MAP_CINNABAR_ISLAND                              0
-#define FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR                      0
-#define FLAG_WORLD_MAP_SAFFRON_CITY                                 0
+#define FLAG_WORLD_MAP_PALLET_TOWN                                  (SYSTEM_FLAGS + 0x85)
+#define FLAG_WORLD_MAP_VIRIDIAN_CITY                                (SYSTEM_FLAGS + 0x86)
+#define FLAG_WORLD_MAP_PEWTER_CITY                                  (SYSTEM_FLAGS + 0x87)
+#define FLAG_WORLD_MAP_CERULEAN_CITY                                (SYSTEM_FLAGS + 0x88)
+#define FLAG_WORLD_MAP_LAVENDER_TOWN                                (SYSTEM_FLAGS + 0x89)
+#define FLAG_WORLD_MAP_VERMILION_CITY                               (SYSTEM_FLAGS + 0x8A)
+#define FLAG_WORLD_MAP_CELADON_CITY                                 (SYSTEM_FLAGS + 0x8B)
+#define FLAG_WORLD_MAP_FUCHSIA_CITY                                 (SYSTEM_FLAGS + 0x8C)
+#define FLAG_WORLD_MAP_CINNABAR_ISLAND                              (SYSTEM_FLAGS + 0x8D)
+#define FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR                      (SYSTEM_FLAGS + 0x8E)
+#define FLAG_WORLD_MAP_SAFFRON_CITY                                 (SYSTEM_FLAGS + 0x8F)
 #define FLAG_WORLD_MAP_ONE_ISLAND                                   0
 #define FLAG_WORLD_MAP_TWO_ISLAND                                   0
 #define FLAG_WORLD_MAP_THREE_ISLAND                                 0
