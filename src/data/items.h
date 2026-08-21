@@ -13487,8 +13487,8 @@ const struct ItemInfo gItemsInfo[] =
             "trees anytime."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Fly,
     },
 
     [ITEM_HM_FLY] =
@@ -13501,8 +13501,8 @@ const struct ItemInfo gItemsInfo[] =
             "attacks next turn."),
         .importance = 1,
         .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Fly,
     },
 
     [ITEM_HM_SURF] =

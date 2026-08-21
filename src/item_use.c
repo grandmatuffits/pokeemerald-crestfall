@@ -34,6 +34,7 @@
 #include "overworld.h"
 #include "palette.h"
 #include "party_menu.h"
+#include "region_map.h"
 #include "pokeblock.h"
 #include "pokemon.h"
 #include "script.h"
@@ -81,6 +82,7 @@ static void SetDistanceOfClosestHiddenItem(u8, s16, s16);
 static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
 static void ItemUseOnFieldCB_Flash(u8 taskId);
+static void ItemUseOnFieldCB_Fly(u8 taskId);
 static bool32 IsValidLocationForVsSeeker(void);
 
 static const u8 sText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
@@ -1660,6 +1662,25 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
     {
         gTasks[taskId].func = ItemUseOnFieldCB_TownMap;
     }
+}
+
+void ItemUseOutOfBattle_Fly(u8 taskId)
+{
+    if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Fly;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+    {
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+}
+
+static void ItemUseOnFieldCB_Fly(u8 taskId)
+{
+    SetMainCallback2(CB2_OpenFlyMap);   // opens the region/fly map
+    DestroyTask(taskId);
 }
 
 #undef tUsingRegisteredKeyItem
