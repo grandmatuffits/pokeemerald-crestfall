@@ -4,7 +4,7 @@ import sys, os
 from PIL import Image
 
 DEST = "graphics/pokenav/region_map"
-MAP_W, MAP_H = 29, 17
+MAP_W, MAP_H = 28, 15
 BUF_W, BUF_H = 64, 32
 SHEET_W_TILES = 16
 MAX_TILES = 192

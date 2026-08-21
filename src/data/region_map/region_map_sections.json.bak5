@@ -525,7 +525,7 @@
       "id": "MAPSEC_PALLET_TOWN",
       "name": "Kinneret Town",
       "x": 9,
-      "y": 8,
+      "y": 7,
       "width": 1,
       "height": 1
     },
@@ -533,7 +533,7 @@
       "id": "MAPSEC_VIRIDIAN_CITY",
       "name": "Valerytown",
       "x": 12,
-      "y": 13,
+      "y": 12,
       "width": 1,
       "height": 1
     },
@@ -541,7 +541,7 @@
       "id": "MAPSEC_PEWTER_CITY",
       "name": "Quarren Town",
       "x": 2,
-      "y": 7,
+      "y": 6,
       "width": 1,
       "height": 1
     },
@@ -549,7 +549,7 @@
       "id": "MAPSEC_CERULEAN_CITY",
       "name": "Veldtmoor City",
       "x": 9,
-      "y": 2,
+      "y": 1,
       "width": 1,
       "height": 1
     },
@@ -557,7 +557,7 @@
       "id": "MAPSEC_LAVENDER_TOWN",
       "name": "Coppergate City",
       "x": 4,
-      "y": 9,
+      "y": 8,
       "width": 1,
       "height": 1
     },
@@ -565,7 +565,7 @@
       "id": "MAPSEC_VERMILION_CITY",
       "name": "Lenox Town",
       "x": 5,
-      "y": 2,
+      "y": 1,
       "width": 1,
       "height": 1
     },
@@ -573,7 +573,7 @@
       "id": "MAPSEC_CELADON_CITY",
       "name": "Delmark City",
       "x": 8,
-      "y": 10,
+      "y": 9,
       "width": 1,
       "height": 1
     },
@@ -581,7 +581,7 @@
       "id": "MAPSEC_FUCHSIA_CITY",
       "name": "Rosebank Town",
       "x": 17,
-      "y": 9,
+      "y": 8,
       "width": 1,
       "height": 1
     },
@@ -589,7 +589,7 @@
       "id": "MAPSEC_CINNABAR_ISLAND",
       "name": "Miraveil Island",
       "x": 22,
-      "y": 4,
+      "y": 3,
       "width": 1,
       "height": 1
     },
@@ -597,7 +597,7 @@
       "id": "MAPSEC_INDIGO_PLATEAU",
       "name": "Baynoe Town",
       "x": 13,
-      "y": 5,
+      "y": 4,
       "width": 1,
       "height": 1
     },
@@ -605,7 +605,7 @@
       "id": "MAPSEC_SAFFRON_CITY",
       "name": "Minsi City",
       "x": 8,
-      "y": 5,
+      "y": 4,
       "width": 1,
       "height": 1
     },
@@ -777,7 +777,7 @@
       "width": 1,
       "height": 1,
       "x": 9,
-      "y": 7
+      "y": 6
     },
     {
       "id": "MAPSEC_MT_MOON",
@@ -785,7 +785,7 @@
       "width": 1,
       "height": 1,
       "x": 2,
-      "y": 6
+      "y": 5
     },
     {
       "id": "MAPSEC_S_S_ANNE",
@@ -853,7 +853,7 @@
       "width": 1,
       "height": 1,
       "x": 13,
-      "y": 4
+      "y": 3
     },
     {
       "id": "MAPSEC_SEAFOAM_ISLANDS",
@@ -861,7 +861,7 @@
       "width": 1,
       "height": 1,
       "x": 19,
-      "y": 7
+      "y": 6
     },
     {
       "id": "MAPSEC_POKEMON_TOWER",
@@ -869,7 +869,7 @@
       "width": 1,
       "height": 1,
       "x": 15,
-      "y": 11
+      "y": 10
     },
     {
       "id": "MAPSEC_CERULEAN_CAVE",
@@ -877,7 +877,7 @@
       "width": 1,
       "height": 1,
       "x": 3,
-      "y": 4
+      "y": 3
     },
     {
       "id": "MAPSEC_POWER_PLANT",
@@ -885,7 +885,7 @@
       "width": 1,
       "height": 1,
       "x": 5,
-      "y": 7
+      "y": 6
     },
     {
       "id": "MAPSEC_ONE_ISLAND",
