@@ -5,6 +5,7 @@ MINSI_CITY_MapScripts::
 	.byte 0
 
 MINSI_CITY_OnTransition:
+	setflag FLAG_WORLD_MAP_SAFFRON_CITY
 	goto_if_set FLAG_UNUSED_0x021, MINSI_CITY_OnTransition_End
 	setflag FLAG_UNUSED_0x021
 	clearflag FLAG_UNUSED_0x020

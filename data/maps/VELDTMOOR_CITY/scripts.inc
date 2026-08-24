@@ -3,14 +3,16 @@ VELDTMOOR_CITY_MapScripts::
 	.byte 0
 
 VELDTMOOR_CITY_OnTransition::
-	setflag FLAG_WORLD_MAP_CERULEAN_CITY
-	goto_if_set FLAG_VELDTMOOR_RIVAL_DONE, VELDTMOOR_CITY_OnTransition_Done
-	setflag FLAG_HIDE_VELDTMOOR_RIVAL
-	end
-
+    setflag FLAG_WORLD_MAP_CERULEAN_CITY
+    goto_if_set FLAG_VELDTMOOR_RIVAL_DONE, VELDTMOOR_CITY_OnTransition_Done
+    setflag FLAG_HIDE_VELDTMOOR_RIVAL
+    end
 VELDTMOOR_CITY_OnTransition_Done::
-	setflag FLAG_HIDE_VELDTMOOR_RIVAL
-	end
+    setflag FLAG_HIDE_VELDTMOOR_RIVAL
+    goto_if_unset FLAG_DEFEATED_ENPALE_CHAMP, VELDTMOOR_CITY_OnTransition_End
+    setrespawn HEAL_LOCATION_VELDTMOOR_CITY
+VELDTMOOR_CITY_OnTransition_End::
+    end
 
 VELDTMOOR_EventScript_RivalFinalTrigger::
 	lockall
@@ -104,3 +106,23 @@ VELDTMOOR_Text_RivalPostBattle:
 	.string "ever lived.\p"
 	.string "Enjoy your little coronation. It\n"
 	.string "won't last.$"
+
+VELDTMOOR_CITY_EventScript_Door::
+	goto_if_unset FLAG_DEFEATED_ENPALE_CHAMP, VELDTMOOR_CITY_EventScript_DoorLocked
+	end
+
+VELDTMOOR_CITY_EventScript_DoorLocked::
+	lockall
+	msgbox VELDTMOOR_CITY_Text_DoorLocked, MSGBOX_SIGN
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, VELDTMOOR_CITY_Movement_PlayerStepBack
+	waitmovement 0
+	releaseall
+	end
+
+VELDTMOOR_CITY_Movement_PlayerStepBack::
+	walk_down
+	step_end	
+
+VELDTMOOR_CITY_Text_DoorLocked:
+	.string "This door is locked.$"	

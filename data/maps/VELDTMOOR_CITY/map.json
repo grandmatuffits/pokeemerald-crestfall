@@ -24,7 +24,7 @@
       "local_id": "LOCALID_VELDTMOOR_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
       "x": 29,
-      "y": 11,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -38,23 +38,30 @@
   "warp_events": [
     {
       "x": 20,
-      "y": 15,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 15,
-      "y": 15,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_SOOTOPOLIS_CITY_MART",
       "dest_warp_id": "0"
     },
     {
       "x": 29,
-      "y": 5,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ENPALE_POKEMON_LEAGUE_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_VELDTMOOR_CITY_HOUSE",
       "dest_warp_id": "0"
     }
   ],
@@ -62,11 +69,20 @@
     {
       "type": "trigger",
       "x": 29,
-      "y": 6,
+      "y": 8,
       "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "VELDTMOOR_EventScript_RivalFinalTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "VELDTMOOR_CITY_EventScript_Door"
     }
   ],
   "bg_events": []

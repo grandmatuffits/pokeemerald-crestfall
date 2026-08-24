@@ -647,3 +647,4 @@ gSpecials::
 	def_special CheckPlayerHasGyarados
 	def_special CheckPartyForShiny
 	def_special CheckCaughtSpecies
+	def_special InitEnpaleBeastRoamers

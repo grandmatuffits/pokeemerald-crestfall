@@ -19,7 +19,24 @@ MINSI_CITY_GYM_EventScript_RossReward::
 	end
 
 MINSI_CITY_GYM_EventScript_RossBeaten::
+	goto_if_set FLAG_ROSS_REMATCH_DONE, MINSI_CITY_GYM_EventScript_RossRematchBeaten
+	goto_if_set FLAG_ELDERS_ARC_STARTED, MINSI_CITY_GYM_EventScript_RossRematch
 	msgbox MINSI_CITY_GYM_Text_RossBeaten, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_GYM_EventScript_RossRematch::
+	msgbox MINSI_CITY_GYM_Text_RossRematchIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_ROSS_REMATCH, MINSI_CITY_GYM_Text_RossRematchDefeat
+	msgbox MINSI_CITY_GYM_Text_RossRematchPostBattle, MSGBOX_DEFAULT
+	special InitEnpaleBeastRoamers
+	setflag FLAG_ROSS_REMATCH_DONE
+	release
+	end
+
+MINSI_CITY_GYM_EventScript_RossRematchBeaten::
+	msgbox MINSI_CITY_GYM_Text_RossRematchRepeat, MSGBOX_DEFAULT
 	release
 	end
 
@@ -69,3 +86,15 @@ MINSI_CITY_GYM_Text_RossBeaten:
 	.string "been in years. Maybe ever.\p"
 	.string "Go on. The League's waiting. And\n"
 	.string "so is whatever comes after.$"	
+
+MINSI_CITY_GYM_Text_RossRematchIntro:
+	.string "Umbra sent you? Figured he would.\nBefore we continue, let's see if the Champion's\lgauntlet actually toughened you up.$"
+
+MINSI_CITY_GYM_Text_RossRematchDefeat:
+    .string "Heh, not bad.$"
+
+MINSI_CITY_GYM_Text_RossRematchPostBattle:
+    .string "As for the Elders - go talk to all the\nother Gym Leaders too, see what they\lknow. If you strike out with them, try\lSilvio. Fair warning though, he's busy\lfixing up his city, so don't go bothering\lhim until you've got no other leads.$"
+
+MINSI_CITY_GYM_Text_RossRematchRepeat:
+	.string "Get out there and start asking around.\nThe Elders won't wait forever.$"	

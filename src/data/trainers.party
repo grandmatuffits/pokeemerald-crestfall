@@ -20482,7 +20482,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
 
-Amoonguss @ None
+Amoonguss @ Black Sludge
 Level: 52
 Ability: Effect Spore
 - Spore
@@ -20490,7 +20490,7 @@ Ability: Effect Spore
 - Sludge Bomb
 - Clear Smog
 
-Toxicroak @ None
+Toxicroak @ Life Orb
 Level: 52
 Ability: Dry Skin
 - Gunk Shot
@@ -20498,7 +20498,7 @@ Ability: Dry Skin
 - Sucker Punch
 - Ice Punch
 
-Toxapex @ None
+Toxapex @ Black Sludge
 Level: 53
 Ability: Merciless
 - Sludge Wave
@@ -20506,7 +20506,7 @@ Ability: Merciless
 - Baneful Bunker
 - Recover
 
-Tentacruel @ None
+Tentacruel @ Black Sludge
 Level: 54
 Ability: Liquid Ooze
 - Scald
@@ -20514,7 +20514,7 @@ Ability: Liquid Ooze
 - Rapid Spin
 - Ice Beam
 
-Muk @ None
+Muk @ Black Sludge
 Level: 54
 Ability: Poison Touch
 - Toxic
@@ -20522,7 +20522,7 @@ Ability: Poison Touch
 - Minimize
 - Shadow Sneak
 
-Salazzle @ None
+Salazzle @ Life Orb
 Level: 55
 Ability: Corrosion
 - Flamethrower
@@ -21179,3 +21179,904 @@ AI: Check Bad Move
 
 Rhydon @ None
 Level: 47
+
+=== TRAINER_ROSS_REMATCH ===
+Name: Ross
+Class: Leader
+Pic: Leader Juan
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Amoonguss @ Black Sludge
+Level: 65
+Ability: Regenerator
+EVs: 252 HP / 176 Def / 80 SpD
+Bold Nature
+- Spore
+- Giga Drain
+- Sludge Bomb
+- Clear Smog
+
+Toxicroak @ Choice Band
+Level: 66
+Ability: Dry Skin
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Ice Punch
+
+Toxapex @ Black Sludge
+Level: 66
+Ability: Regenerator
+EVs: 252 HP / 36 Def / 220 SpD
+Calm Nature
+- Toxic Spikes
+- Scald
+- Baneful Bunker
+- Recover
+
+Muk-Alola @ Assault Vest
+Level: 66
+Ability: Poison Touch
+EVs: 4 HP / 252 Atk / 252 SpD
+Adamant Nature
+- Toxic
+- Gunk Shot
+- Knock Off
+- Pursuit
+
+Salazzle @ Life Orb
+Level: 67
+Ability: Corrosion
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+- Flamethrower
+- Sludge Wave
+- Dragon Pulse
+- Nasty Plot
+
+Gengar @ Gengarite
+Level: 68
+EVs: 252 SpA / 4 SpD / 252 Spe
+IVs: 0 Atk
+Timid Nature
+- Sludge Wave
+- Shadow Ball
+- Ice Beam
+- Substitute
+
+=== TRAINER_MERYL_REMATCH ===
+Name: Meryl
+Class: Leader
+Pic: Elite Four Lorelei Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Togekiss @ Focus Sash
+Level: 67
+Ability: Serene Grace
+EVs: 252 HP / 120 Def / 136 Spe
+Timid Nature
+- Air Slash
+- Moonblast
+- Thunder Wave
+- Aura Sphere
+
+Clefable @ Rocky Helmet
+Level: 68
+Ability: Magic Guard
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Stealth Rock
+- Moonblast
+- Moonlight
+- Thunder Wave
+
+Sylveon @ Choice Specs
+Level: 68
+Ability: Pixilate
+EVs: 4 Def / 252 SpA / 252 Spe
+Modest Nature
+- Hyper Voice
+- Psychic
+- Shadow Ball
+- Draining Kiss
+
+Mimikyu @ Life Orb
+Level: 68
+Ability: Disguise
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Shadow Claw
+- Play Rough
+- Shadow Sneak
+
+Azumarill @ Sitrus Berry
+Level: 69
+Ability: Huge Power
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Belly Drum
+- Play Rough
+- Liquidation
+- Aqua Jet
+
+Gardevoir @ Gardevoirite
+Level: 70
+Ability: Trace
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Will-O-Wisp
+- Psyshock
+- Hyper Voice
+- Focus Blast
+
+=== TRAINER_ROBIN_REMATCH ===
+Name: ROBIN
+Class: Leader
+Pic: Leader Roxanne
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Gliscor @ Toxic Orb
+Level: 67
+Ability: Poison Heal
+EVs: 244 HP / 252 Def / 12 SpD
+Tera Type: Water
+Impish Nature
+- Earthquake
+- Toxic
+- Spikes
+- Knock Off
+
+Talonflame @ Sharp Beak
+Level: 68
+Ability: Gale Wings
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Tailwind
+- Roost
+- Flare Blitz
+- Brave Bird
+
+Aerodactyl @ Focus Sash
+Level: 68
+Ability: Unnerve
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Rock Slide
+- Tailwind
+- Dual Wingbeat
+- Fire Fang
+
+Corviknight @ Leftovers
+Level: 68
+Ability: Pressure
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Iron Defense
+- Body Press
+- Roost
+- Brave Bird
+
+Dragonite @ Lum Berry
+Level: 69
+Ability: Multiscale
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Earthquake
+- Ice Spinner
+- Extreme Speed
+
+Staraptor @ Staraptite
+Level: 70
+Ability: Intimidate
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Close Combat
+- Brave Bird
+- Roost
+- Blaze Kick
+
+=== TRAINER_OMAR_REMATCH ===
+Name: OMAR
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Galvantula @ Focus Sash
+Level: 67
+Ability: Compound Eyes
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+- Sticky Web
+- Volt Switch
+- Bug Buzz
+- Thunder
+
+Luxray @ Flame Orb
+Level: 68
+Ability: Guts
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Wild Charge
+- Facade
+- Superpower
+- Volt Switch
+
+Emolga @ Rocky Helmet
+Level: 68
+Ability: Motor Drive
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Acrobatics
+- Knock Off
+- U-turn
+- Roost
+
+Electivire @ Choice Scarf
+Level: 68
+Ability: Motor Drive
+EVs: 252 Atk / 4 Def / 252 Spe
+Naive Nature
+- Volt Switch
+- Wild Charge
+- Earthquake
+- Ice Punch
+
+Magnezone @ Choice Specs
+Level: 69
+Ability: Analytic
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Ampharos-Mega @ Ampharosite
+Level: 70
+Ability: Static
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Volt Switch
+- Dragon Pulse
+- Focus Blast
+- Thunderbolt
+
+=== TRAINER_INGRID_REMATCH ===
+Name: INGRID
+Class: Leader
+Pic: Leader Wattson
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Quagsire @ Rocky Helmet
+Level: 67
+Ability: Unaware
+EVs: 252 HP / 252 Def / 4 SpD
+Tera Type: Dark
+Bold Nature
+- Stealth Rock
+- Recover
+- Toxic
+- Counter
+
+Dugtrio @ Choice Band
+Level: 68
+Ability: Arena Trap
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Stone Edge
+- Memento
+- Sucker Punch
+
+Flygon @ Choice Scarf
+Level: 68
+Ability: Levitate
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Outrage
+- U-turn
+- Stone Edge
+
+Mamoswine @ Leftovers
+Level: 68
+Ability: Thick Fat
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Substitute
+- Earthquake
+- Icicle Crash
+- Trailblaze
+
+Nidoking @ Life Orb
+Level: 69
+Ability: Sheer Force
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Earth Power
+- Ice Beam
+- Flamethrower
+- Thunderbolt
+
+Steelix @ Steelixite
+Level: 70
+Ability: Sturdy
+EVs: 252 HP / 208 Atk / 48 SpD
+Brave Nature
+- Fire Fang
+- Gyro Ball
+- Earthquake
+- Curse
+
+=== TRAINER_FRIEDE_REMATCH ===
+Name: Friede
+Class: Leader
+Pic: Leader Winona
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Ninetales-Alola @ Light Clay
+Level: 67
+Ability: Snow Warning
+EVs: 252 HP / 4 Def / 252 Spe
+Bold Nature
+- Aurora Veil
+- Freeze-Dry
+- Blizzard
+- Encore
+
+Beartic @ Loaded Dice
+Ability: Slush Rush
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Swords Dance
+- Icicle Spear
+- Close Combat
+- Earthquake
+
+Baxcalibur @ Loaded Dice
+Level: 68
+Ability: Thermal Exchange
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Icicle Spear
+- Glaive Rush
+- Earthquake
+- Dragon Dance
+
+Cloyster @ White Herb
+Level: 68
+Ability: Skill Link
+EVs: 252 Atk / 4 SpA / 252 Spe
+Adamant Nature
+- Shell Smash
+- Icicle Spear
+- Drill Run
+- Rock Blast
+
+Weavile @ Focus Sash
+Level: 69
+Ability: Pressure
+EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Ice
+Jolly Nature
+- Triple Axel
+- Knock Off
+- Ice Shard
+- Swords Dance
+
+Froslass @ Froslassite
+Level: 70
+Ability: Cursed Body
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Nasty Plot
+- Blizzard
+- Shadow Ball
+- Thunderbolt
+
+=== TRAINER_RANDALL_REMATCH ===
+Name: Randall
+Class: Leader
+Pic: Elite Four Bruno Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Hawlucha @ Flying Gem
+Level: 67
+Ability: Unburden
+EVs: 12 HP / 244 Atk / 252 Spe
+Jolly Nature
+- Substitute
+- Swords Dance
+- High Jump Kick
+- Acrobatics
+
+Hariyama @ Assault Vest
+Level: 68
+Ability: Thick Fat
+EVs: 252 Atk / 4 Def / 252 SpD
+Adamant Nature
+- Close Combat
+- Knock Off
+- Bullet Punch
+- Fake Out
+
+Medicham @ Choice Scarf
+Level: 68
+Ability: Pure Power
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- High Jump Kick
+- Zen Headbutt
+- Thunder Punch
+- Trick
+
+Heracross @ Choice Band
+Level: 68
+Ability: Guts
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Close Combat
+- Megahorn
+- Knock Off
+- Stone Edge
+
+Lucario @ Life Orb
+Level: 69
+Ability: Inner Focus
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Nasty Plot
+- Focus Blast
+- Flash Cannon
+- Vacuum Wave
+
+Gallade @ Galladite
+Level: 70
+Ability: Justified
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Swords Dance
+- Close Combat
+- Zen Headbutt
+- Knock Off
+
+=== TRAINER_SILVIO_REMATCH ===
+Name: Silvio
+Class: Leader
+Pic: Leader Koga Frlg
+Gender: Male
+Music: Male 
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Forretress @ Rocky Helmet
+Level: 70
+Ability: Sturdy
+EVs: 252 HP / 164 Def / 92 SpD
+Relaxed Nature
+- Spikes
+- Body Press
+- Volt Switch
+- Gyro Ball
+
+Ferrothorn @ Rocky Helmet
+Level: 71
+Ability: Iron Barbs
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Stealth Rock
+- Leech Seed
+- Power Whip
+- Gyro Ball
+
+Skarmory @ Rocky Helmet
+Level: 71
+Ability: Sturdy
+EVs: 252 HP / 252 Def / 4 Spe
+Impish Nature
+- Iron Defense
+- Body Press
+- Roost
+- Brave Bird
+
+Kingambit @ Leftovers
+Level: 71
+Ability: Supreme Overlord
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Swords Dance
+- Sucker Punch
+- Kowtow Cleave
+- Iron Head
+
+Aegislash @ Leftovers
+Level: 72
+Ability: Stance Change
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+- Swords Dance
+- Shadow Sneak
+- Gyro Ball
+- King's Shield
+
+Excadrill @ Excadrite
+Level: 73
+Ability: Sand Rush
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Swords Dance
+- Earthquake
+- Iron Head
+- Rock Slide
+
+=== TRAINER_ENPALE_E4_FIRE_REMATCH ===
+Name: Redding
+Class: Elite Four
+Pic: Elite Four Sidney
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Torkoal @ Heat Rock
+Level: 73
+Ability: Drought
+EVs: 248 HP / 252 Def / 8 SpD
+Bold Nature
+- Stealth Rock
+- Lava Plume
+- Rapid Spin
+- Toxic
+
+Blaziken @ Life Orb
+Level: 74
+Ability: Speed Boost
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Flare Blitz
+- High Jump Kick
+- Protect
+- Swords Dance
+
+Incineroar @ Sitrus Berry
+Level: 74
+Ability: Intimidate
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Fake Out
+- Flare Blitz
+- Throat Chop
+- Parting Shot
+
+Delphox @ Life Orb
+Level: 74
+Ability: Blaze
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Calm Mind
+- Fire Blast
+- Psychic
+- Grass Knot
+
+Chandelure @ Heavy-Duty Boots
+Level: 75
+Ability: Flame Body
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Flamethrower
+- Hex
+- Toxic
+- Protect
+
+Charizard @ Charizardite Y
+Level: 76
+Ability: Blaze
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Weather Ball
+- Solar Beam
+- Air Slash
+- Roost
+
+=== TRAINER_ENPALE_E4_WATER_REMATCH ===
+Name: Bluto
+Class: Elite Four
+Pic: Elite Four Phoebe
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Pelipper @ Damp Rock
+Level: 75
+Ability: Drizzle
+EVs: 248 HP / 252 Def / 8 SpD
+Relaxed Nature
+- Hurricane
+- Tailwind
+- Weather Ball
+- Roost
+
+Empoleon @ Leftovers
+Level: 76
+Ability: Competitive
+EVs: 72 HP / 72 Def / 148 SpA / 216 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Grass Knot
+- Roost
+
+Primarina @ Assault Vest
+Level: 76
+Ability: Torrent
+EVs: 252 HP / 208 SpA / 48 SpD
+Tera Type: Poison
+Modest Nature
+- Moonblast
+- Psychic Noise
+- Surf
+- Flip Turn
+
+Swampert @ Leftovers
+Level: 76
+Ability: Torrent
+EVs: 252 HP / 4 Atk / 252 SpD
+Tera Type: Fairy
+Careful Nature
+- Stealth Rock
+- Earthquake
+- Flip Turn
+- Knock Off
+
+Basculegion @ Choice Scarf
+Level: 77
+Ability: Swift Swim
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Wave Crash
+- Last Respects
+- Flip Turn
+- Aqua Jet
+
+Blastoise @ Blastoisinite
+Level: 78
+Ability: Torrent
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Shell Smash
+- Aura Sphere
+- Dark Pulse
+- Water Pulse
+
+=== TRAINER_ENPALE_E4_GRASS_REMATCH ===
+Name: Gretle
+Class: Elite Four
+Pic: Elite Four Glacia
+Gender: Female    
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Rillaboom @ Leftovers
+Level: 77
+Ability: Grassy Surge
+EVs: 240 HP / 252 Atk / 16 Spe
+Adamant Nature
+- Swords Dance
+- Grassy Glide
+- Knock Off
+- Drain Punch
+
+Whimsicott @ Focus Sash
+Level: 78
+Ability: Prankster
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Moonblast
+- Encore
+- Tailwind
+- Protect
+
+Decidueye @ Choice Band
+Level: 78
+Ability: Long Reach
+EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Ghost
+Adamant Nature
+- U-Turn
+- Spirit Shackle
+- Leaf Blade
+- Shadow Sneak
+
+Sceptile @ Grassy Seed
+Level: 78
+Ability: Unburden
+EVs: 248 HP / 252 Atk / 8 Def
+Adamant Nature
+- Swords Dance
+- Leaf Blade
+- Acrobatics
+- Earthquake
+
+Breloom @ Toxic Orb
+Level: 79
+Ability: Poison Heal
+EVs: 252 HP / 80 Atk / 176 Spe
+Adamant Nature
+- Close Combat
+- Seed Bomb
+- Facade
+- Protect
+
+Venusaur @ Venusaurite
+Level: 80
+Ability: Chlorophyll
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Synthesis
+- Sludge Bomb
+- Earth Power
+- Leech Seed
+
+=== TRAINER_ENPALE_E4_BUG_REMATCH ===
+Name: Rick
+Class: Elite Four
+Pic: Elite Four Drake
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Galvantula @ Focus Sash
+Level: 79
+Ability: Compound Eyes
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Sticky Web
+- Energy Ball
+- Thunder
+- Thunder Wave
+
+Volcarona @ Heavy-Duty Boots
+Level: 80
+Ability: Flame Body
+EVs: 80 HP / 252 Def / 176 Spe
+Timid Nature
+- Quiver Dance
+- Flamethrower
+- Morning Sun
+- Will-O-Wisp
+
+Golisopod @ Heavy-Duty Boots
+Level: 80
+Ability: Emergency Exit
+EVs: 156 HP / 252 Atk / 100 Spe
+Adamant Nature
+- First Impression
+- Leech Life
+- Liquidation
+- Knock Off
+
+Shedinja @ Heavy-Duty Boots
+Level: 80
+Ability: Wonder Guard
+EVs: 252 Atk / 252 Spe
+Lonely Nature
+- Protect
+- Will-O-Wisp
+- Toxic
+- Shadow Sneak
+
+Lokix @ Heavy-Duty Boots
+Level: 81
+Ability: Tinted Lens
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- First Impression
+- Knock Off
+- Sucker Punch
+- U-turn
+
+Scizor @ Scizorite
+Level: 82
+Ability: Light Metal
+EVs: 248 HP / 16 Def / 244 SpD
+Impish Nature
+- Swords Dance
+- Roost
+- Bullet Punch
+- U-turn
+
+=== TRAINER_UMBRA_REMATCH ===
+Name: Umbra
+Class: Covenant Grunt
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Glimmora @ Focus Sash
+Level: 81
+Ability: Toxic Debris
+EVs: 252 HP / 252 Def / 4 SpD
+Timid Nature
+- Stealth Rock
+- Power Gem
+- Mortal Spin
+- Earth Power
+
+Grimmsnarl @ Light Clay
+Level: 82
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Light Screen
+- Reflect
+- Parting Shot
+- Spirit Break
+
+Corviknight @ Rocky Helmet
+Level: 82
+Ability: Pressure
+EVs: 248 HP / 252 Def / 8 SpD
+Impish Nature
+- Iron Defense
+- Body Press
+- Roost
+- Defog
+
+Garchomp @ Life Orb
+Level: 82
+Ability: Rough Skin
+EVs: 252 HP / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Scale Shot
+- Earthquake
+- Fire Fang
+
+Gholdengo @ Life Orb
+Level: 83
+Ability: Good as Gold
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Make It Rain
+- Shadow Ball
+- Nasty Plot
+- Protect
+
+Gyarados @ Gyaradosite
+Level: 84
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Waterfall
+- Crunch
+- Power Whip

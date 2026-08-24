@@ -161,6 +161,13 @@ void InitRoamer(void)
         TryAddRoamer(SPECIES_LATIOS, 40);
 }
 
+void InitEnpaleBeastRoamers(void)
+{
+    TryAddRoamer(SPECIES_COBALION, 42);
+    TryAddRoamer(SPECIES_TERRAKION, 42);
+    TryAddRoamer(SPECIES_VIRIZION, 42);
+}
+
 void UpdateLocationHistoryForRoamer(void)
 {
     u32 i;

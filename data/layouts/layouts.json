@@ -9478,7 +9478,7 @@
       "id": "LAYOUT_VELDTMOOR_CITY",
       "name": "VELDTMOOR_CITY_Layout",
       "width": 44,
-      "height": 33,
+      "height": 35,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_EverGrande",
       "border_filepath": "data/layouts/VELDTMOOR_CITY/border.bin",
@@ -10613,6 +10613,36 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/COPPERGATE_CITY_APARTMENT/border.bin",
       "blockdata_filepath": "data/layouts/COPPERGATE_CITY_APARTMENT/map.bin"
+    },
+    {
+      "id": "LAYOUT_VELDTMOOR_CITY_HOUSE",
+      "name": "VELDTMOOR_CITY_HOUSE_Layout",
+      "width": 20,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VELDTMOOR_CITY_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/VELDTMOOR_CITY_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_VELDTMOOR_CITY_HOUSE_2F",
+      "name": "VELDTMOOR_CITY_HOUSE_2F_Layout",
+      "width": 20,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VELDTMOOR_CITY_HOUSE_2F/border.bin",
+      "blockdata_filepath": "data/layouts/VELDTMOOR_CITY_HOUSE_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_COPPERGATE_CITY_WEST",
+      "name": "COPPERGATE_CITY_WEST_Layout",
+      "width": 36,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/COPPERGATE_CITY_WEST/border.bin",
+      "blockdata_filepath": "data/layouts/COPPERGATE_CITY_WEST/map.bin"
     }
   ]
 }

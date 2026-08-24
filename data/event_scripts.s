@@ -1984,3 +1984,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/RIDLEY_CAVE_BF2/scripts.inc"
 
 	.include "data/maps/COPPERGATE_CITY_APARTMENT/scripts.inc"
+
+	.include "data/maps/VELDTMOOR_CITY_HOUSE/scripts.inc"
+
+	.include "data/maps/VELDTMOOR_CITY_HOUSE_2F/scripts.inc"
+
+	.include "data/maps/COPPERGATE_CITY_WEST/scripts.inc"

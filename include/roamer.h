@@ -15,6 +15,7 @@ void GetRoamerLocation(u32 roamerIndex, u8 *mapGroup, u8 *mapNum);
 bool8 TryAddRoamer(enum Species species, u8 level);
 void MoveAllRoamersToOtherLocationSets(void);
 void MoveAllRoamers(void);
+void InitEnpaleBeastRoamers(void);
 
 extern u8 gEncounteredRoamerIndex;
 

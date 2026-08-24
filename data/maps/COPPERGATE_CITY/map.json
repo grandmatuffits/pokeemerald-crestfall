@@ -17,6 +17,11 @@
       "map": "MAP_ENPALE_ROUTE_2",
       "offset": -22,
       "direction": "right"
+    },
+    {
+      "map": "MAP_COPPERGATE_CITY_WEST",
+      "offset": -11,
+      "direction": "left"
     }
   ],
   "object_events": [

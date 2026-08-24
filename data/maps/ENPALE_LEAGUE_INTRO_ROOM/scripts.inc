@@ -23,6 +23,9 @@ ENPALE_LEAGUE_INTRO_ROOM_Intro::
 	setspeaker ENPALE_LEAGUE_INTRO_ROOM_Text_BrutusName
 	msgbox ENPALE_LEAGUE_INTRO_ROOM_Text_Brutus3, MSGBOX_SIGN
 	closemessage
+	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkOut
+	waitmovement 0
+	removeobject LOCALID_BRUTUS
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_INTRO_ROOM_Movement_PlayerWalkSouth
 	waitmovement 0
 	warp MAP_ENPALE_LEAGUE_ARENA, 3, 11
@@ -40,6 +43,14 @@ ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkIn::
 
 ENPALE_LEAGUE_INTRO_ROOM_Movement_PlayerFace::
 	face_right
+	step_end
+
+ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkOut::
+	walk_up	
+	walk_up
+	walk_up
+	walk_up	
+	walk_up
 	step_end
 
 ENPALE_LEAGUE_INTRO_ROOM_Movement_PlayerWalkSouth::

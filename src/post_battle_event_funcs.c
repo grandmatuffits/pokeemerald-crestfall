@@ -22,7 +22,7 @@ int GameClear(void)
     } ribbonCounts[6];
 
     HealPlayerParty();
-
+    SetLastHealLocationWarp(HEAL_LOCATION_VELDTMOOR_CITY);
     if (FlagGet(FLAG_SYS_GAME_CLEAR) == TRUE)
     {
         gHasHallOfFameRecords = TRUE;
@@ -38,10 +38,7 @@ int GameClear(void)
 
     SetContinueGameWarpStatus();
 
-    if (gSaveBlock2Ptr->playerGender == MALE)
-        SetContinueGameWarpToHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F);
-    else
-        SetContinueGameWarpToHealLocation(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F);
+    SetContinueGameWarpToHealLocation(HEAL_LOCATION_VELDTMOOR_CITY);
 
     ribbonGet = FALSE;
 

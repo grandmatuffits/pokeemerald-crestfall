@@ -173,7 +173,8 @@
     "ENPALE_ROUTE_17",
     "ENPALE_ROUTE_18",
     "ENPALE_ROUTE_19",
-    "ENPALE_ROUTE_20"
+    "ENPALE_ROUTE_20",
+    "COPPERGATE_CITY_WEST"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1267,7 +1268,9 @@
     "MINSI_CITY_APARTMENT_2F",
     "MINSI_CITY_APARTMENT_3F",
     "RIDLEY_CAVE_BF2",
-    "COPPERGATE_CITY_APARTMENT"
+    "COPPERGATE_CITY_APARTMENT",
+    "VELDTMOOR_CITY_HOUSE",
+    "VELDTMOOR_CITY_HOUSE_2F"
   ],
   "gMapGroup_Indoor_Delmark": [
     "DELMARK_CITY_FERRY_HOUSE",
