@@ -1443,6 +1443,12 @@
 #define FLAG_HIDE_GRANT_CYNTHIA                     (SYSTEM_FLAGS + 0x9A)
 #define FLAG_SHAYMIN_RECEIVED                       (SYSTEM_FLAGS + 0x9B)
 #define FLAG_CYNTHIA_BEATEN                         (SYSTEM_FLAGS + 0x9C)
+#define FLAG_STEVEN_REMATCH_DONE                    (SYSTEM_FLAGS + 0x9D)
+#define FLAG_RED_REMATCH_DONE                       (SYSTEM_FLAGS + 0x9E)
+#define FLAG_CYNTHIA_REMATCH_DONE                   (SYSTEM_FLAGS + 0x9F)
+
+#define FLAG_TOMB_WALL_OPEN                         (SYSTEM_FLAGS + 0xA0)
+#define FLAG_HIDE_TOMB_REGIGIGAS                    (SYSTEM_FLAGS + 0xA1)
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1

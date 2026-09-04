@@ -4184,6 +4184,31 @@ static u16 PlayerLoseRandomTrainerFan(void)
     return idx;
 }
 
+u16 HasRegiTrioInParty(void)
+{
+    u32 i;
+    bool8 rock = FALSE, ice = FALSE, steel = FALSE;
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        u32 species;
+
+        if (GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG, NULL))
+            continue;
+
+        species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
+
+        if (species == SPECIES_REGIROCK)
+            rock = TRUE;
+        else if (species == SPECIES_REGICE)
+            ice = TRUE;
+        else if (species == SPECIES_REGISTEEL)
+            steel = TRUE;
+    }
+
+    return (rock && ice && steel);
+}
+
 u16 GetNumFansOfPlayerInTrainerFanClub(void)
 {
     u8 i;

@@ -45,7 +45,11 @@ KINNERET_TOWN_GYM_EventScript_RobinBeaten::
 	closemessage
 	trainerbattle_no_intro TRAINER_ROBIN_REMATCH, KINNERET_TOWN_GYM_Text_RobinRematchDefeat
 	msgbox KINNERET_TOWN_GYM_Text_RobinRematchPostBattle, MSGBOX_DEFAULT
+	msgbox KINNERET_TOWN_GYM_Text_RobinStoneGiven, MSGBOX_DEFAULT
+	giveitem ITEM_STARAPTITE
+	goto_if_eq VAR_RESULT, FALSE, KINNERET_TOWN_GYM_EventScript_RobinRematchEnd
 	setflag FLAG_ROBIN_REMATCH_DONE
+KINNERET_TOWN_GYM_EventScript_RobinRematchEnd::
 	release
 	end
 
@@ -113,3 +117,6 @@ KINNERET_TOWN_GYM_Text_RobinRematchRepeat:
 
 KINNERET_TOWN_GYM_Text_RobinPostBadgeIdle:
 	.string "Great work on that badge!$"	
+
+KINNERET_TOWN_GYM_Text_RobinStoneGiven:
+	.string "Also, you can have this.$"	

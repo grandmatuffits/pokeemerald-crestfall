@@ -30,7 +30,11 @@ LENOX_TOWN_GYM_EventScript_IngridBeaten::
 	closemessage
 	trainerbattle_no_intro TRAINER_INGRID_REMATCH, LENOX_TOWN_GYM_Text_IngridRematchDefeat
 	msgbox LENOX_TOWN_GYM_Text_IngridRematchPostBattle, MSGBOX_DEFAULT
+	msgbox LENOX_TOWN_GYM_Text_IngridStoneGiven, MSGBOX_DEFAULT
+	giveitem ITEM_EXCADRITE
+	goto_if_eq VAR_RESULT, FALSE, LENOX_TOWN_GYM_EventScript_IngridRematchEnd
 	setflag FLAG_INGRID_REMATCH_DONE
+LENOX_TOWN_GYM_EventScript_IngridRematchEnd::
 	release
 	end
 
@@ -94,3 +98,6 @@ LENOX_TOWN_GYM_Text_IngridRematchRepeat:
 
 LENOX_TOWN_GYM_Text_IngridPostBadgeIdle:
 	.string "Nice work earning that badge!$"	
+
+LENOX_TOWN_GYM_Text_IngridStoneGiven:
+	.string "Also, you can have this.$"	

@@ -45,7 +45,11 @@ COPPERGATE_CITY_GYM_EventScript_OmarBeaten::
 	closemessage
 	trainerbattle_no_intro TRAINER_OMAR_REMATCH, COPPERGATE_CITY_GYM_Text_OmarRematchDefeat
 	msgbox COPPERGATE_CITY_GYM_Text_OmarRematchPostBattle, MSGBOX_DEFAULT
+	msgbox COPPERGATE_CITY_GYM_Text_OmarStoneGiven, MSGBOX_DEFAULT
+	giveitem ITEM_AMPHAROSITE
+	goto_if_eq VAR_RESULT, FALSE, COPPERGATE_CITY_GYM_EventScript_OmarRematchEnd
 	setflag FLAG_OMAR_REMATCH_DONE
+COPPERGATE_CITY_GYM_EventScript_OmarRematchEnd::
 	release
 	end
 
@@ -125,3 +129,6 @@ COPPERGATE_CITY_GYM_Text_OmarRematchRepeat:
 
 COPPERGATE_CITY_GYM_Text_OmarPostBadgeIdle:
 	.string "Nice badge!$"	
+
+COPPERGATE_CITY_GYM_Text_OmarStoneGiven:
+	.string "Also, you can have this.$"	

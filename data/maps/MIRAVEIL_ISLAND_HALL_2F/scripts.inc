@@ -126,7 +126,11 @@ MIRAVEIL_BANQUET_2F_EventScript_MerylBeaten::
 	closemessage
 	trainerbattle_no_intro TRAINER_MERYL_REMATCH, MIRAVEIL_BANQUET_2F_Text_MerylRematchDefeat
 	msgbox MIRAVEIL_BANQUET_2F_Text_MerylRematchPostBattle, MSGBOX_DEFAULT
+	msgbox MIRAVEIL_BANQUET_2F_Text_MerylStoneGiven, MSGBOX_DEFAULT
+	giveitem ITEM_GARDEVOIRITE
+	goto_if_eq VAR_RESULT, FALSE, MIRAVEIL_BANQUET_2F_EventScript_MerylRematchEnd
 	setflag FLAG_MERYL_REMATCH_DONE
+MIRAVEIL_BANQUET_2F_EventScript_MerylRematchEnd::
 	release
 	end
 
@@ -214,3 +218,6 @@ MIRAVEIL_BANQUET_2F_Text_MerylRematchPostBattle:
 
 MIRAVEIL_BANQUET_2F_Text_MerylRematchRepeat:
 	.string "Be careful out there.$"	
+
+MIRAVEIL_BANQUET_2F_Text_MerylStoneGiven:
+	.string "Also, you can have this.$"	

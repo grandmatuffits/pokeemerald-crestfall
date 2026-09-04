@@ -1992,3 +1992,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/COPPERGATE_CITY_WEST/scripts.inc"
 
 	.include "data/maps/WALLAR_BELL_TOWER_TOP/scripts.inc"
+
+	.include "data/maps/FORGOTTEN_TOMB/scripts.inc"

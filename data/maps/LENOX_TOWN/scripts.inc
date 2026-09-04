@@ -298,13 +298,61 @@ LENOX_TOWN_Mart_Merchant3:
 	.2byte ITEM_NONE
 	pokemartlistend
 
-@ --- Merchant 4: Mega Stones (flavor, out of stock until post-game) ---
+@ --- Merchant 4: Mega Stones ---
 LENOX_TOWN_EventScript_Merchant4::
 	lock
 	faceplayer
+	goto_if_unset FLAG_RECEIVED_MEGA_RING, LENOX_TOWN_EventScript_Merchant4Closed
+	message LENOX_TOWN_Text_Merchant4Intro
+	waitmessage
+	pokemart LENOX_TOWN_Mart_Merchant4
+	msgbox LENOX_TOWN_Text_MartComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LENOX_TOWN_EventScript_Merchant4Closed::
 	msgbox LENOX_TOWN_Text_Merchant4, MSGBOX_DEFAULT
 	release
 	end
+
+	.align 2
+LENOX_TOWN_Mart_Merchant4:
+	.2byte ITEM_BEEDRILLITE
+	.2byte ITEM_CLEFABLITE
+	.2byte ITEM_ALAKAZITE
+	.2byte ITEM_GYARADOSITE
+	.2byte ITEM_PINSIRITE
+	.2byte ITEM_STARMINITE
+	.2byte ITEM_RAICHUNITE_X
+	.2byte ITEM_RAICHUNITE_Y
+	.2byte ITEM_SCIZORITE
+	.2byte ITEM_HERACRONITE
+	.2byte ITEM_HOUNDOOMINITE
+	.2byte ITEM_SKARMORITE
+	.2byte ITEM_TYRANITARITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_AGGRONITE
+	.2byte ITEM_MEDICHAMITE
+	.2byte ITEM_SHARPEDONITE
+	.2byte ITEM_CAMERUPTITE
+	.2byte ITEM_BANETTITE
+	.2byte ITEM_GLALITITE
+	.2byte ITEM_SALAMENCITE
+	.2byte ITEM_GARCHOMPITE
+	.2byte ITEM_GARCHOMPITE_Z
+	.2byte ITEM_LUCARIONITE
+	.2byte ITEM_LUCARIONITE_Z
+	.2byte ITEM_SCOLIPITE
+	.2byte ITEM_SCRAFTINITE
+	.2byte ITEM_CHANDELURITE
+	.2byte ITEM_GOLISOPITE
+	.2byte ITEM_MEOWSTICITE
+	.2byte ITEM_FALINKSITE
+	.2byte ITEM_HAWLUCHANITE
+	.2byte ITEM_DELPHOXITE
+	.2byte ITEM_NONE
+	pokemartlistend
 
 @ ======== merchant text ========
 LENOX_TOWN_Text_Merchant1Intro:
@@ -321,6 +369,11 @@ LENOX_TOWN_Text_Merchant3Intro:
 LENOX_TOWN_Text_Merchant4:
 	.string "I usually sell rare stones, but alas,\n"
 	.string "I'm all out today! Come back later!$"
+
+LENOX_TOWN_Text_Merchant4Intro:
+	.string "Mega Stones, fresh in.\p"
+	.string "Now that you've got the ring to use\n"
+	.string "them, take your pick.$"	
 
 LENOX_TOWN_Text_MartComeAgain:
 	.string "Please come again!$"	

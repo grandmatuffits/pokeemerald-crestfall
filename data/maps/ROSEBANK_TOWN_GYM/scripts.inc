@@ -25,7 +25,11 @@ ROSEBANK_GYM_EventScript_FriedeBeaten::
 	closemessage
 	trainerbattle_no_intro TRAINER_FRIEDE_REMATCH, ROSEBANK_GYM_Text_FriedeRematchDefeat
 	msgbox ROSEBANK_GYM_Text_FriedeRematchPostBattle, MSGBOX_DEFAULT
+	msgbox ROSEBANK_GYM_Text_FriedeStoneGiven, MSGBOX_DEFAULT
+	giveitem ITEM_FROSLASSITE
+	goto_if_eq VAR_RESULT, FALSE, ROSEBANK_GYM_EventScript_FriedeRematchEnd
 	setflag FLAG_FRIEDE_REMATCH_DONE
+ROSEBANK_GYM_EventScript_FriedeRematchEnd::
 	release
 	end
 
@@ -223,3 +227,6 @@ ROSEBANK_GYM_Text_FriedeRematchPostBattle:
 
 ROSEBANK_GYM_Text_FriedeRematchRepeat:
 	.string "Stay sharp out there.$"	
+
+ROSEBANK_GYM_Text_FriedeStoneGiven:
+	.string "Also, you can have this.$"	

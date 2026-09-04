@@ -293,7 +293,11 @@ DELMARK_CITY_GYM_EventScript_SilvioRematch::
 	closemessage
 	trainerbattle_no_intro TRAINER_SILVIO_REMATCH, DELMARK_CITY_GYM_Text_SilvioRematchDefeat
 	msgbox DELMARK_CITY_GYM_Text_SilvioRematchPostBattle, MSGBOX_DEFAULT
+	msgbox DELMARK_CITY_GYM_Text_SilvioStoneGiven, MSGBOX_DEFAULT
+	giveitem ITEM_METAGROSSITE
+	goto_if_eq VAR_RESULT, FALSE, DELMARK_CITY_GYM_EventScript_SilvioRematchEnd
 	setflag FLAG_SILVIO_REMATCH_DONE
+DELMARK_CITY_GYM_EventScript_SilvioRematchEnd::
 	release
 	end
 
@@ -367,3 +371,6 @@ DELMARK_CITY_GYM_Text_SilvioRematchPostBattle:
 
 DELMARK_CITY_GYM_Text_SilvioRematchRepeat:
 	.string "The doors are still open.$"	
+
+DELMARK_CITY_GYM_Text_SilvioStoneGiven:
+	.string "Also, you can have this.$"	

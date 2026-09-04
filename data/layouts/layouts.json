@@ -10653,6 +10653,16 @@
       "secondary_tileset": "gTileset_Pacifidlog",
       "border_filepath": "data/layouts/WALLAR_BELL_TOWER_TOP/border.bin",
       "blockdata_filepath": "data/layouts/WALLAR_BELL_TOWER_TOP/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORGOTTEN_TOMB",
+      "name": "FORGOTTEN_TOMB_Layout",
+      "width": 18,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/FORGOTTEN_TOMB/border.bin",
+      "blockdata_filepath": "data/layouts/FORGOTTEN_TOMB/map.bin"
     }
   ]
 }

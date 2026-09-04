@@ -39,7 +39,11 @@ VALERYTOWN_GYM_EventScript_RandallBeaten::
 	closemessage
 	trainerbattle_no_intro TRAINER_RANDALL_REMATCH, VALERYTOWN_GYM_Text_RandallRematchDefeat
 	msgbox VALERYTOWN_GYM_Text_RandallRematchPostBattle, MSGBOX_DEFAULT
+	msgbox VALERYTOWN_GYM_Text_RandallStoneGiven, MSGBOX_DEFAULT
+	giveitem ITEM_GALLADITE
+	goto_if_eq VAR_RESULT, FALSE, VALERYTOWN_GYM_EventScript_RandallRematchEnd
 	setflag FLAG_RANDALL_REMATCH_DONE
+VALERYTOWN_GYM_EventScript_RandallRematchEnd::
 	release
 	end
 
@@ -219,3 +223,6 @@ VALERYTOWN_GYM_Text_RandallRematchPostBattle:
 
 VALERYTOWN_GYM_Text_RandallRematchRepeat:
 	.string "Go on. Handle your business.$"	
+
+VALERYTOWN_GYM_Text_RandallStoneGiven:
+	.string "Also, you can have this.$"	

@@ -21513,15 +21513,14 @@ Timid Nature
 - Flamethrower
 - Thunderbolt
 
-Steelix @ Steelixite
+Excadrill @ Excadrite
 Level: 70
-Ability: Sturdy
-EVs: 252 HP / 208 Atk / 48 SpD
-Brave Nature
-- Fire Fang
-- Gyro Ball
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Swords Dance
+- Iron Head
 - Earthquake
-- Curse
+- Rock Slide
 
 === TRAINER_FRIEDE_REMATCH ===
 Name: Friede
@@ -21719,15 +21718,14 @@ Adamant Nature
 - Gyro Ball
 - King's Shield
 
-Excadrill @ Excadrite
-Level: 73
-Ability: Sand Rush
-EVs: 252 Atk / 4 SpD / 252 Spe
-Adamant Nature
-- Swords Dance
-- Earthquake
-- Iron Head
+Metagross @ Metagrossite
+Level: 70
+EVs: 232 HP / 60 Atk / 40 SpD / 176 Spe
+Jolly Nature
+- Meteor Mash
+- Ice Punch
 - Rock Slide
+- Bullet Punch
 
 === TRAINER_ENPALE_E4_FIRE_REMATCH ===
 Name: Redding

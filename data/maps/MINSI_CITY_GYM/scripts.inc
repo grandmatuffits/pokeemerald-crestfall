@@ -31,7 +31,11 @@ MINSI_CITY_GYM_EventScript_RossRematch::
 	trainerbattle_no_intro TRAINER_ROSS_REMATCH, MINSI_CITY_GYM_Text_RossRematchDefeat
 	msgbox MINSI_CITY_GYM_Text_RossRematchPostBattle, MSGBOX_DEFAULT
 	special InitEnpaleBeastRoamers
+	msgbox MINSI_CITY_GYM_Text_RossStoneGiven, MSGBOX_DEFAULT
+	giveitem ITEM_GENGARITE
+	goto_if_eq VAR_RESULT, FALSE, MINSI_CITY_GYM_EventScript_RossRematchEnd
 	setflag FLAG_ROSS_REMATCH_DONE
+MINSI_CITY_GYM_EventScript_RossRematchEnd::
 	release
 	end
 
@@ -98,3 +102,6 @@ MINSI_CITY_GYM_Text_RossRematchPostBattle:
 
 MINSI_CITY_GYM_Text_RossRematchRepeat:
 	.string "Get out there and start asking around.\nThe Elders won't wait forever.$"	
+
+MINSI_CITY_GYM_Text_RossStoneGiven:
+	.string "Also, you can have this.$"	

@@ -451,34 +451,67 @@ WALLAR_MARSHLANDS_EventScript_RedNoRoom::
 	end
 
 WALLAR_MARSHLANDS_EventScript_RedFlavor::
+	goto_if_set FLAG_RED_REMATCH_DONE, WALLAR_MARSHLANDS_EventScript_RedPostRematch
+	goto_if_unset FLAG_DEFEATED_RIVAL_CHAMPION, WALLAR_MARSHLANDS_EventScript_RedFlavorText
+	msgbox WALLAR_MARSHLANDS_Text_RedRematchOffer, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq WALLAR_MARSHLANDS_EventScript_RedFlavorText
+	closemessage
+	trainerbattle_no_intro TRAINER_ENPALE_RED_REMATCH, WALLAR_MARSHLANDS_Text_RedRematchDefeat
+	setflag FLAG_RED_REMATCH_DONE
+	special HealPlayerParty
+	msgbox WALLAR_MARSHLANDS_Text_RedRematchAfter, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WALLAR_MARSHLANDS_EventScript_RedPostRematch::
+	msgbox WALLAR_MARSHLANDS_Text_RedPostRematch, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WALLAR_MARSHLANDS_EventScript_RedFlavorText::
 	msgbox WALLAR_MARSHLANDS_Text_RedFlavor, MSGBOX_DEFAULT
 	closemessage
 	release
-	end	
+	end
 
 WALLAR_MARSHLANDS_Text_RedIntro:
-	.string "...$"
+	.string "…$"
 
 WALLAR_MARSHLANDS_Text_RedChallenge:
-	.string "...$"
+	.string "…?$"
 
 WALLAR_MARSHLANDS_Text_RedDecline:
-	.string "...$"
+	.string "…$"
 
 WALLAR_MARSHLANDS_Text_RedBattleDefeat:
 	.string "…!$"
 
 WALLAR_MARSHLANDS_Text_RedGive:
-	.string "...$"
+	.string "…$"
 
 WALLAR_MARSHLANDS_Text_ReceivedCelebi:
 	.string "{PLAYER} received {STR_VAR_1}!$"
 
 WALLAR_MARSHLANDS_Text_RedAfter:
-	.string "...$"
+	.string "…$"
 
 WALLAR_MARSHLANDS_Text_RedNoRoom:
-	.string "...$"
+	.string "…$"
 
 WALLAR_MARSHLANDS_Text_RedFlavor:
-	.string "...$"	
+	.string "…$"	
+
+WALLAR_MARSHLANDS_Text_RedRematchOffer:
+	.string "…?$"
+
+WALLAR_MARSHLANDS_Text_RedRematchDefeat:
+	.string "…!$"
+
+WALLAR_MARSHLANDS_Text_RedRematchAfter:
+	.string "…$"
+
+WALLAR_MARSHLANDS_Text_RedPostRematch:
+	.string "…$"	

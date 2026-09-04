@@ -437,6 +437,29 @@ GRANT_ISLAND_EventScript_CynthiaNoRoom::
 	end
 
 GRANT_ISLAND_EventScript_CynthiaFlavor::
+	goto_if_set FLAG_CYNTHIA_REMATCH_DONE, GRANT_ISLAND_EventScript_CynthiaPostRematch
+	goto_if_unset FLAG_DEFEATED_RIVAL_CHAMPION, GRANT_ISLAND_EventScript_CynthiaFlavorText
+	msgbox GRANT_ISLAND_Text_CynthiaRematchOffer, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq GRANT_ISLAND_EventScript_CynthiaFlavorText
+	msgbox GRANT_ISLAND_Text_CynthiaRematchAccept, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_ENPALE_CYNTHIA_REMATCH, GRANT_ISLAND_Text_CynthiaRematchDefeat
+	setflag FLAG_CYNTHIA_REMATCH_DONE
+	special HealPlayerParty
+	setspeaker GRANT_ISLAND_Text_CynthiaName
+	msgbox GRANT_ISLAND_Text_CynthiaRematchAfter, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GRANT_ISLAND_EventScript_CynthiaPostRematch::
+	msgbox GRANT_ISLAND_Text_CynthiaPostRematch, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GRANT_ISLAND_EventScript_CynthiaFlavorText::
 	msgbox GRANT_ISLAND_Text_CynthiaFlavor, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -513,3 +536,27 @@ GRANT_ISLAND_Text_CynthiaFlavor:
 	.string "nobody has troubled to map.\p"
 	.string "How is SHAYMIN? …Good.\p"
 	.string "Keep it somewhere with flowers.$"	
+
+GRANT_ISLAND_Text_CynthiaRematchOffer:
+	.string "Word travels, even out here.\p"
+	.string "A new CHAMPION in ENPALE, and the\n"
+	.string "same trainer standing over them.\p"
+	.string "I held back on this island. I won't\n"
+	.string "make that mistake twice. Shall we?$"
+
+GRANT_ISLAND_Text_CynthiaRematchAccept:
+	.string "Good. Show me everything.$"
+
+GRANT_ISLAND_Text_CynthiaRematchDefeat:
+	.string "There it is. That's the trainer the\n"
+	.string "stories were about.$"
+
+GRANT_ISLAND_Text_CynthiaRematchAfter:
+	.string "Every region has its myths, and most\n"
+	.string "of them are only stories.\p"
+	.string "You're the rare kind that turns out\n"
+	.string "to be true.$"
+
+GRANT_ISLAND_Text_CynthiaPostRematch:
+	.string "The flowers here bloom for SHAYMIN.\n"
+	.string "Look after it, and they'll keep on.$"	

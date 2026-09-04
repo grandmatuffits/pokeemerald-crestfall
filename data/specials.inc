@@ -648,3 +648,4 @@ gSpecials::
 	def_special CheckPartyForShiny
 	def_special CheckCaughtSpecies
 	def_special InitEnpaleBeastRoamers
+	def_special HasRegiTrioInParty

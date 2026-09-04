@@ -524,10 +524,33 @@ WHITECAPS_EXTERIOR_EventScript_StevenNoRoom::
 	end
 
 WHITECAPS_EXTERIOR_EventScript_StevenFlavor::
+	goto_if_set FLAG_STEVEN_REMATCH_DONE, WHITECAPS_EXTERIOR_EventScript_StevenPostRematch
+	goto_if_unset FLAG_DEFEATED_RIVAL_CHAMPION, WHITECAPS_EXTERIOR_EventScript_StevenFlavorText
+	msgbox WHITECAPS_EXTERIOR_Text_StevenRematchOffer, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq WHITECAPS_EXTERIOR_EventScript_StevenFlavorText
+	msgbox WHITECAPS_EXTERIOR_Text_StevenRematchAccept, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_ENPALE_STEVEN_REMATCH, WHITECAPS_EXTERIOR_Text_StevenRematchDefeat
+	setflag FLAG_STEVEN_REMATCH_DONE
+	special HealPlayerParty
+	setspeaker WHITECAPS_EXTERIOR_Text_StevenName
+	msgbox WHITECAPS_EXTERIOR_Text_StevenRematchAfter, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WHITECAPS_EXTERIOR_EventScript_StevenPostRematch::
+	msgbox WHITECAPS_EXTERIOR_Text_StevenPostRematch, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WHITECAPS_EXTERIOR_EventScript_StevenFlavorText::
 	msgbox WHITECAPS_EXTERIOR_Text_StevenFlavor, MSGBOX_DEFAULT
 	closemessage
 	release
-	end	
+	end
 
 WHITECAPS_EXTERIOR_Text_StevenName:
 	.string "STEVEN$"
@@ -594,3 +617,24 @@ WHITECAPS_EXTERIOR_Text_StevenFlavor:
 	.string "seam in the north face I'd like to\l"
 	.string "put a hammer to.\p"
 	.string "How is JIRACHI sleeping?$"	
+
+WHITECAPS_EXTERIOR_Text_StevenRematchOffer:
+	.string "So the CHAMPION'S seat changed hands\n"
+	.string "again… and you were the one who did it.\p"
+	.string "I've been training since we last met.\n"
+	.string "Care to find out how much?$"
+
+WHITECAPS_EXTERIOR_Text_StevenRematchAccept:
+	.string "Then let's not waste the daylight.$"
+
+WHITECAPS_EXTERIOR_Text_StevenRematchDefeat:
+	.string "Still ahead of me. Remarkable.$"
+
+WHITECAPS_EXTERIOR_Text_StevenRematchAfter:
+	.string "That was the battle I came here for.\p"
+	.string "Whatever the mountain has left to\n"
+	.string "teach me, you've already learned it.$"
+
+WHITECAPS_EXTERIOR_Text_StevenPostRematch:
+	.string "The air's thin up here, but the view\n"
+	.string "is worth every step. Enjoy it.$"	
