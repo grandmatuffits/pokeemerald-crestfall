@@ -72,7 +72,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_ELIXIR",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_UNUSED_0x4D4"
+      "flag": "FLAG_DELMARK_SOUTH_ELIXIR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -85,7 +85,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_TM62",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_UNUSED_0x4D3"
+      "flag": "FLAG_DELMARK_SOUTH_TM62"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",

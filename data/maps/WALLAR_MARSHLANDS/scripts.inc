@@ -1,5 +1,25 @@
 WALLAR_MARSHLANDS_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, WALLAR_MARSHLANDS_OnTransition
 	.byte 0
+
+WALLAR_MARSHLANDS_OnTransition::
+	goto_if_set FLAG_WALLAR_SAXUS_DONE, WALLAR_MARSHLANDS_SaxusDone
+	goto WALLAR_MARSHLANDS_StageRed
+
+WALLAR_MARSHLANDS_SaxusDone::
+	setvar VAR_WALLAR_SAXUS_SCENE, 1
+	setflag FLAG_HIDE_WALLAR_SILVIO
+	goto WALLAR_MARSHLANDS_StageRed
+
+WALLAR_MARSHLANDS_StageRed::
+	goto_if_set FLAG_CELEBI_RECEIVED, WALLAR_MARSHLANDS_ShowRed
+	goto_if_set FLAG_MEW_RECEIVED, WALLAR_MARSHLANDS_ShowRed
+	setflag FLAG_HIDE_WALLAR_RED
+	end
+
+WALLAR_MARSHLANDS_ShowRed::
+	clearflag FLAG_HIDE_WALLAR_RED
+	end
 
 #define FLAG_WALLAR_SAXUS_DONE   0x4DE
 #define FLAG_HIDE_WALLAR_SILVIO  0x4DF
@@ -187,6 +207,7 @@ WALLAR_MARSHLANDS_Text_Acolyte9Post:
 	.string "You already lost...$"		
 
 WALLAR_MARSHLANDS_EventScript_SaxusTrigger48::
+	goto_if_set FLAG_WALLAR_SAXUS_DONE, WALLAR_MARSHLANDS_EventScript_SceneDone
 	lockall
 	applymovement WALLAR_ELDER_SAXUS, WALLAR_MARSHLANDS_Movement_SaxusApproach48
 	waitmovement 0
@@ -201,6 +222,7 @@ WALLAR_MARSHLANDS_EventScript_SaxusTrigger48::
 	end
 
 WALLAR_MARSHLANDS_EventScript_SaxusTrigger47::
+	goto_if_set FLAG_WALLAR_SAXUS_DONE, WALLAR_MARSHLANDS_EventScript_SceneDone
 	lockall
 	applymovement WALLAR_ELDER_SAXUS, WALLAR_MARSHLANDS_Movement_SaxusApproach47
 	waitmovement 0
@@ -212,6 +234,9 @@ WALLAR_MARSHLANDS_EventScript_SaxusTrigger47::
 	waitmovement 0
 	call WALLAR_MARSHLANDS_EventScript_SilvioDepart
 	releaseall
+	end
+
+WALLAR_MARSHLANDS_EventScript_SceneDone::
 	end
 
 WALLAR_MARSHLANDS_EventScript_SilvioDepart::
@@ -356,3 +381,104 @@ WALLAR_MARSHLANDS_EventScript_BlockM::
 
 WALLAR_MARSHLANDS_Text_BlockM:
 	.string "Celebi is ours!$"	
+
+WALLAR_MARSHLANDS_EventScript_Red::
+	lock
+	faceplayer
+	goto_if_set FLAG_CELEBI_RECEIVED, WALLAR_MARSHLANDS_EventScript_RedFlavor
+	goto_if_set FLAG_RED_BEATEN, WALLAR_MARSHLANDS_EventScript_RedGive
+	msgbox WALLAR_MARSHLANDS_Text_RedIntro, MSGBOX_DEFAULT
+	msgbox WALLAR_MARSHLANDS_Text_RedChallenge, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq WALLAR_MARSHLANDS_EventScript_RedDecline
+	closemessage
+	trainerbattle_no_intro TRAINER_ENPALE_RED, WALLAR_MARSHLANDS_Text_RedBattleDefeat
+	setflag FLAG_RED_BEATEN
+	special HealPlayerParty
+	goto WALLAR_MARSHLANDS_EventScript_RedGive
+
+WALLAR_MARSHLANDS_EventScript_RedDecline::
+	msgbox WALLAR_MARSHLANDS_Text_RedDecline, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WALLAR_MARSHLANDS_EventScript_RedGive::
+	msgbox WALLAR_MARSHLANDS_Text_RedGive, MSGBOX_DEFAULT
+	closemessage
+	bufferspeciesname STR_VAR_1, SPECIES_CELEBI
+	givemon SPECIES_CELEBI, 70
+	goto_if_eq VAR_RESULT, 2, WALLAR_MARSHLANDS_EventScript_RedNoRoom
+	setflag FLAG_CELEBI_RECEIVED
+	goto_if_eq VAR_RESULT, 1, WALLAR_MARSHLANDS_EventScript_RedToPC
+	goto WALLAR_MARSHLANDS_EventScript_RedToParty
+
+WALLAR_MARSHLANDS_EventScript_RedToParty::
+	playfanfare MUS_LEVEL_UP
+	message WALLAR_MARSHLANDS_Text_ReceivedCelebi
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, WALLAR_MARSHLANDS_EventScript_RedOutro
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto WALLAR_MARSHLANDS_EventScript_RedOutro
+
+WALLAR_MARSHLANDS_EventScript_RedToPC::
+	playfanfare MUS_LEVEL_UP
+	message WALLAR_MARSHLANDS_Text_ReceivedCelebi
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, WALLAR_MARSHLANDS_EventScript_RedPCTransfer
+	call Common_EventScript_NameReceivedBoxMon
+	goto WALLAR_MARSHLANDS_EventScript_RedPCTransfer
+
+WALLAR_MARSHLANDS_EventScript_RedPCTransfer::
+	call Common_EventScript_TransferredToPC
+	goto WALLAR_MARSHLANDS_EventScript_RedOutro
+
+WALLAR_MARSHLANDS_EventScript_RedOutro::
+	msgbox WALLAR_MARSHLANDS_Text_RedAfter, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WALLAR_MARSHLANDS_EventScript_RedNoRoom::
+	msgbox WALLAR_MARSHLANDS_Text_RedNoRoom, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WALLAR_MARSHLANDS_EventScript_RedFlavor::
+	msgbox WALLAR_MARSHLANDS_Text_RedFlavor, MSGBOX_DEFAULT
+	closemessage
+	release
+	end	
+
+WALLAR_MARSHLANDS_Text_RedIntro:
+	.string "...$"
+
+WALLAR_MARSHLANDS_Text_RedChallenge:
+	.string "...$"
+
+WALLAR_MARSHLANDS_Text_RedDecline:
+	.string "...$"
+
+WALLAR_MARSHLANDS_Text_RedBattleDefeat:
+	.string "…!$"
+
+WALLAR_MARSHLANDS_Text_RedGive:
+	.string "...$"
+
+WALLAR_MARSHLANDS_Text_ReceivedCelebi:
+	.string "{PLAYER} received {STR_VAR_1}!$"
+
+WALLAR_MARSHLANDS_Text_RedAfter:
+	.string "...$"
+
+WALLAR_MARSHLANDS_Text_RedNoRoom:
+	.string "...$"
+
+WALLAR_MARSHLANDS_Text_RedFlavor:
+	.string "...$"	

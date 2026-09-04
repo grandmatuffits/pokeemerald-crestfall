@@ -3,6 +3,7 @@ ENPALE_POKEMON_LEAGUE_1F_MapScripts::
 	.byte 0
 
 ENPALE_POKEMON_LEAGUE_1F_OnTransition::
+    goto_if_set FLAG_FINAL_E4_UNLOCKED, ENPALE_POKEMON_LEAGUE_1F_OnTransition_ReopenedLeague
     goto_if_set FLAG_DEFEATED_ENPALE_CHAMP, ENPALE_POKEMON_LEAGUE_1F_OnTransition_PostChamp
     setvar VAR_ELITE_4_STATE, 0
     clearflag FLAG_DEFEATED_E4_FIRE

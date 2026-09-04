@@ -10643,6 +10643,16 @@
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/COPPERGATE_CITY_WEST/border.bin",
       "blockdata_filepath": "data/layouts/COPPERGATE_CITY_WEST/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALLAR_BELL_TOWER_TOP",
+      "name": "WALLAR_BELL_TOWER_TOP_Layout",
+      "width": 11,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/WALLAR_BELL_TOWER_TOP/border.bin",
+      "blockdata_filepath": "data/layouts/WALLAR_BELL_TOWER_TOP/map.bin"
     }
   ]
 }

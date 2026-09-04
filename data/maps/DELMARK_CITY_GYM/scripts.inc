@@ -281,9 +281,36 @@ DELMARK_CITY_GYM_EventScript_SilvioReward::
 	end
 
 DELMARK_CITY_GYM_EventScript_SilvioRematch::
+	goto_if_set FLAG_SILVIO_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioRematchBeaten
+	goto_if_unset FLAG_ELDERS_ARC_STARTED, DELMARK_CITY_GYM_EventScript_SilvioIdle
+	goto_if_unset FLAG_ROBIN_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioNotReady
+	goto_if_unset FLAG_OMAR_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioNotReady
+	goto_if_unset FLAG_INGRID_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioNotReady
+	goto_if_unset FLAG_FRIEDE_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioNotReady
+	goto_if_unset FLAG_RANDALL_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioNotReady
+	goto_if_unset FLAG_MERYL_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioNotReady
+	msgbox DELMARK_CITY_GYM_Text_SilvioRematchIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_SILVIO_REMATCH, DELMARK_CITY_GYM_Text_SilvioRematchDefeat
+	msgbox DELMARK_CITY_GYM_Text_SilvioRematchPostBattle, MSGBOX_DEFAULT
+	setflag FLAG_SILVIO_REMATCH_DONE
+	release
+	end
+
+DELMARK_CITY_GYM_EventScript_SilvioNotReady::
+	msgbox DELMARK_CITY_GYM_Text_SilvioNotReady, MSGBOX_DEFAULT
+	release
+	end
+
+DELMARK_CITY_GYM_EventScript_SilvioRematchBeaten::
+	msgbox DELMARK_CITY_GYM_Text_SilvioRematchRepeat, MSGBOX_DEFAULT
+	release
+	end
+
+DELMARK_CITY_GYM_EventScript_SilvioIdle::
 	msgbox DELMARK_CITY_GYM_Text_SilvioRematch, MSGBOX_DEFAULT
 	release
-	end	
+	end
 	
 DELMARK_CITY_GYM_Text_SilvioIntro:
 	.string "You came.\p"
@@ -325,3 +352,18 @@ DELMARK_CITY_GYM_Text_SilvioRematch:
 	.string "The doors are open. The lights are on.\p"
 	.string "It is a small thing to be proud of.\n"
 	.string "I am proud of it anyway.$"	
+
+DELMARK_CITY_GYM_Text_SilvioNotReady:
+	.string "I have heard what is happening. I am\nnot going anywhere.\pGo see the others first. This city has\nhad enough taken from it. It can wait\la little longer for me.$"
+
+DELMARK_CITY_GYM_Text_SilvioRematchIntro:
+	.string "So. You have gone the rounds.\pI will not pretend I am surprised it\ncame to this again.\pSteel still bends. Let us see if it\nstill holds.$"
+
+DELMARK_CITY_GYM_Text_SilvioRematchDefeat:
+	.string "…there it is, again.$"
+
+DELMARK_CITY_GYM_Text_SilvioRematchPostBattle:
+	.string "Go on, then.\pI have a city to keep standing. You\nhave the rest of them to find.$"
+
+DELMARK_CITY_GYM_Text_SilvioRematchRepeat:
+	.string "The doors are still open.$"	

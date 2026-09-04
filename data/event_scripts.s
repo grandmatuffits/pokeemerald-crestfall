@@ -1990,3 +1990,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/VELDTMOOR_CITY_HOUSE_2F/scripts.inc"
 
 	.include "data/maps/COPPERGATE_CITY_WEST/scripts.inc"
+
+	.include "data/maps/WALLAR_BELL_TOWER_TOP/scripts.inc"

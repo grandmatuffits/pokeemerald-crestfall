@@ -3,13 +3,25 @@ WHITECAPS_EXTERIOR_MapScripts::
 	.byte 0
 	
 WHITECAPS_EXTERIOR_OnTransition::
+	call WHITECAPS_EXTERIOR_StageSteven
 	call WHITECAPS_EXTERIOR_StageAcolytes
 	goto_if_unset FLAG_BADGE06_GET, WHITECAPS_EXTERIOR_HideSummit
 	compare VAR_WHITECAPS_STATE, 2
 	goto_if_ge WHITECAPS_EXTERIOR_HideSummit
+	setflag FLAG_HIDE_WHITECAPS_SILVIO
 	clearflag FLAG_HIDE_WHITECAPS_FERRUS
 	clearflag FLAG_HIDE_WHITECAPS_SAXUS
 	clearflag FLAG_HIDE_WHITECAPS_BRIGHAM
+	return
+
+WHITECAPS_EXTERIOR_StageSteven::
+	goto_if_set FLAG_JIRACHI_RECEIVED, WHITECAPS_EXTERIOR_ShowSteven
+	goto_if_set FLAG_MEW_RECEIVED, WHITECAPS_EXTERIOR_ShowSteven
+	setflag FLAG_HIDE_WHITECAPS_STEVEN
+	return
+
+WHITECAPS_EXTERIOR_ShowSteven::
+	clearflag FLAG_HIDE_WHITECAPS_STEVEN
 	return
 
 WHITECAPS_EXTERIOR_HideSummit::
@@ -439,3 +451,146 @@ Whitecaps_Text_SilvioSurf:
 	.string "the water opens up. That is your way\l"
 	.string "to GRANT ISLAND.\p"
 	.string "Go. I will only slow you now.$"
+
+WHITECAPS_EXTERIOR_EventScript_Steven::
+	lock
+	faceplayer
+	setspeaker WHITECAPS_EXTERIOR_Text_StevenName
+	goto_if_set FLAG_JIRACHI_RECEIVED, WHITECAPS_EXTERIOR_EventScript_StevenFlavor
+	goto_if_set FLAG_STEVEN_BEATEN, WHITECAPS_EXTERIOR_EventScript_StevenGive
+	msgbox WHITECAPS_EXTERIOR_Text_StevenIntro, MSGBOX_DEFAULT
+	msgbox WHITECAPS_EXTERIOR_Text_StevenChallenge, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq WHITECAPS_EXTERIOR_EventScript_StevenDecline
+	closemessage
+	trainerbattle_no_intro TRAINER_ENPALE_STEVEN, WHITECAPS_EXTERIOR_Text_StevenBattleDefeat
+	setflag FLAG_STEVEN_BEATEN
+	special HealPlayerParty
+	goto WHITECAPS_EXTERIOR_EventScript_StevenGive
+
+WHITECAPS_EXTERIOR_EventScript_StevenDecline::
+	msgbox WHITECAPS_EXTERIOR_Text_StevenDecline, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WHITECAPS_EXTERIOR_EventScript_StevenGive::
+	setspeaker WHITECAPS_EXTERIOR_Text_StevenName
+	msgbox WHITECAPS_EXTERIOR_Text_StevenGive, MSGBOX_DEFAULT
+	closemessage
+	bufferspeciesname STR_VAR_1, SPECIES_JIRACHI
+	givemon SPECIES_JIRACHI, 70
+	goto_if_eq VAR_RESULT, 2, WHITECAPS_EXTERIOR_EventScript_StevenNoRoom
+	setflag FLAG_JIRACHI_RECEIVED
+	goto_if_eq VAR_RESULT, 1, WHITECAPS_EXTERIOR_EventScript_StevenToPC
+	goto WHITECAPS_EXTERIOR_EventScript_StevenToParty
+
+WHITECAPS_EXTERIOR_EventScript_StevenToParty::
+	playfanfare MUS_LEVEL_UP
+	message WHITECAPS_EXTERIOR_Text_ReceivedJirachi
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, WHITECAPS_EXTERIOR_EventScript_StevenOutro
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto WHITECAPS_EXTERIOR_EventScript_StevenOutro
+
+WHITECAPS_EXTERIOR_EventScript_StevenToPC::
+	playfanfare MUS_LEVEL_UP
+	message WHITECAPS_EXTERIOR_Text_ReceivedJirachi
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, WHITECAPS_EXTERIOR_EventScript_StevenPCTransfer
+	call Common_EventScript_NameReceivedBoxMon
+	goto WHITECAPS_EXTERIOR_EventScript_StevenPCTransfer
+
+WHITECAPS_EXTERIOR_EventScript_StevenPCTransfer::
+	call Common_EventScript_TransferredToPC
+	goto WHITECAPS_EXTERIOR_EventScript_StevenOutro
+
+WHITECAPS_EXTERIOR_EventScript_StevenOutro::
+	setspeaker WHITECAPS_EXTERIOR_Text_StevenName
+	msgbox WHITECAPS_EXTERIOR_Text_StevenAfter, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WHITECAPS_EXTERIOR_EventScript_StevenNoRoom::
+	msgbox WHITECAPS_EXTERIOR_Text_StevenNoRoom, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+WHITECAPS_EXTERIOR_EventScript_StevenFlavor::
+	msgbox WHITECAPS_EXTERIOR_Text_StevenFlavor, MSGBOX_DEFAULT
+	closemessage
+	release
+	end	
+
+WHITECAPS_EXTERIOR_Text_StevenName:
+	.string "STEVEN$"
+
+WHITECAPS_EXTERIOR_Text_StevenIntro:
+	.string "Cold, isn't it. I don't mind it.\p"
+	.string "The rock up here is older than\n"
+	.string "anything in HOENN. It remembers\l"
+	.string "being seabed.\p"
+	.string "I came for the stone. I found\n"
+	.string "something else.\p"
+	.string "There is a thing that sleeps in the\n"
+	.string "ice above us. Small. It wakes for a\l"
+	.string "week in a thousand years, and this\l"
+	.string "happens to be the week.\p"
+	.string "JIRACHI.\p"
+	.string "OAK sent word ahead of you. He said\n"
+	.string "you had earned MEW rather than\l"
+	.string "caught it.\p"
+	.string "I would like to see the difference\n"
+	.string "for myself. I'm STEVEN.$"
+
+WHITECAPS_EXTERIOR_Text_StevenChallenge:
+	.string "Win, and JIRACHI is yours.\p"
+	.string "Shall we?$"
+
+WHITECAPS_EXTERIOR_Text_StevenDecline:
+	.string "The mountain isn't going anywhere.\n"
+	.string "Neither am I.$"
+
+WHITECAPS_EXTERIOR_Text_StevenBattleDefeat:
+	.string "…Beautiful. Truly.$"
+
+WHITECAPS_EXTERIOR_Text_StevenGive:
+	.string "That was not luck, and we both\n"
+	.string "know it.\p"
+	.string "Look up.\p"
+	.string "It has been listening the whole\n"
+	.string "time.$"
+
+WHITECAPS_EXTERIOR_Text_ReceivedJirachi:
+	.string "{PLAYER} received {STR_VAR_1}!$"
+
+WHITECAPS_EXTERIOR_Text_StevenAfter:
+	.string "Congratulations, {PLAYER}.\p"
+	.string "JIRACHI grants wishes, they say.\n"
+	.string "I don't know whether that's true.\p"
+	.string "What I do know is that it came down\n"
+	.string "off that ridge for you and not for\l"
+	.string "me, and I have been here three weeks.\p"
+	.string "RED is somewhere in the WALLAR\n"
+	.string "MARSHLANDS. CYNTHIA went east, over\l"
+	.string "the water.\p"
+	.string "Go carefully. And enjoy the climb.$"
+
+WHITECAPS_EXTERIOR_Text_StevenNoRoom:
+	.string "Your party is full, and your boxes\n"
+	.string "besides. Make room and come back up.\p"
+	.string "JIRACHI has waited a thousand years.\n"
+	.string "It can manage an afternoon.$"
+
+WHITECAPS_EXTERIOR_Text_StevenFlavor:
+	.string "I'll stay a while yet. There's a\n"
+	.string "seam in the north face I'd like to\l"
+	.string "put a hammer to.\p"
+	.string "How is JIRACHI sleeping?$"	

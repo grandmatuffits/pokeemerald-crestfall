@@ -689,7 +689,8 @@
     "TrainerHill_Elevator",
     "BERGEN_HILL",
     "BAYNOE_TEMPLE",
-    "BAYNOE_TEMPLE_2F"
+    "BAYNOE_TEMPLE_2F",
+    "WALLAR_BELL_TOWER_TOP"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

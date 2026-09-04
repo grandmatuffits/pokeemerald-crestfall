@@ -65,7 +65,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
       "x": 22,
       "y": 61,
       "elevation": 0,
@@ -171,6 +171,20 @@
       "trainer_sight_or_berry_tree_id": "ITEM_ASSAULT_VEST",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_GRANT_ISLAND_ASSAULT_VEST"
+    },
+    {
+      "local_id": "LOCALID_ENPALE_CYNTHIA",
+      "graphics_id": "OBJ_EVENT_GFX_AGATHA",
+      "x": 28,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GRANT_ISLAND_EventScript_Cynthia",
+      "flag": "FLAG_HIDE_GRANT_CYNTHIA"
     }
   ],
   "warp_events": [

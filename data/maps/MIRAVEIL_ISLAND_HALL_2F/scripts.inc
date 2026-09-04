@@ -104,6 +104,7 @@ MIRAVEIL_BANQUET_2F_Text_FranciscoAfter:
 	.string "her.$"
 	
 MIRAVEIL_BANQUET_2F_EventScript_Meryl::
+	goto_if_set FLAG_BADGE07_GET, MIRAVEIL_BANQUET_2F_EventScript_MerylBeaten
 	trainerbattle_single TRAINER_MERYL, MIRAVEIL_BANQUET_2F_Text_MerylIntro, MIRAVEIL_BANQUET_2F_Text_MerylPostBattle, MIRAVEIL_BANQUET_2F_EventScript_MerylReward
 	msgbox MIRAVEIL_BANQUET_2F_Text_MerylPostReward, MSGBOX_AUTOCLOSE
 	end
@@ -116,10 +117,30 @@ MIRAVEIL_BANQUET_2F_EventScript_MerylReward::
 	release
 	end
 
+MIRAVEIL_BANQUET_2F_EventScript_MerylBeaten::
+	goto_if_set FLAG_MERYL_REMATCH_DONE, MIRAVEIL_BANQUET_2F_EventScript_MerylRematchBeaten
+	goto_if_unset FLAG_ELDERS_ARC_STARTED, MIRAVEIL_BANQUET_2F_EventScript_MerylDone
+	lock
+	faceplayer
+	msgbox MIRAVEIL_BANQUET_2F_Text_MerylRematchIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_MERYL_REMATCH, MIRAVEIL_BANQUET_2F_Text_MerylRematchDefeat
+	msgbox MIRAVEIL_BANQUET_2F_Text_MerylRematchPostBattle, MSGBOX_DEFAULT
+	setflag FLAG_MERYL_REMATCH_DONE
+	release
+	end
+
+MIRAVEIL_BANQUET_2F_EventScript_MerylRematchBeaten::
+	lock
+	faceplayer
+	msgbox MIRAVEIL_BANQUET_2F_Text_MerylRematchRepeat, MSGBOX_DEFAULT
+	release
+	end
+
 MIRAVEIL_BANQUET_2F_EventScript_MerylDone::
 	msgbox MIRAVEIL_BANQUET_2F_Text_MerylPostReward, MSGBOX_DEFAULT
 	release
-	end	
+	end
 
 MIRAVEIL_BANQUET_2F_Text_MerylIntro:
 	.string "So. The gate-crasher reaches the\n"
@@ -181,3 +202,15 @@ MIRAVEIL_BANQUET_2F_Text_Man:
 	.string "You're challenging Meryl? Ha!\p"
 	.string "She hasn't lost in years. Not that\n"
 	.string "anyone interesting ever tries.$"	
+
+MIRAVEIL_BANQUET_2F_Text_MerylRematchIntro:
+	.string "The Elders again... I was hoping\nwe'd seen the last of them.\pShow me you're ready to face them.$"
+
+MIRAVEIL_BANQUET_2F_Text_MerylRematchDefeat:
+	.string "Wonderful! Just wonderful!$"
+
+MIRAVEIL_BANQUET_2F_Text_MerylRematchPostBattle:
+	.string "Go on, dear. Find the rest of them.$"
+
+MIRAVEIL_BANQUET_2F_Text_MerylRematchRepeat:
+	.string "Be careful out there.$"	

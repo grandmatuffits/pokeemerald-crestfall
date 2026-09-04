@@ -1131,7 +1131,30 @@
 #define TRAINER_ENPALE_E4_GRASS_REMATCH        1125
 #define TRAINER_ENPALE_E4_BUG_REMATCH          1126
 #define TRAINER_UMBRA_REMATCH                  1127
-#define TRAINERS_COUNT_EMERALD                 1128
+#define TRAINER_BOBBY_101_REMATCH              1128
+#define TRAINER_ACOLYTE_BELL_TOWER_1           1129
+#define TRAINER_ACOLYTE_BELL_TOWER_2           1130
+#define TRAINER_ACOLYTE_BELL_TOWER_3           1131
+#define TRAINER_ACOLYTE_BELL_TOWER_4           1132
+#define TRAINER_ACOLYTE_BELL_TOWER_5           1133
+#define TRAINER_FERRUS_WALLAR                  1134
+#define TRAINER_IRRUS_WALLAR                   1135
+#define TRAINER_SAXUS_WALLAR                   1136
+#define TRAINER_PRAETUS_WALLAR                 1137
+#define TRAINER_ENPALE_E4_FIRE_FINAL           1138
+#define TRAINER_ENPALE_E4_WATER_FINAL          1139
+#define TRAINER_ENPALE_E4_GRASS_FINAL          1140
+#define TRAINER_ENPALE_E4_BUG_FINAL            1141
+#define TRAINER_RIVALCF_CHAMP                  1142
+#define TRAINER_ENPALE_OAK                     1143
+#define TRAINER_ENPALE_OAK_REMATCH             1144
+#define TRAINER_ENPALE_RED                     1145
+#define TRAINER_ENPALE_RED_REMATCH             1146
+#define TRAINER_ENPALE_STEVEN                  1147
+#define TRAINER_ENPALE_STEVEN_REMATCH          1148
+#define TRAINER_ENPALE_CYNTHIA                 1149
+#define TRAINER_ENPALE_CYNTHIA_REMATCH         1150
+#define TRAINERS_COUNT_EMERALD                 1151
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

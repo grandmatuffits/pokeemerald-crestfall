@@ -8,8 +8,19 @@ GRANT_ISLAND_OnFrame::
 
 GrantPeak_OnTransition::
 	setflag FLAG_HIDE_GRANT_SILVIO
+	goto_if_set FLAG_SHAYMIN_RECEIVED, GrantPeak_ShowCynthia
+	goto_if_set FLAG_MEW_RECEIVED, GrantPeak_ShowCynthia
+	setflag FLAG_HIDE_GRANT_CYNTHIA
+	goto GrantPeak_StageCovenant
+
+GrantPeak_ShowCynthia::
+	clearflag FLAG_HIDE_GRANT_CYNTHIA
+	goto GrantPeak_StageCovenant
+
+GrantPeak_StageCovenant::
 	goto_if_set FLAG_BADGE06_GET, GrantPeak_CheckScene
 	goto GrantPeak_HideAll
+
 GrantPeak_CheckScene::
 	compare VAR_GRANT_STATE, 2
 	goto_if_ge GrantPeak_HideAll
@@ -258,6 +269,9 @@ GrantPeak_Movement_PraetusExit:
 	walk_down
 	walk_left
 	walk_left
+	face_up
+	set_invisible
+	step_end
 GrantPeak_Movement_SilvioApproach:
 	walk_down
 	walk_right
@@ -350,3 +364,152 @@ GrantPeak_Text_SilvioRegis:
 	.string "against the COVENANT before those three\l"
 	.string "wishes become one.\p"
 	.string "Go. I have kept you long enough.$"
+
+GRANT_ISLAND_EventScript_Cynthia::
+	lock
+	faceplayer
+	setspeaker GRANT_ISLAND_Text_CynthiaName
+	goto_if_set FLAG_SHAYMIN_RECEIVED, GRANT_ISLAND_EventScript_CynthiaFlavor
+	goto_if_set FLAG_CYNTHIA_BEATEN, GRANT_ISLAND_EventScript_CynthiaGive
+	msgbox GRANT_ISLAND_Text_CynthiaIntro, MSGBOX_DEFAULT
+	msgbox GRANT_ISLAND_Text_CynthiaChallenge, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq GRANT_ISLAND_EventScript_CynthiaDecline
+	closemessage
+	trainerbattle_no_intro TRAINER_ENPALE_CYNTHIA, GRANT_ISLAND_Text_CynthiaBattleDefeat
+	setflag FLAG_CYNTHIA_BEATEN
+	special HealPlayerParty
+	goto GRANT_ISLAND_EventScript_CynthiaGive
+
+GRANT_ISLAND_EventScript_CynthiaDecline::
+	msgbox GRANT_ISLAND_Text_CynthiaDecline, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GRANT_ISLAND_EventScript_CynthiaGive::
+	setspeaker GRANT_ISLAND_Text_CynthiaName
+	msgbox GRANT_ISLAND_Text_CynthiaGive, MSGBOX_DEFAULT
+	closemessage
+	bufferspeciesname STR_VAR_1, SPECIES_SHAYMIN
+	givemon SPECIES_SHAYMIN, 70
+	goto_if_eq VAR_RESULT, 2, GRANT_ISLAND_EventScript_CynthiaNoRoom
+	setflag FLAG_SHAYMIN_RECEIVED
+	goto_if_eq VAR_RESULT, 1, GRANT_ISLAND_EventScript_CynthiaToPC
+	goto GRANT_ISLAND_EventScript_CynthiaToParty
+
+GRANT_ISLAND_EventScript_CynthiaToParty::
+	playfanfare MUS_LEVEL_UP
+	message GRANT_ISLAND_Text_ReceivedShaymin
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, GRANT_ISLAND_EventScript_CynthiaOutro
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto GRANT_ISLAND_EventScript_CynthiaOutro
+
+GRANT_ISLAND_EventScript_CynthiaToPC::
+	playfanfare MUS_LEVEL_UP
+	message GRANT_ISLAND_Text_ReceivedShaymin
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, GRANT_ISLAND_EventScript_CynthiaPCTransfer
+	call Common_EventScript_NameReceivedBoxMon
+	goto GRANT_ISLAND_EventScript_CynthiaPCTransfer
+
+GRANT_ISLAND_EventScript_CynthiaPCTransfer::
+	call Common_EventScript_TransferredToPC
+	goto GRANT_ISLAND_EventScript_CynthiaOutro
+
+GRANT_ISLAND_EventScript_CynthiaOutro::
+	setspeaker GRANT_ISLAND_Text_CynthiaName
+	msgbox GRANT_ISLAND_Text_CynthiaAfter, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GRANT_ISLAND_EventScript_CynthiaNoRoom::
+	msgbox GRANT_ISLAND_Text_CynthiaNoRoom, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GRANT_ISLAND_EventScript_CynthiaFlavor::
+	msgbox GRANT_ISLAND_Text_CynthiaFlavor, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GRANT_ISLAND_Text_CynthiaName:
+	.string "CYNTHIA$"
+
+GRANT_ISLAND_Text_CynthiaIntro:
+	.string "I hoped it would be you.\p"
+	.string "OAK writes letters. STEVEN sends\n"
+	.string "telegrams, of all things. RED sent\l"
+	.string "nothing at all, which from RED is\l"
+	.string "practically a speech.\p"
+	.string "So I've heard about you three\n"
+	.string "separate ways.\p"
+	.string "Do you know what grows up here?\n"
+	.string "GRACIDEA. Nowhere else in ENPALE.\p"
+	.string "It has no business being on this\n"
+	.string "island at all. Something brought it.\p"
+	.string "In SINNOH we have a word for the\n"
+	.string "small god that travels with those\l"
+	.string "flowers and turns ruined ground\l"
+	.string "back into meadow.\p"
+	.string "SHAYMIN. It's watching us now, from\n"
+	.string "somewhere in that white.\p"
+	.string "It came to thank someone. It hasn't\n"
+	.string "settled on who.$"
+
+GRANT_ISLAND_Text_CynthiaChallenge:
+	.string "Let's give it a reason to decide.\p"
+	.string "Shall we?$"
+
+GRANT_ISLAND_Text_CynthiaDecline:
+	.string "Of course. The flowers keep.\n"
+	.string "So do I.$"
+
+GRANT_ISLAND_Text_CynthiaBattleDefeat:
+	.string "Ah. There it is.\p"
+	.string "Now I see what they all meant.$"
+
+GRANT_ISLAND_Text_CynthiaGive:
+	.string "Thank you. Truly.\p"
+	.string "That is the best match I've had\n"
+	.string "since I gave up the title.\p"
+	.string "Look at the flowers.$"
+
+GRANT_ISLAND_Text_ReceivedShaymin:
+	.string "{PLAYER} received {STR_VAR_1}!$"
+
+GRANT_ISLAND_Text_CynthiaAfter:
+	.string "Congratulations, {PLAYER}.\p"
+	.string "That's all four. MEW. JIRACHI.\n"
+	.string "CELEBI. And now SHAYMIN.\p"
+	.string "TEAM COVENANT dragged them out of\n"
+	.string "the places they were sleeping and\l"
+	.string "expected weapons.\p"
+	.string "Instead they scattered, and waited,\n"
+	.string "and each of them chose a person.\p"
+	.string "They all chose you.\p"
+	.string "I'd think about what that means.$"
+
+GRANT_ISLAND_Text_CynthiaNoRoom:
+	.string "SHAYMIN drifts closer, then stops.\p"
+	.string "Your party is full, and your boxes\n"
+	.string "besides. Make room and come back\l"
+	.string "up the path.\p"
+	.string "It will be in the flowers. It\n"
+	.string "always is.$"
+
+GRANT_ISLAND_Text_CynthiaFlavor:
+	.string "I'm staying on a while. There are\n"
+	.string "ruins under the north cliff that\l"
+	.string "nobody has troubled to map.\p"
+	.string "How is SHAYMIN? …Good.\p"
+	.string "Keep it somewhere with flowers.$"	

@@ -233,6 +233,7 @@ const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
     [REMATCH_GLACIA] = REMATCH(TRAINER_GLACIA, TRAINER_GLACIA, TRAINER_GLACIA, TRAINER_GLACIA, TRAINER_GLACIA, MAP_EVER_GRANDE_CITY),
     [REMATCH_DRAKE] = REMATCH(TRAINER_DRAKE, TRAINER_DRAKE, TRAINER_DRAKE, TRAINER_DRAKE, TRAINER_DRAKE, MAP_EVER_GRANDE_CITY),
     [REMATCH_WALLACE] = REMATCH(TRAINER_WALLACE, TRAINER_WALLACE, TRAINER_WALLACE, TRAINER_WALLACE, TRAINER_WALLACE, MAP_EVER_GRANDE_CITY),
+    [REMATCH_BOBBY] = REMATCH(TRAINER_BOBBY_101, TRAINER_BOBBY_101_REMATCH, TRAINER_BOBBY_101_REMATCH, TRAINER_BOBBY_101_REMATCH, TRAINER_BOBBY_101_REMATCH, MAP_ENPALE_ROUTE_1),
 };
 
 #define tState data[0]
@@ -2075,10 +2076,13 @@ bool8 ShouldTryRematchBattle(void)
 
 bool8 ShouldTryRematchBattleForTrainerId(u16 trainerId)
 {
+    bool8 result;
     if (IsFirstTrainerIdReadyForRematch(gRematchTable, trainerId))
-        return TRUE;
-
-    return WasSecondRematchWon(gRematchTable, trainerId);
+        result = TRUE;
+    else
+        result = WasSecondRematchWon(gRematchTable, trainerId);
+    DebugPrintf("ShouldTryRematchBattle trainerId=%d result=%d", trainerId, result);
+    return result;
 }
 
 bool8 IsTrainerReadyForRematch(void)

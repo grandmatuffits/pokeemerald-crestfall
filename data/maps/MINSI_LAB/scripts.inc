@@ -4,6 +4,7 @@
 #define LOCALID_STARTERBALL_3 3
 #define LOCALID_POKEDEX_CF 6
 #define LOCALID_RIVALCF 5
+#define LOCALID_MINSI_OAK 9
 
 MINSI_LAB_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MINSI_LAB_OnTransition
@@ -23,14 +24,24 @@ MINSI_LAB_OnLoad_PlaceHemlock:
 MINSI_LAB_OnTransition:
 	goto_if_set FLAG_UNUSED_0x022, MINSI_LAB_OnTransition_CheckRivalLost
 	setflag FLAG_UNUSED_0x028
-	end
+	goto MINSI_LAB_OnTransition_Oak
+
 MINSI_LAB_OnTransition_CheckRivalLost:
 	goto_if_set FLAG_UNUSED_0x027, MINSI_LAB_OnTransition_HideRival
-	end
+	goto MINSI_LAB_OnTransition_Oak
+
 MINSI_LAB_OnTransition_HideRival:
 	setflag FLAG_UNUSED_0x028
 	clearflag FLAG_UNUSED_0x027
-MINSI_LAB_OnTransition_End:
+	goto MINSI_LAB_OnTransition_Oak
+
+MINSI_LAB_OnTransition_Oak:
+	goto_if_set FLAG_SYS_GAME_CLEAR, MINSI_LAB_OnTransition_ShowOak
+	setflag FLAG_HIDE_MINSI_OAK
+	end
+
+MINSI_LAB_OnTransition_ShowOak:
+	clearflag FLAG_HIDE_MINSI_OAK
 	end
 MINSI_LAB_OnFrame:
 	map_script_2 VAR_ROUTE102_STATE, 0, MINSI_LAB_Intro
@@ -528,11 +539,31 @@ MINSI_LAB_EventScript_HemlockRepeat::
 	lock
 	faceplayer
 	setspeaker MINSI_LAB_Text_HemlockName
-	goto_if_set FLAG_MINSI_NATDEX_RECEIVED, MINSI_LAB_EventScript_HemlockPostDex
+	goto_if_set FLAG_MINSI_NATDEX_RECEIVED, MINSI_LAB_EventScript_HemlockOakCheck
 	special GetCaughtPokedexCount
 	compare VAR_RESULT, 100
 	goto_if_ge MINSI_LAB_EventScript_HemlockAwardDex
-	msgbox MINSI_LAB_Text_Hemlock3, MSGBOX_SIGN
+	goto MINSI_LAB_EventScript_HemlockOakCheck
+
+MINSI_LAB_EventScript_HemlockOakCheck::
+	goto_if_unset FLAG_SYS_GAME_CLEAR, MINSI_LAB_EventScript_HemlockNormal
+	goto_if_set FLAG_MEW_RECEIVED, MINSI_LAB_EventScript_HemlockNormal
+	msgbox MINSI_LAB_Text_HemlockOak, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MINSI_LAB_EventScript_HemlockNormal::
+	goto_if_set FLAG_MINSI_NATDEX_RECEIVED, MINSI_LAB_EventScript_HemlockPostDex
+	msgbox MINSI_LAB_Text_Hemlock3, MSGBOX_DEFAULT
+	closemessage
+	release
+	end	
+
+MINSI_LAB_EventScript_HemlockDexDone::
+	goto_if_unset FLAG_SYS_GAME_CLEAR, MINSI_LAB_EventScript_HemlockPostDex
+	goto_if_set FLAG_MEW_RECEIVED, MINSI_LAB_EventScript_HemlockPostDex
+	msgbox MINSI_LAB_Text_HemlockOak, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -936,3 +967,212 @@ MINSI_LAB_EventScript_FossilSentToPC::
 MINSI_LAB_Text_FossilReceived:
 	.string "You received the revived\n"
 	.string "{STR_VAR_2}!$"	
+
+MINSI_LAB_Text_HemlockOak:
+	.string "You've seen the reports, I expect.\p"
+	.string "The MYTHICAL POKéMON TEAM COVENANT\n"
+	.string "took never went back into hiding.\l"
+	.string "They're loose. All over ENPALE.\p"
+	.string "A colleague of mine came from KANTO\n"
+	.string "to see for himself. PROFESSOR OAK.\p"
+	.string "He's here. In this very room.\p"
+	.string "He tells me one of them crossed his\n"
+	.string "path on the road in. Ask him.$"	
+
+MINSI_LAB_EventScript_Oak::
+	lock
+	faceplayer
+	setspeaker MINSI_LAB_Text_OakName
+	goto_if_set FLAG_MEW_RECEIVED, MINSI_LAB_EventScript_OakPostMew
+	goto_if_set FLAG_OAK_BEATEN, MINSI_LAB_EventScript_OakGiveMew
+	msgbox MINSI_LAB_Text_OakIntro, MSGBOX_DEFAULT
+	msgbox MINSI_LAB_Text_OakChallenge, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_OakDecline
+	closemessage
+	trainerbattle_no_intro TRAINER_ENPALE_OAK, MINSI_LAB_Text_OakBattleDefeat
+	setflag FLAG_OAK_BEATEN
+	special HealPlayerParty
+	goto MINSI_LAB_EventScript_OakGiveMew
+
+MINSI_LAB_EventScript_OakDecline::
+	msgbox MINSI_LAB_Text_OakDecline, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MINSI_LAB_EventScript_OakGiveMew::
+	setspeaker MINSI_LAB_Text_OakName
+	msgbox MINSI_LAB_Text_OakGive, MSGBOX_DEFAULT
+	closemessage
+	bufferspeciesname STR_VAR_1, SPECIES_MEW
+	givemon SPECIES_MEW, 70
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_OakNoRoom
+	setflag FLAG_MEW_RECEIVED
+	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_OakMewToPC
+	goto MINSI_LAB_EventScript_OakMewToParty
+
+MINSI_LAB_EventScript_OakMewToParty::
+	playfanfare MUS_LEVEL_UP
+	message MINSI_LAB_Text_ReceivedMew
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MINSI_LAB_EventScript_OakMewOutro
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto MINSI_LAB_EventScript_OakMewOutro
+
+MINSI_LAB_EventScript_OakMewToPC::
+	playfanfare MUS_LEVEL_UP
+	message MINSI_LAB_Text_ReceivedMew
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MINSI_LAB_EventScript_OakMewPCTransfer
+	call Common_EventScript_NameReceivedBoxMon
+	goto MINSI_LAB_EventScript_OakMewPCTransfer
+
+MINSI_LAB_EventScript_OakMewPCTransfer::
+	call Common_EventScript_TransferredToPC
+	goto MINSI_LAB_EventScript_OakMewOutro
+
+MINSI_LAB_EventScript_OakMewOutro::
+	setspeaker MINSI_LAB_Text_OakName
+	msgbox MINSI_LAB_Text_OakAfterMew, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MINSI_LAB_EventScript_OakNoRoom::
+	msgbox MINSI_LAB_Text_OakNoRoom, MSGBOX_DEFAULT
+	closemessage
+	release
+	end	
+
+MINSI_LAB_EventScript_OakPostMew::
+	goto_if_set FLAG_OAK_REMATCH_DONE, MINSI_LAB_EventScript_OakPostRematch
+	goto_if_unset FLAG_DEFEATED_RIVAL_CHAMPION, MINSI_LAB_EventScript_OakFlavor
+	msgbox MINSI_LAB_Text_OakRematchOffer, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq MINSI_LAB_EventScript_OakRematchDecline
+	msgbox MINSI_LAB_Text_OakRematchAccept, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_ENPALE_OAK_REMATCH, MINSI_LAB_Text_OakRematchDefeat
+	setflag FLAG_OAK_REMATCH_DONE
+	special HealPlayerParty
+	setspeaker MINSI_LAB_Text_OakName
+	msgbox MINSI_LAB_Text_OakRematchAfter, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MINSI_LAB_EventScript_OakRematchDecline::
+	msgbox MINSI_LAB_Text_OakRematchDeclineText, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MINSI_LAB_EventScript_OakFlavor::
+	msgbox MINSI_LAB_Text_OakFlavor, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MINSI_LAB_EventScript_OakPostRematch::
+	msgbox MINSI_LAB_Text_OakPostRematch, MSGBOX_DEFAULT
+	closemessage
+	release
+	end	
+
+MINSI_LAB_Text_OakName:
+	.string "OAK$"
+
+MINSI_LAB_Text_OakIntro:
+	.string "So you're {PLAYER}.\p"
+	.string "HEMLOCK writes about you rather a\n"
+	.string "lot. I'd assumed exaggeration.\p"
+	.string "I came here chasing a rumour and\n"
+	.string "found it true. Two days east, on the\l"
+	.string "old road, something crossed my path.\p"
+	.string "Pink. Small. It looked at me the way\n"
+	.string "a child looks at a stranger.\p"
+	.string "MEW. Awake, and in no hurry to be\n"
+	.string "anywhere else.\p"
+	.string "It's stayed near me since. Not from\n"
+	.string "fondness. Curiosity.\p"
+	.string "HEMLOCK says you and your POKéMON\n"
+	.string "understand one another. That is a\l"
+	.string "rarer thing than a full POKéDEX.\p"
+	.string "So show me.$"
+
+MINSI_LAB_Text_OakChallenge:
+	.string "Win, and MEW is yours.\p"
+	.string "Shall we?$"
+
+MINSI_LAB_Text_OakDecline:
+	.string "Take your time. Neither of us is\n"
+	.string "going anywhere.$"
+
+MINSI_LAB_Text_OakBattleDefeat:
+	.string "…Ah. There it is.$"
+
+MINSI_LAB_Text_OakGive:
+	.string "Fifty years of study and I still\n"
+	.string "can't put THAT into a paper.\p"
+	.string "Look at it. It's already decided.$"
+
+MINSI_LAB_Text_ReceivedMew:
+	.string "{PLAYER} received {STR_VAR_1}!$"
+
+MINSI_LAB_Text_OakAfterMew:
+	.string "Congratulations, {PLAYER}.\p"
+	.string "Not for the win. For the reason you\n"
+	.string "won. MEW watched you the whole\l"
+	.string "match. So did I.\p"
+	.string "You should know it isn't alone.\n"
+	.string "Others have surfaced across ENPALE,\l"
+	.string "and each has found company.\p"
+	.string "STEVEN. RED. CYNTHIA.\p"
+	.string "All of them waiting on someone\n"
+	.string "worth the walk. Go on.$"
+
+MINSI_LAB_Text_OakNoRoom:
+	.string "Your party is full, and your boxes\n"
+	.string "besides. Make room and come back.\p"
+	.string "MEW will wait. It has waited longer\n"
+	.string "than that for worse company.$"
+
+MINSI_LAB_Text_OakFlavor:
+	.string "HEMLOCK's revival machine is older\n"
+	.string "than I am and twice as stubborn.\p"
+	.string "How is MEW? …No, don't tell me.\n"
+	.string "I can see it from here.$"
+
+MINSI_LAB_Text_OakRematchOffer:
+	.string "So the LEAGUE has a new CHAMPION,\n"
+	.string "and it's you. I did wonder.\p"
+	.string "I've had rather a lot of time to\n"
+	.string "think about our last match.\p"
+	.string "Indulge an old man?$"
+
+MINSI_LAB_Text_OakRematchAccept:
+	.string "Good. No holding back this time.\n"
+	.string "For either of us.$"
+
+MINSI_LAB_Text_OakRematchDeclineText:
+	.string "Another day. I'm not going\n"
+	.string "anywhere.$"
+
+MINSI_LAB_Text_OakRematchDefeat:
+	.string "Fifty years, and still learning.$"
+
+MINSI_LAB_Text_OakRematchAfter:
+	.string "Twice, then.\p"
+	.string "I'll be going back to KANTO before\n"
+	.string "long. Come and find me there,\l"
+	.string "CHAMPION. Bring MEW.$"
+
+MINSI_LAB_Text_OakPostRematch:
+	.string "Beaten twice and cheerful about it.\n"
+	.string "That is the job, more or less.$"	

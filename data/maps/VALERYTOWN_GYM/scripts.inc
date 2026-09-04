@@ -19,7 +19,7 @@ VALERYTOWN_GYM_Text_Greeter:
 VALERYTOWN_GYM_EventScript_Randall::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_RandallRematch
+	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_RandallBeaten
 	msgbox VALERYTOWN_GYM_Text_RandallIntro, MSGBOX_DEFAULT
 	trainerbattle_single TRAINER_LEADER_RANDALL, VALERYTOWN_GYM_Text_RandallDefeat, VALERYTOWN_GYM_Text_RandallPostBattle, VALERYTOWN_GYM_EventScript_RandallReward
 	end
@@ -32,10 +32,26 @@ VALERYTOWN_GYM_EventScript_RandallReward::
 	release
 	end
 
+VALERYTOWN_GYM_EventScript_RandallBeaten::
+	goto_if_set FLAG_RANDALL_REMATCH_DONE, VALERYTOWN_GYM_EventScript_RandallRematchBeaten
+	goto_if_unset FLAG_ELDERS_ARC_STARTED, VALERYTOWN_GYM_EventScript_RandallRematch
+	msgbox VALERYTOWN_GYM_Text_RandallRematchIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_RANDALL_REMATCH, VALERYTOWN_GYM_Text_RandallRematchDefeat
+	msgbox VALERYTOWN_GYM_Text_RandallRematchPostBattle, MSGBOX_DEFAULT
+	setflag FLAG_RANDALL_REMATCH_DONE
+	release
+	end
+
+VALERYTOWN_GYM_EventScript_RandallRematchBeaten::
+	msgbox VALERYTOWN_GYM_Text_RandallRematchRepeat, MSGBOX_DEFAULT
+	release
+	end
+
 VALERYTOWN_GYM_EventScript_RandallRematch::
 	msgbox VALERYTOWN_GYM_Text_RandallRematch, MSGBOX_DEFAULT
 	release
-	end	
+	end
 
 VALERYTOWN_GYM_Text_RandallIntro:
 	.string "So you cut through my boys.\p"
@@ -191,3 +207,15 @@ VALERYTOWN_GYM_Text_Blackbelt4Post:
 	.string "Fine. You want him? He's all\n"
 	.string "yours.\p"
 	.string "Don't say we didn't warn you.$"	
+
+VALERYTOWN_GYM_Text_RandallRematchIntro:
+	.string "Heard the Elders are making noise\nagain.\pGood. Let's see if beating me once\nwas a fluke.$"
+
+VALERYTOWN_GYM_Text_RandallRematchDefeat:
+	.string "…Tch. Still got it, huh.$"
+
+VALERYTOWN_GYM_Text_RandallRematchPostBattle:
+	.string "Fine. Go deal with them.\pTown's still mine when you get back.$"
+
+VALERYTOWN_GYM_Text_RandallRematchRepeat:
+	.string "Go on. Handle your business.$"	

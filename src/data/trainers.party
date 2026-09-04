@@ -17573,7 +17573,7 @@ Luxio
 Level: 15
 
 === TRAINER_OMAR_1 ===
-Name: OMAR
+Name: Omar
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
@@ -21331,7 +21331,6 @@ Gliscor @ Toxic Orb
 Level: 67
 Ability: Poison Heal
 EVs: 244 HP / 252 Def / 12 SpD
-Tera Type: Water
 Impish Nature
 - Earthquake
 - Toxic
@@ -21389,7 +21388,7 @@ Jolly Nature
 - Blaze Kick
 
 === TRAINER_OMAR_REMATCH ===
-Name: OMAR
+Name: Omar
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
@@ -21448,7 +21447,6 @@ Modest Nature
 
 Ampharos-Mega @ Ampharosite
 Level: 70
-Ability: Static
 EVs: 4 HP / 252 SpA / 252 Spe
 Modest Nature
 - Volt Switch
@@ -21469,7 +21467,6 @@ Quagsire @ Rocky Helmet
 Level: 67
 Ability: Unaware
 EVs: 252 HP / 252 Def / 4 SpD
-Tera Type: Dark
 Bold Nature
 - Stealth Rock
 - Recover
@@ -21578,7 +21575,6 @@ Weavile @ Focus Sash
 Level: 69
 Ability: Pressure
 EVs: 252 Atk / 4 SpD / 252 Spe
-Tera Type: Ice
 Jolly Nature
 - Triple Axel
 - Knock Off
@@ -21835,7 +21831,6 @@ Primarina @ Assault Vest
 Level: 76
 Ability: Torrent
 EVs: 252 HP / 208 SpA / 48 SpD
-Tera Type: Poison
 Modest Nature
 - Moonblast
 - Psychic Noise
@@ -21846,7 +21841,6 @@ Swampert @ Leftovers
 Level: 76
 Ability: Torrent
 EVs: 252 HP / 4 Atk / 252 SpD
-Tera Type: Fairy
 Careful Nature
 - Stealth Rock
 - Earthquake
@@ -21906,7 +21900,6 @@ Decidueye @ Choice Band
 Level: 78
 Ability: Long Reach
 EVs: 252 Atk / 4 SpD / 252 Spe
-Tera Type: Ghost
 Adamant Nature
 - U-Turn
 - Spirit Shackle
@@ -22080,3 +22073,1269 @@ Jolly Nature
 - Waterfall
 - Crunch
 - Power Whip
+
+=== TRAINER_BOBBY_101_REMATCH ===
+Name: BOBBY
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Furret
+Level: 15
+- Scratch
+- Defense Curl
+- Quick Attack
+- Follow Me
+
+=== TRAINER_ACOLYTE_BELL_TOWER_1 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Houndoom @ None
+Level: 72
+
+Ampharos
+Level: 74
+
+=== TRAINER_ACOLYTE_BELL_TOWER_2 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Staraptor @ None
+Level: 75
+
+=== TRAINER_ACOLYTE_BELL_TOWER_3 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Azumarill @ None
+Level: 74
+
+Whimsicott
+Level: 76
+
+=== TRAINER_ACOLYTE_BELL_TOWER_4 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Banette @ None
+Level: 75
+
+Roserade
+Level: 75
+
+Wigglytuff
+Level: 75
+
+=== TRAINER_ACOLYTE_BELL_TOWER_5 ===
+Name: Acolyte
+Class: Covenant Grunt
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move
+
+Espeon @ None
+Level: 77
+
+Umbreon
+Level: 77
+
+=== TRAINER_FERRUS_WALLAR ===
+Name: Ferrus
+Class: Covenant Elder
+Pic: Ferrus
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move
+
+Amoonguss @ Black Sludge
+Level: 83
+Ability: Regenerator
+EVs: 252 HP / 220 Def / 36 SpD
+Bold Nature
+- Spore
+- Giga Drain
+- Sludge Bomb
+- Foul Play
+
+Ferrothorn @ Rocky Helmet
+Level: 84
+Ability: Iron Barbs
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Spikes
+- Leech Seed
+- Power Whip
+- Knock Off
+
+Breloom @ Focus Sash
+Level: 85
+Ability: Technician
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Spore
+- Mach Punch
+- Bullet Seed
+- Swords Dance
+
+Sceptile @ Sceptilite
+Level: 85
+Ability: Overgrow
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Leaf Storm
+- Dragon Pulse
+- Earthquake
+- Focus Blast
+
+Deoxys @ Life Orb
+Level: 85
+Ability: Pressure
+EVs: 4 Atk / 252 SpA / 252 Spe
+Naive Nature
+- Psycho Boost
+- Shadow Ball
+- Ice Beam
+- Extreme Speed
+
+Cradily @ Leftovers
+Level: 86
+Ability: Storm Drain
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Giga Drain
+- Toxic
+- Stealth Rock
+- Recover
+
+=== TRAINER_IRRUS_WALLAR ===
+Name: Irrus
+Class: Covenant Elder
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move
+
+Toxapex @ Rocky Helmet
+Level: 83
+Ability: Regenerator
+EVs: 248 HP / 252 Def / 8 SpD
+Bold Nature
+- Knock Off
+- Haze
+- Recover
+- Scald
+
+Golisopod @ Insect Plate
+Level: 84
+Ability: Emergency Exit
+EVs: 168 HP / 252 Atk / 88 Spe
+Adamant Nature
+- First Impression
+- Liquidation
+- Leech Life
+- Aqua Jet
+
+Dracovish @ Choice Band
+Level: 85
+Ability: Strong Jaw
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Fishious Rend
+- Psychic Fangs
+- Crunch
+- Outrage
+
+Swampert @ Swampertite
+Level: 85
+Ability: Damp
+EVs: 4 HP / 244 Atk / 8 SpD / 252 Spe
+Jolly Nature
+- Waterfall
+- Earthquake
+- Ice Punch
+- Stealth Rock
+
+Giratina-Origin @ Griseous Orb
+Level: 85
+Ability: Levitate
+EVs: 248 HP / 208 SpA / 52 SpD
+IVs: 0 Atk
+Modest Nature
+- Defog
+- Hex
+- Dragon Pulse
+- Thunder Wave
+
+Carracosta @ Life Orb
+Level: 86
+Ability: Solid Rock
+EVs: 252 Atk / 4 Def / 252 Spe
+Naughty Nature
+- Shell Smash
+- Stone Edge
+- Aqua Jet
+- Hydro Pump
+
+=== TRAINER_SAXUS_WALLAR ===
+Name: Saxus
+Class: Covenant Elder
+Pic: Magma Grunt F
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move
+
+Glimmora @ Red Card
+Level: 83
+Ability: Toxic Debris
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Stealth Rock
+- Mortal Spin
+- Earth Power
+- Power Gem
+
+Gigalith @ Leftovers
+Level: 84
+Ability: Sand Stream
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Stealth Rock
+- Rock Blast
+- Earthquake
+- Toxic
+
+Rhyperior @ Leftovers
+Level: 85
+Ability: Solid Rock
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Stone Edge
+- Earthquake
+- Heat Crash
+- Iron Head
+
+Tyranitar @ Tyranitarite
+Level: 85
+Ability: Sand Stream
+EVs: 132 HP / 252 Atk / 124 Spe
+Adamant Nature
+- Ice Punch
+- Stone Edge
+- Pursuit
+- Fire Punch
+
+Kyurem @ Leftovers
+Level: 85
+Ability: Pressure
+EVs: 56 HP / 236 Def / 216 Spe
+Jolly Nature
+- Substitute
+- Roost
+- Icicle Spear
+- Dragon Dance
+
+Archeops @ Power Herb
+Level: 86
+Ability: Defeatist
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+- Meteor Beam
+- Air Slash
+- Earth Power
+- Roost
+
+=== TRAINER_PRAETUS_WALLAR ===
+Name: Praetus
+Class: Covenant Elder
+Pic: Champion Wallace
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move
+
+Corviknight @ Leftovers
+Level: 83
+Ability: Pressure
+EVs: 248 HP / 136 Def / 124 SpD
+Impish Nature
+- Body Press
+- U-turn
+- Roost
+- Defog
+
+Magnezone @ Choice Specs
+Level: 84
+Ability: Analytic
+EVs: 252 SpA / 4 SpD / 252 Spe
+IVs: 0 Atk
+Modest Nature
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Archaludon @ Choice Scarf
+Level: 85
+Ability: Stamina
+EVs: 252 SpA / 4 SpD / 252 Spe
+IVs: 0 Atk
+Timid Nature
+- Draco Meteor
+- Thunder Wave
+- Flash Cannon
+- Thunderbolt
+
+Metagross @ Metagrossite
+Level: 85
+Ability: Clear Body
+EVs: 232 HP / 60 Atk / 40 SpD / 176 Spe
+Jolly Nature
+- Meteor Mash
+- Ice Punch
+- Rock Slide
+- Bullet Punch
+
+Yveltal @ Life Orb
+Level: 85
+Ability: Dark Aura
+EVs: 4 Atk / 252 SpA / 252 Spe
+Mild Nature
+- Dark Pulse
+- Oblivion Wing
+- Taunt
+- Sucker Punch
+
+Bastiodon @ Leftovers
+Level: 86
+Ability: Soundproof
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Roar
+- Body Press
+- Heavy Slam
+- Foul Play
+
+=== TRAINER_ENPALE_E4_FIRE_FINAL ===
+Name: Redding
+Class: Elite Four
+Pic: Elite Four Sidney
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Torkoal @ Heat Rock
+Level: 89
+Ability: Drought
+EVs: 248 HP / 252 Def / 8 SpD
+Bold Nature
+- Stealth Rock
+- Lava Plume
+- Rapid Spin
+- Toxic
+
+Blaziken @ Life Orb
+Level: 90
+Ability: Speed Boost
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Flare Blitz
+- High Jump Kick
+- Protect
+- Swords Dance
+
+Incineroar @ Sitrus Berry
+Level: 90
+Ability: Intimidate
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Fake Out
+- Flare Blitz
+- Throat Chop
+- Parting Shot
+
+Delphox @ Life Orb
+Level: 90
+Ability: Blaze
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Calm Mind
+- Fire Blast
+- Psychic
+- Grass Knot
+
+Chandelure @ Heavy-Duty Boots
+Level: 91
+Ability: Flame Body
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Flamethrower
+- Hex
+- Toxic
+- Protect
+
+Charizard @ Charizardite Y
+Level: 92
+Ability: Blaze
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Weather Ball
+- Solar Beam
+- Air Slash
+- Roost
+
+=== TRAINER_ENPALE_E4_WATER_FINAL ===
+Name: Bluto
+Class: Elite Four
+Pic: Elite Four Phoebe
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Pelipper @ Damp Rock
+Level: 91
+Ability: Drizzle
+EVs: 248 HP / 252 Def / 8 SpD
+Relaxed Nature
+- Hurricane
+- Tailwind
+- Weather Ball
+- Roost
+
+Empoleon @ Leftovers
+Level: 92
+Ability: Competitive
+EVs: 72 HP / 72 Def / 148 SpA / 216 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Grass Knot
+- Roost
+
+Primarina @ Assault Vest
+Level: 92
+Ability: Torrent
+EVs: 252 HP / 208 SpA / 48 SpD
+Modest Nature
+- Moonblast
+- Psychic Noise
+- Surf
+- Flip Turn
+
+Swampert @ Leftovers
+Level: 92
+Ability: Torrent
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Stealth Rock
+- Earthquake
+- Flip Turn
+- Knock Off
+
+Basculegion @ Choice Scarf
+Level: 93
+Ability: Swift Swim
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Wave Crash
+- Last Respects
+- Flip Turn
+- Aqua Jet
+
+Blastoise @ Blastoisinite
+Level: 94
+Ability: Torrent
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Shell Smash
+- Aura Sphere
+- Dark Pulse
+- Water Pulse
+
+=== TRAINER_ENPALE_E4_GRASS_FINAL ===
+Name: Gretle
+Class: Elite Four
+Pic: Elite Four Glacia
+Gender: Female    
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Rillaboom @ Leftovers
+Level: 93
+Ability: Grassy Surge
+EVs: 240 HP / 252 Atk / 16 Spe
+Adamant Nature
+- Swords Dance
+- Grassy Glide
+- Knock Off
+- Drain Punch
+
+Whimsicott @ Focus Sash
+Level: 94
+Ability: Prankster
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Moonblast
+- Encore
+- Tailwind
+- Protect
+
+Decidueye @ Choice Band
+Level: 94
+Ability: Long Reach
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- U-Turn
+- Spirit Shackle
+- Leaf Blade
+- Shadow Sneak
+
+Sceptile @ Grassy Seed
+Level: 94
+Ability: Unburden
+EVs: 248 HP / 252 Atk / 8 Def
+Adamant Nature
+- Swords Dance
+- Leaf Blade
+- Acrobatics
+- Earthquake
+
+Breloom @ Toxic Orb
+Level: 95
+Ability: Poison Heal
+EVs: 252 HP / 80 Atk / 176 Spe
+Adamant Nature
+- Close Combat
+- Seed Bomb
+- Facade
+- Protect
+
+Venusaur @ Venusaurite
+Level: 96
+Ability: Chlorophyll
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Synthesis
+- Sludge Bomb
+- Earth Power
+- Leech Seed
+
+=== TRAINER_ENPALE_E4_BUG_FINAL ===
+Name: Rick
+Class: Elite Four
+Pic: Elite Four Drake
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Galvantula @ Focus Sash
+Level: 95
+Ability: Compound Eyes
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Sticky Web
+- Energy Ball
+- Thunder
+- Thunder Wave
+
+Volcarona @ Heavy-Duty Boots
+Level: 96
+Ability: Flame Body
+EVs: 80 HP / 252 Def / 176 Spe
+Timid Nature
+- Quiver Dance
+- Flamethrower
+- Morning Sun
+- Will-O-Wisp
+
+Golisopod @ Heavy-Duty Boots
+Level: 96
+Ability: Emergency Exit
+EVs: 156 HP / 252 Atk / 100 Spe
+Adamant Nature
+- First Impression
+- Leech Life
+- Liquidation
+- Knock Off
+
+Shedinja @ Heavy-Duty Boots
+Level: 96
+Ability: Wonder Guard
+EVs: 252 Atk / 252 Spe
+Lonely Nature
+- Protect
+- Will-O-Wisp
+- Toxic
+- Shadow Sneak
+
+Lokix @ Heavy-Duty Boots
+Level: 97
+Ability: Tinted Lens
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- First Impression
+- Knock Off
+- Sucker Punch
+- U-turn
+
+Scizor @ Scizorite
+Level: 98
+Ability: Light Metal
+EVs: 248 HP / 16 Def / 244 SpD
+Impish Nature
+- Swords Dance
+- Roost
+- Bullet Punch
+- U-turn
+
+=== TRAINER_RIVALCF_CHAMP ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Honchkrow @ Life Orb
+Ability: Moxie
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+Level: 97
+-Brave Bird
+-Sucker Punch
+-Pursuit
+-Superpower
+
+Cresselia @ Light Clay
+Level: 98
+EVs: 248 HP / 84 Def / 176 SpD
+Relaxed Nature
+-Light Screen
+-Reflect
+-Moonlight
+-Psychic
+
+Raichu @ Life Orb
+Ability: Lightning Rod
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+Level: 98
+-Nasty Plot
+-Thunderbolt
+-Grass Knot
+-Focus Blast
+
+Heatran @ Leftovers
+Level: 98
+Ability: Flash Fire
+EVs: 252 HP / 236 SpD / 20 Spe
+Calm Nature
+- Magma Storm
+- Earth Power
+- Taunt
+- Stealth Rock 
+
+Banette @ Banettite
+Level: 99
+EVs: 228 HP / 252 Atk / 28 Spe
+Adamant Nature
+-Destiny Bond
+-Shadow Sneak
+-Will-O-Wisp
+-Sucker Punch
+
+Mienshao @ Assault Vest
+Level: 100
+Ability: Reckless
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+-High Jump Kick
+-Knock Off
+-U-Turn
+-Fake Out
+
+=== TRAINER_ENPALE_OAK ===
+Name: Oak
+Class: Pkmn Trainer 1
+Pic: Professor Oak Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Tauros @ Choice Band
+Level: 70
+Ability: Intimidate
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Double-Edge
+- Earthquake
+- Pursuit
+- Iron Head
+
+Exeggutor @ Leftovers
+Level: 70
+Ability: Chlorophyll
+EVs: 40 HP / 252 SpA / 216 Spe
+Modest Nature
+- Sleep Powder
+- Leaf Storm
+- Psychic
+- Synthesis
+
+Arcanine @ Life Orb
+Level:70
+Ability: Intimidate
+EVs: 120 HP / 152 Atk / 236 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Morning Sun
+- Will-O-Wisp
+
+Gyarados @ Leftovers
+Level: 70
+Ability: Intimidate
+EVs: 68 HP / 252 Atk / 188 Spe
+Adamant Nature
+- Dragon Dance
+- Taunt
+- Earthquake
+- Double-Edge
+
+Alakazam @ Choice Specs
+Level: 70
+Ability: Synchronize
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Signal Beam
+- Focus Blast
+- Trick
+
+Mew @ Life Orb
+Level: 70
+Ability: Synchronize
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Nasty Plot
+- Psyshock
+- Fire Blast
+- Giga Drain
+
+=== TRAINER_ENPALE_OAK_REMATCH ===
+Name: Oak
+Class: Pkmn Trainer 1
+Pic: Professor Oak Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Tauros @ Choice Band
+Level: 100
+Ability: Intimidate
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Double-Edge
+- Earthquake
+- Pursuit
+- Iron Head
+
+Exeggutor @ Leftovers
+Level: 100
+Ability: Chlorophyll
+EVs: 40 HP / 252 SpA / 216 Spe
+Modest Nature
+- Sleep Powder
+- Leaf Storm
+- Psychic
+- Synthesis
+
+Arcanine @ Life Orb
+Level: 100
+Ability: Intimidate
+EVs: 120 HP / 152 Atk / 236 Spe
+Adamant Nature
+- Flare Blitz
+- Extreme Speed
+- Morning Sun
+- Will-O-Wisp
+
+Gyarados @ Leftovers
+Level: 100
+Ability: Intimidate
+EVs: 68 HP / 252 Atk / 188 Spe
+Adamant Nature
+- Dragon Dance
+- Taunt
+- Earthquake
+- Double-Edge
+
+Alakazam @ Choice Specs
+Level: 100
+Ability: Synchronize
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Signal Beam
+- Focus Blast
+- Trick
+
+Rhydon @ Eviolite
+Level: 100
+Ability: Rock Head
+EVs: 88 HP / 252 Atk / 84 SpD / 84 Spe
+Adamant Nature
+- Stealth Rock
+- Earthquake
+- Rock Blast
+- Megahorn
+
+=== TRAINER_ENPALE_RED ===
+Name: Red
+Class: Pkmn Trainer 1
+Pic: Red
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Snorlax @ Choice Band
+Level: 70
+Ability: Thick Fat
+EVs: 252 Atk / 52 Def / 200 SpD / 4 Spe
+Adamant Nature
+- Body Slam
+- Pursuit
+- Earthquake
+- Crunch
+
+Venusaur @ Leftovers
+Level: 70
+Ability: Overgrow
+EVs: 252 HP / 84 Def / 148 SpD / 24 Spe
+Careful Nature
+- Sleep Powder
+- Leech Seed
+- Sludge Bomb
+- Synthesis
+
+Charizard @ Life Orb
+Level: 70
+Ability: Blaze
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+- Fire Blast
+- Air Slash
+- Thunder Punch
+- Roost
+
+Blastoise @ Leftovers
+Level: 70
+Ability: Torrent
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Surf
+- Ice Beam
+- Rapid Spin
+- Roar
+
+Pikachu @ Light Ball
+Level: 75
+Ability: Static
+EVs: 252 Atk / 68 SpA / 188 Spe
+Lonely Nature
+- Extreme Speed
+- Volt Switch
+- Knock Off
+- Grass Knot
+
+Celebi @ Leftovers
+Level: 70
+Ability: Natural Cure
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Nasty Plot
+- Giga Drain
+- Psychic
+- Dazzling Gleam
+
+=== TRAINER_ENPALE_RED_REMATCH ===
+Name: Red
+Class: Pkmn Trainer 1
+Pic: Red
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Snorlax @ Choice Band
+Level: 100
+Ability: Thick Fat
+EVs: 252 Atk / 52 Def / 200 SpD / 4 Spe
+Adamant Nature
+- Body Slam
+- Pursuit
+- Earthquake
+- Crunch
+
+Venusaur @ Leftovers
+Level: 100
+Ability: Overgrow
+EVs: 252 HP / 84 Def / 148 SpD / 24 Spe
+Careful Nature
+- Sleep Powder
+- Leech Seed
+- Sludge Bomb
+- Synthesis
+
+Charizard @ Life Orb
+Level: 100
+Ability: Blaze
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+- Fire Blast
+- Air Slash
+- Thunder Punch
+- Roost
+
+Blastoise @ Leftovers
+Level: 100
+Ability: Torrent
+EVs: 252 HP / 252 Def / 4 SpA
+Bold Nature
+- Surf
+- Ice Beam
+- Rapid Spin
+- Roar
+
+Pikachu @ Light Ball
+Level: 100
+Ability: Static
+EVs: 252 Atk / 68 SpA / 188 Spe
+Lonely Nature
+- Extreme Speed
+- Volt Switch
+- Knock Off
+- Grass Knot
+
+Espeon @ Choice Specs
+Level: 100
+Ability: Magic Bounce
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Psychic
+- Dazzling Gleam
+- Shadow Ball
+- Trick
+
+=== TRAINER_ENPALE_STEVEN ===
+Name: Steven
+Class: Pkmn Trainer 1
+Pic: Steven
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Skarmory @ Rocky Helmet
+Level: 70
+Ability: Sturdy
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Spikes
+- Roost
+- Whirlwind
+- Brave Bird
+
+Aggron @ Choice Band
+Level: 70
+Ability: Rock Head
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Head Smash
+- Heavy Slam
+- Superpower
+- Ice Punch
+
+Cradily @ Leftovers
+Level: 70
+Ability: Storm Drain
+EVs: 252 HP / 4 Def / 252 SpD
+Sassy Nature
+- Stealth Rock
+- Recover
+- Giga Drain
+- Rock Slide
+
+Armaldo @ Leftovers
+Level: 70
+Ability: Battle Armor
+EVs: 252 HP / 92 Atk / 164 Spe
+Adamant Nature
+- Rapid Spin
+- Stone Edge
+- Knock Off
+- Earthquake
+
+Metagross @ Metagrossite
+Level: 70
+Ability: Clear Body
+EVs: 232 HP / 60 Atk / 40 SpD / 176 Spe
+Jolly Nature
+- Meteor Mash
+- Ice Punch
+- Rock Slide
+- Bullet Punch
+
+Jirachi @ Choice Scarf
+Level: 70
+Ability: Serene Grace
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Iron Head
+- U-turn
+- Healing Wish
+- Fire Punch
+
+=== TRAINER_ENPALE_STEVEN_REMATCH ===
+Name: Steven
+Class: Pkmn Trainer 1
+Pic: Steven
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Skarmory @ Rocky Helmet
+Level: 100
+Ability: Sturdy
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Spikes
+- Roost
+- Whirlwind
+- Brave Bird
+
+Aggron @ Choice Band
+Level: 100
+Ability: Rock Head
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Head Smash
+- Heavy Slam
+- Superpower
+- Ice Punch
+
+Cradily @ Leftovers
+Level: 100
+Ability: Storm Drain
+EVs: 252 HP / 4 Def / 252 SpD
+Sassy Nature
+- Stealth Rock
+- Recover
+- Giga Drain
+- Rock Slide
+
+Armaldo @ Leftovers
+Level: 100
+Ability: Battle Armor
+EVs: 252 HP / 92 Atk / 164 Spe
+Adamant Nature
+- Rapid Spin
+- Stone Edge
+- Knock Off
+- Earthquake
+
+Metagross @ Metagrossite
+Level: 100
+Ability: Clear Body
+EVs: 232 HP / 60 Atk / 40 SpD / 176 Spe
+Jolly Nature
+- Meteor Mash
+- Ice Punch
+- Rock Slide
+- Bullet Punch
+
+Claydol @ Leftovers
+Level: 100
+Ability: Levitate
+EVs: 252 HP / 4 Def / 252 SpD
+Sassy Nature
+- Rapid Spin
+- Stealth Rock
+- Earthquake
+- Ice Beam
+
+=== TRAINER_ENPALE_CYNTHIA ===
+Name: Cynthia
+Class: Pkmn Trainer 1
+Pic: Elite Four Agatha Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Roserade @ Life Orb
+Level: 70
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Leaf Storm
+- Sludge Bomb
+- Sleep Powder
+- Synthesis
+
+Togekiss @ Leftovers
+Level: 70
+Ability: Serene Grace
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+- Nasty Plot
+- Heal Bell
+- Air Slash
+- Roost
+
+Milotic @ Leftovers
+Level: 70
+Ability: Marvel Scale
+EVs: 252 HP / 108 Def / 148 SpD
+Calm Nature
+- Scald
+- Recover
+- Toxic
+- Refresh
+
+Lucario @ Lucarionite
+Level: 70
+Ability: Justified
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Meteor Mash
+- Close Combat
+- Bullet Punch
+
+Garchomp @ Life Orb
+Level: 70
+Ability: Rough Skin
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Scale Shot
+- Fire Fang
+
+Shaymin @ Life Orb
+Level: 70
+Ability: Natural Cure
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Synthesis
+- Seed Flare
+- Earth Power
+- Air Slash
+
+=== TRAINER_ENPALE_CYNTHIA_REMATCH ===
+Name: Cynthia
+Class: Pkmn Trainer 1
+Pic: Elite Four Agatha Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Roserade @ Life Orb
+Level: 100
+Ability: Natural Cure
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Leaf Storm
+- Sludge Bomb
+- Sleep Powder
+- Synthesis
+
+Togekiss @ Leftovers
+Level: 100
+Ability: Serene Grace
+EVs: 252 HP / 4 SpA / 252 Spe
+Timid Nature
+- Nasty Plot
+- Heal Bell
+- Air Slash
+- Roost
+
+Milotic @ Leftovers
+Level: 100
+Ability: Marvel Scale
+EVs: 252 HP / 108 Def / 148 SpD
+Calm Nature
+- Scald
+- Recover
+- Toxic
+- Refresh
+
+Lucario @ Lucarionite
+Level: 100
+Ability: Justified
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Meteor Mash
+- Close Combat
+- Bullet Punch
+
+Garchomp @ Life Orb
+Level: 100
+Ability: Rough Skin
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Earthquake
+- Scale Shot
+- Fire Fang
+
+Spiritomb @ Leftovers
+Level: 100
+Ability: Pressure
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Calm Mind
+- Dark Pulse
+- Rest
+- Sleep Talk
+

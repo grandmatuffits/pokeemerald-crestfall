@@ -22,6 +22,7 @@ COPPERGATE_CITY_GYM_EventScript_Hal::
 	end
 
 COPPERGATE_CITY_GYM_EventScript_Omar::
+	goto_if_set FLAG_BADGE02_GET, COPPERGATE_CITY_GYM_EventScript_OmarBeaten
 	trainerbattle_single TRAINER_OMAR_1, COPPERGATE_CITY_GYM_Text_OmarIntro, COPPERGATE_CITY_GYM_Text_OmarDefeat, COPPERGATE_CITY_GYM_EventScript_OmarPostBattle
 	end
 
@@ -32,6 +33,33 @@ COPPERGATE_CITY_GYM_EventScript_OmarPostBattle::
 	giveitem ITEM_TM69
 	waitfanfare
 	closemessage
+	release
+	end
+
+COPPERGATE_CITY_GYM_EventScript_OmarBeaten::
+	goto_if_set FLAG_OMAR_REMATCH_DONE, COPPERGATE_CITY_GYM_EventScript_OmarRematchBeaten
+	goto_if_unset FLAG_ELDERS_ARC_STARTED, COPPERGATE_CITY_GYM_EventScript_OmarAfterBattleRepeat
+	lock
+	faceplayer
+	msgbox COPPERGATE_CITY_GYM_Text_OmarRematchIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_OMAR_REMATCH, COPPERGATE_CITY_GYM_Text_OmarRematchDefeat
+	msgbox COPPERGATE_CITY_GYM_Text_OmarRematchPostBattle, MSGBOX_DEFAULT
+	setflag FLAG_OMAR_REMATCH_DONE
+	release
+	end
+
+COPPERGATE_CITY_GYM_EventScript_OmarRematchBeaten::
+	lock
+	faceplayer
+	msgbox COPPERGATE_CITY_GYM_Text_OmarRematchRepeat, MSGBOX_DEFAULT
+	release
+	end
+
+COPPERGATE_CITY_GYM_EventScript_OmarAfterBattleRepeat::
+	lock
+	faceplayer
+	msgbox COPPERGATE_CITY_GYM_Text_OmarPostBadgeIdle, MSGBOX_DEFAULT
 	release
 	end
 
@@ -82,3 +110,18 @@ COPPERGATE_CITY_GYM_Text_OmarAfterBattle:
 
 COPPERGATE_CITY_GYM_Text_OmarRepeat:
 	.string "Stay powered up!$"
+
+COPPERGATE_CITY_GYM_Text_OmarRematchIntro:
+	.string "Back already? Word's gotten around\nabout the Elders. Show me you're\lready to deal with them.$"
+
+COPPERGATE_CITY_GYM_Text_OmarRematchDefeat:
+	.string "Ha! Not bad!$"
+
+COPPERGATE_CITY_GYM_Text_OmarRematchPostBattle:
+	.string "Go on, keep hunting them down.$"
+
+COPPERGATE_CITY_GYM_Text_OmarRematchRepeat:
+	.string "Still tracking the Elders? Good luck.$"
+
+COPPERGATE_CITY_GYM_Text_OmarPostBadgeIdle:
+	.string "Nice badge!$"	

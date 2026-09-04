@@ -4,8 +4,8 @@ ROSEBANK_TOWN_GYM_MapScripts::
 #define LOCALID_ROSEBANK_GYM_FRIEDE 8
 
 ROSEBANK_GYM_EventScript_Friede::
+	goto_if_set FLAG_BADGE04_GET, ROSEBANK_GYM_EventScript_FriedeBeaten
 	trainerbattle_single TRAINER_LEADER_FRIEDE, ROSEBANK_GYM_Text_FriedeIntro, ROSEBANK_GYM_Text_FriedeDefeat, ROSEBANK_GYM_EventScript_FriedeDefeated
-	goto_if_set FLAG_BADGE04_GET, ROSEBANK_GYM_EventScript_FriedePostBadge
 	end
 
 ROSEBANK_GYM_EventScript_FriedeDefeated::
@@ -13,6 +13,26 @@ ROSEBANK_GYM_EventScript_FriedeDefeated::
 	msgbox ROSEBANK_GYM_Text_FriedeAward, MSGBOX_DEFAULT
 	giveitem ITEM_TM_AVALANCHE
 	msgbox ROSEBANK_GYM_Text_FriedeAvalanche, MSGBOX_DEFAULT
+	release
+	end
+
+ROSEBANK_GYM_EventScript_FriedeBeaten::
+	goto_if_set FLAG_FRIEDE_REMATCH_DONE, ROSEBANK_GYM_EventScript_FriedeRematchBeaten
+	goto_if_unset FLAG_ELDERS_ARC_STARTED, ROSEBANK_GYM_EventScript_FriedePostBadge
+	lock
+	faceplayer
+	msgbox ROSEBANK_GYM_Text_FriedeRematchIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_FRIEDE_REMATCH, ROSEBANK_GYM_Text_FriedeRematchDefeat
+	msgbox ROSEBANK_GYM_Text_FriedeRematchPostBattle, MSGBOX_DEFAULT
+	setflag FLAG_FRIEDE_REMATCH_DONE
+	release
+	end
+
+ROSEBANK_GYM_EventScript_FriedeRematchBeaten::
+	lock
+	faceplayer
+	msgbox ROSEBANK_GYM_Text_FriedeRematchRepeat, MSGBOX_DEFAULT
 	release
 	end
 
@@ -191,3 +211,15 @@ ROSEBANK_GYM_Text_JannaPostBattle:
 	.string "One day SMOOCHUM will be as strong\n"
 	.string "as JYNX.\p"
 	.string "I'm in no hurry. Neither is she.$"	
+
+ROSEBANK_GYM_Text_FriedeRematchIntro:
+	.string "Back for another round? I've heard\nthe Elders are stirring up trouble\lagain. Show me you're ready.$"
+
+ROSEBANK_GYM_Text_FriedeRematchDefeat:
+	.string "Not bad!$"
+
+ROSEBANK_GYM_Text_FriedeRematchPostBattle:
+	.string "Go on, then. Track the rest of them\ndown.$"
+
+ROSEBANK_GYM_Text_FriedeRematchRepeat:
+	.string "Stay sharp out there.$"	

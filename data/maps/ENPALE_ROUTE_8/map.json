@@ -62,7 +62,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_TM82",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_UNUSED_0x4B4"
+      "flag": "FLAG_ITEM_ENPALE_ROUTE_8_TM82"
     }
   ],
   "warp_events": [],

@@ -1,6 +1,8 @@
 #define LOCALID_UMBRA 1
 #define LOCALID_BRUTUS 2
 #define LOCALID_HEMLOCK 3
+#define LOCALID_UMBRA_CHAMPION 4
+#define LOCALID_RIVAL_CHAMPION 5
 
 @ --- add ON_TRANSITION to the MapScripts table (keep the existing OnFrame line) ---
 ENPALE_LEAGUE_ARENA_MapScripts::
@@ -10,28 +12,43 @@ ENPALE_LEAGUE_ARENA_MapScripts::
 
 ENPALE_LEAGUE_ARENA_OnTransition::
 	setflag FLAG_HIDE_ARENA_HEMLOCK
-	@ Umbra: hide permanently once the opening scene has run
 	compare VAR_DEWFORD_TOWN_STATE, 1
 	goto_if_ge ENPALE_LEAGUE_ARENA_OnTransition_HideUmbra
 	goto ENPALE_LEAGUE_ARENA_OnTransition_BrutusCheck
 ENPALE_LEAGUE_ARENA_OnTransition_HideUmbra::
 	setflag FLAG_HIDE_ARENA_UMBRA
-	@ fall through to Brutus check
 ENPALE_LEAGUE_ARENA_OnTransition_BrutusCheck::
 	goto_if_set FLAG_DEFEATED_ENPALE_CHAMP, ENPALE_LEAGUE_ARENA_OnTransition_HideBrutus
 	compare VAR_ELITE_4_STATE, 4
 	goto_if_eq ENPALE_LEAGUE_ARENA_OnTransition_ShowBrutus
 ENPALE_LEAGUE_ARENA_OnTransition_HideBrutus::
 	setflag FLAG_HIDE_ARENA_BRUTUS
-	end
+	goto ENPALE_LEAGUE_ARENA_OnTransition_UmbraChampCheck
 ENPALE_LEAGUE_ARENA_OnTransition_ShowBrutus::
 	clearflag FLAG_HIDE_ARENA_BRUTUS
+ENPALE_LEAGUE_ARENA_OnTransition_UmbraChampCheck::
+	goto_if_set FLAG_FINAL_E4_UNLOCKED, ENPALE_LEAGUE_ARENA_OnTransition_RivalEra
+	setflag FLAG_HIDE_ARENA_RIVAL_CHAMPION
+	goto_if_set FLAG_DEFEATED_UMBRA_REMATCH, ENPALE_LEAGUE_ARENA_OnTransition_HideUmbraChamp
+	goto_if_unset FLAG_SILVIO_REMATCH_DONE, ENPALE_LEAGUE_ARENA_OnTransition_HideUmbraChamp
+	clearflag FLAG_HIDE_ARENA_UMBRA_CHAMPION
+	end
+ENPALE_LEAGUE_ARENA_OnTransition_HideUmbraChamp::
+	setflag FLAG_HIDE_ARENA_UMBRA_CHAMPION
+	end
+ENPALE_LEAGUE_ARENA_OnTransition_RivalEra::
+	setflag FLAG_HIDE_ARENA_UMBRA_CHAMPION
+	goto_if_set FLAG_DEFEATED_RIVAL_CHAMPION, ENPALE_LEAGUE_ARENA_OnTransition_HideRivalChamp
+	clearflag FLAG_HIDE_ARENA_RIVAL_CHAMPION
+	end
+ENPALE_LEAGUE_ARENA_OnTransition_HideRivalChamp::
+	setflag FLAG_HIDE_ARENA_RIVAL_CHAMPION
 	end
 
 @ --- keep the existing OnFrame intro; the Champion scene is a COORD EVENT (set on the entry tile in Porymap) ---
 ENPALE_LEAGUE_ARENA_EventScript_ChampionTrigger::
 	lockall
-	goto_if_set FLAG_DEFEATED_ENPALE_CHAMP, ENPALE_LEAGUE_ARENA_EventScript_ChampionTrigger_End
+	goto_if_set FLAG_DEFEATED_ENPALE_CHAMP, ENPALE_LEAGUE_ARENA_UmbraChampionScene
 	compare VAR_ELITE_4_STATE, 4
 	goto_if_ne ENPALE_LEAGUE_ARENA_EventScript_ChampionTrigger_End
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerWalkIn
@@ -61,6 +78,7 @@ ENPALE_LEAGUE_ARENA_EventScript_ChampionTrigger_End::
 ENPALE_LEAGUE_ARENA_OnFrame:
 	map_script_2 VAR_DEWFORD_TOWN_STATE, 0, ENPALE_LEAGUE_ARENA_Intro
 	map_script_2 VAR_ELITE_4_STATE, 4, ENPALE_LEAGUE_ARENA_ChampionScene
+	map_script_2 VAR_ELITE_4_STATE, 5, ENPALE_LEAGUE_ARENA_UmbraChampionScene
 	.2byte 0
 
 ENPALE_LEAGUE_ARENA_Intro::
@@ -93,7 +111,11 @@ ENPALE_LEAGUE_ARENA_PostBattle::
 	waitstate
 	end
 
-	ENPALE_LEAGUE_ARENA_ChampionScene::
+ENPALE_LEAGUE_ARENA_ChampionScene::
+	goto_if_unset FLAG_DEFEATED_ENPALE_CHAMP, ENPALE_LEAGUE_ARENA_ChampionScene_Continue
+	setvar VAR_ELITE_4_STATE, 5
+	goto ENPALE_LEAGUE_ARENA_UmbraChampionScene
+ENPALE_LEAGUE_ARENA_ChampionScene_Continue::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerWalkIn
 	waitmovement 0
@@ -351,3 +373,245 @@ ENPALE_LEAGUE_ARENA_Text_HemlockHoF:
 	.string "EARNED this. Every step.\p"
 	.string "Come. Let us record your team in the\n"
 	.string "HALL OF FAME, where it belongs.$"	
+
+ENPALE_LEAGUE_ARENA_UmbraChampionScene::
+	goto_if_set FLAG_FINAL_E4_UNLOCKED, ENPALE_LEAGUE_ARENA_RivalChampionScene
+	goto_if_set FLAG_DEFEATED_UMBRA_REMATCH, ENPALE_LEAGUE_ARENA_UmbraChampionScene_End
+	goto_if_unset FLAG_SILVIO_REMATCH_DONE, ENPALE_LEAGUE_ARENA_Debug_Silvio
+	goto_if_unset FLAG_DEFEATED_E4_FIRE_REMATCH, ENPALE_LEAGUE_ARENA_Debug_Fire
+	goto_if_unset FLAG_DEFEATED_E4_WATER_REMATCH, ENPALE_LEAGUE_ARENA_Debug_Water
+	goto_if_unset FLAG_DEFEATED_E4_GRASS_REMATCH, ENPALE_LEAGUE_ARENA_Debug_Grass
+	goto_if_unset FLAG_DEFEATED_E4_BUG_REMATCH, ENPALE_LEAGUE_ARENA_Debug_Bug
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerWalkIn
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerFace
+	waitmovement 0
+	applymovement LOCALID_UMBRA_CHAMPION, ENPALE_LEAGUE_ARENA_Movement_BrutusFace
+	waitmovement 0
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanToBrutus
+	waitmovement 0
+	setspeaker ENPALE_LEAGUE_ARENA_Text_UmbraChampionName
+	msgbox ENPALE_LEAGUE_ARENA_Text_UmbraChampionPreBattle, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanBackToPlayer
+	waitmovement 0
+	special RemoveCameraObject
+	playbgm MUS_ENPALE_UMBRA, TRUE
+	trainerbattle_no_intro TRAINER_UMBRA_REMATCH, ENPALE_LEAGUE_ARENA_Text_Dummy
+	goto ENPALE_LEAGUE_ARENA_UmbraChampionAftermath
+	end
+
+ENPALE_LEAGUE_ARENA_Debug_Silvio::
+	msgbox ENPALE_LEAGUE_ARENA_Text_DebugSilvio, MSGBOX_DEFAULT
+	end
+ENPALE_LEAGUE_ARENA_Debug_Fire::
+	msgbox ENPALE_LEAGUE_ARENA_Text_DebugFire, MSGBOX_DEFAULT
+	end
+ENPALE_LEAGUE_ARENA_Debug_Water::
+	msgbox ENPALE_LEAGUE_ARENA_Text_DebugWater, MSGBOX_DEFAULT
+	end
+ENPALE_LEAGUE_ARENA_Debug_Grass::
+	msgbox ENPALE_LEAGUE_ARENA_Text_DebugGrass, MSGBOX_DEFAULT
+	end
+ENPALE_LEAGUE_ARENA_Debug_Bug::
+	msgbox ENPALE_LEAGUE_ARENA_Text_DebugBug, MSGBOX_DEFAULT
+	end
+
+ENPALE_LEAGUE_ARENA_UmbraChampionScene_End::
+	end
+	
+ENPALE_LEAGUE_ARENA_EventScript_UmbraChampionTrigger::
+	lockall
+	goto_if_set FLAG_FINAL_E4_UNLOCKED, ENPALE_LEAGUE_ARENA_RivalChampionScene
+	goto_if_set FLAG_DEFEATED_UMBRA_REMATCH, ENPALE_LEAGUE_ARENA_EventScript_UmbraChampionTrigger_End
+	goto_if_unset FLAG_SILVIO_REMATCH_DONE, ENPALE_LEAGUE_ARENA_EventScript_UmbraChampionTrigger_End
+	goto_if_unset FLAG_DEFEATED_E4_FIRE_REMATCH, ENPALE_LEAGUE_ARENA_EventScript_UmbraChampionTrigger_End
+	goto_if_unset FLAG_DEFEATED_E4_WATER_REMATCH, ENPALE_LEAGUE_ARENA_EventScript_UmbraChampionTrigger_End
+	goto_if_unset FLAG_DEFEATED_E4_GRASS_REMATCH, ENPALE_LEAGUE_ARENA_EventScript_UmbraChampionTrigger_End
+	goto_if_unset FLAG_DEFEATED_E4_BUG_REMATCH, ENPALE_LEAGUE_ARENA_EventScript_UmbraChampionTrigger_End
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerWalkIn
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerFace
+	waitmovement 0
+	applymovement LOCALID_UMBRA_CHAMPION, ENPALE_LEAGUE_ARENA_Movement_BrutusFace
+	waitmovement 0
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanToBrutus
+	waitmovement 0
+	setspeaker ENPALE_LEAGUE_ARENA_Text_UmbraChampionName
+	msgbox ENPALE_LEAGUE_ARENA_Text_UmbraChampionPreBattle, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanBackToPlayer
+	waitmovement 0
+	special RemoveCameraObject
+	playbgm MUS_ENPALE_UMBRA, TRUE
+	trainerbattle_no_intro TRAINER_UMBRA_REMATCH, ENPALE_LEAGUE_ARENA_Text_Dummy
+	goto ENPALE_LEAGUE_ARENA_UmbraChampionAftermath
+	end
+
+ENPALE_LEAGUE_ARENA_EventScript_UmbraChampionTrigger_End::
+	releaseall
+	end	
+
+ENPALE_LEAGUE_ARENA_UmbraChampionAftermath::
+	setflag FLAG_DEFEATED_UMBRA_REMATCH
+	special DrawWholeMapView
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanToBrutus
+	waitmovement 0
+	setspeaker ENPALE_LEAGUE_ARENA_Text_UmbraChampionName
+	msgbox ENPALE_LEAGUE_ARENA_Text_UmbraChampionDefeatSpeech, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_UMBRA_CHAMPION, ENPALE_LEAGUE_ARENA_Movement_UmbraChampionLeave
+	waitmovement 0
+	setflag FLAG_HIDE_ARENA_UMBRA_CHAMPION
+	removeobject LOCALID_UMBRA_CHAMPION
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanBackToPlayer
+	waitmovement 0
+	special RemoveCameraObject
+	delay 30
+	clearflag FLAG_HIDE_ARENA_HEMLOCK
+	addobject LOCALID_HEMLOCK
+	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerFaceDown
+	waitmovement 0
+	setspeaker ENPALE_LEAGUE_ARENA_Text_HemlockName
+	msgbox ENPALE_LEAGUE_ARENA_Text_HemlockUmbraChampionSpeech, MSGBOX_SIGN
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepRightFaceLeft
+	waitmovement 0
+	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepLeftBehind
+	waitmovement 0
+	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerToDoor
+	waitmovement 0
+	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
+	waitstate
+	end	
+
+ENPALE_LEAGUE_ARENA_Movement_UmbraChampionLeave::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+ENPALE_LEAGUE_ARENA_Text_UmbraChampionName:
+	.string "Umbra$"
+
+ENPALE_LEAGUE_ARENA_Text_UmbraChampionPreBattle:
+	.string "So we meet again, at the very top.\pLast time I called you a child, sent\nin your father's place. I was wrong\labout that. Wrong about a great deal\lsince.\pI won't apologize with words. Let me\ndo it the only way I know how.$"
+
+ENPALE_LEAGUE_ARENA_Text_UmbraChampionDefeat:
+	.string "…So it is.$"
+
+ENPALE_LEAGUE_ARENA_Text_UmbraChampionDefeatSpeech:
+	.string "I spent a long time believing strength\nwas something passed down - Brigham's\lword, Brutus's shadow, mine to hand off\lin turn.\pYou're proof that isn't true.\pThe League is yours today. Carry it\nbetter than either of us did.$"
+
+ENPALE_LEAGUE_ARENA_Text_HemlockUmbraChampionSpeech:
+	.string "In all my years, I have never heard\nUmbra speak like that.\pWhatever weight he's carried, you've\ngiven him something to set against it.\pCome. Let us record this team in the\nHALL OF FAME - a victory earned twice\lover.$"	
+
+ENPALE_LEAGUE_ARENA_Text_DebugSilvio:
+	.string "MISSING: Silvio rematch$"
+ENPALE_LEAGUE_ARENA_Text_DebugFire:
+	.string "MISSING: Fire E4 rematch$"
+ENPALE_LEAGUE_ARENA_Text_DebugWater:
+	.string "MISSING: Water E4 rematch$"
+ENPALE_LEAGUE_ARENA_Text_DebugGrass:
+	.string "MISSING: Grass E4 rematch$"
+ENPALE_LEAGUE_ARENA_Text_DebugBug:
+	.string "MISSING: Bug E4 rematch$"	
+
+ENPALE_LEAGUE_ARENA_RivalChampionScene::
+	goto_if_set FLAG_DEFEATED_RIVAL_CHAMPION, ENPALE_LEAGUE_ARENA_RivalChampionScene_End
+	goto_if_unset FLAG_DEFEATED_E4_FIRE_FINAL, ENPALE_LEAGUE_ARENA_RivalChampionScene_End
+	goto_if_unset FLAG_DEFEATED_E4_WATER_FINAL, ENPALE_LEAGUE_ARENA_RivalChampionScene_End
+	goto_if_unset FLAG_DEFEATED_E4_GRASS_FINAL, ENPALE_LEAGUE_ARENA_RivalChampionScene_End
+	goto_if_unset FLAG_DEFEATED_E4_BUG_FINAL, ENPALE_LEAGUE_ARENA_RivalChampionScene_End
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerWalkIn
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerFace
+	waitmovement 0
+	applymovement LOCALID_RIVAL_CHAMPION, ENPALE_LEAGUE_ARENA_Movement_BrutusFace
+	waitmovement 0
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanToBrutus
+	waitmovement 0
+	setspeaker ENPALE_LEAGUE_ARENA_Text_RivalChampionName
+	msgbox ENPALE_LEAGUE_ARENA_Text_RivalChampionPreBattle, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanBackToPlayer
+	waitmovement 0
+	special RemoveCameraObject
+	playbgm MUS_ENPALE_UMBRA, TRUE
+	trainerbattle_no_intro TRAINER_RIVALCF_CHAMP, ENPALE_LEAGUE_ARENA_Text_Dummy
+	goto ENPALE_LEAGUE_ARENA_RivalChampionAftermath
+	end
+	
+ENPALE_LEAGUE_ARENA_RivalChampionScene_End::
+	releaseall
+	end
+
+ENPALE_LEAGUE_ARENA_RivalChampionAftermath::
+	setflag FLAG_DEFEATED_RIVAL_CHAMPION
+	special DrawWholeMapView
+	special SpawnCameraObject
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanToBrutus
+	waitmovement 0
+	setspeaker ENPALE_LEAGUE_ARENA_Text_RivalChampionName
+	msgbox ENPALE_LEAGUE_ARENA_Text_RivalChampionDefeatSpeech, MSGBOX_SIGN
+	closemessage
+	applymovement LOCALID_RIVAL_CHAMPION, ENPALE_LEAGUE_ARENA_Movement_UmbraChampionLeave
+	waitmovement 0
+	setflag FLAG_HIDE_ARENA_RIVAL_CHAMPION
+	removeobject LOCALID_RIVAL_CHAMPION
+	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanBackToPlayer
+	waitmovement 0
+	special RemoveCameraObject
+	delay 30
+@ Hemlock closes the other two tiers; reusing him keeps the trilogy consistent.
+@ Swap this block for the real ending sequence when you build it.
+	clearflag FLAG_HIDE_ARENA_HEMLOCK
+	addobject LOCALID_HEMLOCK
+	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerFaceDown
+	waitmovement 0
+	setspeaker ENPALE_LEAGUE_ARENA_Text_HemlockName
+	msgbox ENPALE_LEAGUE_ARENA_Text_HemlockRivalChampionSpeech, MSGBOX_SIGN
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepRightFaceLeft
+	waitmovement 0
+	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepLeftBehind
+	waitmovement 0
+	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
+	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerToDoor
+	waitmovement 0
+	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
+	waitstate
+	end
+
+
+
+@ ---------- EDIT 5: text (append to the text section) ----------
+
+ENPALE_LEAGUE_ARENA_Text_RivalChampionName:
+	.string "RIVAL$"  @ TODO rival's name
+
+ENPALE_LEAGUE_ARENA_Text_RivalChampionPreBattle:
+	.string "Let's go!$"  @ TODO
+
+ENPALE_LEAGUE_ARENA_Text_RivalChampionDefeatSpeech:
+	.string "What!?$"  @ TODO
+
+ENPALE_LEAGUE_ARENA_Text_HemlockRivalChampionSpeech:
+	.string "C'mon.$"  @ TODO		

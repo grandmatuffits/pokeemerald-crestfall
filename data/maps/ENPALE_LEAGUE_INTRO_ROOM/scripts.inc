@@ -25,6 +25,7 @@ ENPALE_LEAGUE_INTRO_ROOM_Intro::
 	closemessage
 	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkOut
 	waitmovement 0
+	setflag FLAG_HIDE_BRUTUS_INTRO
 	removeobject LOCALID_BRUTUS
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_INTRO_ROOM_Movement_PlayerWalkSouth
 	waitmovement 0
@@ -54,12 +55,9 @@ ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkOut::
 	step_end
 
 ENPALE_LEAGUE_INTRO_ROOM_Movement_PlayerWalkSouth::
-	walk_down
-	walk_right
 	walk_right
 	walk_up
 	walk_up
-	walk_left
 	walk_up
 	walk_up
 	walk_up
