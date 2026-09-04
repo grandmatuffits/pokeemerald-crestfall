@@ -5932,7 +5932,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Celio = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Agatha = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_PINK,
+    .paletteTag = OBJ_EVENT_PAL_TAG_CYNTHIA,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,

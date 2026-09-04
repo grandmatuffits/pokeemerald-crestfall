@@ -594,6 +594,7 @@ const u16 gObjectEventPic_TrainerTowerDude[] = INCGFX_U16("graphics/object_event
 const u16 gObjectEventPic_RocketM[] = INCGFX_U16("graphics/object_events/pics/people/rocket_m.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Celio[] = INCGFX_U16("graphics/object_events/pics/people/celio.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Agatha[] = INCGFX_U16("graphics/object_events/pics/people/agatha.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_Cynthia[] = INCGFX_U16("graphics/object_events/palettes/cynthia.pal", ".gbapal");
 const u16 gObjectEventPic_Misty[] = INCGFX_U16("graphics/object_events/pics/people/misty.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Lance[] = INCGFX_U16("graphics/object_events/pics/people/lance.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_GBAKid[] = INCGFX_U16("graphics/object_events/pics/people/gba_kid.png", ".4bpp", "-mwidth 2 -mheight 4");

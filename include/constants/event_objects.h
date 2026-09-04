@@ -627,6 +627,7 @@ enum
 #define OBJ_EVENT_PAL_TAG_ROSS                    0x117E
 #define OBJ_EVENT_PAL_TAG_REDDING                 0x117F
 #define OBJ_EVENT_PAL_TAG_BLUTO                   0x1183
+#define OBJ_EVENT_PAL_TAG_CYNTHIA                 0x1184
 #define OBJ_EVENT_PAL_TAG_GRETLE                  0x1181
 #define OBJ_EVENT_PAL_TAG_RICK                    0x1182
 #endif //OW_FOLLOWERS_POKEBALLS
