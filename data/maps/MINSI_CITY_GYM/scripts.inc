@@ -31,6 +31,10 @@ MINSI_CITY_GYM_EventScript_RossRematch::
 	trainerbattle_no_intro TRAINER_ROSS_REMATCH, MINSI_CITY_GYM_Text_RossRematchDefeat
 	msgbox MINSI_CITY_GYM_Text_RossRematchPostBattle, MSGBOX_DEFAULT
 	special InitEnpaleBeastRoamers
+	setseenmon SPECIES_COBALION
+	setseenmon SPECIES_TERRAKION
+	setseenmon SPECIES_VIRIZION
+	msgbox MINSI_CITY_GYM_Text_RossBeasts, MSGBOX_DEFAULT
 	msgbox MINSI_CITY_GYM_Text_RossStoneGiven, MSGBOX_DEFAULT
 	giveitem ITEM_GENGARITE
 	goto_if_eq VAR_RESULT, FALSE, MINSI_CITY_GYM_EventScript_RossRematchEnd
@@ -105,3 +109,13 @@ MINSI_CITY_GYM_Text_RossRematchRepeat:
 
 MINSI_CITY_GYM_Text_RossStoneGiven:
 	.string "Also, you can have this.$"	
+
+MINSI_CITY_GYM_Text_RossBeasts:
+	.string "One more thing. Three POKéMON came\n"
+	.string "over the border after whatever the\l"
+	.string "ELDERS did out east.\p"
+	.string "COBALION, TERRAKION, VIRIZION. They\n"
+	.string "haven't stopped moving since.\p"
+	.string "I've filed what we know with your\n"
+	.string "POKéDEX. If they surface anywhere,\l"
+	.string "you'll see it on the area map.$"

@@ -350,7 +350,6 @@ LENOX_TOWN_Mart_Merchant4:
 	.2byte ITEM_MEOWSTICITE
 	.2byte ITEM_FALINKSITE
 	.2byte ITEM_HAWLUCHANITE
-	.2byte ITEM_DELPHOXITE
 	.2byte ITEM_NONE
 	pokemartlistend
 

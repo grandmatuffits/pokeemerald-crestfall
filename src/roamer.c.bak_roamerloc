@@ -7,7 +7,7 @@
 
 // Despite having a variable to track it, the roamer is
 // hard-coded to only ever be in map group 0
-#define ROAMER_MAP_GROUP MAP_GROUP(MAP_ENPALE_ROUTE_1)
+#define ROAMER_MAP_GROUP 0
 
 enum
 {
@@ -17,6 +17,7 @@ enum
 
 #define ROAMER(index) (&gSaveBlock1Ptr->roamer[index])
 EWRAM_DATA static u8 sLocationHistory[ROAMER_COUNT][3][2] = {0};
+EWRAM_DATA static u8 sRoamerLocation[ROAMER_COUNT][2] = {0};
 EWRAM_DATA u8 gEncounteredRoamerIndex = 0;
 
 #define ___ MAP_NUM(MAP_UNDEFINED) // For empty spots in the location table
@@ -35,26 +36,26 @@ EWRAM_DATA u8 gEncounteredRoamerIndex = 0;
 //         from that map when it lands there.
 static const u8 sRoamerLocations[][6] =
 {
-    { MAP_NUM(MAP_ENPALE_ROUTE_1), MAP_NUM(MAP_ENPALE_ROUTE_17), MAP_NUM(MAP_ENPALE_ROUTE_20), ___, ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_2), MAP_NUM(MAP_ENPALE_ROUTE_3), MAP_NUM(MAP_ENPALE_ROUTE_7), MAP_NUM(MAP_ENPALE_ROUTE_8), ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_3), MAP_NUM(MAP_ENPALE_ROUTE_2), MAP_NUM(MAP_ENPALE_ROUTE_18), ___, ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_4), MAP_NUM(MAP_ENPALE_ROUTE_5), ___, ___, ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_5), MAP_NUM(MAP_ENPALE_ROUTE_4), MAP_NUM(MAP_ENPALE_ROUTE_6), MAP_NUM(MAP_ENPALE_ROUTE_18), MAP_NUM(MAP_ENPALE_ROUTE_19), ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_6), MAP_NUM(MAP_ENPALE_ROUTE_5), MAP_NUM(MAP_ENPALE_ROUTE_18), MAP_NUM(MAP_ENPALE_ROUTE_19), ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_7), MAP_NUM(MAP_ENPALE_ROUTE_2), MAP_NUM(MAP_ENPALE_ROUTE_8), MAP_NUM(MAP_ENPALE_ROUTE_12), ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_8), MAP_NUM(MAP_ENPALE_ROUTE_2), MAP_NUM(MAP_ENPALE_ROUTE_7), ___, ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_9), MAP_NUM(MAP_ENPALE_ROUTE_10), MAP_NUM(MAP_ENPALE_ROUTE_13), MAP_NUM(MAP_ENPALE_ROUTE_17), ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_10), MAP_NUM(MAP_ENPALE_ROUTE_9), MAP_NUM(MAP_ENPALE_ROUTE_11), MAP_NUM(MAP_ENPALE_ROUTE_13), ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_11), MAP_NUM(MAP_ENPALE_ROUTE_10), MAP_NUM(MAP_ENPALE_ROUTE_12), ___, ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_12), MAP_NUM(MAP_ENPALE_ROUTE_11), MAP_NUM(MAP_ENPALE_ROUTE_7), ___, ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_13), MAP_NUM(MAP_ENPALE_ROUTE_9), MAP_NUM(MAP_ENPALE_ROUTE_10), MAP_NUM(MAP_ENPALE_ROUTE_14), ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_14), MAP_NUM(MAP_ENPALE_ROUTE_13), MAP_NUM(MAP_ENPALE_ROUTE_15), ___, ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_15), MAP_NUM(MAP_ENPALE_ROUTE_14), MAP_NUM(MAP_ENPALE_ROUTE_16), ___, ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_16), MAP_NUM(MAP_ENPALE_ROUTE_15), MAP_NUM(MAP_ENPALE_ROUTE_17), ___, ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_17), MAP_NUM(MAP_ENPALE_ROUTE_1), MAP_NUM(MAP_ENPALE_ROUTE_9), MAP_NUM(MAP_ENPALE_ROUTE_16), MAP_NUM(MAP_ENPALE_ROUTE_20), ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_18), MAP_NUM(MAP_ENPALE_ROUTE_3), MAP_NUM(MAP_ENPALE_ROUTE_5), MAP_NUM(MAP_ENPALE_ROUTE_6), MAP_NUM(MAP_ENPALE_ROUTE_19), ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_19), MAP_NUM(MAP_ENPALE_ROUTE_5), MAP_NUM(MAP_ENPALE_ROUTE_6), MAP_NUM(MAP_ENPALE_ROUTE_18), ___, ___ },
-    { MAP_NUM(MAP_ENPALE_ROUTE_20), MAP_NUM(MAP_ENPALE_ROUTE_1), MAP_NUM(MAP_ENPALE_ROUTE_17), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE110), MAP_NUM(MAP_ROUTE111), MAP_NUM(MAP_ROUTE117), MAP_NUM(MAP_ROUTE118), MAP_NUM(MAP_ROUTE134), ___ },
+    { MAP_NUM(MAP_ROUTE111), MAP_NUM(MAP_ROUTE110), MAP_NUM(MAP_ROUTE117), MAP_NUM(MAP_ROUTE118), ___, ___ },
+    { MAP_NUM(MAP_ROUTE117), MAP_NUM(MAP_ROUTE111), MAP_NUM(MAP_ROUTE110), MAP_NUM(MAP_ROUTE118), ___, ___ },
+    { MAP_NUM(MAP_ROUTE118), MAP_NUM(MAP_ROUTE117), MAP_NUM(MAP_ROUTE110), MAP_NUM(MAP_ROUTE111), MAP_NUM(MAP_ROUTE119), MAP_NUM(MAP_ROUTE123) },
+    { MAP_NUM(MAP_ROUTE119), MAP_NUM(MAP_ROUTE118), MAP_NUM(MAP_ROUTE120), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE120), MAP_NUM(MAP_ROUTE119), MAP_NUM(MAP_ROUTE121), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE121), MAP_NUM(MAP_ROUTE120), MAP_NUM(MAP_ROUTE122), MAP_NUM(MAP_ROUTE123), ___, ___ },
+    { MAP_NUM(MAP_ROUTE122), MAP_NUM(MAP_ROUTE121), MAP_NUM(MAP_ROUTE123), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE123), MAP_NUM(MAP_ROUTE122), MAP_NUM(MAP_ROUTE118), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE124), MAP_NUM(MAP_ROUTE121), MAP_NUM(MAP_ROUTE125), MAP_NUM(MAP_ROUTE126), ___, ___ },
+    { MAP_NUM(MAP_ROUTE125), MAP_NUM(MAP_ROUTE124), MAP_NUM(MAP_ROUTE127), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE126), MAP_NUM(MAP_ROUTE124), MAP_NUM(MAP_ROUTE127), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE127), MAP_NUM(MAP_ROUTE125), MAP_NUM(MAP_ROUTE126), MAP_NUM(MAP_ROUTE128), ___, ___ },
+    { MAP_NUM(MAP_ROUTE128), MAP_NUM(MAP_ROUTE127), MAP_NUM(MAP_ROUTE129), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE129), MAP_NUM(MAP_ROUTE128), MAP_NUM(MAP_ROUTE130), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE130), MAP_NUM(MAP_ROUTE129), MAP_NUM(MAP_ROUTE131), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE131), MAP_NUM(MAP_ROUTE130), MAP_NUM(MAP_ROUTE132), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE132), MAP_NUM(MAP_ROUTE131), MAP_NUM(MAP_ROUTE133), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE133), MAP_NUM(MAP_ROUTE132), MAP_NUM(MAP_ROUTE134), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE134), MAP_NUM(MAP_ROUTE133), MAP_NUM(MAP_ROUTE110), ___, ___, ___ },
     { ___, ___, ___, ___, ___, ___ },
 };
 
@@ -120,8 +121,8 @@ static void CreateInitialRoamerMon(u8 index, enum Species species, u8 level)
     ROAMER(index)->tough = GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_TOUGH);
     ROAMER(index)->shiny = GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_IS_SHINY);
     ROAMER(index)->active = TRUE;
-    ROAMER(index)->mapGroup = ROAMER_MAP_GROUP;
-    ROAMER(index)->mapNum = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
+    sRoamerLocation[index][MAP_GRP] = ROAMER_MAP_GROUP;
+    sRoamerLocation[index][MAP_NUM] = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
 }
 
 static u8 GetFirstInactiveRoamerIndex(void)
@@ -191,20 +192,20 @@ void RoamerMoveToOtherLocationSet(u32 roamerIndex)
     if (!ROAMER(roamerIndex)->active)
         return;
 
-    ROAMER(roamerIndex)->mapGroup = ROAMER_MAP_GROUP;
+    sRoamerLocation[roamerIndex][MAP_GRP] = ROAMER_MAP_GROUP;
 
     // Choose a location set that starts with a map
     // different from the roamer's current map
     do
     {
         mapNum = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
-        if (ROAMER(roamerIndex)->mapNum != mapNum)
+        if (sRoamerLocation[roamerIndex][MAP_NUM] != mapNum)
         {
-            ROAMER(roamerIndex)->mapNum = mapNum;
+            sRoamerLocation[roamerIndex][MAP_NUM] = mapNum;
             return;
         }
-    } while (ROAMER(roamerIndex)->mapNum == mapNum);
-    ROAMER(roamerIndex)->mapNum = mapNum;
+    } while (sRoamerLocation[roamerIndex][MAP_NUM] == mapNum);
+    sRoamerLocation[roamerIndex][MAP_NUM] = mapNum;
 }
 
 void RoamerMove(u32 roamerIndex)
@@ -223,7 +224,7 @@ void RoamerMove(u32 roamerIndex)
         while (locSet < NUM_LOCATION_SETS)
         {
             // Find the location set that starts with the roamer's current map
-            if (ROAMER(roamerIndex)->mapNum == sRoamerLocations[locSet][0])
+            if (sRoamerLocation[roamerIndex][MAP_NUM] == sRoamerLocations[locSet][0])
             {
                 u8 mapNum;
                 // Choose a new map (excluding the first) within this set
@@ -234,7 +235,7 @@ void RoamerMove(u32 roamerIndex)
                 } while ((sLocationHistory[roamerIndex][2][MAP_GRP] == ROAMER_MAP_GROUP
                         && sLocationHistory[roamerIndex][2][MAP_NUM] == mapNum)
                         || mapNum == MAP_NUM(MAP_UNDEFINED));
-                ROAMER(roamerIndex)->mapNum = mapNum;
+                sRoamerLocation[roamerIndex][MAP_NUM] = mapNum;
                 return;
             }
             locSet++;
@@ -244,7 +245,7 @@ void RoamerMove(u32 roamerIndex)
 
 bool8 IsRoamerAt(u32 roamerIndex, u8 mapGroup, u8 mapNum)
 {
-    if (ROAMER(roamerIndex)->active && mapGroup == ROAMER(roamerIndex)->mapGroup && mapNum == ROAMER(roamerIndex)->mapNum)
+    if (ROAMER(roamerIndex)->active && mapGroup == sRoamerLocation[roamerIndex][MAP_GRP] && mapNum == sRoamerLocation[roamerIndex][MAP_NUM])
         return TRUE;
     else
         return FALSE;
@@ -300,6 +301,6 @@ void SetRoamerInactive(u32 roamerIndex)
 
 void GetRoamerLocation(u32 roamerIndex, u8 *mapGroup, u8 *mapNum)
 {
-    *mapGroup = ROAMER(roamerIndex)->mapGroup;
-    *mapNum = ROAMER(roamerIndex)->mapNum;
+    *mapGroup = sRoamerLocation[roamerIndex][MAP_GRP];
+    *mapNum = sRoamerLocation[roamerIndex][MAP_NUM];
 }

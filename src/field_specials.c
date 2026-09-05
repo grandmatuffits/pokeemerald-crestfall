@@ -4209,6 +4209,15 @@ u16 HasRegiTrioInParty(void)
     return (rock && ice && steel);
 }
 
+u16 DebugRoamerReport(void)
+{
+    VarSet(VAR_TEMP_1, gSaveBlock1Ptr->roamer[0].active);
+    VarSet(VAR_TEMP_2, gSaveBlock1Ptr->roamer[0].mapNum);
+    VarSet(VAR_TEMP_3, gSaveBlock1Ptr->roamer[0].species);
+    VarSet(VAR_TEMP_4, gSaveBlock1Ptr->roamer[0].mapGroup);
+    return gSaveBlock1Ptr->roamer[0].mapNum;
+}
+
 u16 GetNumFansOfPlayerInTrainerFanClub(void)
 {
     u8 i;
