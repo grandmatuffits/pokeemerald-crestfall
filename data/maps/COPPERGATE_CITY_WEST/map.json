@@ -15,12 +15,20 @@
   "connections": [
     {
       "map": "MAP_COPPERGATE_CITY",
-      "offset": 11,
+      "offset": 2,
       "direction": "right"
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_ZONE_ENTRANCE",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

@@ -540,9 +540,7 @@ MINSI_LAB_EventScript_HemlockRepeat::
 	faceplayer
 	setspeaker MINSI_LAB_Text_HemlockName
 	goto_if_set FLAG_MINSI_NATDEX_RECEIVED, MINSI_LAB_EventScript_HemlockOakCheck
-	special GetCaughtPokedexCount
-	compare VAR_RESULT, 100
-	goto_if_ge MINSI_LAB_EventScript_HemlockAwardDex
+	goto_if_set FLAG_SYS_GAME_CLEAR, MINSI_LAB_EventScript_HemlockAwardDex
 	goto MINSI_LAB_EventScript_HemlockOakCheck
 
 MINSI_LAB_EventScript_HemlockOakCheck::
@@ -587,12 +585,9 @@ MINSI_LAB_EventScript_HemlockPostDex::
 
 
 MINSI_LAB_Text_HemlockMilestone:
-	.string "Let me see that POKéDEX a moment.\p"
-	.string "…One hundred species. You've filled\n"
-	.string "these pages with the living ENPALE,\l"
-	.string "corner to corner.\p"
-	.string "That is not a number most trainers\n"
-	.string "ever reach.$"
+	.string "So the LEAGUE has a new CHAMPION,\n"
+	.string "and it's you.\p"
+	.string "Let me see that POKéDEX a moment.$"
 
 MINSI_LAB_Text_HemlockAwarded:
 	.string "I've upgraded it to NATIONAL mode.\p"

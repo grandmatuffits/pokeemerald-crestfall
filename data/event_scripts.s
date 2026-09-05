@@ -1994,3 +1994,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/WALLAR_BELL_TOWER_TOP/scripts.inc"
 
 	.include "data/maps/FORGOTTEN_TOMB/scripts.inc"
+
+	.include "data/maps/SAFARI_ZONE_ENTRANCE/scripts.inc"
+
+	.include "data/maps/SAFARI_ZONE_AREA_1/scripts.inc"

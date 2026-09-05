@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_COPPERGATE_CITY_WEST",
-      "offset": -11,
+      "offset": -2,
       "direction": "left"
     }
   ],
@@ -36,7 +36,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MINSI_CITY_EventScript_Machop",
-      "flag": "0"
+      "flag": "FLAG_MINSI_NATDEX_RECEIVED"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POLIWRATH",
@@ -49,7 +49,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MINSI_CITY_EventScript_Poliwrath",
-      "flag": "0"
+      "flag": "FLAG_MINSI_NATDEX_RECEIVED"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
@@ -172,7 +172,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "COPPERGATE_CITY_EventScript_Policeman",
-      "flag": "0"
+      "flag": "FLAG_MINSI_NATDEX_RECEIVED"
     }
   ],
   "warp_events": [

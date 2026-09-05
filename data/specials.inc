@@ -649,4 +649,12 @@ gSpecials::
 	def_special CheckCaughtSpecies
 	def_special InitEnpaleBeastRoamers
 	def_special HasRegiTrioInParty
-    def_special DebugRoamerReport
+	def_special CanFulfillSafariBounty
+	def_special ValidateSafariBountyMon
+	def_special RollAllSafariBounties
+	def_special RerollSafariBounty
+	def_special SafariBountyPartyHasSpare
+	def_special BufferSafariBountyMonName
+	def_special TurnInSafariBounty
+	def_special BufferSafariBountyText
+	def_special GetMegaVoucherStone

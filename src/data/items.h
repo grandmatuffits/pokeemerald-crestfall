@@ -15917,6 +15917,21 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_BikeVoucher,
         .iconPalette = gItemIconPalette_BikeVoucher,
     },
+    [ITEM_MEGA_VOUCHER] =
+    {
+        .name = ITEM_NAME("Mega Voucher"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A voucher good for\n"
+            "one Mega Stone at\n"
+            "the SAFARI ZONE."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_BikeVoucher,
+        .iconPalette = gItemIconPalette_BikeVoucher,
+    },
 };
 
 #undef ITEM_NAME

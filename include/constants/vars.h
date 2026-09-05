@@ -272,9 +272,10 @@
 #define VAR_MIRAVEIL_ROULETTE_WINS                       0x40FA
 #define VAR_MIRAVEIL_HMS_CLAIMED                         0x40FB
 #define VAR_MIRAVEIL_DOORMAN_TRIGGER                     0x40FC
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_SAFARI_BOUNTY_1                              0x40FD  // was VAR_UNUSED_0x40FD
+#define VAR_SAFARI_BOUNTY_2                              0x40FE  // was VAR_UNUSED_0x40FE
+#define VAR_SAFARI_BOUNTY_3                              0x40FF  // was VAR_UNUSED_0x40FF
+#define VAR_SAFARI_BOUNTY_COUNT                          0x40DB  // was VAR_UNUSED_0x40DB
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

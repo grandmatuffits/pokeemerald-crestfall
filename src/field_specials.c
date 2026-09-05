@@ -4209,13 +4209,224 @@ u16 HasRegiTrioInParty(void)
     return (rock && ice && steel);
 }
 
-u16 DebugRoamerReport(void)
+#define BOUNTY_SPECIES  0
+#define BOUNTY_TYPE     1
+#define BOUNTY_LEVEL    2
+
+struct SafariBounty
 {
-    VarSet(VAR_TEMP_1, gSaveBlock1Ptr->roamer[0].active);
-    VarSet(VAR_TEMP_2, gSaveBlock1Ptr->roamer[0].mapNum);
-    VarSet(VAR_TEMP_3, gSaveBlock1Ptr->roamer[0].species);
-    VarSet(VAR_TEMP_4, gSaveBlock1Ptr->roamer[0].mapGroup);
-    return gSaveBlock1Ptr->roamer[0].mapNum;
+    u8 kind;
+    u16 value;
+};
+
+static const struct SafariBounty sSafariBounties[] =
+{
+    { BOUNTY_LEVEL,   30 },
+    { BOUNTY_LEVEL,   35 },
+    { BOUNTY_TYPE,    TYPE_FLYING },
+    { BOUNTY_TYPE,    TYPE_GRASS },
+    { BOUNTY_TYPE,    TYPE_FIGHTING },
+    { BOUNTY_TYPE,    TYPE_NORMAL },
+    { BOUNTY_TYPE,    TYPE_BUG },
+    { BOUNTY_SPECIES, SPECIES_PIDGEY },
+    { BOUNTY_SPECIES, SPECIES_MANKEY },
+    { BOUNTY_SPECIES, SPECIES_SKIDDO },
+};
+
+static const u16 sSafariBountyRewards[] =
+{
+    ITEM_NUGGET, ITEM_BIG_PEARL, ITEM_STAR_PIECE, ITEM_BIG_MUSHROOM,
+    ITEM_PEARL, ITEM_STARDUST, ITEM_TINY_MUSHROOM,
+    ITEM_HEART_SCALE, ITEM_HEART_SCALE, ITEM_HEART_SCALE,
+};
+
+static bool8 MonMatchesBounty(struct Pokemon *mon, const struct SafariBounty *b)
+{
+    u32 species;
+
+    if (GetMonData(mon, MON_DATA_IS_EGG, NULL))
+        return FALSE;
+    if (GetMonData(mon, MON_DATA_POKEBALL, NULL) != ITEM_SAFARI_BALL)
+        return FALSE;
+
+    species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+
+    switch (b->kind)
+    {
+    case BOUNTY_SPECIES:
+        return species == b->value;
+    case BOUNTY_TYPE:
+        return GetSpeciesType(species, 0) == b->value
+            || GetSpeciesType(species, 1) == b->value;
+    case BOUNTY_LEVEL:
+        return GetMonData(mon, MON_DATA_LEVEL, NULL) >= b->value;
+    }
+    return FALSE;
+}
+
+// VAR_0x8004 = which slot (0-2). Returns TRUE if any party mon qualifies.
+u16 CanFulfillSafariBounty(void)
+{
+    u16 slots[3] = { VarGet(VAR_SAFARI_BOUNTY_1), VarGet(VAR_SAFARI_BOUNTY_2), VarGet(VAR_SAFARI_BOUNTY_3) };
+    const struct SafariBounty *b = &sSafariBounties[slots[gSpecialVar_0x8004]];
+    u32 i;
+
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        if (MonMatchesBounty(&gParties[B_TRAINER_PLAYER][i], b))
+            return TRUE;
+    }
+    return FALSE;
+}
+
+// VAR_0x8004 = bounty slot, VAR_0x8005 = chosen party index (from ChoosePartyMon).
+// Returns TRUE if the chosen mon is valid for that bounty.
+u16 ValidateSafariBountyMon(void)
+{
+    u16 slots[3] = { VarGet(VAR_SAFARI_BOUNTY_1), VarGet(VAR_SAFARI_BOUNTY_2), VarGet(VAR_SAFARI_BOUNTY_3) };
+    const struct SafariBounty *b = &sSafariBounties[slots[gSpecialVar_0x8004]];
+
+    if (gSpecialVar_0x8005 >= gPartiesCount[B_TRAINER_PLAYER])
+        return FALSE;
+    return MonMatchesBounty(&gParties[B_TRAINER_PLAYER][gSpecialVar_0x8005], b);
+}
+// Rolls all three from scratch. Call once when the board is first opened.
+void RollAllSafariBounties(void)
+{
+    u16 a, b, c;
+    u32 n = ARRAY_COUNT(sSafariBounties);
+
+    a = Random() % n;
+    do { b = Random() % n; } while (b == a);
+    do { c = Random() % n; } while (c == a || c == b);
+
+    VarSet(VAR_SAFARI_BOUNTY_1, a);
+    VarSet(VAR_SAFARI_BOUNTY_2, b);
+    VarSet(VAR_SAFARI_BOUNTY_3, c);
+}
+
+// VAR_0x8004 = slot to reroll (0-2). Avoids duplicating the other two.
+void RerollSafariBounty(void)
+{
+    u16 slots[3] = { VarGet(VAR_SAFARI_BOUNTY_1), VarGet(VAR_SAFARI_BOUNTY_2), VarGet(VAR_SAFARI_BOUNTY_3) };
+    u32 n = ARRAY_COUNT(sSafariBounties);
+    u16 which = gSpecialVar_0x8004;
+    u16 keepA = slots[(which + 1) % 3];
+    u16 keepB = slots[(which + 2) % 3];
+    u16 fresh;
+
+    do {
+        fresh = Random() % n;
+    } while (fresh == keepA || fresh == keepB || fresh == slots[which]);
+
+    switch (which)
+    {
+    case 0: VarSet(VAR_SAFARI_BOUNTY_1, fresh); break;
+    case 1: VarSet(VAR_SAFARI_BOUNTY_2, fresh); break;
+    case 2: VarSet(VAR_SAFARI_BOUNTY_3, fresh); break;
+    }
+}
+
+// TRUE if the party has more than one non-egg mon (so a turn-in is legal).
+u16 SafariBountyPartyHasSpare(void)
+{
+    u32 i, count = 0;
+
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        if (!GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_IS_EGG, NULL)
+         && GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES, NULL) != SPECIES_NONE)
+            count++;
+    }
+    return count > 1;
+}
+
+// Buffers the chosen mon's nickname to STR_VAR_1 for the confirm prompt.
+// VAR_0x8005 = party index.
+void BufferSafariBountyMonName(void)
+{
+    GetMonData(&gParties[B_TRAINER_PLAYER][gSpecialVar_0x8005], MON_DATA_NICKNAME, gStringVar1);
+    StringGet_Nickname(gStringVar1);
+}
+
+// Consumes the mon, pays the reward, ticks the counter, rerolls that slot.
+// VAR_0x8004 = bounty slot, VAR_0x8005 = party index.
+// Sets VAR_0x8000 = reward item. Returns TRUE if a voucher was earned.
+u16 TurnInSafariBounty(void)
+{
+    u16 count;
+
+    ZeroMonData(&gParties[B_TRAINER_PLAYER][gSpecialVar_0x8005]);
+    CompactPartySlots();
+    CalculatePlayerPartyCount();
+
+    gSpecialVar_0x8000 = sSafariBountyRewards[Random() % ARRAY_COUNT(sSafariBountyRewards)];
+
+    RerollSafariBounty();   // uses VAR_0x8004
+
+    count = VarGet(VAR_SAFARI_BOUNTY_COUNT) + 1;
+    if (count >= 3)
+    {
+        VarSet(VAR_SAFARI_BOUNTY_COUNT, 0);
+        return TRUE;
+    }
+    VarSet(VAR_SAFARI_BOUNTY_COUNT, count);
+    return FALSE;
+}
+// VAR_0x8004 = bounty slot (0-2). Buffers the bounty description into gStringVar1.
+void BufferSafariBountyText(void)
+{
+    u16 slots[3] = { VarGet(VAR_SAFARI_BOUNTY_1), VarGet(VAR_SAFARI_BOUNTY_2), VarGet(VAR_SAFARI_BOUNTY_3) };
+    const struct SafariBounty *b = &sSafariBounties[slots[gSpecialVar_0x8004]];
+
+    switch (b->kind)
+    {
+    case BOUNTY_SPECIES:
+        StringCopy(gStringVar1, GetSpeciesName(b->value));
+        break;
+    case BOUNTY_TYPE:
+        StringCopy(gStringVar1, gTypesInfo[b->value].name);
+        break;
+    case BOUNTY_LEVEL:
+        ConvertIntToDecimalStringN(gStringVar1, b->value, STR_CONV_MODE_LEFT_ALIGN, 2);
+        break;
+    }
+    gSpecialVar_0x8006 = b->kind;   // script branches on this to pick the template
+}
+
+static const u16 sMegaVoucherStones[] =
+{
+    ITEM_VENUSAURITE,
+    ITEM_CHARIZARDITE_X,
+    ITEM_CHARIZARDITE_Y,
+    ITEM_BLASTOISINITE,
+    ITEM_SCEPTILITE,
+    ITEM_BLAZIKENITE,
+    ITEM_SWAMPERTITE,
+    ITEM_CHESNAUGHTITE,
+    ITEM_DELPHOXITE,
+    ITEM_GRENINJITE,
+    ITEM_PIDGEOTITE,
+    ITEM_VICTREEBELITE,
+    ITEM_STEELIXITE,
+    ITEM_SLOWBRONITE,
+    ITEM_ALTARIANITE,
+    ITEM_ABSOLITE,
+    ITEM_ABSOLITE_Z,
+    ITEM_KANGASKHANITE,
+    ITEM_MALAMARITE,
+    ITEM_DRAMPANITE,
+    ITEM_GOLURKITE,
+    ITEM_GLIMMORANITE,
+};
+
+// VAR_0x8004 = menu index. Sets VAR_0x8000 to the chosen stone.
+u16 GetMegaVoucherStone(void)
+{
+    if (gSpecialVar_0x8004 >= ARRAY_COUNT(sMegaVoucherStones))
+        return FALSE;
+    gSpecialVar_0x8000 = sMegaVoucherStones[gSpecialVar_0x8004];
+    return TRUE;
 }
 
 u16 GetNumFansOfPlayerInTrainerFanClub(void)

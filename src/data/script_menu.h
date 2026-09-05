@@ -1131,6 +1131,19 @@ static const struct MenuAction MultichoiceList_MiraveilHMs[] =
     {gText_Dive},
 };
 
+static const u8 gText_BountyFirst[] = _("First");
+static const u8 gText_BountySecond[] = _("Second");
+static const u8 gText_BountyThird[] = _("Third");
+static const u8 gText_BountyNevermind[] = _("Never mind");
+
+static const struct MenuAction MultichoiceList_SafariBountyPick[] =
+{
+    {gText_BountyFirst},
+    {gText_BountySecond},
+    {gText_BountyThird},
+    {gText_BountyNevermind},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -1325,6 +1338,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FOSSIL_GEN4] = MULTICHOICE(sMultiChoice_FossilGen4),
     [MULTI_FOSSIL_GEN5] = MULTICHOICE(sMultiChoice_FossilGen5),
     [MULTI_FOSSIL_GEN6] = MULTICHOICE(sMultiChoice_FossilGen6),
+    [MULTI_SAFARI_BOUNTY_PICK] = MULTICHOICE(MultichoiceList_SafariBountyPick),
 };
 
 const u8 *const gStdStrings[] =
