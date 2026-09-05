@@ -12,7 +12,18 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_SAFARI_ZONE_AREA_2",
+      "offset": 6,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_SAFARI_ZONE_AREA_3",
+      "offset": -12,
+      "direction": "left"
+    }
+  ],
   "object_events": [],
   "warp_events": [
     {

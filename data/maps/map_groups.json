@@ -174,7 +174,8 @@
     "ENPALE_ROUTE_18",
     "ENPALE_ROUTE_19",
     "ENPALE_ROUTE_20",
-    "COPPERGATE_CITY_WEST"
+    "COPPERGATE_CITY_WEST",
+    "SAFARI_ZONE_AREA_2"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1274,7 +1275,8 @@
     "VELDTMOOR_CITY_HOUSE_2F",
     "FORGOTTEN_TOMB",
     "SAFARI_ZONE_ENTRANCE",
-    "SAFARI_ZONE_AREA_1"
+    "SAFARI_ZONE_AREA_1",
+    "SAFARI_ZONE_AREA_3"
   ],
   "gMapGroup_Indoor_Delmark": [
     "DELMARK_CITY_FERRY_HOUSE",

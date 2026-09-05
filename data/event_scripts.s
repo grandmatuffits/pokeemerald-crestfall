@@ -1998,3 +1998,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SAFARI_ZONE_ENTRANCE/scripts.inc"
 
 	.include "data/maps/SAFARI_ZONE_AREA_1/scripts.inc"
+
+	.include "data/maps/SAFARI_ZONE_AREA_2/scripts.inc"
+
+	.include "data/maps/SAFARI_ZONE_AREA_3/scripts.inc"

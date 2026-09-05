@@ -10683,6 +10683,26 @@
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/SAFARI_ZONE_AREA_1/border.bin",
       "blockdata_filepath": "data/layouts/SAFARI_ZONE_AREA_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFARI_ZONE_AREA_2",
+      "name": "SAFARI_ZONE_AREA_2_Layout",
+      "width": 42,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/SAFARI_ZONE_AREA_2/border.bin",
+      "blockdata_filepath": "data/layouts/SAFARI_ZONE_AREA_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFARI_ZONE_AREA_3",
+      "name": "SAFARI_ZONE_AREA_3_Layout",
+      "width": 38,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/SAFARI_ZONE_AREA_3/border.bin",
+      "blockdata_filepath": "data/layouts/SAFARI_ZONE_AREA_3/map.bin"
     }
   ]
 }
