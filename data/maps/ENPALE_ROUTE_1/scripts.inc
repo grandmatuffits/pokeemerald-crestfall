@@ -3,6 +3,13 @@ ENPALE_ROUTE_1_MapScripts::
 
 Route1_EventScript_Bobby::
 	trainerbattle_single TRAINER_BOBBY_101, Route1_Text_BobbyIntro, Route1_Text_BobbyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route1_EventScript_BobbyRematch
+	msgbox Route1_Text_BobbyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route1_EventScript_BobbyRematch::
+	trainerbattle_rematch TRAINER_BOBBY_101, Route1_Text_BobbyRematchIntro, Route1_Text_BobbyRematchDefeat
 	msgbox Route1_Text_BobbyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -42,3 +49,10 @@ Route1_Text_DollyDefeat:
 
 Route1_Text_DollyPostBattle:
 	.string "I like your pokemon!$"	
+
+Route1_Text_BobbyRematchIntro:
+	.string "Back for another go? I've been\n"
+	.string "training since you beat me!$"
+
+Route1_Text_BobbyRematchDefeat:
+	.string "Still not enough…$"	

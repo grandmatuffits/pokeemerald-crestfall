@@ -1131,7 +1131,7 @@
 #define TRAINER_ENPALE_E4_GRASS_REMATCH        1125
 #define TRAINER_ENPALE_E4_BUG_REMATCH          1126
 #define TRAINER_UMBRA_REMATCH                  1127
-#define TRAINER_BOBBY_101_REMATCH              1128
+#define TRAINER_BOBBY_102                      1128
 #define TRAINER_ACOLYTE_BELL_TOWER_1           1129
 #define TRAINER_ACOLYTE_BELL_TOWER_2           1130
 #define TRAINER_ACOLYTE_BELL_TOWER_3           1131
