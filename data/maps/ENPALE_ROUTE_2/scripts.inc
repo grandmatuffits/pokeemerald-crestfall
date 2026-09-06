@@ -3,6 +3,13 @@ ENPALE_ROUTE_2_MapScripts::
 
 ENPALE_ROUTE_2_EventScript_Twins::
 	trainerbattle_double TRAINER_ROUTE_2_TWINS, ENPALE_ROUTE_2_Text_TwinsIntro, ENPALE_ROUTE_2_Text_TwinsDefeat, ENPALE_ROUTE_2_Text_TwinsNotEnough
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_2_EventScript_TwinsRematch
+	msgbox ENPALE_ROUTE_2_Text_TwinsRepeat, MSGBOX_AUTOCLOSE
+	end
+
+ENPALE_ROUTE_2_EventScript_TwinsRematch::
+	trainerbattle_rematch_double TRAINER_ROUTE_2_TWINS, ENPALE_ROUTE_2_Text_TwinsRematchIntro, ENPALE_ROUTE_2_Text_TwinsRematchDefeat, ENPALE_ROUTE_2_Text_TwinsNotEnough
 	msgbox ENPALE_ROUTE_2_Text_TwinsRepeat, MSGBOX_AUTOCLOSE
 	end
 
@@ -247,4 +254,10 @@ EnpaleRoute2_EventScript_Kirk_RematchIntro:
 	.string "Let's go again!$"
 
 EnpaleRoute2_EventScript_Kirk_RematchDefeat:
+	.string "You've gotten stronger!$"
+
+ENPALE_ROUTE_2_Text_TwinsRematchIntro:
+	.string "Let's go again!$"
+
+ENPALE_ROUTE_2_Text_TwinsRematchDefeat:
 	.string "You've gotten stronger!$"
