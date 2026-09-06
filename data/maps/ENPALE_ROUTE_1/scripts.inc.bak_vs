@@ -24,8 +24,6 @@ Route1_Text_BobbyPostBattle:
 
 Route1_EventScript_Sally::
 	trainerbattle_single TRAINER_SALLY_101, Route1_Text_SallyIntro, Route1_Text_SallyDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route1_EventScript_SallyRematch
 	msgbox Route1_Text_SallyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -40,8 +38,6 @@ Route1_Text_SallyPostBattle:
 
 Route1_EventScript_Dolly::
 	trainerbattle_single TRAINER_DOLLY_101, Route1_Text_DollyIntro, Route1_Text_DollyDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route1_EventScript_DollyRematch
 	msgbox Route1_Text_DollyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -60,23 +56,3 @@ Route1_Text_BobbyRematchIntro:
 
 Route1_Text_BobbyRematchDefeat:
 	.string "Still not enough…$"	
-
-Route1_EventScript_SallyRematch::
-	trainerbattle_rematch TRAINER_SALLY_101, Route1_EventScript_Sally_RematchIntro, Route1_EventScript_Sally_RematchDefeat
-	end
-
-Route1_EventScript_Sally_RematchIntro:
-	.string "Let's go again!$"
-
-Route1_EventScript_Sally_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-Route1_EventScript_DollyRematch::
-	trainerbattle_rematch TRAINER_DOLLY_101, Route1_EventScript_Dolly_RematchIntro, Route1_EventScript_Dolly_RematchDefeat
-	end
-
-Route1_EventScript_Dolly_RematchIntro:
-	.string "Let's go again!$"
-
-Route1_EventScript_Dolly_RematchDefeat:
-	.string "You've gotten stronger!$"

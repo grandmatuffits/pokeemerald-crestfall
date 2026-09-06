@@ -107,8 +107,6 @@ ROUTE9_Text_TakeGoodCareOfIt:
 
 ENPALE_ROUTE_9_EventScript_Athlete::
 	trainerbattle_single TRAINER_ROUTE9_ATHLETE, ENPALE_ROUTE_9_Text_AthleteIntro, ENPALE_ROUTE_9_Text_AthleteDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_9_EventScript_AthleteRematch
 	msgbox ENPALE_ROUTE_9_Text_AthletePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -121,8 +119,6 @@ ENPALE_ROUTE_9_Text_AthletePostBattle:
 
 ENPALE_ROUTE_9_EventScript_Picnicker::
 	trainerbattle_single TRAINER_ROUTE_9_PICNICKER, ENPALE_ROUTE_9_Text_PicnickerIntro, ENPALE_ROUTE_9_Text_PicnickerDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_9_EventScript_PicnickerRematch
 	msgbox ENPALE_ROUTE_9_Text_PicnickerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -135,8 +131,6 @@ ENPALE_ROUTE_9_Text_PicnickerPostBattle:
 
 ENPALE_ROUTE_9_EventScript_Birdkeeper::
 	trainerbattle_single TRAINER_ROUTE_9_BIRDKEEPER, ENPALE_ROUTE_9_Text_BirdkeeperIntro, ENPALE_ROUTE_9_Text_BirdkeeperDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_9_EventScript_BirdkeeperRematch
 	msgbox ENPALE_ROUTE_9_Text_BirdkeeperPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -146,33 +140,3 @@ ENPALE_ROUTE_9_Text_BirdkeeperDefeat:
 	.string "Grounded!$"
 ENPALE_ROUTE_9_Text_BirdkeeperPostBattle:
 	.string "Fly high!$"	
-
-ENPALE_ROUTE_9_EventScript_AthleteRematch::
-	trainerbattle_rematch TRAINER_ROUTE9_ATHLETE, ENPALE_ROUTE_9_EventScript_Athlete_RematchIntro, ENPALE_ROUTE_9_EventScript_Athlete_RematchDefeat
-	end
-
-ENPALE_ROUTE_9_EventScript_Athlete_RematchIntro:
-	.string "Let's go again!$"
-
-ENPALE_ROUTE_9_EventScript_Athlete_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-ENPALE_ROUTE_9_EventScript_PicnickerRematch::
-	trainerbattle_rematch TRAINER_ROUTE_9_PICNICKER, ENPALE_ROUTE_9_EventScript_Picnicker_RematchIntro, ENPALE_ROUTE_9_EventScript_Picnicker_RematchDefeat
-	end
-
-ENPALE_ROUTE_9_EventScript_Picnicker_RematchIntro:
-	.string "Let's go again!$"
-
-ENPALE_ROUTE_9_EventScript_Picnicker_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-ENPALE_ROUTE_9_EventScript_BirdkeeperRematch::
-	trainerbattle_rematch TRAINER_ROUTE_9_BIRDKEEPER, ENPALE_ROUTE_9_EventScript_Birdkeeper_RematchIntro, ENPALE_ROUTE_9_EventScript_Birdkeeper_RematchDefeat
-	end
-
-ENPALE_ROUTE_9_EventScript_Birdkeeper_RematchIntro:
-	.string "Let's go again!$"
-
-ENPALE_ROUTE_9_EventScript_Birdkeeper_RematchDefeat:
-	.string "You've gotten stronger!$"

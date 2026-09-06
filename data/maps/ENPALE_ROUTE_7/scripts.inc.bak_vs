@@ -3,15 +3,11 @@ ENPALE_ROUTE_7_MapScripts::
 
 ENPALE_ROUTE_7_EventScript_Marsha::
 	trainerbattle_single TRAINER_ROUTE7_MARSHA, ENPALE_ROUTE_7_Text_MarshaIntro, ENPALE_ROUTE_7_Text_MarshaDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_7_EventScript_MarshaRematch
 	msgbox ENPALE_ROUTE_7_Text_MarshaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ENPALE_ROUTE_7_EventScript_Gavin::
 	trainerbattle_single TRAINER_ROUTE7_GAVIN, ENPALE_ROUTE_7_Text_GavinIntro, ENPALE_ROUTE_7_Text_GavinDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_7_EventScript_GavinRematch
 	msgbox ENPALE_ROUTE_7_Text_GavinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -39,23 +35,3 @@ ENPALE_ROUTE_7_Text_GavinPostBattle:
 	.string "Keep heading north and you'll\n"
 	.string "hit Route 8. That'll take you\l"
 	.string "clear to Kinneret Town.$"
-
-ENPALE_ROUTE_7_EventScript_MarshaRematch::
-	trainerbattle_rematch TRAINER_ROUTE7_MARSHA, ENPALE_ROUTE_7_EventScript_Marsha_RematchIntro, ENPALE_ROUTE_7_EventScript_Marsha_RematchDefeat
-	end
-
-ENPALE_ROUTE_7_EventScript_Marsha_RematchIntro:
-	.string "Let's go again!$"
-
-ENPALE_ROUTE_7_EventScript_Marsha_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-ENPALE_ROUTE_7_EventScript_GavinRematch::
-	trainerbattle_rematch TRAINER_ROUTE7_GAVIN, ENPALE_ROUTE_7_EventScript_Gavin_RematchIntro, ENPALE_ROUTE_7_EventScript_Gavin_RematchDefeat
-	end
-
-ENPALE_ROUTE_7_EventScript_Gavin_RematchIntro:
-	.string "Let's go again!$"
-
-ENPALE_ROUTE_7_EventScript_Gavin_RematchDefeat:
-	.string "You've gotten stronger!$"

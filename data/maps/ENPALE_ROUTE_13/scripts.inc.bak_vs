@@ -2,8 +2,6 @@ ENPALE_ROUTE_13_MapScripts::
 	.byte 0
 Route13_EventScript_Swimmer1::
 	trainerbattle_single TRAINER_ROUTE13_SWIMMERF_1, Route13_Text_Swimmer1Intro, Route13_Text_Swimmer1Defeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_Swimmer1Rematch
 	msgbox Route13_Text_Swimmer1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -21,8 +19,6 @@ Route13_Text_Swimmer1PostBattle:
 
 Route13_EventScript_Swimmer2::
 	trainerbattle_single TRAINER_ROUTE13_SWIMMERM_2, Route13_Text_Swimmer2Intro, Route13_Text_Swimmer2Defeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_Swimmer2Rematch
 	msgbox Route13_Text_Swimmer2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -40,8 +36,6 @@ Route13_Text_Swimmer2PostBattle:
 
 Route13_EventScript_Swimmer3::
 	trainerbattle_single TRAINER_ROUTE13_SWIMMERF_3, Route13_Text_Swimmer3Intro, Route13_Text_Swimmer3Defeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_Swimmer3Rematch
 	msgbox Route13_Text_Swimmer3PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -60,8 +54,6 @@ Route13_Text_Swimmer3PostBattle:
 
 Route13_EventScript_Swimmer4::
 	trainerbattle_single TRAINER_ROUTE13_SWIMMERM_4, Route13_Text_Swimmer4Intro, Route13_Text_Swimmer4Defeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_Swimmer4Rematch
 	msgbox Route13_Text_Swimmer4PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -80,8 +72,6 @@ Route13_Text_Swimmer4PostBattle:
 
 Route13_EventScript_Swimmer5::
 	trainerbattle_single TRAINER_ROUTE13_SWIMMERF_5, Route13_Text_Swimmer5Intro, Route13_Text_Swimmer5Defeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_Swimmer5Rematch
 	msgbox Route13_Text_Swimmer5PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -99,8 +89,6 @@ Route13_Text_Swimmer5PostBattle:
 
 Route13_EventScript_Swimmer6::
 	trainerbattle_single TRAINER_ROUTE13_SWIMMERM_6, Route13_Text_Swimmer6Intro, Route13_Text_Swimmer6Defeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_Swimmer6Rematch
 	msgbox Route13_Text_Swimmer6PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -118,8 +106,6 @@ Route13_Text_Swimmer6PostBattle:
 
 Route13_EventScript_Sailor::
 	trainerbattle_single TRAINER_ROUTE13_SAILOR, Route13_Text_SailorIntro, Route13_Text_SailorDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_SailorRematch
 	msgbox Route13_Text_SailorPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -140,8 +126,6 @@ Route13_Text_SailorPostBattle:
 
 Route13_EventScript_Fisherman::
 	trainerbattle_single TRAINER_ROUTE13_FISHERMAN, Route13_Text_FishermanIntro, Route13_Text_FishermanDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_FishermanRematch
 	msgbox Route13_Text_FishermanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -159,8 +143,6 @@ Route13_Text_FishermanPostBattle:
 
 ROUTE13_EventScript_FishermanScald::
 	trainerbattle_single TRAINER_ROUTE13_FISHERMAN, ROUTE13_Text_FishermanIntro, ROUTE13_Text_FishermanDefeat, ROUTE13_EventScript_FishermanGiveScald
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, ROUTE13_EventScript_FishermanScaldRematch
 
 ROUTE13_EventScript_FishermanGiveScald::
 	goto_if_set FLAG_ROUTE13_SCALD_RECEIVED, ROUTE13_EventScript_FishermanPostBattle
@@ -199,93 +181,3 @@ ROUTE13_Text_FishermanBagFull:
 
 ROUTE13_Text_FishermanPostBattle:
 	.string "The sea's been good to me. Tight lines!$"	
-
-Route13_EventScript_Swimmer1Rematch::
-	trainerbattle_rematch TRAINER_ROUTE13_SWIMMERF_1, Route13_EventScript_Swimmer1_RematchIntro, Route13_EventScript_Swimmer1_RematchDefeat
-	end
-
-Route13_EventScript_Swimmer1_RematchIntro:
-	.string "Let's go again!$"
-
-Route13_EventScript_Swimmer1_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-Route13_EventScript_Swimmer2Rematch::
-	trainerbattle_rematch TRAINER_ROUTE13_SWIMMERM_2, Route13_EventScript_Swimmer2_RematchIntro, Route13_EventScript_Swimmer2_RematchDefeat
-	end
-
-Route13_EventScript_Swimmer2_RematchIntro:
-	.string "Let's go again!$"
-
-Route13_EventScript_Swimmer2_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-Route13_EventScript_Swimmer3Rematch::
-	trainerbattle_rematch TRAINER_ROUTE13_SWIMMERF_3, Route13_EventScript_Swimmer3_RematchIntro, Route13_EventScript_Swimmer3_RematchDefeat
-	end
-
-Route13_EventScript_Swimmer3_RematchIntro:
-	.string "Let's go again!$"
-
-Route13_EventScript_Swimmer3_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-Route13_EventScript_Swimmer4Rematch::
-	trainerbattle_rematch TRAINER_ROUTE13_SWIMMERM_4, Route13_EventScript_Swimmer4_RematchIntro, Route13_EventScript_Swimmer4_RematchDefeat
-	end
-
-Route13_EventScript_Swimmer4_RematchIntro:
-	.string "Let's go again!$"
-
-Route13_EventScript_Swimmer4_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-Route13_EventScript_Swimmer5Rematch::
-	trainerbattle_rematch TRAINER_ROUTE13_SWIMMERF_5, Route13_EventScript_Swimmer5_RematchIntro, Route13_EventScript_Swimmer5_RematchDefeat
-	end
-
-Route13_EventScript_Swimmer5_RematchIntro:
-	.string "Let's go again!$"
-
-Route13_EventScript_Swimmer5_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-Route13_EventScript_Swimmer6Rematch::
-	trainerbattle_rematch TRAINER_ROUTE13_SWIMMERM_6, Route13_EventScript_Swimmer6_RematchIntro, Route13_EventScript_Swimmer6_RematchDefeat
-	end
-
-Route13_EventScript_Swimmer6_RematchIntro:
-	.string "Let's go again!$"
-
-Route13_EventScript_Swimmer6_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-Route13_EventScript_SailorRematch::
-	trainerbattle_rematch TRAINER_ROUTE13_SAILOR, Route13_EventScript_Sailor_RematchIntro, Route13_EventScript_Sailor_RematchDefeat
-	end
-
-Route13_EventScript_Sailor_RematchIntro:
-	.string "Let's go again!$"
-
-Route13_EventScript_Sailor_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-Route13_EventScript_FishermanRematch::
-	trainerbattle_rematch TRAINER_ROUTE13_FISHERMAN, Route13_EventScript_Fisherman_RematchIntro, Route13_EventScript_Fisherman_RematchDefeat
-	end
-
-Route13_EventScript_Fisherman_RematchIntro:
-	.string "Let's go again!$"
-
-Route13_EventScript_Fisherman_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-ROUTE13_EventScript_FishermanScaldRematch::
-	trainerbattle_rematch TRAINER_ROUTE13_FISHERMAN, ROUTE13_EventScript_FishermanScald_RematchIntro, ROUTE13_EventScript_FishermanScald_RematchDefeat
-	end
-
-ROUTE13_EventScript_FishermanScald_RematchIntro:
-	.string "Let's go again!$"
-
-ROUTE13_EventScript_FishermanScald_RematchDefeat:
-	.string "You've gotten stronger!$"

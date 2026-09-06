@@ -3,8 +3,6 @@ ENPALE_ROUTE_5_MapScripts::
 
 ENPALE_ROUTE_5_EventScript_Martin::
 	trainerbattle_single TRAINER_ROUTE_5_MANIAC, ENPALE_ROUTE_5_Text_MartinIntro, ENPALE_ROUTE_5_Text_MartinDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_5_EventScript_MartinRematch
 	msgbox ENPALE_ROUTE_5_Text_MartinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -18,8 +16,6 @@ ENPALE_ROUTE_5_Text_MartinPostBattle:
 
 ENPALE_ROUTE_5_EventScript_Max::
 	trainerbattle_single TRAINER_ROUTE_5_COOLTRAINER_M, ENPALE_ROUTE_5_Text_MaxIntro, ENPALE_ROUTE_5_Text_MaxDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_5_EventScript_MaxRematch
 	msgbox ENPALE_ROUTE_5_Text_MaxPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -47,23 +43,3 @@ ENPALE_ROUTE_5_Text_NurseGreeting:
 	.string "use a rest!$"
 ENPALE_ROUTE_5_Text_NurseFarewell:
 	.string "Carry on!$"
-
-ENPALE_ROUTE_5_EventScript_MartinRematch::
-	trainerbattle_rematch TRAINER_ROUTE_5_MANIAC, ENPALE_ROUTE_5_EventScript_Martin_RematchIntro, ENPALE_ROUTE_5_EventScript_Martin_RematchDefeat
-	end
-
-ENPALE_ROUTE_5_EventScript_Martin_RematchIntro:
-	.string "Let's go again!$"
-
-ENPALE_ROUTE_5_EventScript_Martin_RematchDefeat:
-	.string "You've gotten stronger!$"
-
-ENPALE_ROUTE_5_EventScript_MaxRematch::
-	trainerbattle_rematch TRAINER_ROUTE_5_COOLTRAINER_M, ENPALE_ROUTE_5_EventScript_Max_RematchIntro, ENPALE_ROUTE_5_EventScript_Max_RematchDefeat
-	end
-
-ENPALE_ROUTE_5_EventScript_Max_RematchIntro:
-	.string "Let's go again!$"
-
-ENPALE_ROUTE_5_EventScript_Max_RematchDefeat:
-	.string "You've gotten stronger!$"

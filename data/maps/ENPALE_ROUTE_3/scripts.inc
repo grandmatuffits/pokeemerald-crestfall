@@ -3,31 +3,43 @@ ENPALE_ROUTE_3_MapScripts::
 
 ENPALE_ROUTE_3_EventScript_Bob::
 	trainerbattle_single TRAINER_ROUTE_3_BOB, ENPALE_ROUTE_3_Text_BobIntro, ENPALE_ROUTE_3_Text_BobDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_3_EventScript_BobRematch
 	msgbox ENPALE_ROUTE_3_Text_BobRepeat, MSGBOX_AUTOCLOSE
 	end
 
 ENPALE_ROUTE_3_EventScript_Tiff::
 	trainerbattle_single TRAINER_ROUTE_3_TIFF, ENPALE_ROUTE_3_Text_TiffIntro, ENPALE_ROUTE_3_Text_TiffDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_3_EventScript_TiffRematch
 	msgbox ENPALE_ROUTE_3_Text_TiffRepeat, MSGBOX_AUTOCLOSE
 	end
 
 ENPALE_ROUTE_3_EventScript_Blake::
 	trainerbattle_single TRAINER_ROUTE_3_BLAKE, ENPALE_ROUTE_3_Text_BlakeIntro, ENPALE_ROUTE_3_Text_BlakeDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_3_EventScript_BlakeRematch
 	msgbox ENPALE_ROUTE_3_Text_BlakeRepeat, MSGBOX_AUTOCLOSE
 	end
 
 ENPALE_ROUTE_3_EventScript_Jeff::
 	trainerbattle_single TRAINER_ROUTE_3_JEFF, ENPALE_ROUTE_3_Text_JeffIntro, ENPALE_ROUTE_3_Text_JeffDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_3_EventScript_JeffRematch
 	msgbox ENPALE_ROUTE_3_Text_JeffRepeat, MSGBOX_AUTOCLOSE
 	end
 
 ENPALE_ROUTE_3_EventScript_Jonas::
 	trainerbattle_single TRAINER_ROUTE_3_JONAS, ENPALE_ROUTE_3_Text_JonasIntro, ENPALE_ROUTE_3_Text_JonasDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_3_EventScript_JonasRematch
 	msgbox ENPALE_ROUTE_3_Text_JonasRepeat, MSGBOX_AUTOCLOSE
 	end
 
 ENPALE_ROUTE_3_EventScript_Lemmy::
 	trainerbattle_single TRAINER_ROUTE_3_LEMMY, ENPALE_ROUTE_3_Text_LemmyIntro, ENPALE_ROUTE_3_Text_LemmyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, ENPALE_ROUTE_3_EventScript_LemmyRematch
 	msgbox ENPALE_ROUTE_3_Text_LemmyRepeat, MSGBOX_AUTOCLOSE
 	end
 
@@ -84,3 +96,63 @@ ENPALE_ROUTE_3_Text_LemmyDefeat:
 
 ENPALE_ROUTE_3_Text_LemmyRepeat:
 	.string "Keep rockin' on!$"
+
+ENPALE_ROUTE_3_EventScript_BobRematch::
+	trainerbattle_rematch TRAINER_ROUTE_3_BOB, ENPALE_ROUTE_3_EventScript_Bob_RematchIntro, ENPALE_ROUTE_3_EventScript_Bob_RematchDefeat
+	end
+
+ENPALE_ROUTE_3_EventScript_Bob_RematchIntro:
+	.string "Let's go again!$"
+
+ENPALE_ROUTE_3_EventScript_Bob_RematchDefeat:
+	.string "You've gotten stronger!$"
+
+ENPALE_ROUTE_3_EventScript_TiffRematch::
+	trainerbattle_rematch TRAINER_ROUTE_3_TIFF, ENPALE_ROUTE_3_EventScript_Tiff_RematchIntro, ENPALE_ROUTE_3_EventScript_Tiff_RematchDefeat
+	end
+
+ENPALE_ROUTE_3_EventScript_Tiff_RematchIntro:
+	.string "Let's go again!$"
+
+ENPALE_ROUTE_3_EventScript_Tiff_RematchDefeat:
+	.string "You've gotten stronger!$"
+
+ENPALE_ROUTE_3_EventScript_BlakeRematch::
+	trainerbattle_rematch TRAINER_ROUTE_3_BLAKE, ENPALE_ROUTE_3_EventScript_Blake_RematchIntro, ENPALE_ROUTE_3_EventScript_Blake_RematchDefeat
+	end
+
+ENPALE_ROUTE_3_EventScript_Blake_RematchIntro:
+	.string "Let's go again!$"
+
+ENPALE_ROUTE_3_EventScript_Blake_RematchDefeat:
+	.string "You've gotten stronger!$"
+
+ENPALE_ROUTE_3_EventScript_JeffRematch::
+	trainerbattle_rematch TRAINER_ROUTE_3_JEFF, ENPALE_ROUTE_3_EventScript_Jeff_RematchIntro, ENPALE_ROUTE_3_EventScript_Jeff_RematchDefeat
+	end
+
+ENPALE_ROUTE_3_EventScript_Jeff_RematchIntro:
+	.string "Let's go again!$"
+
+ENPALE_ROUTE_3_EventScript_Jeff_RematchDefeat:
+	.string "You've gotten stronger!$"
+
+ENPALE_ROUTE_3_EventScript_JonasRematch::
+	trainerbattle_rematch TRAINER_ROUTE_3_JONAS, ENPALE_ROUTE_3_EventScript_Jonas_RematchIntro, ENPALE_ROUTE_3_EventScript_Jonas_RematchDefeat
+	end
+
+ENPALE_ROUTE_3_EventScript_Jonas_RematchIntro:
+	.string "Let's go again!$"
+
+ENPALE_ROUTE_3_EventScript_Jonas_RematchDefeat:
+	.string "You've gotten stronger!$"
+
+ENPALE_ROUTE_3_EventScript_LemmyRematch::
+	trainerbattle_rematch TRAINER_ROUTE_3_LEMMY, ENPALE_ROUTE_3_EventScript_Lemmy_RematchIntro, ENPALE_ROUTE_3_EventScript_Lemmy_RematchDefeat
+	end
+
+ENPALE_ROUTE_3_EventScript_Lemmy_RematchIntro:
+	.string "Let's go again!$"
+
+ENPALE_ROUTE_3_EventScript_Lemmy_RematchDefeat:
+	.string "You've gotten stronger!$"
