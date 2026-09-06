@@ -1451,6 +1451,7 @@
 #define FLAG_HIDE_TOMB_REGIGIGAS                    (SYSTEM_FLAGS + 0xA1)
 
 #define FLAG_SAFARI_BOUNTIES_ROLLED                 (SYSTEM_FLAGS + 0xA2)
+#define FLAG_SAFARI_BOUNTY_REROLLED                 (SYSTEM_FLAGS + 0xA4)
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1

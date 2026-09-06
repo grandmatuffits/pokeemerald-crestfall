@@ -1133,6 +1133,7 @@ static const struct MenuAction MultichoiceList_MiraveilHMs[] =
 
 static const u8 gText_BountyFirst[] = _("First");
 static const u8 gText_BountySecond[] = _("Second");
+static const u8 gText_BountyReroll[] = _("New list");
 static const u8 gText_BountyThird[] = _("Third");
 static const u8 gText_BountyNevermind[] = _("Never mind");
 
@@ -1141,6 +1142,7 @@ static const struct MenuAction MultichoiceList_SafariBountyPick[] =
     {gText_BountyFirst},
     {gText_BountySecond},
     {gText_BountyThird},
+    {gText_BountyReroll},
     {gText_BountyNevermind},
 };
 
@@ -1148,6 +1150,7 @@ static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
 };
+
 
 static const u8 sText_RootFossil[]  = _("ROOT FOSSIL");
 static const u8 sText_ClawFossil[]  = _("CLAW FOSSIL");

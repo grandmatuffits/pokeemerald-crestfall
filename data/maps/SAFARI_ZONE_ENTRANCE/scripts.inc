@@ -38,11 +38,11 @@ SAFARI_GATE_EventScript_CounterTrigger::
 
 SAFARI_GATE_EventScript_TryEnter::
 	call SAFARI_GATE_EventScript_CheckHasRoom
-	checkmoney 500
+	checkmoney 10000
 	goto_if_eq VAR_RESULT, 0, SAFARI_GATE_EventScript_NotEnoughMoney
 	playse SE_SHOP
 	msgbox SAFARI_GATE_Text_ThatWillBe500, MSGBOX_DEFAULT
-	removemoney 500
+	removemoney 10000
 	updatemoneybox
 	msgbox SAFARI_GATE_Text_HereAreYourBalls, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
@@ -54,6 +54,7 @@ SAFARI_GATE_EventScript_TryEnter::
 	applymovement LOCALID_PLAYER, SAFARI_GATE_Movement_EnterSafariZone
 	waitmovement 0
 	special EnterSafariMode
+	clearflag FLAG_SAFARI_BOUNTY_REROLLED
 	setvar VAR_SAFARI_ZONE_STATE, 2
 	warp MAP_SAFARI_ZONE_AREA_1, 20, 33
 	waitstate
@@ -139,8 +140,9 @@ SAFARI_GATE_EventScript_SayType::
 
 SAFARI_GATE_EventScript_BountyPick::
 	multichoice 0, 0, MULTI_SAFARI_BOUNTY_PICK, FALSE
-	goto_if_eq VAR_RESULT, 3, SAFARI_GATE_EventScript_BountyDone
+	goto_if_eq VAR_RESULT, 4, SAFARI_GATE_EventScript_BountyDone
 	goto_if_eq VAR_RESULT, MULTI_B_PRESSED, SAFARI_GATE_EventScript_BountyDone
+	goto_if_eq VAR_RESULT, 3, SAFARI_GATE_EventScript_BountyReroll
 	copyvar VAR_0x800A, VAR_RESULT
 	copyvar VAR_0x8004, VAR_RESULT
 	specialvar VAR_RESULT, CanFulfillSafariBounty
@@ -162,6 +164,29 @@ SAFARI_GATE_EventScript_BountyPick::
 	giveitem VAR_0x8000
 	goto_if_eq VAR_0x800B, TRUE, SAFARI_GATE_EventScript_BountyVoucher
 	msgbox SAFARI_GATE_Text_BountyThanks, MSGBOX_DEFAULT
+	release
+	end
+
+SAFARI_GATE_EventScript_BountyReroll::
+	goto_if_set FLAG_SAFARI_BOUNTY_REROLLED, SAFARI_GATE_EventScript_BountyRerollUsed
+	msgbox SAFARI_GATE_Text_BountyRerollAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SAFARI_GATE_EventScript_BountyDone
+	checkmoney 15000
+	goto_if_eq VAR_RESULT, FALSE, SAFARI_GATE_EventScript_BountyRerollBroke
+	removemoney 15000
+	special RollAllSafariBounties
+	setflag FLAG_SAFARI_BOUNTY_REROLLED
+	msgbox SAFARI_GATE_Text_BountyRerollDone, MSGBOX_DEFAULT
+	release
+	end
+
+SAFARI_GATE_EventScript_BountyRerollUsed::
+	msgbox SAFARI_GATE_Text_BountyRerollUsed, MSGBOX_DEFAULT
+	release
+	end
+
+SAFARI_GATE_EventScript_BountyRerollBroke::
+	msgbox SAFARI_GATE_Text_BountyRerollBroke, MSGBOX_DEFAULT
 	release
 	end
 
@@ -265,7 +290,7 @@ SAFARI_GATE_EventScript_VoucherDone::
 SAFARI_GATE_Text_WouldYouLikeToPlay:
 	.string "Welcome to the ENPALE SAFARI\n"
 	.string "RESERVE.\p"
-	.string "¥500 buys you thirty SAFARI BALLS\n"
+	.string "¥10000 buys you thirty SAFARI BALLS\n"
 	.string "and the run of the grounds.\p"
 	.string "Would you like to play?$"
 
@@ -273,7 +298,7 @@ SAFARI_GATE_Text_AnotherTime:
 	.string "Another time, then.$"
 
 SAFARI_GATE_Text_ThatWillBe500:
-	.string "That'll be ¥500, please.$"
+	.string "That'll be ¥10000, please.$"
 
 SAFARI_GATE_Text_HereAreYourBalls:
 	.string "Our stock only answers to SAFARI\n"
@@ -289,7 +314,7 @@ SAFARI_GATE_Text_EnjoyYourself:
 	.string "Good hunting.$"
 
 SAFARI_GATE_Text_NotEnoughMoney:
-	.string "You haven't got the ¥500.$"
+	.string "You haven't got the ¥10000.$"
 
 SAFARI_GATE_Text_PCIsFull:
 	.string "Your party's full and so are your\n"
@@ -393,3 +418,20 @@ SAFARI_GATE_Text_BountyType:
 SAFARI_GATE_Text_BountyLevel:
 	.string "Bring me anything at Lv. {STR_VAR_1}\n"
 	.string "or higher.$"	
+
+	
+SAFARI_GATE_Text_BountyRerollAsk:
+	.string "Nothing on the list suits you?\p"
+	.string "I can draw up a fresh one, but the\n"
+	.string "paperwork costs ¥15000.\p"
+	.string "And only one a visit.$"
+
+SAFARI_GATE_Text_BountyRerollDone:
+	.string "There. New list.$"
+
+SAFARI_GATE_Text_BountyRerollUsed:
+	.string "I've already redrawn it once this\n"
+	.string "visit. Come back tomorrow.$"
+
+SAFARI_GATE_Text_BountyRerollBroke:
+	.string "You haven't got ¥15000.$"
