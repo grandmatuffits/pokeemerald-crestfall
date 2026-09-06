@@ -334,54 +334,49 @@ ENPALE_LEAGUE_ARENA_Text_HemlockName:
 	.string "Hemlock$"
 
 ENPALE_LEAGUE_ARENA_Text_BrutusPreBattle:
-	.string "…So. You're the one who tore through\n"
-	.string "my Elite Four.\p"
-	.string "You have my eyes. My stubborn jaw.\n"
-	.string "But a face isn't a battler.\p"
-	.string "You made it further than I expected,\n"
-	.string "I'll grant you that. But this is\l"
-	.string "where the climb ends.\p"
-	.string "Come. Let me show you the distance\n"
+	.string "Well, well well…\n"
+	.string "my own flesh and blood…\p"
+	.string "You think getting here is enough\n"
+	.string "to earn my acceptance? My respect?\p"
+	.string "I'll hand it to you, I thought you'd\n"
+	.string "come back crying before your first\l"
+	.string "badge. But you surprised me.\p"
+	.string "Now, let me show you the true distance\n"
 	.string "between us. Then we'll discuss what\l"
 	.string "you still have to learn.$"
 
 ENPALE_LEAGUE_ARENA_Text_BrutusDefeat:
-	.string "…What?$"
+	.string "What!?$"
 
 ENPALE_LEAGUE_ARENA_Text_BrutusRage:
-	.string "No. NO. That isn't how this goes.\p"
-	.string "A fluke. Type matchups, lucky rolls.\n"
+	.string "No. NO! That isn't how this goes!\p"
+	.string "A fluke! Bad matchups! Pure luck!\n"
 	.string "You caught me on an off day, nothing\l"
-	.string "more.\p"
+	.string "else…\p"
 	.string "Don't you dare mistake this for\n"
-	.string "skill. You are NOT ready. You don't\l"
+	.string "skill. You are NOT ready! You don't\l"
 	.string "know the first thing about being a\l"
 	.string "real trainer.\p"
 	.string "A trophy doesn't make you my equal.\n"
 	.string "It never will.\p"
 	.string "…I'm done here. Enjoy the moment.\n"
-	.string "It changes nothing.$"
+	.string "It changes nothing…$"
 
 ENPALE_LEAGUE_ARENA_Text_HemlockHoF:
-	.string "…Pay him no mind. I've known Brutus\n"
-	.string "many years. He has never once lost\l"
-	.string "gracefully.\p"
-	.string "What I just witnessed was no fluke.\n"
-	.string "It was the finest battling this\l"
-	.string "League has seen in a generation.\p"
-	.string "He couldn't say it. So I will. You\n"
-	.string "EARNED this. Every step.\p"
-	.string "Come. Let us record your team in the\n"
-	.string "HALL OF FAME, where it belongs.$"	
+	.string "Heh, good ol' Brutus. We go back\n"
+	.string "pretty far. He's never been\l"
+	.string "good about taking a loss.\p"
+	.string "What you just didn't wasn't luck.\n"
+	.string "That was just good battling.\l"
+	.string "Truth be told, the League's.\p"
+	.string "been stale for a while with\n"
+	.string "just your old man running it.\p"
+	.string "C'mon, kid. Let's get that name\n"
+	.string "in the HALL OF FAME, where it belongs.$"	
 
 ENPALE_LEAGUE_ARENA_UmbraChampionScene::
 	goto_if_set FLAG_FINAL_E4_UNLOCKED, ENPALE_LEAGUE_ARENA_RivalChampionScene
 	goto_if_set FLAG_DEFEATED_UMBRA_REMATCH, ENPALE_LEAGUE_ARENA_UmbraChampionScene_End
-	goto_if_unset FLAG_SILVIO_REMATCH_DONE, ENPALE_LEAGUE_ARENA_Debug_Silvio
-	goto_if_unset FLAG_DEFEATED_E4_FIRE_REMATCH, ENPALE_LEAGUE_ARENA_Debug_Fire
-	goto_if_unset FLAG_DEFEATED_E4_WATER_REMATCH, ENPALE_LEAGUE_ARENA_Debug_Water
-	goto_if_unset FLAG_DEFEATED_E4_GRASS_REMATCH, ENPALE_LEAGUE_ARENA_Debug_Grass
-	goto_if_unset FLAG_DEFEATED_E4_BUG_REMATCH, ENPALE_LEAGUE_ARENA_Debug_Bug
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerWalkIn
 	waitmovement 0
@@ -403,21 +398,6 @@ ENPALE_LEAGUE_ARENA_UmbraChampionScene::
 	goto ENPALE_LEAGUE_ARENA_UmbraChampionAftermath
 	end
 
-ENPALE_LEAGUE_ARENA_Debug_Silvio::
-	msgbox ENPALE_LEAGUE_ARENA_Text_DebugSilvio, MSGBOX_DEFAULT
-	end
-ENPALE_LEAGUE_ARENA_Debug_Fire::
-	msgbox ENPALE_LEAGUE_ARENA_Text_DebugFire, MSGBOX_DEFAULT
-	end
-ENPALE_LEAGUE_ARENA_Debug_Water::
-	msgbox ENPALE_LEAGUE_ARENA_Text_DebugWater, MSGBOX_DEFAULT
-	end
-ENPALE_LEAGUE_ARENA_Debug_Grass::
-	msgbox ENPALE_LEAGUE_ARENA_Text_DebugGrass, MSGBOX_DEFAULT
-	end
-ENPALE_LEAGUE_ARENA_Debug_Bug::
-	msgbox ENPALE_LEAGUE_ARENA_Text_DebugBug, MSGBOX_DEFAULT
-	end
 
 ENPALE_LEAGUE_ARENA_UmbraChampionScene_End::
 	end
@@ -506,27 +486,25 @@ ENPALE_LEAGUE_ARENA_Text_UmbraChampionName:
 	.string "Umbra$"
 
 ENPALE_LEAGUE_ARENA_Text_UmbraChampionPreBattle:
-	.string "So we meet again, at the very top.\pLast time I called you a child, sent\nin your father's place. I was wrong\labout that. Wrong about a great deal\lsince.\pI won't apologize with words. Let me\ndo it the only way I know how.$"
+	.string "So we meet again, back here of all places.\pLast time I called you a child, sent\nin your father's place. I was wrong\labout that. Wrong about a great deal\lsince.\pI won't apologize with words. Let me\ndo it the only way I know how.$"
 
 ENPALE_LEAGUE_ARENA_Text_UmbraChampionDefeat:
-	.string "…So it is.$"
+	.string "...and there it is.$"
+
 
 ENPALE_LEAGUE_ARENA_Text_UmbraChampionDefeatSpeech:
-	.string "I spent a long time believing strength\nwas something passed down - Brigham's\lword, Brutus's shadow, mine to hand off\lin turn.\pYou're proof that isn't true.\pThe League is yours today. Carry it\nbetter than either of us did.$"
-
-ENPALE_LEAGUE_ARENA_Text_HemlockUmbraChampionSpeech:
-	.string "In all my years, I have never heard\nUmbra speak like that.\pWhatever weight he's carried, you've\ngiven him something to set against it.\pCome. Let us record this team in the\nHALL OF FAME - a victory earned twice\lover.$"	
-
-ENPALE_LEAGUE_ARENA_Text_DebugSilvio:
-	.string "MISSING: Silvio rematch$"
-ENPALE_LEAGUE_ARENA_Text_DebugFire:
-	.string "MISSING: Fire E4 rematch$"
-ENPALE_LEAGUE_ARENA_Text_DebugWater:
-	.string "MISSING: Water E4 rematch$"
-ENPALE_LEAGUE_ARENA_Text_DebugGrass:
-	.string "MISSING: Grass E4 rematch$"
-ENPALE_LEAGUE_ARENA_Text_DebugBug:
-	.string "MISSING: Bug E4 rematch$"	
+	.string "That proves it. You're the strongest.\p"
+	.string "Not just in this room, but all of\n"
+	.string "ENPALE.\p"
+	.string "You bested your own father, my son,\n"
+	.string "and now, me.\p"
+	.string "I tip my hat to you.\n"
+	.string "The throne is yours.\p"
+	.string "I'm off to find my son. Last I heard,\n"
+	.string "he was making quite the ruckus in\l"
+	.string "SINNOH. Oh, and as for those Elders,\n"
+	.string "I heard they were last heading to \p"
+	.string "that old bell tower in Wallar Marshlands.$"
 
 ENPALE_LEAGUE_ARENA_RivalChampionScene::
 	goto_if_set FLAG_DEFEATED_RIVAL_CHAMPION, ENPALE_LEAGUE_ARENA_RivalChampionScene_End
@@ -601,22 +579,66 @@ ENPALE_LEAGUE_ARENA_RivalChampionAftermath::
 
 @ ---------- EDIT 5: text (append to the text section) ----------
 
-ENPALE_LEAGUE_ARENA_Text_RivalChampionName:
-	.string "RIVAL$"  @ TODO rival's name
-
 ENPALE_LEAGUE_ARENA_Text_RivalChampionPreBattle:
-	.string "Let's go!$"  @ TODO
+	.string "Oh hey, it's you.\p"
+	.string "I spent some time away. I did some\n"
+	.string "training in SINNOH and learned a lot\l"
+	.string "about myself.\p"
+	.string "I don't need my father, ENPALE, this\n"
+	.string "silly POKéMON LEAGUE, or my stupid\l"
+	.string "ego.\p"
+	.string "All I need is my POKéMON.\p"
+	.string "They're not tools, they're friends,\n"
+	.string "and I see that now.\p"
+	.string "I hope you've grown as well, because\n"
+	.string "insight wasn't the only thing I\l"
+	.string "gained in SINNOH!$"
+
+ENPALE_LEAGUE_ARENA_Text_RivalChampionDefeat:
+	.string "Oh, man!$"
 
 ENPALE_LEAGUE_ARENA_Text_RivalChampionDefeatSpeech:
-	.string "What!?$"  @ TODO
+	.string "I… I feel… Awesome!\p"
+	.string "I actually felt something in that\n"
+	.string "loss! What power! What fun!\p"
+	.string "You're something else, man!\p"
+	.string "If I was going to lose the title as\n"
+	.string "CHAMPION, I'm glad it was to you!\p"
+	.string "I'll be seein' ya!$"
 
 ENPALE_LEAGUE_ARENA_Text_HemlockRivalChampionSpeech:
 	.string "C'mon.$"  @ TODO		
 
 
 ENPALE_LEAGUE_ARENA_Text_BrutusRivalChampionSpeech:
-	.string "I held that seat once.\p"
-	.string "Watching you take it from someone\n"
-	.string "else is a strange feeling.\p"
-	.string "Come on. There's a room that's been\n"
-	.string "waiting for you.$"	
+	.string "Hey kid.\p"
+	.string "I know it's been a while, but I feel\n"
+	.string "like I owe you this.\p"
+	.string "Watching you battle with all of your\n"
+	.string "might made me realize something.\p"
+	.string "You ARE the best.\p"
+	.string "And I should be proud, not scornful.\p"
+	.string "Let's take a walk.\n"
+	.string "Just you and I.$"
+
+ENPALE_LEAGUE_ARENA_Text_RivalChampionName:
+	.string "RIVAL$"	
+
+ENPALE_LEAGUE_ARENA_Text_DebugSilvio:
+	.string "MISSING: Silvio rematch$"
+
+ENPALE_LEAGUE_ARENA_Text_DebugFire:
+	.string "MISSING: Fire E4 final$"
+
+ENPALE_LEAGUE_ARENA_Text_DebugWater:
+	.string "MISSING: Water E4 final$"
+
+ENPALE_LEAGUE_ARENA_Text_DebugGrass:
+	.string "MISSING: Grass E4 final$"
+
+ENPALE_LEAGUE_ARENA_Text_DebugBug:
+	.string "MISSING: Bug E4 final$"
+
+ENPALE_LEAGUE_ARENA_Text_HemlockUmbraChampionSpeech:
+	.string "So, you did it again.\p"
+	.string "Let's go, kid. You know the way.$"	

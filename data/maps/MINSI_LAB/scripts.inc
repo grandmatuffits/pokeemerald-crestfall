@@ -425,10 +425,10 @@ MINSI_LAB_Text_Hemlock1:
 	.string "Oh! I wasn't expecting any\nvisitors today! I don't recognize\lyou, you must be new to Minsi City!\pWelcome! So, you're a new Pokemon\nTrainer? I only have a few left\lto give away, so pickings are slim,\lbut go ahead and take one!$"
 
 MINSI_LAB_Text_Hemlock2:
-	.string "Oh! Don't forget your Pokedex!\nA Pokemon Trainer is never fully\ldressed without one!$"
+	.string "Oh! Don't forget your Pokedex!\nA Pokemon Trainer isn't fully\ldressed without one!$"
 
 MINSI_LAB_Text_Hemlock4:
-	.string "Who are you?$"
+	.string "Who are you?!$"
 
 MINSI_LAB_Text_Rival1:
 	.string "Well, well, well! If it isn't\nthe loser!$"
@@ -585,8 +585,7 @@ MINSI_LAB_EventScript_HemlockPostDex::
 
 
 MINSI_LAB_Text_HemlockMilestone:
-	.string "So the LEAGUE has a new CHAMPION,\n"
-	.string "and it's you.\p"
+	.string "Hey champ! Long time, no see!\n"
 	.string "Let me see that POKéDEX a moment.$"
 
 MINSI_LAB_Text_HemlockAwarded:
@@ -615,7 +614,7 @@ MINSI_LAB_Text_Hemlock3:
 	.string "A regional POKéDEX should hold what\n"
 	.string "LIVES here. What you can actually\l"
 	.string "meet, out in the grass.\p"
-	.string "Fill a hundred of its pages and come\n"
+	.string "Come back later and\n"
 	.string "see me. I'll have something for you.$"	
 
 MINSI_LAB_EventScript_FossilMachine::
@@ -892,9 +891,30 @@ MINSI_LAB_EventScript_SynthReturn::
 	end
 
 MINSI_LAB_EventScript_SynthDone::
+	goto_if_set FLAG_MINSI_DUBIOUS_DISC_GIVEN, MINSI_LAB_EventScript_SynthPostDisc
+	goto_if_unset FLAG_BAYNOE_TEMPLE_DONE, MINSI_LAB_EventScript_SynthEpilogue
+	msgbox MINSI_LAB_Text_SynthDisc, MSGBOX_DEFAULT
+	giveitem ITEM_DUBIOUS_DISC
+	goto_if_eq VAR_RESULT, FALSE, MINSI_LAB_EventScript_SynthDiscBagFull
+	setflag FLAG_MINSI_DUBIOUS_DISC_GIVEN
+	msgbox MINSI_LAB_Text_SynthAfterDisc, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_EventScript_SynthEpilogue::
 	msgbox MINSI_LAB_Text_SynthEpilogue, MSGBOX_DEFAULT
 	release
-	end	
+	end
+
+MINSI_LAB_EventScript_SynthDiscBagFull::
+	msgbox MINSI_LAB_Text_SynthDiscBagFull, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_EventScript_SynthPostDisc::
+	msgbox MINSI_LAB_Text_SynthPostDisc, MSGBOX_DEFAULT
+	release
+	end
 
 MINSI_LAB_Text_SynthAsk:
 	.string "You're the one heading for ROUTE 1,\n"
@@ -932,6 +952,31 @@ MINSI_LAB_Text_SynthEpilogue:
 	.string "How's it running? No fragmenting?\n"
 	.string "Wonderful. Wonderful.$"
 
+MINSI_LAB_Text_SynthDisc:
+	.string "You're back. And the town's quiet\n"
+	.string "again, I hear.\p"
+	.string "I've been running your PORYGON's\n"
+	.string "field data. Years of it, in months.\p"
+	.string "It's outgrown what I built it for.\n"
+	.string "The code wants somewhere to go.\p"
+	.string "So I made it somewhere.$"
+
+MINSI_LAB_Text_SynthAfterDisc:
+	.string "A DUBIOUS DISC. Poor name. I didn't\n"
+	.string "choose it.\p"
+	.string "It won't work on the base form. It\n"
+	.string "needs the second one first.\p"
+	.string "Take it as far as it goes. I want to\n"
+	.string "know what's at the end.$"
+
+MINSI_LAB_Text_SynthDiscBagFull:
+	.string "Your bag's full. It'll keep on the\n"
+	.string "bench till you've room.$"
+
+MINSI_LAB_Text_SynthPostDisc:
+	.string "How's it running? No fragmenting?\n"
+	.string "Wonderful. Wonderful.$"
+	
 ALLENWOOD_FOREST_Text_ModuleUnknown:
 	.string "The air here hums.\p"
 	.string "Not insects. Something flatter than\n"
@@ -952,6 +997,7 @@ ALLENWOOD_FOREST_Text_ModuleFound:
 ALLENWOOD_FOREST_Text_ModuleGone:
 	.string "The leaf litter is just leaf litter\n"
 	.string "now. The hum is gone.$"	
+
 
 MINSI_LAB_EventScript_FossilNameParty::
 	playfanfare MUS_LEVEL_UP

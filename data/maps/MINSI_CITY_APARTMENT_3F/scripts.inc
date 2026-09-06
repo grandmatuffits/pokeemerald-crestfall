@@ -61,11 +61,64 @@ MINSI_CITY_APARTMENT_Text_ShinyDone:
 MINSI_CITY_APARTMENT_EventScript_Dev::
 	lock
 	faceplayer
-	@ TODO postgame: goto_if_set <FLAG_POSTGAME_COMPLETE>, ..._EventScript_DevBattle
+	goto_if_set FLAG_DEV_BEATEN, MINSI_CITY_APARTMENT_EventScript_DevPostBattle
+	goto_if_set FLAG_DEFEATED_RIVAL_CHAMPION, MINSI_CITY_APARTMENT_EventScript_DevChallenge
 	msgbox MINSI_CITY_APARTMENT_Text_Dev, MSGBOX_DEFAULT
 	release
 	end
 
+MINSI_CITY_APARTMENT_EventScript_DevChallenge::
+	msgbox MINSI_CITY_APARTMENT_Text_DevChallenge, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MINSI_CITY_APARTMENT_EventScript_DevDecline
+	msgbox MINSI_CITY_APARTMENT_Text_DevAccept, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_NANDAY0, MINSI_CITY_APARTMENT_Text_DevDefeat
+	setflag FLAG_DEV_BEATEN
+	special HealPlayerParty
+	msgbox MINSI_CITY_APARTMENT_Text_DevAfterBattle, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_APARTMENT_EventScript_DevDecline::
+	msgbox MINSI_CITY_APARTMENT_Text_DevDecline, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_APARTMENT_EventScript_DevPostBattle::
+	msgbox MINSI_CITY_APARTMENT_Text_DevPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_APARTMENT_Text_DevChallenge:
+	.string "You came back.\p"
+	.string "You've seen all of it, then. Every\n"
+	.string "route I drew. Every song I wrote.\p"
+	.string "There's one thing left I never got\n"
+	.string "to build properly.\p"
+	.string "A fight. Mine.\p"
+	.string "Care to?$"
+
+MINSI_CITY_APARTMENT_Text_DevAccept:
+	.string "Then let's find out whose region\n"
+	.string "this really is.$"
+
+MINSI_CITY_APARTMENT_Text_DevDefeat:
+	.string "…Well. I did write your levels.$"
+
+MINSI_CITY_APARTMENT_Text_DevAfterBattle:
+	.string "That's it. That's the last thing\n"
+	.string "in ENPALE.\p"
+	.string "You've done all of it now.\p"
+	.string "Thanks for staying to the end.$"
+
+MINSI_CITY_APARTMENT_Text_DevDecline:
+	.string "No rush. I've waited this long.$"
+
+MINSI_CITY_APARTMENT_Text_DevPostBattle:
+	.string "Good match.\p"
+	.string "Go on. Take her out for one more\n"
+	.string "lap if you like.$"
+	
 MINSI_CITY_APARTMENT_Text_Dev:
 	.string "Oh. A visitor.\p"
 	.string "I don't run a gym. No shop,\n"

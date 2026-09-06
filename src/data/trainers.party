@@ -24498,3 +24498,71 @@ Level: 38
 Gligar @ None
 Level: 38
 
+=== TRAINER_NANDAY0 ===
+Name: Nanday0
+Class: Bug Catcher
+Pic: Bug Catcher Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Cloyster @ Focus Sash
+Level: 100
+Ability: Skill Link
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Shell Smash
+- Icicle Spear
+- Rock Blast
+- Liquidation
+
+Porygon-Z @ Choice Scarf
+Level: 100
+Ability: Adaptability
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+- Tri Attack
+- Shadow Ball
+- Trick
+- Ice Beam
+
+Venusaur @ Venusaurite
+Level: 100
+Ability: Chlorophyll
+EVs: 252 HP / 180 Def / 76 SpD
+Bold Nature
+- Leech Seed
+- Toxic
+- Synthesis
+- Giga Drain
+
+Electrode @ Life Orb
+Level: 100
+Ability: Aftermath
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Volt Switch
+- Electro Ball
+- Thunder Wave
+- Signal Beam
+
+Mandibuzz @ Leftovers
+Level: 100
+Ability: Overcoat
+EVs: 248 HP / 76 Def / 184 Spe
+Impish Nature
+- Taunt
+- Toxic
+- Roost
+- Foul Play
+
+Shedinja @ Heavy-Duty Boots
+Level: 100
+Ability: Wonder Guard
+EVs: 252 Atk / 252 Spe
+Lonely Nature
+- Swords Dance
+- X-Scissor
+- Shadow Sneak
+- Protect

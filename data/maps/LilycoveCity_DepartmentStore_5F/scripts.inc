@@ -54,7 +54,6 @@ LilycoveCity_DepartmentStore_5F_Pokemart_Cushions:
 	.2byte ITEM_ELECTIRIZER,
     .2byte ITEM_MAGMARIZER,
     .2byte ITEM_UPGRADE,
-    .2byte ITEM_DUBIOUS_DISC,
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidRight::

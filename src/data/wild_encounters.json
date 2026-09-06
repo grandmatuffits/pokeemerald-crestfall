@@ -39807,6 +39807,155 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_SAFARI_ZONE_AREA_4",
+          "base_label": "gSAFARI_ZONE_AREA_4",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_BULBASAUR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TREECKO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_CHIKORITA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TURTWIG"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_CHESPIN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_GROOKEY"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_LITTEN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_CHIMCHAR"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 2,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TOTODILE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_MUDKIP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_FROAKIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_POPPLIO"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 42,
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 20,
+                "max_level": 42,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 42,
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 20,
+                "max_level": 42,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 42,
+                "species": "SPECIES_ALOMOMOLA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_TOTODILE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_MUDKIP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_FROAKIE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_POPPLIO"
+              }
+            ]
+          }
         }
       ]
     },

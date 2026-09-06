@@ -12,13 +12,35 @@ BAYNOE_HOUSE_EventScript_OldWoman::
 BAYNOE_HOUSE_EventScript_OldWomanReward::
 	goto_if_set FLAG_BAYNOE_OLDWOMAN_GAVE_ITEM, BAYNOE_HOUSE_EventScript_OldWomanPostGift
 	msgbox BAYNOE_HOUSE_Text_OldWomanReward, MSGBOX_DEFAULT
-	giveitem ITEM_ABILITY_PATCH
+	giveitem ITEM_MASTER_BALL
 	setflag FLAG_BAYNOE_OLDWOMAN_GAVE_ITEM
 	msgbox BAYNOE_HOUSE_Text_OldWomanAfterGift, MSGBOX_DEFAULT
 	release
 	end
 
 BAYNOE_HOUSE_EventScript_OldWomanPostGift::
+	goto_if_set FLAG_BAYNOE_OLDWOMAN_GAVE_PATCH, BAYNOE_HOUSE_EventScript_OldWomanPostPatch
+	specialvar VAR_RESULT, HasRegigigasInParty
+	goto_if_eq VAR_RESULT, TRUE, BAYNOE_HOUSE_EventScript_OldWomanPatch
+	msgbox BAYNOE_HOUSE_Text_OldWomanPostGift, MSGBOX_DEFAULT
+	release
+	end
+
+BAYNOE_HOUSE_EventScript_OldWomanPatch::
+	msgbox BAYNOE_HOUSE_Text_OldWomanRegigigas, MSGBOX_DEFAULT
+	giveitem ITEM_ABILITY_PATCH
+	goto_if_eq VAR_RESULT, FALSE, BAYNOE_HOUSE_EventScript_OldWomanPatchBagFull
+	setflag FLAG_BAYNOE_OLDWOMAN_GAVE_PATCH
+	msgbox BAYNOE_HOUSE_Text_OldWomanAfterPatch, MSGBOX_DEFAULT
+	release
+	end
+
+BAYNOE_HOUSE_EventScript_OldWomanPatchBagFull::
+	msgbox BAYNOE_HOUSE_Text_OldWomanBagFull, MSGBOX_DEFAULT
+	release
+	end
+
+BAYNOE_HOUSE_EventScript_OldWomanPostPatch::
 	msgbox BAYNOE_HOUSE_Text_OldWomanPostGift, MSGBOX_DEFAULT
 	release
 	end
@@ -50,3 +72,22 @@ BAYNOE_HOUSE_Text_OldWomanAfterGift:
 BAYNOE_HOUSE_Text_OldWomanPostGift:
 	.string "Baynoe will heal, in time. Places\n"
 	.string "like this always do.$"
+
+	BAYNOE_HOUSE_Text_OldWomanRegigigas:
+	.string "Oh my. Oh, my word.\p"
+	.string "That one. I've only seen it in the\n"
+	.string "old carvings, down at the temple.\p"
+	.string "They said it woke when the smaller\n"
+	.string "ones called to it.\p"
+	.string "I never thought I'd live to see it\n"
+	.string "standing in my parlour.$"
+
+BAYNOE_HOUSE_Text_OldWomanAfterPatch:
+	.string "Take this too. My husband dug it up\n"
+	.string "years ago and never knew what it\l"
+	.string "was for.\p"
+	.string "I think it was waiting for you.$"
+
+BAYNOE_HOUSE_Text_OldWomanBagFull:
+	.string "Your bag's full, dear. Come back\n"
+	.string "when you've room.$"

@@ -17,6 +17,11 @@
       "map": "MAP_SAFARI_ZONE_AREA_1",
       "offset": 10,
       "direction": "right"
+    },
+    {
+      "map": "MAP_SAFARI_ZONE_AREA_4",
+      "offset": 10,
+      "direction": "up"
     }
   ],
   "object_events": [],

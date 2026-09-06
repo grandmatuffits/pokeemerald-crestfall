@@ -1,0 +1,45 @@
+{
+  "id": "MAP_SAFARI_ZONE_AREA_4",
+  "name": "SAFARI_ZONE_AREA_4",
+  "layout": "LAYOUT_SAFARI_ZONE_AREA_4",
+  "music": "MUS_ENPALE_COPPERGATE",
+  "region_map_section": "MAPSEC_LAVENDER_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_SAFARI_ZONE_AREA_3",
+      "offset": -10,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_SAFARI_ZONE_AREA_2",
+      "offset": 62,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 35,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_DELPHOXITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_SAFARI_ZONE_DELPHOXITE"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

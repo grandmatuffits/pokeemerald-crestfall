@@ -1231,8 +1231,9 @@
 #define TRAINER_ROUTE9_ATHLETE_R2                     1225
 #define TRAINER_ROUTE_9_PICNICKER_R2                  1226
 #define TRAINER_ROUTE_9_BIRDKEEPER_R2                 1227
+#define TRAINER_NANDAY0                               1228
 
-#define TRAINERS_COUNT_EMERALD                 1228
+#define TRAINERS_COUNT_EMERALD                 1229
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

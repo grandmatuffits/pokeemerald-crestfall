@@ -1453,6 +1453,13 @@
 #define FLAG_SAFARI_BOUNTIES_ROLLED                 (SYSTEM_FLAGS + 0xA2)
 #define FLAG_SAFARI_BOUNTY_REROLLED                 (SYSTEM_FLAGS + 0xA4)
 
+#define FLAG_SAFARI_ZONE_DELPHOXITE                 (SYSTEM_FLAGS + 0xA5)
+#define FLAG_BAYNOE_OLDWOMAN_GAVE_PATCH             (SYSTEM_FLAGS + 0xA3)
+
+#define FLAG_DEV_BEATEN                             (SYSTEM_FLAGS + 0xA6)
+
+#define FLAG_MINSI_DUBIOUS_DISC_GIVEN               (SYSTEM_FLAGS + 0xA7)
+
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2

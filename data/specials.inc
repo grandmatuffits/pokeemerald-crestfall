@@ -659,3 +659,4 @@ gSpecials::
 	def_special TurnInSafariBounty
 	def_special BufferSafariBountyText
 	def_special GetMegaVoucherStone
+	def_special HasRegigigasInParty

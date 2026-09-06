@@ -4435,6 +4435,17 @@ void BufferSafariBountyText(void)
 
 static const u16 sMegaVoucherStones[] =
 {
+    ITEM_VENUSAURITE,
+    ITEM_CHARIZARDITE_X,
+    ITEM_CHARIZARDITE_Y,
+    ITEM_BLASTOISINITE,
+    ITEM_MEGANIUMITE,
+    ITEM_FERALIGITE,
+    ITEM_SCEPTILITE,
+    ITEM_BLAZIKENITE,
+    ITEM_SWAMPERTITE,
+    ITEM_CHESNAUGHTITE,
+    ITEM_GRENINJITE,
     ITEM_PIDGEOTITE,
     ITEM_VICTREEBELITE,
     ITEM_STEELIXITE,
@@ -4457,7 +4468,18 @@ u16 GetMegaVoucherStone(void)
     gSpecialVar_0x8000 = sMegaVoucherStones[gSpecialVar_0x8004];
     return TRUE;
 }
-
+u16 HasRegigigasInParty(void)
+{
+    u32 i;
+    for (i = 0; i < gPartiesCount[B_TRAINER_PLAYER]; i++)
+    {
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_IS_EGG, NULL))
+            continue;
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES, NULL) == SPECIES_REGIGIGAS)
+            return TRUE;
+    }
+    return FALSE;
+}
 u16 GetNumFansOfPlayerInTrainerFanClub(void)
 {
     u8 i;
