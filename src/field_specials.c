@@ -4184,6 +4184,15 @@ static u16 PlayerLoseRandomTrainerFan(void)
     return idx;
 }
 
+// VAR_0x8004 = local id, VAR_0x8005 = graphics id
+void ScriptSetObjectGraphics(void)
+{
+    ObjectEventSetGraphicsIdByLocalIdAndMap(gSpecialVar_0x8004,
+        gSaveBlock1Ptr->location.mapNum,
+        gSaveBlock1Ptr->location.mapGroup,
+        gSpecialVar_0x8005);
+}
+
 u16 HasRegiTrioInParty(void)
 {
     u32 i;

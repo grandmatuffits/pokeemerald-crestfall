@@ -649,6 +649,7 @@ gSpecials::
 	def_special CheckCaughtSpecies
 	def_special InitEnpaleBeastRoamers
 	def_special HasRegiTrioInParty
+    def_special ScriptSetObjectGraphics
 	def_special CanFulfillSafariBounty
 	def_special ValidateSafariBountyMon
 	def_special RollAllSafariBounties

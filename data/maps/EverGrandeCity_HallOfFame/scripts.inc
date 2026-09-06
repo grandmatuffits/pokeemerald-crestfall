@@ -8,6 +8,11 @@ EverGrandeCity_HallOfFame_OnWarp:
 	.2byte 0
 
 EverGrandeCity_HallOfFame_EventScript_TurnPlayerNorth::
+	goto_if_unset FLAG_FINAL_E4_UNLOCKED, EverGrandeCity_HallOfFame_EventScript_TurnPlayerNorth_Done
+	setvar VAR_0x8004, LOCALID_HALL_OF_FAME_WALLACE
+	setvar VAR_0x8005, OBJ_EVENT_GFX_GIOVANNI
+	special ScriptSetObjectGraphics
+EverGrandeCity_HallOfFame_EventScript_TurnPlayerNorth_Done::
 	turnobject LOCALID_PLAYER, DIR_NORTH
 	end
 

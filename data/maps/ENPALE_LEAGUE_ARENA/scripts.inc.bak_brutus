@@ -576,28 +576,31 @@ ENPALE_LEAGUE_ARENA_RivalChampionAftermath::
 	waitmovement 0
 	special RemoveCameraObject
 	delay 30
-	setobjectxyperm LOCALID_BRUTUS, 12, 11
-	clearflag FLAG_HIDE_ARENA_BRUTUS
-	addobject LOCALID_BRUTUS
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
+@ Hemlock closes the other two tiers; reusing him keeps the trilogy consistent.
+@ Swap this block for the real ending sequence when you build it.
+	clearflag FLAG_HIDE_ARENA_HEMLOCK
+	addobject LOCALID_HEMLOCK
+	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerFaceDown
 	waitmovement 0
-	setspeaker ENPALE_LEAGUE_ARENA_Text_BrutusName
-	msgbox ENPALE_LEAGUE_ARENA_Text_BrutusRivalChampionSpeech, MSGBOX_SIGN
+	setspeaker ENPALE_LEAGUE_ARENA_Text_HemlockName
+	msgbox ENPALE_LEAGUE_ARENA_Text_HemlockRivalChampionSpeech, MSGBOX_SIGN
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepRightFaceLeft
 	waitmovement 0
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
+	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepLeftBehind
 	waitmovement 0
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
+	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerToDoor
 	waitmovement 0
 	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
 	waitstate
 	end
+
+
 
 @ ---------- EDIT 5: text (append to the text section) ----------
 
@@ -612,11 +615,3 @@ ENPALE_LEAGUE_ARENA_Text_RivalChampionDefeatSpeech:
 
 ENPALE_LEAGUE_ARENA_Text_HemlockRivalChampionSpeech:
 	.string "C'mon.$"  @ TODO		
-
-
-ENPALE_LEAGUE_ARENA_Text_BrutusRivalChampionSpeech:
-	.string "I held that seat once.\p"
-	.string "Watching you take it from someone\n"
-	.string "else is a strange feeling.\p"
-	.string "Come on. There's a room that's been\n"
-	.string "waiting for you.$"	
