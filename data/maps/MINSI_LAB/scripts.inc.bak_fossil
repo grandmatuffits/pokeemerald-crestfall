@@ -651,14 +651,12 @@ MINSI_LAB_EventScript_FossilMachine::
 MINSI_LAB_EventScript_FossilHelix::
 	bufferitemname STR_VAR_1, ITEM_HELIX_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_OMANYTE
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_OMANYTE
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_OMANYTE, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_HELIX_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_OMANYTE
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -666,14 +664,12 @@ MINSI_LAB_EventScript_FossilHelix::
 MINSI_LAB_EventScript_FossilDome::
 	bufferitemname STR_VAR_1, ITEM_DOME_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_KABUTO
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_KABUTO
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_KABUTO, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_DOME_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_KABUTO
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -681,14 +677,12 @@ MINSI_LAB_EventScript_FossilDome::
 MINSI_LAB_EventScript_FossilAmber::
 	bufferitemname STR_VAR_1, ITEM_OLD_AMBER
 	bufferspeciesname STR_VAR_2, SPECIES_AERODACTYL
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_AERODACTYL
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_AERODACTYL, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_OLD_AMBER
-	bufferspeciesname STR_VAR_1, SPECIES_AERODACTYL
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -696,14 +690,12 @@ MINSI_LAB_EventScript_FossilAmber::
 MINSI_LAB_EventScript_FossilRoot::
 	bufferitemname STR_VAR_1, ITEM_ROOT_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_LILEEP
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_LILEEP
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_LILEEP, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_ROOT_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_LILEEP
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -711,14 +703,12 @@ MINSI_LAB_EventScript_FossilRoot::
 MINSI_LAB_EventScript_FossilClaw::
 	bufferitemname STR_VAR_1, ITEM_CLAW_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_ANORITH
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_ANORITH
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_ANORITH, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_CLAW_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_ANORITH
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -726,14 +716,12 @@ MINSI_LAB_EventScript_FossilClaw::
 MINSI_LAB_EventScript_FossilSkull::
 	bufferitemname STR_VAR_1, ITEM_SKULL_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_CRANIDOS
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CRANIDOS
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_CRANIDOS, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_SKULL_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_CRANIDOS
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -741,14 +729,12 @@ MINSI_LAB_EventScript_FossilSkull::
 MINSI_LAB_EventScript_FossilArmor::
 	bufferitemname STR_VAR_1, ITEM_ARMOR_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_SHIELDON
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SHIELDON
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_SHIELDON, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_ARMOR_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_SHIELDON
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -756,14 +742,12 @@ MINSI_LAB_EventScript_FossilArmor::
 MINSI_LAB_EventScript_FossilCover::
 	bufferitemname STR_VAR_1, ITEM_COVER_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_TIRTOUGA
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TIRTOUGA
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_TIRTOUGA, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_COVER_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_TIRTOUGA
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -771,14 +755,12 @@ MINSI_LAB_EventScript_FossilCover::
 MINSI_LAB_EventScript_FossilPlume::
 	bufferitemname STR_VAR_1, ITEM_PLUME_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_ARCHEN
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_ARCHEN
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_ARCHEN, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_PLUME_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_ARCHEN
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -786,14 +768,12 @@ MINSI_LAB_EventScript_FossilPlume::
 MINSI_LAB_EventScript_FossilJaw::
 	bufferitemname STR_VAR_1, ITEM_JAW_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_TYRUNT
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TYRUNT
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_TYRUNT, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_JAW_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_TYRUNT
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
@@ -801,14 +781,12 @@ MINSI_LAB_EventScript_FossilJaw::
 MINSI_LAB_EventScript_FossilSail::
 	bufferitemname STR_VAR_1, ITEM_SAIL_FOSSIL
 	bufferspeciesname STR_VAR_2, SPECIES_AMAURA
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_AMAURA
 	msgbox MINSI_LAB_Text_FossilConfirm, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_AMAURA, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
 	removeitem ITEM_SAIL_FOSSIL
-	bufferspeciesname STR_VAR_1, SPECIES_AMAURA
 	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
 	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
