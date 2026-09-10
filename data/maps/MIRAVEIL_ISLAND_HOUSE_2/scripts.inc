@@ -27,34 +27,38 @@ MIRAVEIL_ISLAND_EventScript_FisherDone::
 	msgbox MIRAVEIL_ISLAND_Text_FisherPostReward, MSGBOX_DEFAULT
 	release
 	end
-
+	
 MIRAVEIL_ISLAND_Text_FisherGreeting:
-	.string "Hah! You there. You've got the look\n"
-	.string "of someone who thinks they can fish.$"
+	.string "Greetings, lad.\p"
+	.string "You seem like a fervent fishing\n"
+	.string "fellow!$"
 
 MIRAVEIL_ISLAND_Text_FisherGyaradosTale:
-	.string "Feast your eyes. A GYARADOS!\p"
-	.string "I hooked one once, out in the deep\n"
-	.string "water. Biggest sea monster these\l"
-	.string "waters ever spat up.\p"
-	.string "My rod's landed catches yours never\n"
-	.string "will. …But I'd give anything to see\l"
-	.string "one of those beasts again.\p"
-	.string "You wouldn't happen to have a GYARADOS\n"
-	.string "on you, would you?$"
+	.string "Feast your eyes, a GYARADOS!\p"
+	.string "I reeled one in many a moon ago out\n"
+	.string "in the deepest of waters.\p"
+	.string "Quite the beauty it was!\p"
+	.string "I have not seen a sea creature so\n"
+	.string "glorious since then.\p"
+	.string "Now I long to see the creature once\n"
+	.string "more!\p"
+	.string "I'd give anything just to watch it\n"
+	.string "in all of its beauty!\p"
+	.string "Even this SUPER ROD!\p"
+	.string "Do you have one I may gaze upon?$"
 
 MIRAVEIL_ISLAND_Text_FisherChallenge:
-	.string "No? Then quit wasting my line.\n"
-	.string "Come back when you've a real monster\l"
-	.string "to show me.$"
+	.string "You don't have one?\p"
+	.string "Then get out and get fishing, lad!$"
 
 MIRAVEIL_ISLAND_Text_FisherImpressed:
-	.string "…Well, I'll be. A GYARADOS, right\n"
-	.string "there in front of me.\p"
-	.string "You're the genuine article, angler.\n"
-	.string "Here. Take my SUPER ROD. A catch\l"
-	.string "like yours has earned it.$"
+	.string "Well, I'll be.\p"
+	.string "It's truly the ferocious GYARADOS,\n"
+	.string "in the flesh!\p"
+	.string "You're the real deal, lad.\p"
+	.string "Here, have this SUPER ROD, and\n"
+	.string "conquer the seas!$"
 
 MIRAVEIL_ISLAND_Text_FisherPostReward:
-	.string "That GYARADOS of yours… takes me\n"
-	.string "back. Keep those lines tight.$"
+	.string "Oh, how beautiful it was, that\n"
+	.string "first GYARADOS I've ever seen…$"

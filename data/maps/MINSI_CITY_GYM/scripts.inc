@@ -48,74 +48,95 @@ MINSI_CITY_GYM_EventScript_RossRematchBeaten::
 	release
 	end
 
-MINSI_CITY_GYM_Text_RossPreBattle:
-	.string "So you found your way here. Good.\p"
-	.string "This gym's been dark a long time.\n"
-	.string "Most folks figured it closed for\l"
-	.string "good. Some days, so did I.\p"
-	.string "I couldn't run a gym and chase the\n"
-	.string "Covenant both. So I chose the chase.\l"
-	.string "Left this place to gather dust.\p"
-	.string "And I was always a step behind them.\n"
-	.string "Always too late. Until you.\p"
-	.string "You did what I spent years failing\n"
-	.string "to do. So I'm back. And before I\l"
-	.string "hand you that last badge…\p"
-	.string "I want to see it for myself. Come\n"
-	.string "on. Show me.$"
-
-MINSI_CITY_GYM_Text_RossIntro:
-	.string "No proxies. No trainers to wear you\n"
-	.string "down first. Just me.\p"
-	.string "That's how it should be.$"
-
-MINSI_CITY_GYM_Text_RossDefeat:
-	.string "…Yeah. Yeah, that's what I thought\n"
-	.string "I'd see.$"
-
-MINSI_CITY_GYM_Text_RossPostBattle:
-	.string "Poison's an ugly type. Patient.\n"
-	.string "Wears you down when you're not\l"
-	.string "looking. Same as the work I do.\p"
-	.string "You beat it head-on anyway.\p"
-	.string "The MIRE BADGE is yours. Every gym\n"
-	.string "in Enpale has recognized you now.$"
-
-MINSI_CITY_GYM_Text_RossTM:
-	.string "Take this, too. TOXIC.\p"
-	.string "A slow poison always finds its mark\n"
-	.string "in the end. Use it better than they\l"
-	.string "ever did.$"
-
-MINSI_CITY_GYM_Text_RossBeaten:
-	.string "Eight badges. You've done what no\n"
-	.string "one else could.\p"
-	.string "Enpale's in better hands than it's\n"
-	.string "been in years. Maybe ever.\p"
-	.string "Go on. The League's waiting. And\n"
-	.string "so is whatever comes after.$"	
-
-MINSI_CITY_GYM_Text_RossRematchIntro:
-	.string "Umbra sent you? Figured he would.\nBefore we continue, let's see if the Champion's\lgauntlet actually toughened you up.$"
+MINSI_CITY_GYM_Text_RossRematchPostBattle:
+	.string "Nicely done.\p"
+	.string "Although I don't have much to\n"
+	.string "report.\p"
+	.string "Getting this gym back up and running\n"
+	.string "took a lot of time away from my\l"
+	.string "detective work.\p"
+	.string "Try asking around at the other Gyms.\n"
+	.string "I'm sure one of them has to know\l"
+	.string "something.\p"
+	.string "Also, I'd leave MAYOR SILVIO for\n"
+	.string "last.\p"
+	.string "He's probably got his hands tied\n"
+	.string "with fixing up DELMARK.$"
 
 MINSI_CITY_GYM_Text_RossRematchDefeat:
-    .string "Heh, not bad.$"
-
-MINSI_CITY_GYM_Text_RossRematchPostBattle:
-    .string "As for the Elders - go talk to all the\nother Gym Leaders too, see what they\lknow. If you strike out with them, try\lSilvio. Fair warning though, he's busy\lfixing up his city, so don't go bothering\lhim until you've got no other leads.$"
-
-MINSI_CITY_GYM_Text_RossRematchRepeat:
-	.string "Get out there and start asking around.\nThe Elders won't wait forever.$"	
-
+	.string "…Yeah. Seems about right.$"
+	
 MINSI_CITY_GYM_Text_RossStoneGiven:
 	.string "Also, you can have this.$"	
 
+	MINSI_CITY_GYM_Text_RossPreBattle:
+	.string "You found your way back to MINSI.\n"
+	.string "Good.\p"
+	.string "Now that TEAM COVENANT is dealt\n"
+	.string "with, I can go back to being a\l"
+	.string "GYM LEADER.\p"
+	.string "It might take some time to get this\n"
+	.string "place up and running again.\p"
+	.string "But I guess I owe you a battle now,\n"
+	.string "huh? Alright.$"
+
+MINSI_CITY_GYM_Text_RossIntro:
+	.string "You seem to be able to handle TEAM\n"
+	.string "COVENANT well enough.\p"
+	.string "But how will you fare when all of\n"
+	.string "your POKéMON succumb to poison?$"
+
+MINSI_CITY_GYM_Text_RossDefeat:
+	.string "…Yeah. Seems about right.$"
+
+MINSI_CITY_GYM_Text_RossPostBattle:
+	.string "You took my poison like it was a\n"
+	.string "cure.\p"
+	.string "For that, I'm impressed.\p"
+	.string "Here, your very own MIRE BADGE.\n"
+	.string "Wear it with pride.$"
+
+MINSI_CITY_GYM_Text_RossTM:
+	.string "Take this, as well. It's TOXIC.\p"
+	.string "Use it right, and you'll win every\n"
+	.string "time.$"
+
+MINSI_CITY_GYM_Text_RossBeaten:
+	.string "If you have eight badges now, go\n"
+	.string "north to the POKéMON LEAGUE, where\l"
+	.string "you'll truly be tested.$"
+
+MINSI_CITY_GYM_Text_RossRematchIntro:
+	.string "Hello again.\p"
+	.string "What's that? UMBRA sent you?\p"
+	.string "I guess after losing to you he\n"
+	.string "decided to switch sides.\p"
+	.string "Oh? He says I'll give you\n"
+	.string "information on what TEAM COVENANT\l"
+	.string "is up to now?\p"
+	.string "Fine, but let's see how strong you\n"
+	.string "are after the POKéMON LEAGUE,\l"
+	.string "CHAMPION.$"
+
+MINSI_CITY_GYM_Text_RossRematchRepeat:
+	.string "Try asking around at the other Gyms.\n"
+	.string "I'm sure one of them has to know\l"
+	.string "something.\p"
+	.string "Also, I'd leave MAYOR SILVIO for\n"
+	.string "last.\p"
+	.string "He's probably got his hands tied\n"
+	.string "with fixing up DELMARK.$"
+
 MINSI_CITY_GYM_Text_RossBeasts:
-	.string "One more thing. Three POKéMON came\n"
-	.string "over the border after whatever the\l"
-	.string "ELDERS did out east.\p"
-	.string "COBALION, TERRAKION, VIRIZION. They\n"
-	.string "haven't stopped moving since.\p"
-	.string "I've filed what we know with your\n"
-	.string "POKéDEX. If they surface anywhere,\l"
-	.string "you'll see it on the area map.$"
+	.string "Oh, one more thing.\p"
+	.string "Since you're asking me for\n"
+	.string "information, I figured you'd\l"
+	.string "probably want to know.\p"
+	.string "Due to a recent attack in UNOVA,\n"
+	.string "there have been sightings of\l"
+	.string "VIRIZION, TERRAKION, and COBALION\l"
+	.string "around ENPALE.\p"
+	.string "Keep your eyes open.\p"
+	.string "Their power might be just what you\n"
+	.string "need to finish the job on TEAM\l"
+	.string "COVENANT.$"

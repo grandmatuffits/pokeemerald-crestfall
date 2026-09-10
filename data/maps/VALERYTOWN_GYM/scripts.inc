@@ -7,15 +7,7 @@ VALERYTOWN_GYM_EventScript_Greeter::
 	msgbox VALERYTOWN_GYM_Text_Greeter, MSGBOX_DEFAULT
 	release
 	end
-
-VALERYTOWN_GYM_Text_Greeter:
-	.string "Unlike other gyms, RANDALL\n"
-	.string "doesn't bother with puzzles or\l"
-	.string "mazes.\p"
-	.string "Just a plain, simple gauntlet.\p"
-	.string "Get past his goons, and he'll\n"
-	.string "take you out himself.$"
-
+	
 VALERYTOWN_GYM_EventScript_Randall::
 	lock
 	faceplayer
@@ -57,39 +49,6 @@ VALERYTOWN_GYM_EventScript_RandallRematch::
 	release
 	end
 
-VALERYTOWN_GYM_Text_RandallIntro:
-	.string "So you cut through my boys.\p"
-	.string "Good. Saves me the trouble of\n"
-	.string "being bored.\p"
-	.string "This is my town, kid. Every\n"
-	.string "brick, every soul in it.\p"
-	.string "You want to leave? You go\n"
-	.string "through me first.$"
-
-VALERYTOWN_GYM_Text_RandallDefeat:
-	.string "…Hah. Not bad.$"
-
-VALERYTOWN_GYM_Text_RandallPostBattle:
-	.string "Don't let it go to your head.\p"
-	.string "You beat me in a battle. You\n"
-	.string "didn't beat ME.\p"
-	.string "This town's still mine. Always\n"
-	.string "will be.$"
-
-VALERYTOWN_GYM_Text_RandallBadge:
-	.string "Rules are rules, though. Take\n"
-	.string "the QUARRY BADGE.\p"
-	.string "It's yours. Fair and square.$"
-
-VALERYTOWN_GYM_Text_RandallTM:
-	.string "And this. TM63. DRAIN PUNCH.\p"
-	.string "Hit hard, take what's theirs.\n"
-	.string "That's how it works around\l"
-	.string "here.\p"
-	.string "Now get out of my town.$"
-
-VALERYTOWN_GYM_Text_RandallRematch:
-	.string "You again. Still my town.$"	
 
 VALERYTOWN_GYM_EventScript_Blackbelt1::
 	trainerbattle_single TRAINER_VALERYTOWN_BLACKBELT_1, VALERYTOWN_GYM_Text_Blackbelt1Intro, VALERYTOWN_GYM_Text_Blackbelt1Defeat
@@ -131,98 +90,145 @@ VALERYTOWN_GYM_EventScript_Blackbelt4::
 	msgbox VALERYTOWN_GYM_Text_Blackbelt4Post, MSGBOX_AUTOCLOSE
 	end	
 
+VALERYTOWN_GYM_Text_Greeter:
+	.string "Unlike most other gyms, there's no\n"
+	.string "puzzle or maze.\p"
+	.string "Just a plain and simple gauntlet.\p"
+	.string "Do you have what it takes to face\n"
+	.string "RANDALL?$"
+
+VALERYTOWN_GYM_Text_RandallIntro:
+	.string "So, you actually made it through.\p"
+	.string "I didn't think you had it in you.\p"
+	.string "But your luck's run out, kid.\p"
+	.string "My only rule in this gym: don't cry\n"
+	.string "to daddy when you lose.$"
+
+VALERYTOWN_GYM_Text_RandallDefeat:
+	.string "Grr…$"
+
+VALERYTOWN_GYM_Text_RandallPostBattle:
+	.string "Hey! Not fair!\p"
+	.string "You can't just waltz in here and act\n"
+	.string "like you own this place!\p"
+	.string "Stupid kid! I! Uhh…\p"
+	.string "Grr… Alright fine… Here…$"
+
+VALERYTOWN_GYM_Text_RandallBadge:
+	.string "Take your stupid VIGOR BADGE and\n"
+	.string "get out.$"
+
+VALERYTOWN_GYM_Text_RandallTM:
+	.string "Oh, and I guess you can have this.\p"
+	.string "TM63. DRAIN PUNCH.\p"
+	.string "It steals health while packing a\n"
+	.string "punch.\p"
+	.string "Now, get out of my town.\n"
+	.string "I'll tell my boys to let you by.$"
+
+VALERYTOWN_GYM_Text_RandallRematch:
+	.string "You again!? I told you to stay out!\p"
+	.string "What? TEAM COVENANT? ELDERS?\p"
+	.string "Shut up and fight me!$"
+
 VALERYTOWN_GYM_Text_Blackbelt1Intro:
-	.string "New face. We don't like new\n"
-	.string "faces.$"
+	.string "A new face to pound in? Sounds fun.$"
+
 VALERYTOWN_GYM_Text_Blackbelt1Defeat:
-	.string "Tch. Lucky.$"
+	.string "Tch!$"
+
 VALERYTOWN_GYM_Text_Blackbelt1Post:
-	.string "Randall's gonna grind you\n"
-	.string "down. You'll see.$"
+	.string "Whatever, RANDALL's gonna beat you\n"
+	.string "down easily.$"
 
 VALERYTOWN_GYM_Text_HikerIntro:
-	.string "You lost, kid? Only one way\n"
-	.string "outta here, and it's through\l"
-	.string "us.$"
+	.string "Kid, are you lost?\n"
+	.string "Here, I'll set you straight!$"
+
 VALERYTOWN_GYM_Text_HikerDefeat:
-	.string "Hmph. Solid arm on you.$"
+	.string "Hmph! Good stuff!$"
+
 VALERYTOWN_GYM_Text_HikerPost:
-	.string "Won't matter. Nobody beats\n"
-	.string "the boss.$"
+	.string "Doesn't matter.\n"
+	.string "The boss will show you.$"
 
 VALERYTOWN_GYM_Text_Blackbelt2Intro:
-	.string "Randall pays us to keep the\n"
-	.string "riffraff out.\p"
-	.string "That's you.$"
+	.string "RANDALL pays me well to take care\n"
+	.string "of punks like you!$"
+
 VALERYTOWN_GYM_Text_Blackbelt2Defeat:
-	.string "Ugh… he's not gonna like\n"
-	.string "this.$"
+	.string "Uh oh…$"
+
 VALERYTOWN_GYM_Text_Blackbelt2Post:
-	.string "Keep going. See what it gets\n"
-	.string "you.$"
+	.string "I hope RANDALL didn't see that…$"
 
 VALERYTOWN_GYM_Text_GuitaristIntro:
-	.string "This town runs on one rule,\n"
-	.string "friend.\p"
-	.string "Randall's word. And Randall\n"
-	.string "says no.$"
+	.string "This town's got one rule, friend.\p"
+	.string "RANDALL's word.\n"
+	.string "And that word is GO!$"
+
 VALERYTOWN_GYM_Text_GuitaristDefeat:
-	.string "Off-key… that's how I feel\n"
-	.string "right now.$"
+	.string "Oof!$"
+
 VALERYTOWN_GYM_Text_GuitaristPost:
-	.string "You're brave or stupid.\n"
-	.string "Guess we'll find out.$"
+	.string "I guess go forward…$"
 
 VALERYTOWN_GYM_Text_ExpertIntro:
-	.string "Two of us, one of you.\p"
-	.string "That's about how fair things\n"
-	.string "are in this town.$"
+	.string "I may be older, but I'm also wiser!$"
+
 VALERYTOWN_GYM_Text_ExpertDefeat:
-	.string "…Outmatched. Both of us.$"
+	.string "Outmatched…$"
+
 VALERYTOWN_GYM_Text_ExpertPost:
-	.string "Randall's next. He doesn't\n"
-	.string "play fair either.$"
+	.string "Watch your back!$"
 
 VALERYTOWN_GYM_Text_Blackbelt3Intro:
-	.string "Still standing? Stubborn.$"
+	.string "You're a stubborn one, huh?$"
+
 VALERYTOWN_GYM_Text_Blackbelt3Defeat:
-	.string "Gah! Can't be…$"
+	.string "Gah!$"
+
 VALERYTOWN_GYM_Text_Blackbelt3Post:
-	.string "The boss is right through\n"
-	.string "there. Your funeral.$"
+	.string "Fine, go see the boss.\n"
+	.string "Your funeral…$"
 
 VALERYTOWN_GYM_Text_RockerIntro:
-	.string "Last stop before the boss.\p"
-	.string "We don't let just anyone\n"
-	.string "through. Prove it.$"
+	.string "Last stop before the boss.\n"
+	.string "Can you handle it?$"
+
 VALERYTOWN_GYM_Text_RockerDefeat:
-	.string "Alright, alright! You're the\n"
-	.string "real deal.$"
+	.string "Alright, already!$"
+
 VALERYTOWN_GYM_Text_RockerPost:
-	.string "Go on. Randall's waiting.\p"
-	.string "Hope you're ready for a\n"
-	.string "beating.$"
+	.string "Fine, just don't cry when RANDALL\n"
+	.string "beats you down.$"
 
 VALERYTOWN_GYM_Text_Blackbelt4Intro:
-	.string "Nobody gets to Randall. Nobody.$"
+	.string "Nobody gets to see RANDALL without\n"
+	.string "my say-so. Nobody.$"
+
 VALERYTOWN_GYM_Text_Blackbelt4Defeat:
-	.string "How… how did you…$"
+	.string "What!? How!?$"
+
 VALERYTOWN_GYM_Text_Blackbelt4Post:
-	.string "Fine. You want him? He's all\n"
-	.string "yours.\p"
-	.string "Don't say we didn't warn you.$"	
+	.string "Fine, go see him.\n"
+	.string "Don't say I didn't warn ya.$"
 
 VALERYTOWN_GYM_Text_RandallRematchIntro:
-	.string "Heard the Elders are making noise\nagain.\pGood. Let's see if beating me once\nwas a fluke.$"
+	.string "You again!? I told you to stay out!\p"
+	.string "What? TEAM COVENANT? ELDERS?\p"
+	.string "Shut up and fight me!$"
 
 VALERYTOWN_GYM_Text_RandallRematchDefeat:
-	.string "…Tch. Still got it, huh.$"
+	.string "Oof, you still got it.$"
 
 VALERYTOWN_GYM_Text_RandallRematchPostBattle:
-	.string "Fine. Go deal with them.\pTown's still mine when you get back.$"
+	.string "Look, I don't know jack about some\n"
+	.string "cult, alright?\p"
+	.string "Just beat it!$"
 
 VALERYTOWN_GYM_Text_RandallRematchRepeat:
-	.string "Go on. Handle your business.$"	
+	.string "I said leave!$"
 
 VALERYTOWN_GYM_Text_RandallStoneGiven:
 	.string "Also, you can have this.$"	

@@ -22,22 +22,22 @@ COPPERGATE_CITY_EventScript_BrotherDone::
 	end
 
 COPPERGATE_CITY_Text_BrotherIdle:
-	.string "Copper's in the walls here, you\n"
-	.string "know. Whole town was built on it.$"
+	.string "This city's pretty cool.\p"
+	.string "Started out as a little town, then\n"
+	.string "people found copper in RIDLEY CAVE.\p"
+	.string "Boom, now we're a big city!$"
 
 COPPERGATE_CITY_Text_BrotherReceive:
-	.string "A letter? From who, now…\p"
-	.string "…That's his chicken scratch, all\n"
-	.string "right. Forty years and he still\l"
-	.string "can't write a straight line.\p"
-	.string "Hold on. I'll send one back with\n"
-	.string "you. Tell him it's about time he\l"
-	.string "visited.$"
+	.string "What? A letter?\n"
+	.string "Lemme see…\p"
+	.string "Oh, my brother from MINSI.\p"
+	.string "That idiot still can't write in a\n"
+	.string "straight line.\p"
+	.string "Here, I'll send him a letter back.\n"
+	.string "Take it to him, yeah?$"
 
 COPPERGATE_CITY_Text_BrotherAfter:
-	.string "Did he read it? Did he laugh?\n"
-	.string "…Good.$"
-
+	.string "Well? Did he laugh?$"
 COPPERGATE_CITY_APARTMENT_EventScript_Block::
 	lock
 	faceplayer

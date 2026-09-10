@@ -69,142 +69,6 @@ WALLAR_MARSHLANDS_EventScript_Acolyte9::
 	msgbox WALLAR_MARSHLANDS_Text_Acolyte9Post, MSGBOX_AUTOCLOSE
 	end
 
-WALLAR_MARSHLANDS_Text_Acolyte1Intro:
-	.string "The marsh provides for\n"
-	.string "those who ask.\p"
-	.string "Bug, sludge, rot… it all\n"
-	.string "serves.\p"
-	.string "You're a long way from\n"
-	.string "the road, friend.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte1Defeat:
-	.string "The marsh will still be\n"
-	.string "here.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte1Post:
-	.string "Go back. Truly.\p"
-	.string "There's nothing ahead\n"
-	.string "you'd want to see.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte2Intro:
-	.string "Far as you go.\p"
-	.string "The Covenant's work needs\n"
-	.string "quiet, and you are not\l"
-	.string "quiet.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte2Defeat:
-	.string "One step. That's all you\n"
-	.string "gained.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte2Post:
-	.string "You'll find the next one\n"
-	.string "less patient than me.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte3Intro:
-	.string "Don't struggle.\p"
-	.string "It's gentler if you don't\n"
-	.string "struggle.\p"
-	.string "My friend here embraces\n"
-	.string "everyone the same.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte3Defeat:
-	.string "She was… too gentle.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte3Post:
-	.string "You misunderstand us.\p"
-	.string "We aren't cruel. We simply\n"
-	.string "have somewhere to be.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte4Intro:
-	.string "Cold keeps a thing exactly\n"
-	.string "as it was.\p"
-	.string "Nothing rots. Nothing\n"
-	.string "changes.\p"
-	.string "That's what we're\n"
-	.string "building. A world held\l"
-	.string "still.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte4Defeat:
-	.string "Still thawing…$"
-
-WALLAR_MARSHLANDS_Text_Acolyte4Post:
-	.string "The Elders say the green\n"
-	.string "one has no love for\l"
-	.string "stillness.\p"
-	.string "Fitting that it lives in\n"
-	.string "all this mud.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte5Intro:
-	.string "Breathe deep.\p"
-	.string "The marsh's own poison -\n"
-	.string "I only asked, and it\l"
-	.string "answered.\p"
-	.string "Everything here answers,\n"
-	.string "if you're worthy.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte5Defeat:
-	.string "Even the marsh has\n"
-	.string "favorites, then.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte5Post:
-	.string "You're being watched.\n"
-	.string "Not by me.\p"
-	.string "Keep going and you'll\n"
-	.string "feel it too.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte6Intro:
-	.string "You've come further than\n"
-	.string "the others expected.\p"
-	.string "That means the Elder will\n"
-	.string "have to be told.\p"
-	.string "Let me slow you down\n"
-	.string "first.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte6Defeat:
-	.string "Too… fast…$"
-
-WALLAR_MARSHLANDS_Text_Acolyte6Post:
-	.string "Word's already ahead of\n"
-	.string "you.\p"
-	.string "He's waiting on that hill\n"
-	.string "and he is not concerned.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte7Intro:
-	.string "You passed the tower,\n"
-	.string "didn't you?\p"
-	.string "Felt it watching. The dead\n"
-	.string "in there have been\l"
-	.string "waiting a very long time\l"
-	.string "for something to happen.\p"
-	.string "Today, something happens.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte7Defeat:
-	.string "They'll be disappointed…$"
-
-WALLAR_MARSHLANDS_Text_Acolyte7Post:
-	.string "Whoever built that tower\n"
-	.string "knew what lives in this\l"
-	.string "marsh.\p"
-	.string "They left anyway.\n"
-	.string "Ask yourself why.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte8Intro:
-	.string "Both of us. You've earned that much.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte8Defeat:
-	.string "Impossible…$"
-
-WALLAR_MARSHLANDS_Text_Acolyte8Post:
-	.string "Go on then. Climb it. See how little difference you make.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte9Intro:
-	.string "Nothing gets past us, the Elder made certain of it.$"
-
-WALLAR_MARSHLANDS_Text_Acolyte9Defeat:
-	.string "The hill… he's already there…$"
-
-WALLAR_MARSHLANDS_Text_Acolyte9Post:
-	.string "You already lost...$"		
 
 WALLAR_MARSHLANDS_EventScript_SaxusTrigger48::
 	goto_if_set FLAG_WALLAR_SAXUS_DONE, WALLAR_MARSHLANDS_EventScript_SceneDone
@@ -214,6 +78,7 @@ WALLAR_MARSHLANDS_EventScript_SaxusTrigger48::
 	call WALLAR_MARSHLANDS_EventScript_SaxusBattle
 	applymovement WALLAR_SILVIO, WALLAR_MARSHLANDS_Movement_SilvioApproach48
 	waitmovement 0
+	setspeaker WALLAR_MARSHLANDS_Text_SilvioName
 	msgbox WALLAR_MARSHLANDS_Text_SilvioReveal, MSGBOX_DEFAULT
 	applymovement WALLAR_SILVIO, WALLAR_MARSHLANDS_Movement_SilvioLeaveWest48
 	waitmovement 0
@@ -229,6 +94,7 @@ WALLAR_MARSHLANDS_EventScript_SaxusTrigger47::
 	call WALLAR_MARSHLANDS_EventScript_SaxusBattle
 	applymovement WALLAR_SILVIO, WALLAR_MARSHLANDS_Movement_SilvioApproach47
 	waitmovement 0
+	setspeaker WALLAR_MARSHLANDS_Text_SilvioName
 	msgbox WALLAR_MARSHLANDS_Text_SilvioReveal, MSGBOX_DEFAULT
 	applymovement WALLAR_SILVIO, WALLAR_MARSHLANDS_Movement_SilvioLeaveWest47
 	waitmovement 0
@@ -246,6 +112,7 @@ WALLAR_MARSHLANDS_EventScript_SilvioDepart::
 	return
 
 WALLAR_MARSHLANDS_EventScript_SaxusBattle::
+	setspeaker WALLAR_MARSHLANDS_Text_SaxusName
 	msgbox WALLAR_MARSHLANDS_Text_SaxusIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_ELDER_SAXUS, WALLAR_MARSHLANDS_Text_SaxusDefeat
 	msgbox WALLAR_MARSHLANDS_Text_SaxusPost, MSGBOX_DEFAULT
@@ -317,40 +184,128 @@ WALLAR_MARSHLANDS_Movement_SilvioLeaveWest47:
 	walk_down
 	step_end	
 
+WALLAR_MARSHLANDS_Text_Acolyte1Intro:
+	.string "I don't like this place! It's icky!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte1Defeat:
+	.string "Aw, c'mon!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte1Post:
+	.string "I wanna go home!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte2Intro:
+	.string "Please turn back!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte2Defeat:
+	.string "Why…?$"
+
+WALLAR_MARSHLANDS_Text_Acolyte2Post:
+	.string "Why are you doing this?$"
+
+WALLAR_MARSHLANDS_Text_Acolyte3Intro:
+	.string "We're fighting for the future!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte3Defeat:
+	.string "No…$"
+
+WALLAR_MARSHLANDS_Text_Acolyte3Post:
+	.string "Don't you care about the future?$"
+
+WALLAR_MARSHLANDS_Text_Acolyte4Intro:
+	.string "You have us all wrong!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte4Defeat:
+	.string "Ugh…$"
+
+WALLAR_MARSHLANDS_Text_Acolyte4Post:
+	.string "We're the good guys!\n"
+	.string "Stay out of our way!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte5Intro:
+	.string "You just don't know when to quit!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte5Defeat:
+	.string "No!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte5Post:
+	.string "Please, quit it!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte6Intro:
+	.string "Did you follow us from DELMARK?$"
+
+WALLAR_MARSHLANDS_Text_Acolyte6Defeat:
+	.string "Ngh!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte6Post:
+	.string "I'm sorry, ELDERS…$"
+
+WALLAR_MARSHLANDS_Text_Acolyte7Intro:
+	.string "There's some magic in this marsh,\n"
+	.string "don't you agree?$"
+
+WALLAR_MARSHLANDS_Text_Acolyte7Defeat:
+	.string "Wha…?$"
+
+WALLAR_MARSHLANDS_Text_Acolyte7Post:
+	.string "We're trying to help!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte8Intro:
+	.string "No getting past us!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte8Defeat:
+	.string "But how?$"
+
+WALLAR_MARSHLANDS_Text_Acolyte8Post:
+	.string "You can't stop the ELDERS!$"
+
+WALLAR_MARSHLANDS_Text_Acolyte9Intro:
+	.string "Why toy with destiny?$"
+
+WALLAR_MARSHLANDS_Text_Acolyte9Defeat:
+	.string "Noo…$"
+
+WALLAR_MARSHLANDS_Text_Acolyte9Post:
+	.string "It's destiny! You can't change it!$"
+
 WALLAR_MARSHLANDS_Text_SaxusIntro:
-	.string "So. The tide sends one more\n"
-	.string "little wave to break on us.\p"
-	.string "You've come a long way to\n"
-	.string "watch something you cannot\l"
-	.string "stop, child.\p"
-	.string "Turn and see.$"
+	.string "Ah, you.\p"
+	.string "ELDERS FERRUS and IRRUS mentioned\n"
+	.string "you before.\p"
+	.string "Don't be fooled, child.\p"
+	.string "I won't show you the same mercy\n"
+	.string "they did!$"
 
 WALLAR_MARSHLANDS_Text_SaxusDefeat:
-	.string "Spirited… but late.$"
+	.string "Grr…$"
 
 WALLAR_MARSHLANDS_Text_SaxusPost:
-	.string "You fought well. It changes\n"
-	.string "nothing.\p"
-	.string "While you traded blows with\n"
-	.string "me, the green one was already\l"
-	.string "lifted from this marsh.\p"
-	.string "Celebi is ours. Time itself\n"
-	.string "will learn to hold still.\p"
-	.string "Grieve if you like. We are\n"
-	.string "already gone.$"
+	.string "You fought well, child.\p"
+	.string "But it changes nothing!\n"
+	.string "We already won the day.\p"
+	.string "CELEBI is in our grasp.\p"
+	.string "Go home, you lost.$"
 
 WALLAR_MARSHLANDS_Text_SilvioReveal:
-	.string "…It's true. I saw them take it.\p"
-	.string "I couldn't stop them, and\n"
-	.string "neither could you. Don't carry\l"
-	.string "that alone.\p"
-	.string "The one called Saxus is\n"
-	.string "returning to Delmark. Through\l"
-	.string "Valerytown, past the west edge\l"
-	.string "of the swamp.\p"
-	.string "If you mean to follow… that's\n"
-	.string "where the trail leads.\p"
-	.string "Go. I'll find my own way back.$"	
+	.string "…What he said is true.\p"
+	.string "They took it just before you could\n"
+	.string "stop them.\p"
+	.string "My apologies.\p"
+	.string "I'm SILVIO, the mayor of DELMARK.\p"
+	.string "I've had a deep connection with\n"
+	.string "this marsh and CELEBI since I was\l"
+	.string "a child.\p"
+	.string "They used me to lure out the\n"
+	.string "mythical POKéMON, and now who knows\l"
+	.string "what they'll use it for.\p"
+	.string "I need to get back to my city.\p"
+	.string "I can only imagine what TEAM\n"
+	.string "COVENANT has done to it by now.$"
+
+WALLAR_MARSHLANDS_Text_SaxusName:
+	.string "Saxus$"
+
+WALLAR_MARSHLANDS_Text_SilvioName:
+	.string "Silvio$"
 
 WALLAR_MARSHLANDS_EventScript_Nurse::
 	lock
@@ -476,6 +431,7 @@ WALLAR_MARSHLANDS_EventScript_RedFlavorText::
 	closemessage
 	release
 	end
+
 
 WALLAR_MARSHLANDS_Text_RedIntro:
 	.string "…$"

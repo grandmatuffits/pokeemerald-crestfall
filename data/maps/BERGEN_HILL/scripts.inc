@@ -166,105 +166,96 @@ BERGEN_HILL_Movement_PlayerShoved:
 	step_end	
 
 BERGEN_HILL_Text_BrighamGloat:
-	.string "…There you are. Right on time to be\n"
-	.string "too late. As always.\p"
-	.string "It's done. MEW answered the call.\n"
-	.string "All four miracles are mine now.\p"
-	.string "Celebi. Jirachi. Shaymin. And the\n"
-	.string "first of them all.\p"
-	.string "The game is over. I need only make\n"
-	.string "my wish.$"
+	.string "Right on time to witness my\n"
+	.string "greatness.\p"
+	.string "If you wanted to stop me, you were\n"
+	.string "too late, as usual.\p"
+	.string "Either way, MEW is ours and now the\n"
+	.string "world is saved.\p"
+	.string "There's nothing you can do to stop\n"
+	.string "us.$"
 
 BERGEN_HILL_Text_BrighamCallUmbra:
-	.string "But you're persistent. I'll grant\n"
-	.string "you that.\p"
-	.string "My Elders have failed to be rid of\n"
-	.string "you one too many times. I've lost\l"
-	.string "my patience with them.\p"
-	.string "So I'll use someone who's wanted\n"
-	.string "this for a very long time.$"
+	.string "Just one more thing.\p"
+	.string "Time to put an end to this little\n"
+	.string "game of yours.\p"
+	.string "Don't you worry, I'm not having my\n"
+	.string "ELDERS face you this time.\p"
+	.string "I've lost all of my patience with\n"
+	.string "them.\p"
+	.string "This time, you'll be facing someone\n"
+	.string "I know you can't handle.$"
 
 BERGEN_HILL_Text_UmbraReveal:
-	.string "…Hello again.\p"
-	.string "You've grown. Good. I'd hate for\n"
-	.string "our rematch to disappoint.\p"
-	.string "I've thought about this day since\n"
-	.string "the moment you walked out of that\l"
-	.string "arena. I hope you have too.$"
+	.string "Well, well, well. It's you.\p"
+	.string "Surprised to see me?\p"
+	.string "That's right. I've been working with\n"
+	.string "BRIGHAM in secret for a while now.\p"
+	.string "I have also grown much stronger\n"
+	.string "since we first battled.\p"
+	.string "I hope you have, too, for your sake!$"
 
 BERGEN_HILL_Text_UmbraDefeat:
-	.string "…No. Not again. Not to YOU.$"
+	.string "…What!?$"
 
 BERGEN_HILL_Text_UmbraRage:
-	.string "This isn't finished. Do you hear\n"
-	.string "me? This is NOT finished!$"
+	.string "This is not over!\n"
+	.string "I'm sorry, BRIGHAM!$"
 
 BERGEN_HILL_Text_BrighamPanic:
-	.string "…He lost. He actually…\p"
-	.string "Enough. ENOUGH. All of you, get\n"
-	.string "out of my sight! Go!$"
+	.string "Him too!?\p"
+	.string "Who… Who are you!?$"
 
 BERGEN_HILL_Text_BrighamFlee:
-	.string "You've stopped nothing. Do you\n"
-	.string "understand that? NOTHING.\p"
-	.string "The wish will be made. At the\n"
-	.string "temple. Where it all began.\p"
-	.string "And you will be too late. One.\n"
-	.string "Last. Time.$"	
+	.string "You… You stopped nothing! Nothing!\p"
+	.string "I'm going to the temple to finish\n"
+	.string "this once and for all!$"
 
 BERGEN_HILL_Text_Acolyte1Intro:
-	.string "You shouldn't have come. But it\n"
-	.string "won't matter. Nothing you do\l"
-	.string "matters now.$"
+	.string "Hello, friend. Thinking of climbing\n"
+	.string "the hill? Think again.$"
+
 BERGEN_HILL_Text_Acolyte1Defeat:
-	.string "So you can battle. Fine.\n"
-	.string "You still can't stop what's\l"
-	.string "already begun.$"
+	.string "So, you are that good.$"
+
 BERGEN_HILL_Text_Acolyte1Post:
-	.string "Go on up. See for yourself how\n"
-	.string "late you are.$"
+	.string "Go on, face your destiny.$"
 
 BERGEN_HILL_Text_Acolyte2Intro:
-	.string "The wish will make everything\n"
-	.string "kind. Everything gentle. You'll\l"
-	.string "see. We ALL will.$"
+	.string "Why interfere with destiny?$"
+
 BERGEN_HILL_Text_Acolyte2Defeat:
-	.string "Why do you fight this? We only\n"
-	.string "want a better world…$"
+	.string "But why?$"
+
 BERGEN_HILL_Text_Acolyte2Post:
-	.string "That's what they told us. A\n"
-	.string "better world.$"
+	.string "It's destiny! You can't stop it!$"
 
 BERGEN_HILL_Text_Acolyte3Intro:
-	.string "Stay back. The ritual is nearly\n"
-	.string "done. Just… just stay back.$"
+	.string "Stop right there!\n"
+	.string "The ritual is almost done!$"
+
 BERGEN_HILL_Text_Acolyte3Defeat:
-	.string "The flowers up here are all dead.\n"
-	.string "Did you notice? They weren't\l"
-	.string "yesterday.$"
+	.string "Ugh!$"
+
 BERGEN_HILL_Text_Acolyte3Post:
-	.string "This is a nature park. It's\n"
-	.string "supposed to be… protected.$"
+	.string "Just turn back now!$"
 
 BERGEN_HILL_Text_Acolyte4Intro:
-	.string "I've given everything to the\n"
-	.string "Covenant. Everything. It has to\l"
-	.string "be worth it. It HAS to.$"
+	.string "TEAM COVENANT has my full\n"
+	.string "commitment.\p"
+	.string "I know we're doing the right thing.$"
+
 BERGEN_HILL_Text_Acolyte4Defeat:
-	.string "…I don't recognize what we're\n"
-	.string "doing up there anymore.$"
+	.string "No!$"
+
 BERGEN_HILL_Text_Acolyte4Post:
-	.string "Whatever happens next… I hope\n"
-	.string "it's over quickly.$"
+	.string "You're wasting your time!$"
 
 BERGEN_HILL_Text_Acolyte5Intro:
-	.string "You're almost to the top. Please.\n"
-	.string "Turn around. You don't want to\l"
-	.string "see what he's become up there.$"
+	.string "Turn back now!$"
+
 BERGEN_HILL_Text_Acolyte5Defeat:
-	.string "I believed in something gentle.\n"
-	.string "This isn't gentle. This is\l"
-	.string "something else.$"
+	.string "Wha…?$"
+
 BERGEN_HILL_Text_Acolyte5Post:
-	.string "…Go, then. He's waiting. They\n"
-	.string "all are.$"	
+	.string "Fine, go on. Face your destiny.$"

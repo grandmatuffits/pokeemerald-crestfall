@@ -94,29 +94,48 @@ KINNERET_TOWN_GYM_Text_ErwinDefeat:
 KINNERET_TOWN_GYM_Text_ErwinRepeat:
 	.string "Fine! Keep going!$"
 
+KINNERET_TOWN_GYM_Text_RobinStoneGiven:
+	.string "Also, you can have this.$"	
+
 KINNERET_TOWN_GYM_Text_RobinIntro:
-	.string "Hello! Welcome to my gym.\nI'm Robin.\pFlying Pokemon soar the skies\nwith deadly speed and keen\laccuracy, always on the lookout\lfor prey like you!$"
+	.string "Hello, there. Welcome to my gym.\n"
+	.string "I'm ROBIN.\p"
+	.string "FLYING POKéMON are my specialty.\p"
+	.string "I love hearing the birds in the\n"
+	.string "morning, so peaceful, so graceful.\p"
+	.string "Would you like to see mine?\n"
+	.string "Get ready!$"
 
 KINNERET_TOWN_GYM_Text_RobinDefeat:
 	.string "You're too much!$"
 
 KINNERET_TOWN_GYM_Text_RobinAfterBattle:
-	.string "You've proven to be a Pokemon\nTrainer worthy of the Wind Badge.\lTake it and soar beyond your\limagination!\pYou can also have this, it's\na TM! Teach it to a flying\lPokemon!$"
+	.string "You've proven to be a POKéMON\n"
+	.string "TRAINER worthy of the WIND BADGE.\p"
+	.string "Take it and soar beyond your\n"
+	.string "imagination!\p"
+	.string "You can also have this, it's a TM!\n"
+	.string "Teach it to a FLYING POKéMON!$"
 
 KINNERET_TOWN_GYM_Text_RobinRematchIntro:
-	.string "So you're finally back? I heard the\nElders have been causing trouble.\lLet's see if the Champion's gauntlet\ltaught you anything.$"
+	.string "So, you're back.\p"
+	.string "What? TEAM COVENANT? ELDERS?\p"
+	.string "I don't know much of anything about\n"
+	.string "that, but before we get into it,\l"
+	.string "a quick battle!$"
 
 KINNERET_TOWN_GYM_Text_RobinRematchDefeat:
 	.string "Not bad at all!$"
 
 KINNERET_TOWN_GYM_Text_RobinRematchPostBattle:
-	.string "Good luck out there. The Elders won't\nbe easy to track down.$"
+	.string "Good fighting.\p"
+	.string "Unfortunately, I don't know much\n"
+	.string "about those TEAM COVENANT folk.\p"
+	.string "Maybe try a different GYM LEADER?$"
 
 KINNERET_TOWN_GYM_Text_RobinRematchRepeat:
-	.string "Keep at it - the Elders are still out\nthere somewhere.$"
+	.string "Don't stop now, someone out there\n"
+	.string "knows what they're up to!$"
 
 KINNERET_TOWN_GYM_Text_RobinPostBadgeIdle:
-	.string "Great work on that badge!$"	
-
-KINNERET_TOWN_GYM_Text_RobinStoneGiven:
-	.string "Also, you can have this.$"	
+	.string "Great work on staying strong!$"

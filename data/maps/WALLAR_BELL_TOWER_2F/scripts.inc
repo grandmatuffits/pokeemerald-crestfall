@@ -38,16 +38,23 @@ WALLAR_BELL_TOWER_2F_EventScript_Acolyte4::
 	msgbox WALLAR_BELL_TOWER_2F_Text_Acolyte4PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+
 WALLAR_BELL_TOWER_2F_Text_Acolyte3Intro:
-	.string "The bells remember every hand that\nrang them. Yours will not be the last.$"
+	.string "You shouldn't be here!\p"
+	.string "You're ruining our plans again!$"
+
 WALLAR_BELL_TOWER_2F_Text_Acolyte3Defeat:
-	.string "A fitting toll.$"
+	.string "No…$"
+
 WALLAR_BELL_TOWER_2F_Text_Acolyte3PostBattle:
-	.string "Higher still, if you're able.$"
+	.string "Just turn around, please!$"
 
 WALLAR_BELL_TOWER_2F_Text_Acolyte4Intro:
-	.string "Faith does not waver simply because\nthe Covenant has fallen.$"
+	.string "BRIGHAM or not, TEAM COVENANT will\n"
+	.string "never stop!$"
+
 WALLAR_BELL_TOWER_2F_Text_Acolyte4Defeat:
-	.string "It wavers now.$"
+	.string "Why…$"
+
 WALLAR_BELL_TOWER_2F_Text_Acolyte4PostBattle:
-	.string "Go. The top is not far now.$"	
+	.string "You'll never stop the ELDERS!$"

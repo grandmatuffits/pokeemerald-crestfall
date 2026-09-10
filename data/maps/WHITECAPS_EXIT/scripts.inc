@@ -26,17 +26,6 @@ Whitecaps_EventScript_Acolyte1::
 	msgbox Whitecaps_Text_Acolyte1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Whitecaps_Text_Acolyte1Intro:
-	.string "You climbed all this way.\p"
-	.string "There is nothing up here but cold\n"
-	.string "and us.$"
-
-Whitecaps_Text_Acolyte1Defeat:
-	.string "…the cold, then.$"
-
-Whitecaps_Text_Acolyte1PostBattle:
-	.string "Turn back. The mountain does not want\n"
-	.string "you, and neither do we.$"
 
 
 Whitecaps_EventScript_Acolyte2::
@@ -44,32 +33,38 @@ Whitecaps_EventScript_Acolyte2::
 	msgbox Whitecaps_Text_Acolyte2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Whitecaps_Text_Acolyte2Intro:
-	.string "One POKéMON is all the mountain gave\n"
-	.string "me. One is all I need to slow you.$"
-
-Whitecaps_Text_Acolyte2Defeat:
-	.string "Not even slowed.$"
-
-Whitecaps_Text_Acolyte2PostBattle:
-	.string "Every step you take up, they take one\n"
-	.string "closer to the JIRACHI.$"
-
 Whitecaps_EventScript_Acolyte3::
 	trainerbattle_single TRAINER_COVENANT_WC_3, Whitecaps_Text_Acolyte3Intro, Whitecaps_Text_Acolyte3Defeat
 	msgbox Whitecaps_Text_Acolyte3PostBattle, MSGBOX_AUTOCLOSE
 	end
+	
+Whitecaps_Text_Acolyte1Intro:
+	.string "How did you find our secret path?$"
+
+Whitecaps_Text_Acolyte1Defeat:
+	.string "Woah!$"
+
+Whitecaps_Text_Acolyte1PostBattle:
+	.string "Why do you resist destiny?$"
+
+Whitecaps_Text_Acolyte2Intro:
+	.string "We're striving for a better\n"
+	.string "tomorrow!$"
+
+Whitecaps_Text_Acolyte2Defeat:
+	.string "Yeesh!$"
+
+Whitecaps_Text_Acolyte2PostBattle:
+	.string "Please, just turn back!$"
 
 Whitecaps_Text_Acolyte3Intro:
-	.string "We carried our POKéMON up through the\n"
-	.string "snow for this.\p"
-	.string "Do not imagine we will hand it back.$"
+	.string "Everything we do is for a better\n"
+	.string "world!\p"
+	.string "Everything you do is for a worse\n"
+	.string "world!$"
 
 Whitecaps_Text_Acolyte3Defeat:
-	.string "…cold hands. That is all.$"
+	.string "Oh, man!$"
 
 Whitecaps_Text_Acolyte3PostBattle:
-	.string "The second floor opens onto the face\n"
-	.string "of the mountain.\p"
-	.string "You will freeze before you reach the\n"
-	.string "top.$"		
+	.string "Why not accept a better world!?$"

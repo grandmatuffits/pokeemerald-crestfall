@@ -85,19 +85,26 @@ LENOX_TOWN_GYM_Text_IngridPostBadge:
 	.string "you! Use it well!$"
 
 LENOX_TOWN_GYM_Text_IngridRematchIntro:
-	.string "Elders, huh? Figures they wouldn't\nstay quiet forever. Let's see what\lyou've got.$"
+	.string "TEAM COVENANT? Again?\p"
+	.string "I figured they'd be back.\p"
+	.string "Before we go any further, let's see\n"
+	.string "if you got any stronger!$"
 
 LENOX_TOWN_GYM_Text_IngridRematchDefeat:
-	.string "Impressive.$"
+	.string "Very impressive.$"
 
 LENOX_TOWN_GYM_Text_IngridRematchPostBattle:
-	.string "Go find the rest of them. Don't let\nyour guard down.$"
+	.string "Sadly, I don't know much since you\n"
+	.string "cleared them out of town the first\l"
+	.string "time.\p"
+	.string "Try a different gym!$"
 
 LENOX_TOWN_GYM_Text_IngridRematchRepeat:
-	.string "Still hunting the Elders? Stay sharp.$"
+	.string "Still hunting those ELDERS?\n"
+	.string "Good luck!$"
 
 LENOX_TOWN_GYM_Text_IngridPostBadgeIdle:
-	.string "Nice work earning that badge!$"	
+	.string "Good work!$"
 
 LENOX_TOWN_GYM_Text_IngridStoneGiven:
 	.string "Also, you can have this.$"	

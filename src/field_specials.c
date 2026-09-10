@@ -4142,6 +4142,39 @@ static u16 PlayerGainRandomTrainerFan(void)
     return idx;
 }
 
+void RateFirstMonIVs(void)
+{
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][0];
+
+    GetMonData(mon, MON_DATA_NICKNAME, gStringVar1);
+    StringGet_Nickname(gStringVar1);
+
+    ConvertIntToDecimalStringN(gStringVar2,
+        GetMonData(mon, MON_DATA_HP_IV, NULL), STR_CONV_MODE_LEFT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar3,
+        GetMonData(mon, MON_DATA_ATK_IV, NULL), STR_CONV_MODE_LEFT_ALIGN, 2);
+}
+
+void RateFirstMonIVs2(void)
+{
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][0];
+
+    ConvertIntToDecimalStringN(gStringVar1,
+        GetMonData(mon, MON_DATA_DEF_IV, NULL), STR_CONV_MODE_LEFT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar2,
+        GetMonData(mon, MON_DATA_SPATK_IV, NULL), STR_CONV_MODE_LEFT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar3,
+        GetMonData(mon, MON_DATA_SPDEF_IV, NULL), STR_CONV_MODE_LEFT_ALIGN, 2);
+}
+
+void RateFirstMonIVs3(void)
+{
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][0];
+
+    ConvertIntToDecimalStringN(gStringVar1,
+        GetMonData(mon, MON_DATA_SPEED_IV, NULL), STR_CONV_MODE_LEFT_ALIGN, 2);
+}
+
 // Loops through the fan club members, and if theyre a fan of the player there is a 50% chance for them to stop being a fan
 // Stops if a fan is removed, or if the player has only one fan left
 // If no fan was lost while looping, the last current fan in the list will stop being a fan

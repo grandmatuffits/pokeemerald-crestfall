@@ -69,7 +69,7 @@ DELMARK_CITY_EAST_EventScript_Acolyte8::
 	end
 
 DELMARK_CITY_EAST_Text_Acolyte1:
-	.string "Shh! Brother Brigham is speaking.\p"
+	.string "Shh! Brigham is speaking.\p"
 	.string "Every word is a gift.$"
 
 DELMARK_CITY_EAST_Text_Acolyte2:
@@ -95,7 +95,7 @@ DELMARK_CITY_EAST_Text_Acolyte6:
 
 DELMARK_CITY_EAST_Text_Acolyte7:
 	.string "The mayor couldn't protect this\n"
-	.string "city. Brother Brigham can.$"
+	.string "city. Brigham can.$"
 
 DELMARK_CITY_EAST_Text_Acolyte8:
 	.string "Doubt all you like.\p"
@@ -191,7 +191,7 @@ DELMARK_CITY_EAST_Text_RoamingAcolyte1:
 DELMARK_CITY_EAST_Text_RoamingAcolyte2:
 	.string "The old world is rotten to its\n"
 	.string "core.\p"
-	.string "Father Brigham will wash it all\n"
+	.string "Brigham will wash it all\n"
 	.string "clean. You'll see.$"
 
 DELMARK_CITY_EAST_Text_RoamingAcolyte3:
@@ -319,7 +319,7 @@ DELMARK_CITY_EAST_Text_Citizen5:
 	.string "The mall's got a shop for EVERY\n"
 	.string "kind of collector.\p"
 	.string "I've nearly completed my rare\n"
-	.string "trainer-card binder!$"
+	.string "stone collection!$"
 
 @ --- Old man — Silvio elected to fight corruption, now missing ---
 DELMARK_CITY_EAST_Text_Citizen6:

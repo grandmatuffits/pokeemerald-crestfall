@@ -20,6 +20,7 @@ SlateportCity_Mart_Pokemart:
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_METAL_COAT
 	pokemartlistend
 
@@ -32,7 +33,7 @@ SlateportCity_Mart_EventScript_Man::
 	end
 
 SlateportCity_Mart_Text_SomeItemsOnlyAtMart:
-	.string "The MARKET does have some interesting\n"
+	.string "The MARKET in LENOX TOWN has some interesting\n"
 	.string "merchandise.\p"
 	.string "But there are some items you can only\n"
 	.string "get at a POKéMON MART.$"

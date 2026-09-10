@@ -24,11 +24,13 @@ MossdeepCity_PokemonCenter_1F_EventScript_Girl::
 	end
 
 MossdeepCity_PokemonCenter_1F_Text_GymLeaderDuoFormidable:
-	.string "The GYM LEADERS in this town are\n"
-	.string "a formidable duo.\p"
-	.string "Their combination attacks are, like,\n"
-	.string "excellent and wow!$"
-
+	.string "MERYL is the GYM LEADER here in\n"
+	.string "MIRAVEIL.\p"
+	.string "She's not just your typical rich\n"
+	.string "snoot.\p"
+	.string "She's also quite the POKéMON\n"
+	.string "TRAINER.$"
+	
 MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves:
 	.string "Depending on the special abilities of\n"
 	.string "POKéMON, some moves might change\l"

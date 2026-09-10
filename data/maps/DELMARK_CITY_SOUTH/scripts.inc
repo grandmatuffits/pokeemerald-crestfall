@@ -116,8 +116,8 @@ DELMARK_CITY_SOUTH_Text_BerryOffer:
 	.string "BERRIES, I've got plenty!$"
 
 DELMARK_CITY_SOUTH_Text_BerryAfter:
-	.string "Plant it and you'll have more in\n"
-	.string "no time!$"
+	.string "Try giving that SITRUS BERRY\n"
+	.string "to a Pokemon!$"
 
 DELMARK_CITY_SOUTH_Text_BerryGiftDone:
 	.string "Enjoy the sunshine!$"	

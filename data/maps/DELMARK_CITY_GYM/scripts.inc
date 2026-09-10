@@ -118,9 +118,9 @@ DelmarkCityGym_Text_Quiz1Ask:
 
 DelmarkCityGym_Text_Quiz1Yes:
 	.string "INCORRECT.\p"
-	.string "The first POKéMON is RHYDON.\n"
-	.string "BULBASAUR is merely the first one\l"
-	.string "you were shown.$"
+	.string "The first POKéMON is RHYDON.\p"
+	.string "BULBASAUR is just the first one in\n"
+	.string "the NATIONAL POKéDEX.$"
 
 DelmarkCityGym_Text_Quiz1No:
 	.string "INCORRECT.\p"
@@ -219,8 +219,9 @@ DelmarkCityGym_Text_Quiz3Ask:
 
 DelmarkCityGym_Text_Quiz3Yes:
 	.string "INCORRECT.\p"
-	.string "BULBASAUR is number one. It is printed\n"
-	.string "in every book. Were you not listening?$"
+	.string "BULBASAUR is number one. It is\n"
+	.string "printed in every book.\p"
+	.string "Were you not listening?$"
 
 DelmarkCityGym_Text_Quiz3No:
 	.string "INCORRECT.\p"
@@ -244,7 +245,6 @@ DelmarkCityGym_Text_Quiz2Done:
 	.string "The machine has already had its fun\n"
 	.string "with you.$"
 
-
 DelmarkCityGym_Text_Trainer3Challenge:
 	.string "Do not take it personally.\p"
 	.string "The machine has never been right, and\n"
@@ -255,13 +255,12 @@ DelmarkCityGym_Text_Trainer3Defeat:
 	.string "Ah. Splendidly done.$"
 
 DelmarkCityGym_Text_Trainer3After:
-	.string "MAYOR SILVIO waits beyond.\p"
-	.string "Do ask him about the machines.\n"
-	.string "He does so enjoy that question.$"
+	.string "MAYOR SILVIO is waiting.\p"
+	.string "Please, ask him about the machines.\n"
+	.string "He loooves it when people do.$"
 
 DelmarkCityGym_Text_Quiz3Done:
-	.string "Nothing further. You have suffered\n"
-	.string "enough.$"	
+	.string "Nothing further.$"
 
 DELMARK_CITY_GYM_EventScript_Silvio::
 	lock
@@ -317,60 +316,74 @@ DELMARK_CITY_GYM_EventScript_SilvioIdle::
 	end
 	
 DELMARK_CITY_GYM_Text_SilvioIntro:
-	.string "You came.\p"
-	.string "PRAETUS and I fought the same way.\n"
-	.string "Steel. He would have told you that was\l"
-	.string "because steel does not move.\p"
-	.string "He was wrong about that, too.\p"
-	.string "Steel bends. It takes the weight and it\n"
-	.string "holds, and it is still standing after.\p"
-	.string "That is what I have. It is not enough\n"
-	.string "to save a city. Let us see whether it\l"
-	.string "is enough to beat you.$"
+	.string "There you are.\p"
+	.string "That ELDER PRAETUS was stronger than\n"
+	.string "I thought.\p"
+	.string "And he beat me with my own typing.\p"
+	.string "Thank you for the retribution.\p"
+	.string "As thanks, I'll give you the chance\n"
+	.string "to earn your very own SHIELD BADGE.\p"
+	.string "Are you up to it?$"
 
 DELMARK_CITY_GYM_Text_SilvioDefeat:
 	.string "…there it is.$"
 
 DELMARK_CITY_GYM_Text_SilvioPostBattle:
-	.string "Eleven days they had my city, and one\n"
-	.string "afternoon undid it.\p"
-	.string "I have stopped trying to make that sit\n"
-	.string "comfortably. It simply is.$"
+	.string "Go on, we both have much work to do.$"
 
 DELMARK_CITY_GYM_Text_SilvioBadge:
 	.string "Take the SHIELD BADGE.\p"
-	.string "DELMARK gives it to trainers who hold\n"
-	.string "when holding costs something.\p"
-	.string "You have done that twice now.$"
+	.string "Wear it with honor, for what you did\n"
+	.string "for DELMARK.$"
 
 DELMARK_CITY_GYM_Text_SilvioTM:
-	.string "And this.\p"
-	.string "One more thing, before you go north.\p"
-	.string "They still have the CELEBI. I cannot\n"
-	.string "follow them past the WHITECAPS and be\l"
-	.string "any use to anyone.\p"
-	.string "So it falls to you again. I am sorry\n"
-	.string "for that.$"
+	.string "Take this as well.\p"
+	.string "Keep in mind, they still have\n"
+	.string "CELEBI.\p"
+	.string "If you're going to follow them to\n"
+	.string "WHITECAPS, tread lightly.\p"
+	.string "I'll see what I can do to help, but\n"
+	.string "it won't be much.$"
 
 DELMARK_CITY_GYM_Text_SilvioRematch:
-	.string "The doors are open. The lights are on.\p"
-	.string "It is a small thing to be proud of.\n"
-	.string "I am proud of it anyway.$"	
+	.string "The city has been almost completely\n"
+	.string "restored, thanks to your help.$"
 
 DELMARK_CITY_GYM_Text_SilvioNotReady:
-	.string "I have heard what is happening. I am\nnot going anywhere.\pGo see the others first. This city has\nhad enough taken from it. It can wait\la little longer for me.$"
+	.string "I heard the news about those TEAM\n"
+	.string "COVENANT ELDERS.\p"
+	.string "They're definitely up to something,\n"
+	.string "but I'm too busy still fixing things\l"
+	.string "around here.\p"
+	.string "Go talk to the other GYM LEADERS\n"
+	.string "first, then come see me.$"
 
 DELMARK_CITY_GYM_Text_SilvioRematchIntro:
-	.string "So. You have gone the rounds.\pI will not pretend I am surprised it\ncame to this again.\pSteel still bends. Let us see if it\nstill holds.$"
-
-DELMARK_CITY_GYM_Text_SilvioRematchDefeat:
-	.string "…there it is, again.$"
+	.string "Well, I see you did some snooping\n"
+	.string "around.\p"
+	.string "I learned a little something about\n"
+	.string "the ELDERS' plot.\p"
+	.string "But let's see if you still have the\n"
+	.string "skill to take them on.$"
 
 DELMARK_CITY_GYM_Text_SilvioRematchPostBattle:
-	.string "Go on, then.\pI have a city to keep standing. You\nhave the rest of them to find.$"
+	.string "Nicely done.\p"
+	.string "To be honest, I haven't heard much\n"
+	.string "about the ELDERS' plot, but I know\l"
+	.string "who might.\p"
+	.string "His name is UMBRA. He was part of\n"
+	.string "their little TEAM COVENANT posse.\p"
+	.string "Last I heard, he was making the\n"
+	.string "rounds through the POKéMON LEAGUE\l"
+	.string "in VELDTMOOR CITY.\p"
+	.string "Go to him.$"
 
 DELMARK_CITY_GYM_Text_SilvioRematchRepeat:
-	.string "The doors are still open.$"	
+	.string "Get going.\n"
+	.string "We don't know how much time is left.$"
 
 DELMARK_CITY_GYM_Text_SilvioStoneGiven:
 	.string "Also, you can have this.$"	
+
+DELMARK_CITY_GYM_Text_SilvioRematchDefeat:
+	.string "…there it is, again.$"	

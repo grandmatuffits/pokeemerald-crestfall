@@ -78,32 +78,26 @@ DELMARK_CITY_APT_304_Movement_IrrusApproach:
 	step_end
 
 @ ---------------- TEXT ----------------
+
 DELMARK_CITY_APT_304_Text_Note:
-	.string "The room is empty. A note lies on\n"
-	.string "the desk, hastily scrawled.\p"
-	.string "'To whoever finds this, it's\n"
-	.string "Mayor Silvio. The Covenant has taken me.\p"
-	.string "They don't want ransom. They want\n"
-	.string "what I'm bound to.\p"
-	.string "My family has kept an old bond with\n"
-	.string "the forest spirit that sleeps in\l"
-	.string "the Wallar Marshlands, the one\l"
-	.string "called CELEBI.\p"
-	.string "They mean to lure it out and bend\n"
-	.string "it to their will, using me as bait.\p"
-	.string "They're taking me south, past\n"
-	.string "Rosebank. Please, don't let them\l"
-	.string "reach the marsh.'$"
+	.string "“To whoever finds this, it's me,\n"
+	.string "Mayor SILVIO.\p"
+	.string "I've been taken hostage to the\n"
+	.string "WALLAR MARSHLANDS just south of\l"
+	.string "ROSEBANK TOWN.\p"
+	.string "This wicked TEAM COVENANT learned\n"
+	.string "about my connection to the Mythical\l"
+	.string "POKéMON CELEBI, and want its power\l"
+	.string "for their bidding.\p"
+	.string "Send help. I don't know how long\n"
+	.string "until they succeed.”$"
 
 DELMARK_CITY_APT_304_Text_NoteAfter:
-	.string "A sound comes from behind.\p"
-	.string "Footsteps are heard at the door.$"
+	.string "Well, now.$"
 
 DELMARK_CITY_APT_304_Text_IrrusAmbush:
-	.string "…You should not have read that.\p"
-	.string "I am Irrus, Elder of the Covenant.\n"
-	.string "That note and your curiosity\l"
-	.string "end here.$"
+	.string "Let me introduce myself.\p"
+	.string "I'm ELDER IRRUS.$"
 
 DELMARK_CITY_APT_304_Text_AcolyteDefeat:
 	.string "Nngh… forgive me, Elder!$"
@@ -117,12 +111,10 @@ DELMARK_CITY_APT_304_Text_IrrusDefeat:
 	.string "This… cannot be…$"
 
 DELMARK_CITY_APT_304_Text_IrrusParting:
-	.string "…No. Brigham must never\n"
-	.string "hear of this. Not from me.\p"
-	.string "You saw nothing. I was never here.\p"
-	.string "Cross your bridge, child. It won't\n"
-	.string "save Silvio or the spirit he\l"
-	.string "guards.$"
+	.string "No! That can't be!\p"
+	.string "Bah! Never mind…\p"
+	.string "Come to the marsh if you dare.\p"
+	.string "It will only spell your undoing…$"
 
 @ Acolyte exits: from ~(3,3) back down to a door tile, then vanish. Adjust to your layout.
 DELMARK_CITY_APT_304_Movement_AcolyteExit:

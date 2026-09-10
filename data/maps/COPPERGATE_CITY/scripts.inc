@@ -381,7 +381,7 @@ COPPERGATE_CITY_EventScript_TownSign::
 	end
 
 COPPERGATE_CITY_Text_TownSign:
-	.string "Coppergate City\n"
+	.string "Coppergate City$"
 
 COPPERGATE_CITY_EventScript_GymSign::
 	msgbox COPPERGATE_CITY_Text_GymSign, MSGBOX_SIGN

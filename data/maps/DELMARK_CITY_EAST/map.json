@@ -228,7 +228,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_Citizen8",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_EAST_OCCUPIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
@@ -319,7 +319,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_Citizen9",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_EAST_OCCUPIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
@@ -345,7 +345,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_Citizen6",
-      "flag": "0"
+      "flag": "FLAG_HIDE_DELMARK_EAST_OCCUPIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -358,7 +358,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte2",
-      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
+      "flag": "FLAG_HIDE_DELMARK_EAST_OCCUPIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
@@ -371,7 +371,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte3",
-      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
+      "flag": "FLAG_HIDE_DELMARK_EAST_OCCUPIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
@@ -384,7 +384,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte1",
-      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
+      "flag": "FLAG_HIDE_DELMARK_EAST_OCCUPIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -397,7 +397,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte5",
-      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
+      "flag": "FLAG_HIDE_DELMARK_EAST_OCCUPIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
@@ -410,7 +410,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_EAST_EventScript_RoamingAcolyte4",
-      "flag": "FLAG_HIDE_DELMARK_MALL_COVENANT"
+      "flag": "FLAG_HIDE_DELMARK_EAST_OCCUPIERS"
     },
     {
       "local_id": "DELMARK_CITY_RIVAL",

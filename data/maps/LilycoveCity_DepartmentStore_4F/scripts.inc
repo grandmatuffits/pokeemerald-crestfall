@@ -56,11 +56,6 @@ LilycoveCity_DepartmentStore_4F_Text_AttackOrDefenseTM:
 	.string "It's no easy matter to decide which TM\n"
 	.string "moves should be taught to POKéMON…$"
 
-LilycoveCity_DepartmentStore_4F_Text_FiftyDifferentTMs:
-	.string "There are so many different kinds of\n"
-	.string "TM moves.\p"
-	.string "A catalog I read said there are fifty\n"
-	.string "different kinds.$"
 
 LilycoveCity_DepartmentStore_4F_Text_PokemonOnlyHaveFourMoves:
 	.string "I'd like to get all the different TMs,\n"
@@ -72,19 +67,6 @@ DelmarkCityMall4F_EventScript_Thessa::
 	msgbox DelmarkCityMall4F_Text_ThessaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DelmarkCityMall4F_Text_ThessaIntro:
-	.string "Four of them. None of them strong.\p"
-	.string "I kept every one I was given.\n"
-	.string "I let nothing go. That is the whole\n"
-	.string "of the faith, really.$"
-
-DelmarkCityMall4F_Text_ThessaDefeat:
-	.string "I kept them too long.$"
-
-DelmarkCityMall4F_Text_ThessaPostBattle:
-	.string "You trade yours away. Grow them,\n"
-	.string "replace them, grow them again.\p"
-	.string "You call that care.$"
 
 
 DelmarkCityMall4F_EventScript_Grieg::
@@ -92,33 +74,43 @@ DelmarkCityMall4F_EventScript_Grieg::
 	msgbox DelmarkCityMall4F_Text_GriegPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DelmarkCityMall4F_Text_GriegIntro:
-	.string "Enough talking. Two floors above me\n"
-	.string "there are people who talk.\p"
-	.string "I am not one of them.$"
-
-DelmarkCityMall4F_Text_GriegDefeat:
-	.string "Quick. Fine.$"
-
-DelmarkCityMall4F_Text_GriegPostBattle:
-	.string "Go up. You will get your explanations.\n"
-	.string "You will not enjoy them.$"
-
 
 DelmarkCityMall4F_EventScript_Noor::
 	trainerbattle_single TRAINER_COVENANT_NOOR, DelmarkCityMall4F_Text_NoorIntro, DelmarkCityMall4F_Text_NoorDefeat
 	msgbox DelmarkCityMall4F_Text_NoorPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+LilycoveCity_DepartmentStore_4F_Text_FiftyDifferentTMs:
+	.string "There's so many TMs to choose from!\p"
+	.string "I read somewhere that there's a\n"
+	.string "hundred different ones!$"
+
+DelmarkCityMall4F_Text_ThessaIntro:
+	.string "Don't you like our new headquarters?$"
+
+DelmarkCityMall4F_Text_ThessaDefeat:
+	.string "Why?$"
+
+DelmarkCityMall4F_Text_ThessaPostBattle:
+	.string "Are you trying to tell us to leave?$"
+
+DelmarkCityMall4F_Text_GriegIntro:
+	.string "Wouldn't you rather be a part of\n"
+	.string "something bigger?$"
+
+DelmarkCityMall4F_Text_GriegDefeat:
+	.string "Ugh!$"
+
+DelmarkCityMall4F_Text_GriegPostBattle:
+	.string "You're too persistent!$"
+
 DelmarkCityMall4F_Text_NoorIntro:
-	.string "You have climbed a long way to reach\n"
-	.string "someone who will not move.\p"
-	.string "Think about that as you keep climbing.$"
+	.string "So much effort for nothing!$"
 
 DelmarkCityMall4F_Text_NoorDefeat:
-	.string "You are still climbing.$"
+	.string "You won't win!$"
 
 DelmarkCityMall4F_Text_NoorPostBattle:
-	.string "BRIGHAM is up there as well. He does\n"
-	.string "the speaking for the Elders.\p"
-	.string "He is very good at it.$"
+	.string "This world is ours no matter how\n"
+	.string "hard you try!$"
+

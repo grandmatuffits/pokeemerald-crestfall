@@ -39,14 +39,6 @@ GrantIsland_EventScript_SwimmerF1::
 	msgbox GrantIsland_Text_SwimmerF1Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantIsland_Text_SwimmerF1Intro:
-	.string "You made it across the strait. Barely,\n"
-	.string "by the look of you.$"
-GrantIsland_Text_SwimmerF1Defeat:
-	.string "Still swimming strong. Fine.$"
-GrantIsland_Text_SwimmerF1Post:
-	.string "The grey-robes landed here at dawn and\n"
-	.string "went straight up the mountain.$"
 
 
 GrantIsland_EventScript_SwimmerM1::
@@ -54,14 +46,7 @@ GrantIsland_EventScript_SwimmerM1::
 	msgbox GrantIsland_Text_SwimmerM1Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantIsland_Text_SwimmerM1Intro:
-	.string "Nobody comes to GRANT ISLAND anymore.\n"
-	.string "Nobody sane.$"
-GrantIsland_Text_SwimmerM1Defeat:
-	.string "You're not sane, then.$"
-GrantIsland_Text_SwimmerM1Post:
-	.string "There's an old flower field at the peak.\n"
-	.string "That's where they're headed.$"
+
 
 
 GrantIsland_EventScript_Fisherman::
@@ -69,29 +54,11 @@ GrantIsland_EventScript_Fisherman::
 	msgbox GrantIsland_Text_FishermanPost, MSGBOX_AUTOCLOSE
 	end
 
-GrantIsland_Text_FishermanIntro:
-	.string "Fish won't bite today. They can feel it\n"
-	.string "too. Something's wrong on this island.$"
-GrantIsland_Text_FishermanDefeat:
-	.string "Reel you in, throw the rest back.$"
-GrantIsland_Text_FishermanPost:
-	.string "The cave's the only way up. Mind the\n"
-	.string "grey-robes waiting in the dark.$"
-
 
 GrantIsland_EventScript_Acolyte1::
 	trainerbattle_single TRAINER_GRANT_ACOLYTE_1, GrantIsland_Text_Acolyte1Intro, GrantIsland_Text_Acolyte1Defeat
 	msgbox GrantIsland_Text_Acolyte1Post, MSGBOX_AUTOCLOSE
 	end
-
-GrantIsland_Text_Acolyte1Intro:
-	.string "You should not have come. This is a\n"
-	.string "gentle place, and we mean to keep it so.$"
-GrantIsland_Text_Acolyte1Defeat:
-	.string "…gentleness has limits, it seems.$"
-GrantIsland_Text_Acolyte1Post:
-	.string "The garden at the peak has slept for a\n"
-	.string "thousand years. We are here to wake it.$"
 
 
 GrantIsland_EventScript_Acolyte2::
@@ -99,15 +66,7 @@ GrantIsland_EventScript_Acolyte2::
 	msgbox GrantIsland_Text_Acolyte2Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantIsland_Text_Acolyte2Intro:
-	.string "The gratitude POKéMON lives here.\n"
-	.string "Imagine what a world of gratitude looks\l"
-	.string "like. We can build it.$"
-GrantIsland_Text_Acolyte2Defeat:
-	.string "You are not grateful at all.$"
-GrantIsland_Text_Acolyte2Post:
-	.string "BRIGHAM is already at the top. You will\n"
-	.string "not reach him in time. No one ever does.$"
+
 
 GrantPeak_EventScript_Scene::
 	goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
@@ -306,64 +265,7 @@ GrantPeak_Text_PraetusName:
 GrantPeak_Text_SilvioName:
 	.string "SILVIO$"
 
-GrantPeak_Text_BrighamGloat:
-	.string "There you are. Right on time to watch.\p"
-	.string "The garden POKéMON. A thousand years\n"
-	.string "asleep in these flowers, and it wakes\l"
-	.string "for us.$"
 
-GrantPeak_Text_IrrusIntro:
-	.string "You put me down in a stairwell once.\p"
-	.string "There are no stairwells here. Only the\n"
-	.string "open sky and the sea I command.$"
-GrantPeak_Text_IrrusDefeat:
-	.string "…the sea does not answer to me today.$"
-GrantPeak_Text_IrrusAfter:
-	.string "Fine. PRAETUS. Your turn to be\n"
-	.string "disappointed.$"
-
-GrantPeak_Text_PraetusIntro:
-	.string "I did not move for you at DELMARK.\p"
-	.string "I have come all this way to not move\n"
-	.string "for you again.$"
-GrantPeak_Text_PraetusDefeat:
-	.string "…still. I still do not move fast enough.$"
-GrantPeak_Text_PraetusAfter:
-	.string "It is done regardless. Look past us,\n"
-	.string "child. Look at what BRIGHAM holds.$"
-
-GrantPeak_Text_BrighamSpiel:
-	.string "Beautifully fought. Truly.\p"
-	.string "And utterly beside the point.\p"
-	.string "CELEBI. JIRACHI. And now the gratitude\n"
-	.string "of the garden itself.\p"
-	.string "Three wishes, {PLAYER}. Do you understand\n"
-	.string "what we can do with three wishes?\p"
-	.string "You are always one mountain, one island,\n"
-	.string "one heartbeat too late.\p"
-	.string "Go home. There is nothing left here to\n"
-	.string "save.$"
-
-GrantPeak_Text_SilvioControl:
-	.string "…{PLAYER}. I saw the boats leave.\p"
-	.string "Three of them now. This is slipping\n"
-	.string "out of anyone's control, mine most of\l"
-	.string "all.\p"
-	.string "Chasing them has not worked. Not once.\n"
-	.string "You need something they do not have.$"
-
-GrantPeak_Text_SilvioRegis:
-	.string "Take this. It is WATERFALL.\p"
-	.string "There is an old story in ENPALE. Three\n"
-	.string "guardians sealed away in stone, ice,\l"
-	.string "and steel. REGIROCK. REGICE. REGISTEEL.\p"
-	.string "The falls hide the way to each of them.\n"
-	.string "One sleeps in the deep of this very\l"
-	.string "island.\p"
-	.string "Find them. Wake them. Turn their power\n"
-	.string "against the COVENANT before those three\l"
-	.string "wishes become one.\p"
-	.string "Go. I have kept you long enough.$"
 
 GRANT_ISLAND_EventScript_Cynthia::
 	lock
@@ -468,95 +370,189 @@ GRANT_ISLAND_EventScript_CynthiaFlavorText::
 GRANT_ISLAND_Text_CynthiaName:
 	.string "CYNTHIA$"
 
+GrantIsland_Text_SwimmerF1Intro:
+	.string "You must be a good swimmer to get\n"
+	.string "this far!$"
+
+GrantIsland_Text_SwimmerF1Defeat:
+	.string "Wow!$"
+
+GrantIsland_Text_SwimmerF1Post:
+	.string "You're a better swimmer than me!$"
+
+GrantIsland_Text_SwimmerM1Intro:
+	.string "Think you can just swim to safety\n"
+	.string "so soon?$"
+
+GrantIsland_Text_SwimmerM1Defeat:
+	.string "Aw, man!$"
+
+GrantIsland_Text_SwimmerM1Post:
+	.string "Fine, swim on.$"
+
+GrantIsland_Text_FishermanIntro:
+	.string "I don't care about any of that TEAM\n"
+	.string "COVENANT business, I just wanna\l"
+	.string "FISH!$"
+
+GrantIsland_Text_FishermanDefeat:
+	.string "No bites!$"
+
+GrantIsland_Text_FishermanPost:
+	.string "Whatever, I still got my fish…$"
+
+GrantIsland_Text_Acolyte1Intro:
+	.string "You shouldn't have followed us…$"
+
+GrantIsland_Text_Acolyte1Defeat:
+	.string "Huh!?$"
+
+GrantIsland_Text_Acolyte1Post:
+	.string "This is a peaceful place…$"
+
+GrantIsland_Text_Acolyte2Intro:
+	.string "Step away from that cave!$"
+
+GrantIsland_Text_Acolyte2Defeat:
+	.string "Fine!$"
+
+GrantIsland_Text_Acolyte2Post:
+	.string "Just don't tell the ELDERS I lost,\n"
+	.string "okay?$"
+
+
+GrantPeak_Text_BrighamGloat:
+	.string "There you are!\p"
+	.string "You're right on time to watch my\n"
+	.string "next victory!\p"
+	.string "SHAYMIN is already in my hands!\p"
+	.string "What luck CELEBI and JIRACHI have\n"
+	.string "brought me!\p"
+	.string "Now, get lost, kid!$"
+
+GrantPeak_Text_IrrusIntro:
+	.string "I won't be embarrassed again!$"
+
+GrantPeak_Text_IrrusDefeat:
+	.string "BRIGHAM, I'm sorry!$"
+
+GrantPeak_Text_IrrusAfter:
+	.string "Fine. Whatever.\p"
+	.string "PRAETUS, it's your turn!\n"
+	.string "Finish them!$"
+
+GrantPeak_Text_PraetusIntro:
+	.string "You insolent brat!\p"
+	.string "It's time to put you in your place!$"
+
+GrantPeak_Text_PraetusDefeat:
+	.string "Again!?$"
+
+GrantPeak_Text_PraetusAfter:
+	.string "I don't know how you did it again,\n"
+	.string "but no matter!\p"
+	.string "SHAYMIN is ours!$"
+
+GrantPeak_Text_BrighamSpiel:
+	.string "Nicely done. Truthfully.\p"
+	.string "And utterly pointless.\p"
+	.string "CELEBI, JIRACHI, and now SHAYMIN\n"
+	.string "are in our hands.\p"
+	.string "This world will be cleansed anew in\n"
+	.string "no time.\p"
+	.string "Go home, kid. You lost again.\p"
+	.string "C'mon, you worthless bunch.\n"
+	.string "We're leaving.$"
+
+GrantPeak_Text_SilvioControl:
+	.string "…{PLAYER}, I'm sorry.\p"
+	.string "I shouldn't have wasted time in\n"
+	.string "DELMARK.\p"
+	.string "Now they have SHAYMIN in their\n"
+	.string "grasp as well.\p"
+	.string "This is not good.\p"
+	.string "I don't know how else to help you\n"
+	.string "but with this.$"
+
+GrantPeak_Text_SilvioRegis:
+	.string "Here, it's WATERFALL.\p"
+	.string "It's a powerful HM that calls upon\n"
+	.string "a POKéMON to take you to new\l"
+	.string "heights.\p"
+	.string "Legend has it that there's three\n"
+	.string "guardians that watch over ENPALE.\p"
+	.string "REGIROCK, REGICE, and REGISTEEL.\p"
+	.string "No one knows for sure their exact\n"
+	.string "whereabouts, but rumor has it that\l"
+	.string "one lurks in this very mountain.\p"
+	.string "If you should find the time, come\n"
+	.string "back later and seek them.\p"
+	.string "Their power may be enough to stop\n"
+	.string "TEAM COVENANT once and for all.\p"
+	.string "Good luck, {PLAYER}.\n"
+	.string "You'll need it.$"
+
 GRANT_ISLAND_Text_CynthiaIntro:
-	.string "I hoped it would be you.\p"
-	.string "OAK writes letters. STEVEN sends\n"
-	.string "telegrams, of all things. RED sent\l"
-	.string "nothing at all, which from RED is\l"
-	.string "practically a speech.\p"
-	.string "So I've heard about you three\n"
-	.string "separate ways.\p"
-	.string "Do you know what grows up here?\n"
-	.string "GRACIDEA. Nowhere else in ENPALE.\p"
-	.string "It has no business being on this\n"
-	.string "island at all. Something brought it.\p"
-	.string "In SINNOH we have a word for the\n"
-	.string "small god that travels with those\l"
-	.string "flowers and turns ruined ground\l"
-	.string "back into meadow.\p"
-	.string "SHAYMIN. It's watching us now, from\n"
-	.string "somewhere in that white.\p"
-	.string "It came to thank someone. It hasn't\n"
-	.string "settled on who.$"
+	.string "Oh, you must be {PLAYER}.\p"
+	.string "I heard of your achievements.\p"
+	.string "I was here on vacation to this\n"
+	.string "beautiful island when a mystical\l"
+	.string "creature came to me.\p"
+	.string "This POKéMON, SHAYMIN, originally\n"
+	.string "came from my region, SINNOH.\p"
+	.string "It's rather cute, isn't it?\p"
+	.string "Well, I have no need to disrupt\n"
+	.string "nature, but if you really want this\l"
+	.string "POKéMON, you'll have to prove to me\l"
+	.string "you can handle it!$"
 
 GRANT_ISLAND_Text_CynthiaChallenge:
-	.string "Let's give it a reason to decide.\p"
-	.string "Shall we?$"
+	.string "What do you say?$"
 
 GRANT_ISLAND_Text_CynthiaDecline:
-	.string "Of course. The flowers keep.\n"
-	.string "So do I.$"
+	.string "But of course.$"
 
 GRANT_ISLAND_Text_CynthiaBattleDefeat:
-	.string "Ah. There it is.\p"
-	.string "Now I see what they all meant.$"
+	.string "Hmm, you're strong.$"
 
 GRANT_ISLAND_Text_CynthiaGive:
-	.string "Thank you. Truly.\p"
-	.string "That is the best match I've had\n"
-	.string "since I gave up the title.\p"
-	.string "Look at the flowers.$"
+	.string "Thank you, truly.\p"
+	.string "That was quite the match.\n"
+	.string "SHAYMIN is yours.$"
 
 GRANT_ISLAND_Text_ReceivedShaymin:
 	.string "{PLAYER} received {STR_VAR_1}!$"
 
 GRANT_ISLAND_Text_CynthiaAfter:
-	.string "Congratulations, {PLAYER}.\p"
-	.string "That's all four. MEW. JIRACHI.\n"
-	.string "CELEBI. And now SHAYMIN.\p"
-	.string "TEAM COVENANT dragged them out of\n"
-	.string "the places they were sleeping and\l"
-	.string "expected weapons.\p"
-	.string "Instead they scattered, and waited,\n"
-	.string "and each of them chose a person.\p"
-	.string "They all chose you.\p"
-	.string "I'd think about what that means.$"
+	.string "SHAYMIN seems to like you.\p"
+	.string "I can imagine you two making quite\n"
+	.string "the team!$"
 
 GRANT_ISLAND_Text_CynthiaNoRoom:
-	.string "SHAYMIN drifts closer, then stops.\p"
-	.string "Your party is full, and your boxes\n"
-	.string "besides. Make room and come back\l"
-	.string "up the path.\p"
-	.string "It will be in the flowers. It\n"
-	.string "always is.$"
+	.string "You have no room for SHAYMIN.\n"
+	.string "Come back later.$"
 
 GRANT_ISLAND_Text_CynthiaFlavor:
-	.string "I'm staying on a while. There are\n"
-	.string "ruins under the north cliff that\l"
-	.string "nobody has troubled to map.\p"
-	.string "How is SHAYMIN? …Good.\p"
-	.string "Keep it somewhere with flowers.$"	
+	.string "I'm gonna stay here a while.\p"
+	.string "Come back later and I might be in\n"
+	.string "the mood for a rematch.$"
 
 GRANT_ISLAND_Text_CynthiaRematchOffer:
-	.string "Word travels, even out here.\p"
-	.string "A new CHAMPION in ENPALE, and the\n"
-	.string "same trainer standing over them.\p"
-	.string "I held back on this island. I won't\n"
-	.string "make that mistake twice. Shall we?$"
+	.string "So, you're the best around, is that\n"
+	.string "right?\p"
+	.string "Wanna prove it?$"
 
 GRANT_ISLAND_Text_CynthiaRematchAccept:
-	.string "Good. Show me everything.$"
+	.string "Good, now show me!$"
 
 GRANT_ISLAND_Text_CynthiaRematchDefeat:
-	.string "There it is. That's the trainer the\n"
-	.string "stories were about.$"
+	.string "So that's the strength I've heard\n"
+	.string "about.$"
 
 GRANT_ISLAND_Text_CynthiaRematchAfter:
-	.string "Every region has its myths, and most\n"
-	.string "of them are only stories.\p"
-	.string "You're the rare kind that turns out\n"
-	.string "to be true.$"
+	.string "You really live up to the word\n"
+	.string "around ENPALE.$"
 
 GRANT_ISLAND_Text_CynthiaPostRematch:
-	.string "The flowers here bloom for SHAYMIN.\n"
-	.string "Look after it, and they'll keep on.$"	
+	.string "I might make this place my new\n"
+	.string "go-to vacation spot.$"

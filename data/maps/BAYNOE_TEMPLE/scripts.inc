@@ -78,11 +78,6 @@ BAYNOE_TEMPLE_EventScript_Brigham::
 	releaseall
 	end
 
-BAYNOE_TEMPLE_EventScript_BrighamDone::
-	@ after the finale — Brigham's gone; if anything remains interactive, handle here
-	release
-	end
-
 @ ---- movements ----
 BAYNOE_TEMPLE_Movement_BrighamTurn:
 	face_down
@@ -138,60 +133,65 @@ BAYNOE_TEMPLE_Movement_BrighamLookAround:
 	step_end	
 
 BAYNOE_TEMPLE_Text_BrighamSpeech:
-	.string "…You. Of course it's you.\p"
-	.string "Do you have any idea what you've\n"
-	.string "cost me? What I've BUILT?\p"
-	.string "No. No, it doesn't matter. You're\n"
-	.string "here, and it's still not enough.\p"
-	.string "I have all four now. Celebi. Jirachi.\n"
-	.string "Shaymin. Mew. Every miracle in\l"
-	.string "creation, and they answer to ME.\p"
-	.string "I just have to… I'll figure out how\n"
-	.string "to make the wish. I WILL. And then\l"
-	.string "none of this will have mattered.\p"
-	.string "Stay back. Stay BACK. I'll stop you\n"
-	.string "here, and then I'll… I'll work out\l"
-	.string "the rest. I always do.$"
+	.string "Huh!? You again!?\p"
+	.string "Ugh, just leave me alone! We're on\n"
+	.string "the verge of greatness here!\p"
+	.string "Just stay back! You're too late,\n"
+	.string "anyways!\p"
+	.string "I have all four mythical POKéMON!\n"
+	.string "CELEBI! JIRACHI! SHAYMIN!\l"
+	.string "And now MEW!\p"
+	.string "Nothing can stop me from fixing\n"
+	.string "this world!\p"
+	.string "Now I just have to make the wish!\n"
+	.string "Or well, at least figure out how…\p"
+	.string "But it doesn't matter! You can't\n"
+	.string "stop me anyways! Hahaha!\p"
+	.string "Mythical POKéMON, go!$"
 
 BAYNOE_TEMPLE_Text_BrighamDefeat:
-	.string "No. No, no, no…$"
+	.string "No! No no no!$"
 
 BAYNOE_TEMPLE_Text_BrighamPostBattle:
-	.string "It's fine. It's FINE. I still have\n"
-	.string "them. Come! Come to me! Grant it!\p"
-	.string "Grant my wish!$"
+	.string "It's fine! IT'S FINE!\p"
+	.string "I still have the mythical POKéMON!\n"
+	.string "Come, now, and grant my wish!$"
 
 BAYNOE_TEMPLE_Text_BrighamBreakdown:
-	.string "…They're gone.\p"
-	.string "They were never really mine, were\n"
-	.string "they. I held the leash and called\l"
-	.string "it power.\p"
-	.string "…And the truth is, even if you\n"
-	.string "hadn't come… I never knew what to\l"
-	.string "wish for. Not really.\p"
-	.string "I built all of this to fill a hole\n"
-	.string "and I don't even know its shape.\p"
-	.string "…I'm tired. I'm going home. There's\n"
-	.string "nothing here. There never was.$"
+	.string "What!? Where did they go!?\p"
+	.string "How can this be!\p"
+	.string "No… No! NOO!!\p"
+	.string "I was so close! Now what do I do!?\p"
+	.string "I guess… I guess I didn't have any\n"
+	.string "power at all, did I…?\p"
+	.string "Ugh… Well, I guess I'll go ask my\n"
+	.string "aunt MERYL for a job.\p"
+	.string "Whatever. Go home kid, you won.\p"
+	.string "There's nothing here. Never was…$"
 
 BAYNOE_TEMPLE_Text_RossReveal:
-	.string "Quite a thing to watch a man lose\n"
-	.string "everything he never had.\p"
-	.string "The name's ROSS. I run the gym in\n"
-	.string "Minsi City. Though lately I've been\l"
-	.string "doing… other work.\p"
-	.string "I've shadowed the Covenant for\n"
-	.string "years. Always a step behind. Always\l"
-	.string "a little too late.\p"
-	.string "Just like you, in a way. Except you\n"
-	.string "were there when it counted. I never\l"
-	.string "managed that.\p"
-	.string "So. Thank you. Truly. Enpale won't\n"
-	.string "know what you spared it.\p"
-	.string "Come to Minsi when you're ready.\n"
-	.string "I'd like to see what you're made of,\l"
-	.string "with a badge on the line.$"
+	.string "That was quite the show.\p"
+	.string "Watching a man lose everything he\n"
+	.string "never had in the first place.\p"
+	.string "The name's ROSS. I run the POKéMON\n"
+	.string "GYM in MINSI CITY.\p"
+	.string "I'm also a detective who's been\n"
+	.string "trailing TEAM COVENANT for a while\l"
+	.string "now.\p"
+	.string "Every time I try to stop them, you\n"
+	.string "always seemed to be one step ahead.\p"
+	.string "I guess I have to thank you.\p"
+	.string "But not now. I'll thank you later in\n"
+	.string "the MINSI CITY GYM.\p"
+	.string "Come find me there, won't ya?\p"
+	.string "There might be a badge with your\n"
+	.string "name on it.$"
+
+BAYNOE_TEMPLE_EventScript_BrighamDone::
+	msgbox BAYNOE_TEMPLE_Text_BrighamDone_Text, MSGBOX_DEFAULT
+	release
+	end
 
 BAYNOE_TEMPLE_Text_BrighamDone_Text:
-	.string "$"
-
+	.string "…Go on. Nothing here for either\n"
+	.string "of us now.$"	

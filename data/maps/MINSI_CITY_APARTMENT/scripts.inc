@@ -18,25 +18,20 @@ MINSI_CITY_APARTMENT_EventScript_OldManDone::
 	end
 
 MINSI_CITY_APARTMENT_Text_OldManGive:
-	.string "Sixty years I've raised POKéMON.\n"
-	.string "Sixty. And you know what I learned\l"
-	.string "far too late?\p"
-	.string "The strong ones don't need your\n"
-	.string "help. It's the little ones, the\l"
-	.string "ones warming the bench, that get\l"
-	.string "left behind.\p"
-	.string "Here. An old man's regret, wrapped\n"
-	.string "up in a gift.$"
+	.string "I've been training POKéMON for\n"
+	.string "sixty years!\p"
+	.string "You know what I learned?\n"
+	.string "Experience tops everything!\p"
+	.string "No money can buy it, you can only\n"
+	.string "get it by going out and seeing the\l"
+	.string "world!\p"
+	.string "Here, take this, and promise me\n"
+	.string "you'll put it to use.$"
 
 MINSI_CITY_APARTMENT_Text_OldManAfter:
-	.string "Clip that onto a youngster and it\n"
-	.string "learns from every battle, even the\l"
-	.string "ones it sits out.\p"
-	.string "No POKéMON of mine ever gets left\n"
-	.string "behind again. See that yours\l"
-	.string "don't either.$"
+	.string "Just activate that EXP SHARE in\n"
+	.string "your menu and it'll do the rest!$"
 
 MINSI_CITY_APARTMENT_Text_OldManDone:
-	.string "Still carrying that EXP. SHARE?\n"
-	.string "Good. Some lessons only stick if\l"
-	.string "you use them.$"
+	.string "Still got that EXP SHARE? Good.\p"
+	.string "Sharing is caring!$"

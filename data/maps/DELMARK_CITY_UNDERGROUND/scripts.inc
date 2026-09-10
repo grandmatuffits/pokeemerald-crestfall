@@ -85,11 +85,12 @@ Registeel_Movement_DropIn:
 	step_end
 
 Registeel_Text_GateTooDim:
-	.string "A steel door, sealed for ages.\p"
-	.string "Faint markings cover its face, too dim\n"
-	.string "to read in the cavern light.$"
+	.string "The hard stone wall has faint\n"
+	.string "markings, but it's too dark to see\l"
+	.string "what they say.\p"
+	.string "If only you had a light…$"
 
 Registeel_Text_MarkingsGlow:
-	.string "The markings flare to life…\p"
-	.string "and something deep within the steel\n"
-	.string "stirs.$"	
+	.string "The faint markings are now clearly\n"
+	.string "visible, but the cave now shakes\l"
+	.string "with life…$"

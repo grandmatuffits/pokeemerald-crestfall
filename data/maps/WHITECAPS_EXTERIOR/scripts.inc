@@ -103,35 +103,12 @@ Whitecaps_EventScript_Acolyte5::
 	msgbox Whitecaps_Text_Acolyte5PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Whitecaps_Text_Acolyte5Intro:
-	.string "The CELEBI showed us things.\p"
-	.string "Where you would be. When you would\n"
-	.string "come. We have been waiting.$"
-
-Whitecaps_Text_Acolyte5Defeat:
-	.string "…it did not show me this.$"
-
-Whitecaps_Text_Acolyte5PostBattle:
-	.string "Time itself is on our side now.\n"
-	.string "What do you have?$"
-
 
 Whitecaps_EventScript_Acolyte6::
 	trainerbattle_single TRAINER_COVENANT_WC_6, Whitecaps_Text_Acolyte6Intro, Whitecaps_Text_Acolyte6Defeat
 	msgbox Whitecaps_Text_Acolyte6PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Whitecaps_Text_Acolyte6Intro:
-	.string "I can see in the dark of this mountain\n"
-	.string "just fine.\p"
-	.string "I can see you are alone.$"
-
-Whitecaps_Text_Acolyte6Defeat:
-	.string "…and still you win.$"
-
-Whitecaps_Text_Acolyte6PostBattle:
-	.string "Go up, then. Meet what is waiting.\n"
-	.string "Alone.$"
 
 
 Whitecaps_EventScript_Acolyte7::
@@ -139,18 +116,7 @@ Whitecaps_EventScript_Acolyte7::
 	msgbox Whitecaps_Text_Acolyte7PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Whitecaps_Text_Acolyte7Intro:
-	.string "So close to the summit now.\p"
-	.string "Close enough to turn around with your\n"
-	.string "pride intact. I would.$"
 
-Whitecaps_Text_Acolyte7Defeat:
-	.string "You should have turned around.$"
-
-Whitecaps_Text_Acolyte7PostBattle:
-	.string "Last of us before the top.\p"
-	.string "Whatever you think is up there, it is\n"
-	.string "worse.$"
 
 
 Whitecaps_EventScript_Acolyte8::
@@ -158,17 +124,7 @@ Whitecaps_EventScript_Acolyte8::
 	msgbox Whitecaps_Text_Acolyte8PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Whitecaps_Text_Acolyte8Intro:
-	.string "The ELDERS are just past me.\p"
-	.string "I am the last thing between you and\n"
-	.string "them. I intend to be a problem.$"
 
-Whitecaps_Text_Acolyte8Defeat:
-	.string "…barely a problem at all.$"
-
-Whitecaps_Text_Acolyte8PostBattle:
-	.string "Go up. They have been expecting you\n"
-	.string "since DELMARK.$"
 
 
 @ ============================================================
@@ -364,50 +320,14 @@ Whitecaps_Movement_FerrusExit:
 @ ============================================================
 
 Whitecaps_Text_FerrusName:
-	.string "ELDER FERRUS$"
+	.string "Ferrus$"
 
 Whitecaps_Text_SaxusName:
-	.string "ELDER SAXUS$"
+	.string "Saxus$"
 
 Whitecaps_Text_BrighamName:
-	.string "BRIGHAM$"
+	.string "Brigham$"
 
-Whitecaps_Text_FerrusIntro:
-	.string "LENOX was a long time ago, child.\p"
-	.string "You caught me tired and among the\n"
-	.string "trees. There are no trees here.\p"
-	.string "Only the two of us, and the thing we\n"
-	.string "came to take.$"
-
-Whitecaps_Text_FerrusDefeat:
-	.string "…still not enough.$"
-
-Whitecaps_Text_FerrusAfter:
-	.string "Do not rest. SAXUS is not tired.\p"
-	.string "And SAXUS does not lose the same way\n"
-	.string "twice.$"
-
-Whitecaps_Text_SaxusIntro:
-	.string "The marsh was mud and confusion.\p"
-	.string "This is stone. My ground.\n"
-	.string "You will find it harder to move me\l"
-	.string "here.$"
-
-Whitecaps_Text_SaxusDefeat:
-	.string "…the stone gives. Of course it does.$"
-
-Whitecaps_Text_SaxusAfter:
-	.string "Enough.\p"
-	.string "You climbed a mountain to be too late.$"
-
-Whitecaps_Text_BrighamSpeech:
-	.string "Despite your heroic efforts,\n"
-	.string "the JIRACHI is ours.\p"
-	.string "Having the CELEBI made this a breeze.\n"
-	.string "We knew every move before you made\l"
-	.string "it.\p"
-	.string "Now step aside, {PLAYER}.\n"
-	.string "Destiny awaits.$"
 
 @ --- Silvio emerges and sends the player onward ----------
 
@@ -433,24 +353,9 @@ Whitecaps_Movement_SilvioExit:
 	set_invisible
 	step_end
 
-	Whitecaps_Text_SilvioName:
-	.string "SILVIO$"
+Whitecaps_Text_SilvioName:
+	.string "Silvio$"
 
-Whitecaps_Text_SilvioGrantIsland:
-	.string "{PLAYER}. I came as fast as I could.\p"
-	.string "I was too late, and so were you. I am\n"
-	.string "sorry for that.\p"
-	.string "But I heard where they are going next.\n"
-	.string "GRANT ISLAND. There is a MANAPHY there,\l"
-	.string "and they mean to take it too.$"
-
-Whitecaps_Text_SilvioSurf:
-	.string "You cannot reach it on foot.\p"
-	.string "Take this. It is SURF.\p"
-	.string "North of the beach at ROSEBANK TOWN,\n"
-	.string "the water opens up. That is your way\l"
-	.string "to GRANT ISLAND.\p"
-	.string "Go. I will only slow you now.$"
 
 WHITECAPS_EXTERIOR_EventScript_Steven::
 	lock
@@ -553,88 +458,163 @@ WHITECAPS_EXTERIOR_EventScript_StevenFlavorText::
 	end
 
 WHITECAPS_EXTERIOR_Text_StevenName:
-	.string "STEVEN$"
-
-WHITECAPS_EXTERIOR_Text_StevenIntro:
-	.string "Cold, isn't it. I don't mind it.\p"
-	.string "The rock up here is older than\n"
-	.string "anything in HOENN. It remembers\l"
-	.string "being seabed.\p"
-	.string "I came for the stone. I found\n"
-	.string "something else.\p"
-	.string "There is a thing that sleeps in the\n"
-	.string "ice above us. Small. It wakes for a\l"
-	.string "week in a thousand years, and this\l"
-	.string "happens to be the week.\p"
-	.string "JIRACHI.\p"
-	.string "OAK sent word ahead of you. He said\n"
-	.string "you had earned MEW rather than\l"
-	.string "caught it.\p"
-	.string "I would like to see the difference\n"
-	.string "for myself. I'm STEVEN.$"
-
-WHITECAPS_EXTERIOR_Text_StevenChallenge:
-	.string "Win, and JIRACHI is yours.\p"
-	.string "Shall we?$"
-
-WHITECAPS_EXTERIOR_Text_StevenDecline:
-	.string "The mountain isn't going anywhere.\n"
-	.string "Neither am I.$"
-
-WHITECAPS_EXTERIOR_Text_StevenBattleDefeat:
-	.string "…Beautiful. Truly.$"
-
-WHITECAPS_EXTERIOR_Text_StevenGive:
-	.string "That was not luck, and we both\n"
-	.string "know it.\p"
-	.string "Look up.\p"
-	.string "It has been listening the whole\n"
-	.string "time.$"
+	.string "Steven$"
 
 WHITECAPS_EXTERIOR_Text_ReceivedJirachi:
 	.string "{PLAYER} received {STR_VAR_1}!$"
 
+Whitecaps_Text_Acolyte5Intro:
+	.string "With the power of CELEBI, JIRACHI\n"
+	.string "is ours!$"
+
+Whitecaps_Text_Acolyte5Defeat:
+	.string "Huh!?$"
+
+Whitecaps_Text_Acolyte5PostBattle:
+	.string "You can't stop the ELDERS!$"
+
+Whitecaps_Text_Acolyte6Intro:
+	.string "I can't wait to make a wish!$"
+
+Whitecaps_Text_Acolyte6Defeat:
+	.string "I wish that didn't happen…$"
+
+Whitecaps_Text_Acolyte6PostBattle:
+	.string "If you could wish for anything in\n"
+	.string "the world, what would it be?$"
+
+Whitecaps_Text_Acolyte7Intro:
+	.string "You're getting too close! Step back!$"
+
+Whitecaps_Text_Acolyte7Defeat:
+	.string "No…$"
+
+Whitecaps_Text_Acolyte7PostBattle:
+	.string "You're too stubborn!$"
+
+Whitecaps_Text_Acolyte8Intro:
+	.string "I won't let you past!$"
+
+Whitecaps_Text_Acolyte8Defeat:
+	.string "Ugh…$"
+
+Whitecaps_Text_Acolyte8PostBattle:
+	.string "Fine, but you won't win!$"
+
+
+Whitecaps_Text_FerrusIntro:
+	.string "LENOX was a long time ago, child.\p"
+	.string "My power has grown greatly since.\p"
+	.string "And now, for my retribution!$"
+
+Whitecaps_Text_FerrusDefeat:
+	.string "Argh!$"
+
+Whitecaps_Text_FerrusAfter:
+	.string "How did you…\p"
+	.string "Bah! Whatever! SAXUS!$"
+
+Whitecaps_Text_SaxusIntro:
+	.string "What happened at the WALLAR\n"
+	.string "MARSHLANDS was plain luck.\p"
+	.string "It won't happen again.\p"
+	.string "This time, you'll be face down in\n"
+	.string "the snow!$"
+
+Whitecaps_Text_SaxusDefeat:
+	.string "Huh!?$"
+
+Whitecaps_Text_SaxusAfter:
+	.string "Enough!\n"
+	.string "You were too late anyways!$"
+
+Whitecaps_Text_BrighamSpeech:
+	.string "Quite the feat, child, but once\n"
+	.string "again, you were too late.\p"
+	.string "First CELEBI, and now JIRACHI is\n"
+	.string "ours as well.\p"
+	.string "This is getting easier and easier.\p"
+	.string "We must go now, destiny awaits!$"
+
+Whitecaps_Text_SilvioGrantIsland:
+	.string "Rats! We were too late again!\p"
+	.string "They can't keep getting away with\n"
+	.string "this!\p"
+	.string "But, during my time clearing out\n"
+	.string "TEAM COVENANT from DELMARK, I\l"
+	.string "learned something.\p"
+	.string "Their next move. GRANT ISLAND.\p"
+	.string "Apparently, they're going to look\n"
+	.string "for SHAYMIN there.\p"
+	.string "That'll be three mythical POKéMON\n"
+	.string "in their possession.\p"
+	.string "We can't let them win!$"
+
+Whitecaps_Text_SilvioSurf:
+	.string "There's only one way to GRANT\n"
+	.string "ISLAND, and that's through the\l"
+	.string "waters north of ROSEBANK TOWN.\p"
+	.string "You'll need this HM to get there.\n"
+	.string "It contains SURF.\p"
+	.string "Ride the waves. I'll see what I can\n"
+	.string "do to help.$"
+
+WHITECAPS_EXTERIOR_Text_StevenIntro:
+	.string "What a beautiful mountain.\p"
+	.string "I've never seen anything quite like\n"
+	.string "it in my travels.\p"
+	.string "Pardon me, I'm STEVEN.\p"
+	.string "When I first came up here, I found\n"
+	.string "this JIRACHI.\p"
+	.string "An interesting POKéMON, to say the\n"
+	.string "least.\p"
+	.string "You must be {PLAYER}.\n"
+	.string "I've heard of you.$"
+
+WHITECAPS_EXTERIOR_Text_StevenChallenge:
+	.string "How about a battle?\n"
+	.string "Winner gets JIRACHI.\p"
+	.string "What do you say?$"
+
+WHITECAPS_EXTERIOR_Text_StevenDecline:
+	.string "I see.\p"
+	.string "Well, if you change your mind,\n"
+	.string "I'll be here.$"
+
+WHITECAPS_EXTERIOR_Text_StevenBattleDefeat:
+	.string "Nicely done.$"
+
+WHITECAPS_EXTERIOR_Text_StevenGive:
+	.string "Well, I'm a man of my word.\n"
+	.string "JIRACHI is yours.$"
+
 WHITECAPS_EXTERIOR_Text_StevenAfter:
-	.string "Congratulations, {PLAYER}.\p"
-	.string "JIRACHI grants wishes, they say.\n"
-	.string "I don't know whether that's true.\p"
-	.string "What I do know is that it came down\n"
-	.string "off that ridge for you and not for\l"
-	.string "me, and I have been here three weeks.\p"
-	.string "RED is somewhere in the WALLAR\n"
-	.string "MARSHLANDS. CYNTHIA went east, over\l"
-	.string "the water.\p"
-	.string "Go carefully. And enjoy the climb.$"
+	.string "Congratulations.\p"
+	.string "I think I'll stay up here for a\n"
+	.string "while and admire the view.$"
 
 WHITECAPS_EXTERIOR_Text_StevenNoRoom:
-	.string "Your party is full, and your boxes\n"
-	.string "besides. Make room and come back up.\p"
-	.string "JIRACHI has waited a thousand years.\n"
-	.string "It can manage an afternoon.$"
+	.string "You don't have room.\n"
+	.string "Come back when you do.$"
 
 WHITECAPS_EXTERIOR_Text_StevenFlavor:
-	.string "I'll stay a while yet. There's a\n"
-	.string "seam in the north face I'd like to\l"
-	.string "put a hammer to.\p"
-	.string "How is JIRACHI sleeping?$"	
+	.string "How's JIRACHI treating you?\n"
+	.string "Make a wish yet?$"
 
 WHITECAPS_EXTERIOR_Text_StevenRematchOffer:
-	.string "So the CHAMPION'S seat changed hands\n"
-	.string "again… and you were the one who did it.\p"
-	.string "I've been training since we last met.\n"
-	.string "Care to find out how much?$"
+	.string "Ah, there you are.\p"
+	.string "I was wondering when we'd get to\n"
+	.string "go again.$"
 
 WHITECAPS_EXTERIOR_Text_StevenRematchAccept:
-	.string "Then let's not waste the daylight.$"
+	.string "Then let's not waste any more time.$"
 
 WHITECAPS_EXTERIOR_Text_StevenRematchDefeat:
-	.string "Still ahead of me. Remarkable.$"
+	.string "Remarkable.$"
 
 WHITECAPS_EXTERIOR_Text_StevenRematchAfter:
-	.string "That was the battle I came here for.\p"
-	.string "Whatever the mountain has left to\n"
-	.string "teach me, you've already learned it.$"
+	.string "Well done.\p"
+	.string "It seems you're quite the trainer.$"
 
 WHITECAPS_EXTERIOR_Text_StevenPostRematch:
-	.string "The air's thin up here, but the view\n"
-	.string "is worth every step. Enjoy it.$"	
+	.string "The view is beautiful, isn't it?$"

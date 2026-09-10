@@ -25,38 +25,7 @@ MINSI_CITY_APARTMENT_EventScript_ShinyWomanDone::
 	release
 	end
 
-MINSI_CITY_APARTMENT_Text_ShinyNotYet:
-	.string "Oh, let me see them! Let me see!\p"
-	.string "…No. No, they're all the usual\n"
-	.string "colors. Lovely, mind you. Just\l"
-	.string "usual.\p"
-	.string "Come back if you ever meet one\n"
-	.string "that's wearing the wrong coat.\l"
-	.string "You'll know it the instant you\l"
-	.string "see it.$"
 
-MINSI_CITY_APARTMENT_Text_ShinyGive:
-	.string "Wait. WAIT. Bring that one closer.\p"
-	.string "Do you see the color on it? That\n"
-	.string "isn't a trick of the light. That's\l"
-	.string "a one-in-thousands coat.\p"
-	.string "I looked for one my whole life.\n"
-	.string "Forty years of tall grass. Never\l"
-	.string "once.\p"
-	.string "And here you are, holding one\n"
-	.string "like it's nothing.$"
-
-MINSI_CITY_APARTMENT_Text_ShinyAfter:
-	.string "Take it. It's tuned to spot those\n"
-	.string "odd coats, and it's wasted in a\l"
-	.string "drawer.\p"
-	.string "Somebody in this world ought to\n"
-	.string "find them. Might as well be the\l"
-	.string "one with the luck.$"
-
-MINSI_CITY_APARTMENT_Text_ShinyDone:
-	.string "Any new colors since we spoke?\n"
-	.string "Don't you dare pass one by.$"	
 
 MINSI_CITY_APARTMENT_EventScript_Dev::
 	lock
@@ -89,49 +58,72 @@ MINSI_CITY_APARTMENT_EventScript_DevPostBattle::
 	release
 	end
 
+MINSI_CITY_APARTMENT_Text_ShinyNotYet:
+	.string "You have one? Lemme see, lemme see!\p"
+	.string "No, no. They're all normal.\p"
+	.string "Ugh, I guess I'll never see a shiny\n"
+	.string "POKéMON in my life…$"
+
+MINSI_CITY_APARTMENT_Text_ShinyGive:
+	.string "Wait, what? Bring it closer!\p"
+	.string "Look at that! A real shiny POKéMON!\n"
+	.string "In the flesh!\p"
+	.string "HAHAHA! This is amazing!\p"
+	.string "So many years hunting, and now I've\n"
+	.string "seen one!\p"
+	.string "Well, I guess I don't need this\n"
+	.string "anymore.$"
+
+MINSI_CITY_APARTMENT_Text_ShinyAfter:
+	.string "Take it. It's a SHINY CHARM.\p"
+	.string "It's supposed to increase your\n"
+	.string "chances of finding a shiny POKéMON,\l"
+	.string "but it's clearly never worked for\l"
+	.string "me.\p"
+	.string "Maybe you'll have better luck with\n"
+	.string "it!$"
+
+MINSI_CITY_APARTMENT_Text_ShinyDone:
+	.string "Any new shiny POKéMON since we\n"
+	.string "last spoke?$"
+
 MINSI_CITY_APARTMENT_Text_DevChallenge:
-	.string "You came back.\p"
-	.string "You've seen all of it, then. Every\n"
-	.string "route I drew. Every song I wrote.\p"
-	.string "There's one thing left I never got\n"
-	.string "to build properly.\p"
-	.string "A fight. Mine.\p"
-	.string "Care to?$"
+	.string "Welcome.\p"
+	.string "You've been busy, haven't you?\p"
+	.string "Yeah, your name has been shouted\n"
+	.string "all around ENPALE.\p"
+	.string "Taking down TEAM COVENANT AND\n"
+	.string "becoming CHAMPION not once, not\l"
+	.string "twice, but three times?\p"
+	.string "Color me impressed.\p"
+	.string "For someone of your strength, I'd\n"
+	.string "be honored to face you in battle.\p"
+	.string "What do you say?$"
 
 MINSI_CITY_APARTMENT_Text_DevAccept:
-	.string "Then let's find out whose region\n"
-	.string "this really is.$"
+	.string "Alright, let's see what you're\n"
+	.string "made of.$"
 
 MINSI_CITY_APARTMENT_Text_DevDefeat:
-	.string "…Well. I did write your levels.$"
+	.string "Hmm…$"
 
 MINSI_CITY_APARTMENT_Text_DevAfterBattle:
-	.string "That's it. That's the last thing\n"
-	.string "in ENPALE.\p"
-	.string "You've done all of it now.\p"
-	.string "Thanks for staying to the end.$"
+	.string "Yep, that's it. That's everything.\p"
+	.string "You did it all, now.\p"
+	.string "Thanks for playing!$"
 
 MINSI_CITY_APARTMENT_Text_DevDecline:
-	.string "No rush. I've waited this long.$"
+	.string "No problem. Do what you gotta do.$"
 
 MINSI_CITY_APARTMENT_Text_DevPostBattle:
-	.string "Good match.\p"
-	.string "Go on. Take her out for one more\n"
-	.string "lap if you like.$"
-	
+	.string "Good stuff.\p"
+	.string "If anything new comes up, I'll let\n"
+	.string "ya know.$"
+
 MINSI_CITY_APARTMENT_Text_Dev:
-	.string "Oh. A visitor.\p"
-	.string "I don't run a gym. No shop,\n"
-	.string "no quest, nothing to hand you.\p"
-	.string "I built this region.\n"
-	.string "Every route, every town,\l"
-	.string "every song along the way.\p"
-	.string "It took years. Rather more\n"
-	.string "than I care to admit.\p"
-	.string "So… thank you.\n"
-	.string "For playing it at all.\p"
-	.string "Go on. There's more out\n"
-	.string "there than you'd think.\p"
-	.string "And when you've finished\n"
-	.string "everything… come back here.\l"
-	.string "I'll be waiting.$"	
+	.string "Oh, a guest.\p"
+	.string "How are you liking ENPALE so far?\p"
+	.string "It's not much, but it's honest work.\p"
+	.string "I don't have anything to give you\n"
+	.string "yet, but please, enjoy the region.\p"
+	.string "And thanks for playing.$"

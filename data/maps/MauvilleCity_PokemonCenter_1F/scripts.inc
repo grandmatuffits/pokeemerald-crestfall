@@ -33,12 +33,6 @@ MauvilleCity_PokemonCenter_1F_EventScript_Youngster::
 	msgbox MauvilleCity_PokemonCenter_1F_Text_RecordCornerSoundsFun, MSGBOX_NPC
 	end
 
-MauvilleCity_PokemonCenter_1F_Text_ManOverThereSaysWeirdThings:
-	.string "That man over there, he says weird\n"
-	.string "things!\p"
-	.string "He's funny in a weird way.\n"
-	.string "I doubt I'll forget about him!$"
-
 MauvilleCity_PokemonCenter_1F_Text_MyDataUpdatedFromRecordCorner:
 	.string "When I accessed the RECORD CORNER,\n"
 	.string "the data for what's hot in DEWFORD\l"
@@ -46,9 +40,14 @@ MauvilleCity_PokemonCenter_1F_Text_MyDataUpdatedFromRecordCorner:
 	.string "Now that bit of data is the same\n"
 	.string "as my friend's!$"
 
+MauvilleCity_PokemonCenter_1F_Text_ManOverThereSaysWeirdThings:
+	.string "LENOX TOWN is great!\p"
+	.string "Mountains to the south and a river\n"
+	.string "to the east!$"
+
 MauvilleCity_PokemonCenter_1F_Text_RecordCornerSoundsFun:
-	.string "A RECORD CORNER opened upstairs in\n"
-	.string "the POKéMON CENTER.\p"
-	.string "I don't know what it's about, but it\n"
-	.string "sounds fun. I'll go check it out!$"
+	.string "There's an old dude in town who gave\n"
+	.string "me the HM for CUT!\p"
+	.string "I can get into places I didn't think\n"
+	.string "were possible!$"
 

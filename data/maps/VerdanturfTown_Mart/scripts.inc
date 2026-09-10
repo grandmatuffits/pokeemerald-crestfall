@@ -24,6 +24,7 @@ VerdanturfTown_Mart_Pokemart:
 	.2byte ITEM_BURN_HEAL
 	.2byte ITEM_ICE_HEAL
 	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_TM_TAUNT
 	.2byte ITEM_TM_THIEF
 	.2byte ITEM_TM_TORMENT

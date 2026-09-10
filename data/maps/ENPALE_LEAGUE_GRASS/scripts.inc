@@ -116,40 +116,39 @@ ENPALE_LEAGUE_GRASS_EventScript_FinalBeaten::
 	end
 
 ENPALE_LEAGUE_GRASS_Text_IntroSpeech:
-	.string "Two down. You've got roots, I'll give\n"
-	.string "you that.\p"
-	.string "But roots can be torn up. I'm the\n"
-	.string "third of the Elite Four, and I don't\l"
-	.string "fall easily.$"
+	.string "So, you got past the first two.\n"
+	.string "I'm impressed.\p"
+	.string "But don't get comfy yet, because I\n"
+	.string "don't fall so easily!$"
 
 ENPALE_LEAGUE_GRASS_Text_Defeat:
-	.string "Uprooted… cleanly done.$"
+	.string "Uprooted…$"
 
 ENPALE_LEAGUE_GRASS_Text_PostBattleSpeech:
-	.string "The last door opens. Beyond it waits\n"
-	.string "the fiercest of us.\p"
-	.string "Then… the Champion himself.$"
+	.string "The last ELITE FOUR member awaits.\n"
+	.string "Go for it.$"
 
 ENPALE_LEAGUE_GRASS_Text_RematchIntro:
-	.string "Roots grow back stronger where they're\ntorn. Let's see how deep yours run\lnow.$"
+	.string "I've grown stronger since we met.\p"
+	.string "I won't be uprooted so easily this\n"
+	.string "time!$"
 
 ENPALE_LEAGUE_GRASS_Text_RematchDefeat:
-	.string "Uprooted again. Well earned.$"
+	.string "Uprooted again…$"
 
 ENPALE_LEAGUE_GRASS_Text_RematchPostBattle:
-	.string "Go on. The others are waiting.$"
+	.string "What are you waiting for?\n"
+	.string "Get going!$"
 
 ENPALE_LEAGUE_GRASS_Text_FinalIntro:
-	.string "You've torn me up twice now. I keep\n"
-	.string "growing back.\p"
-	.string "That's the thing about roots. Every\n"
-	.string "time they're pulled, they come back\l"
-	.string "deeper than before.\p"
-	.string "Mine have had a long time to settle.$"
+	.string "So, it's you. I heard you coming.\p"
+	.string "I made some changes to my team\n"
+	.string "since we last fought.\p"
+	.string "Can you keep up?$"
 
 ENPALE_LEAGUE_GRASS_Text_FinalDefeat:
-	.string "Deeper roots. Same result.$"
+	.string "Again and again!$"
 
 ENPALE_LEAGUE_GRASS_Text_FinalPostBattle:
-	.string "One door left, and a new name behind\n"
-	.string "it. You know him better than we do.$"
+	.string "Ugh… Yada, yada, yada.\n"
+	.string "Get outta here…$"

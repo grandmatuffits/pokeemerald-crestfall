@@ -622,7 +622,7 @@ ENPALE_LEAGUE_ARENA_Text_BrutusRivalChampionSpeech:
 	.string "Just you and I.$"
 
 ENPALE_LEAGUE_ARENA_Text_RivalChampionName:
-	.string "RIVAL$"	
+	.string "{RIVAL}$"	
 
 ENPALE_LEAGUE_ARENA_Text_DebugSilvio:
 	.string "MISSING: Silvio rematch$"
@@ -641,4 +641,7 @@ ENPALE_LEAGUE_ARENA_Text_DebugBug:
 
 ENPALE_LEAGUE_ARENA_Text_HemlockUmbraChampionSpeech:
 	.string "So, you did it again.\p"
-	.string "Let's go, kid. You know the way.$"	
+	.string "You're truly the best in ENPALE,\n"
+	.string "huh?\p"
+	.string "Alright, let's go, kid.\n"
+	.string "You know the way.$"

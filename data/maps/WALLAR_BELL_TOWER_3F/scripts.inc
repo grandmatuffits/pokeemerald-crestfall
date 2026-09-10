@@ -47,8 +47,10 @@ WALLAR_BELL_TOWER_3F_EventScript_Acolyte5::
 	end
 
 WALLAR_BELL_TOWER_3F_Text_Acolyte5Intro:
-	.string "The last of us on this floor. Beyond\nme, only the Elders remain.$"
+	.string "I won't let you ruin us! Not again!$"
+
 WALLAR_BELL_TOWER_3F_Text_Acolyte5Defeat:
-	.string "Then go. Face what's above.$"
+	.string "Fine…$"
+
 WALLAR_BELL_TOWER_3F_Text_Acolyte5PostBattle:
-	.string "May your faith carry you further than\nours did.$"
+	.string "It's my nap time anyways…$"

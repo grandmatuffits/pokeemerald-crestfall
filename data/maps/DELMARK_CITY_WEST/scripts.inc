@@ -197,63 +197,48 @@ DELMARK_CITY_WEST_EventScript_GardenFan::
 	end
 
 DELMARK_CITY_WEST_Text_GymKid:
-	.string "Delmark's Gym is on the East\n"
-	.string "side - a Steel-type Gym!\p"
-	.string "But the Leader's also our Mayor,\n"
-	.string "and he's been too swamped running\l"
-	.string "the city to hold any matches\l"
-	.string "lately. Bummer, huh?$"
+	.string "The gym for this city is in the east\n"
+	.string "side. It's run by our mayor, SILVIO.\p"
+	.string "The gym's been closed for a while,\n"
+	.string "though. Bummer.$"
 
 DELMARK_CITY_WEST_Text_BrackwallTraveler:
-	.string "Headed to Brackwall Town? It's a\n"
-	.string "lovely beach town past the East\l"
-	.string "side - salt air, sand, the works.\p"
-	.string "But rest your Pokemon first. The\n"
-	.string "road there is rough.$"
+	.string "Going to ROSEBANK TOWN?\n"
+	.string "It's towards the east.\p"
+	.string "Nice little beach town.\p"
+	.string "Remember to rest up before leaving.\n"
+	.string "It's a rough path ahead.$"
 
 DELMARK_CITY_WEST_Text_CovenantResident:
-	.string "Those Covenant folks give me the\n"
-	.string "creeps. All polite smiles...\p"
-	.string "But they keep spouting on about\n"
-	.string "Mythical Pokemon this, and\l"
-	.string "changing the world that...\p"
+	.string "Those COVENANT creeps just rub me\n"
+	.string "the wrong way.\p"
 	.string "What are they really after?$"
 
 DELMARK_CITY_WEST_Text_RiverElder:
-	.string "Delmark was built where two great\n"
-	.string "rivers meet - the whole city grew\l"
-	.string "up around that water.\p"
-	.string "Me? I'll take the peaceful West\n"
-	.string "side any day. Let the East have\l"
-	.string "all its busyness and noise!$"
+	.string "DELMARK CITY was built between two\n"
+	.string "rivers.\p"
+	.string "It just kept growing over time, and\n"
+	.string "now it's sectioned into three parts!$"
 
 DELMARK_CITY_WEST_Text_CemeterySpook:
-	.string "They say Ghost Pokemon drift\n"
-	.string "through the cemetery down in\l"
-	.string "South Delmark.\p"
-	.string "Gives me chills just thinking\n"
-	.string "about it!$"
+	.string "There's a cemetery in the southern\n"
+	.string "side of the city.\p"
+	.string "Lotsa GHOST POKéMON down there,\n"
+	.string "very spooky!$"
 
 DELMARK_CITY_WEST_Text_FisherTease:
-	.string "See that old angler by the pier?\n"
-	.string "He's always challenging folks to\l"
-	.string "catch a rare fish.\p"
-	.string "Word is he hands over a fine\n"
-	.string "fishing rod to anyone who can\l"
-	.string "pull it off!$"
+	.string "That old fisherman by the pond is\n"
+	.string "always looking for someone to\l"
+	.string "challenge.\p"
+	.string "Who knows, maybe he has something\n"
+	.string "for the right person.$"
 
 DELMARK_CITY_WEST_Text_FerryDockworker:
-	.string "That ferry runs clear across to\n"
-	.string "Lenox Town. Folks come and go\l"
-	.string "all day.\p"
-	.string "Delmark's the heart of Enpale,\n"
-	.string "after all - everyone passes\l"
-	.string "through here eventually.$"
+	.string "That ferry is always running between\n"
+	.string "here and LENOX TOWN.\p"
+	.string "Everyone comes through DELMARK\n"
+	.string "eventually.$"
 
 DELMARK_CITY_WEST_Text_GardenFan:
-	.string "The lady with the garden grows\n"
-	.string "the sweetest Lum Berries in all\l"
-	.string "of Delmark!\p"
-	.string "She'll battle you for one,\n"
-	.string "though - and don't let the\l"
-	.string "flowers fool you, she's tough!$"
+	.string "Don't let that gardener fool you,\n"
+	.string "she's quite the POKéMON TRAINER.$"

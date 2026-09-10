@@ -118,43 +118,37 @@ ENPALE_LEAGUE_WATER_EventScript_FinalBeaten::
 	end
 
 ENPALE_LEAGUE_WATER_Text_IntroSpeech:
-	.string "Redding warmed you up. Now let's see\n"
-	.string "if you can stay afloat.\p"
-	.string "The name's BLUTO. Second of the\n"
-	.string "Elite Four, and the tide you won't\l"
-	.string "turn back.\p"
-	.string "Come on then. Let's make some\n"
-	.string "waves!$"
+	.string "So you got warmed up by REDDING,\n"
+	.string "huh?\p"
+	.string "Well don't worry, I'll wash you\n"
+	.string "right up!$"
 
 ENPALE_LEAGUE_WATER_Text_Defeat:
-	.string "Pulled under… by my own current.$"
+	.string "I guess I was the one who's\n"
+	.string "washed…$"
 
 ENPALE_LEAGUE_WATER_Text_PostBattleSpeech:
-	.string "You swim against the tide like it's\n"
-	.string "nothing. The next room's open.\p"
-	.string "But the deeper you go, the colder it\n"
-	.string "gets. Keep your nerve.$"
+	.string "Dude, you're something!\p"
+	.string "Go on ahead, but don't wipe out!$"
 
 ENPALE_LEAGUE_WATER_Text_RematchIntro:
-	.string "Back for more? Let's see if you've\ngotten any better since last time.$"
+	.string "Hey dude, back for some more!?\p"
+	.string "Well, if you want it, you got it!$"
 
 ENPALE_LEAGUE_WATER_Text_RematchDefeat:
-	.string "Well fought.$"
+	.string "Brah!!$"
 
 ENPALE_LEAGUE_WATER_Text_RematchPostBattle:
-	.string "Go on, the others are waiting.$"
+	.string "Get going, dude. You earned it.$"
 
 ENPALE_LEAGUE_WATER_Text_FinalIntro:
-	.string "Third time down this hall for you.\n"
-	.string "Third Champion waiting at the end.\p"
-	.string "The tide keeps turning around here,\n"
-	.string "and you're the one turning it.\p"
-	.string "So let's find out how deep you can\n"
-	.string "really go!$"
+	.string "Oh dude, you again!?\p"
+	.string "I won't lose again!\n"
+	.string "I'm turning the tide this time!$"
 
 ENPALE_LEAGUE_WATER_Text_FinalDefeat:
-	.string "Out of my depth. Finally.$"
+	.string "Woah!!$"
 
 ENPALE_LEAGUE_WATER_Text_FinalPostBattle:
-	.string "The water's yours. Always was.\n"
-	.string "Move on.$"
+	.string "You're something else, brah!\n"
+	.string "Go get 'em, dude!$"

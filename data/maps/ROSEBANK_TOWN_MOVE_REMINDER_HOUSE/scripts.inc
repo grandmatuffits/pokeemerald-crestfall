@@ -10,10 +10,13 @@ ROSEBANK_TOWN_MOVE_REMINDER_HOUSE_EventScript_MoveReminder::
 	end
 
 ROSEBANK_TOWN_MOVE_REMINDER_HOUSE_Text_Intro:
-	.string "Ah, a traveler! I'm the MOVE\n"
-	.string "REMINDER.\p"
-	.string "For a HEART SCALE, I can help a\n"
-	.string "POKéMON recall a move… level-up,\l"
-	.string "egg, TM, or tutor.\p"
-	.string "Rare things, HEART SCALES. The tide\n"
-	.string "only gives up so many.$"
+	.string "Oh, a wandering POKéMON TRAINER!\p"
+	.string "I have just the thing for you!\p"
+	.string "For one HEART SCALE, I can teach a\n"
+	.string "POKéMON of yours any move they can\l"
+	.string "learn!\p"
+	.string "Not just moves they've learned\n"
+	.string "before, but future moves, egg moves,\l"
+	.string "even TM and tutor moves!\p"
+	.string "I'm the ultimate MOVE REMINDER!\p"
+	.string "What'd you say?$"

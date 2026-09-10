@@ -36,14 +36,7 @@ GrantCave_EventScript_Acolyte3::
 	msgbox GrantCave_Text_Acolyte3Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantCave_Text_Acolyte3Intro:
-	.string "Turn back. The dark up here is not for\n"
-	.string "the likes of you.$"
-GrantCave_Text_Acolyte3Defeat:
-	.string "…you see better than I hoped.$"
-GrantCave_Text_Acolyte3Post:
-	.string "The lower path is closed. One of ours\n"
-	.string "stands there. You will have to climb.$"
+
 
 
 GrantCave_EventScript_Acolyte4::
@@ -51,14 +44,6 @@ GrantCave_EventScript_Acolyte4::
 	msgbox GrantCave_Text_Acolyte4Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantCave_Text_Acolyte4Intro:
-	.string "You fight your way through everything,\n"
-	.string "don't you? We simply ask nicely.$"
-GrantCave_Text_Acolyte4Defeat:
-	.string "…asking wasn't working anyway.$"
-GrantCave_Text_Acolyte4Post:
-	.string "Climb if you must. It only delays what\n"
-	.string "is already finished above.$"
 
 
 GrantCave_EventScript_Acolyte5::
@@ -66,15 +51,7 @@ GrantCave_EventScript_Acolyte5::
 	msgbox GrantCave_Text_Acolyte5Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantCave_Text_Acolyte5Intro:
-	.string "This whole island will bloom when we\n"
-	.string "are done. You are standing in a garden\l"
-	.string "and calling it a cave.$"
-GrantCave_Text_Acolyte5Defeat:
-	.string "…the garden waits a little longer.$"
-GrantCave_Text_Acolyte5Post:
-	.string "Up the stairs, then. Go and watch us\n"
-	.string "win.$"
+
 
 
 GrantCave_EventScript_SwimmerM2::
@@ -82,38 +59,69 @@ GrantCave_EventScript_SwimmerM2::
 	msgbox GrantCave_Text_SwimmerM2Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantCave_Text_SwimmerM2Intro:
-	.string "There's an underground pool here. I keep\n"
-	.string "it. You don't cross without a fight.$"
-GrantCave_Text_SwimmerM2Defeat:
-	.string "Cross, then. You've earned the wet.$"
-GrantCave_Text_SwimmerM2Post:
-	.string "The water down below runs deep. Deeper\n"
-	.string "than the grey-robes know.$"
-
 
 GrantCave_EventScript_Hiker1::
 	trainerbattle_single TRAINER_GRANT_HIKER_1, GrantCave_Text_Hiker1Intro, GrantCave_Text_Hiker1Defeat
 	msgbox GrantCave_Text_Hiker1Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantCave_Text_Hiker1Intro:
-	.string "I've hiked this rock my whole life. The\n"
-	.string "cult pays better than tourism, sadly.$"
-GrantCave_Text_Hiker1Defeat:
-	.string "Bah. Should've stuck to tourism.$"
-GrantCave_Text_Hiker1Post:
-	.string "There's old carvings in the deep floor.\n"
-	.string "Three of them. Like guardians, waiting.$"
-
 
 @ --- NON-BATTLE BLOCKER on the lower/exit path -----------------
 @ Object: Covenant grunt gfx, Trainer Type NONE, faces the
 @ approach. Placed ON the path tile so it physically blocks.
 
+GrantCave_Text_Acolyte3Intro:
+	.string "You followed us all the way here!?$"
+
+GrantCave_Text_Acolyte3Defeat:
+	.string "I hope no one saw that…$"
+
+GrantCave_Text_Acolyte3Post:
+	.string "Please, mister, just leave us alone!$"
+
+GrantCave_Text_Acolyte4Intro:
+	.string "Get a life, won't ya!?$"
+
+GrantCave_Text_Acolyte4Defeat:
+	.string "But why!?$"
+
+GrantCave_Text_Acolyte4Post:
+	.string "I'll just keep standing here, I\n"
+	.string "guess…$"
+
+GrantCave_Text_Acolyte5Intro:
+	.string "You're not getting past me!\p"
+	.string "This whole island will bloom when we\n"
+	.string "are done.\p"
+	.string "You are standing in a garden and\n"
+	.string "calling it a cave.$"
+
+GrantCave_Text_Acolyte5Defeat:
+	.string "Oh…$"
+
+GrantCave_Text_Acolyte5Post:
+	.string "I guess you are…$"
+
+GrantCave_Text_SwimmerM2Intro:
+	.string "The water's a bit cool in here, but\n"
+	.string "my passion for battling is burning\l"
+	.string "hot!$"
+
+GrantCave_Text_SwimmerM2Defeat:
+	.string "Doh!$"
+
+GrantCave_Text_SwimmerM2Post:
+	.string "I guess I'll just swim around some\n"
+	.string "more…$"
+
+GrantCave_Text_Hiker1Intro:
+	.string "Hah! Got ya!$"
+
+GrantCave_Text_Hiker1Defeat:
+	.string "Bah!$"
+
+GrantCave_Text_Hiker1Post:
+	.string "Alright, kid, you got me…$"
+
 GrantCave_Text_Blocker:
-	.string "This way is closed.\p"
-	.string "The lower passage leads where you are\n"
-	.string "not permitted. Not yet.\p"
-	.string "If you must go up, take the stairs.\n"
-	.string "The mountain will let you. I will not.$"	
+	.string "Nope, not moving!$"

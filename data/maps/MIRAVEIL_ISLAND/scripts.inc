@@ -52,25 +52,6 @@ MIRAVEIL_CITY_Movement_RivalLeave:
 	walk_left
 	step_end
 
-MIRAVEIL_CITY_Text_RivalIntro:
-	.string "…Closed. Of course it's closed.\p"
-	.string "I come all this way and the gym's\n"
-	.string "shut up tight. No leader, no notice,\l"
-	.string "nothing.\p"
-	.string "You want a piece of this too? Fine.\n"
-	.string "At least YOU'LL show up for a fight.$"
-
-MIRAVEIL_CITY_Text_RivalDefeat:
-	.string "Tch. Wound too tight, I guess.$"
-
-MIRAVEIL_CITY_Text_RivalAfter:
-	.string "Whatever. If the gym's dead, there's\n"
-	.string "no badge here anyway.\p"
-	.string "…Word is the leader only bothers with\n"
-	.string "her little parties now. Good luck\l"
-	.string "getting in. You're not exactly\l"
-	.string "invited.$"
-
 MIRAVEIL_CITY_EventScript_RivalDone::
 	release
 	end
@@ -128,21 +109,6 @@ MIRAVEIL_BANQUET_EXT_Movement_StepLeftFaceDown:
 	face_down
 	step_end
 
-MIRAVEIL_BANQUET_EXT_Text_DoormanBlock:
-	.string "Halt. This is a private affair.\n"
-	.string "Invitation only.\p"
-	.string "…You have none? Then you'll not set\n"
-	.string "one foot past me.$"
-
-MIRAVEIL_BANQUET_EXT_Text_DoormanDefeat:
-	.string "Ngh… you fight like someone with\n"
-	.string "nothing to lose.$"
-
-MIRAVEIL_BANQUET_EXT_Text_DoormanAfter:
-	.string "…Fine. Go in, then. I never saw you.\p"
-	.string "Whatever happens in there is no\n"
-	.string "concern of mine.$"	
-
 MIRAVEIL_ISLAND_EventScript_TownSign::
 	msgbox MIRAVEIL_ISLAND_Text_TownSign, MSGBOX_SIGN
 	end
@@ -181,7 +147,7 @@ MIRAVEIL_ISLAND_EventScript_FatGuy::
 	end
 
 MIRAVEIL_ISLAND_Text_FatGuy:
-	.string "Pardon me, I'm tanning.$"
+	.string "Pardon me, peasant. I'm tanning.$"
 
 MIRAVEIL_ISLAND_EventScript_Lady::
 	msgbox MIRAVEIL_ISLAND_Text_Lady, MSGBOX_NPC
@@ -210,3 +176,36 @@ MIRAVEIL_ISLAND_EventScript_Block2::
 
 MIRAVEIL_ISLAND_Text_Block2:
 	.string "I haven't a clue dear...$"		
+
+MIRAVEIL_CITY_Text_RivalIntro:
+	.string "Closed!? Why!?\p"
+	.string "I surfed all the way over to this\n"
+	.string "stupid island for nothing!?\p"
+	.string "And what are you looking at!?\n"
+	.string "You think you're so tough!?\p"
+	.string "If I can't take on the gym on this\n"
+	.string "stupid island, I'll just take my\l"
+	.string "rage out on you!$"
+
+MIRAVEIL_CITY_Text_RivalDefeat:
+	.string "Not again!$"
+
+MIRAVEIL_CITY_Text_RivalAfter:
+	.string "Grr… Whatever.\p"
+	.string "This ritzy town sucks anyways.\n"
+	.string "I'm outta here.$"
+
+MIRAVEIL_BANQUET_EXT_Text_DoormanBlock:
+	.string "Halt right there.\p"
+	.string "This is a private party.\n"
+	.string "Invitation only, unless you best me\l"
+	.string "in battle!$"
+
+MIRAVEIL_BANQUET_EXT_Text_DoormanDefeat:
+	.string "Ngh… fair enough.$"
+
+MIRAVEIL_BANQUET_EXT_Text_DoormanAfter:
+	.string "Fine. Go in.\p"
+	.string "But please do behave.\p"
+	.string "We of MIRAVEIL take pride in our\n"
+	.string "manners.$"	

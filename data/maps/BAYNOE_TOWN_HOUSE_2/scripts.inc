@@ -66,66 +66,65 @@ BAYNOE_HOUSE_KIDS_EventScript_Kid3Done::
 	release
 	end
 
-BAYNOE_HOUSE_KIDS_Text_Kid1Offer:
-	.string "Is that a FENNEKIN? So cool! My\n"
-	.string "brother and sister and me are all\l"
-	.string "trading starters we got.\p"
-	.string "I'll give you my ROWLET for your\n"
-	.string "FENNEKIN. Trade?$"
-BAYNOE_HOUSE_KIDS_Text_Kid1TakeCare:
-	.string "Yes!! Take good care of Rowlet,\n"
-	.string "okay?$"
-BAYNOE_HOUSE_KIDS_Text_Kid1Decline:
-	.string "Aw. Come back if you change your\n"
-	.string "mind!$"
-BAYNOE_HOUSE_KIDS_Text_Kid1NotMon:
-	.string "Huh? That's not a FENNEKIN. I only\n"
-	.string "want a FENNEKIN!$"
-BAYNOE_HOUSE_KIDS_Text_Kid1Post:
-	.string "Fennekin's the best. Thanks!$"
-
-BAYNOE_HOUSE_KIDS_Text_Kid2Offer:
-	.string "Ooh, a PIPLUP? I've been dying for\n"
-	.string "one!\p"
-	.string "Trade you my FENNEKIN for it. What\n"
-	.string "do you say?$"
-BAYNOE_HOUSE_KIDS_Text_Kid2TakeCare:
-	.string "Yay! Look after Fennekin for… wait,\n"
-	.string "no, I'M keeping Piplup. YOU look\l"
-	.string "after Fennekin!$"
-BAYNOE_HOUSE_KIDS_Text_Kid2Decline:
-	.string "Okay, okay. The offer stands!$"
-BAYNOE_HOUSE_KIDS_Text_Kid2NotMon:
-	.string "That's not a PIPLUP! No deal.$"
-BAYNOE_HOUSE_KIDS_Text_Kid2Post:
-	.string "Piplup and me are gonna be a great\n"
-	.string "team!$"
-
-BAYNOE_HOUSE_KIDS_Text_Kid3Offer:
-	.string "You've got a ROWLET! Perfect.\p"
-	.string "I'll trade my PIPLUP for it. Deal?$"
-BAYNOE_HOUSE_KIDS_Text_Kid3TakeCare:
-	.string "Awesome! Rowlet's all mine now.\n"
-	.string "Thanks a bunch!$"
-BAYNOE_HOUSE_KIDS_Text_Kid3Decline:
-	.string "No worries. Come back anytime!$"
-BAYNOE_HOUSE_KIDS_Text_Kid3NotMon:
-	.string "Hey, that's not a ROWLET. I want a\n"
-	.string "ROWLET!$"
-BAYNOE_HOUSE_KIDS_Text_Kid3Post:
-	.string "Between the three of us, we've got\n"
-	.string "every starter now. Pretty neat, huh?$"	
-
+	
 BAYNOE_HOUSE_KIDS_EventScript_Mom::
 	msgbox BAYNOE_HOUSE_KIDS_Text_Mom, MSGBOX_NPC
 	end
 
+
+BAYNOE_HOUSE_KIDS_Text_Kid1Offer:
+	.string "Do you have a FENNEKIN?\p"
+	.string "I'll give you my ROWLET for it!\n"
+	.string "My siblings won't trade with me!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid1TakeCare:
+	.string "Be nice to ROWLET for me!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid1Decline:
+	.string "Aw, that's okay.$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid1NotMon:
+	.string "No! It has to be a FENNEKIN!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid1Post:
+	.string "I love my new FENNEKIN!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid2Offer:
+	.string "Do you have a PIPLUP?\p"
+	.string "I'll give you my FENNEKIN for it!\n"
+	.string "My siblings won't trade with me!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid2TakeCare:
+	.string "Yay! Take care of FENNEKIN for me!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid2Decline:
+	.string "Fine, whatever.$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid2NotMon:
+	.string "Nope, it has to be a PIPLUP!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid2Post:
+	.string "I can't wait to train PIPLUP!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid3Offer:
+	.string "Do you have a ROWLET?\p"
+	.string "I'll give you my PIPLUP for it!\n"
+	.string "My siblings won't trade with me!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid3TakeCare:
+	.string "Cool, my own ROWLET!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid3Decline:
+	.string "Come back if you change your mind!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid3NotMon:
+	.string "No, I want a ROWLET!$"
+
+BAYNOE_HOUSE_KIDS_Text_Kid3Post:
+	.string "Yay! I have the starter I want now!$"
+
 BAYNOE_HOUSE_KIDS_Text_Mom:
-	.string "Marty, Jeff, and Paul each begged\n"
-	.string "me for a different starter… and now\l"
-	.string "not one of them will share!\p"
-	.string "Three kids, three Pokémon, and\n"
-	.string "somehow nobody's happy.\p"
-	.string "Maybe a stranger will have better\n"
-	.string "luck getting them to trade than I\l"
-	.string "ever have.$"
+	.string "Those three kids can't ever make up\n"
+	.string "their minds on which POKéMON they\l"
+	.string "want!\p"
+	.string "And they all refuse to share!$"

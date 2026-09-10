@@ -27,11 +27,10 @@ Route13_EventScript_Swimmer2::
 	end
 
 Route13_Text_Swimmer2Intro:
-	.string "One POKéMON is all I need out here.\n"
-	.string "The water does the rest.$"
+	.string "One POKéMON is all I need out here.$"
 
 Route13_Text_Swimmer2Defeat:
-	.string "The water betrayed me.$"
+	.string "Sunk!$"
 
 Route13_Text_Swimmer2PostBattle:
 	.string "There have been boats heading north all\n"
@@ -54,8 +53,8 @@ Route13_Text_Swimmer3Defeat:
 	.string "Outswum. In my own sea.$"
 
 Route13_Text_Swimmer3PostBattle:
-	.string "Those boats flew no flag I knew.\n"
-	.string "They did not stop when I waved.$"
+	.string "Those boats flew a weird flag.\n"
+	.string "They didn't stop when I waved.$"
 
 
 Route13_EventScript_Swimmer4::
@@ -74,7 +73,7 @@ Route13_Text_Swimmer4Defeat:
 	.string "…called the wrong scent.$"
 
 Route13_Text_Swimmer4PostBattle:
-	.string "If you are chasing those boats, do not.\n"
+	.string "If you're chasing those boats, don't.\n"
 	.string "Whatever they are after, let them\lhave it.$"
 
 
@@ -87,7 +86,7 @@ Route13_EventScript_Swimmer5::
 
 Route13_Text_Swimmer5Intro:
 	.string "My TENTACRUEL fills half this stretch\n"
-	.string "of water. You will not slip past.$"
+	.string "of water. You won't slip past.$"
 
 Route13_Text_Swimmer5Defeat:
 	.string "Slipped past after all.$"
@@ -106,7 +105,7 @@ Route13_EventScript_Swimmer6::
 
 Route13_Text_Swimmer6Intro:
 	.string "My VAPOREON and I have swum this route\n"
-	.string "a thousand times. You have not.$"
+	.string "a thousand times. You haven't.$"
 
 Route13_Text_Swimmer6Defeat:
 	.string "A thousand times, and still I lose.$"

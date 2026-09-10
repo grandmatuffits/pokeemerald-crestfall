@@ -28,21 +28,17 @@ PacifidlogTown_PokemonCenter_1F_EventScript_OldMan::
 	end
 
 PacifidlogTown_PokemonCenter_1F_Text_WhatColorTrainerCard:
-	.string "What color is your TRAINER CARD?\n"
-	.string "Mine's copper!$"
+	.string "I'm stuck living here with my\n"
+	.string "grandparents.\p"
+	.string "I just wanna move to DELMARK!\n"
+	.string "It's so fun there!$"
 
 PacifidlogTown_PokemonCenter_1F_Text_OnColonyOfCorsola:
-	.string "PACIFIDLOG TOWN floats on top of\n"
-	.string "a colony of CORSOLA.\p"
-	.string "If I told you that, would you believe\n"
-	.string "me?$"
+	.string "If I told you I once saw all three\n"
+	.string "guardians, would you believe me?\p"
+	.string "None of the others do.$"
 
 PacifidlogTown_PokemonCenter_1F_Text_AncestorsLivedOnBoats:
-	.string "The ancestors of the people in\n"
-	.string "PACIFIDLOG were said to have been\l"
-	.string "born on boats and then lived and died \l"
-	.string "aboard them.\p"
-	.string "I understand that they lived that way\n"
-	.string "because they were searching for\l"
-	.string "something.$"
-
+	.string "This is one of the oldest towns in\n"
+	.string "ENPALE, and unlike the others, we\l"
+	.string "stuck to our traditions.$"

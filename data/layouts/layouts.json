@@ -9358,7 +9358,7 @@
       "id": "LAYOUT_MINSI_CITY",
       "name": "MINSI_CITY_Layout",
       "width": 61,
-      "height": 38,
+      "height": 42,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/MINSI_CITY/border.bin",
@@ -9368,7 +9368,7 @@
       "id": "LAYOUT_ENPALE_ROUTE_1",
       "name": "ENPALE_ROUTE_1_Layout",
       "width": 32,
-      "height": 20,
+      "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/ENPALE_ROUTE_1/border.bin",
@@ -9487,7 +9487,7 @@
     {
       "id": "LAYOUT_COPPERGATE_CITY",
       "name": "COPPERGATE_CITY_Layout",
-      "width": 54,
+      "width": 58,
       "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -9617,7 +9617,7 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_4",
       "name": "ENPALE_ROUTE_4_Layout",
-      "width": 24,
+      "width": 32,
       "height": 65,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
@@ -9627,7 +9627,7 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_5",
       "name": "ENPALE_ROUTE_5_Layout",
-      "width": 28,
+      "width": 48,
       "height": 48,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Snow",
@@ -9827,7 +9827,7 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_7",
       "name": "ENPALE_ROUTE_7_Layout",
-      "width": 53,
+      "width": 65,
       "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",

@@ -110,119 +110,128 @@ ROUTE_VELDT_EventScript_Trainer12After::
 	end
 
 ROUTE_VELDT_Text_Trainer1Intro:
-	.string "The channel to Veldtmoor runs deep\n"
-	.string "and cold. Can your team swim it?$"
+	.string "Surf's up!$"
+
 ROUTE_VELDT_Text_Trainer1Defeat:
-	.string "You cut right through the current.$"
+	.string "Huh!?$"
+
 ROUTE_VELDT_Text_Trainer1Post:
-	.string "The League's just past the trees.\n"
-	.string "You're close now.$"
+	.string "Just keep swimming…$"
 
 ROUTE_VELDT_Text_Trainer2Intro:
-	.string "Everyone here's chasing the same\n"
-	.string "thing. The Champion's seat.$"
+	.string "You're not ready for the POKéMON\n"
+	.string "LEAGUE!$"
+
 ROUTE_VELDT_Text_Trainer2Defeat:
-	.string "Guess I'm not the one taking it.$"
+	.string "I guess you are…$"
+
 ROUTE_VELDT_Text_Trainer2Post:
-	.string "Go on. Show them what you've got.$"
+	.string "Well, go on ahead!$"
 
 ROUTE_VELDT_Text_Trainer3Intro:
-	.string "I've trained in these waters for\n"
-	.string "years, waiting for this run.$"
+	.string "My WATER POKéMON will sail me to\n"
+	.string "victory!$"
+
 ROUTE_VELDT_Text_Trainer3Defeat:
-	.string "…And you pass me like it's nothing.$"
+	.string "Shipwrecked!$"
+
 ROUTE_VELDT_Text_Trainer3Post:
-	.string "Maybe you're the real thing.$"
+	.string "You're good, you!$"
 
 ROUTE_VELDT_Text_Trainer4Intro:
-	.string "No turning back on this road. Only\n"
-	.string "forward, or out.$"
+	.string "Oh no you don't!$"
+
 ROUTE_VELDT_Text_Trainer4Defeat:
-	.string "Forward it is. For you, anyway.$"
+	.string "Maybe you do…$"
+
 ROUTE_VELDT_Text_Trainer4Post:
-	.string "Dry off and keep climbing.$"
+	.string "Just a little further ahead…$"
 
 ROUTE_VELDT_Text_Trainer5Intro:
-	.string "Eight badges? So has everyone on\n"
-	.string "this road. That's just the ante.$"
+	.string "You just took your first step to the\n"
+	.string "POKéMON LEAGUE.\p"
+	.string "Too late to turn back…$"
+
 ROUTE_VELDT_Text_Trainer5Defeat:
-	.string "…Okay. You're more than the ante.$"
+	.string "Maybe I should turn back instead…$"
+
 ROUTE_VELDT_Text_Trainer5Post:
-	.string "The ones ahead are tougher than me.\n"
-	.string "A lot tougher.$"
+	.string "Be warned, it doesn't get any\n"
+	.string "easier ahead.$"
 
 ROUTE_VELDT_Text_Trainer6Intro:
-	.string "This is where the pretenders wash\n"
-	.string "out. Let's see which you are.$"
+	.string "Let's see what you're made of!$"
+
 ROUTE_VELDT_Text_Trainer6Defeat:
-	.string "No pretender battles like that.$"
+	.string "Wow!$"
+
 ROUTE_VELDT_Text_Trainer6Post:
-	.string "The League will want to meet you.$"
+	.string "I hope you can SURF!$"
 
 ROUTE_VELDT_Text_Trainer7Intro:
-	.string "My fists and my team have carried me\n"
-	.string "this far. They won't fail here!$"
+	.string "You got 8 badges, too!?\p"
+	.string "Show me how you earned them!$"
+
 ROUTE_VELDT_Text_Trainer7Defeat:
-	.string "Strong. Truly strong. I felt it.$"
+	.string "What strength!$"
+
 ROUTE_VELDT_Text_Trainer7Post:
-	.string "Take that strength to the Champion.$"
+	.string "Take that all the way to the\n"
+	.string "CHAMPION!$"
 
 ROUTE_VELDT_Text_Trainer8Intro:
-	.string "I've foreseen this battle. I've\n"
-	.string "foreseen my victory, too.$"
+	.string "I've foreseen your defeat…$"
+
 ROUTE_VELDT_Text_Trainer8Defeat:
-	.string "…My vision. It was wrong. YOU were\n"
-	.string "the one I couldn't see past.$"
+	.string "What? No!$"
+
 ROUTE_VELDT_Text_Trainer8Post:
-	.string "The future bends around trainers\n"
-	.string "like you.$"
+	.string "It was my defeat I saw!$"
 
 ROUTE_VELDT_Text_Trainer9Intro:
-	.string "Dragons don't yield the road easily.\n"
-	.string "Neither do I. Come!$"
+	.string "Dragons don't yield, and neither\n"
+	.string "do I!$"
+
 ROUTE_VELDT_Text_Trainer9Defeat:
-	.string "My dragons fell… and yet I feel I\n"
-	.string "witnessed something rare.$"
+	.string "No!$"
+
 ROUTE_VELDT_Text_Trainer9Post:
-	.string "Only the fiercest reach the seat.\n"
-	.string "You may be one of them.$"
+	.string "My dragons…$"
 
 ROUTE_VELDT_Text_Trainer10Intro:
-	.string "I've challenged this League three\n"
-	.string "times. Three times I've fallen.\p"
-	.string "I won't fall to a rookie now.$"
+	.string "I've been through here more times\n"
+	.string "than I can count.\p"
+	.string "What makes you think you're any\n"
+	.string "better?$"
+
 ROUTE_VELDT_Text_Trainer10Defeat:
-	.string "…Three times, and now a fourth. But\n"
-	.string "losing to you stings less, somehow.$"
+	.string "Huh!?$"
+
 ROUTE_VELDT_Text_Trainer10Post:
-	.string "Go where I never could. Finish it.$"
+	.string "Go onward. You earned it.$"
 
 ROUTE_VELDT_Text_Trainer11Intro:
-	.string "A veteran doesn't fear a fresh face.\n"
-	.string "A veteran TESTS it.$"
+	.string "A true veteran doesn't flinch at\n"
+	.string "the sight of danger!$"
+
 ROUTE_VELDT_Text_Trainer11Defeat:
-	.string "And you passed the test. Every part\n"
-	.string "of it.$"
+	.string "Wow!$"
+
 ROUTE_VELDT_Text_Trainer11Post:
-	.string "One more ahead, and he's the worst\n"
-	.string "of us. Then the League.$"
+	.string "You have what it takes!\n"
+	.string "Go push forward!$"
 
 ROUTE_VELDT_Text_Trainer12Intro:
-	.string "So you made it to me. Last trainer on\n"
-	.string "the road. The final gate before the\l"
-	.string "League itself.\p"
-	.string "Beat me, and you've earned your\n"
-	.string "shot. Everything I have, come take\l"
-	.string "it!$"
+	.string "If you wanna get to the POKéMON\n"
+	.string "LEAGUE, you'll have to get through\l"
+	.string "me!$"
+
 ROUTE_VELDT_Text_Trainer12Defeat:
-	.string "…Aggron. Hydreigon. Metagross. My\n"
-	.string "very best, and you broke through\l"
-	.string "them all.\p"
-	.string "The road is behind you now.$"
+	.string "Ngh!$"
+
 ROUTE_VELDT_Text_Trainer12Post:
-	.string "Veldtmoor and the Elite Four wait\n"
-	.string "just ahead. Go, challenger.\p"
-	.string "Become what the rest of us couldn't.$"	
+	.string "You're the real deal, alright.\p"
+	.string "Enjoy your time in VELDTMOOR CITY.$"
 
 ROUTE_VELDT_EventScript_Trainer1Rematch::
 	trainerbattle_rematch TRAINER_VICTORY_ROAD_1, ROUTE_VELDT_EventScript_Trainer1_RematchIntro, ROUTE_VELDT_EventScript_Trainer1_RematchDefeat

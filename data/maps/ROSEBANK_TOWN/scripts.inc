@@ -40,10 +40,6 @@ ROSEBANK_TOWN_EventScript_GymSign::
 	msgbox ROSEBANK_TOWN_Text_GymSign, MSGBOX_SIGN
 	end
 
-ROSEBANK_TOWN_Text_TownSign:
-	.string "ROSEBANK TOWN\p"
-	.string "Where the Sand Meets the Frost$"
-
 ROSEBANK_TOWN_Text_GymSign:
 	.string "ROSEBANK POKéMON GYM\n"
 	.string "LEADER: FRIEDE\p"
@@ -97,77 +93,62 @@ ROSEBANK_TOWN_EventScript_LittleBoy::
 	msgbox ROSEBANK_TOWN_Text_LittleBoy, MSGBOX_NPC
 	end
 
+ROSEBANK_TOWN_Text_TownSign:
+	.string "ROSEBANK TOWN\n"
+	.string "Soothing sand and welcoming waves$"
+
 ROSEBANK_TOWN_Text_FatGuy:
-	.string "This chair, that sun, a cold\n"
-	.string "LEMONADE.\p"
-	.string "I have solved life. Do not tell\n"
-	.string "anyone.$"
+	.string "I hate sand…$"
 
 ROSEBANK_TOWN_Text_Twin1:
-	.string "My sister says she can float longer\n"
-	.string "than me.\p"
-	.string "It has been two hours. I am not\n"
-	.string "getting up first.$"
+	.string "My sister and I are having a\n"
+	.string "contest to see who can be quiet\l"
+	.string "the longest.\p"
+	.string "I don't know how she keeps winning!$"
 
 ROSEBANK_TOWN_Text_Twin2:
-	.string "My brother thinks he is winning.\p"
-	.string "My brother has been asleep for\n"
-	.string "forty minutes.$"
+	.string "Zzz…$"
 
 ROSEBANK_TOWN_Text_TuberM:
-	.string "The water's warm on top and freezing\n"
-	.string "underneath!\p"
-	.string "Stick your feet down. You'll see!$"
+	.string "I don't care about stupid rules!\p"
+	.string "I just ate 5 hotdogs and I feel\n"
+	.string "great!$"
 
 ROSEBANK_TOWN_Text_TuberF:
-	.string "I'm not going near the south end.\n"
-	.string "It's roped off.\p"
-	.string "Nobody will tell me why, so I've\n"
-	.string "decided it's sharpedo.$"
+	.string "My brother is an idiot.$"
 
 ROSEBANK_TOWN_Text_SwimmerF:
 	.string "See that lighthouse? The old keeper\n"
 	.string "still lights it every night.\p"
-	.string "Nothing sails in anymore. He lights\n"
-	.string "it anyway.$"
+	.string "Nothing sails in anymore.\n"
+	.string "He lights it anyway.$"
 
 ROSEBANK_TOWN_Text_SwimmerM:
-	.string "Best swimming in ENPALE, right here.\p"
-	.string "Well. Best swimming that's still\n"
-	.string "open.$"
+	.string "This is the best swimming spot in\n"
+	.string "all of ENPALE.\p"
+	.string "Nothing beats it!$"
 
 ROSEBANK_TOWN_Text_TriathleteM:
-	.string "Sand running! Builds the calves like\n"
-	.string "nothing else!\p"
-	.string "I'd run the marsh road too, but\n"
-	.string "they've got it shut. Ruins my\l"
-	.string "circuit.$"
+	.string "GOTTA GO FAST!!$"
 
 ROSEBANK_TOWN_Text_TriathleteF:
-	.string "Rest days are training too.\p"
-	.string "That's what I tell myself. On my\n"
-	.string "fourth rest day.$"
+	.string "Resting is important for training.\p"
+	.string "I'm doing so good, I've been\n"
+	.string "resting for a full week now!$"
 
 ROSEBANK_TOWN_Text_SwimmerFLand:
-	.string "I came for one weekend.\p"
-	.string "That was in spring. I have no\n"
-	.string "further comment.$"
+	.string "That lighthouse keeper in the north\n"
+	.string "side of town likes to trade POKéMON.\p"
+	.string "You should go talk to him!$"
 
 ROSEBANK_TOWN_Text_OldMan:
-	.string "Lovely town. Lovely people.\p"
-	.string "Folks used to walk that marsh road\n"
-	.string "for the mushrooms. Then one autumn\l"
-	.string "they stopped, and nobody's said why\l"
-	.string "since.\p"
-	.string "I don't ask anymore. Neither should\n"
-	.string "you, sonny.$"
+	.string "Me? I'm just admiring the view…\p"
+	.string "of the ocean, of course!$"
 
 ROSEBANK_TOWN_Text_LittleBoy:
-	.string "There were lights in the marsh last\n"
-	.string "night! Green ones! I saw them from\l"
-	.string "my window!\p"
-	.string "Mommy said I was dreaming and to\n"
-	.string "stop telling people.$"	
+	.string "I'm too afraid to swim!\p"
+	.string "I wish I had a POKéMON to surf on\n"
+	.string "instead!$"
 
 ROSEBANK_TOWN_EventScript_Officer::
 	lock

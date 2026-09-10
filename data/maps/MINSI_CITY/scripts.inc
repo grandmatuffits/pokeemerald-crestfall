@@ -58,8 +58,18 @@ MINSI_CITY_Text_BrutusName:
 	.string "Brutus$"
 
 MINSI_CITY_Text_Brutus1:
-	.string "I'm very disappointed in you,\n{PLAYER}. You brought shame to\lthis family.\pDon't come back home to Veldtmoor\nwithout 8 gym badges, the required\lamount to challenge the Pokemon\lLeague.$"
-
+	.string "I can't believe you!\p"
+	.string "You embarrassed me in front of\n"
+	.string "everyone!\p"
+	.string "You're supposed to be heir to the\n"
+	.string "throne, and that's how you battle!?\p"
+	.string "Unacceptable!\p"
+	.string "You're going to learn how to be a\n"
+	.string "real POKéMON TRAINER.\p"
+	.string "And don't even think of coming back\n"
+	.string "home to VELDTMOOR until you have\l"
+	.string "8 GYM BADGES!$"
+	
 MINSI_CITY_EventScript_NorthGuard::
 	lock
 	faceplayer

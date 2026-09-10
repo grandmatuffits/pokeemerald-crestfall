@@ -74,15 +74,12 @@ FORGOTTEN_TOMB_EventScript_RegigigasGone::
 	release
 	end
 FORGOTTEN_TOMB_Text_WallSealed:
-	.string "A blank wall of ancient stone.\p"
-	.string "Three shapes are cut into its face,\n"
-	.string "worn almost smooth by time.$"
+	.string "An unremarkable old stone wall.$"
 
 FORGOTTEN_TOMB_Text_WallStirs:
-	.string "The three carvings glow faintly…\p"
-	.string "Something inside your POKé BALLS\n"
-	.string "answers the light!$"
+	.string "The wall seems to react to your\n"
+	.string "POKé BALLS…$"
 
 FORGOTTEN_TOMB_Text_WallOpened:
-	.string "The wall has split open, revealing\n"
-	.string "a passage into the dark.$"
+	.string "The wall seems to have opened up,\n"
+	.string "revealing a small path ahead…$"

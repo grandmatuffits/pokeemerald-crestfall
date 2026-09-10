@@ -17,14 +17,6 @@ GrantCave2F_EventScript_Acolyte6::
 	msgbox GrantCave2F_Text_Acolyte6Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantCave2F_Text_Acolyte6Intro:
-	.string "Higher and higher you climb. Toward what?\n"
-	.string "An ending you cannot change.$"
-GrantCave2F_Text_Acolyte6Defeat:
-	.string "…you climb well, I'll grant you.$"
-GrantCave2F_Text_Acolyte6Post:
-	.string "Four more of us up here. Then the open\n"
-	.string "air. Then them.$"
 
 
 GrantCave2F_EventScript_Acolyte7::
@@ -32,14 +24,6 @@ GrantCave2F_EventScript_Acolyte7::
 	msgbox GrantCave2F_Text_Acolyte7Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantCave2F_Text_Acolyte7Intro:
-	.string "We were promised a kinder world. I have\n"
-	.string "given years to that promise.$"
-GrantCave2F_Text_Acolyte7Defeat:
-	.string "…and years to losing, apparently.$"
-GrantCave2F_Text_Acolyte7Post:
-	.string "You cannot stop kindness with your\n"
-	.string "fists, child.$"
 
 
 GrantCave2F_EventScript_Acolyte8::
@@ -47,31 +31,12 @@ GrantCave2F_EventScript_Acolyte8::
 	msgbox GrantCave2F_Text_Acolyte8Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantCave2F_Text_Acolyte8Intro:
-	.string "My CLAYDOL has guarded this passage for\n"
-	.string "weeks. It does not tire. Neither do I.$"
-GrantCave2F_Text_Acolyte8Defeat:
-	.string "…even stone tires, in the end.$"
-GrantCave2F_Text_Acolyte8Post:
-	.string "Go. The ELDERS are waiting, and they do\n"
-	.string "not lose the way we do.$"
-
 
 GrantCave2F_EventScript_Acolyte9::
 	trainerbattle_single TRAINER_GRANT_ACOLYTE_9, GrantCave2F_Text_Acolyte9Intro, GrantCave2F_Text_Acolyte9Defeat
 	msgbox GrantCave2F_Text_Acolyte9Post, MSGBOX_AUTOCLOSE
 	end
 
-GrantCave2F_Text_Acolyte9Intro:
-	.string "Two ELDERS stand at the peak today.\n"
-	.string "IRRUS and PRAETUS. You have met them\l"
-	.string "both. You have beaten them both.\p"
-	.string "It will not matter this time.$"
-GrantCave2F_Text_Acolyte9Defeat:
-	.string "…you beat me, too. Again.$"
-GrantCave2F_Text_Acolyte9Post:
-	.string "Go and see. Beating them changes\n"
-	.string "nothing while BRIGHAM holds the flower.$"
 
 
 GrantCave2F_EventScript_Acolyte10::
@@ -79,11 +44,50 @@ GrantCave2F_EventScript_Acolyte10::
 	msgbox GrantCave2F_Text_Acolyte10Post, MSGBOX_AUTOCLOSE
 	end
 
+GrantCave2F_Text_Acolyte6Intro:
+	.string "Hey, you should leave!\n"
+	.string "Caves are dangerous!$"
+
+GrantCave2F_Text_Acolyte6Defeat:
+	.string "No!$"
+
+GrantCave2F_Text_Acolyte6Post:
+	.string "I was supposed to be the danger!$"
+
+GrantCave2F_Text_Acolyte7Intro:
+	.string "We're doing something great, here!\n"
+	.string "Leave us alone!$"
+
+GrantCave2F_Text_Acolyte7Defeat:
+	.string "Aw…$"
+
+GrantCave2F_Text_Acolyte7Post:
+	.string "You can't stop this…$"
+
+GrantCave2F_Text_Acolyte8Intro:
+	.string "You can't match our power!$"
+
+GrantCave2F_Text_Acolyte8Defeat:
+	.string "Huh!?$"
+
+GrantCave2F_Text_Acolyte8Post:
+	.string "Such power…$"
+
+GrantCave2F_Text_Acolyte9Intro:
+	.string "Stop right there!$"
+
+GrantCave2F_Text_Acolyte9Defeat:
+	.string "No!$"
+
+GrantCave2F_Text_Acolyte9Post:
+	.string "We're trying to do something good!$"
+
 GrantCave2F_Text_Acolyte10Intro:
-	.string "Last one before the light. I have held\n"
-	.string "this door all morning.$"
+	.string "You're not reaching the top of the\n"
+	.string "mountain!$"
+
 GrantCave2F_Text_Acolyte10Defeat:
-	.string "…and lost it in a minute.$"
+	.string "Oh…$"
+
 GrantCave2F_Text_Acolyte10Post:
-	.string "Out through there. Into the sun.\n"
-	.string "Into the end of it.$"
+	.string "Maybe you are…$"

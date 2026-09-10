@@ -660,3 +660,6 @@ gSpecials::
 	def_special BufferSafariBountyText
 	def_special GetMegaVoucherStone
 	def_special HasRegigigasInParty
+	def_special RateFirstMonIVs
+	def_special RateFirstMonIVs2
+	def_special RateFirstMonIVs3

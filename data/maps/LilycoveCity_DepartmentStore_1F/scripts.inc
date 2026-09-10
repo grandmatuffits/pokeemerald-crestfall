@@ -139,11 +139,11 @@ LilycoveCity_DepartmentStore_1F_EventScript_FloorNamesSign::
 	end
 
 LilycoveCity_DepartmentStore_1F_Text_WelcomeToDeptStore:
-	.string "Welcome to DELMARK DEPARTMENT STORE.$"
+	.string "Welcome to DELMARK CITY MALL.$"
 
 LilycoveCity_DepartmentStore_1F_Text_IBuyAllSortsOfThings:
-	.string "Whenever I come to the DEPARTMENT\n"
-	.string "STORE, I always end up buying all sorts\l"
+	.string "Whenever I come to the MALL,\n"
+	.string "I always end up buying all sorts\l"
 	.string "of things because it's so fun.$"
 
 LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture:
@@ -152,7 +152,7 @@ LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture:
 
 LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill:
 	.string "I'm buying something for my AZUMARILL\n"
-	.string "as a reward for winning a CONTEST.$"
+	.string "as a reward for winning a GYM BADGE.$"
 
 LilycoveCity_DepartmentStore_1F_Text_Azumarill:
 	.string "AZUMARILL: Maririroo!$"
@@ -163,7 +163,7 @@ LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign:
 	.string "2F: TRAINER'S ZONE\p"
 	.string "3F: BATTLE COLLECTION\p"
 	.string "4F: TM CORNER\p"
-	.string "5F: POKé DOLL FLOOR\p"
+	.string "5F: EVO ITEM FLOOR\p"
 	.string "ROOFTOP: ROOFTOP PLAZA$"
 
 @ Unused
@@ -186,38 +186,10 @@ DelmarkCityMall1F_EventScript_Marlo::
 	msgbox DelmarkCityMall1F_Text_MarloPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DelmarkCityMall1F_Text_MarloIntro:
-	.string "The doors are open. They were never\n"
-	.string "locked.\p"
-	.string "You may go up. You simply go up\n"
-	.string "through us.$"
-
-DelmarkCityMall1F_Text_MarloDefeat:
-	.string "Through, then.$"
-
-DelmarkCityMall1F_Text_MarloPostBattle:
-	.string "Listen to this floor. No registers.\n"
-	.string "No footsteps. No hurry.\p"
-	.string "We did that. Peacefully.$"
-
-
 DelmarkCityMall1F_EventScript_Pia::
 	trainerbattle_single TRAINER_COVENANT_PIA, DelmarkCityMall1F_Text_PiaIntro, DelmarkCityMall1F_Text_PiaDefeat
 	msgbox DelmarkCityMall1F_Text_PiaPostBattle, MSGBOX_AUTOCLOSE
 	end
-
-DelmarkCityMall1F_Text_PiaIntro:
-	.string "I worked here. Six years, this counter.\p"
-	.string "I never once looked up.\n"
-	.string "Now I do nothing else.$"
-
-DelmarkCityMall1F_Text_PiaDefeat:
-	.string "You move so quickly…$"
-
-DelmarkCityMall1F_Text_PiaPostBattle:
-	.string "Nobody fought us for this building.\n"
-	.string "They set down their things and left.\p"
-	.string "Ask yourself why that was easy.$"
 
 DELMARK_MALL_1F_EventScript_Acolyte::
 	lock
@@ -226,6 +198,25 @@ DELMARK_MALL_1F_EventScript_Acolyte::
 	release
 	end
 
-
 DELMARK_MALL_1F_Text_Acolyte:
 	.string "Hey! You shouldn't be here!\p"
+
+DelmarkCityMall1F_Text_MarloIntro:
+	.string "I'm glad they picked a mall for our\n"
+	.string "new headquarters!$"
+
+DelmarkCityMall1F_Text_MarloDefeat:
+	.string "Ugh!$"
+
+DelmarkCityMall1F_Text_MarloPostBattle:
+	.string "Whatever, I'll just go walk\n"
+	.string "around…$"
+
+DelmarkCityMall1F_Text_PiaIntro:
+	.string "Isn't this place fun!?$"
+
+DelmarkCityMall1F_Text_PiaDefeat:
+	.string "Hey!$"
+
+DelmarkCityMall1F_Text_PiaPostBattle:
+	.string "That wasn't fun at all!$"

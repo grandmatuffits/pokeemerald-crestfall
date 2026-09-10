@@ -15,14 +15,14 @@
   "connections": [
     {
       "map": "MAP_ENPALE_ROUTE_4",
-      "offset": 2,
+      "offset": 4,
       "direction": "down"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "x": 11,
+      "x": 21,
       "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
@@ -35,7 +35,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
-      "x": 18,
+      "x": 28,
       "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
@@ -49,7 +49,7 @@
     {
       "local_id": "ROUTE_5_NURSE",
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
-      "x": 16,
+      "x": 26,
       "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -62,7 +62,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 7,
+      "x": 17,
       "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -76,7 +76,7 @@
   ],
   "warp_events": [
     {
-      "x": 19,
+      "x": 29,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_WHITECAPS",

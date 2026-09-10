@@ -187,36 +187,94 @@ WALLAR_BELL_TOWER_TOP_Text_Dummy:
 
 WALLAR_BELL_TOWER_TOP_Text_FerrusName:
 	.string "Ferrus$"
-WALLAR_BELL_TOWER_TOP_Text_FerrusPlan:
-	.string "You've come further than I expected.\nBut this ends here, with roots deeper\lthan you can pull free.$"
-WALLAR_BELL_TOWER_TOP_Text_FerrusDefeat:
-	.string "...Even the deepest roots can be torn\nout, it seems.$"
 
 WALLAR_BELL_TOWER_TOP_Text_IrrusName:
 	.string "Irrus$"
-WALLAR_BELL_TOWER_TOP_Text_IrrusPlan:
-	.string "Ferrus fell. No matter. The tide does\nnot stop for one wave.$"
-WALLAR_BELL_TOWER_TOP_Text_IrrusDefeat:
-	.string "The tide... has turned against us.$"
+
 
 WALLAR_BELL_TOWER_TOP_Text_SaxusName:
 	.string "Saxus$"
-WALLAR_BELL_TOWER_TOP_Text_SaxusPlan:
-	.string "Stone doesn't yield to persistence.\nIt yields to force. Let's see which\lyou have more of.$"
-WALLAR_BELL_TOWER_TOP_Text_SaxusDefeat:
-	.string "Cracked. Like all stone, eventually.$"
 
 WALLAR_BELL_TOWER_TOP_Text_PraetusName:
 	.string "Praetus$"
-WALLAR_BELL_TOWER_TOP_Text_PraetusPlan:
-	.string "Steel bends, but it does not break.\nI intend to prove that, one final\ltime.$"
-WALLAR_BELL_TOWER_TOP_Text_PraetusDefeat:
-	.string "...Perhaps I was wrong about that,\ntoo.$"
 
 WALLAR_BELL_TOWER_TOP_Text_BrighamName:
 	.string "Brigham$"
+
+WALLAR_BELL_TOWER_TOP_Text_FerrusPlan:
+	.string "Oh, it's you again.\p"
+	.string "Before, we were held back by\n"
+	.string "BRIGHAM's lack of vision.\p"
+	.string "Instead of saving the world, now\n"
+	.string "we're punishing it.\p"
+	.string "We spent a long time plotting this,\n"
+	.string "and now we are more powerful than\l"
+	.string "anyone thought possible.\p"
+	.string "It was a mistake for you to come\n"
+	.string "here, one you'll pay deeply for.$"
+
+WALLAR_BELL_TOWER_TOP_Text_FerrusDefeat:
+	.string "Oh dear…\n"
+	.string "IRRUS, stop them!$"
+
+WALLAR_BELL_TOWER_TOP_Text_IrrusPlan:
+	.string "If you think you can beat all of us\n"
+	.string "now, think again.\p"
+	.string "It's a new dawn for mankind and\n"
+	.string "POKéMON, and this time, you won't\l"
+	.string "be spared!$"
+
+WALLAR_BELL_TOWER_TOP_Text_IrrusDefeat:
+	.string "How… Such power…\p"
+	.string "SAXUS! A hand!$"
+
+WALLAR_BELL_TOWER_TOP_Text_SaxusPlan:
+	.string "So you bested those two, but can\n"
+	.string "you withstand my might!?\p"
+	.string "Have you no clue of what you're\n"
+	.string "dealing with!?$"
+
+WALLAR_BELL_TOWER_TOP_Text_SaxusDefeat:
+	.string "Ngh… No. It can't end like this!\p"
+	.string "PRAETUS, finish the job!$"
+
+WALLAR_BELL_TOWER_TOP_Text_PraetusPlan:
+	.string "You managed to take down three of\n"
+	.string "us at once, most impressive.\p"
+	.string "Unfortunately, I won't falter so\n"
+	.string "easily.\p"
+	.string "Say goodbye, kid. To all of ENPALE.\p"
+	.string "This is your last chance to beg for\n"
+	.string "mercy!$"
+
+WALLAR_BELL_TOWER_TOP_Text_PraetusDefeat:
+	.string "…Perhaps…\n"
+	.string "Perhaps we made a mistake…$"
+
 WALLAR_BELL_TOWER_TOP_Text_BrighamSpeech:
-	.string "Well. Look at the four of you.\pI built the Covenant on the backs of\nbelievers, and you were the truest of\lthem. And still you lost. To a child.\pPathetic. All of you.\pDon't bother finding me. I'm done\nwith this region, and done with you.$"
+	.string "Yeah, you can say that again.\p"
+	.string "Look at you guys.\p"
+	.string "A bunch of idiots in robes acting\n"
+	.string "like you're something divine.\p"
+	.string "Listen to me, as your former leader.\p"
+	.string "Grow up. Get real jobs.\p"
+	.string "This whole COVENANT schtick, it's\n"
+	.string "just not worth it.\p"
+	.string "Yeah, you have some wicked Legendary\n"
+	.string "POKéMON, and for what?\p"
+	.string "You just got clowned on by some kid!\p"
+	.string "Go home. All of you.\n"
+	.string "Rethink your lives.\p"
+	.string "If you want, I can get you a job at\n"
+	.string "my aunt's accounting firm.\p"
+	.string "She owns one in MIRAVEIL.\p"
+	.string "Speaking of which, my lunch break is\n"
+	.string "almost over.\p"
+	.string "See ya guys.$"
 
 WALLAR_BELL_TOWER_TOP_Text_EldersRevengeVow:
-	.string "...This isn't finished. Mark that.\nWe will return, and next time, the\loutcome will be different.$"
+	.string "This isn't finished. Mark my words.\p"
+	.string "One day we'll… uh…\p"
+	.string "What was the name of that firm he\n"
+	.string "mentioned? Did anyone catch that?\p"
+	.string "Well, either way. Goodbye.$"

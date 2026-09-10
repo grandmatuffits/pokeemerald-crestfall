@@ -126,19 +126,6 @@ LilycoveCity_DepartmentStore_5F_EventScript_LittleGirl::
 	msgbox LilycoveCity_DepartmentStore_5F_Text_GettingDollInsteadOfPokemon, MSGBOX_NPC
 	end
 
-LilycoveCity_DepartmentStore_5F_Text_PlaceFullOfCuteDolls:
-	.string "This place is full of cute DOLLS.\p"
-	.string "I should buy some for me, instead of\n"
-	.string "just for my children.$"
-
-LilycoveCity_DepartmentStore_5F_Text_GettingDollInsteadOfPokemon:
-	.string "I'm not big enough to raise POKéMON,\n"
-	.string "so I'm getting a cute DOLL instead.$"
-
-LilycoveCity_DepartmentStore_5F_Text_SellManyCuteMatsHere:
-	.string "They sell many cute MATS here.\p"
-	.string "I wonder which one I should get?\n"
-	.string "Maybe I'll buy them all…$"
 
 LilycoveCity_DepartmentStore_5F_Text_ClosedRooftopForWeather:
 	.string "I think they closed the rooftop\n"
@@ -149,18 +136,6 @@ DelmarkCityMall5F_EventScript_Abban::
 	msgbox DelmarkCityMall5F_Text_AbbanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DelmarkCityMall5F_Text_AbbanIntro:
-	.string "The stairs to the roof are behind me.\n"
-	.string "They are the last ones.\p"
-	.string "I would rather you sat down.$"
-
-DelmarkCityMall5F_Text_AbbanDefeat:
-	.string "You will not sit.$"
-
-DelmarkCityMall5F_Text_AbbanPostBattle:
-	.string "There is a boy up there waiting for\n"
-	.string "you. Not one of ours.\p"
-	.string "He would not come past me either.$"
 
 
 DelmarkCityMall5F_EventScript_Serai::
@@ -168,18 +143,6 @@ DelmarkCityMall5F_EventScript_Serai::
 	msgbox DelmarkCityMall5F_Text_SeraiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DelmarkCityMall5F_Text_SeraiIntro:
-	.string "Every floor you cleared, we let you\n"
-	.string "clear. Consider it.\p"
-	.string "Nothing you have done here has\n"
-	.string "surprised anyone.$"
-
-DelmarkCityMall5F_Text_SeraiDefeat:
-	.string "…that did.$"
-
-DelmarkCityMall5F_Text_SeraiPostBattle:
-	.string "It changes nothing. The CELEBI is\n"
-	.string "already far from here.$"
 
 
 DelmarkCityMall5F_EventScript_Castor::
@@ -187,17 +150,6 @@ DelmarkCityMall5F_EventScript_Castor::
 	msgbox DelmarkCityMall5F_Text_CastorPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DelmarkCityMall5F_Text_CastorIntro:
-	.string "I am the last one standing between\n"
-	.string "you and the sky.\p"
-	.string "I have been told to make it cost you.$"
-
-DelmarkCityMall5F_Text_CastorDefeat:
-	.string "Then it costs me instead.$"
-
-DelmarkCityMall5F_Text_CastorPostBattle:
-	.string "Go on. ELDER PRAETUS has been waiting\n"
-	.string "since before you entered the city.$"
 
 DelmarkCityMall5F_EventScript_RivalTrigger::
 	lockall
@@ -248,26 +200,71 @@ Movement_RivalLeave:
 	step_end	
 
 DelmarkCityMall5F_Text_RivalName:
-	.string "RIVAL$"
+	.string "{RIVAL}$"
+
+LilycoveCity_DepartmentStore_5F_Text_PlaceFullOfCuteDolls:
+	.string "I never realized so many POKéMON\n"
+	.string "evolved in so many different ways!$"
+
+LilycoveCity_DepartmentStore_5F_Text_GettingDollInsteadOfPokemon:
+	.string "They sell every kind of stone here\n"
+	.string "except MOON STONES.\p"
+	.string "It's not fair!$"
+
+LilycoveCity_DepartmentStore_5F_Text_SellManyCuteMatsHere:
+	.string "I heard once that some POKéMON need\n"
+	.string "to be traded to evolve, but that\l"
+	.string "sounds dumb!$"
+
+DelmarkCityMall5F_Text_AbbanIntro:
+	.string "Can't you see the beauty in all of\n"
+	.string "this?$"
+
+DelmarkCityMall5F_Text_AbbanDefeat:
+	.string "Ngh!$"
+
+DelmarkCityMall5F_Text_AbbanPostBattle:
+	.string "You'll regret this!$"
+
+DelmarkCityMall5F_Text_SeraiIntro:
+	.string "It's not too late!\n"
+	.string "You can still join us!$"
+
+DelmarkCityMall5F_Text_SeraiDefeat:
+	.string "C'mon!$"
+
+DelmarkCityMall5F_Text_SeraiPostBattle:
+	.string "Fine, whatever.$"
+
+DelmarkCityMall5F_Text_CastorIntro:
+	.string "Not a step further!\n"
+	.string "I won't let you ruin this, too!$"
+
+DelmarkCityMall5F_Text_CastorDefeat:
+	.string "No…$"
+
+DelmarkCityMall5F_Text_CastorPostBattle:
+	.string "Don't you want to be saved when the\n"
+	.string "world is cleansed?$"
 
 DelmarkCityMall5F_Text_RivalIntro:
-	.string "…sorry. I have been standing up there\n"
-	.string "an hour working up to this.\p"
-	.string "I got here two floors ahead of you.\n"
-	.string "I could hear him on the roof. Just\l"
-	.string "standing there. Not doing anything.\p"
-	.string "And I could not make myself go up.\p"
-	.string "So I waited for the person who could.\n"
-	.string "But you are not walking past me\l"
-	.string "without showing me you can.$"
+	.string "Hmph! Oh, it's you.\p"
+	.string "What, are you with these clowns?\n"
+	.string "I doubt it.\p"
+	.string "Not even you would stoop this low.\p"
+	.string "I tried to put an end to this\n"
+	.string "idiocy, but that guy in the hood…\p"
+	.string "He's too good.\p"
+	.string "Whatever, I'll just snuff you out\n"
+	.string "real quick to make myself feel\l"
+	.string "better.$"
 
 DelmarkCityMall5F_Text_RivalDefeat:
-	.string "Yeah. That is what I wanted to see.$"
+	.string "Again!?$"
 
 DelmarkCityMall5F_Text_RivalPostBattle:
-	.string "That settles it.\p"
-	.string "I came here to take them on myself.\n"
-	.string "It should be you. It has been you\l"
-	.string "since the marsh, and we both know it.\p"
-	.string "I will find another way to be useful.\n"
-	.string "Go get the roof.$"	
+	.string "Ugh! No! No! No!\p"
+	.string "Not you, too!\p"
+	.string "What am I doing wrong!?\n"
+	.string "Why am I never strong enough!?\p"
+	.string "Screw it, I'm outta here!$"

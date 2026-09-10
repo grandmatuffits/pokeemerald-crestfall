@@ -331,7 +331,7 @@ MINSI_LAB_Movement_RivalLeave::
 	step_end
 
 MINSI_LAB_Text_RivalBattleIntro:
-	.string "C'mon!$"
+	.string "Let's go!$"
 
 MINSI_LAB_Text_RivalLoss:
 	.string "Beginner's luck!$"
@@ -533,6 +533,12 @@ MINSI_LAB_Movement_RivalLeavePiplup::
 
 MINSI_LAB_EventScript_Hemlock::
 	goto_if_set FLAG_UNUSED_0x022, MINSI_LAB_EventScript_HemlockRepeat
+	lock
+	faceplayer
+	setspeaker MINSI_LAB_Text_HemlockName
+	msgbox MINSI_LAB_Text_HemlockPickStarter, MSGBOX_DEFAULT
+	closemessage
+	release
 	end
 
 MINSI_LAB_EventScript_HemlockRepeat::
@@ -583,39 +589,13 @@ MINSI_LAB_EventScript_HemlockPostDex::
 	release
 	end
 
-
+MINSI_LAB_Text_HemlockPickStarter:
+	.string "Go ahead, pick a starter!$"
+	
 MINSI_LAB_Text_HemlockMilestone:
 	.string "Hey champ! Long time, no see!\n"
 	.string "Let me see that POKéDEX a moment.$"
 
-MINSI_LAB_Text_HemlockAwarded:
-	.string "I've upgraded it to NATIONAL mode.\p"
-	.string "It records species from far beyond\n"
-	.string "our borders. Even ones long gone\l"
-	.string "from the living world.\p"
-	.string "Which, as it happens, is why I keep\n"
-	.string "that machine in the back running.\p"
-	.string "Bring me a fossil sometime.$"
-
-MINSI_LAB_Text_HemlockNotYet:
-	.string "A regional POKéDEX should hold what\n"
-	.string "LIVES here. What you can actually\l"
-	.string "meet, out in the grass.\p"
-	.string "Fill a hundred of its pages and come\n"
-	.string "see me. I'll have something for you.$"
-
-MINSI_LAB_Text_HemlockPostDex:
-	.string "The NATIONAL DEX suits you.\p"
-	.string "And the fossil machine is yours to\n"
-	.string "use whenever you find something\l"
-	.string "worth reviving.$"
-
-MINSI_LAB_Text_Hemlock3:
-	.string "A regional POKéDEX should hold what\n"
-	.string "LIVES here. What you can actually\l"
-	.string "meet, out in the grass.\p"
-	.string "Come back later and\n"
-	.string "see me. I'll have something for you.$"	
 
 MINSI_LAB_EventScript_FossilMachine::
 	lock
@@ -832,39 +812,6 @@ MINSI_LAB_EventScript_FossilNoDex::
 	release
 	end
 
-MINSI_LAB_Text_FossilNoDex:
-	.string "This machine? Reconstruction work.\p"
-	.string "Ancient tissue, rebuilt from stone.\n"
-	.string "Same principle as the synthetic\l"
-	.string "POKéMON we grow here, only older.\p"
-	.string "Not much use to you yet, mind. Your\n"
-	.string "POKéDEX has no pages for things that\l"
-	.string "stopped living.$"
-
-MINSI_LAB_Text_FossilNone:
-	.string "Bring me a fossil and I'll see what\n"
-	.string "sleeps inside it.$"
-
-MINSI_LAB_Text_FossilConfirm:
-	.string "That's a {STR_VAR_1}.\p"
-	.string "There's a {STR_VAR_2} in there. Faint,\n"
-	.string "but it's there.\p"
-	.string "Shall I wake it?$"
-
-MINSI_LAB_Text_FossilRevived:
-	.string "…There. Breathing.\p"
-	.string "Millions of years, and it opens its\n"
-	.string "eyes in MINSI CITY. Remarkable.$"
-
-MINSI_LAB_Text_FossilDecline:
-	.string "It's waited this long. It can wait\n"
-	.string "a little longer.$"
-
-MINSI_LAB_Text_FossilNoRoom:
-	.string "You've nowhere to put it. Come back\n"
-	.string "when you've made room.\p"
-	.string "The fossil's still yours. I've not\n"
-	.string "touched it.$"
 
 MINSI_LAB_EventScript_Synth::
 	lock
@@ -916,88 +863,6 @@ MINSI_LAB_EventScript_SynthPostDisc::
 	release
 	end
 
-MINSI_LAB_Text_SynthAsk:
-	.string "You're the one heading for ROUTE 1,\n"
-	.string "aren't you? Good. Good.\p"
-	.string "We build POKéMON here. Not raise.\n"
-	.string "BUILD. Code and light, given a body.\p"
-	.string "One of ours is nearly finished. But\n"
-	.string "during a field test a piece of it\l"
-	.string "got… loose.\p"
-	.string "It went into ALLENWOOD FOREST. A\n"
-	.string "data module. Ugly little thing, and\l"
-	.string "I can't complete the project without\l"
-	.string "it.\p"
-	.string "Folk in the forest have been talking\n"
-	.string "about odd goings-on. Ask around.$"
-
-MINSI_LAB_Text_SynthWaiting:
-	.string "ALLENWOOD FOREST. Ask about the\n"
-	.string "strange occurrences. Someone will\l"
-	.string "have seen where it settled.$"
-
-MINSI_LAB_Text_SynthReturn:
-	.string "You have it! Oh, look at the state\n"
-	.string "of it. Sap in the housing.\p"
-	.string "Give me a moment…\p"
-	.string "…Loading. Loading. There.$"
-
-MINSI_LAB_Text_SynthAfter:
-	.string "It's awake. Say hello to PORYGON.\p"
-	.string "It's yours. Field data is worth more\n"
-	.string "to me than a specimen in a case.\p"
-	.string "Take it far. See what it becomes.$"
-
-MINSI_LAB_Text_SynthEpilogue:
-	.string "How's it running? No fragmenting?\n"
-	.string "Wonderful. Wonderful.$"
-
-MINSI_LAB_Text_SynthDisc:
-	.string "You're back. And the town's quiet\n"
-	.string "again, I hear.\p"
-	.string "I've been running your PORYGON's\n"
-	.string "field data. Years of it, in months.\p"
-	.string "It's outgrown what I built it for.\n"
-	.string "The code wants somewhere to go.\p"
-	.string "So I made it somewhere.$"
-
-MINSI_LAB_Text_SynthAfterDisc:
-	.string "A DUBIOUS DISC. Poor name. I didn't\n"
-	.string "choose it.\p"
-	.string "It won't work on the base form. It\n"
-	.string "needs the second one first.\p"
-	.string "Take it as far as it goes. I want to\n"
-	.string "know what's at the end.$"
-
-MINSI_LAB_Text_SynthDiscBagFull:
-	.string "Your bag's full. It'll keep on the\n"
-	.string "bench till you've room.$"
-
-MINSI_LAB_Text_SynthPostDisc:
-	.string "How's it running? No fragmenting?\n"
-	.string "Wonderful. Wonderful.$"
-	
-ALLENWOOD_FOREST_Text_ModuleUnknown:
-	.string "The air here hums.\p"
-	.string "Not insects. Something flatter than\n"
-	.string "that. Like a held note.$"
-
-ALLENWOOD_FOREST_Text_ModuleFound:
-	.string "The hum is louder here.\p"
-	.string "Something is half-buried in the\n"
-	.string "leaf litter, and the leaves above it\l"
-	.string "aren't quite the right green.\p"
-	.string "You brush the dirt away. A grey box,\n"
-	.string "warm to the touch, its lights\l"
-	.string "cycling in a pattern that never\l"
-	.string "repeats.\p"
-	.string "The forest goes quiet for exactly one\n"
-	.string "second. Then the birds start again.$"
-
-ALLENWOOD_FOREST_Text_ModuleGone:
-	.string "The leaf litter is just leaf litter\n"
-	.string "now. The hum is gone.$"	
-
 
 MINSI_LAB_EventScript_FossilNameParty::
 	playfanfare MUS_LEVEL_UP
@@ -1030,17 +895,6 @@ MINSI_LAB_EventScript_FossilSentToPC::
 MINSI_LAB_Text_FossilReceived:
 	.string "You received the revived\n"
 	.string "{STR_VAR_2}!$"	
-
-MINSI_LAB_Text_HemlockOak:
-	.string "You've seen the reports, I expect.\p"
-	.string "The MYTHICAL POKéMON TEAM COVENANT\n"
-	.string "took never went back into hiding.\l"
-	.string "They're loose. All over ENPALE.\p"
-	.string "A colleague of mine came from KANTO\n"
-	.string "to see for himself. PROFESSOR OAK.\p"
-	.string "He's here. In this very room.\p"
-	.string "He tells me one of them crossed his\n"
-	.string "path on the road in. Ask him.$"	
 
 MINSI_LAB_EventScript_Oak::
 	lock
@@ -1151,91 +1005,259 @@ MINSI_LAB_EventScript_OakPostRematch::
 MINSI_LAB_Text_OakName:
 	.string "OAK$"
 
-MINSI_LAB_Text_OakIntro:
-	.string "So you're {PLAYER}.\p"
-	.string "HEMLOCK writes about you rather a\n"
-	.string "lot. I'd assumed exaggeration.\p"
-	.string "I came here chasing a rumour and\n"
-	.string "found it true. Two days east, on the\l"
-	.string "old road, something crossed my path.\p"
-	.string "Pink. Small. It looked at me the way\n"
-	.string "a child looks at a stranger.\p"
-	.string "MEW. Awake, and in no hurry to be\n"
-	.string "anywhere else.\p"
-	.string "It's stayed near me since. Not from\n"
-	.string "fondness. Curiosity.\p"
-	.string "HEMLOCK says you and your POKéMON\n"
-	.string "understand one another. That is a\l"
-	.string "rarer thing than a full POKéDEX.\p"
-	.string "So show me.$"
 
-MINSI_LAB_Text_OakChallenge:
-	.string "Win, and MEW is yours.\p"
-	.string "Shall we?$"
 
-MINSI_LAB_Text_OakDecline:
-	.string "Take your time. Neither of us is\n"
-	.string "going anywhere.$"
-
-MINSI_LAB_Text_OakBattleDefeat:
-	.string "…Ah. There it is.$"
-
-MINSI_LAB_Text_OakGive:
-	.string "Fifty years of study and I still\n"
-	.string "can't put THAT into a paper.\p"
-	.string "Look at it. It's already decided.$"
 
 MINSI_LAB_Text_ReceivedMew:
 	.string "{PLAYER} received {STR_VAR_1}!$"
 
+
+MINSI_LAB_Text_HemlockAwarded:
+	.string "I went ahead and upgraded it to a\n"
+	.string "NATIONAL DEX.\p"
+	.string "It'll record POKéMON species found\n"
+	.string "outside of ENPALE.\p"
+	.string "Even POKéMON that are extinct!\p"
+	.string "One of my coworkers even runs a\n"
+	.string "fossil resurrection machine.\p"
+	.string "Go check with him if you have any\n"
+	.string "fossils.$"
+
+MINSI_LAB_Text_HemlockNotYet:
+	.string "Still filling that POKéDEX?\p"
+	.string "Check back later and I might have\n"
+	.string "something for you.$"
+
+MINSI_LAB_Text_HemlockPostDex:
+	.string "Find anything cool to add to your\n"
+	.string "NATIONAL DEX?$"
+
+MINSI_LAB_Text_Hemlock3:
+	.string "Still filling that POKéDEX?\p"
+	.string "Check back later and I might have\n"
+	.string "something for you.$"
+
+MINSI_LAB_Text_FossilNoDex:
+	.string "Yes!? What do you want!?\n"
+	.string "I'm VERY busy here!\p"
+	.string "Do you even KNOW what I'm doing!?\p"
+	.string "You fool! I'm creating LIFE!\p"
+	.string "That's right! LIFE ITSELF!\n"
+	.string "ALL FROM OLD, DUSTY FOSSILS!\p"
+	.string "What, you think anyone could just\n"
+	.string "whip up a machine that can\l"
+	.string "resurrect extinct POKéMON!?\p"
+	.string "Get real! I'm basically GOD!\p"
+	.string "Now, what do you want!?$"
+
+MINSI_LAB_Text_FossilNone:
+	.string "Don't bother me unless it's\n"
+	.string "something serious!\p"
+	.string "GOOD DAY, SIR!$"
+
+MINSI_LAB_Text_FossilConfirm:
+	.string "WHAT!? YOU HAVE A FOSSIL!?\p"
+	.string "That's a {STR_VAR_1}!\n"
+	.string "There's a {STR_VAR_2} in there!\p"
+	.string "What, you want me to use my powers\n"
+	.string "and bring this thing back to the\l"
+	.string "world of the living!?\p"
+	.string "I bet you do!\p"
+	.string "Now, give me a moment to work my\n"
+	.string "magic! GOOD DAY, SIR!$"
+
+MINSI_LAB_Text_FossilRevived:
+	.string "Presto!\p"
+	.string "With the power of my machine along\n"
+	.string "with my god-like intellect, I have\l"
+	.string "brought this creature new life!\p"
+	.string "GOOD DAY, SIR!$"
+
+MINSI_LAB_Text_FossilDecline:
+	.string "Fine! Reject my services!\n"
+	.string "GOOD DAY, SIR!$"
+
+MINSI_LAB_Text_FossilNoRoom:
+	.string "NO ROOM!?\p"
+	.string "COME BACK WHEN YOU CAN TAKE IT!\n"
+	.string "GOOD DAY, SIR!$"
+
+MINSI_LAB_Text_SynthAsk:
+	.string "Are you heading to ROUTE 1?\n"
+	.string "Oh, fantastic!\p"
+	.string "Don't mention this to the others,\n"
+	.string "but I built my own POKéMON!\p"
+	.string "It's designed to be the perfect\n"
+	.string "species! It's nearly complete, too!\p"
+	.string "But, uh, I was doing some… uh…\n"
+	.string "research… in the ALLENWOOD FOREST,\l"
+	.string "when I lost one of the last data\l"
+	.string "modules I needed to finish it.\p"
+	.string "Say, if you happen to come across\n"
+	.string "it, bring it here, will ya?\p"
+	.string "Thanks, friend.$"
+
+MINSI_LAB_Text_SynthWaiting:
+	.string "Keep checking ALLENWOOD FOREST.\p"
+	.string "It has to be around there\n"
+	.string "somewhere.$"
+
+MINSI_LAB_Text_SynthReturn:
+	.string "Oh, you found it!\n"
+	.string "Perfect, perfect, perfect!\p"
+	.string "Oh, it's a bit rough around the\n"
+	.string "edges, but it'll do nonetheless.\p"
+	.string "Just give me a moment, and…\p"
+	.string "Tada! New POKéMON!$"
+
+MINSI_LAB_Text_SynthAfter:
+	.string "It's alive!\n"
+	.string "Say hello to PORYGON!\p"
+	.string "Say, how about you take it with\n"
+	.string "you!\p"
+	.string "Test this perfect specimen out and\n"
+	.string "see what it can do!$"
+
+MINSI_LAB_Text_SynthEpilogue:
+	.string "How's PORYGON? Is it safe?\n"
+	.string "Is it alright?$"
+
+MINSI_LAB_Text_SynthDisc:
+	.string "Oh, you're back.\p"
+	.string "It's been some time since we last\n"
+	.string "spoke.\p"
+	.string "While you were gone, I've been\n"
+	.string "working on an upgrade.\p"
+	.string "As you've seen, someone copied my\n"
+	.string "idea for PORYGON and is making bank\l"
+	.string "selling UP-GRADEs at the DELMARK\l"
+	.string "MALL!\p"
+	.string "Some people are just too money\n"
+	.string "hungry! It makes me sick!\p"
+	.string "But I've taken their “UP-GRADEs”\n"
+	.string "and perfected it even further!\p"
+	.string "Viola, the DUBIOUS DISC!\p"
+	.string "Give it to your improved PORYGON2\n"
+	.string "and watch it grow even stronger!$"
+
+MINSI_LAB_Text_SynthAfterDisc:
+	.string "The name is a bit unfortunate, but\n"
+	.string "alas, all of my other ideas were\l"
+	.string "copyrighted!\p"
+	.string "Blasted copyright laws!$"
+
+MINSI_LAB_Text_SynthDiscBagFull:
+	.string "Oh, you don't have room.\n"
+	.string "Come back when you do.$"
+
+MINSI_LAB_Text_SynthPostDisc:
+	.string "How's your new PORYGON-Z?\p"
+	.string "I'm sure it's quite the specimen!$"
+
+ALLENWOOD_FOREST_Text_ModuleUnknown:
+	.string "There's a whirring noise at the\n"
+	.string "ground below the leaves.$"
+
+ALLENWOOD_FOREST_Text_ModuleFound:
+	.string "You found a data module!$"
+
+ALLENWOOD_FOREST_Text_ModuleGone:
+	.string "There's nothing left on the ground\n"
+	.string "but leaves.$"
+
+MINSI_LAB_Text_HemlockOak:
+	.string "Hey champ. Have you seen the news?\p"
+	.string "Those mythical POKéMON that TEAM\n"
+	.string "COVENANT stole have been popping up\l"
+	.string "all over like crazy.\p"
+	.string "A good friend of mine crossed paths\n"
+	.string "with one.\p"
+	.string "You should go ask him about it,\n"
+	.string "he's right over there.$"
+
+MINSI_LAB_Text_OakIntro:
+	.string "Oh, yes. You must be {PLAYER}.\p"
+	.string "PROFESSOR HEMLOCK spoke very highly\n"
+	.string "of you.\p"
+	.string "What he said was true, about the\n"
+	.string "mythical POKéMON.\p"
+	.string "I came here on an expedition for\n"
+	.string "POKéMON research when a MEW came\l"
+	.string "right to me.\p"
+	.string "It almost felt like fate.\p"
+	.string "But to be honest, I'm not much of a\n"
+	.string "POKéMON TRAINER.\p"
+	.string "From what PROFESSOR HEMLOCK says, it\n"
+	.string "seems to me this one should be\l"
+	.string "trusted in your hands rather than\l"
+	.string "mine.\p"
+	.string "But before I hand it over, I'd like\n"
+	.string "to see your expertise myself.$"
+
+MINSI_LAB_Text_OakChallenge:
+	.string "What do you say?$"
+
+MINSI_LAB_Text_OakDecline:
+	.string "Take your time.\p"
+	.string "Just come see me when you're ready.$"
+
+MINSI_LAB_Text_OakBattleDefeat:
+	.string "Nicely done.$"
+
+MINSI_LAB_Text_OakGive:
+	.string "That was quite remarkable.\p"
+	.string "An excellent example of a true bond\n"
+	.string "between trainer and POKéMON.\p"
+	.string "The MEW is yours.$"
+
 MINSI_LAB_Text_OakAfterMew:
-	.string "Congratulations, {PLAYER}.\p"
-	.string "Not for the win. For the reason you\n"
-	.string "won. MEW watched you the whole\l"
-	.string "match. So did I.\p"
-	.string "You should know it isn't alone.\n"
-	.string "Others have surfaced across ENPALE,\l"
-	.string "and each has found company.\p"
-	.string "STEVEN. RED. CYNTHIA.\p"
-	.string "All of them waiting on someone\n"
-	.string "worth the walk. Go on.$"
+	.string "Congratulations, {PLAYER}.\n"
+	.string "You certainly earned this.\p"
+	.string "Now, if you must know, the other\n"
+	.string "mythical POKéMON have also appeared\l"
+	.string "around ENPALE.\p"
+	.string "From what I heard, an old student\n"
+	.string "of mine, RED, found CELEBI at the\l"
+	.string "WALLAR MARSHLANDS.\p"
+	.string "The former champion of HOENN,\n"
+	.string "STEVEN, found JIRACHI at the peak\l"
+	.string "of WHITECAPS.\p"
+	.string "And the champion of SINNOH,\n"
+	.string "CYNTHIA, found SHAYMIN at\l"
+	.string "GRANT ISLAND.\p"
+	.string "You should seek them out, if not\n"
+	.string "for the mythical POKéMON, then for\l"
+	.string "the sake of adventure!$"
 
 MINSI_LAB_Text_OakNoRoom:
-	.string "Your party is full, and your boxes\n"
-	.string "besides. Make room and come back.\p"
-	.string "MEW will wait. It has waited longer\n"
-	.string "than that for worse company.$"
+	.string "Your party is full.\n"
+	.string "Come back when you have room.$"
 
 MINSI_LAB_Text_OakFlavor:
-	.string "HEMLOCK's revival machine is older\n"
-	.string "than I am and twice as stubborn.\p"
-	.string "How is MEW? …No, don't tell me.\n"
-	.string "I can see it from here.$"
+	.string "How's MEW doing?\p"
+	.string "I can only trust it is well under\n"
+	.string "your care.$"
 
 MINSI_LAB_Text_OakRematchOffer:
-	.string "So the LEAGUE has a new CHAMPION,\n"
-	.string "and it's you. I did wonder.\p"
-	.string "I've had rather a lot of time to\n"
-	.string "think about our last match.\p"
-	.string "Indulge an old man?$"
+	.string "So, you've been training?\p"
+	.string "I've also been working on my skills\n"
+	.string "as a trainer.\p"
+	.string "How about a quick test?$"
 
 MINSI_LAB_Text_OakRematchAccept:
-	.string "Good. No holding back this time.\n"
-	.string "For either of us.$"
+	.string "Excellent. Now, show me your best.$"
 
 MINSI_LAB_Text_OakRematchDeclineText:
-	.string "Another day. I'm not going\n"
-	.string "anywhere.$"
+	.string "That's alright.\n"
+	.string "Whenever you're ready.$"
 
 MINSI_LAB_Text_OakRematchDefeat:
-	.string "Fifty years, and still learning.$"
+	.string "What a class act!$"
 
 MINSI_LAB_Text_OakRematchAfter:
-	.string "Twice, then.\p"
-	.string "I'll be going back to KANTO before\n"
-	.string "long. Come and find me there,\l"
-	.string "CHAMPION. Bring MEW.$"
+	.string "Yes, you're quite something\n"
+	.string "alright!$"
 
 MINSI_LAB_Text_OakPostRematch:
-	.string "Beaten twice and cheerful about it.\n"
-	.string "That is the job, more or less.$"	
+	.string "You just might be the best like no\n"
+	.string "one ever was!$"

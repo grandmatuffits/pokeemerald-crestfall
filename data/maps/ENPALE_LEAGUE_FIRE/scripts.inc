@@ -124,44 +124,40 @@ ENPALE_LEAGUE_FIRE_EventScript_FinalBeaten::
 	end
 
 ENPALE_LEAGUE_FIRE_Text_IntroSpeech:
-	.string "So you're the one who cleared the\n"
-	.string "gyms. Welcome to the League.\p"
-	.string "I'm the first of the Elite Four.\n"
-	.string "Fire is my craft, and I don't intend\l"
-	.string "to make this easy.\p"
-	.string "Show me the flame that carried you\n"
-	.string "this far!$"
+	.string "Oh, a new face.\p"
+	.string "Well, not exactly new. I know your\n"
+	.string "father, of course.\p"
+	.string "Let's see if you have the same fire\n"
+	.string "in your stomach.\p"
+	.string "Get ready to face the heat!$"
 
 ENPALE_LEAGUE_FIRE_Text_Defeat:
-	.string "Hah! Snuffed out, clean and fair.$"
+	.string "Hah! Good one!$"
 
 ENPALE_LEAGUE_FIRE_Text_PostBattleSpeech:
-	.string "That was real heat. The door ahead\n"
-	.string "is open… but the next one won't go\l"
-	.string "as gently.\p"
-	.string "Keep climbing, challenger.$"
+	.string "That was a real scorcher!\n"
+	.string "Go on ahead, kid!$"
 
 ENPALE_LEAGUE_FIRE_Text_RematchIntro:
-	.string "Back again, and stronger, I'd wager.\pGood. I've been itching for a real\nchallenge since you left.\pLet's see if that flame's grown or\njust gotten lucky!$"
+	.string "So, you're back.\p"
+	.string "Let's see if you can stand the heat!$"
 
 ENPALE_LEAGUE_FIRE_Text_RematchDefeat:
-	.string "Ha! Burned again, and I'm not even mad!$"
+	.string "Burned again!$"
 
 ENPALE_LEAGUE_FIRE_Text_RematchPostBattle:
-	.string "Still got it. Go on, the others are\nwaiting.$"
+	.string "You still got it! Go on ahead!$"
 
 ENPALE_LEAGUE_FIRE_Text_FinalIntro:
-	.string "You again. And the throne's changed\n"
-	.string "hands twice since you first walked\l"
-	.string "through that door.\p"
-	.string "We've all had to get stronger to keep\n"
-	.string "up with you. I hope you're ready for\l"
-	.string "what that means.\p"
-	.string "No holding back this time!$"
+	.string "Hey, you. Back again, huh?\p"
+	.string "There's a new champ this time, but\n"
+	.string "you'll have to get through me to\l"
+	.string "meet them!\p"
+	.string "Get ready to face the heat!$"
 
 ENPALE_LEAGUE_FIRE_Text_FinalDefeat:
-	.string "Everything I had… and it still wasn't\nenough.$"
+	.string "Still not enough!$"
 
 ENPALE_LEAGUE_FIRE_Text_FinalPostBattle:
-	.string "Go on. He's been waiting for you\n"
-	.string "longer than any of us.$"
+	.string "Go on, kid, and take that burning\n"
+	.string "passion with you!$"

@@ -45,35 +45,6 @@ ROSEBANK_GYM_EventScript_FriedePostBadge::
 	release
 	end
 
-ROSEBANK_GYM_Text_FriedeIntro:
-	.string "You made it through the ice! Not\n"
-	.string "many keep their footing that well.\p"
-	.string "Funny, isn't it? A girl raised on a\n"
-	.string "sunny beach, in love with the cold.\p"
-	.string "But I grew up in the shadow of\n"
-	.string "Whitecaps. Its frost is in my heart,\l"
-	.string "even down here by the sea.\p"
-	.string "Let me show you the chill of that\n"
-	.string "mountain!$"
-
-ROSEBANK_GYM_Text_FriedeDefeat:
-	.string "Beautiful… like the first snow on\n"
-	.string "the peak.$"
-
-ROSEBANK_GYM_Text_FriedeAward:
-	.string "You've earned this. The FRIGID\n"
-	.string "BADGE!\p"
-	.string "And take this, too. A gift from the\n"
-	.string "mountain.$"
-
-ROSEBANK_GYM_Text_FriedeAvalanche:
-	.string "That's AVALANCHE! Let your foe\n"
-	.string "strike first, then bury them under\l"
-	.string "twice the force!$"
-
-ROSEBANK_GYM_Text_FriedePostBadge:
-	.string "Whenever you feel that cold wind\n"
-	.string "off Whitecaps, think of our battle!$"
 
 ROSEBANK_GYM_EventScript_Sally::
 	trainerbattle_single TRAINER_ROSEBANK_SALLY, ROSEBANK_GYM_Text_SallyIntro, ROSEBANK_GYM_Text_SallyDefeat
@@ -110,123 +81,135 @@ ROSEBANK_GYM_EventScript_Janna::
 	msgbox ROSEBANK_GYM_Text_JannaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-@ ======== Sally (Swimmer F) ========
+ROSEBANK_GYM_Text_FriedeIntro:
+	.string "So, you made it through my little\n"
+	.string "ice maze.\p"
+	.string "Lots of people end up quitting or\n"
+	.string "on their butts.\p"
+	.string "Hehe, it never gets old!\p"
+	.string "Anyways, I'm FRIEDE, the gym leader\n"
+	.string "of this little beach town.\p"
+	.string "I grew up in LENOX TOWN just a bit\n"
+	.string "north of WHITECAPS, and I never lost\l"
+	.string "my love for the frost of that\l"
+	.string "beautiful mountain.\p"
+	.string "Hence my icy nature.\p"
+	.string "So, do you want a battle or just\n"
+	.string "looking to chat!?$"
+
+ROSEBANK_GYM_Text_FriedeDefeat:
+	.string "I'm frozen in shock!$"
+
+ROSEBANK_GYM_Text_FriedeAward:
+	.string "Very impressive!\p"
+	.string "Here, you earned this.\n"
+	.string "It's the FRIGID BADGE!\p"
+	.string "And you can have this as well.\n"
+	.string "A little token from WHITECAPS!$"
+
+ROSEBANK_GYM_Text_FriedeAvalanche:
+	.string "That's AVALANCHE!\p"
+	.string "Your opponent will always go first,\n"
+	.string "but that move will bury them in\l"
+	.string "frost if you can survive the first\l"
+	.string "hit!$"
+
+ROSEBANK_GYM_Text_FriedePostBadge:
+	.string "Stay frosty!$"
+
 ROSEBANK_GYM_Text_SallyIntro:
-	.string "Everyone thinks I swim to stay cool.\p"
-	.string "Ha! I swim because the water bites\n"
-	.string "back. That's the fun part!$"
+	.string "I picked the wrong outfit today!$"
 
 ROSEBANK_GYM_Text_SallyDefeat:
-	.string "Brrr! Out of my depth!$"
+	.string "Brr!$"
 
 ROSEBANK_GYM_Text_SallyPostBattle:
-	.string "The sea off Rosebank runs cold once\n"
-	.string "you get past the shallows.\p"
-	.string "FRIEDE swims it every morning. In\n"
-	.string "winter.$"
+	.string "I don't know how FRIEDE does this!$"
 
-@ ======== Beth (Lass) ========
 ROSEBANK_GYM_Text_BethIntro:
-	.string "Careful! Don't slip!\p"
-	.string "…Actually, please slip. Right into\n"
-	.string "my POKéMON!$"
+	.string "Don't slip, now!$"
 
 ROSEBANK_GYM_Text_BethDefeat:
-	.string "Aww, you kept your footing.$"
+	.string "Woah!$"
 
 ROSEBANK_GYM_Text_BethPostBattle:
-	.string "SWINUB found this gym all by itself.\n"
-	.string "Followed its nose right in!\p"
-	.string "It came from Whitecaps, I think.$"
+	.string "I slipped…$"
 
-@ ======== Gwen (Beauty Frlg) ========
 ROSEBANK_GYM_Text_GwenIntro:
-	.string "Frost is the loveliest thing there\n"
-	.string "is. It only lasts a morning.\p"
-	.string "Beauty you can't keep is the only\n"
-	.string "beauty worth having.$"
+	.string "Welcome, welcome!\n"
+	.string "Are you enjoying this so far?$"
 
 ROSEBANK_GYM_Text_GwenDefeat:
-	.string "Melted…$"
+	.string "Aww man…$"
 
 ROSEBANK_GYM_Text_GwenPostBattle:
-	.string "Down here the frost is gone by\n"
-	.string "sunrise.\p"
-	.string "Up on Whitecaps it stays all year.\n"
-	.string "I couldn't bear that. Too easy.$"
+	.string "Watch where you step, you'll never\n"
+	.string "know what you'll slide into!$"
 
-@ ======== Cora (Beauty) ========
 ROSEBANK_GYM_Text_CoraIntro:
-	.string "Look at these two! Aren't they\n"
-	.string "darling?\p"
+	.string "Aren't ICE-types so darling?\p"
+	.string "Look at these two!\n"
+	.string "Aren't they darling?\p"
 	.string "Go on. Say they're darling before\n"
 	.string "they freeze you solid.$"
 
 ROSEBANK_GYM_Text_CoraDefeat:
-	.string "Oh! Not so darling now.$"
+	.string "Oh, no…$"
 
 ROSEBANK_GYM_Text_CoraPostBattle:
-	.string "CUBCHOO's little sniffle? That's not\n"
-	.string "a cold.\p"
-	.string "That's the ammunition.$"
+	.string "You're cruel!$"
 
-@ ======== Mabel (Expert F) ========
 ROSEBANK_GYM_Text_MabelIntro:
-	.string "I've kept this LAPRAS sixty years,\n"
-	.string "dear.\p"
-	.string "There's not a wave or a winter it\n"
-	.string "hasn't seen. Nor me.$"
+	.string "You're not ready for my daughter\n"
+	.string "just yet!$"
 
 ROSEBANK_GYM_Text_MabelDefeat:
-	.string "Well now. Sixty one.$"
+	.string "Well, now!$"
 
 ROSEBANK_GYM_Text_MabelPostBattle:
-	.string "I taught FRIEDE to swim, you know.\n"
-	.string "Little thing, staring up at that\l"
-	.string "mountain all day.\p"
-	.string "Some folks are just born pointed\n"
-	.string "somewhere.$"
+	.string "Alright fine, but be nice, you!$"
 
-@ ======== Rue (Battle Girl) ========
 ROSEBANK_GYM_Text_RueIntro:
+	.string "FREEZE!\p"
 	.string "Two SNEASEL. No tricks, no ice\n"
 	.string "puzzles, no excuses.\p"
 	.string "Just claws. Let's go.$"
 
 ROSEBANK_GYM_Text_RueDefeat:
-	.string "Tch. Faster than both of them.$"
+	.string "Hah, get it?$"
 
 ROSEBANK_GYM_Text_RuePostBattle:
-	.string "The sliding is FRIEDE's idea, not\n"
-	.string "mine.\p"
-	.string "I'd rather stand still and hit\n"
-	.string "something.$"
+	.string "I said freeze…\p"
+	.string "Like, stop right there, but also,\n"
+	.string "y'know, ice and stuff…$"
 
-@ ======== Janna (Lass) ========
 ROSEBANK_GYM_Text_JannaIntro:
-	.string "SMOOCHUM's still learning, but JYNX\n"
-	.string "will teach you plenty!\p"
-	.string "Ready?$"
+	.string "Hey!$"
 
 ROSEBANK_GYM_Text_JannaDefeat:
-	.string "We've still got a lot to learn!$"
+	.string "Ow!$"
 
 ROSEBANK_GYM_Text_JannaPostBattle:
-	.string "One day SMOOCHUM will be as strong\n"
-	.string "as JYNX.\p"
-	.string "I'm in no hurry. Neither is she.$"	
+	.string "Watch it!$"
 
 ROSEBANK_GYM_Text_FriedeRematchIntro:
-	.string "Back for another round? I've heard\nthe Elders are stirring up trouble\lagain. Show me you're ready.$"
+	.string "Back for some more, huh?\p"
+	.string "Oh? TEAM COVENANT? ELDERS?\p"
+	.string "Fight me first!$"
 
 ROSEBANK_GYM_Text_FriedeRematchDefeat:
-	.string "Not bad!$"
+	.string "Man, you're even stronger than\n"
+	.string "before!$"
 
 ROSEBANK_GYM_Text_FriedeRematchPostBattle:
-	.string "Go on, then. Track the rest of them\ndown.$"
+	.string "Tell ya the truth, I don't know\n"
+	.string "much about what's going on with\l"
+	.string "those weirdos.\p"
+	.string "Sorry, you'll have to try another\n"
+	.string "gym.$"
 
 ROSEBANK_GYM_Text_FriedeRematchRepeat:
-	.string "Stay sharp out there.$"	
+	.string "Like always, stay frosty!$"
 
 ROSEBANK_GYM_Text_FriedeStoneGiven:
 	.string "Also, you can have this.$"	

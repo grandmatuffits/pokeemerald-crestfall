@@ -17220,7 +17220,7 @@ Roggenrola @ None
 Level: 12
 
 Drilbur @ None
-Level: 12
+Level: 13
 
 === TRAINER_RIDLEY_CAVE_SHELBY ===
 Name: SHELBY
@@ -17232,13 +17232,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Foongus @ None
-Level: 11
+Level: 13
 
 Togepi @ None
-Level: 11
+Level: 13
 
 Ducklett @ None
-Level: 11
+Level: 13
 
 === TRAINER_RIDLEY_CAVE_GEORGE ===
 Name: GEORGE
@@ -17250,10 +17250,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Baltoy @ None
-Level: 12
+Level: 14
 
 Voltorb @ None
-Level: 13
+Level: 15
 
 === TRAINER_RIDLEY_CAVE_SHEILA ===
 Name: SHEILA
@@ -17265,10 +17265,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Meditite @ None
-Level: 12
+Level: 14
 
 Riolu @ None
-Level: 13
+Level: 15
 
 === TRAINER_RIDLEY_CAVE_EXIT_DAISY ===
 Name: DAISY
@@ -17337,10 +17337,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Diglett @ None
-Level: 13
+Level: 16
 
 Sandshrew @ None
-Level: 13
+Level: 16
 
 === TRAINER_ROUTE_3_TIFF ===
 Name: TIFF
@@ -17352,10 +17352,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Togepi @ None
-Level: 13
+Level: 15
 
 Starly @ None
-Level: 14
+Level: 16
 
 === TRAINER_ROUTE_3_BLAKE ===
 Name: BLAKE
@@ -17367,7 +17367,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Houndour @ None
-Level: 15
+Level: 17
 
 === TRAINER_ROUTE_3_JEFF ===
 Name: JEFF
@@ -17379,7 +17379,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Magnemite @ None
-Level: 15
+Level: 16
 
 === TRAINER_ROUTE_3_JONAS ===
 Name: JONAS
@@ -17391,10 +17391,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Staryu @ None
-Level: 14
+Level: 15
 
 Carvanha @ None
-Level: 15
+Level: 18
 
 === TRAINER_ROUTE_3_LEMMY ===
 Name: LEMMY
@@ -17409,7 +17409,7 @@ Voltorb @ None
 Level: 15
 
 Shinx @ None
-Level: 15
+Level: 17
 
 === TRAINER_BARNEY_R2 ===
 Name: Barney

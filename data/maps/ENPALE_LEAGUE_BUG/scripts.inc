@@ -116,40 +116,47 @@ ENPALE_LEAGUE_BUG_EventScript_FinalBeaten::
 	end
 
 ENPALE_LEAGUE_BUG_Text_IntroSpeech:
-	.string "So you reached the last of the Four.\n"
-	.string "Impressive. Most don't.\p"
-	.string "But I am the final swarm before the\n"
-	.string "throne. You will not pass easily.$"
+	.string "Welcome. Let me introduce myself.\n"
+	.string "I'm RICK.\p"
+	.string "I started out my career as a simple\n"
+	.string "BUG CATCHER in the VIRIDIAN FOREST\l"
+	.string "in KANTO.\p"
+	.string "After many years of training, I'm\n"
+	.string "now one of the strongest BUG-type\l"
+	.string "trainers in the world.\p"
+	.string "Are you ready?$"
 
 ENPALE_LEAGUE_BUG_Text_Defeat:
+	.string "Woah!\p"
 	.string "Swept aside… by a stronger swarm.$"
 
 ENPALE_LEAGUE_BUG_Text_PostBattleSpeech:
-	.string "The Elite Four are beaten. All of\n"
-	.string "us.\p"
-	.string "Only one door remains, challenger.\n"
-	.string "Behind it… the Champion. Go.$"
+	.string "You're strong!\p"
+	.string "You remind me of this one kid who\n"
+	.string "gave me a good beating.\p"
+	.string "He didn't talk much, either.\p"
+	.string "Regardless, the CHAMPION is waiting\n"
+	.string "for you.$"
 
 ENPALE_LEAGUE_BUG_Text_RematchIntro:
-	.string "Back for another round? Let's see what\nyou've learned.$"
+	.string "Back again?\n"
+	.string "Let's see who trained harder.$"
 
 ENPALE_LEAGUE_BUG_Text_RematchDefeat:
-	.string "Well fought.$"
+	.string "Well done.$"
+
+ENPALE_LEAGUE_BUG_Text_FinalIntro:
+	.string "Oh, it's you again.\p"
+	.string "Well, there's not much to say,\n"
+	.string "other than…\p"
+	.string "Hey! You have POKéMON! Come on!\n"
+	.string "Let's battle 'em!$"
+
+ENPALE_LEAGUE_BUG_Text_FinalDefeat:
+	.string "Can't hack it. As always.$"
 
 ENPALE_LEAGUE_BUG_Text_RematchPostBattle:
 	.string "Go on ahead. The Champion's waiting.$"
 
-ENPALE_LEAGUE_BUG_Text_FinalIntro:
-	.string "The last swarm before the throne.\n"
-	.string "That has not changed.\p"
-	.string "What has changed is who sits on it,\n"
-	.string "and how far the rest of us had to\l"
-	.string "climb to stay worth beating.\p"
-	.string "Come. Prove it was worth the climb.$"
-
-ENPALE_LEAGUE_BUG_Text_FinalDefeat:
-	.string "The swarm breaks. As always, before\nyou.$"
-
 ENPALE_LEAGUE_BUG_Text_FinalPostBattle:
-	.string "Go. He has waited long enough for\n"
-	.string "this.$"
+	.string "Go on, the CHAMPION awaits.$"	

@@ -1460,6 +1460,8 @@
 
 #define FLAG_MINSI_DUBIOUS_DISC_GIVEN               (SYSTEM_FLAGS + 0xA7)
 
+#define FLAG_VALERYTOWN_VS_SEEKER_GIVEN             (SYSTEM_FLAGS + 0xA8)
+
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2

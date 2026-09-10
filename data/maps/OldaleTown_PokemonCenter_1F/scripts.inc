@@ -50,13 +50,11 @@ OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat:
 	.string "You never have to worry!$"
 
 OldaleTown_PokemonCenter_1F_Text_WirelessClubNotAvailable:
-	.string "The POKéMON WIRELESS CLUB on\n"
-	.string "the second floor was built recently.\p"
-	.string "But they say they're still making\n"
-	.string "adjustments.$"
+	.string "I heard the gym leader of this city\n"
+	.string "likes POISON-type POKéMON!\p"
+	.string "I bet that gym smells gross!$"
 
 OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub:
-	.string "The POKéMON WIRELESS CLUB on\n"
-	.string "the second floor was built recently.\p"
-	.string "I traded POKéMON right away.$"
-
+	.string "I heard the gym leader of this city\n"
+	.string "likes POISON-type POKéMON!\p"
+	.string "I bet that gym smells gross!$"

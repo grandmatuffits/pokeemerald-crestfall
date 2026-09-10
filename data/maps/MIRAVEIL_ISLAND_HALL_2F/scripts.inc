@@ -146,40 +146,6 @@ MIRAVEIL_BANQUET_2F_EventScript_MerylDone::
 	release
 	end
 
-MIRAVEIL_BANQUET_2F_Text_MerylIntro:
-	.string "So. The gate-crasher reaches the\n"
-	.string "head of the hall at last.\p"
-	.string "My guests, my doorman… you've made\n"
-	.string "quite the mess of my evening.\p"
-	.string "I am MERYL. I don't recall inviting\n"
-	.string "you, but the uninvited so rarely\l"
-	.string "leave when asked.\p"
-	.string "Let's correct that.$"
-
-MIRAVEIL_BANQUET_2F_Text_MerylDefeat:
-	.string "…Hm. You actually won.\n"
-	.string "How tiresome.$"
-
-MIRAVEIL_BANQUET_2F_Text_MerylPostBattle:
-	.string "You crash my party, spoil my\n"
-	.string "guests' evening, and expect a\l"
-	.string "prize for it.\p"
-	.string "Fine. Etiquette demands it.$"
-
-MIRAVEIL_BANQUET_2F_Text_MerylBadge:
-	.string "The DELUXE BADGE. Take it and go.\p"
-	.string "Whatever my nephew's little club\n"
-	.string "is up to out there is no concern\l"
-	.string "of mine… nor yours, if you're wise.$"
-
-MIRAVEIL_BANQUET_2F_Text_MerylTM:
-	.string "And this. TM57, DAZZLING GLEAM.\p"
-	.string "A touch of brilliance. Do try not\n"
-	.string "to embarrass yourself with it.$"
-
-MIRAVEIL_BANQUET_2F_Text_MerylPostReward:
-	.string "The exit is that way. Mind the\n"
-	.string "champagne on your way out.$"	
 
 MIRAVEIL_BANQUET_2F_EventScript_OldWoman::
 	msgbox MIRAVEIL_BANQUET_2F_Text_OldWoman, MSGBOX_NPC
@@ -207,17 +173,71 @@ MIRAVEIL_BANQUET_2F_Text_Man:
 	.string "She hasn't lost in years. Not that\n"
 	.string "anyone interesting ever tries.$"	
 
+MIRAVEIL_BANQUET_2F_Text_MerylIntro:
+	.string "So you're the one crashing my\n"
+	.string "party.\p"
+	.string "What is it you want, money?\n"
+	.string "Please.\p"
+	.string "There's plenty to go around in\n"
+	.string "MIRAVEIL, you need not disturb the\l"
+	.string "innocent.\p"
+	.string "What's that? A badge?\p"
+	.string "You sniveling children are all the\n"
+	.string "same.\p"
+	.string "Fine, I'll appease this one request,\n"
+	.string "but be careful what you wish for.\p"
+	.string "I'm MERYL, FAIRY-type\n"
+	.string "extraordinaire, and I have never\l"
+	.string "known defeat!$"
+
+MIRAVEIL_BANQUET_2F_Text_MerylDefeat:
+	.string "My, my…$"
+
+MIRAVEIL_BANQUET_2F_Text_MerylPostBattle:
+	.string "You crashed my party and spoiled my\n"
+	.string "lovely guests' evening.\p"
+	.string "You expect a prize? Fine.$"
+
+MIRAVEIL_BANQUET_2F_Text_MerylBadge:
+	.string "Here, the DELUXE BADGE.\n"
+	.string "Take it and be off.\p"
+	.string "You're no better than my spoiled\n"
+	.string "nephew always asking for money to\l"
+	.string "fund his little club, TEAM COVENANT,\l"
+	.string "or whatever he's calling it these\l"
+	.string "days.\p"
+	.string "Oh dear me, I gabbed, didn't I?$"
+
+MIRAVEIL_BANQUET_2F_Text_MerylTM:
+	.string "Well, you might as well have this,\n"
+	.string "too.\p"
+	.string "TM57, DAZZLING GLEAM.\p"
+	.string "It gives any POKéMON stylish enough\n"
+	.string "a touch of brilliance.$"
+
+MIRAVEIL_BANQUET_2F_Text_MerylPostReward:
+	.string "Now get out of my party!$"
+
 MIRAVEIL_BANQUET_2F_Text_MerylRematchIntro:
-	.string "The Elders again... I was hoping\nwe'd seen the last of them.\pShow me you're ready to face them.$"
+	.string "Oh, you again?\p"
+	.string "What's that? TEAM COVENANT?\n"
+	.string "ELDERS?\p"
+	.string "Hush now, you've annoyed me for the\n"
+	.string "last time!$"
 
 MIRAVEIL_BANQUET_2F_Text_MerylRematchDefeat:
-	.string "Wonderful! Just wonderful!$"
+	.string "Remarkable…$"
 
 MIRAVEIL_BANQUET_2F_Text_MerylRematchPostBattle:
-	.string "Go on, dear. Find the rest of them.$"
+	.string "You're still quite the trainer.\p"
+	.string "But sadly, I don't know anything\n"
+	.string "about my nephew's old posse.\p"
+	.string "In fact, he's working for me as a\n"
+	.string "party coordinator this very second.\p"
+	.string "I wonder where he went off to…$"
 
 MIRAVEIL_BANQUET_2F_Text_MerylRematchRepeat:
-	.string "Be careful out there.$"	
+	.string "Oh, just go, won't you?$"
 
 MIRAVEIL_BANQUET_2F_Text_MerylStoneGiven:
 	.string "Also, you can have this.$"	

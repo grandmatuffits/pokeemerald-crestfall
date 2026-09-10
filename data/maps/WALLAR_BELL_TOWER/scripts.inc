@@ -34,15 +34,19 @@ WALLAR_BELL_TOWER_EventScript_Acolyte2::
 	end
 
 WALLAR_BELL_TOWER_Text_Acolyte1Intro:
-	.string "Even here, in stillness, the Covenant\nendures. Let me show you.$"
+	.string "TEAM COVENANT lives on!$"
+
 WALLAR_BELL_TOWER_Text_Acolyte1Defeat:
-	.string "The stillness... was not enough.$"
+	.string "Gah!$"
+
 WALLAR_BELL_TOWER_Text_Acolyte1PostBattle:
-	.string "Go on. We have nothing left to hide.$"
+	.string "Fine. Go on.$"
 
 WALLAR_BELL_TOWER_Text_Acolyte2Intro:
-	.string "You've come far. Let's see how far\nfarther you can go.$"
+	.string "TEAM COVENANT will never stop!$"
+
 WALLAR_BELL_TOWER_Text_Acolyte2Defeat:
-	.string "As serene in defeat as in faith.$"
+	.string "No!$"
+
 WALLAR_BELL_TOWER_Text_Acolyte2PostBattle:
-	.string "Climb on, if you must.$"
+	.string "Just go.$"

@@ -28,19 +28,18 @@ FortreeCity_PokemonCenter_1F_EventScript_Boy::
 	end
 
 FortreeCity_PokemonCenter_1F_Text_GoToSafariZone:
-	.string "Listen, kid, are you working\n"
-	.string "on a POKéDEX?\p"
-	.string "They're opening a SAFARI ZONE soon.\n"
-	.string "That's my suggestion.$"
+	.string "ROSEBANK TOWN used to be a proud\n"
+	.string "port town, but now it's just a\l"
+	.string "vacation town.\p"
+	.string "Lots of people like it. I don't.$"
 
 FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat:
-	.string "Have you done anything at\n"
-	.string "the RECORD CORNER?\p"
-	.string "It's pretty neat. It mixes and matches\n"
-	.string "the records of TRAINERS.\p"
-	.string "I don't know quite how it works,\n"
-	.string "but it's cool. It's exciting, even!$"
+	.string "The beaches here are pretty nice,\n"
+	.string "but sometimes I'd rather just sit\l"
+	.string "inside, y'know?$"
 
 FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav:
-	.string "I hate talking on the phone!$"
+	.string "There's rumors of a SAFARI ZONE\n"
+	.string "opening near COPPERGATE CITY!\p"
+	.string "I'm so pumped!$"
 

@@ -76,37 +76,11 @@ DelmarkCityMall2F_EventScript_Corvin::
 	msgbox DelmarkCityMall2F_Text_CorvinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DelmarkCityMall2F_Text_CorvinIntro:
-	.string "The escalators are stopped.\n"
-	.string "You noticed, I think.\p"
-	.string "Everything in this place was built to\n"
-	.string "carry people onward. We turned it off.$"
-
-DelmarkCityMall2F_Text_CorvinDefeat:
-	.string "Onward, then. For now.$"
-
-DelmarkCityMall2F_Text_CorvinPostBattle:
-	.string "Climb if you like. Stairs are honest,\n"
-	.string "at least. They ask something of you.$"
-
 
 DelmarkCityMall2F_EventScript_Estela::
 	trainerbattle_single TRAINER_COVENANT_ESTELA, DelmarkCityMall2F_Text_EstelaIntro, DelmarkCityMall2F_Text_EstelaDefeat
 	msgbox DelmarkCityMall2F_Text_EstelaPostBattle, MSGBOX_AUTOCLOSE
 	end
-
-DelmarkCityMall2F_Text_EstelaIntro:
-	.string "You are the one from the marsh.\p"
-	.string "We were told you would come. Nobody\n"
-	.string "seemed troubled by it.$"
-
-DelmarkCityMall2F_Text_EstelaDefeat:
-	.string "Troubling after all.$"
-
-DelmarkCityMall2F_Text_EstelaPostBattle:
-	.string "ELDER PRAETUS is above. He has not\n"
-	.string "come down once.\p"
-	.string "He does not need to.$"
 
 
 DelmarkCityMall2F_EventScript_Hobb::
@@ -114,15 +88,29 @@ DelmarkCityMall2F_EventScript_Hobb::
 	msgbox DelmarkCityMall2F_Text_HobbPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+DelmarkCityMall2F_Text_CorvinIntro:
+	.string "Hey, you're not one of us!$"
+
+DelmarkCityMall2F_Text_CorvinDefeat:
+	.string "I'm telling!$"
+
+DelmarkCityMall2F_Text_CorvinPostBattle:
+	.string "You're gonna be in so much trouble!$"
+
+DelmarkCityMall2F_Text_EstelaIntro:
+	.string "Hey, I remember you from the swamp!$"
+
+DelmarkCityMall2F_Text_EstelaDefeat:
+	.string "Not again!$"
+
+DelmarkCityMall2F_Text_EstelaPostBattle:
+	.string "How do you keep doing that?$"
+
 DelmarkCityMall2F_Text_HobbIntro:
-	.string "One is enough. One that does not tire,\n"
-	.string "does not age, does not want.\p"
-	.string "That is the shape of the world we\n"
-	.string "are owed.$"
+	.string "Not so fast!$"
 
 DelmarkCityMall2F_Text_HobbDefeat:
-	.string "It wanted. I see that now.$"
+	.string "No fair!$"
 
 DelmarkCityMall2F_Text_HobbPostBattle:
-	.string "Machines were the closest thing we had\n"
-	.string "to stillness. Until the marsh.$"
+	.string "I was supposed to win!$"

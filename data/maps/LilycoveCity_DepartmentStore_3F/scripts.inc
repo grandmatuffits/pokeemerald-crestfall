@@ -50,38 +50,12 @@ LilycoveCity_DepartmentStore_3F_EventScript_Woman::
 	msgbox LilycoveCity_DepartmentStore_3F_Text_GaveCarbosToSpeedUpMon, MSGBOX_NPC
 	end
 
-LilycoveCity_DepartmentStore_3F_Text_ItemsBestForTougheningPokemon:
-	.string "For quickly toughening up POKéMON,\n"
-	.string "items are the best.\p"
-	.string "PROTEIN boosts ATTACK,\n"
-	.string "and CALCIUM raises SP. ATK.$"
 
-LilycoveCity_DepartmentStore_3F_Text_WantMoreEndurance:
-	.string "I want my POKéMON to have more\n"
-	.string "endurance.\p"
-	.string "I'm trying to decide whether to raise\n"
-	.string "DEFENSE with IRON, or SP. DEF with ZINC.$"
-
-LilycoveCity_DepartmentStore_3F_Text_GaveCarbosToSpeedUpMon:
-	.string "I gave a CARBOS to my POKéMON,\n"
-	.string "and its SPEED went up.$"
 
 DelmarkCityMall3F_EventScript_Vesna::
 	trainerbattle_single TRAINER_COVENANT_VESNA, DelmarkCityMall3F_Text_VesnaIntro, DelmarkCityMall3F_Text_VesnaDefeat
 	msgbox DelmarkCityMall3F_Text_VesnaPostBattle, MSGBOX_AUTOCLOSE
 	end
-
-DelmarkCityMall3F_Text_VesnaIntro:
-	.string "This floor sold flowers. Cut ones.\p"
-	.string "People paid for beauty already dying.\n"
-	.string "Does that not strike you as sad?$"
-
-DelmarkCityMall3F_Text_VesnaDefeat:
-	.string "Mine bloomed too long.$"
-
-DelmarkCityMall3F_Text_VesnaPostBattle:
-	.string "When the CELEBI is ours, nothing will\n"
-	.string "have to be cut to be kept.$"
 
 
 DelmarkCityMall3F_EventScript_Odric::
@@ -89,14 +63,37 @@ DelmarkCityMall3F_EventScript_Odric::
 	msgbox DelmarkCityMall3F_Text_OdricPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+LilycoveCity_DepartmentStore_3F_Text_ItemsBestForTougheningPokemon:
+	.string "They have just the thing for my\n"
+	.string "rain setter! A DAMP ROCK!\p"
+	.string "It makes rain last twice as long!$"
+
+LilycoveCity_DepartmentStore_3F_Text_WantMoreEndurance:
+	.string "They sell MENTAL HERBS here!\p"
+	.string "No more pesky TAUNTS or TORMENTS!$"
+
+LilycoveCity_DepartmentStore_3F_Text_GaveCarbosToSpeedUpMon:
+	.string "I gave my CLOYSTER a WHITE HERB,\n"
+	.string "and now when it uses SHELL SMASH\l"
+	.string "it gets its defenses back!$"
+
+DelmarkCityMall3F_Text_VesnaIntro:
+	.string "I wonder what I'm gonna buy with\n"
+	.string "the money you're gonna give me\l"
+	.string "after I win!$"
+
+DelmarkCityMall3F_Text_VesnaDefeat:
+	.string "Oof!$"
+
+DelmarkCityMall3F_Text_VesnaPostBattle:
+	.string "No! My money!$"
+
 DelmarkCityMall3F_Text_OdricIntro:
-	.string "The mayor came back, they say.\n"
-	.string "Walked into his own city like a guest.\p"
-	.string "He will find it much improved.$"
+	.string "Hey! Stop it!$"
 
 DelmarkCityMall3F_Text_OdricDefeat:
-	.string "He brought you. Of course.$"
+	.string "Uh oh!$"
 
 DelmarkCityMall3F_Text_OdricPostBattle:
-	.string "SILVIO is somewhere in this building.\n"
-	.string "So are a great many of us.$"
+	.string "ELDER PRAETUS is gonna be mad at\n"
+	.string "me…$"

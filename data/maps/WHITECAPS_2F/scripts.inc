@@ -67,13 +67,13 @@ Whitecaps_EventScript_Acolyte4::
 	end
 
 Whitecaps_Text_Acolyte4Intro:
+	.string "Stop right there!\p"
 	.string "Out here on the rock face there is\n"
 	.string "nowhere to run.\p"
 	.string "Good. I never liked chasing.$"
 
 Whitecaps_Text_Acolyte4Defeat:
-	.string "Down the mountain it goes.$"
+	.string "Geeze!$"
 
 Whitecaps_Text_Acolyte4PostBattle:
-	.string "The ELDERS came back for this one.\n"
-	.string "Both of them. Think on that.$"
+	.string "Okay, fine! Go!$"

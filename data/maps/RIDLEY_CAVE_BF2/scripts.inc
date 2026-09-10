@@ -192,136 +192,109 @@ RIDLEY_CAVE_EventScript_Ex6Done::
 	end
 
 RIDLEY_CAVE_Text_Ex1Intro:
-	.string "Shh! Do you hear that? No? Exactly.\p"
-	.string "Dead quiet. That's how you know\n"
-	.string "there's something old in the rock.\p"
-	.string "I've been digging this seam for six\n"
-	.string "weeks. You're not taking it from me\l"
-	.string "without a fight!$"
+	.string "Hey, get your own digging spot!$"
+
 RIDLEY_CAVE_Text_Ex1Defeat:
-	.string "Six weeks! Six weeks and you just\n"
-	.string "walk in here!$"
+	.string "Grr!!$"
+
 RIDLEY_CAVE_Text_Ex1Offer:
-	.string "…All right. All right, fair's fair.\p"
-	.string "I pulled two out of the wall this\n"
-	.string "morning. A spiral shell and a flat\l"
-	.string "domed one.\p"
-	.string "One of them. Pick.$"
+	.string "Fine, you win.\p"
+	.string "Here, I found these two fossils\n"
+	.string "earlier. Take your pick.$"
+
 RIDLEY_CAVE_Text_Ex1Given:
-	.string "Good choice. They're all good\n"
-	.string "choices, that's the agony of it.\p"
-	.string "Don't you dare leave it in a box.$"
+	.string "Fine, fine.$"
+
 RIDLEY_CAVE_Text_Ex1Post:
-	.string "Two hundred million years asleep,\n"
-	.string "and it ends up in a kid's bag.\p"
-	.string "…I'm not bitter. Much.$"
+	.string "Alright, now git!$"
 
 RIDLEY_CAVE_Text_Ex2Intro:
-	.string "Careful where you step, kid! This\n"
-	.string "shelf is older than the mountain\l"
-	.string "above it.\p"
-	.string "You want down here? Prove your legs\n"
-	.string "and your team can take it!$"
+	.string "Watch your step, kid!\p"
+	.string "I got a good haul over here and I\n"
+	.string "don't want you tripping over it!$"
+
 RIDLEY_CAVE_Text_Ex2Defeat:
-	.string "Whew! Strong footing on you.$"
+	.string "Oh, man!$"
+
 RIDLEY_CAVE_Text_Ex2Offer:
-	.string "Take a look at these two.\p"
-	.string "One's got roots fossilized right into\n"
-	.string "the stone. Other's a claw, sharp as\l"
-	.string "the day it died.\p"
-	.string "Yours to choose. Just the one.$"
+	.string "You're good, you!\p"
+	.string "Here, you can have a piece of my\n"
+	.string "loot if you want.$"
+
 RIDLEY_CAVE_Text_Ex2Given:
-	.string "Wrap it well. Stone that old goes to\n"
-	.string "powder if you're rough with it.$"
+	.string "Good choice.$"
+
 RIDLEY_CAVE_Text_Ex2Post:
-	.string "Whole seabed used to sit here. Hard\n"
-	.string "to picture, isn't it?$"
+	.string "Who knows how long these fossils\n"
+	.string "have been down here.$"
 
 RIDLEY_CAVE_Text_Ex3Intro:
-	.string "You're the one they've been talking\n"
-	.string "about upstairs.\p"
-	.string "Let's find out if it's earned.$"
+	.string "Hey, don't distract me while I'm\n"
+	.string "mining!$"
+
 RIDLEY_CAVE_Text_Ex3Defeat:
-	.string "Earned. Definitely earned.$"
+	.string "I'm gobsmacked!$"
+
 RIDLEY_CAVE_Text_Ex3Offer:
-	.string "I dig for the challenge, not the\n"
-	.string "trophies. So take one off my hands.\p"
-	.string "A thick skull, or a plate of armor.\n"
-	.string "Both stubborn. Both survivors.$"
+	.string "You're something else!\p"
+	.string "Here, you can have one of my\n"
+	.string "findings!$"
+
 RIDLEY_CAVE_Text_Ex3Given:
-	.string "It'll hit like a landslide once it's\n"
-	.string "grown. Train it properly.$"
+	.string "Very well.$"
+
 RIDLEY_CAVE_Text_Ex3Post:
-	.string "Come find me if you ever want a\n"
-	.string "rematch. I'm always down here.$"
+	.string "Sorry, I don't have much else to\n"
+	.string "give.$"
 
 RIDLEY_CAVE_Text_Ex4Intro:
-	.string "Don't touch the wall behind me.\p"
-	.string "I've spent two days brushing that\n"
-	.string "clear and I will not have it ruined\l"
-	.string "by a stranger in a hurry.\p"
-	.string "If you want past, you battle.$"
+	.string "Hey, don't sneak up on me!$"
+
 RIDLEY_CAVE_Text_Ex4Defeat:
-	.string "In a hurry AND good. How annoying.$"
+	.string "Wowza!$"
+
 RIDLEY_CAVE_Text_Ex4Offer:
-	.string "Fine. There were two in the seam and\n"
-	.string "I only need one for the record.\p"
-	.string "A shell, or a feather print. Choose\n"
-	.string "carefully, I'm not offering twice.$"
+	.string "What fun!\p"
+	.string "Here, I have some extra fossils if\n"
+	.string "you want one.$"
+
 RIDLEY_CAVE_Text_Ex4Given:
-	.string "Logged and photographed. It's off my\n"
-	.string "ledger and onto yours.$"
+	.string "Nice pick.$"
+
 RIDLEY_CAVE_Text_Ex4Post:
-	.string "Mind the wall on your way out.$"
+	.string "Farewell, fellow miner!$"
 
 RIDLEY_CAVE_Text_Ex5Intro:
-	.string "Do you know what this cave IS?\p"
-	.string "It's a grave. A vast one. Everything\n"
-	.string "in these walls died here and the\l"
-	.string "world closed over it.\p"
-	.string "I don't share graves with just\n"
-	.string "anyone. Show me you're worth it!$"
+	.string "I can't believe how many fossils\n"
+	.string "are down here!\p"
+	.string "And they're all mine!$"
+
 RIDLEY_CAVE_Text_Ex5Defeat:
-	.string "…Ha! The dead chose well.$"
+	.string "Ugh!$"
+
 RIDLEY_CAVE_Text_Ex5Offer:
-	.string "Two here, from the deepest layer\n"
-	.string "I've reached.\p"
-	.string "A jaw, still snarling. And a sail,\n"
-	.string "thin as paper, from something that\l"
-	.string "walked in the cold.\p"
-	.string "One. The other stays with me.$"
+	.string "Alright, fine! I guess I can share.\p"
+	.string "Here, pick one!$"
+
 RIDLEY_CAVE_Text_Ex5Given:
-	.string "Carry it out of the dark. That's all\n"
-	.string "any of them ever wanted.$"
+	.string "Ugh, that one's my favorite! Fine!$"
+
 RIDLEY_CAVE_Text_Ex5Post:
-	.string "I'll be here a while yet. There's\n"
-	.string "always another layer.$"
+	.string "Leave me be already!$"
 
 RIDLEY_CAVE_Text_Ex6Intro:
-	.string "Far enough.\p"
-	.string "Forty years I've worked these caves.\n"
-	.string "Every fossil the others handed you,\l"
-	.string "I found the seam for.\p"
-	.string "But what's in my pack, I dug alone.\n"
-	.string "And I don't hand it to anyone who\l"
-	.string "can't take it off me.\p"
-	.string "Come on then. Last one.$"
+	.string "Hehehehe, I found the coolest\n"
+	.string "fossil ever!!$"
+
 RIDLEY_CAVE_Text_Ex6Defeat:
-	.string "…Forty years.\p"
-	.string "And a kid with dirt on their boots\n"
-	.string "puts me down in one go.$"
+	.string "Oh, what!?$"
+
 RIDLEY_CAVE_Text_Ex6Offer:
-	.string "Here. Hold it up to the light.\p"
-	.string "Not stone. Amber. Tree sap, gone\n"
-	.string "hard as glass, and something with\l"
-	.string "wings caught inside it.\p"
-	.string "There's exactly one in this cave.\n"
-	.string "There'll never be another.$"
+	.string "Fine, just take it. You bully.$"
+
 RIDLEY_CAVE_Text_Ex6Given:
-	.string "They say the thing in there ruled the\n"
-	.string "sky before anything walked under it.\p"
-	.string "Wake it up. I'd like to see it once\n"
-	.string "before I'm done.$"
+	.string "I bet that thing was once a real\n"
+	.string "monster!$"
+
 RIDLEY_CAVE_Text_Ex6Post:
-	.string "Go on. Nothing left down here but an\n"
-	.string "old man and his shovel.$"	
+	.string "Just get out of here already!$"

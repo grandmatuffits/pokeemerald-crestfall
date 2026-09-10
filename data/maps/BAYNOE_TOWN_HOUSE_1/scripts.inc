@@ -46,48 +46,48 @@ BAYNOE_HOUSE_EventScript_OldWomanPostPatch::
 	end
 
 BAYNOE_HOUSE_Text_OldWomanFlavor:
-	.string "You're not one of them, are you?\n"
-	.string "No… you've a kinder look.\p"
-	.string "I knew Brigham, you know. Before\n"
-	.string "all this. Before the Covenant.\p"
-	.string "Such a sweet boy. Polite. Generous,\n"
-	.string "even. But… there was always\l"
-	.string "something behind his eyes.\p"
-	.string "Like a man looking for a door he\n"
-	.string "couldn't find. I do hope he finds\l"
-	.string "his way back.$"
+	.string "Please, don't…\p"
+	.string "Oh. You're not one of them.\n"
+	.string "You seem kind.\p"
+	.string "Before those TEAM COVENANT fools\n"
+	.string "came and took over, this was a nice\l"
+	.string "and quiet town.\p"
+	.string "BRIGHAM was from here, though you'd\n"
+	.string "never know by talking to him.\p"
+	.string "When he was young, he moved to\n"
+	.string "MIRAVEIL ISLAND with his rich aunt.\p"
+	.string "Now he's back and thinks he's some\n"
+	.string "prophet.\p"
+	.string "Please, teach him a lesson.$"
 
 BAYNOE_HOUSE_Text_OldWomanReward:
-	.string "So. It's over. I felt the hush\n"
-	.string "fall over the town.\p"
-	.string "You did that. You brought him back\n"
-	.string "to himself.$"
-	@ placeholder — finalize after Bergen Hill / finale is built
+	.string "So, you brought BRIGHAM down a few\n"
+	.string "pegs.\p"
+	.string "Can't say I'm not pleased to hear.$"
 
 BAYNOE_HOUSE_Text_OldWomanAfterGift:
-	.string "Please, take this. An old woman has\n"
-	.string "little use for it now.\p"
-	.string "Thank you… for all of us.$"
+	.string "Here, take this. I've been holding\n"
+	.string "onto it for a while.\p"
+	.string "It's a MASTER BALL. It'll catch any\n"
+	.string "POKéMON without fail.$"
 
 BAYNOE_HOUSE_Text_OldWomanPostGift:
-	.string "Baynoe will heal, in time. Places\n"
-	.string "like this always do.$"
+	.string "Don't worry about BAYNOE anymore.\n"
+	.string "We'll be just fine, now.$"
 
-	BAYNOE_HOUSE_Text_OldWomanRegigigas:
-	.string "Oh my. Oh, my word.\p"
-	.string "That one. I've only seen it in the\n"
-	.string "old carvings, down at the temple.\p"
-	.string "They said it woke when the smaller\n"
-	.string "ones called to it.\p"
-	.string "I never thought I'd live to see it\n"
-	.string "standing in my parlour.$"
+BAYNOE_HOUSE_Text_OldWomanRegigigas:
+	.string "So the legends were true.\p"
+	.string "REGIGIGAS. The Colossal POKéMON.\n"
+	.string "The Guardian of Guardians.\p"
+	.string "I can't believe it.\p"
+	.string "Here, take this.$"
 
 BAYNOE_HOUSE_Text_OldWomanAfterPatch:
-	.string "Take this too. My husband dug it up\n"
-	.string "years ago and never knew what it\l"
-	.string "was for.\p"
-	.string "I think it was waiting for you.$"
+	.string "This was an old family heirloom.\n"
+	.string "I want you to have it.\p"
+	.string "Use it and unleash REGIGIGAS' true\n"
+	.string "potential.$"
 
 BAYNOE_HOUSE_Text_OldWomanBagFull:
-	.string "Your bag's full, dear. Come back\n"
-	.string "when you've room.$"
+	.string "You don't seem to have room for\n"
+	.string "this. Come back when you do.$"

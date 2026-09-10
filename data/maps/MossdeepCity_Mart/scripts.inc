@@ -13,7 +13,8 @@ MossdeepCity_Mart_EventScript_Clerk::
 
 	.align 2
 MossdeepCity_Mart_Pokemart:
-	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_PREMIER_BALL
+	.2byte ITEM_LUXURY_BALL
 	.2byte ITEM_NET_BALL
 	.2byte ITEM_DIVE_BALL
 	.2byte ITEM_HYPER_POTION
@@ -51,10 +52,8 @@ MossdeepCity_Mart_Text_MaxRepelLastsLongest:
 	.string "the longest.$"
 
 MossdeepCity_Mart_Text_NetAndDiveBallsRare:
-	.string "The NET and DIVE BALLS are rare POKé\n"
-	.string "BALLS that are only made in MOSSDEEP.\p"
-	.string "A NET BALL is effective against\n"
-	.string "BUG-type and WATER-type POKéMON.\p"
-	.string "A DIVE BALL works best on POKéMON\n"
-	.string "at the bottom of the sea.$"
-
+	.string "The PREMIER and LUXURY BALLS are the\n"
+	.string "only ones sold in MIRAVEIL.\p"
+	.string "LUXURY BALLS help caught POKéMON\n"
+	.string "grow friendly fast, while the\l"
+	.string "PREMIER BALL is just for looks.$"

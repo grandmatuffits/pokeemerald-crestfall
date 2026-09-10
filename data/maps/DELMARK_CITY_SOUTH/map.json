@@ -252,6 +252,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "DELMARK_CITY_SOUTH_EventScript_CemeterySign"
+    },
+    {
+      "type": "sign",
+      "x": 46,
+      "y": 38,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DELMARK_CITY_SOUTH_EventScript_Statue"
     }
   ]
 }
