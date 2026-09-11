@@ -17,8 +17,8 @@
     {
       "local_id": "LOCALID_ROSEBANK_MOVE_REMINDER",
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "x": 7,
-      "y": 6,
+      "x": 6,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -31,15 +31,15 @@
   ],
   "warp_events": [
     {
-      "x": 5,
-      "y": 9,
+      "x": 4,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ROSEBANK_TOWN",
       "dest_warp_id": "0"
     },
     {
-      "x": 4,
-      "y": 9,
+      "x": 3,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ROSEBANK_TOWN",
       "dest_warp_id": "0"

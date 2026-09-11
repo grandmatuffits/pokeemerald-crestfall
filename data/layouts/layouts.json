@@ -10037,8 +10037,8 @@
     {
       "id": "LAYOUT_ROSEBANK_TOWN_MOVE_REMINDER_HOUSE",
       "name": "ROSEBANK_TOWN_MOVE_REMINDER_HOUSE_Layout",
-      "width": 12,
-      "height": 12,
+      "width": 11,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/ROSEBANK_TOWN_MOVE_REMINDER_HOUSE/border.bin",

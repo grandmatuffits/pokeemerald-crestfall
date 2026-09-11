@@ -47,38 +47,73 @@ ROSEBANK_GYM_EventScript_FriedePostBadge::
 
 
 ROSEBANK_GYM_EventScript_Sally::
+	goto_if_set FLAG_BADGE04_GET, ROSEBANK_GYM_EventScript_SallyDone
 	trainerbattle_single TRAINER_ROSEBANK_SALLY, ROSEBANK_GYM_Text_SallyIntro, ROSEBANK_GYM_Text_SallyDefeat
 	msgbox ROSEBANK_GYM_Text_SallyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+ROSEBANK_GYM_EventScript_SallyDone::
+	msgbox ROSEBANK_GYM_Text_SallyPostBattle, MSGBOX_NPC
+	end
+
 ROSEBANK_GYM_EventScript_Beth::
+	goto_if_set FLAG_BADGE04_GET, ROSEBANK_GYM_EventScript_BethDone
 	trainerbattle_single TRAINER_ROSEBANK_BETH, ROSEBANK_GYM_Text_BethIntro, ROSEBANK_GYM_Text_BethDefeat
 	msgbox ROSEBANK_GYM_Text_BethPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+ROSEBANK_GYM_EventScript_BethDone::
+	msgbox ROSEBANK_GYM_Text_BethPostBattle, MSGBOX_NPC
+	end
+
 ROSEBANK_GYM_EventScript_Gwen::
+	goto_if_set FLAG_BADGE04_GET, ROSEBANK_GYM_EventScript_GwenDone
 	trainerbattle_single TRAINER_ROSEBANK_GWEN, ROSEBANK_GYM_Text_GwenIntro, ROSEBANK_GYM_Text_GwenDefeat
 	msgbox ROSEBANK_GYM_Text_GwenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+ROSEBANK_GYM_EventScript_GwenDone::
+	msgbox ROSEBANK_GYM_Text_GwenPostBattle, MSGBOX_NPC
+	end
+
 ROSEBANK_GYM_EventScript_Cora::
+	goto_if_set FLAG_BADGE04_GET, ROSEBANK_GYM_EventScript_CoraDone
 	trainerbattle_single TRAINER_ROSEBANK_CORA, ROSEBANK_GYM_Text_CoraIntro, ROSEBANK_GYM_Text_CoraDefeat
 	msgbox ROSEBANK_GYM_Text_CoraPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+ROSEBANK_GYM_EventScript_CoraDone::
+	msgbox ROSEBANK_GYM_Text_CoraPostBattle, MSGBOX_NPC
+	end
+
 ROSEBANK_GYM_EventScript_Mabel::
+	goto_if_set FLAG_BADGE04_GET, ROSEBANK_GYM_EventScript_MabelDone
 	trainerbattle_single TRAINER_ROSEBANK_MABEL, ROSEBANK_GYM_Text_MabelIntro, ROSEBANK_GYM_Text_MabelDefeat
 	msgbox ROSEBANK_GYM_Text_MabelPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+ROSEBANK_GYM_EventScript_MabelDone::
+	msgbox ROSEBANK_GYM_Text_MabelPostBattle, MSGBOX_NPC
+	end
+
 ROSEBANK_GYM_EventScript_Rue::
+	goto_if_set FLAG_BADGE04_GET, ROSEBANK_GYM_EventScript_RueDone
 	trainerbattle_single TRAINER_ROSEBANK_RUE, ROSEBANK_GYM_Text_RueIntro, ROSEBANK_GYM_Text_RueDefeat
 	msgbox ROSEBANK_GYM_Text_RuePostBattle, MSGBOX_AUTOCLOSE
 	end
 
+ROSEBANK_GYM_EventScript_RueDone::
+	msgbox ROSEBANK_GYM_Text_RuePostBattle, MSGBOX_NPC
+	end
+
 ROSEBANK_GYM_EventScript_Janna::
+	goto_if_set FLAG_BADGE04_GET, ROSEBANK_GYM_EventScript_JannaDone
 	trainerbattle_single TRAINER_ROSEBANK_JANNA, ROSEBANK_GYM_Text_JannaIntro, ROSEBANK_GYM_Text_JannaDefeat
 	msgbox ROSEBANK_GYM_Text_JannaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ROSEBANK_GYM_EventScript_JannaDone::
+	msgbox ROSEBANK_GYM_Text_JannaPostBattle, MSGBOX_NPC
 	end
 
 ROSEBANK_GYM_Text_FriedeIntro:

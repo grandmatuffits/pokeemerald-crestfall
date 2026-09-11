@@ -7,18 +7,34 @@ KINNERET_TOWN_GYM_MapScripts::
 	.byte 0
 
 KINNERET_TOWN_GYM_EventScript_Toby::
+	goto_if_set FLAG_BADGE01_GET, KINNERET_TOWN_GYM_EventScript_TobyDone
 	trainerbattle_single TRAINER_KINNERET_GYM_TOBY, KINNERET_TOWN_GYM_Text_TobyIntro, KINNERET_TOWN_GYM_Text_TobyDefeat
 	msgbox KINNERET_TOWN_GYM_Text_TobyRepeat, MSGBOX_AUTOCLOSE
 	end
 
+KINNERET_TOWN_GYM_EventScript_TobyDone::
+	msgbox KINNERET_TOWN_GYM_Text_TobyRepeat, MSGBOX_NPC
+	end
+
+
 KINNERET_TOWN_GYM_EventScript_Chelsea::
+	goto_if_set FLAG_BADGE01_GET, KINNERET_TOWN_GYM_EventScript_ChelseaDone
 	trainerbattle_single TRAINER_KINNERET_GYM_CHELSEA, KINNERET_TOWN_GYM_Text_ChelseaIntro, KINNERET_TOWN_GYM_Text_ChelseaDefeat
 	msgbox KINNERET_TOWN_GYM_Text_ChelseaRepeat, MSGBOX_AUTOCLOSE
 	end
 
+KINNERET_TOWN_GYM_EventScript_ChelseaDone::
+	msgbox KINNERET_TOWN_GYM_Text_ChelseaRepeat, MSGBOX_NPC
+	end
+
 KINNERET_TOWN_GYM_EventScript_Erwin::
+	goto_if_set FLAG_BADGE01_GET, KINNERET_TOWN_GYM_EventScript_ErwinDone
 	trainerbattle_single TRAINER_KINNERET_GYM_ERWIN, KINNERET_TOWN_GYM_Text_ErwinIntro, KINNERET_TOWN_GYM_Text_ErwinDefeat
 	msgbox KINNERET_TOWN_GYM_Text_ErwinRepeat, MSGBOX_AUTOCLOSE
+	end
+
+KINNERET_TOWN_GYM_EventScript_ErwinDone::
+	msgbox KINNERET_TOWN_GYM_Text_ErwinRepeat, MSGBOX_NPC
 	end
 
 KINNERET_TOWN_GYM_EventScript_Robin::

@@ -225,7 +225,7 @@ MINSI_LAB_EventScript_HemlockToPiplup::
 MINSI_LAB_EventScript_GivePokedex::
 	setflag FLAG_UNUSED_0x022
 	setspeaker MINSI_LAB_Text_HemlockName
-	msgbox MINSI_LAB_Text_Hemlock3, MSGBOX_SIGN
+	msgbox MINSI_LAB_Text_Hemlock7, MSGBOX_SIGN
 	closemessage
 	goto_if_set FLAG_UNUSED_0x024, MINSI_LAB_EventScript_RivalToPiplup
 	goto_if_set FLAG_UNUSED_0x023, MINSI_LAB_EventScript_RivalToFennekin
@@ -1032,6 +1032,9 @@ MINSI_LAB_Text_HemlockPostDex:
 	.string "Find anything cool to add to your\n"
 	.string "NATIONAL DEX?$"
 
+MINSI_LAB_Text_Hemlock7:
+	.string "Now go out there and explore ENPALE!$"
+
 MINSI_LAB_Text_Hemlock3:
 	.string "Still filling that POKéDEX?\p"
 	.string "Check back later and I might have\n"
@@ -1048,7 +1051,7 @@ MINSI_LAB_Text_FossilNoDex:
 	.string "whip up a machine that can\l"
 	.string "resurrect extinct POKéMON!?\p"
 	.string "Get real! I'm basically GOD!\p"
-	.string "Now, what do you want!?$"
+	.string "GOOD DAY, SIR!$"
 
 MINSI_LAB_Text_FossilNone:
 	.string "Don't bother me unless it's\n"

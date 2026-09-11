@@ -2158,7 +2158,6 @@ bool8 ShouldTryRematchBattleForTrainerId(u16 trainerId)
         result = TRUE;
     else
         result = WasSecondRematchWon(gRematchTable, trainerId);
-    DebugPrintf("ShouldTryRematchBattle trainerId=%d result=%d", trainerId, result);
     return result;
 }
 

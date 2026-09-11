@@ -5749,8 +5749,8 @@ void ForcePlayerOntoBike(void)
 {
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ON_FOOT)
         SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE);
-    Overworld_SetSavedMusic(IS_FRLG ? MUS_RG_CYCLING : MUS_CYCLING);
-    Overworld_ChangeMusicTo(IS_FRLG ? MUS_RG_CYCLING : MUS_CYCLING);
+    Overworld_SetSavedMusic(MUS_ENPALE_ALLENWOOD);
+    Overworld_ChangeMusicTo(MUS_ENPALE_ALLENWOOD);
 }
 
 bool8 IsPlayerNotInTrainerTowerLobby(void)

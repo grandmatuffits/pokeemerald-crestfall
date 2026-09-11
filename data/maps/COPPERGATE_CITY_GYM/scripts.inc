@@ -2,25 +2,44 @@ COPPERGATE_CITY_GYM_MapScripts::
 	.byte 0
 
 COPPERGATE_CITY_GYM_EventScript_Lennox::
+	goto_if_set FLAG_BADGE02_GET, COPPERGATE_CITY_GYM_EventScript_LennoxDone
 	trainerbattle_single TRAINER_LENNOX_GYM2, COPPERGATE_CITY_GYM_Text_LennoxIntro, COPPERGATE_CITY_GYM_Text_LennoxDefeat
 	msgbox COPPERGATE_CITY_GYM_Text_LennoxRepeat, MSGBOX_AUTOCLOSE
 	end
 
+COPPERGATE_CITY_GYM_EventScript_LennoxDone::
+	msgbox COPPERGATE_CITY_GYM_Text_LennoxRepeat, MSGBOX_NPC
+	end
+
 COPPERGATE_CITY_GYM_EventScript_Lisa::
+	goto_if_set FLAG_BADGE02_GET, COPPERGATE_CITY_GYM_EventScript_LisaDone
 	trainerbattle_single TRAINER_LISA_GYM2, COPPERGATE_CITY_GYM_Text_LisaIntro, COPPERGATE_CITY_GYM_Text_LisaDefeat
 	msgbox COPPERGATE_CITY_GYM_Text_LisaRepeat, MSGBOX_AUTOCLOSE
 	end
 
+COPPERGATE_CITY_GYM_EventScript_LisaDone::
+	msgbox COPPERGATE_CITY_GYM_Text_LisaRepeat, MSGBOX_NPC
+	end
+
 COPPERGATE_CITY_GYM_EventScript_Dave::
+	goto_if_set FLAG_BADGE02_GET, COPPERGATE_CITY_GYM_EventScript_DaveDone
 	trainerbattle_single TRAINER_DAVE_GYM2, COPPERGATE_CITY_GYM_Text_DaveIntro, COPPERGATE_CITY_GYM_Text_DaveDefeat
 	msgbox COPPERGATE_CITY_GYM_Text_DaveRepeat, MSGBOX_AUTOCLOSE
 	end
 
+COPPERGATE_CITY_GYM_EventScript_DaveDone::
+	msgbox COPPERGATE_CITY_GYM_Text_DaveRepeat, MSGBOX_NPC
+	end
+
 COPPERGATE_CITY_GYM_EventScript_Hal::
+	goto_if_set FLAG_BADGE02_GET, COPPERGATE_CITY_GYM_EventScript_HalDone
 	trainerbattle_single TRAINER_HAL_GYM2, COPPERGATE_CITY_GYM_Text_HalIntro, COPPERGATE_CITY_GYM_Text_HalDefeat
 	msgbox COPPERGATE_CITY_GYM_Text_HalRepeat, MSGBOX_AUTOCLOSE
 	end
 
+COPPERGATE_CITY_GYM_EventScript_HalDone::
+	msgbox COPPERGATE_CITY_GYM_Text_HalRepeat, MSGBOX_NPC
+	end
 COPPERGATE_CITY_GYM_EventScript_Omar::
 	goto_if_set FLAG_BADGE02_GET, COPPERGATE_CITY_GYM_EventScript_OmarBeaten
 	trainerbattle_single TRAINER_OMAR_1, COPPERGATE_CITY_GYM_Text_OmarIntro, COPPERGATE_CITY_GYM_Text_OmarDefeat, COPPERGATE_CITY_GYM_EventScript_OmarPostBattle

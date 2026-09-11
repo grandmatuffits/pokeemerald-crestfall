@@ -29,9 +29,9 @@ MINSI_CITY_APARTMENT_Text_OldManGive:
 	.string "you'll put it to use.$"
 
 MINSI_CITY_APARTMENT_Text_OldManAfter:
-	.string "Just activate that EXP SHARE in\n"
+	.string "Just activate that Exp Share in\n"
 	.string "your menu and it'll do the rest!$"
 
 MINSI_CITY_APARTMENT_Text_OldManDone:
-	.string "Still got that EXP SHARE? Good.\p"
+	.string "Still got that Exp Share? Good.\p"
 	.string "Sharing is caring!$"
