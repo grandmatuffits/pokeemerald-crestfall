@@ -129,7 +129,7 @@ VALERYTOWN_GYM_EventScript_Blackbelt4::
 VALERYTOWN_GYM_EventScript_Blackbelt4Done::
 	msgbox VALERYTOWN_GYM_Text_Blackbelt4Post, MSGBOX_NPC
 	end
-	
+
 VALERYTOWN_GYM_Text_Greeter:
 	.string "Unlike most other gyms, there's no\n"
 	.string "puzzle or maze.\p"
@@ -223,7 +223,9 @@ VALERYTOWN_GYM_Text_ExpertPost:
 	.string "Watch your back!$"
 
 VALERYTOWN_GYM_Text_Blackbelt3Intro:
-	.string "You're a stubborn one, huh?$"
+	.string "Someone tried to cheat the system\n"
+	.string "and battle us one at a time.\p"
+	.string "That's why we put up these walls.$"
 
 VALERYTOWN_GYM_Text_Blackbelt3Defeat:
 	.string "Gah!$"

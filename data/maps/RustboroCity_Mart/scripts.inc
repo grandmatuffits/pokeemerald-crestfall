@@ -74,4 +74,4 @@ RustboroCity_Mart_Text_ShouldBuySuperPotionsInstead:
 
 RustboroCity_Mart_Text_GettingEscapeRopeJustInCase:
 	.string "I'm getting an ETHER just in\n"
-	.string "case I get lost in a cave.\p"
+	.string "case I get lost in a cave.$"
