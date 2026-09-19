@@ -28,11 +28,14 @@ BAYNOE_TEMPLE_EventScript_Brigham::
 	@ Brigham turns from the table to face the player (south)
 	applymovement LOCALID_BAYNOE_BRIGHAM, BAYNOE_TEMPLE_Movement_BrighamTurn
 	waitmovement 0
+	setspeaker BAYNOE_TEMPLE_Text_BrighamName
 	msgbox BAYNOE_TEMPLE_Text_BrighamSpeech, MSGBOX_DEFAULT
 	closemessage
 	@ the final battle
+	setspeaker BAYNOE_TEMPLE_Text_BrighamName
 	trainerbattle_no_intro TRAINER_BRIGHAM, BAYNOE_TEMPLE_Text_BrighamDefeat
 	@ --- post-battle: mythicals appear around him ---
+	setspeaker BAYNOE_TEMPLE_Text_BrighamName
 	msgbox BAYNOE_TEMPLE_Text_BrighamPostBattle, MSGBOX_DEFAULT
 	closemessage
 	@ show the four mythicals (pre-placed hidden objects around Brigham)
@@ -55,6 +58,7 @@ BAYNOE_TEMPLE_EventScript_Brigham::
 	delay 20
 	applymovement LOCALID_BAYNOE_BRIGHAM, BAYNOE_TEMPLE_Movement_BrighamLookAround
 	waitmovement 0
+	setspeaker BAYNOE_TEMPLE_Text_BrighamName
 	msgbox BAYNOE_TEMPLE_Text_BrighamBreakdown, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, BAYNOE_TEMPLE_Movement_PlayerStepLeft
@@ -68,6 +72,7 @@ BAYNOE_TEMPLE_EventScript_Brigham::
 	addobject LOCALID_BAYNOE_ROSS
 	applymovement LOCALID_BAYNOE_ROSS, BAYNOE_TEMPLE_Movement_RossApproach
 	waitmovement 0
+	setspeaker BAYNOE_TEMPLE_Text_RossName
 	msgbox BAYNOE_TEMPLE_Text_RossReveal, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_BAYNOE_TEMPLE_DONE
@@ -132,6 +137,12 @@ BAYNOE_TEMPLE_Movement_BrighamLookAround:
 	face_down
 	step_end	
 
+BAYNOE_TEMPLE_Text_BrighamName:
+	.string "Brigham$"
+
+BAYNOE_TEMPLE_Text_RossName:
+	.string "Ross$"
+
 BAYNOE_TEMPLE_Text_BrighamSpeech:
 	.string "Huh!? You again!?\p"
 	.string "Ugh, just leave me alone! We're on\n"
@@ -188,6 +199,7 @@ BAYNOE_TEMPLE_Text_RossReveal:
 	.string "name on it.$"
 
 BAYNOE_TEMPLE_EventScript_BrighamDone::
+	setspeaker BAYNOE_TEMPLE_Text_BrighamName
 	msgbox BAYNOE_TEMPLE_Text_BrighamDone_Text, MSGBOX_DEFAULT
 	release
 	end

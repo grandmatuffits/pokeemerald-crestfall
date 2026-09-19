@@ -17,6 +17,8 @@ DELMARK_CITY_APT_304_EventScript_Note::
 	addobject LOCALID_DELMARK_304_ACOLYTE
 	addobject LOCALID_DELMARK_304_ELDER_IRRUS
 	delay 20
+	applymovement OBJ_EVENT_ID_PLAYER, DELMARK_CITY_APT_304_Movement_PlayerFaceDown
+	waitmovement 0
 	setspeaker DELMARK_CITY_APT_304_Text_IrrusName
 	msgbox DELMARK_CITY_APT_304_Text_IrrusAmbush, MSGBOX_SIGN
 	closemessage
@@ -36,6 +38,9 @@ DELMARK_CITY_APT_304_EventScript_Note::
 	setspeaker DELMARK_CITY_APT_304_Text_IrrusName
 	msgbox DELMARK_CITY_APT_304_Text_IrrusParting, MSGBOX_SIGN
 	closemessage
+	applymovement LOCALID_DELMARK_304_ACOLYTE, DELMARK_CITY_APT_304_Movement_AcolyteExit
+	applymovement LOCALID_DELMARK_304_ELDER_IRRUS, DELMARK_CITY_APT_304_Movement_IrrusExit
+	waitmovement 0
 	removeobject LOCALID_DELMARK_304_ACOLYTE
 	removeobject LOCALID_DELMARK_304_ELDER_IRRUS
 	setflag FLAG_COVENANT_DELMARK_CLEARED
@@ -76,6 +81,10 @@ DELMARK_CITY_APT_304_Movement_IrrusApproach:
 	walk_up
 	walk_up
 	step_end
+
+DELMARK_CITY_APT_304_Movement_PlayerFaceDown:
+	face_down
+	step_end	
 
 @ ---------------- TEXT ----------------
 

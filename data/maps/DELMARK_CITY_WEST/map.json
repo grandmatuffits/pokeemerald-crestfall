@@ -25,14 +25,14 @@
     },
     {
       "map": "MAP_DELMARK_CITY_SOUTH",
-      "offset": 0,
+      "offset": 5,
       "direction": "down"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
-      "x": 13,
+      "x": 20,
       "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -45,7 +45,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "x": 41,
+      "x": 48,
       "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -58,7 +58,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 62,
+      "x": 69,
       "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -71,7 +71,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
-      "x": 50,
+      "x": 57,
       "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -84,7 +84,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 33,
+      "x": 40,
       "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -97,7 +97,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 35,
+      "x": 42,
       "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -110,7 +110,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 23,
+      "x": 30,
       "y": 41,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -123,7 +123,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
-      "x": 20,
+      "x": 27,
       "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -136,7 +136,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 52,
+      "x": 59,
       "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -149,7 +149,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
-      "x": 28,
+      "x": 35,
       "y": 32,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -162,7 +162,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 46,
+      "x": 53,
       "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -176,42 +176,42 @@
   ],
   "warp_events": [
     {
-      "x": 16,
+      "x": 23,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_DELMARK_CITY_FERRY_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 52,
+      "x": 59,
       "y": 43,
       "elevation": 0,
       "dest_map": "MAP_DELMARK_CITY_NAME_RATER_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 45,
+      "x": 52,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_DELMARK_CITY_WEST_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 58,
+      "x": 65,
       "y": 36,
       "elevation": 0,
       "dest_map": "MAP_DELMARK_CITY_WEST_MANSION",
       "dest_warp_id": "0"
     },
     {
-      "x": 30,
+      "x": 37,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 38,
+      "x": 45,
       "y": 43,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_MART",
@@ -222,7 +222,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 25,
+      "x": 32,
       "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -230,7 +230,7 @@
     },
     {
       "type": "sign",
-      "x": 51,
+      "x": 58,
       "y": 37,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

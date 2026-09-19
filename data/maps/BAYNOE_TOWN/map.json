@@ -2,7 +2,7 @@
   "id": "MAP_BAYNOE_TOWN",
   "name": "BAYNOE_TOWN",
   "layout": "LAYOUT_BAYNOE_TOWN",
-  "music": "MUS_ENPALE_ALLENWOOD",
+  "music": "MUS_ENPALE_BAYNOE",
   "region_map_section": "MAPSEC_INDIGO_PLATEAU",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

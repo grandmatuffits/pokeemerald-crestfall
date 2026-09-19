@@ -272,6 +272,7 @@ MINSI_LAB_EventScript_RivalDialogue::
 	msgbox MINSI_LAB_Text_Rival2, MSGBOX_SIGN
 	closemessage
 	setflag FLAG_UNUSED_0x026
+	setspeaker MINSI_LAB_Text_RivalName
 	trainerbattle_single TRAINER_RIVALCF_1, MINSI_LAB_Text_RivalBattleIntro, MINSI_LAB_Text_RivalLoss, MINSI_LAB_EventScript_PostRivalBattle
 	end
 
@@ -832,10 +833,58 @@ MINSI_LAB_EventScript_SynthWaiting::
 MINSI_LAB_EventScript_SynthReturn::
 	msgbox MINSI_LAB_Text_SynthReturn, MSGBOX_DEFAULT
 	givemon SPECIES_PORYGON, 5
+	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_SynthNoRoom
 	setflag FLAG_PORYGON_RECEIVED
-	msgbox MINSI_LAB_Text_SynthAfter, MSGBOX_DEFAULT
+	bufferspeciesname STR_VAR_1, SPECIES_PORYGON
+	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_SynthNameParty
+	goto MINSI_LAB_EventScript_SynthNamePC
+	end
+
+MINSI_LAB_EventScript_SynthNoRoom::
+	msgbox MINSI_LAB_Text_SynthNoRoom, MSGBOX_DEFAULT
 	release
 	end
+
+MINSI_LAB_EventScript_SynthNameParty::
+	playfanfare MUS_LEVEL_UP
+	message MINSI_LAB_Text_SynthAfter
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MINSI_LAB_EventScript_SynthSuccess
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto MINSI_LAB_EventScript_SynthSuccess
+	end
+
+MINSI_LAB_EventScript_SynthNamePC::
+	playfanfare MUS_LEVEL_UP
+	message MINSI_LAB_Text_SynthAfter
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MINSI_LAB_EventScript_SynthSentToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto MINSI_LAB_EventScript_SynthSentToPC
+	end
+
+MINSI_LAB_EventScript_SynthSuccess::
+	release
+	end
+
+MINSI_LAB_EventScript_SynthSentToPC::
+	msgbox MINSI_LAB_Text_SynthSentToPC, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_LAB_Text_SynthNoRoom:
+	.string "Oh, looks like you don't have\n"
+	.string "room for this. Come back once\l"
+	.string "you've made some space!$"
+
+MINSI_LAB_Text_SynthSentToPC:
+	.string "PORYGON was sent to a Box at\n"
+	.string "the PC!$"
 
 MINSI_LAB_EventScript_SynthDone::
 	goto_if_set FLAG_MINSI_DUBIOUS_DISC_GIVEN, MINSI_LAB_EventScript_SynthPostDisc

@@ -2,7 +2,7 @@
   "id": "MAP_MINSI_CITY_APARTMENT_3F",
   "name": "MINSI_CITY_APARTMENT_3F",
   "layout": "LAYOUT_MINSI_CITY_APARTMENT_3F",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_MINSI",
   "region_map_section": "MAPSEC_SAFFRON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

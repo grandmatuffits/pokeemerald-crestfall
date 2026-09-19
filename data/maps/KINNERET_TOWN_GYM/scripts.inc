@@ -7,7 +7,6 @@ KINNERET_TOWN_GYM_MapScripts::
 	.byte 0
 
 KINNERET_TOWN_GYM_EventScript_Toby::
-	goto_if_set FLAG_BADGE01_GET, KINNERET_TOWN_GYM_EventScript_TobyDone
 	trainerbattle_single TRAINER_KINNERET_GYM_TOBY, KINNERET_TOWN_GYM_Text_TobyIntro, KINNERET_TOWN_GYM_Text_TobyDefeat
 	msgbox KINNERET_TOWN_GYM_Text_TobyRepeat, MSGBOX_AUTOCLOSE
 	end
@@ -18,7 +17,6 @@ KINNERET_TOWN_GYM_EventScript_TobyDone::
 
 
 KINNERET_TOWN_GYM_EventScript_Chelsea::
-	goto_if_set FLAG_BADGE01_GET, KINNERET_TOWN_GYM_EventScript_ChelseaDone
 	trainerbattle_single TRAINER_KINNERET_GYM_CHELSEA, KINNERET_TOWN_GYM_Text_ChelseaIntro, KINNERET_TOWN_GYM_Text_ChelseaDefeat
 	msgbox KINNERET_TOWN_GYM_Text_ChelseaRepeat, MSGBOX_AUTOCLOSE
 	end
@@ -28,7 +26,6 @@ KINNERET_TOWN_GYM_EventScript_ChelseaDone::
 	end
 
 KINNERET_TOWN_GYM_EventScript_Erwin::
-	goto_if_set FLAG_BADGE01_GET, KINNERET_TOWN_GYM_EventScript_ErwinDone
 	trainerbattle_single TRAINER_KINNERET_GYM_ERWIN, KINNERET_TOWN_GYM_Text_ErwinIntro, KINNERET_TOWN_GYM_Text_ErwinDefeat
 	msgbox KINNERET_TOWN_GYM_Text_ErwinRepeat, MSGBOX_AUTOCLOSE
 	end
@@ -46,6 +43,8 @@ KINNERET_TOWN_GYM_EventScript_RobinPostBattle::
 	msgbox KINNERET_TOWN_GYM_Text_RobinAfterBattle, MSGBOX_SIGN
 	closemessage
 	setflag FLAG_BADGE01_GET
+	setvar VAR_0x8008, 1
+	call Common_EventScript_SetGymTrainers
 	giveitem ITEM_TM_AERIAL_ACE
 	waitfanfare
 	closemessage
@@ -155,3 +154,21 @@ KINNERET_TOWN_GYM_Text_RobinRematchRepeat:
 
 KINNERET_TOWN_GYM_Text_RobinPostBadgeIdle:
 	.string "Great work on staying strong!$"
+
+KINNERET_TOWN_GYM_EventScript_Guy::
+	lock
+	faceplayer
+	msgbox KINNERET_TOWN_GYM_Text_Guy, MSGBOX_DEFAULT
+	release
+	end
+
+KINNERET_TOWN_GYM_Text_Guy:
+	.string "Hey champ in the making!\n"
+	.string "Is this your first gym?\p"
+	.string "Make sure you brought\n"
+	.string "enough supplies!\p"
+	.string "ROBIN's Flying-type\n"
+	.string "POKéMON are fierce!\p"
+	.string "And remember: you can\n"
+	.string "always go train and\l"
+	.string "come back stronger!$"	

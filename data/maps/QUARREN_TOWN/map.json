@@ -2,7 +2,7 @@
   "id": "MAP_QUARREN_TOWN",
   "name": "QUARREN_TOWN",
   "layout": "LAYOUT_QUARREN_TOWN",
-  "music": "MUS_ENPALE_ALLENWOOD",
+  "music": "MUS_ENPALE_QUARREN",
   "region_map_section": "MAPSEC_PEWTER_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -32,6 +32,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "QUARREN_TOWN_EventScript_Scientist",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_IRON_BALL",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_QUARREN_TOWN_IRON_BALL"
     }
   ],
   "warp_events": [

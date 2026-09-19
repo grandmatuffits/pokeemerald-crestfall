@@ -30,7 +30,7 @@
     },
     {
       "map": "MAP_ENPALE_ROUTE_7",
-      "offset": 25,
+      "offset": 18,
       "direction": "down"
     }
   ],
@@ -227,6 +227,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TM03",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ENPALE_ROUTE_2_TM_WATER_PULSE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 45,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_AIR_BALLOON",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ROUTE_2_AIR_BALLOON"
     }
   ],
   "warp_events": [

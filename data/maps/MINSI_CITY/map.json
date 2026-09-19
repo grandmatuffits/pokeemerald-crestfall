@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_ENPALE_ROUTE_17",
-      "offset": -14,
+      "offset": -6,
       "direction": "right"
     },
     {
@@ -34,7 +34,7 @@
       "local_id": "MINSI_CITY_MACHOKE",
       "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
       "x": 47,
-      "y": 18,
+      "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -48,7 +48,7 @@
       "local_id": "LOCALID_MINSI_NORTHGUARD",
       "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
       "x": 24,
-      "y": 7,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -62,7 +62,7 @@
       "local_id": "LOCALID_BRUTUS_MINSI",
       "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
       "x": 23,
-      "y": 10,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -76,7 +76,7 @@
       "local_id": "LOCALID_POKELABGUY",
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
       "x": 24,
-      "y": 34,
+      "y": 42,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -90,7 +90,7 @@
       "local_id": "LOCALID_POKECENTERBLOCK",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
       "x": 29,
-      "y": 18,
+      "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -104,7 +104,7 @@
       "local_id": "MINSI_CITY_KIRLIA_LADY",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
       "x": 34,
-      "y": 29,
+      "y": 37,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -118,7 +118,7 @@
       "local_id": "MINSI_CITY_KIRLIA",
       "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
       "x": 35,
-      "y": 29,
+      "y": 37,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -132,7 +132,7 @@
       "local_id": "MINSI_CITY_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
       "x": 47,
-      "y": 19,
+      "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -146,7 +146,7 @@
       "local_id": "MINSI_CITY_WALKING_GUY",
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
       "x": 38,
-      "y": 12,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -161,49 +161,49 @@
     {
       "warp_id": "WARP_ID_MINSICITY1",
       "x": 14,
-      "y": 17,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_MINSI_LAB",
       "dest_warp_id": "0"
     },
     {
       "x": 29,
-      "y": 17,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 35,
-      "y": 17,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN_MART",
       "dest_warp_id": "0"
     },
     {
       "x": 15,
-      "y": 28,
+      "y": 36,
       "elevation": 0,
       "dest_map": "MAP_MINSI_CITY_GYM_2F",
       "dest_warp_id": "1"
     },
     {
       "x": 29,
-      "y": 9,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_MINSI_CITY_REST_HOUSE",
       "dest_warp_id": "0"
     },
     {
       "x": 15,
-      "y": 17,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_MINSI_LAB",
       "dest_warp_id": "0"
     },
     {
       "x": 37,
-      "y": 28,
+      "y": 36,
       "elevation": 0,
       "dest_map": "MAP_MINSI_CITY_APARTMENT",
       "dest_warp_id": "0"
@@ -213,7 +213,7 @@
     {
       "type": "trigger",
       "x": 21,
-      "y": 7,
+      "y": 15,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -222,7 +222,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 7,
+      "y": 15,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -231,7 +231,7 @@
     {
       "type": "trigger",
       "x": 23,
-      "y": 7,
+      "y": 15,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -240,7 +240,7 @@
     {
       "type": "trigger",
       "x": 15,
-      "y": 29,
+      "y": 37,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -249,7 +249,7 @@
     {
       "type": "trigger",
       "x": 21,
-      "y": 34,
+      "y": 42,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -258,7 +258,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 34,
+      "y": 42,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -267,7 +267,7 @@
     {
       "type": "trigger",
       "x": 23,
-      "y": 34,
+      "y": 42,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -276,7 +276,7 @@
     {
       "type": "trigger",
       "x": 20,
-      "y": 7,
+      "y": 15,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -287,7 +287,7 @@
     {
       "type": "sign",
       "x": 19,
-      "y": 17,
+      "y": 25,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MINSI_CITY_EventScript_PokemonLabSign"
@@ -295,7 +295,7 @@
     {
       "type": "sign",
       "x": 24,
-      "y": 9,
+      "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MINSI_CITY_EventScript_CitySign"
@@ -303,7 +303,7 @@
     {
       "type": "sign",
       "x": 18,
-      "y": 28,
+      "y": 36,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MINSI_CITY_EventScript_GymSign"

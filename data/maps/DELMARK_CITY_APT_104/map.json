@@ -2,7 +2,7 @@
   "id": "MAP_DELMARK_CITY_APT_104",
   "name": "DELMARK_CITY_APT_104",
   "layout": "LAYOUT_DELMARK_CITY_APT_104",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_DELMARK",
   "region_map_section": "MAPSEC_CELADON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

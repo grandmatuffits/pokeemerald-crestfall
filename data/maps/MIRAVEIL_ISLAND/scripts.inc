@@ -12,9 +12,12 @@ MIRAVEIL_CITY_EventScript_Rival::
 	goto_if_set FLAG_MIRAVEIL_RIVAL_DONE, MIRAVEIL_CITY_EventScript_RivalDone
 	lock
 	faceplayer
+	setspeaker SP_NAME_RIVAL
 	msgbox MIRAVEIL_CITY_Text_RivalIntro, MSGBOX_DEFAULT
 	closemessage
+	setspeaker SP_NAME_RIVAL
 	trainerbattle_no_intro TRAINER_RIVALCF_5, MIRAVEIL_CITY_Text_RivalDefeat
+	setspeaker SP_NAME_RIVAL
 	msgbox MIRAVEIL_CITY_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
 	@ player involuntarily steps back to clear the way
@@ -132,7 +135,7 @@ MIRAVEIL_ISLAND_EventScript_HallSign::
 
 MIRAVEIL_ISLAND_Text_HallSign:
 	.string "MIRAVEIL BANQUET HALL\p"
-	.string "MUST BE ON INVITATION LIST /n TO ENTER$"
+	.string "MUST BE ON INVITATION LIST TO ENTER$"
 
 MIRAVEIL_ISLAND_EventScript_CasinoSign::
 	msgbox MIRAVEIL_ISLAND_Text_CasinoSign, MSGBOX_SIGN
@@ -154,7 +157,7 @@ MIRAVEIL_ISLAND_EventScript_Lady::
 	end
 
 MIRAVEIL_ISLAND_Text_Lady:
-	.string "Brigham is quite the philanthropist. /n His aunt likes to keep her money to herself.$"	
+	.string "Brigham is quite the philanthropist. \n His aunt likes to keep her money to herself.$"	
 
 MIRAVEIL_ISLAND_EventScript_Man::
 	msgbox MIRAVEIL_ISLAND_Text_Man, MSGBOX_NPC
@@ -209,3 +212,10 @@ MIRAVEIL_BANQUET_EXT_Text_DoormanAfter:
 	.string "But please do behave.\p"
 	.string "We of MIRAVEIL take pride in our\n"
 	.string "manners.$"	
+
+MIRAVEIL_ISLAND_EventScript_Doorman::
+	msgbox MIRAVEIL_ISLAND_Text_Doorman, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_Doorman:
+	.string "There is a private banquet going on,\n invitation only.$"		

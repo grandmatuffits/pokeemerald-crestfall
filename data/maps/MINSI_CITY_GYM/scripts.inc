@@ -5,15 +5,19 @@ MINSI_CITY_GYM_EventScript_Ross::
 	lock
 	faceplayer
 	goto_if_set FLAG_BADGE08_GET, MINSI_CITY_GYM_EventScript_RossBeaten
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossPreBattle, MSGBOX_DEFAULT
 	closemessage
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	trainerbattle_single TRAINER_ROSS, MINSI_CITY_GYM_Text_RossIntro, MINSI_CITY_GYM_Text_RossDefeat, MINSI_CITY_GYM_EventScript_RossReward
 	end
 
 MINSI_CITY_GYM_EventScript_RossReward::
 	setflag FLAG_BADGE08_GET
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossPostBattle, MSGBOX_DEFAULT
 	giveitem ITEM_TM06
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossTM, MSGBOX_DEFAULT
 	release
 	end
@@ -21,20 +25,26 @@ MINSI_CITY_GYM_EventScript_RossReward::
 MINSI_CITY_GYM_EventScript_RossBeaten::
 	goto_if_set FLAG_ROSS_REMATCH_DONE, MINSI_CITY_GYM_EventScript_RossRematchBeaten
 	goto_if_set FLAG_ELDERS_ARC_STARTED, MINSI_CITY_GYM_EventScript_RossRematch
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossBeaten, MSGBOX_DEFAULT
 	release
 	end
 
 MINSI_CITY_GYM_EventScript_RossRematch::
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossRematchIntro, MSGBOX_DEFAULT
 	closemessage
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	trainerbattle_no_intro TRAINER_ROSS_REMATCH, MINSI_CITY_GYM_Text_RossRematchDefeat
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossRematchPostBattle, MSGBOX_DEFAULT
 	special InitEnpaleBeastRoamers
 	setseenmon SPECIES_COBALION
 	setseenmon SPECIES_TERRAKION
 	setseenmon SPECIES_VIRIZION
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossBeasts, MSGBOX_DEFAULT
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossStoneGiven, MSGBOX_DEFAULT
 	giveitem ITEM_GENGARITE
 	goto_if_eq VAR_RESULT, FALSE, MINSI_CITY_GYM_EventScript_RossRematchEnd
@@ -44,9 +54,13 @@ MINSI_CITY_GYM_EventScript_RossRematchEnd::
 	end
 
 MINSI_CITY_GYM_EventScript_RossRematchBeaten::
+	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossRematchRepeat, MSGBOX_DEFAULT
 	release
 	end
+
+MINSI_CITY_GYM_Text_RossName:
+	.string "Ross$"
 
 MINSI_CITY_GYM_Text_RossRematchPostBattle:
 	.string "Nicely done.\p"

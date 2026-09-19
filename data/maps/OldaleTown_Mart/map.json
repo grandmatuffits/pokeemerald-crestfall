@@ -2,7 +2,7 @@
   "id": "MAP_OLDALE_TOWN_MART",
   "name": "OldaleTown_Mart",
   "layout": "LAYOUT_MART",
-  "music": "MUS_POKE_MART",
+  "music": "MUS_ENPALE_POKEMART",
   "region_map_section": "MAPSEC_SAFFRON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

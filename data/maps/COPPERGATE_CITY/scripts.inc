@@ -59,9 +59,12 @@ COPPERGATE_CITY_EventScript_RivalScene31::
 
 @ ======== shared talk + battle (call/return) ========
 COPPERGATE_CITY_EventScript_RivalTalk::
+	setspeaker SP_NAME_RIVAL
 	msgbox COPPERGATE_CITY_Text_RivalIntro, MSGBOX_DEFAULT
 	closemessage
+	setspeaker SP_NAME_RIVAL
 	trainerbattle_no_intro TRAINER_RIVALCF_2, COPPERGATE_CITY_Text_RivalDefeat
+	setspeaker SP_NAME_RIVAL
 	msgbox COPPERGATE_CITY_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
 	return

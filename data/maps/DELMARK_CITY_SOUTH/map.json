@@ -15,17 +15,17 @@
   "connections": [
     {
       "map": "MAP_DELMARK_CITY_WEST",
-      "offset": 0,
+      "offset": -5,
       "direction": "up"
     },
     {
       "map": "MAP_DELMARK_CITY_EAST",
-      "offset": 65,
+      "offset": 67,
       "direction": "up"
     },
     {
       "map": "MAP_ENPALE_ROUTE_12",
-      "offset": 18,
+      "offset": 20,
       "direction": "down"
     },
     {
@@ -36,9 +36,10 @@
   ],
   "object_events": [
     {
+      "local_id": "DELMARK_SOUTH_BRIDGE_BLOCK",
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
-      "x": 82,
-      "y": 27,
+      "x": 84,
+      "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -50,7 +51,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 40,
+      "x": 42,
       "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -63,7 +64,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 46,
+      "x": 48,
       "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -76,7 +77,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 48,
+      "x": 50,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -89,7 +90,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 48,
+      "x": 50,
       "y": 39,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -102,7 +103,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
-      "x": 32,
+      "x": 34,
       "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
@@ -115,7 +116,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
-      "x": 44,
+      "x": 46,
       "y": 44,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -128,7 +129,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_FRLG",
-      "x": 74,
+      "x": 76,
       "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -141,7 +142,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 59,
+      "x": 61,
       "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -154,7 +155,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
-      "x": 69,
+      "x": 71,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -167,7 +168,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 12,
+      "x": 14,
       "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -181,7 +182,7 @@
   ],
   "warp_events": [
     {
-      "x": 41,
+      "x": 43,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_DELMARK_CITY_SOUTH_CARETAKER_HOUSE",
@@ -191,25 +192,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 77,
-      "y": 26,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "DELMARK_CITY_SOUTH_EventScript_BridgeBlock"
-    },
-    {
-      "type": "trigger",
-      "x": 78,
-      "y": 26,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "DELMARK_CITY_SOUTH_EventScript_BridgeBlock"
-    },
-    {
-      "type": "trigger",
-      "x": 81,
+      "x": 79,
       "y": 26,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -227,7 +210,7 @@
     },
     {
       "type": "trigger",
-      "x": 79,
+      "x": 83,
       "y": 26,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -242,12 +225,30 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "DELMARK_CITY_SOUTH_EventScript_BridgeBlock"
+    },
+    {
+      "type": "trigger",
+      "x": 81,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "DELMARK_CITY_SOUTH_EventScript_BridgeBlock"
+    },
+    {
+      "type": "trigger",
+      "x": 84,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "DELMARK_CITY_SOUTH_EventScript_BridgeBlock"
     }
   ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 47,
+      "x": 49,
       "y": 25,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -255,7 +256,7 @@
     },
     {
       "type": "sign",
-      "x": 46,
+      "x": 48,
       "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

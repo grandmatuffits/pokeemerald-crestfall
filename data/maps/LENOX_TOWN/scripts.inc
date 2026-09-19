@@ -76,9 +76,12 @@ LENOX_TOWN_EventScript_CovenantScene::
 	addobject LENOX_TOWN_ELDER
 	applymovement LENOX_TOWN_ELDER, LENOX_TOWN_Movement_ElderApproach
 	waitmovement 0
+	setspeaker LENOX_TOWN_Text_FerrusName
 	msgbox LENOX_TOWN_Text_ElderIntro, MSGBOX_DEFAULT
 	closemessage
+	setspeaker LENOX_TOWN_Text_FerrusName
 	trainerbattle_no_intro TRAINER_COVENANT_ELDER_FERRUS, LENOX_TOWN_Text_ElderDefeat
+	setspeaker LENOX_TOWN_Text_FerrusName
 	msgbox LENOX_TOWN_Text_ElderAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LENOX_TOWN_ELDER, LENOX_TOWN_Movement_ExitNorth
@@ -183,6 +186,9 @@ LENOX_TOWN_Text_Acolyte4Intro:
 LENOX_TOWN_Text_Acolyte4Defeat:
 	.string "F-forgive me, Elder...$"
 
+LENOX_TOWN_Text_FerrusName:
+	.string "Ferrus$"
+
 LENOX_TOWN_Text_ElderIntro:
 	.string "You insolent heretic! You just don't\n"
 	.string "know when to quit! No more warnings,\l"
@@ -254,6 +260,7 @@ LENOX_TOWN_Mart_Merchant1:
 	.2byte ITEM_TM_SUNNY_DAY
 	.2byte ITEM_TM_RAIN_DANCE
 	.2byte ITEM_TM_SANDSTORM
+	.2byte ITEM_SAFETY_GOGGLES
 	pokemartlistend
 
 @ --- Merchant 2: Type-boost held items ---

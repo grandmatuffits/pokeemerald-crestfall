@@ -15,6 +15,8 @@ LENOX_TOWN_GYM_EventScript_Ingrid::
 
 LENOX_TOWN_GYM_EventScript_IngridDefeated::
 	setflag FLAG_BADGE03_GET
+	setvar VAR_0x8008, 3
+	call Common_EventScript_SetGymTrainers
 	msgbox LENOX_TOWN_GYM_Text_IngridAward, MSGBOX_DEFAULT
 	giveitem ITEM_TM_BULLDOZE
 	msgbox LENOX_TOWN_GYM_Text_IngridBulldoze, MSGBOX_DEFAULT

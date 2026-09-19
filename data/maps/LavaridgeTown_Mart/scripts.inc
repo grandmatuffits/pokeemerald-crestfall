@@ -26,9 +26,9 @@ LavaridgeTown_Mart_Pokemart:
 	.2byte ITEM_REVIVE
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_MAX_REPEL
-	.2byte ITEM_TM85
-	.2byte ITEM_TM86
-	.2byte ITEM_TM87
+	.2byte ITEM_TM79
+	.2byte ITEM_TM80
+	.2byte ITEM_TM81
 	pokemartlistend
 
 LavaridgeTown_Mart_EventScript_ExpertM::

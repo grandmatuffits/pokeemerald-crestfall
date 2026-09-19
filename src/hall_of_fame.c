@@ -34,6 +34,7 @@
 #include "data.h"
 #include "confetti_util.h"
 #include "constants/rgb.h"
+#include "gba/syscall.h"
 
 #define HALL_OF_FAME_MAX_TEAMS 30
 #define TAG_CONFETTI 1001
@@ -775,7 +776,7 @@ static void Task_Hof_HandleExit(u8 taskId)
 
 static void StartCredits(void)
 {
-    SetMainCallback2(CB2_StartCreditsSequence);
+    SoftReset(RESET_ALL);
 }
 
 #undef tDontSaveData

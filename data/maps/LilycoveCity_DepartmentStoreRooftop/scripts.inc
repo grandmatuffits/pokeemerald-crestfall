@@ -244,11 +244,10 @@ DelmarkMallRooftop_EventScript_PraetusScene::
 	setspeaker DelmarkMallRooftop_Text_PraetusName
 	msgbox DelmarkMallRooftop_Text_PraetusIntro, MSGBOX_SIGN
 	closemessage
+	setspeaker DelmarkMallRooftop_Text_PraetusName
 	msgbox DelmarkMallRooftop_Text_PraetusChallenge, MSGBOX_SIGN
 	closemessage
-
 	trainerbattle_no_intro TRAINER_ELDER_PRAETUS, DelmarkMallRooftop_Text_PraetusDefeat
-
 	setspeaker DelmarkMallRooftop_Text_PraetusName
 	msgbox DelmarkMallRooftop_Text_PraetusPostBattle, MSGBOX_SIGN
 	closemessage
@@ -271,8 +270,10 @@ DelmarkMallRooftop_EventScript_PraetusScene::
 	applymovement LOCALID_PLAYER, Movement_Rooftop_PlayerFaceDown
 	applymovement LOCALID_DELMARK_BRIGHAM, Movement_Rooftop_BrighamFaceUp
 	waitmovement 0
+	setspeaker DelmarkMallRooftop_Text_BrighamName
 	msgbox DelmarkMallRooftop_Text_BrighamToPlayer, MSGBOX_SIGN
 	closemessage
+	setspeaker DelmarkMallRooftop_Text_BrighamName
 	msgbox DelmarkMallRooftop_Text_BrighamWhitecaps, MSGBOX_SIGN
 	closemessage
 
@@ -372,13 +373,13 @@ Movement_Rooftop_SilvioExit:
 @ ============================================================
 
 DelmarkMallRooftop_Text_PraetusName:
-	.string "ELDER PRAETUS$"
+	.string "Elder Praetus$"
 
 DelmarkMallRooftop_Text_SilvioName:
-	.string "SILVIO$"
+	.string "Silvio$"
 
 DelmarkMallRooftop_Text_BrighamName:
-	.string "BRIGHAM$"
+	.string "Brigham$"
 
 DelmarkMallRooftop_Text_PraetusIntro:
 	.string "Well, well, well.\p"

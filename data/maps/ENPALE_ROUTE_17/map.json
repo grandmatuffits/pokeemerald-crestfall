@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_MINSI_CITY",
-      "offset": 14,
+      "offset": 6,
       "direction": "left"
     },
     {
@@ -98,7 +98,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 49,
-      "y": 82,
+      "y": 80,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,

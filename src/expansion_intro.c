@@ -14,6 +14,7 @@
 #include "expansion_intro.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "title_screen.h"
 
 #if EXPANSION_INTRO == TRUE
 
@@ -277,7 +278,7 @@ void Task_HandleExpansionIntro(u8 taskId)
             FreeAllSpritePalettes();
             DestroyTask(taskId);
             // Force FireRed/LeafGreen intro (Emerald title screen stays via IS_FRLG=0 elsewhere)
-            SetMainCallback2(CB2_SetUpIntroFrlg);
+            SetMainCallback2(CB2_InitTitleScreen);
         }
         break;
     }

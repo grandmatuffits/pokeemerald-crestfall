@@ -4569,20 +4569,45 @@ static void CreateInGameTradePokemonInternal(u8 whichPlayerMon, u8 whichInGameTr
     metloc_u8_t metLocation = METLOC_IN_GAME_TRADE;
     u8 mailNum;
     struct Pokemon *pokemon = &gParties[B_TRAINER_OPPONENT_A][0];
+    u32 personality = inGameTrade->personality;
 
-    CreateMon(pokemon, inGameTrade->species, level, inGameTrade->personality, OTID_STRUCT_PRESET(inGameTrade->otId));
+    if (personality == 0)
+        personality = Random32();
+
+    CreateMon(pokemon, inGameTrade->species, level, personality, OTID_STRUCT_PRESET(inGameTrade->otId));
     GiveMonInitialMoveset(pokemon);
 
-    SetMonData(pokemon, MON_DATA_HP_IV, &inGameTrade->ivs[0]);
-    SetMonData(pokemon, MON_DATA_ATK_IV, &inGameTrade->ivs[1]);
-    SetMonData(pokemon, MON_DATA_DEF_IV, &inGameTrade->ivs[2]);
-    SetMonData(pokemon, MON_DATA_SPEED_IV, &inGameTrade->ivs[3]);
-    SetMonData(pokemon, MON_DATA_SPATK_IV, &inGameTrade->ivs[4]);
-    SetMonData(pokemon, MON_DATA_SPDEF_IV, &inGameTrade->ivs[5]);
+    u8 hpIV = (inGameTrade->ivs[0] > 31) ? Random() % 32 : inGameTrade->ivs[0];
+    u8 atkIV = (inGameTrade->ivs[1] > 31) ? Random() % 32 : inGameTrade->ivs[1];
+    u8 defIV = (inGameTrade->ivs[2] > 31) ? Random() % 32 : inGameTrade->ivs[2];
+    u8 speedIV = (inGameTrade->ivs[3] > 31) ? Random() % 32 : inGameTrade->ivs[3];
+    u8 spAtkIV = (inGameTrade->ivs[4] > 31) ? Random() % 32 : inGameTrade->ivs[4];
+    u8 spDefIV = (inGameTrade->ivs[5] > 31) ? Random() % 32 : inGameTrade->ivs[5];
+
+    SetMonData(pokemon, MON_DATA_HP_IV, &hpIV);
+    SetMonData(pokemon, MON_DATA_ATK_IV, &atkIV);
+    SetMonData(pokemon, MON_DATA_DEF_IV, &defIV);
+    SetMonData(pokemon, MON_DATA_SPEED_IV, &speedIV);
+    SetMonData(pokemon, MON_DATA_SPATK_IV, &spAtkIV);
+    SetMonData(pokemon, MON_DATA_SPDEF_IV, &spDefIV);
     SetMonData(pokemon, MON_DATA_NICKNAME, inGameTrade->nickname);
     SetMonData(pokemon, MON_DATA_OT_NAME, inGameTrade->otName);
     SetMonData(pokemon, MON_DATA_OT_GENDER, &inGameTrade->otGender);
-    SetMonData(pokemon, MON_DATA_ABILITY_NUM, &inGameTrade->abilityNum);
+
+        u8 abilityNum = inGameTrade->abilityNum;
+    if (abilityNum > 2)
+    {
+        u8 validSlots[3];
+        u8 numValid = 0;
+        u8 i;
+        for (i = 0; i < 3; i++)
+        {
+            if (gSpeciesInfo[inGameTrade->species].abilities[i] != ABILITY_NONE)
+                validSlots[numValid++] = i;
+        }
+        abilityNum = validSlots[Random() % numValid];
+    }
+    SetMonData(pokemon, MON_DATA_ABILITY_NUM, &abilityNum);
     SetMonData(pokemon, MON_DATA_BEAUTY, &inGameTrade->conditions[1]);
     SetMonData(pokemon, MON_DATA_CUTE, &inGameTrade->conditions[2]);
     SetMonData(pokemon, MON_DATA_COOL, &inGameTrade->conditions[0]);

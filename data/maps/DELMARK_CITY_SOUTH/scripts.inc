@@ -41,11 +41,16 @@ DELMARK_CITY_SOUTH_Text_CemeterySign:
 DELMARK_CITY_SOUTH_EventScript_BridgeBlock::
 	goto_if_set FLAG_BADGE05_GET, DELMARK_CITY_SOUTH_EventScript_BridgePass
 	lockall
+	applymovement DELMARK_SOUTH_BRIDGE_BLOCK, DELMARK_SOUTH_Movement_GuardFacePlayer
 	msgbox DELMARK_CITY_SOUTH_Text_BridgeBlock, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, DELMARK_CITY_SOUTH_Movement_StepBackFromBridge
 	waitmovement 0
 	releaseall
 	end
+
+DELMARK_SOUTH_Movement_GuardFacePlayer::
+	face_left
+	step_end	
 
 DELMARK_CITY_SOUTH_EventScript_BridgePass::
 	return
@@ -55,10 +60,8 @@ DELMARK_CITY_SOUTH_Movement_StepBackFromBridge:
 	step_end
 
 DELMARK_CITY_SOUTH_Text_BridgeBlock:
-	.string "A construction crew is tearing up\n"
-	.string "the far side of the bridge.\p"
-	.string "'Sorry, no crossing right now,\n"
-	.string "come back when the work's done!'$"
+	.string "Sorry, no crossing right now,\n"
+	.string "come back when the work's done!$"
 
 DELMARK_CITY_SOUTH_EventScript_Youngster::
 	trainerbattle_single TRAINER_DELMARK_SOUTH_YOUNGSTER, DELMARK_CITY_SOUTH_Text_YoungsterIntro, DELMARK_CITY_SOUTH_Text_YoungsterDefeat, DELMARK_CITY_SOUTH_EventScript_YoungsterPost

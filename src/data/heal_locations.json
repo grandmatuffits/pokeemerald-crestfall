@@ -354,7 +354,7 @@
       "id": "HEAL_LOCATION_MINSI_CITY",
       "map": "MAP_MINSI_CITY",
       "x": 22,
-      "y": 10
+      "y": 18
     },
     {
       "id": "HEAL_LOCATION_ENPALE_ROUTE_5",
@@ -389,7 +389,7 @@
     {
       "id": "HEAL_LOCATION_DELMARK_CITY_WEST",
       "map": "MAP_DELMARK_CITY_WEST",
-      "x": 22,
+      "x": 29,
       "y": 18
     },
     {
@@ -432,7 +432,7 @@
       "id": "HEAL_LOCATION_VELDTMOOR_CITY",
       "map": "MAP_VELDTMOOR_CITY",
       "x": 20,
-      "y": 18
+      "y": 28
     }
   ]
 }

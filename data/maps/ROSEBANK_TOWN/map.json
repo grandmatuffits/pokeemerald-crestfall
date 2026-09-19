@@ -250,6 +250,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ROSEBANK_TOWN_EventScript_TuberF",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 24,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_EVIOLITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ROSEBANK_EVIOLITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 28,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_FLAME_ORB",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ROSEBANK_FLAME_ORB"
     }
   ],
   "warp_events": [

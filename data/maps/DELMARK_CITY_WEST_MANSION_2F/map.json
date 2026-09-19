@@ -2,7 +2,7 @@
   "id": "MAP_DELMARK_CITY_WEST_MANSION_2F",
   "name": "DELMARK_CITY_WEST_MANSION_2F",
   "layout": "LAYOUT_DELMARK_CITY_WEST_MANSION_2F",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_DELMARK",
   "region_map_section": "MAPSEC_CELADON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -44,7 +44,7 @@
       "x": 3,
       "y": 5,
       "elevation": 0,
-      "item": "ITEM_TM59",
+      "item": "ITEM_MOON_STONE",
       "flag": "FLAG_HIDDEN_ITEM_DELMARK_CITY_WEST_MANSION_2F_ITEM_TM59"
     },
     {

@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_GRANT_ISLAND",
-      "offset": -43,
+      "offset": -45,
       "direction": "down"
     },
     {
@@ -27,8 +27,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "x": 12,
-      "y": 49,
+      "x": 39,
+      "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 0,
@@ -40,8 +40,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 39,
-      "y": 30,
+      "x": 19,
+      "y": 54,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
       "movement_range_x": 5,
@@ -53,8 +53,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
-      "x": 47,
-      "y": 15,
+      "x": 21,
+      "y": 36,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
       "movement_range_x": 5,

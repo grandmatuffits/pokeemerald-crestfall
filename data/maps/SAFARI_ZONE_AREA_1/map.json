@@ -2,7 +2,7 @@
   "id": "MAP_SAFARI_ZONE_AREA_1",
   "name": "SAFARI_ZONE_AREA_1",
   "layout": "LAYOUT_SAFARI_ZONE_AREA_1",
-  "music": "MUS_ENPALE_CAVE",
+  "music": "MUS_ENPALE_COPPERGATE",
   "region_map_section": "MAPSEC_LAVENDER_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

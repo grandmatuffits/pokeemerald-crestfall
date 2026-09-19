@@ -1462,6 +1462,26 @@
 
 #define FLAG_VALERYTOWN_VS_SEEKER_GIVEN             (SYSTEM_FLAGS + 0xA8)
 
+#define FLAG_MIRAVEIL_COIN_CASE                     (SYSTEM_FLAGS + 0xA9)
+
+#define FLAG_MINSI_TOWN_MAP_RECEIVED                (SYSTEM_FLAGS + 0xB1)
+
+#define FLAG_ROSEBANK_EVIOLITE                      (SYSTEM_FLAGS + 0xB2)
+#define FLAG_ROSEBANK_FLAME_ORB                     (SYSTEM_FLAGS + 0xB3)      
+
+#define FLAG_WALLAR_TOXIC_ORB                       (SYSTEM_FLAGS + 0xB0)
+
+#define FLAG_HIDE_COPPERGATE_RIVAL                  (SYSTEM_FLAGS + 0x9C) // Coppergate rival scene hide flag
+
+#define FLAG_MIRAVEIL_LOADED_DICE_RECEIVED          (SYSTEM_FLAGS + 0xB4)
+#define FLAG_ROUTE_2_AIR_BALLOON                    (SYSTEM_FLAGS + 0xB5)
+#define FLAG_ROUTE_12_WIDE_LENSE                    (SYSTEM_FLAGS + 0xB6)
+#define FLAG_QUARREN_TOWN_IRON_BALL                 (SYSTEM_FLAGS + 0xB7)
+#define FLAG_LEHIGH_HEART_SCALE_1                   (SYSTEM_FLAGS + 0xB8)
+#define FLAG_LEHIGH_HEART_SCALE_2                   (SYSTEM_FLAGS + 0xB9)
+#define FLAG_GRANT_CAVE_HEART_SCALE                 (SYSTEM_FLAGS + 0xBA)
+#define FLAG_LENOX_TOWN_NUGGET                      (SYSTEM_FLAGS + 0xBB)
+
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2

@@ -2,7 +2,7 @@
   "id": "MAP_BAYNOE_TEMPLE_2F",
   "name": "BAYNOE_TEMPLE_2F",
   "layout": "LAYOUT_BAYNOE_TEMPLE_2F",
-  "music": "MUS_ENPALE_ALLENWOOD",
+  "music": "MUS_ENPALE_BAYNOE",
   "region_map_section": "MAPSEC_INDIGO_PLATEAU",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -10,7 +10,7 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [

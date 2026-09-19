@@ -22,9 +22,12 @@ VELDTMOOR_EventScript_RivalFinalTrigger::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, VELDTMOOR_Movement_PlayerFaceUp
 	waitmovement 0
+	setspeaker SP_NAME_RIVAL
 	msgbox VELDTMOOR_Text_RivalPreBattle, MSGBOX_DEFAULT
 	closemessage
+	setspeaker SP_NAME_RIVAL
 	trainerbattle_no_intro TRAINER_RIVALCF_FINAL, VELDTMOOR_Text_RivalDefeat
+	setspeaker SP_NAME_RIVAL
 	msgbox VELDTMOOR_Text_RivalPostBattle, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_VELDTMOOR_RIVAL, VELDTMOOR_Movement_RivalLeave
@@ -105,6 +108,7 @@ VELDTMOOR_CITY_EventScript_Door::
 
 VELDTMOOR_CITY_EventScript_DoorLocked::
 	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	msgbox VELDTMOOR_CITY_Text_DoorLocked, MSGBOX_SIGN
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, VELDTMOOR_CITY_Movement_PlayerStepBack

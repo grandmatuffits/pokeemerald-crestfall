@@ -3,7 +3,7 @@
   "name": "RIDLEY_CAVE_BF1",
   "layout": "LAYOUT_RIDLEY_CAVE_BF1",
   "music": "MUS_ENPALE_CAVE",
-  "region_map_section": "MAPSEC_MT_CHIMNEY",
+  "region_map_section": "MAPSEC_POWER_PLANT",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -181,7 +181,7 @@
       "x": 18,
       "y": 1,
       "elevation": 0,
-      "item": "ITEM_RARE_CANDY",
+      "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_RIDLEY_CAVE_BF1_EVIOLITE"
     },
     {

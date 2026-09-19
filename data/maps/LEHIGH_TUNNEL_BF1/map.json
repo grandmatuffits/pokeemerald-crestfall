@@ -3,11 +3,11 @@
   "name": "LEHIGH_TUNNEL_BF1",
   "layout": "LAYOUT_LEHIGH_TUNNEL_BF1",
   "music": "MUS_ENPALE_CAVE",
-  "region_map_section": "MAPSEC_ROCK_TUNNEL",
+  "region_map_section": "MAPSEC_MT_MOON",
   "requires_flash": true,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
-  "allow_cycling": false,
+  "allow_cycling": true,
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
@@ -84,5 +84,14 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 20,
+      "elevation": 0,
+      "item": "ITEM_HEART_SCALE",
+      "flag": "FLAG_LEHIGH_HEART_SCALE_2"
+    }
+  ]
 }

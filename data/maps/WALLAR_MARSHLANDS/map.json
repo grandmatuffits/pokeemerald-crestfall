@@ -3,7 +3,7 @@
   "name": "WALLAR_MARSHLANDS",
   "layout": "LAYOUT_WALLAR_MARSHLANDS",
   "music": "MUS_ENPALE_WALLAR",
-  "region_map_section": "MAPSEC_BERRY_FOREST",
+  "region_map_section": "MAPSEC_POKEMON_TOWER",
   "requires_flash": false,
   "weather": "WEATHER_DOWNPOUR",
   "map_type": "MAP_TYPE_ROUTE",
@@ -305,6 +305,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "WALLAR_MARSHLANDS_EventScript_Red",
       "flag": "FLAG_HIDE_WALLAR_RED"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 37,
+      "y": 54,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TOXIC_ORB",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_WALLAR_TOXIC_ORB"
     }
   ],
   "warp_events": [

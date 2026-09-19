@@ -5,6 +5,7 @@ ROUTE_VELDT_EventScript_Trainer1::
 	trainerbattle_single TRAINER_VICTORY_ROAD_1, ROUTE_VELDT_Text_Trainer1Intro, ROUTE_VELDT_Text_Trainer1Defeat, ROUTE_VELDT_EventScript_Trainer1After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer1Rematch
+	msgbox ROUTE_VELDT_Text_Trainer1Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer1After::
 	msgbox ROUTE_VELDT_Text_Trainer1Post, MSGBOX_AUTOCLOSE
@@ -14,6 +15,7 @@ ROUTE_VELDT_EventScript_Trainer2::
 	trainerbattle_single TRAINER_VICTORY_ROAD_2, ROUTE_VELDT_Text_Trainer2Intro, ROUTE_VELDT_Text_Trainer2Defeat, ROUTE_VELDT_EventScript_Trainer2After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer2Rematch
+	msgbox ROUTE_VELDT_Text_Trainer2Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer2After::
 	msgbox ROUTE_VELDT_Text_Trainer2Post, MSGBOX_AUTOCLOSE
@@ -23,6 +25,7 @@ ROUTE_VELDT_EventScript_Trainer3::
 	trainerbattle_single TRAINER_VICTORY_ROAD_3, ROUTE_VELDT_Text_Trainer3Intro, ROUTE_VELDT_Text_Trainer3Defeat, ROUTE_VELDT_EventScript_Trainer3After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer3Rematch
+	msgbox ROUTE_VELDT_Text_Trainer3Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer3After::
 	msgbox ROUTE_VELDT_Text_Trainer3Post, MSGBOX_AUTOCLOSE
@@ -32,6 +35,7 @@ ROUTE_VELDT_EventScript_Trainer4::
 	trainerbattle_single TRAINER_VICTORY_ROAD_4, ROUTE_VELDT_Text_Trainer4Intro, ROUTE_VELDT_Text_Trainer4Defeat, ROUTE_VELDT_EventScript_Trainer4After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer4Rematch
+	msgbox ROUTE_VELDT_Text_Trainer4Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer4After::
 	msgbox ROUTE_VELDT_Text_Trainer4Post, MSGBOX_AUTOCLOSE
@@ -41,6 +45,7 @@ ROUTE_VELDT_EventScript_Trainer5::
 	trainerbattle_single TRAINER_VICTORY_ROAD_5, ROUTE_VELDT_Text_Trainer5Intro, ROUTE_VELDT_Text_Trainer5Defeat, ROUTE_VELDT_EventScript_Trainer5After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer5Rematch
+	msgbox ROUTE_VELDT_Text_Trainer5Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer5After::
 	msgbox ROUTE_VELDT_Text_Trainer5Post, MSGBOX_AUTOCLOSE
@@ -50,6 +55,7 @@ ROUTE_VELDT_EventScript_Trainer6::
 	trainerbattle_single TRAINER_VICTORY_ROAD_6, ROUTE_VELDT_Text_Trainer6Intro, ROUTE_VELDT_Text_Trainer6Defeat, ROUTE_VELDT_EventScript_Trainer6After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer6Rematch
+	msgbox ROUTE_VELDT_Text_Trainer6Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer6After::
 	msgbox ROUTE_VELDT_Text_Trainer6Post, MSGBOX_AUTOCLOSE
@@ -59,6 +65,7 @@ ROUTE_VELDT_EventScript_Trainer7::
 	trainerbattle_single TRAINER_VICTORY_ROAD_7, ROUTE_VELDT_Text_Trainer7Intro, ROUTE_VELDT_Text_Trainer7Defeat, ROUTE_VELDT_EventScript_Trainer7After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer7Rematch
+	msgbox ROUTE_VELDT_Text_Trainer7Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer7After::
 	msgbox ROUTE_VELDT_Text_Trainer7Post, MSGBOX_AUTOCLOSE
@@ -68,6 +75,7 @@ ROUTE_VELDT_EventScript_Trainer8::
 	trainerbattle_single TRAINER_VICTORY_ROAD_8, ROUTE_VELDT_Text_Trainer8Intro, ROUTE_VELDT_Text_Trainer8Defeat, ROUTE_VELDT_EventScript_Trainer8After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer8Rematch
+	msgbox ROUTE_VELDT_Text_Trainer8Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer8After::
 	msgbox ROUTE_VELDT_Text_Trainer8Post, MSGBOX_AUTOCLOSE
@@ -77,6 +85,7 @@ ROUTE_VELDT_EventScript_Trainer9::
 	trainerbattle_single TRAINER_VICTORY_ROAD_9, ROUTE_VELDT_Text_Trainer9Intro, ROUTE_VELDT_Text_Trainer9Defeat, ROUTE_VELDT_EventScript_Trainer9After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer9Rematch
+	msgbox ROUTE_VELDT_Text_Trainer9Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer9After::
 	msgbox ROUTE_VELDT_Text_Trainer9Post, MSGBOX_AUTOCLOSE
@@ -86,6 +95,7 @@ ROUTE_VELDT_EventScript_Trainer10::
 	trainerbattle_single TRAINER_VICTORY_ROAD_10, ROUTE_VELDT_Text_Trainer10Intro, ROUTE_VELDT_Text_Trainer10Defeat, ROUTE_VELDT_EventScript_Trainer10After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer10Rematch
+	msgbox ROUTE_VELDT_Text_Trainer10Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer10After::
 	msgbox ROUTE_VELDT_Text_Trainer10Post, MSGBOX_AUTOCLOSE
@@ -95,6 +105,7 @@ ROUTE_VELDT_EventScript_Trainer11::
 	trainerbattle_single TRAINER_VICTORY_ROAD_11, ROUTE_VELDT_Text_Trainer11Intro, ROUTE_VELDT_Text_Trainer11Defeat, ROUTE_VELDT_EventScript_Trainer11After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer11Rematch
+	msgbox ROUTE_VELDT_Text_Trainer11Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer11After::
 	msgbox ROUTE_VELDT_Text_Trainer11Post, MSGBOX_AUTOCLOSE
@@ -104,6 +115,7 @@ ROUTE_VELDT_EventScript_Trainer12::
 	trainerbattle_single TRAINER_VICTORY_ROAD_12, ROUTE_VELDT_Text_Trainer12Intro, ROUTE_VELDT_Text_Trainer12Defeat, ROUTE_VELDT_EventScript_Trainer12After
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, ROUTE_VELDT_EventScript_Trainer12Rematch
+	msgbox ROUTE_VELDT_Text_Trainer12Post, MSGBOX_AUTOCLOSE
 	end
 ROUTE_VELDT_EventScript_Trainer12After::
 	msgbox ROUTE_VELDT_Text_Trainer12Post, MSGBOX_AUTOCLOSE

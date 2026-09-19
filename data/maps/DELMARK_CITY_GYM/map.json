@@ -93,7 +93,7 @@
       "x": 3,
       "y": 31,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "DelmarkCityGym_EventScript_Quiz1"
     },
     {
@@ -101,7 +101,7 @@
       "x": 3,
       "y": 22,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "DelmarkCityGym_EventScript_Quiz2"
     },
     {
@@ -109,7 +109,7 @@
       "x": 3,
       "y": 13,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "DelmarkCityGym_EventScript_Quiz3"
     }
   ]

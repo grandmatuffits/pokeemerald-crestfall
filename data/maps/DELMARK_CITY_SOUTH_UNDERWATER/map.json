@@ -2,7 +2,7 @@
   "id": "MAP_DELMARK_CITY_SOUTH_UNDERWATER",
   "name": "DELMARK_CITY_SOUTH_UNDERWATER",
   "layout": "LAYOUT_DELMARK_CITY_SOUTH_UNDERWATER",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_DELMARK",
   "region_map_section": "MAPSEC_CELADON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -54,6 +54,8 @@ LilycoveCity_DepartmentStore_5F_Pokemart_Cushions:
 	.2byte ITEM_ELECTIRIZER
     .2byte ITEM_MAGMARIZER
     .2byte ITEM_UPGRADE
+	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_RAZOR_FANG
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidRight::
@@ -268,3 +270,31 @@ DelmarkCityMall5F_Text_RivalPostBattle:
 	.string "What am I doing wrong!?\n"
 	.string "Why am I never strong enough!?\p"
 	.string "Screw it, I'm outta here!$"
+
+DELMARK_MALL_EventScript_EvolutionExpert::
+	lock
+	faceplayer
+	msgbox DELMARK_MALL_Text_EvolutionExpert, MSGBOX_DEFAULT
+	release
+	end
+
+DELMARK_MALL_Text_EvolutionExpert:
+	.string "What's up bro? Lookin' to\n"
+	.string "evolve some of your 'mons?\p"
+	.string "This floor's got it all, man.\n"
+	.string "But there's some stuff you\l"
+	.string "gotta know, dude.\p"
+	.string "All those items are a\n"
+	.string "one-time use.\p"
+	.string "Those fancy stones? Eevees\n"
+	.string "love 'em.\p"
+	.string "Those Linking Cords? Lots of\n"
+	.string "'mons use 'em, so stock up.\p"
+	.string "Also, there's this cute little\n"
+	.string "rock doggy that'll evolve at\l"
+	.string "25 if it's holding one of\l"
+	.string "those cool stones, but what\l"
+	.string "it turns into depends on\l"
+	.string "what it's holding.\p"
+	.string "Sun for day, Moon for night,\n"
+	.string "Dusk for dusk, ya dig?$"	

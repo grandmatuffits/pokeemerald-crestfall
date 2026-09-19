@@ -199,7 +199,7 @@ DELMARK_MALL_1F_EventScript_Acolyte::
 	end
 
 DELMARK_MALL_1F_Text_Acolyte:
-	.string "Hey! You shouldn't be here!\p"
+	.string "Hey! You shouldn't be here!$"
 
 DelmarkCityMall1F_Text_MarloIntro:
 	.string "I'm glad they picked a mall for our\n"

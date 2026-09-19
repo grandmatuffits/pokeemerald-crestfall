@@ -22,6 +22,11 @@
       "map": "MAP_ROSEBANK_TOWN",
       "offset": -14,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ENPALE_ROUTE_17",
+      "offset": -79,
+      "direction": "left"
     }
   ],
   "object_events": [

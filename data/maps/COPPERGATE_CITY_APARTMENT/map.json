@@ -2,7 +2,7 @@
   "id": "MAP_COPPERGATE_CITY_APARTMENT",
   "name": "COPPERGATE_CITY_APARTMENT",
   "layout": "LAYOUT_COPPERGATE_CITY_APARTMENT",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ENPALE_COPPERGATE",
   "region_map_section": "MAPSEC_LAVENDER_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

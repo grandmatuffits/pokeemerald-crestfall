@@ -60,8 +60,10 @@ BERGEN_HILL_EventScript_SummitScene::
 	@ Brigham approaches
 	applymovement LOCALID_BERGEN_BRIGHAM, BERGEN_HILL_Movement_BrighamApproach
 	waitmovement 0
+	setspeaker BERGEN_HILL_Text_BrighamName
 	msgbox BERGEN_HILL_Text_BrighamGloat, MSGBOX_DEFAULT
 	closemessage
+	setspeaker BERGEN_HILL_Text_BrighamName
 	msgbox BERGEN_HILL_Text_BrighamCallUmbra, MSGBOX_DEFAULT
 	closemessage
 	@ reveal + approach Umbra from the south
@@ -70,10 +72,13 @@ BERGEN_HILL_EventScript_SummitScene::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, BERGEN_HILL_Movement_PlayerFaceDown
 	waitmovement 0
+	setspeaker BERGEN_HILL_Text_UmbraName
 	msgbox BERGEN_HILL_Text_UmbraReveal, MSGBOX_DEFAULT
 	closemessage
 	@ the rematch
+	setspeaker BERGEN_HILL_Text_UmbraName
 	trainerbattle_no_intro TRAINER_UMBRA_BERGEN, BERGEN_HILL_Text_UmbraDefeat
+	setspeaker BERGEN_HILL_Text_UmbraName
 	msgbox BERGEN_HILL_Text_UmbraRage, MSGBOX_DEFAULT
 	closemessage
 	@ Umbra storms south and vanishes
@@ -84,6 +89,7 @@ BERGEN_HILL_EventScript_SummitScene::
 	applymovement OBJ_EVENT_ID_PLAYER, BERGEN_HILL_Movement_PlayerFaceUp
 	waitmovement 0
 	@ Brigham panics
+	setspeaker BERGEN_HILL_Text_BrighamName
 	msgbox BERGEN_HILL_Text_BrighamPanic, MSGBOX_DEFAULT
 	closemessage
 	@ all four Elders walk north and vanish
@@ -97,6 +103,7 @@ BERGEN_HILL_EventScript_SummitScene::
 	removeobject LOCALID_BERGEN_SAXUS
 	removeobject LOCALID_BERGEN_PRAETUS
 	@ Brigham's parting line, then he shoves past south
+	setspeaker BERGEN_HILL_Text_BrighamName
 	msgbox BERGEN_HILL_Text_BrighamFlee, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, BERGEN_HILL_Movement_PlayerShoved
@@ -164,6 +171,12 @@ BERGEN_HILL_Movement_PlayerShoved:
 	walk_left
 	face_right
 	step_end	
+
+BERGEN_HILL_Text_BrighamName:
+	.string "Brigham$"
+
+BERGEN_HILL_Text_UmbraName:
+	.string "Umbra$"
 
 BERGEN_HILL_Text_BrighamGloat:
 	.string "Right on time to witness my\n"

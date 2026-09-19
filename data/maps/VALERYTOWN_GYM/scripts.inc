@@ -18,6 +18,8 @@ VALERYTOWN_GYM_EventScript_Randall::
 
 VALERYTOWN_GYM_EventScript_RandallReward::
 	setflag FLAG_BADGE05_GET
+	setvar VAR_0x8008, 5
+	call Common_EventScript_SetGymTrainers
 	msgbox VALERYTOWN_GYM_Text_RandallBadge, MSGBOX_DEFAULT
 	giveitem ITEM_TM63
 	msgbox VALERYTOWN_GYM_Text_RandallTM, MSGBOX_DEFAULT
@@ -51,7 +53,6 @@ VALERYTOWN_GYM_EventScript_RandallRematch::
 
 
 VALERYTOWN_GYM_EventScript_Blackbelt1::
-	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_Blackbelt1Done
 	trainerbattle_single TRAINER_VALERYTOWN_BLACKBELT_1, VALERYTOWN_GYM_Text_Blackbelt1Intro, VALERYTOWN_GYM_Text_Blackbelt1Defeat
 	msgbox VALERYTOWN_GYM_Text_Blackbelt1Post, MSGBOX_AUTOCLOSE
 	end
@@ -61,7 +62,6 @@ VALERYTOWN_GYM_EventScript_Blackbelt1Done::
 	end
 
 VALERYTOWN_GYM_EventScript_Hiker::
-	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_HikerDone
 	trainerbattle_single TRAINER_VALERYTOWN_HIKER, VALERYTOWN_GYM_Text_HikerIntro, VALERYTOWN_GYM_Text_HikerDefeat
 	msgbox VALERYTOWN_GYM_Text_HikerPost, MSGBOX_AUTOCLOSE
 	end
@@ -71,7 +71,6 @@ VALERYTOWN_GYM_EventScript_HikerDone::
 	end
 
 VALERYTOWN_GYM_EventScript_Blackbelt2::
-	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_Blackbelt2Done
 	trainerbattle_single TRAINER_VALERYTOWN_BLACKBELT_2, VALERYTOWN_GYM_Text_Blackbelt2Intro, VALERYTOWN_GYM_Text_Blackbelt2Defeat
 	msgbox VALERYTOWN_GYM_Text_Blackbelt2Post, MSGBOX_AUTOCLOSE
 	end
@@ -81,7 +80,6 @@ VALERYTOWN_GYM_EventScript_Blackbelt2Done::
 	end
 
 VALERYTOWN_GYM_EventScript_Guitarist::
-	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_GuitaristDone
 	trainerbattle_single TRAINER_VALERYTOWN_GUITARIST, VALERYTOWN_GYM_Text_GuitaristIntro, VALERYTOWN_GYM_Text_GuitaristDefeat
 	msgbox VALERYTOWN_GYM_Text_GuitaristPost, MSGBOX_AUTOCLOSE
 	end
@@ -91,7 +89,6 @@ VALERYTOWN_GYM_EventScript_GuitaristDone::
 	end
 
 VALERYTOWN_GYM_EventScript_Expert::
-	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_ExpertDone
 	trainerbattle_single TRAINER_VALERYTOWN_EXPERT, VALERYTOWN_GYM_Text_ExpertIntro, VALERYTOWN_GYM_Text_ExpertDefeat
 	msgbox VALERYTOWN_GYM_Text_ExpertPost, MSGBOX_AUTOCLOSE
 	end
@@ -101,7 +98,6 @@ VALERYTOWN_GYM_EventScript_ExpertDone::
 	end
 
 VALERYTOWN_GYM_EventScript_Blackbelt3::
-	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_Blackbelt3Done
 	trainerbattle_single TRAINER_VALERYTOWN_BLACKBELT_3, VALERYTOWN_GYM_Text_Blackbelt3Intro, VALERYTOWN_GYM_Text_Blackbelt3Defeat
 	msgbox VALERYTOWN_GYM_Text_Blackbelt3Post, MSGBOX_AUTOCLOSE
 	end
@@ -111,7 +107,6 @@ VALERYTOWN_GYM_EventScript_Blackbelt3Done::
 	end
 
 VALERYTOWN_GYM_EventScript_Rocker::
-	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_RockerDone
 	trainerbattle_single TRAINER_VALERYTOWN_ROCKER, VALERYTOWN_GYM_Text_RockerIntro, VALERYTOWN_GYM_Text_RockerDefeat
 	msgbox VALERYTOWN_GYM_Text_RockerPost, MSGBOX_AUTOCLOSE
 	end
@@ -121,7 +116,6 @@ VALERYTOWN_GYM_EventScript_RockerDone::
 	end
 
 VALERYTOWN_GYM_EventScript_Blackbelt4::
-	goto_if_set FLAG_BADGE05_GET, VALERYTOWN_GYM_EventScript_Blackbelt4Done
 	trainerbattle_single TRAINER_VALERYTOWN_BLACKBELT_4, VALERYTOWN_GYM_Text_Blackbelt4Intro, VALERYTOWN_GYM_Text_Blackbelt4Defeat
 	msgbox VALERYTOWN_GYM_Text_Blackbelt4Post, MSGBOX_AUTOCLOSE
 	end

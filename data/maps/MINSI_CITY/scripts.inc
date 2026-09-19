@@ -74,6 +74,20 @@ MINSI_CITY_EventScript_NorthGuard::
 	lock
 	faceplayer
 	setspeaker MINSI_CITY_Text_GuardName
+	goto_if_unset FLAG_BADGE01_GET, MINSI_CITY_EventScript_NorthGuardBlocked
+	goto_if_unset FLAG_BADGE02_GET, MINSI_CITY_EventScript_NorthGuardBlocked
+	goto_if_unset FLAG_BADGE03_GET, MINSI_CITY_EventScript_NorthGuardBlocked
+	goto_if_unset FLAG_BADGE04_GET, MINSI_CITY_EventScript_NorthGuardBlocked
+	goto_if_unset FLAG_BADGE05_GET, MINSI_CITY_EventScript_NorthGuardBlocked
+	goto_if_unset FLAG_BADGE06_GET, MINSI_CITY_EventScript_NorthGuardBlocked
+	goto_if_unset FLAG_BADGE07_GET, MINSI_CITY_EventScript_NorthGuardBlocked
+	goto_if_unset FLAG_BADGE08_GET, MINSI_CITY_EventScript_NorthGuardBlocked
+	msgbox MINSI_CITY_Text_GuardCleared, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+MINSI_CITY_EventScript_NorthGuardBlocked::
 	msgbox MINSI_CITY_Text_Guard1, MSGBOX_SIGN
 	closemessage
 	release
@@ -84,6 +98,9 @@ MINSI_CITY_Text_GuardName:
 
 MINSI_CITY_Text_Guard1:
 	.string "Sorry kid, you can't come\nthrough without 8 badges.$"
+
+MINSI_CITY_Text_GuardCleared:
+	.string "Well done, kid! Go on ahead!$"
 
 MINSI_CITY_EventScript_NorthCheckpoint::
 	goto_if_unset FLAG_BADGE04_GET, MINSI_CITY_EventScript_NorthTrigger
@@ -119,6 +136,9 @@ MINSI_CITY_EventScript_GymDoor::
 
 MINSI_CITY_EventScript_GymLocked::
 	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	delay 20
 	msgbox MINSI_CITY_Text_GymLocked, MSGBOX_SIGN
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerStepBack
@@ -250,12 +270,36 @@ MINSI_CITY_Text_City_Sign:
 MINSI_CITY_EventScript_SouthBlock::
 	lock
 	faceplayer
+	goto_if_set FLAG_MINSI_TOWN_MAP_RECEIVED, MINSI_CITY_EventScript_SouthBlockDone
+	msgbox MINSI_CITY_Text_SouthBlockGift, MSGBOX_DEFAULT
+	giveitem ITEM_TOWN_MAP
+	goto_if_eq VAR_RESULT, FALSE, MINSI_CITY_EventScript_SouthBlockNoRoom
+	setflag FLAG_MINSI_TOWN_MAP_RECEIVED
+	release
+	end
+
+MINSI_CITY_EventScript_SouthBlockNoRoom::
+	msgbox MINSI_CITY_Text_SouthBlockNoRoom, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_EventScript_SouthBlockDone::
 	msgbox MINSI_CITY_Text_SouthBlock, MSGBOX_DEFAULT
 	release
 	end
 
+MINSI_CITY_Text_SouthBlockGift:
+	.string "Are you new around here?\n"
+	.string "Here, take this TOWN MAP!\p"
+	.string "Good luck, champ!$"
+
+MINSI_CITY_Text_SouthBlockNoRoom:
+	.string "Oh, looks like you don't have\n"
+	.string "room for this. Come back once\l"
+	.string "you've made some space!$"
+
 MINSI_CITY_Text_SouthBlock:
-	.string "Good luck, champ!$"	
+	.string "Good luck, champ!$"
 
 MINSI_CITY_EventScript_GymSign::
 	msgbox MINSI_CITY_Text_Gym_Sign, MSGBOX_SIGN

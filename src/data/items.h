@@ -2032,7 +2032,7 @@ const struct ItemInfo gItemsInfo[] =
 
 // Candy
 
-    [ITEM_RARE_CANDY] =
+        [ITEM_RARE_CANDY] =
     {
         .name = ITEM_NAME("Rare Candy"),
         .pluralName = ITEM_PLURAL_NAME("Rare Candies"),
@@ -2047,6 +2047,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
         .flingPower = 30,
+        .importance = 1,
         .iconPic = gItemIcon_RareCandy,
         .iconPalette = gItemIconPalette_RareCandy,
     },
@@ -9213,7 +9214,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Choice Band"),
     #if I_PRICE >= GEN_9
-        .price = 100000,
+        .price = 25000,
     #elif I_PRICE >= GEN_7
         .price = 4000,
     #else
@@ -9238,7 +9239,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Choice Specs"),
         .pluralName = ITEM_PLURAL_NAME("Choice Specs"),
     #if I_PRICE >= GEN_9
-        .price = 100000,
+        .price = 25000,
     #elif I_PRICE >= GEN_7
         .price = 4000,
     #else
@@ -9263,7 +9264,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Choice Scarf"),
         .pluralName = ITEM_PLURAL_NAME("Choice Scarves"),
     #if I_PRICE >= GEN_9
-        .price = 100000,
+        .price = 25000,
     #elif I_PRICE >= GEN_7
         .price = 4000,
     #else
@@ -13032,9 +13033,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM62"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Deals double damage if\n"
-            "the target has a status\n"
-            "condition."),
+            "Deals double damage\n"
+            "if the target has a\n"
+            "status condition."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

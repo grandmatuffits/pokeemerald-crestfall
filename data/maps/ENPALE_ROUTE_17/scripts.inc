@@ -38,15 +38,13 @@ ROUTE17_EventScript_HikerAfter::
 	end
 
 ROUTE17_Text_SailorIntro:
-	.string "Heard the Covenant's done for.\n"
-	.string "Good riddance!\p"
-	.string "Let's have a battle to celebrate,\n"
-	.string "eh?$"
+	.string "Heheheheh!\n"
+	.string "You're done for!$"
 ROUTE17_Text_SailorDefeat:
 	.string "Hah! You've got sea legs after all!$"
 ROUTE17_Text_SailorPost:
 	.string "This bridge is the last stretch\n"
-	.string "before Minsi. Almost there.$"
+	.string "before Minsi.$"
 
 ROUTE17_Text_TriathleteFIntro:
 	.string "You look quick on your feet. Let's\n"
@@ -58,23 +56,18 @@ ROUTE17_Text_TriathleteFPost:
 	.string "The bridge is great for sprints.$"
 
 ROUTE17_Text_TriathleteMIntro:
-	.string "Out of my way… or battle me for the\n"
-	.string "right to pass!$"
+	.string "Out of my way!$"
 ROUTE17_Text_TriathleteMDefeat:
 	.string "Whew… you set a brutal pace.$"
 ROUTE17_Text_TriathleteMPost:
-	.string "Minsi's just ahead. Ross runs a\n"
-	.string "tough gym, I hear.$"
+	.string "Minsi's just ahead!$"
 
 ROUTE17_Text_HikerIntro:
-	.string "Nnngh! A challenger! I was just\n"
-	.string "resting my legs.$"
+	.string "Not so fast, kid!$"
 ROUTE17_Text_HikerDefeat:
-	.string "Sturdy team you've got. Solid as\n"
-	.string "rock!$"
+	.string "Sturdy!$"
 ROUTE17_Text_HikerPost:
-	.string "Careful crossing the river. Slippery\n"
-	.string "planks on that bridge.$"	
+	.string "Fine, get going!$"	
 
 ROUTE17_EventScript_SailorRematch::
 	trainerbattle_rematch TRAINER_ROUTE17_SAILOR, ROUTE17_EventScript_Sailor_RematchIntro, ROUTE17_EventScript_Sailor_RematchDefeat

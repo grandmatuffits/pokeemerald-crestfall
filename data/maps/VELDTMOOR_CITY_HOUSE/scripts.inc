@@ -5,23 +5,34 @@ UmbraHouse_EventScript_Umbra::
     lockall
 	faceplayer
     goto_if_set FLAG_RECEIVED_MEGA_RING, UmbraHouse_EventScript_UmbraRepeat
+    setspeaker UmbraHouse_Text_UmbraName
     msgbox UmbraHouse_Text_UmbraIntro, MSGBOX_DEFAULT
+    setspeaker UmbraHouse_Text_UmbraName
     msgbox UmbraHouse_Text_UmbraRivalLeft, MSGBOX_DEFAULT
+    setspeaker UmbraHouse_Text_UmbraName
     msgbox UmbraHouse_Text_UmbraRemorse, MSGBOX_DEFAULT
+    setspeaker UmbraHouse_Text_UmbraName
     msgbox UmbraHouse_Text_UmbraGivesMegaRing, MSGBOX_DEFAULT
     giveitem ITEM_MEGA_RING
     setflag FLAG_RECEIVED_MEGA_RING
+    setspeaker UmbraHouse_Text_UmbraName
     msgbox UmbraHouse_Text_UmbraLenoxTip, MSGBOX_DEFAULT
+    setspeaker UmbraHouse_Text_UmbraName
     msgbox UmbraHouse_Text_UmbraEldersWarning, MSGBOX_DEFAULT
+    setspeaker UmbraHouse_Text_UmbraName
     msgbox UmbraHouse_Text_UmbraSendToRoss, MSGBOX_DEFAULT
     setflag FLAG_ELDERS_ARC_STARTED
     releaseall
     end
 
 UmbraHouse_EventScript_UmbraRepeat::
+    setspeaker UmbraHouse_Text_UmbraName
     msgbox UmbraHouse_Text_UmbraRepeatDialogue, MSGBOX_DEFAULT
     releaseall
     end
+
+UmbraHouse_Text_UmbraName:
+    .string "Umbra$"
 
 UmbraHouse_Text_UmbraIntro:
     .string "...Oh. It's you.\pI wondered when you'd come by.$"

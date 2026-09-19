@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_DELMARK_CITY_SOUTH",
-      "offset": -65,
+      "offset": -67,
       "direction": "down"
     },
     {
@@ -451,10 +451,10 @@
     },
     {
       "x": 25,
-      "y": 23,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F",
-      "dest_warp_id": "3"
+      "dest_warp_id": "2"
     },
     {
       "x": 35,

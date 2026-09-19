@@ -53,5 +53,5 @@ COPPERGATE_CITY_Text_ChefDeclineText:
 COPPERGATE_CITY_Text_ChefRegret:
 	.string "My new dish was too hot and now\n"
 	.string "I'm being sued! I should've kept\p"
-	.string "that SHELLDER! My customers love\l"
+	.string "that SHELLDER! My customers love\n"
 	.string "shellfish!$"

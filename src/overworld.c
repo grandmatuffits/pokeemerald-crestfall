@@ -1297,6 +1297,8 @@ void Overworld_PlaySpecialMapMusic(void)
             music = MUS_UNDERWATER;
         else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
             music = (IS_FRLG ? MUS_RG_SURF : MUS_ENPALE_SURF);
+        else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+            music = MUS_ENPALE_BICYCLE;
     }
 
     if (music != GetCurrentMapMusic())

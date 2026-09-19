@@ -1297,8 +1297,8 @@ void GetOnOffBike(u8 transitionFlags)
     {
         EndORASDowsing();
         SetPlayerAvatarTransitionFlags(transitionFlags);
-        Overworld_SetSavedMusic(MUS_ENPALE_ALLENWOOD);
-        Overworld_ChangeMusicTo(MUS_ENPALE_ALLENWOOD);
+        Overworld_SetSavedMusic(MUS_ENPALE_BICYCLE);
+        Overworld_ChangeMusicTo(MUS_ENPALE_BICYCLE);
     }
 }
 

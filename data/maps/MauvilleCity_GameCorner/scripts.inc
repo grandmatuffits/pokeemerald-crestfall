@@ -823,3 +823,45 @@ Miraveil_Casino_Text_AlreadyHaveThat:
 Miraveil_Casino_Text_NoVoucher:
 	.string "Come back when you've a voucher to\n"
 	.string "spend.$"		
+
+MIRAVEIL_ISLAND_EventScript_Loser::
+	msgbox MIRAVEIL_ISLAND_Text_Loser, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_Loser:
+	.string "My gambling addiction cost me\n"
+	.string "my wife, kids, and job. I have\p"	
+	.string "nothing left so I threw my\n"	
+	.string "COIN CASE away.$"			
+
+MauvilleCity_GameCorner_EventScript_LoadedDiceGuy::
+	lock
+	faceplayer
+	goto_if_set FLAG_MIRAVEIL_LOADED_DICE_RECEIVED, MauvilleCity_GameCorner_EventScript_LoadedDiceGuyDone
+	msgbox MauvilleCity_GameCorner_Text_LoadedDiceGift, MSGBOX_DEFAULT
+	giveitem ITEM_LOADED_DICE
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_LoadedDiceNoRoom
+	setflag FLAG_MIRAVEIL_LOADED_DICE_RECEIVED
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_LoadedDiceNoRoom::
+	msgbox MauvilleCity_GameCorner_Text_LoadedDiceNoRoom, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_LoadedDiceGuyDone::
+	msgbox MauvilleCity_GameCorner_Text_LoadedDiceRepeat, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_GameCorner_Text_LoadedDiceGift:
+	.string "Psst! Take these…$"
+
+MauvilleCity_GameCorner_Text_LoadedDiceNoRoom:
+	.string "Oh, looks like you don't have\n"
+	.string "room for this. Come back once\l"
+	.string "you've made some space!$"
+
+MauvilleCity_GameCorner_Text_LoadedDiceRepeat:
+	.string "You'll never lose…$"	

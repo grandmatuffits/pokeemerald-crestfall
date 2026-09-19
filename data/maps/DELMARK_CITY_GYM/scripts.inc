@@ -266,15 +266,23 @@ DELMARK_CITY_GYM_EventScript_Silvio::
 	lock
 	faceplayer
 	goto_if_set FLAG_BADGE06_GET, DELMARK_CITY_GYM_EventScript_SilvioRematch
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	msgbox DELMARK_CITY_GYM_Text_SilvioIntro, MSGBOX_DEFAULT
-	trainerbattle_single TRAINER_LEADER_SILVIO, DELMARK_CITY_GYM_Text_SilvioDefeat, DELMARK_CITY_GYM_Text_SilvioPostBattle, DELMARK_CITY_GYM_EventScript_SilvioReward
+	closemessage
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
+	trainerbattle_no_intro TRAINER_LEADER_SILVIO, DELMARK_CITY_GYM_Text_SilvioDefeat
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
+	msgbox DELMARK_CITY_GYM_Text_SilvioPostBattle, MSGBOX_DEFAULT
+	goto DELMARK_CITY_GYM_EventScript_SilvioReward
 	end
 
 DELMARK_CITY_GYM_EventScript_SilvioReward::
 	setflag FLAG_BADGE06_GET
 	setvar VAR_DELMARK_GYM_PROGRESS, 4
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	msgbox DELMARK_CITY_GYM_Text_SilvioBadge, MSGBOX_DEFAULT
 	giveitem ITEM_TM_IRON_HEAD
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	msgbox DELMARK_CITY_GYM_Text_SilvioTM, MSGBOX_DEFAULT
 	release
 	end
@@ -288,10 +296,14 @@ DELMARK_CITY_GYM_EventScript_SilvioRematch::
 	goto_if_unset FLAG_FRIEDE_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioNotReady
 	goto_if_unset FLAG_RANDALL_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioNotReady
 	goto_if_unset FLAG_MERYL_REMATCH_DONE, DELMARK_CITY_GYM_EventScript_SilvioNotReady
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	msgbox DELMARK_CITY_GYM_Text_SilvioRematchIntro, MSGBOX_DEFAULT
 	closemessage
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	trainerbattle_no_intro TRAINER_SILVIO_REMATCH, DELMARK_CITY_GYM_Text_SilvioRematchDefeat
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	msgbox DELMARK_CITY_GYM_Text_SilvioRematchPostBattle, MSGBOX_DEFAULT
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	msgbox DELMARK_CITY_GYM_Text_SilvioStoneGiven, MSGBOX_DEFAULT
 	giveitem ITEM_METAGROSSITE
 	goto_if_eq VAR_RESULT, FALSE, DELMARK_CITY_GYM_EventScript_SilvioRematchEnd
@@ -301,20 +313,26 @@ DELMARK_CITY_GYM_EventScript_SilvioRematchEnd::
 	end
 
 DELMARK_CITY_GYM_EventScript_SilvioNotReady::
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	msgbox DELMARK_CITY_GYM_Text_SilvioNotReady, MSGBOX_DEFAULT
 	release
 	end
 
 DELMARK_CITY_GYM_EventScript_SilvioRematchBeaten::
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	msgbox DELMARK_CITY_GYM_Text_SilvioRematchRepeat, MSGBOX_DEFAULT
 	release
 	end
 
 DELMARK_CITY_GYM_EventScript_SilvioIdle::
+	setspeaker DELMARK_CITY_GYM_Text_SilvioName
 	msgbox DELMARK_CITY_GYM_Text_SilvioRematch, MSGBOX_DEFAULT
 	release
 	end
 	
+DELMARK_CITY_GYM_Text_SilvioName:
+	.string "Silvio$"
+
 DELMARK_CITY_GYM_Text_SilvioIntro:
 	.string "There you are.\p"
 	.string "That ELDER PRAETUS was stronger than\n"

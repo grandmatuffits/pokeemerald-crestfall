@@ -37,7 +37,6 @@ OldaleTown_Mart_Pokemart_Expanded:
 	.2byte ITEM_TM94
 	.2byte ITEM_TM21
 	.2byte ITEM_POISON_BARB
-	.2byte ITEM_BLACK_SLUDGE
 	pokemartlistend
 
 OldaleTown_Mart_EventScript_Woman::

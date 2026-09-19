@@ -43,5 +43,5 @@ LavaridgeTown_PokemonCenter_1F_Text_HotSpringCanInvigorate:
 LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo:
 	.string "Going to the park in the back?\n"
 	.string "Don't bother, the Pokemon are\p"
-	.string "all babies.\n"
+	.string "all babies.$"
 

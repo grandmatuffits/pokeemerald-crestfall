@@ -100,7 +100,7 @@
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_LEFT_DOWN_RIGHT",
       "movement_range_x": 2,
       "movement_range_y": 2,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MIRAVEIL_BANQUET_2F_EventScript_ExpertBeatrice",
       "flag": "0"
@@ -113,7 +113,7 @@
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_RIGHT_DOWN_LEFT",
       "movement_range_x": 2,
       "movement_range_y": 2,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MIRAVEIL_BANQUET_2F_EventScript_ExpertLou",
       "flag": "0"
@@ -164,14 +164,14 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_MIRAVEIL_ISLAND_HALL",
-      "dest_warp_id": "4"
+      "dest_warp_id": "3"
     },
     {
       "x": 23,
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_MIRAVEIL_ISLAND_HALL",
-      "dest_warp_id": "3"
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],

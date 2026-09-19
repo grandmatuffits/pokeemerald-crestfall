@@ -3,7 +3,7 @@
   "name": "GRANT_CAVE_BF2",
   "layout": "LAYOUT_GRANT_CAVE_BF2",
   "music": "MUS_ENPALE_CAVE",
-  "region_map_section": "MAPSEC_MIRAGE_ISLAND",
+  "region_map_section": "MAPSEC_SEAFOAM_ISLANDS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

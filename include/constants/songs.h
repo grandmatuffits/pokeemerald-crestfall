@@ -580,6 +580,7 @@
 #define MUS_ENPALE_BICYCLE          645
 #define MUS_ENPALE_QUARREN          646
 #define MUS_ENPALE_VALERYTOWN       647
+#define MUS_ENPALE_BAYNOE           648
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

@@ -2,7 +2,6 @@ MIRAVEIL_ISLAND_HALL_2F_MapScripts::
 	.byte 0
 
 MIRAVEIL_BANQUET_2F_EventScript_ExpertBeatrice::
-	goto_if_set FLAG_BADGE07_GET, MIRAVEIL_BANQUET_2F_EventScript_ExpertBeatriceDone
 	trainerbattle_single TRAINER_MIRAVEIL_EXPERT_F, MIRAVEIL_BANQUET_2F_Text_BeatriceIntro, MIRAVEIL_BANQUET_2F_Text_BeatriceDefeat
 	msgbox MIRAVEIL_BANQUET_2F_Text_BeatriceAfter, MSGBOX_AUTOCLOSE
 	end
@@ -12,7 +11,6 @@ MIRAVEIL_BANQUET_2F_EventScript_ExpertBeatriceDone::
 	end
 
 MIRAVEIL_BANQUET_2F_EventScript_ExpertLou::
-	goto_if_set FLAG_BADGE07_GET, MIRAVEIL_BANQUET_2F_EventScript_ExpertLouDone
 	trainerbattle_single TRAINER_MIRAVEIL_EXPERT_M, MIRAVEIL_BANQUET_2F_Text_LouIntro, MIRAVEIL_BANQUET_2F_Text_LouDefeat
 	msgbox MIRAVEIL_BANQUET_2F_Text_LouAfter, MSGBOX_AUTOCLOSE
 	end
@@ -22,7 +20,6 @@ MIRAVEIL_BANQUET_2F_EventScript_ExpertLouDone::
 	end
 
 MIRAVEIL_BANQUET_2F_EventScript_AromaLadyCass::
-	goto_if_set FLAG_BADGE07_GET, MIRAVEIL_BANQUET_2F_EventScript_AromaLadyCassDone
 	trainerbattle_single TRAINER_MIRAVEIL_AROMA_LADY, MIRAVEIL_BANQUET_2F_Text_CassIntro, MIRAVEIL_BANQUET_2F_Text_CassDefeat
 	msgbox MIRAVEIL_BANQUET_2F_Text_CassAfter, MSGBOX_AUTOCLOSE
 	end
@@ -32,7 +29,6 @@ MIRAVEIL_BANQUET_2F_EventScript_AromaLadyCassDone::
 	end
 
 MIRAVEIL_BANQUET_2F_EventScript_BeautyShandra::
-	goto_if_set FLAG_BADGE07_GET, MIRAVEIL_BANQUET_2F_EventScript_BeautyShandraDone
 	trainerbattle_single TRAINER_MIRAVEIL_BEAUTY, MIRAVEIL_BANQUET_2F_Text_ShandraIntro, MIRAVEIL_BANQUET_2F_Text_ShandraDefeat
 	msgbox MIRAVEIL_BANQUET_2F_Text_ShandraAfter, MSGBOX_AUTOCLOSE
 	end
@@ -42,7 +38,6 @@ MIRAVEIL_BANQUET_2F_EventScript_BeautyShandraDone::
 	end
 
 MIRAVEIL_BANQUET_2F_EventScript_SailorReginald::
-	goto_if_set FLAG_BADGE07_GET, MIRAVEIL_BANQUET_2F_EventScript_SailorReginaldDone
 	trainerbattle_single TRAINER_MIRAVEIL_SAILOR, MIRAVEIL_BANQUET_2F_Text_ReginaldIntro, MIRAVEIL_BANQUET_2F_Text_ReginaldDefeat
 	msgbox MIRAVEIL_BANQUET_2F_Text_ReginaldAfter, MSGBOX_AUTOCLOSE
 	end
@@ -52,7 +47,6 @@ MIRAVEIL_BANQUET_2F_EventScript_SailorReginaldDone::
 	end
 
 MIRAVEIL_BANQUET_2F_EventScript_RichBoyMichelangelo::
-	goto_if_set FLAG_BADGE07_GET, MIRAVEIL_BANQUET_2F_EventScript_RichBoyMichelangeloDone
 	trainerbattle_single TRAINER_MIRAVEIL_RICH_BOY, MIRAVEIL_BANQUET_2F_Text_MichelangeloIntro, MIRAVEIL_BANQUET_2F_Text_MichelangeloDefeat
 	msgbox MIRAVEIL_BANQUET_2F_Text_MichelangeloAfter, MSGBOX_AUTOCLOSE
 	end
@@ -62,7 +56,6 @@ MIRAVEIL_BANQUET_2F_EventScript_RichBoyMichelangeloDone::
 	end
 
 MIRAVEIL_BANQUET_2F_EventScript_GentlemanFrancisco::
-	goto_if_set FLAG_BADGE07_GET, MIRAVEIL_BANQUET_2F_EventScript_GentlemanFranciscoDone
 	trainerbattle_single TRAINER_MIRAVEIL_GENTLEMAN, MIRAVEIL_BANQUET_2F_Text_FranciscoIntro, MIRAVEIL_BANQUET_2F_Text_FranciscoDefeat
 	msgbox MIRAVEIL_BANQUET_2F_Text_FranciscoAfter, MSGBOX_AUTOCLOSE
 	end
@@ -146,6 +139,8 @@ MIRAVEIL_BANQUET_2F_EventScript_Meryl::
 
 MIRAVEIL_BANQUET_2F_EventScript_MerylReward::
 	setflag FLAG_BADGE07_GET
+	setvar VAR_0x8008, 7
+	call Common_EventScript_SetGymTrainers
 	msgbox MIRAVEIL_BANQUET_2F_Text_MerylBadge, MSGBOX_DEFAULT
 	giveitem ITEM_TM57
 	msgbox MIRAVEIL_BANQUET_2F_Text_MerylTM, MSGBOX_DEFAULT

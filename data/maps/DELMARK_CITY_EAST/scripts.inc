@@ -402,6 +402,8 @@ DELMARK_CITY_EventScript_GymLocked::
 	compare VAR_DELMARK_REVISIT_STATE, 4
 	goto_if_ge DELMARK_CITY_EventScript_GymOpenNow
 	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
 	msgbox DELMARK_CITY_Text_GymLocked, MSGBOX_SIGN
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, DELMARK_CITY_Movement_PlayerStepBack
@@ -474,9 +476,12 @@ DELMARK_CITY_EAST_EventScript_RivalScene11::
 
 @ ======== shared talk + battle ========
 DELMARK_CITY_EAST_EventScript_RivalTalk::
+	setspeaker SP_NAME_RIVAL
 	msgbox DELMARK_CITY_EAST_Text_RivalIntro, MSGBOX_DEFAULT
 	closemessage
+	setspeaker SP_NAME_RIVAL
 	trainerbattle_no_intro TRAINER_RIVALCF_3, DELMARK_CITY_EAST_Text_RivalDefeat
+	setspeaker SP_NAME_RIVAL
 	msgbox DELMARK_CITY_EAST_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
 	return
@@ -543,6 +548,9 @@ DELMARK_CITY_EAST_Movement_RivalWalkPast9:
 	walk_left
 	walk_left
 	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 @ Row 10 (middle): detour UP to row 9
@@ -557,6 +565,9 @@ DELMARK_CITY_EAST_Movement_RivalWalkPast10:
 	walk_left
 	walk_left
 	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 @ Row 11 (bottom): detour UP to row 10
@@ -565,6 +576,9 @@ DELMARK_CITY_EAST_Movement_RivalWalkPast11:
 	walk_left
 	walk_left
 	walk_down
+	walk_left
+	walk_left
+	walk_left
 	walk_left
 	walk_left
 	walk_left
@@ -638,7 +652,7 @@ DelmarkCityEast_EventScript_SilvioDoor::
 	end
 
 Movement_SilvioTurnAround:
-	walk_in_place_down
+	faceplayer
 	delay_16
 	step_end
 
@@ -652,7 +666,7 @@ Movement_SilvioEnterMall:
 	step_end	
 
 DelmarkCityEast_Text_SilvioName:
-	.string "SILVIO$"
+	.string "Silvio$"
 
 DelmarkCityEast_Text_SilvioRevisit:
 	.string "You came back.\p"

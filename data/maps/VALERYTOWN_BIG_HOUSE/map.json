@@ -2,7 +2,7 @@
   "id": "MAP_VALERYTOWN_BIG_HOUSE",
   "name": "VALERYTOWN_BIG_HOUSE",
   "layout": "LAYOUT_VALERYTOWN_BIG_HOUSE",
-  "music": "MUS_ENPALE_CAVE",
+  "music": "MUS_ENPALE_VALERYTOWN",
   "region_map_section": "MAPSEC_VIRIDIAN_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

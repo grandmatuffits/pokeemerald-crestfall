@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_DELMARK_CITY_SOUTH",
-      "offset": -18,
+      "offset": -20,
       "direction": "up"
     },
     {
@@ -102,6 +102,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TM49",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ENPALE_ROUTE_12_TM47"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 29,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_WIDE_LENS",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ROUTE_12_WIDE_LENSE"
     }
   ],
   "warp_events": [],

@@ -2,7 +2,7 @@
   "id": "MAP_QUARREN_TOWN_HOUSE",
   "name": "QUARREN_TOWN_HOUSE",
   "layout": "LAYOUT_QUARREN_TOWN_HOUSE",
-  "music": "MUS_ENPALE_ALLENWOOD",
+  "music": "MUS_ENPALE_QUARREN",
   "region_map_section": "MAPSEC_PEWTER_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -28,7 +28,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GLACIA",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
       "x": 3,
       "y": 4,
       "elevation": 0,
