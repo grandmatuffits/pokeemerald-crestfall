@@ -110,3 +110,22 @@ LENOX_TOWN_GYM_Text_IngridPostBadgeIdle:
 
 LENOX_TOWN_GYM_Text_IngridStoneGiven:
 	.string "Also, you can have this.$"	
+
+LENOX_TOWN_GYM_EventScript_ChampInTheMaking::
+	lock
+	faceplayer
+	msgbox LENOX_TOWN_GYM_Text_ChampInTheMaking, MSGBOX_NPC
+	release
+	end
+
+LENOX_TOWN_GYM_Text_ChampInTheMaking:
+	.string "Hey, champ in the making!\p"
+	.string "The gym leader for this town is\n"
+	.string "INGRID!\p"
+	.string "Her Ground-type POKéMON are just\n"
+	.string "as tough and gritty as she is!\p"
+	.string "Also, watch your step! This gym's\n"
+	.string "got holes all over the floor!\p"
+	.string "Try to choose the right one!\n"
+	.string "And remember to bring a light\l"
+	.string "down there!$"

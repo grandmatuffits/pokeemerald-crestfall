@@ -631,8 +631,7 @@ DelmarkCityEast_StagePreRevisit::
 
 DelmarkCityEast_EventScript_SilvioDoor::
 	lock
-	applymovement LOCALID_DELMARK_SILVIO, Movement_SilvioTurnAround
-	waitmovement 0
+	faceplayer
 	setspeaker DelmarkCityEast_Text_SilvioName
 	msgbox DelmarkCityEast_Text_SilvioRevisit, MSGBOX_SIGN
 	closemessage
@@ -650,11 +649,6 @@ DelmarkCityEast_EventScript_SilvioDoor::
 	setvar VAR_DELMARK_REVISIT_STATE, 2
 	release
 	end
-
-Movement_SilvioTurnAround:
-	faceplayer
-	delay_16
-	step_end
 
 Movement_SilvioFaceDoor:
 	face_up

@@ -150,3 +150,20 @@ COPPERGATE_CITY_GYM_Text_OmarPostBadgeIdle:
 
 COPPERGATE_CITY_GYM_Text_OmarStoneGiven:
 	.string "Also, you can have this.$"	
+
+COPPERGATE_CITY_GYM_EventScript_ChampInTheMaking::
+	lock
+	faceplayer
+	msgbox COPPERGATE_CITY_GYM_Text_ChampInTheMaking, MSGBOX_NPC
+	release
+	end
+
+COPPERGATE_CITY_GYM_Text_ChampInTheMaking:
+	.string "Hey, champ in the making!\p"
+	.string "This town's gym leader is OMAR.\n"
+	.string "He loooves Electric types!\p"
+	.string "And if you don't know, Electric's\n"
+	.string "only weakness is Ground!\p"
+	.string "But be careful, he's got a trick\n"
+	.string "up his sleeve!\p"
+	.string "Good luck!$"	

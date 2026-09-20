@@ -17683,7 +17683,7 @@ Level: 17
 === TRAINER_ROUTE_4_GENTLEMAN ===
 Name: Alfred
 Class: Gentleman
-Pic: Gentleman
+Pic: Gentleman Frlg
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19145,16 +19145,16 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Honchkrow @ None
-Level: 36
-
-Musharna @ None
+Honchkrow @ Focus Sash
 Level: 37
 
-Shuppet @ None
-Level: 37
+Musharna @ Leftovers
+Level: 38
 
-Mienfoo @ None
+Shuppet @ Life Orb
+Level: 38
+
+Mienfoo @ Lum Berry
 Level: 39
 
 === TRAINER_ELDER_PRAETUS ===
@@ -19758,10 +19758,10 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint
 
-Kingler @ None
+Empoleon @ None
 Level: 46
 
-Lanturn @ None
+Seadra @ None
 Level: 46
 
 === TRAINER_GRANT_HIKER_2 ===
@@ -19773,7 +19773,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint
 
-Onix @ None
+Crustle @ None
 Level: 46
 
 Golem @ None
@@ -19969,7 +19969,7 @@ Level: 52
 === TRAINER_MIRAVEIL_GENTLEMAN ===
 Name: Francisco
 Class: Gentleman
-Pic: Gentleman
+Pic: Gentleman Frlg
 Gender: Male
 Music: Male
 Double Battle: No
@@ -24373,7 +24373,7 @@ Level: 26
 === TRAINER_ROUTE_4_GENTLEMAN_R2 ===
 Name: Alfred
 Class: Gentleman
-Pic: Gentleman
+Pic: Gentleman Frlg
 Gender: Male
 Music: Male
 Double Battle: No

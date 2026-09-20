@@ -405,3 +405,21 @@ DELMARK_CITY_GYM_Text_SilvioStoneGiven:
 
 DELMARK_CITY_GYM_Text_SilvioRematchDefeat:
 	.string "…there it is, again.$"	
+
+DELMARK_CITY_GYM_EventScript_Flavor::
+	lock
+	faceplayer
+	msgbox DELMARK_CITY_GYM_Text_Flavor, MSGBOX_NPC
+	release
+	end
+
+DELMARK_CITY_GYM_Text_Flavor:
+	.string "Are you here to challenge MAYOR\n"
+	.string "SILVIO?\p"
+	.string "Watch yourself, his Steel POKéMON\n"
+	.string "are harder than they look.\p"
+	.string "Unlike other gyms, this one has\n"
+	.string "3 quiz machines you gotta answer\l"
+	.string "to before you can meet SILVIO,\l"
+	.string "capisce?\p"
+	.string "Good luck, pal.$"	

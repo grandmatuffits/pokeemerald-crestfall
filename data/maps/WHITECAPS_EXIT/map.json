@@ -15,19 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MINING_ROCK",
-      "x": 24,
-      "y": 10,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EnpaleScript_MineRock01",
-      "flag": "FLAG_TEMP_11"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
       "x": 25,
       "y": 6,
@@ -65,6 +52,19 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Whitecaps_EventScript_Acolyte3",
       "flag": "FLAG_HIDE_WHITECAPS_ACOLYTES"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER_FRLG",
+      "x": 24,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WHITECAPS_EventScript_Blocker",
+      "flag": "FLAG_BADGE06_GET"
     }
   ],
   "warp_events": [

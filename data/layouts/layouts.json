@@ -10067,7 +10067,7 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_10",
       "name": "ENPALE_ROUTE_10_Layout",
-      "width": 36,
+      "width": 48,
       "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_WallarMarshlands",

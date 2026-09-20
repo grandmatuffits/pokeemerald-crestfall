@@ -17,6 +17,6 @@ ROSEBANK_TOWN_MOVE_REMINDER_HOUSE_Text_Intro:
 	.string "learn!\p"
 	.string "Not just moves they've learned\n"
 	.string "before, but future moves, egg moves,\l"
-	.string "even TM and tutor moves!\p"
+	.string "even tutor moves!\p"
 	.string "I'm the ultimate MOVE REMINDER!\p"
 	.string "What'd you say?$"

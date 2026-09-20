@@ -68,3 +68,16 @@ Whitecaps_Text_Acolyte3Defeat:
 
 Whitecaps_Text_Acolyte3PostBattle:
 	.string "Why not accept a better world!?$"
+
+WHITECAPS_EventScript_Blocker::
+	lock
+	faceplayer
+	msgbox WHITECAPS_Text_Blocker, MSGBOX_DEFAULT
+	release
+	end
+
+WHITECAPS_Text_Blocker:
+	.string "Hey, back off.\p"
+	.string "A buddy of mine got hurt up ahead\n"
+	.string "and needs some space.\p"
+	.string "Come back later.$"	

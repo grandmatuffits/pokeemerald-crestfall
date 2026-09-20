@@ -201,9 +201,6 @@ ROSEBANK_GYM_Text_MabelPostBattle:
 
 ROSEBANK_GYM_Text_RueIntro:
 	.string "FREEZE!\p"
-	.string "Two SNEASEL. No tricks, no ice\n"
-	.string "puzzles, no excuses.\p"
-	.string "Just claws. Let's go.$"
 
 ROSEBANK_GYM_Text_RueDefeat:
 	.string "Hah, get it?$"
@@ -243,3 +240,20 @@ ROSEBANK_GYM_Text_FriedeRematchRepeat:
 
 ROSEBANK_GYM_Text_FriedeStoneGiven:
 	.string "Also, you can have this.$"	
+
+ROSEBANK_TOWN_GYM_EventScript_Flavor::
+	lock
+	faceplayer
+	msgbox ROSEBANK_TOWN_GYM_Text_Flavor, MSGBOX_NPC
+	release
+	end
+
+ROSEBANK_TOWN_GYM_Text_Flavor:
+	.string "Hi there.\p"
+	.string "Are you here to take on our gym\n"
+	.string "leader, FRIEDE?\p"
+	.string "I doubt you'll be able to stand a\n"
+	.string "chance against her Ice-type\l"
+	.string "POKéMON, but do as you please.\p"
+	.string "Also, be careful, the floor is\n"
+	.string "slippery!$"	

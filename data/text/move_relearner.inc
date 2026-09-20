@@ -1,6 +1,6 @@
 MoveRelearner_Text_WouldLearnNewMoves:
-	.string "Hi, I'm the Move Relearner.\n"
-	.string "Would you like to learn new moves?$"
+	.string "What would you like to\n"
+	.string "teach your Pokémon?$"
 
 MoveRelearner_Text_LevelUpMoves:
 	.string "Level Up Moves$"

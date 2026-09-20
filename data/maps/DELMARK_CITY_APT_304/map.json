@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DELMARK_CITY_APT_304_EventScript_Note",
-      "flag": "0"
+      "flag": "FLAG_WALLAR_SAXUS_DONE"
     },
     {
       "local_id": "LOCALID_DELMARK_304_ELDER_IRRUS",

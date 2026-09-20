@@ -102,10 +102,10 @@ DELMARK_CITY_APT_304_Text_Note:
 	.string "until they succeed.”$"
 
 DELMARK_CITY_APT_304_Text_NoteAfter:
-	.string "Well, now.$"
+	.string "It's Silvio's note.$"
 
 DELMARK_CITY_APT_304_Text_IrrusAmbush:
-	.string "Let me introduce myself.\p"
+	.string "Ahem. Let me introduce myself.\p"
 	.string "I'm ELDER IRRUS.$"
 
 DELMARK_CITY_APT_304_Text_AcolyteDefeat:

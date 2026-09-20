@@ -257,13 +257,13 @@ GrantPeak_Movement_PlayerShoved:
 	
 @ ---- TEXT ----
 GrantPeak_Text_BrighamName:
-	.string "BRIGHAM$"
+	.string "Brigham$"
 GrantPeak_Text_IrrusName:
-	.string "ELDER IRRUS$"
+	.string "Elder Irrus$"
 GrantPeak_Text_PraetusName:
-	.string "ELDER PRAETUS$"
+	.string "Elder Praetus$"
 GrantPeak_Text_SilvioName:
-	.string "SILVIO$"
+	.string "Silvio$"
 
 
 
@@ -368,7 +368,7 @@ GRANT_ISLAND_EventScript_CynthiaFlavorText::
 	end
 
 GRANT_ISLAND_Text_CynthiaName:
-	.string "CYNTHIA$"
+	.string "Cynthia$"
 
 GrantIsland_Text_SwimmerF1Intro:
 	.string "You must be a good swimmer to get\n"
@@ -556,3 +556,20 @@ GRANT_ISLAND_Text_CynthiaRematchAfter:
 GRANT_ISLAND_Text_CynthiaPostRematch:
 	.string "I might make this place my new\n"
 	.string "go-to vacation spot.$"
+
+GRANT_ISLAND_EventScript_Nurse::
+	lock
+	faceplayer
+	msgbox GRANT_ISLAND_Text_NurseGreeting, MSGBOX_DEFAULT
+	closemessage
+	setrespawn HEAL_LOCATION_GRANT_ISLAND
+	call Common_EventScript_OutOfCenterPartyHeal
+	msgbox GRANT_ISLAND_Text_NurseFarewell, MSGBOX_DEFAULT
+	release
+	end
+
+GRANT_ISLAND_Text_NurseGreeting:
+	.string "Hello there! You look like you could\n"
+	.string "use a rest!$"
+GRANT_ISLAND_Text_NurseFarewell:
+	.string "Carry on!$"	
