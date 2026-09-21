@@ -10597,8 +10597,8 @@
     {
       "id": "LAYOUT_RIDLEY_CAVE_BF2",
       "name": "RIDLEY_CAVE_BF2_Layout",
-      "width": 20,
-      "height": 30,
+      "width": 28,
+      "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/RIDLEY_CAVE_BF2/border.bin",

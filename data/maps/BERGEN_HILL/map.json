@@ -3,7 +3,7 @@
   "name": "BERGEN_HILL",
   "layout": "LAYOUT_BERGEN_HILL",
   "music": "MUS_ENPALE_ROUTE",
-  "region_map_section": "MAPSEC_BIRTH_ISLAND",
+  "region_map_section": "MAPSEC_ROCK_TUNNEL",
   "requires_flash": false,
   "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_ROUTE",

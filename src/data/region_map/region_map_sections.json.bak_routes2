@@ -574,8 +574,8 @@
       "name": "Delmark City",
       "x": 8,
       "y": 10,
-      "width": 2,
-      "height": 2
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_FUCHSIA_CITY",
@@ -624,162 +624,122 @@
     {
       "id": "MAPSEC_ROUTE_1",
       "name": "Route 1",
-      "x": 8,
-      "y": 6,
-      "width": 1,
-      "height": 1
+      "height": 2,
+      "width": 1
     },
     {
       "id": "MAPSEC_ROUTE_2",
       "name": "Route 2",
-      "x": 6,
-      "y": 9,
-      "width": 1,
-      "height": 1
+      "height": 3,
+      "width": 1
     },
     {
       "id": "MAPSEC_ROUTE_3",
       "name": "Route 3",
-      "x": 4,
-      "y": 7,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 4
     },
     {
       "id": "MAPSEC_ROUTE_4",
       "name": "Route 4",
-      "x": 2,
-      "y": 5,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 6
     },
     {
       "id": "MAPSEC_ROUTE_5",
       "name": "Route 5",
-      "x": 3,
-      "y": 5,
-      "width": 1,
-      "height": 1
+      "height": 2,
+      "width": 1
     },
     {
       "id": "MAPSEC_ROUTE_6",
       "name": "Route 6",
-      "x": 4,
-      "y": 3,
-      "width": 1,
-      "height": 1
+      "height": 2,
+      "width": 1
     },
     {
       "id": "MAPSEC_ROUTE_7",
       "name": "Route 7",
-      "x": 7,
-      "y": 9,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 2
     },
     {
       "id": "MAPSEC_ROUTE_8",
       "name": "Route 8",
-      "x": 7,
-      "y": 8,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 3
     },
     {
       "id": "MAPSEC_ROUTE_9",
       "name": "Route 9",
-      "x": 13,
-      "y": 10,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 3
     },
     {
       "id": "MAPSEC_ROUTE_10",
       "name": "Route 10",
-      "x": 17,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "height": 3,
+      "width": 1
     },
     {
       "id": "MAPSEC_ROUTE_11",
       "name": "Route 11",
-      "x": 13,
-      "y": 12,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 3
     },
     {
       "id": "MAPSEC_ROUTE_12",
       "name": "Route 12",
-      "x": 9,
-      "y": 12,
-      "width": 1,
-      "height": 1
+      "height": 5,
+      "width": 1
     },
     {
       "id": "MAPSEC_ROUTE_13",
       "name": "Route 13",
-      "x": 18,
-      "y": 8,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 2
     },
     {
       "id": "MAPSEC_ROUTE_14",
       "name": "Route 14",
-      "x": 22,
-      "y": 6,
-      "width": 1,
-      "height": 1
+      "height": 2,
+      "width": 1
     },
     {
       "id": "MAPSEC_ROUTE_15",
       "name": "Route 15",
-      "x": 19,
-      "y": 4,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 2
     },
     {
       "id": "MAPSEC_ROUTE_16",
       "name": "Route 16",
-      "x": 16,
-      "y": 5,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 4
     },
     {
       "id": "MAPSEC_ROUTE_17",
       "name": "Route 17",
-      "x": 11,
-      "y": 4,
-      "width": 1,
-      "height": 1
+      "height": 5,
+      "width": 1
     },
     {
       "id": "MAPSEC_ROUTE_18",
       "name": "Route 18",
-      "x": 6,
-      "y": 4,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 5
     },
     {
       "id": "MAPSEC_ROUTE_19",
       "name": "Route 19",
-      "x": 6,
-      "y": 1,
-      "width": 1,
-      "height": 1
+      "height": 2,
+      "width": 1
     },
     {
       "id": "MAPSEC_ROUTE_20",
       "name": "Route  20",
-      "x": 8,
-      "y": 3,
-      "width": 1,
-      "height": 1
+      "height": 1,
+      "width": 7
     },
     {
       "id": "MAPSEC_ROUTE_21",

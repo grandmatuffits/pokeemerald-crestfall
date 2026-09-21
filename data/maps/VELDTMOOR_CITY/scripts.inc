@@ -109,6 +109,7 @@ VELDTMOOR_CITY_EventScript_Door::
 VELDTMOOR_CITY_EventScript_DoorLocked::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
 	msgbox VELDTMOOR_CITY_Text_DoorLocked, MSGBOX_SIGN
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, VELDTMOOR_CITY_Movement_PlayerStepBack
@@ -122,3 +123,11 @@ VELDTMOOR_CITY_Movement_PlayerStepBack::
 
 VELDTMOOR_CITY_Text_DoorLocked:
 	.string "This door is locked.$"	
+
+VELDTMOOR_CITY_EventScript_CitySign::
+	msgbox VELDTMOOR_CITY_Text_City_Sign, MSGBOX_SIGN
+	end
+
+VELDTMOOR_CITY_Text_City_Sign:
+	.string "Veldtmoor City\n"
+	.string "The City of Greatness$"	

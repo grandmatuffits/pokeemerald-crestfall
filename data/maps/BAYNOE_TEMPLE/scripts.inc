@@ -63,6 +63,7 @@ BAYNOE_TEMPLE_EventScript_Brigham::
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, BAYNOE_TEMPLE_Movement_PlayerStepLeft
 	waitmovement 0
+	removeobject LOCALID_BRIGHAM_NOTE
 	@ Brigham leaves (broken) — walks off south
 	applymovement LOCALID_BAYNOE_BRIGHAM, BAYNOE_TEMPLE_Movement_BrighamLeave
 	waitmovement 0
@@ -89,6 +90,8 @@ BAYNOE_TEMPLE_Movement_BrighamTurn:
 	step_end
 
 BAYNOE_TEMPLE_Movement_BrighamLeave:
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -207,3 +210,11 @@ BAYNOE_TEMPLE_EventScript_BrighamDone::
 BAYNOE_TEMPLE_Text_BrighamDone_Text:
 	.string "…Go on. Nothing here for either\n"
 	.string "of us now.$"	
+
+BAYNOE_TEMPLE_EventScript_BrighamNote::
+	msgbox BAYNOE_TEMPLE_Text_BrighamNote, MSGBOX_SIGN
+	end
+
+BAYNOE_TEMPLE_Text_BrighamNote:
+	.string "It's just a notepad with some poorly\n"
+	.string "drawn Pokemon and bad handwriting.$\n"

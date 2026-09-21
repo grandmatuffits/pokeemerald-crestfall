@@ -1294,8 +1294,8 @@
 #define FLAG_HIDE_GRANT_SILVIO                            0x4F4  // forced SET; added mid-scene
 #define FLAG_HIDE_GRANT_ACOLYTES                          0x4F5  // all Covenant acolytes; badge-6 gated, hide post-scene
 #define FLAG_HIDE_GRANT_BLOCKER                           0x4F6  // non-battle blocker on the lower path
-#define FLAG_CAUGHT_REGIROCK                              0x02D
-#define FLAG_CAUGHT_REGISTEEL                             0x02E
+#define FLAG_CAUGHT_REGIROCK                              0x2E
+#define FLAG_CAUGHT_REGISTEEL                             0x2F
 #define FLAG_CAUGHT_REGICE                                0x4F9
 #define FLAG_MIRAVEIL_RIVAL_DONE                          0x4C2
 #define FLAG_MIRAVEIL_VOUCHER_PENDING                     0x4C3

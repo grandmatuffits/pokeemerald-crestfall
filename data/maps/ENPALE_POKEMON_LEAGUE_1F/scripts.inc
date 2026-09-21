@@ -44,3 +44,10 @@ EnpalePokemonLeague1F_Text_Guard1NoLeaving:
 
 EnpalePokemonLeague1F_Text_Guard2Closed:
     .string "Sorry, the Pokémon League is closed at\nthe moment. Come back once you've made\lthe rounds with the Gym Leaders again.$"
+
+EnpalePokemonLeague1F_EventScript_Lady::
+	msgbox EnpalePokemonLeague1F_Text_Lady, MSGBOX_SIGN
+	end
+
+EnpalePokemonLeague1F_Text_Lady:
+	.string "Welcome home, {PLAYER}!$"	    
