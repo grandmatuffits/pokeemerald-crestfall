@@ -17374,8 +17374,8 @@ Level: 17
 
 === TRAINER_ROUTE_3_JEFF ===
 Name: Jeff
-Class: Collector
-Pic: Collector
+Class: Engineer Frlg
+Pic: Engineer Frlg
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17479,8 +17479,8 @@ Level: 9
 
 === TRAINER_KIRK_R2 ===
 Name: Kirk
-Class: Rocker
-Pic: Rocker
+Class: Guitarist
+Pic: Guitarist
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17567,8 +17567,8 @@ Level: 14
 
 === TRAINER_HAL_GYM2 ===
 Name: Hal
-Class: Pokemaniac
-Pic: Pokemaniac
+Class: Pokefan
+Pic: Pokefan M
 Gender: Male
 Music: Suspicious
 
@@ -18324,13 +18324,13 @@ Music: Male
 Items: Super Potion / Super Potion
 
 Murkrow
-Level: 26
+Level: 28
 
 Munna
-Level: 27
+Level: 29
 
 Mienfoo
-Level: 28
+Level: 30
 
 === TRAINER_ROUTE9_ATHLETE ===
 Name: Jordan
@@ -19144,18 +19144,19 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Items: Hyper Potion / Hyper Potion / Revive
 
 Honchkrow @ Focus Sash
-Level: 37
+Level: 38
 
 Musharna @ Leftovers
-Level: 38
+Level: 39
 
 Shuppet @ Life Orb
-Level: 38
+Level: 39
 
 Mienfoo @ Lum Berry
-Level: 39
+Level: 40
 
 === TRAINER_ELDER_PRAETUS ===
 Name: Praetus
@@ -19167,16 +19168,16 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Ferroseed @ Leftovers
-Level: 38
+Level: 39
 
 Durant @ Life Orb
-Level: 39
+Level: 40
 
 Magneton @ Magnet
-Level: 39
+Level: 40
 
 Bastiodon @ Sitrus Berry
-Level: 40
+Level: 42
 
 === TRAINER_LEADER_SILVIO ===
 Name: Silvio
@@ -19188,28 +19189,28 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Skarmory @ Rocky Helmet
-Level: 40
+Level: 42
 -Roost
 -Spikes
 -Whirlwind
 -Toxic
 
 Bisharp @ Life Orb
-Level: 40
+Level: 42
 -Swords Dance
 -Knock Off
 -Iron Head
 -Sucker Punch
 
 Excadrill @ Leftovers
-Level: 41
+Level: 43
 -Swords Dance
 -Earthquake
 -Iron Head
 -Rock Slide
 
 Aegislash @ Leftovers
-Level: 42
+Level: 44
 -King's Shield
 -Toxic
 -Gyro Ball
@@ -19560,7 +19561,7 @@ AI: Check Bad Move / Try To Faint
 Gyarados @ None
 Level: 44
 
-Whiscash @ None
+Quagsire @ None
 Level: 44
 
 === TRAINER_GRANT_ACOLYTE_1 ===
@@ -19860,6 +19861,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Items: Max Potion / Max Potion / Revive
 
 Honchkrow @ Life Orb
 Level: 48
@@ -20787,6 +20789,8 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+Items: Full Restore / Full Restore / Full Restore / Max Revive
+
 
 Honchkrow @ Life Orb
 Level: 60
@@ -24068,8 +24072,8 @@ Level: 14
 
 === TRAINER_KIRK_R2_R2 ===
 Name: Kirk
-Class: Rocker
-Pic: Rocker
+Class: Guitarist
+Pic: Guitarist
 Gender: Male
 Music: Male
 Double Battle: No

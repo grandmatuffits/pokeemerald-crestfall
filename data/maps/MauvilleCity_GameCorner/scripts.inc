@@ -605,7 +605,7 @@ MauvilleCity_GameCorner_EventScript_NoCoinCase::
 	end
 
 MauvilleCity_GameCorner_Text_ThisIsMauvilleGameCorner:
-	.string "This is MAUVILLE GAME CORNER.$"
+	.string "This is MIRAVEIL CASINO.$"
 
 MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins:
 	.string "Okay, you wanted some COINS for\n"
@@ -705,9 +705,9 @@ MauvilleCity_GameCorner_Text_LuckOnlyLastSoLongTakeCoins:
 	.string "Here, take some COINS!$"
 
 MauvilleCity_GameCorner_Text_MauvilleSomethingForEveryone:
-	.string "MAUVILLE has something for\n"
+	.string "MIRAVEIL has something for\n"
 	.string "everyone.\p"
-	.string "For me, it's the GAME CORNER.$"
+	.string "For me, it's the CASINO.$"
 
 MauvilleCity_GameCorner_Text_RouletteTablesDifferentRates:
 	.string "The ROULETTE tables have different\n"
@@ -721,12 +721,14 @@ MauvilleCity_GameCorner_Text_EasyToLoseTrackOfTime:
 
 MauvilleCity_GameCorner_Text_CoinsAreNeededToPlay:
 	.string "COINS are needed to play here\n"
-	.string "in the GAME CORNER.$"
+	.string "in the CASINO.$"
 
 MauvilleCity_GameCorner_Text_RouletteOnlyLuck:
 	.string "This ROULETTE thing…\n"
 	.string "It's rather demanding.\p"
-	.string "Win or lose, it's only by luck.$"
+	.string "Apparently if you win\n"
+	.string "3 times in a set, you\p"
+	.string "get a special prize.$"
 
 MauvilleCity_GameCorner_Text_UpTo3CoinsCanBeUsed:
 	.string "Up to three COINS can be used to play\n"

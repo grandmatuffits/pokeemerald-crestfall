@@ -156,6 +156,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_EXPERT_BELT",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_MIRAVEIL_EXPERT_BELT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 15,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MIRAVEIL_ISLAND_EventScript_CasinoGuy",
+      "flag": "0"
     }
   ],
   "warp_events": [

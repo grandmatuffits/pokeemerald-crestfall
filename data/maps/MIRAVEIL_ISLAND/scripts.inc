@@ -157,7 +157,7 @@ MIRAVEIL_ISLAND_EventScript_Lady::
 	end
 
 MIRAVEIL_ISLAND_Text_Lady:
-	.string "Brigham is quite the philanthropist. \n His aunt likes to keep her money to herself.$"	
+	.string "Brigham is quite the philanthropist.\nHis aunt likes to keep her money to herself.$"	
 
 MIRAVEIL_ISLAND_EventScript_Man::
 	msgbox MIRAVEIL_ISLAND_Text_Man, MSGBOX_NPC
@@ -219,3 +219,12 @@ MIRAVEIL_ISLAND_EventScript_Doorman::
 
 MIRAVEIL_ISLAND_Text_Doorman:
 	.string "There is a private banquet going on,\n invitation only.$"		
+
+MIRAVEIL_ISLAND_EventScript_CasinoGuy::
+	msgbox MIRAVEIL_ISLAND_Text_CasinoGuy, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_CasinoGuy:
+	.string "I just played some ROULETTE at the\n"	
+	.string "MIRAVEIL CASINO and won an HM!\p"
+	.string "I can't wait to use STRENGTH!\n"				

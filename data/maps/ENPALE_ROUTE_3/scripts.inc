@@ -62,13 +62,13 @@ ENPALE_ROUTE_3_Text_TiffRepeat:
 	.string "Don't look down!$"
 
 ENPALE_ROUTE_3_Text_BlakeIntro:
-	.string "This bridge is great!\nYou don't even need a bike!$"
+	.string "I can't wait to get to Quarren Town!$"
 
 ENPALE_ROUTE_3_Text_BlakeDefeat:
-	.string "I wish I had a bike...$"
+	.string "Oh man...$"
 
 ENPALE_ROUTE_3_Text_BlakeRepeat:
-	.string "A bike makes all\ntrips faster.$"
+	.string "Are you going to Quarren Town, too?$"
 
 ENPALE_ROUTE_3_Text_JeffIntro:
 	.string "Hey, I'm trying\nto get to work!$"

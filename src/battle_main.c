@@ -4262,7 +4262,7 @@ static void HandleTurnActionSelectionState(void)
                     }
                     break;
                 case B_ACTION_SAFARI_POKEBLOCK:
-                    if (!IS_FRLG)
+                    if (!SAFARI_ZONE_USE_FRLG_MECHANIC)
                     {
                         BtlController_EmitChooseItem(battler, B_COMM_TO_CONTROLLER, gBattleStruct->battlerPartyOrders[battler]);
                         MarkBattlerForControllerExec(battler);
@@ -4471,7 +4471,7 @@ static void HandleTurnActionSelectionState(void)
                     gBattleCommunication[battler]++;
                     break;
                 case B_ACTION_SAFARI_POKEBLOCK:
-                    if (IS_FRLG)
+                    if (SAFARI_ZONE_USE_FRLG_MECHANIC)
                     {
                         gBattleCommunication[battler]++;
                     }

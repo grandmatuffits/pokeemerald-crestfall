@@ -154,7 +154,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MINSI_CITY_EventScript_FountainGuy",
-      "flag": "0"
+      "flag": "FLAG_BAYNOE_TEMPLE_DONE"
     }
   ],
   "warp_events": [

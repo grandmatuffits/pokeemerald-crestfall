@@ -161,9 +161,8 @@ VALERYTOWN_GYM_Text_RandallTM:
 	.string "I'll tell my boys to let you by.$"
 
 VALERYTOWN_GYM_Text_RandallRematch:
-	.string "You again!? I told you to stay out!\p"
-	.string "What? TEAM COVENANT? ELDERS?\p"
-	.string "Shut up and fight me!$"
+	.string "You're still here?!\n"
+	.string "Get out of my town!$"
 
 VALERYTOWN_GYM_Text_Blackbelt1Intro:
 	.string "A new face to pound in? Sounds fun.$"

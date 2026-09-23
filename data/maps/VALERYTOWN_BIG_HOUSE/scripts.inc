@@ -33,7 +33,7 @@ VALERYTOWN_Text_OldManRumor:
 	.string "You look like you're trying to\n"
 	.string "get somewhere, kid.\p"
 	.string "There's a fence in town who's\n"
-	.string "got a TM. Lets your POKéMON\l"
+	.string "got a HM. Lets your POKéMON\l"
 	.string "carry you anywhere you please.\p"
 	.string "But he don't sell to just\n"
 	.string "anyone. You're a nobody here.\p"
@@ -46,7 +46,7 @@ VALERYTOWN_Text_OldManImpressed:
 	.string "you. Nobody 'round here did.$"
 
 VALERYTOWN_Text_OldManFlyGiven:
-	.string "Turns out that TM I mentioned?\p"
+	.string "Turns out that HM I mentioned?\p"
 	.string "I've had it on me this whole\n"
 	.string "time.\p"
 	.string "Consider it yours. On the\n"
