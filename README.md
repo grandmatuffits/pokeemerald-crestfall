@@ -1,53 +1,45 @@
-# About `pokeemerald-expansion`
+Pokémon Crestfall
+A fully custom ROM hack of Pokemon Emerald featuring the brand new region Enpale along with a unique story.
+Built on pokeemerald-expansion:
+https://github.com/rh-hideout/pokeemerald-expansion
 
-![Gif that shows debugging functionality that is unique to pokeemerald-expansion such as rerolling Trainer ID, Cheat Start, PC from Debug Menu, Debug PC Fill, Pokémon Sprite Visualizer, Debug Warp to Map, and Battle Debug Menu](https://github.com/user-attachments/assets/cf9dfbee-4c6b-4bca-8e0a-07f116ef891c) ![Gif that shows overworld functionality that is unique to pokeemerald-expansion such as indoor running, BW2 style map popups, overworld followers, DNA Splicers, Gen 1 style fishing, OW Item descriptions, Quick Run from Battle, Use Last Ball, Wild Double Battles, and Catch from EXP](https://github.com/user-attachments/assets/383af243-0904-4d41-bced-721492fbc48e) ![Gif that shows off a number of modern Pokémon battle mechanics happening in the pokeemerald-expansion engine: 2 vs 1 battles, modern Pokémon, items, moves, abilities, fully customizable opponents and partners, Trainer Slides, and generational gimmicks](https://github.com/user-attachments/assets/50c576bc-415e-4d66-a38f-ad712f3316be)
+Screenshots:
+https://github.com/grandmatuffits/pokeemerald-crestfall/tree/main/screenshots
 
-<!-- If you want to re-record or change these gifs, here are some notes that I used: https://files.catbox.moe/05001g.md -->
+Requirements:
+You need your own **legally-dumped** copy of the vanilla ROM. This patch is not a standalone game and does not include any of Nintendo's original assets or code.
 
-**`pokeemerald-expansion`** is a GBA ROM hack base that equips developers with a comprehensive toolkit for creating Pokémon ROM hacks. **`pokeemerald-expansion`** is built on top of [pret's `pokeemerald`](https://github.com/pret/pokeemerald) decompilation project. **It is not a playable Pokémon game on its own.**
+How to patch:
+Download pokemon_crestfall.bps from
+https://github.com/grandmatuffits/pokeemerald-crestfall/releases/latest
 
-# [Features](FEATURES.md)
+Use a patcher:
+ RomPatcher.js: https://www.marcrobledo.com/RomPatcher.js
 
-**`pokeemerald-expansion`** offers hundreds of features from various [core series Pokémon games](https://bulbapedia.bulbagarden.net/wiki/Core_series), along with popular quality-of-life enhancements designed to streamline development and improve the player experience. A full list of those features can be found in [`FEATURES.md`](FEATURES.md).
+Open the patcher, select your vanilla Emerald ROM as the source file and `pokemon_crestfall.bps` as the patch, and apply.
+Load the resulting `.gba` in your emulator of choice. mGBA is my personal choice, but many others will work as well (MyBoy is not recommended).
 
-# [Credits](CREDITS.md)
+Features:
+300 count regional Pokedex including Pokemon from every generation. 
+A new region with varying climates and landmarks.
+A fully custom soundtrack featuring many beloved metal and rock songs.
+Many new features like Mega-Evolution, and brand-new features and QOL updates, including Pokemon-less HM usage, mining, infinite berries.
 
- [![](https://img.shields.io/github/all-contributors/rh-hideout/pokeemerald-expansion/upcoming)](CREDITS.md)
+Known issues:
+The only emulator that seems to have issues with certain features is MyBoy. This ROM hack is still new and thus may still contain some bugs or broken mechanics.
 
-If you use **`pokeemerald-expansion`**, please credit **RHH (Rom Hacking Hideout)**. Optionally, include the version number for clarity.
+Credits:
+Based off RHH's pokeemerald-expansion v1.16.1 
 
-```
-Based off RHH's pokeemerald-expansion 1.16.0 https://github.com/rh-hideout/pokeemerald-expansion/
-```
+Main game development:
+Nanday0
 
-Please consider [crediting all contributors](CREDITS.md) involved in the project!
+Sprites:
+Yogurcomics
+Lichen
 
-# Choosing `pokeemerald` or **`pokeemerald-expansion`**
+Tilesets:
+Kyle-Dove, Heavy-Metal-Lover, WesleyFG, Dewitty, Zetavares852, XDinky, Newtiteuf, Alucus, Erma96, Hydrargirium, Poison-Master, Thedeadheroalistair, Shutwig, Asdsimone, Xxdevil, Steinnaples, Hek-el-grande, sylver1984, NikNak93, TeaAddiction, Cuddlesthefatcat, Magiscarf, Gigatom, The-Red-eX, ChaoticCherryCake
 
-- **`pokeemerald-expansion`** supports multiplayer functionality with other games built on **`pokeemerald-expansion`**. It is not compatible with official Pokémon games.
-- If compatibility with official games is important, use [`pokeemerald`](https://github.com/pret/pokeemerald). Otherwise, we recommend using **`pokeemerald-expansion`**.
-- **`pokeemerald-expansion`** incorporates regular updates from `pokeemerald`, including bug fixes and documentation improvements.
-
-# [Getting Started](INSTALL.md)
-
-❗❗ **Important**: Do not use GitHub's "Download Zip" option as it will not include commit history. This is necessary if you want to update or merge other feature branches.
-
-If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/) has a [guide to forking and cloning the repository](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/The-Basics-of-GitHub). Then you can follow one of the following guides:
-
-## 📥 [Installing **`pokeemerald-expansion`**](INSTALL.md)
-## 🏗️ [Building **`pokeemerald-expansion`**](INSTALL.md#Building-pokeemerald-expansion)
-## 🚚 [Migrating from **`pokeemerald`**](INSTALL.md#Migrating-from-pokeemerald)
-## 🚀 [Updating **`pokeemerald-expansion`**](INSTALL.md#Updating-pokeemerald-expansion)
-
-# [Documentation](https://rh-hideout.github.io/pokeemerald-expansion/)
-
-For detailed documentation, visit the [pokeemerald-expansion documentation page](https://rh-hideout.github.io/pokeemerald-expansion/).
-
-# [Contributions](CONTRIBUTING.md)
-If you are looking to [report a bug](CONTRIBUTING.md#Bug-Report), [open a pull request](CONTRIBUTING.md#Pull-Requests), or [request a feature](CONTRIBUTING.md#Feature-Request), our [`CONTRIBUTING.md`](CONTRIBUTING.md) has guides for each.
-
-# [Community](https://discord.gg/6CzjAG6GZk)
-
-[![](https://dcbadge.limes.pink/api/server/6CzjAG6GZk)](https://discord.gg/6CzjAG6GZk)
-
-Our community uses the [ROM Hacking Hideout (RHH) Discord server](https://discord.gg/6CzjAG6GZk) to communicate and organize. Most of our discussions take place there, and we welcome anybody to join us!
+Disclaimer:
+This is a free, non-commercial fan project. Pokémon and all related properties are trademarks of Nintendo, Game Freak, and Creatures Inc. No copyrighted assets are distributed here, just only a patch that must be applied to a ROM you already legally own.
