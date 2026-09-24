@@ -12143,7 +12143,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sHaunterLevelUpLearnset,
         .teachableLearnset = sHaunterTeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ALAKAZAM},
-                        {EVO_LEVEL, 0, SPECIES_ALAKAZAM, CONDITIONS({IF_HOLD_ITEM, ITEM_LINKING_CORD})}),
+                        {EVO_LEVEL, 0, SPECIES_GENGAR, CONDITIONS({IF_HOLD_ITEM, ITEM_LINKING_CORD})}),
     },
 
 #define GENGAR_SP_DEF (P_UPDATED_STATS >= GEN_2 ? 75 : 130)
