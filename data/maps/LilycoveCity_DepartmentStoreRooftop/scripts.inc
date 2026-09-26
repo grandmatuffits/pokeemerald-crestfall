@@ -446,3 +446,19 @@ DelmarkMallRooftop_Text_SilvioThanks:
 	.string "at a SHIELD BADGE.\p"
 	.string "I look forward to seeing you again.\p"
 	.string "Godspeed.$"
+
+DelmarkMallRooftop_EventScript_ClerkAbility::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart DelmarkMallRooftop_Pokemart_Ability
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+DelmarkMallRooftop_Pokemart_Ability:
+	.2byte ITEM_ABILITY_CAPSULE
+	.2byte ITEM_ABILITY_PATCH
+	pokemartlistend	
