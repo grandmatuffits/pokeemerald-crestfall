@@ -1482,6 +1482,8 @@
 #define FLAG_GRANT_CAVE_HEART_SCALE                 (SYSTEM_FLAGS + 0xBA)
 #define FLAG_LENOX_TOWN_NUGGET                      (SYSTEM_FLAGS + 0xBB)
 
+#define FLAG_MINSI_RARE_CANDY_RECEIVED              (SYSTEM_FLAGS + 0xBC)         
+
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2

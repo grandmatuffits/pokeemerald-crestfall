@@ -439,3 +439,41 @@ const u8 gItemEffect_TamatoBerry[10] = {
     [6] = ITEM6_SUBTRACT_EV,
     EV_BERRY_FRIENDSHIP_CHANGE,
 };
+
+const u8 gItemEffect_HPDown[10] = {
+    [4] = ITEM4_EV_HP,
+    [5] = ITEM5_FRIENDSHIP_ALL,
+    [6] = 0, // full reset, not ITEM6_SUBTRACT_EV
+    EV_BERRY_FRIENDSHIP_CHANGE,
+};
+
+const u8 gItemEffect_Fat[10] = {
+    [4] = ITEM4_EV_ATK,
+    [5] = ITEM5_FRIENDSHIP_ALL,
+    [6] = 0,
+    EV_BERRY_FRIENDSHIP_CHANGE,
+};
+
+const u8 gItemEffect_Salt[10] = {
+    [5] = ITEM5_EV_DEF | ITEM5_FRIENDSHIP_ALL,
+    [6] = 0,
+    EV_BERRY_FRIENDSHIP_CHANGE,
+};
+
+const u8 gItemEffect_Antacid[10] = {
+    [5] = ITEM5_EV_SPATK | ITEM5_FRIENDSHIP_ALL,
+    [6] = 0,
+    EV_BERRY_FRIENDSHIP_CHANGE,
+};
+
+const u8 gItemEffect_Copper[10] = {
+    [5] = ITEM5_EV_SPDEF | ITEM5_FRIENDSHIP_ALL,
+    [6] = 0,
+    EV_BERRY_FRIENDSHIP_CHANGE,
+};
+
+const u8 gItemEffect_Molasses[10] = {
+    [5] = ITEM5_EV_SPEED | ITEM5_FRIENDSHIP_ALL,
+    [6] = 0,
+    EV_BERRY_FRIENDSHIP_CHANGE,
+};

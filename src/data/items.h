@@ -15933,7 +15933,107 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_BikeVoucher,
         .iconPalette = gItemIconPalette_BikeVoucher,
     },
-};
+    [ITEM_HP_DOWN] =
+    {
+        .name = ITEM_NAME("HP Down"),
+        .pluralName = ITEM_PLURAL_NAME("HP Downs"),
+        .price = 1000,
+        .description = COMPOUND_STRING(
+            "Lowers a Pokémon's\n"
+            "base HP EVs to 0."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
+        .effect = gItemEffect_HPDown,
+        .flingPower = 30,
+        .iconPic = gItemIcon_HPUp,
+        .iconPalette = gItemIconPalette_HPUp,
+    },
 
+    [ITEM_FAT] =
+    {
+        .name = ITEM_NAME("Fat"),
+        .pluralName = ITEM_PLURAL_NAME("Fat"),
+        .price = 1000,
+        .description = COMPOUND_STRING(
+            "Lowers a Pokémon's\n"
+            "base Attack EVs to 0."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
+        .effect = gItemEffect_Fat,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Vitamin,
+        .iconPalette = gItemIconPalette_Protein,
+    },
+
+    [ITEM_SALT] =
+    {
+        .name = ITEM_NAME("Salt"),
+        .pluralName = ITEM_PLURAL_NAME("Salt"),
+        .price = 1000,
+        .description = COMPOUND_STRING(
+            "Lowers a Pokémon's\n"
+            "base Defense EVs to 0."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
+        .effect = gItemEffect_Salt,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Vitamin,
+        .iconPalette = gItemIconPalette_Iron,
+    },
+
+    [ITEM_ANTACID] =
+    {
+        .name = ITEM_NAME("Antacid"),
+        .pluralName = ITEM_PLURAL_NAME("Antacids"),
+        .price = 1000,
+        .description = COMPOUND_STRING(
+            "Lowers a Pokémon's\n"
+            "base Sp. Atk EVs to 0."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
+        .effect = gItemEffect_Antacid,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Vitamin,
+        .iconPalette = gItemIconPalette_Calcium,
+    },
+
+    [ITEM_COPPER] =
+    {
+        .name = ITEM_NAME("Copper"),
+        .pluralName = ITEM_PLURAL_NAME("Copper"),
+        .price = 1000,
+        .description = COMPOUND_STRING(
+            "Lowers a Pokémon's\n"
+            "base Sp. Def EVs to 0."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
+        .effect = gItemEffect_Copper,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Vitamin,
+        .iconPalette = gItemIconPalette_Zinc,
+    },
+
+    [ITEM_MOLASSES] =
+    {
+        .name = ITEM_NAME("Molasses"),
+        .pluralName = ITEM_PLURAL_NAME("Molasses"),
+        .price = 1000,
+        .description = COMPOUND_STRING(
+            "Lowers a Pokémon's\n"
+            "base Speed EVs to 0."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
+        .effect = gItemEffect_Molasses,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Vitamin,
+        .iconPalette = gItemIconPalette_Carbos,
+    },
+};
 #undef ITEM_NAME
 #undef ITEM_PLURAL_NAME

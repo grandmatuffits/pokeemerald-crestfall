@@ -12142,7 +12142,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sHaunterLevelUpLearnset,
         .teachableLearnset = sHaunterTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ALAKAZAM},
+        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GENGAR},
                         {EVO_LEVEL, 0, SPECIES_GENGAR, CONDITIONS({IF_HOLD_ITEM, ITEM_LINKING_CORD})}),
     },
 

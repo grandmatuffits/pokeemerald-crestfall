@@ -4766,6 +4766,21 @@ void CheckPartyForShiny(void)
         }
     }
 }
+void BufferLeadMonEVs1(void)
+{
+    struct Pokemon *mon = &gPlayerParty[0];
+    ConvertIntToDecimalStringN(gStringVar1, GetMonData(mon, MON_DATA_HP_EV), STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar2, GetMonData(mon, MON_DATA_ATK_EV), STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar3, GetMonData(mon, MON_DATA_DEF_EV), STR_CONV_MODE_LEFT_ALIGN, 3);
+}
+
+void BufferLeadMonEVs2(void)
+{
+    struct Pokemon *mon = &gPlayerParty[0];
+    ConvertIntToDecimalStringN(gStringVar1, GetMonData(mon, MON_DATA_SPATK_EV), STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar2, GetMonData(mon, MON_DATA_SPDEF_EV), STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar3, GetMonData(mon, MON_DATA_SPEED_EV), STR_CONV_MODE_LEFT_ALIGN, 3);
+}
 void GetObjectPosition(u16* xPointer, u16* yPointer, u32 localId, u32 useTemplate)
 {
     u32 objectId;

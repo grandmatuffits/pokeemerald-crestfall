@@ -2004,3 +2004,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SAFARI_ZONE_AREA_3/scripts.inc"
 
 	.include "data/maps/SAFARI_ZONE_AREA_4/scripts.inc"
+
+	.include "data/maps/MINSI_CITY_CANDY_HOUSE/scripts.inc"
+
+	.include "data/maps/COPPERGATE_CITY_APARTMENT_2F/scripts.inc"

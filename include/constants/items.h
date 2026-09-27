@@ -1054,6 +1054,12 @@ enum __attribute__((packed)) Item
     ITEM_PICKAXE,
     ITEM_HM_VOUCHER,
     ITEM_MEGA_VOUCHER,
+    ITEM_HP_DOWN,
+    ITEM_FAT,
+    ITEM_SALT,
+    ITEM_ANTACID,
+    ITEM_COPPER,
+    ITEM_MOLASSES,
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
