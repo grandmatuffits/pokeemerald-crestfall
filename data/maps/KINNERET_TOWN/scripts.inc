@@ -27,8 +27,8 @@ KINNERET_TOWN_EventScript_Farmer_Repeat::
 	end
 
 KINNERET_TOWN_EventScript_Farmer_Buy::
-	checkcoins 500
-	compare VAR_RESULT, 1
+	checkmoney 500, 0
+	compare VAR_RESULT, TRUE
 	goto_if_eq KINNERET_TOWN_EventScript_Farmer_Purchase
 	msgbox KINNERET_TOWN_Text_Farmer_NoCash, MSGBOX_SIGN
 	closemessage
@@ -36,7 +36,7 @@ KINNERET_TOWN_EventScript_Farmer_Buy::
 	end
 
 KINNERET_TOWN_EventScript_Farmer_Purchase::
-	removecoins 500
+	removemoney 500, 0
 	giveitem ITEM_MOOMOO_MILK
 	release
 	end
