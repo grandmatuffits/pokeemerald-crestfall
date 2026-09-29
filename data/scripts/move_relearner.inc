@@ -7,14 +7,12 @@ Common_EventScript_MoveRelearner::
 	end
 
 Common_EventScript_MoveRelearnerDynMultiChoice::
-	dynmultipush MoveRelearner_Text_LevelUpMoves, 0
 	dynmultipush MoveRelearner_Text_EggMoves, 1
 	dynmultipush MoveRelearner_Text_TutormoveMoves, 2
 	dynmultipush MoveRelearner_Text_SeeYa, 3
 	dynmultistack 0, 0, FALSE, 4, 0, 0, DYN_MULTICHOICE_CB_NONE
 	closemessage
 	switch VAR_RESULT
-	case 0, MoveRelearner_EventScript_TeachLevelUpMoves
 	case 1, MoveRelearner_EventScript_TeachEggMoves
 	case 2, MoveRelearner_EventScript_TeachTutorMoves
 	case 3, MoveRelearner_EventScript_PleaseComeAgain

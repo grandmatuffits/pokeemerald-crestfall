@@ -18665,7 +18665,7 @@ Level: 30
 
 === TRAINER_ELDER_SAXUS ===
 Name: Saxus
-Class: Covenant Grunt
+Class: Covenant Elder
 Pic: Magma Grunt F
 Gender: Male
 Music: Aqua
@@ -19884,7 +19884,7 @@ Level: 49
 -Grass Knot
 -Focus Blast
 
-Banette @ Banettite
+Banette @ Quick Claw
 Level: 50
 -Destiny Bond
 -Shadow Claw
@@ -20341,12 +20341,12 @@ Level: 54
 
 === TRAINER_UMBRA_BERGEN ===
 Name: Umbra
-Class: Covenant Grunt
+Class: Pkmn Trainer 1
 Pic: Gentleman
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
 
 Skarmory @ Leftovers
 Level: 54
@@ -22045,7 +22045,7 @@ Impish Nature
 
 === TRAINER_UMBRA_REMATCH ===
 Name: Umbra
-Class: Covenant Grunt
+Class: Champion
 Pic: Gentleman
 Gender: Male
 Music: Male

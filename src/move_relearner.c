@@ -81,6 +81,8 @@ static EWRAM_DATA struct {
 
 EWRAM_DATA enum MoveRelearnerStates gMoveRelearnerState = MOVE_RELEARNER_LEVEL_UP_MOVES;
 EWRAM_DATA enum RelearnMode gRelearnMode = RELEARN_MODE_NONE;
+static EWRAM_DATA enum MoveRelearnerStates sSavedRelearnerState = 0;
+static EWRAM_DATA enum RelearnMode sSavedRelearnMode = 0;
 
 static const u16 sUI_Pal[] = INCGFX_U16("graphics/interface/ui_learn_move.png", ".gbapal");
 
@@ -361,6 +363,11 @@ static void CB2_InitLearnMove_Basic(void)
     case 3:
         StoreMoveText();
         CreateLearnableMovesList();
+        if (sMoveRelearnerScrollState.listOffset + sMoveRelearnerScrollState.listRow >= sMoveRelearnerStruct->numMenuChoices)
+        {
+        sMoveRelearnerScrollState.listOffset = 0;
+        sMoveRelearnerScrollState.listRow = 0;
+        }
         sMoveRelearnerStruct->moveListMenuTask = ListMenuInit(&gMultiuseListMenuTemplate, sMoveRelearnerScrollState.listOffset, sMoveRelearnerScrollState.listRow);
         gMain.state++;
         break;
@@ -416,6 +423,8 @@ void CB2_InitLearnMove(void)
 static void CB2_InitLearnMoveReturnFromSelectMove(void)
 {
     ResetTasks();
+    gMoveRelearnerState = sSavedRelearnerState;
+    gRelearnMode = sSavedRelearnMode;
     sMoveRelearnerStruct = AllocZeroed(sizeof(*sMoveRelearnerStruct));
     sMoveRelearnerStruct->mainTask = CreateTask(TaskDummy, 1);
     gTasks[sMoveRelearnerStruct->mainTask].tState = GetLearnMoveResumeAfterSummaryScreenState();
@@ -503,6 +512,8 @@ static void UIShowMoveList(u8 taskId)
     gSpecialVar_0x8008 = gTasks[taskId].tPartyIndex;
     gSpecialVar_0x8009 = gTasks[taskId].tMove;
     gSpecialVar_0x800A = gTasks[taskId].tCategory;
+    sSavedRelearnerState = gMoveRelearnerState;
+    sSavedRelearnMode = gRelearnMode;
     ShowSelectMovePokemonSummaryScreen(gParties[B_TRAINER_PLAYER], gTasks[taskId].tPartyIndex, CB2_InitLearnMoveReturnFromSelectMove, gTasks[taskId].tMove);
     DestroyTask(taskId);
     FreeMoveRelearnerResources();
