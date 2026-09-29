@@ -17499,9 +17499,17 @@ Items: Potion / Potion
 
 Murkrow
 Level: 14
+- Gust
+- Haze
+- Thief
+- Confuse Ray
 
 Mienfoo
 Level: 16
+- Fake Out
+- Detect
+- Reversal
+- Dig
 
 === TRAINER_COVENANT_GRUNT_1 ===
 Name: Acolyte
@@ -17880,12 +17888,24 @@ AI: Check Bad Move
 
 Ferroseed @ None
 Level: 20
+- Metal Claw
+- Ingrain
+- Leech Seed
+- Spikes
 
 Foongus @ None
 Level: 20
+- Clear Smog
+- Mega Drain
+- Stun Spore
+- Synthesis
 
 Lileep @ None
 Level: 22
+- Ancient Power
+- Ingrain
+- Mega Drain
+- Confuse Ray
 
 === TRAINER_LENOX_ACOLYTE_1 ===
 Name: Acolyte
@@ -18263,12 +18283,24 @@ AI: Check Bad Move / Try To Faint
 
 Frillish
 Level: 26
+- Hex
+- Strength Sap
+- Brine
+- Will-O-Wisp
 
 Carvanha
 Level: 27
+- Ice Fang
+- Aqua Jet
+- Bite
+- Poison Fang
 
 Tirtouga
 Level: 28
+- Crunch
+- Rock Slide
+- Brine
+- Body Slam
 
 === TRAINER_DELMARK_COVENANT_ACOLYTE ===
 Name: Acolyte
@@ -18325,12 +18357,24 @@ Items: Super Potion / Super Potion
 
 Murkrow
 Level: 28
+- Assurance
+- Wing Attack
+- Whirlwind
+- Taunt
 
 Munna
 Level: 29
+- Calm Mind
+- Psybeam
+- Moonlight
+- Hypnosis 
 
 Mienfoo
 Level: 30
+- U-Turn
+- Force Palm
+- Fake Out
+- Detect
 
 === TRAINER_ROUTE9_ATHLETE ===
 Name: Jordan
@@ -18674,12 +18718,24 @@ AI: Check Bad Move
 
 Rhyhorn @ Sitrus Berry
 Level: 32
+- Rock Blast
+- Bulldoze
+- Thunder Fang
+- Fire Fang
 
 Boldore @ Lum Berry
 Level: 32
+- Spikes
+- Stealth Rock
+- Rock Slide
+- Heavy Slam
 
 Tyrunt @ Life Orb
 Level: 34
+- Dragon Tail
+- Crunch
+- Rock Slide
+- Bulldoze
 
 === TRAINER_WALLAR_BELL_TOWER_HEX_MANIAC ===
 Name: Claire
@@ -19148,15 +19204,31 @@ Items: Hyper Potion / Hyper Potion / Revive
 
 Honchkrow @ Focus Sash
 Level: 38
+- Sucker Punch
+- Taunt
+- Mean look
+- Wing Attack
 
 Musharna @ Leftovers
 Level: 39
+- Calm Mind
+- Moonlight
+- Hypnosis
+- Stored Power
 
 Shuppet @ Life Orb
 Level: 39
+- Sucker Punch
+- Shadow Claw
+- Curse
+- Shadow Sneak
 
 Mienfoo @ Lum Berry
 Level: 40
+- Bulk Up
+- Drain Punch
+- Fake Out
+- Detect
 
 === TRAINER_ELDER_PRAETUS ===
 Name: Praetus
@@ -19167,17 +19239,35 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Ferroseed @ Leftovers
+Bronzong @ Leftovers
 Level: 39
+- Heavy Slam
+- Extrasensory
+- Hypnosis
+- Trick Room
+
 
 Durant @ Life Orb
 Level: 40
+Ability: Hustle
+- First Impression
+- X-Scissor
+- Crunch
+- Iron Head
 
 Magneton @ Magnet
 Level: 40
+- Thunderbolt
+- Flash Cannon
+- Thunder Wave
+- Volt Switch
 
 Bastiodon @ Sitrus Berry
 Level: 42
+- Heavy Slam
+- Body Press
+- Iron Defense
+- Rock Slide
 
 === TRAINER_LEADER_SILVIO ===
 Name: Silvio
@@ -19375,17 +19465,33 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Ferroseed @ Rocky Helmet
+Ferrothorn @ Rocky Helmet
 Level: 44
+- Heavy Slam
+- Iron Defense
+- Body Press
+- Stealth Rock
 
 Amoonguss @ Black Sludge
 Level: 45
+- Spore
+- Ingrain
+- Giga Drain
+- Sludge Bomb
 
 Breloom @ Life Orb
 Level: 45
+- Seed Bomb
+- Spore
+- Drain Punch
+- Swords Dance
 
 Cradily @ Leftovers
 Level: 46
+- Stockpile
+- Giga Drain
+- Stone Edge
+- Leech Seed
 
 === TRAINER_ELDER_SAXUS_2 ===
 Name: Saxus
@@ -19398,15 +19504,31 @@ AI: Check Bad Move / Try To Faint / Check Viability
 
 Crustle @ Sitrus Berry
 Level: 44
+- X-Scissor
+- Stealth Rock
+- Rock Slide
+- Spikes
 
 Gigalith @ Leftovers
 Level: 44
+- Rock Slide
+- Bulldoze
+- Curse
+- Body Press
 
-Rhyhorn @ Life Orb
+Rhydon @ Life Orb
 Level: 45
+- Rock Slide
+- Earthquake
+- Hammer Arm
+- Avalanche
 
 Tyrantrum @ Choice Scarf
 Level: 46
+- Dragon Claw
+- Crunch
+- Stone Edge
+- Fire Fang
 
 === TRAINER_ROUTE13_SWIMMERF_1 ===
 Name: Mary
@@ -19820,17 +19942,33 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Jellicent @ None
+Jellicent @ Sitrus Berry
 Level: 46
+- Hydro Pump
+- Shadow Ball
+- Recover
+- Rain Dance
 
-Tentacruel @ None
+Tentacruel @ Black Sludge
 Level: 47
+- Surf
+- Sludge Bomb
+- Rapid Spin
+- Toxic Spikes
 
-Sharpedo @ None
+Sharpedo @ Life Orb
 Level: 47
+- Crunch
+- Liquidation
+- Ice Fang
+- Swagger
 
-Carracosta @ None
+Carracosta @ White Herb
 Level: 48
+- Shell Smash
+- Aqua Tail
+- Rock Slide
+- Crunch
 
 === TRAINER_ELDER_PRAETUS_2 ===
 Name: Praetus
@@ -19841,17 +19979,34 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Ferrothorn @ None
+Bronzong @ Leftovers
 Level: 46
+- Trick Room
+- Calm Mind
+- Iron Defense
+- Stored Power
 
-Durant @ None
+Durant @ Life Orb
 Level: 47
+Ability: Hustle
+- First Impression
+- X-Scissor
+- Crunch
+- Iron Head
 
-Magnezone @ None
+Magnezone @ Magnet
 Level: 47
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Thunder Wave
 
-Bastiodon @ None
+Bastiodon @ Leftovers
 Level: 48
+- Heavy Slam
+- Rock Slide
+- Roar
+- Earthquake
 
 === TRAINER_RIVALCF_5 ===
 Name: Rival

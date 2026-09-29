@@ -4,7 +4,7 @@ LavaridgeTown_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 LavaridgeTown_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_LAVARIDGE_TOWN
+	setrespawn HEAL_LOCATION_DELMARK_CITY_WEST
 	call Common_EventScript_UpdateBrineyLocation
 	end
 

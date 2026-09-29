@@ -4,7 +4,7 @@ DewfordTown_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 DewfordTown_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_DEWFORD_TOWN
+	setrespawn HEAL_LOCATION_QUARREN_TOWN
 	call Common_EventScript_UpdateBrineyLocation
 	end
 

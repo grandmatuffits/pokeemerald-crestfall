@@ -103,7 +103,14 @@ MINSI_CITY_Text_GuardCleared:
 	.string "Well done, kid! Go on ahead!$"
 
 MINSI_CITY_EventScript_NorthCheckpoint::
+	goto_if_unset FLAG_BADGE01_GET, MINSI_CITY_EventScript_NorthTrigger
+	goto_if_unset FLAG_BADGE02_GET, MINSI_CITY_EventScript_NorthTrigger
+	goto_if_unset FLAG_BADGE03_GET, MINSI_CITY_EventScript_NorthTrigger
 	goto_if_unset FLAG_BADGE04_GET, MINSI_CITY_EventScript_NorthTrigger
+	goto_if_unset FLAG_BADGE05_GET, MINSI_CITY_EventScript_NorthTrigger
+	goto_if_unset FLAG_BADGE06_GET, MINSI_CITY_EventScript_NorthTrigger
+	goto_if_unset FLAG_BADGE07_GET, MINSI_CITY_EventScript_NorthTrigger
+	goto_if_unset FLAG_BADGE08_GET, MINSI_CITY_EventScript_NorthTrigger
 	end
 
 MINSI_CITY_EventScript_NorthTrigger::
