@@ -15,5 +15,7 @@ void Script_GetChosenMonDefensiveIVs(void);
 void Special_GiveSalamence(void);
 void Special_ClearPlayerParty(void);
 void Special_NameRival(void);
+u32 ScriptGiveMonParameterized(u8 side, u8 slot, struct PokemonTemplate *monTemplate);
+u8 HasEnoughMonsForDoubleBattle2(void);
 
 #endif // GUARD_SCRIPT_POKEMON_UTIL_H
