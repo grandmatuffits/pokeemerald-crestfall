@@ -1403,21 +1403,21 @@
 #define FLAG_HIDE_LEAGUE_GUARD2                           0x244
 #define FLAG_SILVIO_REMATCH_DONE                          0x29D
 #define FLAG_ROSS_REMATCH_DONE                            0x29E
-#define FLAG_ROBIN_REMATCH_DONE                           0x92A
-#define FLAG_OMAR_REMATCH_DONE                            0x92B
-#define FLAG_INGRID_REMATCH_DONE                          0x92C
-#define FLAG_FRIEDE_REMATCH_DONE                          0x92D
-#define FLAG_RANDALL_REMATCH_DONE                         0x92E
-#define FLAG_MERYL_REMATCH_DONE                           0x92F
-#define FLAG_DEFEATED_E4_FIRE_REMATCH                     0x930
-#define FLAG_DEFEATED_E4_WATER_REMATCH                    0x931
-#define FLAG_DEFEATED_E4_GRASS_REMATCH                    0x932
-#define FLAG_DEFEATED_E4_BUG_REMATCH                      0x934
+#define FLAG_ROBIN_REMATCH_DONE                           (SYSTEM_FLAGS + 0xAA)
+#define FLAG_OMAR_REMATCH_DONE                            (SYSTEM_FLAGS + 0xAB)
+#define FLAG_INGRID_REMATCH_DONE                          (SYSTEM_FLAGS + 0xAC)
+#define FLAG_FRIEDE_REMATCH_DONE                          (SYSTEM_FLAGS + 0xAD)
+#define FLAG_RANDALL_REMATCH_DONE                         (SYSTEM_FLAGS + 0xAE)
+#define FLAG_MERYL_REMATCH_DONE                           (SYSTEM_FLAGS + 0xAF)
+#define FLAG_DEFEATED_E4_FIRE_REMATCH                     (SYSTEM_FLAGS + 0x21)
+#define FLAG_DEFEATED_E4_WATER_REMATCH                    (SYSTEM_FLAGS + 0x22)
+#define FLAG_DEFEATED_E4_GRASS_REMATCH                    (SYSTEM_FLAGS + 0x23)
+#define FLAG_DEFEATED_E4_BUG_REMATCH                      (SYSTEM_FLAGS + 0x24)
 #define FLAG_DEFEATED_UMBRA_REMATCH                       0x2C5
 #define FLAG_HIDE_ARENA_UMBRA_CHAMPION                    0x2C6
 #define FLAG_HIDE_BELLTOWER_ACOLYTES                      0x29A
 #define FLAG_ELDERS_ARC_COMPLETE                          0x29B
-#define FLAG_HIDE_BRUTUS_INTRO                            0x964
+#define FLAG_HIDE_BRUTUS_INTRO                            (SYSTEM_FLAGS + 0x25)
 #define FLAG_HIDE_BELLTOWER_BRIGHAM                       0x29C
 #define FLAG_FINAL_E4_UNLOCKED                            0x26C
 #define FLAG_DEFEATED_E4_FIRE_FINAL                       0x26D
@@ -1442,7 +1442,7 @@
 #define FLAG_RED_BEATEN                             (SYSTEM_FLAGS + 0x99)
 #define FLAG_HIDE_GRANT_CYNTHIA                     (SYSTEM_FLAGS + 0x9A)
 #define FLAG_SHAYMIN_RECEIVED                       (SYSTEM_FLAGS + 0x9B)
-#define FLAG_CYNTHIA_BEATEN                         (SYSTEM_FLAGS + 0x9C)
+#define FLAG_CYNTHIA_BEATEN                         (SYSTEM_FLAGS + 0x26)
 #define FLAG_STEVEN_REMATCH_DONE                    (SYSTEM_FLAGS + 0x9D)
 #define FLAG_RED_REMATCH_DONE                       (SYSTEM_FLAGS + 0x9E)
 #define FLAG_CYNTHIA_REMATCH_DONE                   (SYSTEM_FLAGS + 0x9F)
@@ -1482,7 +1482,10 @@
 #define FLAG_GRANT_CAVE_HEART_SCALE                 (SYSTEM_FLAGS + 0xBA)
 #define FLAG_LENOX_TOWN_NUGGET                      (SYSTEM_FLAGS + 0xBB)
 
-#define FLAG_MINSI_RARE_CANDY_RECEIVED              (SYSTEM_FLAGS + 0xBC)         
+#define FLAG_MINSI_RARE_CANDY_RECEIVED              (SYSTEM_FLAGS + 0xBC)  
+#define FLAG_VELDTMOOR_GUIDE_DONE                   (SYSTEM_FLAGS + 0xBD)    
+
+#define FLAG_MIRAVEIL_HALL_AMULET_COIN              (SYSTEM_FLAGS + 0x27)
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1

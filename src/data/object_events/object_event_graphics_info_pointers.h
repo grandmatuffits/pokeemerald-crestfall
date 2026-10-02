@@ -27,6 +27,9 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokefanM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman4;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cook;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LinkReceptionist;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GhetsisFaker;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PlasmaPoserF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PlasmaPoserM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldMan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldWoman;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Camper;
@@ -388,6 +391,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysD;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysA;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysN;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_N;
 // Begin Pokémon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
@@ -432,6 +436,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WOMAN_4] =                  &gObjectEventGraphicsInfo_Woman4,
     [OBJ_EVENT_GFX_COOK] =                     &gObjectEventGraphicsInfo_Cook,
     [OBJ_EVENT_GFX_LINK_RECEPTIONIST] =        &gObjectEventGraphicsInfo_LinkReceptionist,
+    [OBJ_EVENT_GFX_GHETSIS_FAKER] =        &gObjectEventGraphicsInfo_GhetsisFaker,
+    [OBJ_EVENT_GFX_PLASMA_POSER_F] =        &gObjectEventGraphicsInfo_PlasmaPoserF,
+    [OBJ_EVENT_GFX_PLASMA_POSER_M] =        &gObjectEventGraphicsInfo_PlasmaPoserM,
     [OBJ_EVENT_GFX_OLD_MAN] =                  &gObjectEventGraphicsInfo_OldMan,
     [OBJ_EVENT_GFX_OLD_WOMAN] =                &gObjectEventGraphicsInfo_OldWoman,
     [OBJ_EVENT_GFX_CAMPER] =                   &gObjectEventGraphicsInfo_Camper,
@@ -791,6 +798,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_A]                 = &gObjectEventGraphicsInfo_DeoxysA,
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
+    [OBJ_EVENT_GFX_N]                        = &gObjectEventGraphicsInfo_N,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

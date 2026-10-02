@@ -10733,6 +10733,36 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/COPPERGATE_CITY_APARTMENT_2F/border.bin",
       "blockdata_filepath": "data/layouts/COPPERGATE_CITY_APARTMENT_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRAVEIL_GYM",
+      "name": "MIRAVEIL_GYM_Layout",
+      "width": 14,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MossdeepGym",
+      "border_filepath": "data/layouts/MIRAVEIL_GYM/border.bin",
+      "blockdata_filepath": "data/layouts/MIRAVEIL_GYM/map.bin"
+    },
+    {
+      "id": "LAYOUT_BELMONT_PARK",
+      "name": "BELMONT_PARK_Layout",
+      "width": 28,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/BELMONT_PARK/border.bin",
+      "blockdata_filepath": "data/layouts/BELMONT_PARK/map.bin"
+    },
+    {
+      "id": "LAYOUT_BELMONT_TOWN",
+      "name": "BELMONT_TOWN_Layout",
+      "width": 28,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/BELMONT_TOWN/border.bin",
+      "blockdata_filepath": "data/layouts/BELMONT_TOWN/map.bin"
     }
   ]
 }

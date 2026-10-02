@@ -149,6 +149,18 @@ static const struct SpriteFrameImage sPicTable_LinkReceptionist[] = {
     overworld_ascending_frames(gObjectEventPic_LinkReceptionist, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_GhetsisFaker[] = {
+    overworld_ascending_frames(gObjectEventPic_GhetsisFaker, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PlasmaPoserF[] = {
+    overworld_ascending_frames(gObjectEventPic_PlasmaPoserF, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_PlasmaPoserM[] = {
+    overworld_ascending_frames(gObjectEventPic_PlasmaPoserM, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_OldMan[] = {
     overworld_frame(gObjectEventPic_OldMan, 2, 4, 0),
     overworld_frame(gObjectEventPic_OldMan, 2, 4, 1),
@@ -3031,3 +3043,6 @@ static const struct SpriteFrameImage sPicTable_MomFrlg[] = {
     overworld_frame(gObjectEventPic_MomFrlg, 2, 4, 2),
 };
 
+static const struct SpriteFrameImage sPicTable_N[] = {
+    overworld_ascending_frames(gObjectEventPic_N, 2, 4),
+};

@@ -2008,3 +2008,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/MINSI_CITY_CANDY_HOUSE/scripts.inc"
 
 	.include "data/maps/COPPERGATE_CITY_APARTMENT_2F/scripts.inc"
+
+	.include "data/maps/MIRAVEIL_GYM/scripts.inc"
+
+	.include "data/maps/BELMONT_PARK/scripts.inc"
+
+	.include "data/maps/BELMONT_TOWN/scripts.inc"

@@ -227,4 +227,21 @@ MIRAVEIL_ISLAND_EventScript_CasinoGuy::
 MIRAVEIL_ISLAND_Text_CasinoGuy:
 	.string "I just played some ROULETTE at the\n"	
 	.string "MIRAVEIL CASINO and won an HM!\p"
-	.string "I can't wait to use STRENGTH!\n"				
+	.string "I can't wait to use STRENGTH!\n"			
+
+MIRAVEIL_ISLAND_EventScript_Cop::
+	msgbox MIRAVEIL_ISLAND_Text_Cop, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_Cop:
+	.string "The road up north is closed.\n"
+	.string "You can try later.$"
+
+MIRAVEIL_ISLAND_EventScript_GymCop::
+	msgbox MIRAVEIL_ISLAND_Text_GymCop, MSGBOX_NPC
+	end
+
+MIRAVEIL_ISLAND_Text_GymCop:
+	.string "The gym's closed until further\n"
+	.string "notice. Have you seen the party\p"
+	.string "at Miraveil Hall? Quite the fancy-do.$"

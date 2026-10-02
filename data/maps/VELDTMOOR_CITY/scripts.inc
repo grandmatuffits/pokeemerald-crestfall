@@ -1,9 +1,15 @@
 VELDTMOOR_CITY_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, VELDTMOOR_CITY_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, VELDTMOOR_CITY_OnFrame
 	.byte 0
+
+VELDTMOOR_CITY_OnFrame:
+	map_script_2 VAR_TEMP_2, 0, VELDTMOOR_CITY_EventScript_PostgameGuide
+	.2byte 0
 
 VELDTMOOR_CITY_OnTransition::
     setflag FLAG_WORLD_MAP_CERULEAN_CITY
+    setflag FLAG_TEMP_11
     goto_if_set FLAG_VELDTMOOR_RIVAL_DONE, VELDTMOOR_CITY_OnTransition_Done
     setflag FLAG_HIDE_VELDTMOOR_RIVAL
     end
@@ -131,3 +137,50 @@ VELDTMOOR_CITY_EventScript_CitySign::
 VELDTMOOR_CITY_Text_City_Sign:
 	.string "Veldtmoor City\n"
 	.string "The City of Greatness$"	
+
+VELDTMOOR_CITY_EventScript_PostgameGuide::
+	setvar VAR_TEMP_2, 1
+	goto_if_unset FLAG_DEFEATED_ENPALE_CHAMP, VELDTMOOR_CITY_EventScript_PostgameGuideEnd
+	goto_if_set FLAG_VELDTMOOR_GUIDE_DONE, VELDTMOOR_CITY_EventScript_PostgameGuideEnd
+	lockall
+	addobject LOCALID_DELIVERY_MAN
+	applymovement LOCALID_DELIVERY_MAN, VELDTMOOR_CITY_Movement_DeliveryApproach
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, VELDTMOOR_Movement_PlayerFaceUp
+	waitmovement 0
+	msgbox VELDTMOOR_CITY_Text_DeliveryLetters, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_DELIVERY_MAN, VELDTMOOR_CITY_Movement_DeliveryLeave
+	waitmovement 0
+	removeobject LOCALID_DELIVERY_MAN
+	setflag FLAG_VELDTMOOR_GUIDE_DONE
+	releaseall
+	end
+
+VELDTMOOR_CITY_EventScript_PostgameGuideEnd::
+	end
+
+VELDTMOOR_CITY_Movement_DeliveryApproach:
+	walk_up
+	walk_up
+	step_end
+
+VELDTMOOR_CITY_Movement_DeliveryLeave:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end	
+
+VELDTMOOR_CITY_Text_DeliveryLetters:
+	.string "Hello, are you {PLAYER}?\p"
+	.string "I have some letters for you.\p"
+	.string "One is from someone named UMBRA,\n"
+	.string "who invites you to their house\l"
+	.string "here in Veldtmoor.\p"
+	.string "Another is from PROFESSOR HEMLOCK,\n"
+	.string "who wants to see you in his lab.\p"
+	.string "That'll be all. Good day!$"	

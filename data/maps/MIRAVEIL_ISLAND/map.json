@@ -22,6 +22,11 @@
       "map": "MAP_ENPALE_ROUTE_15",
       "offset": 44,
       "direction": "left"
+    },
+    {
+      "map": "MAP_BELMONT_PARK",
+      "offset": 52,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -169,6 +174,58 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MIRAVEIL_ISLAND_EventScript_CasinoGuy",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 60,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MIRAVEIL_ISLAND_EventScript_Cop",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TRUCK",
+      "x": 64,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TRUCK",
+      "x": 64,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
+      "x": 32,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MIRAVEIL_ISLAND_EventScript_GymCop",
+      "flag": "FLAG_MINSI_NATDEX_RECEIVED"
     }
   ],
   "warp_events": [
@@ -213,6 +270,13 @@
       "elevation": 0,
       "dest_map": "MAP_MIRAVEIL_ISLAND_HALL",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 32,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_MIRAVEIL_GYM",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

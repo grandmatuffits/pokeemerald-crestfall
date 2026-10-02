@@ -415,6 +415,10 @@ enum
     OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG,
     OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG,
     OBJ_EVENT_GFX_TEST_HIGH_ID,    // <-- add this
+    OBJ_EVENT_GFX_N,
+    OBJ_EVENT_GFX_PLASMA_POSER_M,
+    OBJ_EVENT_GFX_PLASMA_POSER_F,
+    OBJ_EVENT_GFX_GHETSIS_FAKER,
     NUM_OBJ_EVENT_GFX,
 };
 
@@ -625,11 +629,15 @@ enum
 #define OBJ_EVENT_PAL_TAG_PRAETUS                 0x117C
 #define OBJ_EVENT_PAL_TAG_MERYL                   0x117D
 #define OBJ_EVENT_PAL_TAG_ROSS                    0x117E
+#define OBJ_EVENT_PAL_TAG_GHETSIS_FAKER           0x1188
+#define OBJ_EVENT_PAL_TAG_PLASMA_POSER_F          0x1187
+#define OBJ_EVENT_PAL_TAG_PLASMA_POSER_M          0x1186
 #define OBJ_EVENT_PAL_TAG_REDDING                 0x117F
 #define OBJ_EVENT_PAL_TAG_BLUTO                   0x1183
 #define OBJ_EVENT_PAL_TAG_CYNTHIA                 0x1184
 #define OBJ_EVENT_PAL_TAG_GRETLE                  0x1181
 #define OBJ_EVENT_PAL_TAG_RICK                    0x1182
+#define OBJ_EVENT_PAL_TAG_N                       0x1185
 #endif //OW_FOLLOWERS_POKEBALLS
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611

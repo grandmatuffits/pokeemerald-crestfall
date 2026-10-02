@@ -175,7 +175,8 @@
     "ENPALE_ROUTE_19",
     "ENPALE_ROUTE_20",
     "COPPERGATE_CITY_WEST",
-    "SAFARI_ZONE_AREA_2"
+    "SAFARI_ZONE_AREA_2",
+    "BELMONT_TOWN"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -691,7 +692,8 @@
     "BERGEN_HILL",
     "BAYNOE_TEMPLE",
     "BAYNOE_TEMPLE_2F",
-    "WALLAR_BELL_TOWER_TOP"
+    "WALLAR_BELL_TOWER_TOP",
+    "BELMONT_PARK"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",
@@ -1279,7 +1281,8 @@
     "SAFARI_ZONE_AREA_3",
     "SAFARI_ZONE_AREA_4",
     "MINSI_CITY_CANDY_HOUSE",
-    "COPPERGATE_CITY_APARTMENT_2F"
+    "COPPERGATE_CITY_APARTMENT_2F",
+    "MIRAVEIL_GYM"
   ],
   "gMapGroup_Indoor_Delmark": [
     "DELMARK_CITY_FERRY_HOUSE",

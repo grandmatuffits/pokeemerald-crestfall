@@ -55,3 +55,32 @@ MIRAVEIL_BANQUET_1F_Text_Kid:
 	.string "Mother says I'm not allowed upstairs\n"
 	.string "during the grown-ups' party.\p"
 	.string "It's boring down here.$"
+
+MIRAVEIL_ISLAND_HALL_EventScript_AmuletCoinMan::
+	lock
+	faceplayer
+	goto_if_set FLAG_MIRAVEIL_HALL_AMULET_COIN, MIRAVEIL_ISLAND_HALL_EventScript_AmuletCoinManDone
+	msgbox MIRAVEIL_ISLAND_HALL_Text_AmuletCoinOffer, MSGBOX_DEFAULT
+	giveitem ITEM_AMULET_COIN
+	compare VAR_RESULT, FALSE
+	goto_if_eq MIRAVEIL_ISLAND_HALL_EventScript_AmuletCoinManEnd
+	setflag FLAG_MIRAVEIL_HALL_AMULET_COIN
+	msgbox MIRAVEIL_ISLAND_HALL_Text_AmuletCoinAfter, MSGBOX_DEFAULT
+	release
+	end
+
+MIRAVEIL_ISLAND_HALL_EventScript_AmuletCoinManDone::
+	msgbox MIRAVEIL_ISLAND_HALL_Text_AmuletCoinAfter, MSGBOX_DEFAULT
+MIRAVEIL_ISLAND_HALL_EventScript_AmuletCoinManEnd::
+	release
+	end
+
+MIRAVEIL_ISLAND_HALL_Text_AmuletCoinOffer:
+	.string "A youngster like you shouldn't be\n"
+	.string "in a place like this wearing that.\p"
+	.string "Here, go buy yourself something\n"
+	.string "nice!$"
+
+MIRAVEIL_ISLAND_HALL_Text_AmuletCoinAfter:
+	.string "With that, you'll be able to afford\n"
+	.string "something real pretty!$"	
