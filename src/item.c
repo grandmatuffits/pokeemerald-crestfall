@@ -895,6 +895,11 @@ ItemUseFunc GetItemFieldFunc(enum Item itemId)
 enum EffectItem GetItemBattleUsage(enum Item itemId)
 {
     enum Item item = SanitizeItemId(itemId);
+
+    // Berries can only be used as held items in battle.
+    if (GetItemPocket(item) == POCKET_BERRIES)
+        return 0;
+
     // Handle E-Reader berries.
     if (item == ITEM_ENIGMA_BERRY_E_READER)
     {

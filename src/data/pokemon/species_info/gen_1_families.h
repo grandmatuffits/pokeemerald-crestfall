@@ -7895,7 +7895,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPrimeapeLevelUpLearnset,
         .teachableLearnset = sPrimeapeTeachableLearnset,
     #if P_GEN_9_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_ANNIHILAPE, CONDITIONS({IF_USED_MOVE_X_TIMES, MOVE_RAGE_FIST, 20})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_ANNIHILAPE, CONDITIONS({IF_KNOWS_MOVE, MOVE_RAGE_FIST})}),
     #endif
     },
 
@@ -10455,12 +10455,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sSlowpokeTeachableLearnset,
         .eggMoveLearnset = sSlowpokeEggMoveLearnset,
         .formSpeciesIdTable = sSlowpokeFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_SLOWBRO}
-                            #if P_GEN_2_CROSS_EVOS
-                                ,{EVO_TRADE, 0, SPECIES_SLOWKING, CONDITIONS({IF_HOLD_ITEM, ITEM_KINGS_ROCK})},
-                                {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING}
-                            #endif
-                            ),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SLOWKING, CONDITIONS({IF_HOLD_ITEM, ITEM_KINGS_ROCK})},
+                                {EVO_LEVEL, 37, SPECIES_SLOWBRO}),
     },
 
     [SPECIES_SLOWBRO] =
@@ -12556,8 +12552,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sOnixTeachableLearnset,
         .eggMoveLearnset = sOnixEggMoveLearnset,
     #if P_GEN_2_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_STEELIX, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})},
-                                {EVO_ITEM, ITEM_METAL_COAT, SPECIES_STEELIX}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_STEELIX, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_COAT})}),
     #endif
     },
 

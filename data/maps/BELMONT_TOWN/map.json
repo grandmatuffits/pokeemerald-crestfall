@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_BELMONT_PARK",
-      "offset": 0,
+      "offset": 12,
       "direction": "down"
     }
   ],

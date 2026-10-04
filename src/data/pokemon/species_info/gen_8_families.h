@@ -6564,7 +6564,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .formSpeciesIdTable = sDuraludonFormSpeciesIdTable,
         .formChangeTable = sDuraludonFormChangeTable,
     #if P_GEN_9_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_METAL_ALLOY, SPECIES_ARCHALUDON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_ARCHALUDON, CONDITIONS({IF_HOLD_ITEM, ITEM_METAL_ALLOY})}),
     #endif
     },
 

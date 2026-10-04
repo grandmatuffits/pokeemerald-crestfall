@@ -4696,8 +4696,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .teachableLearnset = sBasculinWhiteStripedTeachableLearnset,
         .eggMoveLearnset = sBasculinWhiteStripedEggMoveLearnset,
         .formSpeciesIdTable = sBasculinFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_BASCULEGION_M, CONDITIONS({IF_RECOIL_DAMAGE_GE, 294}, {IF_GENDER, MON_MALE})},
-                                {EVO_LEVEL, 0, SPECIES_BASCULEGION_F, CONDITIONS({IF_RECOIL_DAMAGE_GE, 294}, {IF_GENDER, MON_FEMALE})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_BASCULEGION_M, CONDITIONS({IF_KNOWS_MOVE, MOVE_FINAL_GAMBIT}, {IF_GENDER, MON_MALE})},
+                                {EVO_LEVEL, 0, SPECIES_BASCULEGION_F, CONDITIONS({IF_KNOWS_MOVE, MOVE_FINAL_GAMBIT}, {IF_GENDER, MON_FEMALE})}),
     },
 
     [SPECIES_BASCULEGION_M] =

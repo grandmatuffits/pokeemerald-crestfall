@@ -39700,12 +39700,12 @@
               {
                 "min_level": 28,
                 "max_level": 34,
-                "species": "SPECIES_BASCULIN"
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
               },
               {
                 "min_level": 30,
                 "max_level": 36,
-                "species": "SPECIES_ALOMOMOLA"
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
               }
             ]
           }
@@ -39913,12 +39913,12 @@
               {
                 "min_level": 38,
                 "max_level": 42,
-                "species": "SPECIES_BASCULIN"
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
               },
               {
                 "min_level": 38,
                 "max_level": 42,
-                "species": "SPECIES_ALOMOMOLA"
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
               }
             ]
           }

@@ -17,6 +17,11 @@
       "map": "MAP_MIRAVEIL_ISLAND",
       "offset": -52,
       "direction": "down"
+    },
+    {
+      "map": "MAP_BELMONT_TOWN",
+      "offset": -12,
+      "direction": "up"
     }
   ],
   "object_events": [

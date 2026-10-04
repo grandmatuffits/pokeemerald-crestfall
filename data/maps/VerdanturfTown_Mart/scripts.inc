@@ -13,6 +13,7 @@ VerdanturfTown_Mart_EventScript_Clerk::
 
 	.align 2
 VerdanturfTown_Mart_Pokemart:
+	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_SUPER_POTION
@@ -23,6 +24,7 @@ VerdanturfTown_Mart_Pokemart:
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_BURN_HEAL
 	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_TM_TAUNT

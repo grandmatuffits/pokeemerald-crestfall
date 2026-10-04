@@ -1487,6 +1487,10 @@
 
 #define FLAG_MIRAVEIL_HALL_AMULET_COIN              (SYSTEM_FLAGS + 0x27)
 
+#define FLAG_SAFARI_ZONE_REAPER_CLOTH                               0x1E0
+#define FLAG_SAFARI_ZONE_KINGS_ROCK                                 0x1E1
+#define FLAG_SAFARI_ZONE_METAL_ALLOY                                0x1E2
+
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
@@ -1677,6 +1681,8 @@
 #define FLAG_UNUSED_0x8E3                           (SYSTEM_FLAGS + 0x83) // Unused Flag
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
+
+#define FLAG_RECEIVED_DESTINY_KNOT                  0x2BB
 
 // FLAG_UNUSED_0x8E5 claimed as a FLAG_WORLD_MAP_* visited flag
 // FLAG_UNUSED_0x8E6 claimed as a FLAG_WORLD_MAP_* visited flag

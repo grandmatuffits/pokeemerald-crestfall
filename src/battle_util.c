@@ -9301,19 +9301,17 @@ void TryRestoreHeldItems(void)
 
     for (u32 i = 0; i < PARTY_SIZE; i++)
     {
-        if (gBattleStruct->itemLost[B_TRAINER_PLAYER][i].stolen || returnNPCItems)
+        if (B_RESTORE_HELD_BATTLE_ITEMS >= GEN_9 || gBattleStruct->itemLost[B_TRAINER_PLAYER][i].stolen || returnNPCItems)
         {
             enum Item lostItem = gBattleStruct->itemLost[B_TRAINER_PLAYER][i].originalItem;
 
-            if (GetItemPocket(lostItem) == POCKET_BERRIES && GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM) != lostItem)
-                lostItem = ITEM_NONE;
-
-            if ((lostItem != ITEM_NONE || returnNPCItems) && GetItemPocket(lostItem) != POCKET_BERRIES)
+            if (GetItemPocket(lostItem) == POCKET_BERRIES)
+                SetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM, &lostItem);
+            else if (lostItem != ITEM_NONE || returnNPCItems)
                 SetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM, &lostItem);
         }
     }
 }
-
 bool32 CanStealItem(enum BattlerId battlerStealing, enum BattlerId battlerItem, enum Item item)
 {
     enum BattleSide stealerSide = GetBattlerSide(battlerStealing);

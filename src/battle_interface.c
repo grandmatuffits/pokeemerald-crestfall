@@ -207,6 +207,8 @@ static void SpriteCB_LastUsedBall(struct Sprite *);
 static void SpriteCB_LastUsedBallWin(struct Sprite *);
 static void SpriteCB_MoveInfoWin(struct Sprite *sprite);
 
+static const u8 sText_HealthboxShinyStar[] = _("{COLOR DYNAMIC_COLOR5}{STAR}{COLOR WHITE}");
+
 static const struct OamData sOamData_64x32 =
 {
     .y = 0,
@@ -1788,6 +1790,9 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
     GetMonData(mon, MON_DATA_NICKNAME, nickname);
     StringGet_Nickname(nickname);
     ptr = StringCopy(gDisplayedStringBattle, nickname);
+    if (GetBattlerSide(gSprites[healthboxSpriteId].hMain_Battler) == B_SIDE_OPPONENT
+     && IsMonShiny(mon))
+        ptr = StringCopy(ptr, sText_HealthboxShinyStar);
 
     gender = GetMonGender(mon);
     species = GetMonData(mon, MON_DATA_SPECIES);

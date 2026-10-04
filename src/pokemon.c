@@ -4152,11 +4152,10 @@ bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct Evoluti
             if (GetTimeOfDay() != params[i].arg1)
                 currentCondition = TRUE;
             break;
-        case IF_HOLD_ITEM:
+                case IF_HOLD_ITEM:
             if (heldItem == params[i].arg1)
             {
                 currentCondition = TRUE;
-                removeHoldItem = TRUE;
             }
             break;
         // Gen 3

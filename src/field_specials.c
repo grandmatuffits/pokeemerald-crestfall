@@ -4301,9 +4301,8 @@ static const struct SafariBounty sSafariBounties[] =
 
 static const u16 sSafariBountyRewards[] =
 {
-    ITEM_NUGGET, ITEM_BIG_PEARL, ITEM_STAR_PIECE, ITEM_BIG_MUSHROOM,
-    ITEM_PEARL, ITEM_STARDUST, ITEM_TINY_MUSHROOM,
-    ITEM_HEART_SCALE, ITEM_HEART_SCALE, ITEM_HEART_SCALE,
+    ITEM_NUGGET, ITEM_BIG_NUGGET, ITEM_PEARL_STRING, ITEM_COMET_SHARD,
+    ITEM_HEART_SCALE, ITEM_HEART_SCALE, ITEM_HEART_SCALE, ITEM_HEART_SCALE,
 };
 
 static bool8 MonMatchesBounty(struct Pokemon *mon, const struct SafariBounty *b)
