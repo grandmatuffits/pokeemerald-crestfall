@@ -254,14 +254,6 @@
   "coord_events": [],
   "bg_events": [
     {
-      "type": "hidden_item",
-      "x": 44,
-      "y": 35,
-      "elevation": 0,
-      "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_2_RARE_CANDY"
-    },
-    {
       "type": "sign",
       "x": 54,
       "y": 6,

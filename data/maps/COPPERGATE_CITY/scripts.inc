@@ -1,6 +1,3 @@
-#define LOCALID_COPPERGATE_RIVAL 4
-#define LOCALID_COPPERGATE_BLOCKER 9
-
 COPPERGATE_CITY_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, COPPERGATE_CITY_OnTransition
 	.byte 0
@@ -157,8 +154,6 @@ COPPERGATE_CITY_EventScript_RivalFinish::
 	end
 
 @ ======== GRUNTS / COVENANT SCENE (salesman-triggered) ========
-#define LOCALID_COPPERGATE_GRUNT_1 6
-#define LOCALID_COPPERGATE_GRUNT_2 7
 
 @ Master cutscene — runs off the bike salesman's interaction.
 COPPERGATE_CITY_EventScript_BikeSalesman::

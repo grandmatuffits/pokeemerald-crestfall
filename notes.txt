@@ -1,0 +1,15 @@
+v1.2.1
+
+- Fixed berries not persisting after battle
+- Berries can no longer be used from the bag in battle (held berries still work)
+- Added a shiny star to the name box of shiny Pokémon in battle
+- Scale Shot is now available from the Move Reminder
+- Held evolution items are no longer consumed when the Pokémon evolves
+- Some evolutions now trigger on level-up (Onix, Dusclops, Duraludon, Slowpoke, Primeape, Basculin)
+- Added King's Rock, Metal Alloy and Reaper Cloth to the Safari Zone
+- Added White-Striped Basculin to the Safari Zone (rare spawn from Super Rod in main area and west area)
+- Safari Zone bounty rewards adjusted (Heart Scales are given more frequently)
+- Added a Destiny Knot, given by a girl in the Route 9 Daycare
+- Fixed a policeman in Coppergate City not disappearing after receiving the National Dex
+- Route 9 map dimensions adjusted
+- Some basic items have been adjusted in various marts

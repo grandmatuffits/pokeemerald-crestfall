@@ -1487,9 +1487,11 @@
 
 #define FLAG_MIRAVEIL_HALL_AMULET_COIN              (SYSTEM_FLAGS + 0x27)
 
-#define FLAG_SAFARI_ZONE_REAPER_CLOTH                               0x1E0
-#define FLAG_SAFARI_ZONE_KINGS_ROCK                                 0x1E1
-#define FLAG_SAFARI_ZONE_METAL_ALLOY                                0x1E2
+#define FLAG_SAFARI_ZONE_REAPER_CLOTH	                            0x465
+#define FLAG_SAFARI_ZONE_KINGS_ROCK                                 0x466
+#define FLAG_SAFARI_ZONE_METAL_ALLOY                                0x467
+#define FLAG_BELMONT_LEADERS_CREST                                  0x468
+#define FLAG_BELMONT_PEAT_BLOCK                                     0x46D
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1

@@ -354,8 +354,8 @@
 #define B_SHOW_TARGETS                      TRUE       // If set to TRUE, all available targets will be shown before selecting a move in Double Battles.
 #define B_SHOW_CATEGORY_ICON                TRUE       // If set to TRUE, an icon in the summary and move relearner will show a move's category.
 #define B_HIDE_HEALTHBOX_IN_ANIMS           TRUE       // If set to TRUE, healthboxes will be hidden during move animations.
-#define B_WAIT_TIME_MULTIPLIER              16         // This determines how long text pauses for in battle. Vanilla is 16. Lower values result in faster battles.
-#define B_QUICK_MOVE_CURSOR_TO_RUN          FALSE      // If set to TRUE, pushing B in the battle menu in a wild encounter will move the cursor to the Run option.
+#define B_WAIT_TIME_MULTIPLIER              8         // This determines how long text pauses for in battle. Vanilla is 16. Lower values result in faster battles.
+#define B_QUICK_MOVE_CURSOR_TO_RUN          TRUE      // If set to TRUE, pushing B in the battle menu in a wild encounter will move the cursor to the Run option.
 #define B_RUN_TRAINER_BATTLE                TRUE       // If set to TRUE, players can run from Trainer battles as in Gen9+. This is treated as a white out.
 #define B_MOVE_DESCRIPTION_BUTTON           L_BUTTON   // If set to a button other than B_LAST_USED_BALL_BUTTON, pressing this button will open the move description menu.
 #define B_SHOW_USELESS_Z_MOVE_INFO          FALSE      // If set to TRUE, Z-Moves without additional effects, like newer generation status moves, will say "No additional effect."
@@ -453,5 +453,9 @@
 #define B_POOL_RULES_USE_ITEM_EXCLUSIONS    FALSE    // Exclude items listed in poolItemClauseExclusions.
 #define B_POOL_RULE_MEGA_STONE_CLAUSE       FALSE    // Pick only 1 Pokémon with a Mega Stone.
 #define B_POOL_RULE_Z_CRYSTAL_CLAUSE        FALSE    // Pick only 1 Pokémon with a Z-Crystal.
+
+#define B_DOUBLE_B_TO_RUN       TRUE // Wild battles: pressing B twice quickly in the action menu runs.
+#define B_DOUBLE_B_RUN_WINDOW   20   // Frames allowed between the two presses.
+#define B_DOUBLE_B_RUN_GRACE    12   // Frames after the menu appears where B presses are ignored (anti-mash).
 
 #endif // GUARD_CONFIG_BATTLE_H

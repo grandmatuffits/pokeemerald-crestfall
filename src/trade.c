@@ -4571,8 +4571,20 @@ static void CreateInGameTradePokemonInternal(u8 whichPlayerMon, u8 whichInGameTr
     struct Pokemon *pokemon = &gParties[B_TRAINER_OPPONENT_A][0];
     u32 personality = inGameTrade->personality;
 
-    if (personality == 0)
+        if (personality == 0)
+    {
+        u32 rerolls = 0;
         personality = Random32();
+
+        if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
+            rerolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
+
+        while (GET_SHINY_VALUE(inGameTrade->otId, personality) >= SHINY_ODDS && rerolls > 0)
+        {
+            personality = Random32();
+            rerolls--;
+        }
+    }
 
     CreateMon(pokemon, inGameTrade->species, level, personality, OTID_STRUCT_PRESET(inGameTrade->otId));
     GiveMonInitialMoveset(pokemon);

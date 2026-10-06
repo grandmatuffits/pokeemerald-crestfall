@@ -36,9 +36,9 @@ static const bool32 (*const sSynchronizeModes[])(enum Species) =
     [STATIC_WILDMON_ORIGIN] = HasHalfChance,
     [ROAMER_ORIGIN] = IsFalse,
     [GIFTMON_ORIGIN] = IsTrue,
-#elif OW_SYNCHRONIZE_NATURE == GEN_8
+#elif OW_SYNCHRONIZE_NATURE >= GEN_8
     [WILDMON_ORIGIN] = IsTrue,
-    [STATIC_WILDMON_ORIGIN] = IsFalse,
+    [STATIC_WILDMON_ORIGIN] = IsTrue,
     [ROAMER_ORIGIN] = IsTrue,
     [GIFTMON_ORIGIN] = IsFalse,
 #else

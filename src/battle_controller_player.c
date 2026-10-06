@@ -231,12 +231,61 @@ static enum Item GetNextBall(enum Item ballId)
     return ballId;
 }
 
+#if B_DOUBLE_B_TO_RUN == TRUE
+static u8 sActionMenuFrames;
+static u8 sDoubleBWindow;
+static u32 sLastActionMenuVBlank;
+
+static void TrackActionMenuFrames(void)
+{
+    // A gap between calls means the menu was just (re)entered.
+    if (gMain.vblankCounter1 - sLastActionMenuVBlank > 2)
+    {
+        sActionMenuFrames = 0;
+        sDoubleBWindow = 0;
+    }
+    sLastActionMenuVBlank = gMain.vblankCounter1;
+
+    if (sActionMenuFrames < 255)
+        sActionMenuFrames++;
+    if (sDoubleBWindow != 0)
+        sDoubleBWindow--;
+}
+
+static bool32 TryDoubleBRun(enum BattlerId battler)
+{
+    if (!JOY_NEW(B_BUTTON))
+        return FALSE;
+    if (gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_LINK))
+        return FALSE;
+    if (sActionMenuFrames < B_DOUBLE_B_RUN_GRACE)
+        return FALSE;
+
+    if (sDoubleBWindow == 0)
+    {
+        sDoubleBWindow = B_DOUBLE_B_RUN_WINDOW;
+        return FALSE; // First press: let the normal B behavior run.
+    }
+
+    sDoubleBWindow = 0;
+    PlaySE(SE_SELECT);
+    TryHideLastUsedBall();
+    BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_RUN, 0);
+    BtlController_Complete(battler);
+    return TRUE;
+}
+#endif
+
 static void HandleInputChooseAction(enum BattlerId battler)
 {
     enum Item itemId = gBattleResources->bufferA[battler][2] | (gBattleResources->bufferA[battler][3] << 8);
 
     DoBounceEffect(battler, BOUNCE_HEALTHBOX, 7, 1);
     DoBounceEffect(battler, BOUNCE_MON, 7, 1);
+
+    #if B_DOUBLE_B_TO_RUN == TRUE
+        TrackActionMenuFrames();
+    #endif
 
     if (JOY_REPEAT(DPAD_ANY) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_L_EQUALS_A)
         gPlayerDpadHoldFrames++;
@@ -380,9 +429,13 @@ static void HandleInputChooseAction(enum BattlerId battler)
             BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_CANCEL_PARTNER, 0);
             BtlController_Complete(battler);
         }
-        else if (B_QUICK_MOVE_CURSOR_TO_RUN)
+                else
         {
-            if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER)) // If wild battle, pressing B moves cursor to "Run".
+#if B_DOUBLE_B_TO_RUN == TRUE
+            if (TryDoubleBRun(battler))
+                return;
+#endif
+            if (B_QUICK_MOVE_CURSOR_TO_RUN && !(gBattleTypeFlags & BATTLE_TYPE_TRAINER))
             {
                 PlaySE(SE_SELECT);
                 ActionSelectionDestroyCursorAt(gActionSelectionCursor[battler]);

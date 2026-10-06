@@ -256,6 +256,8 @@ static void PrintPageSpecificText(u8);
 static void CreateTextPrinterTask(u8);
 static void PrintInfoPageText(void);
 static void Task_PrintInfoPage(u8);
+static void Task_HandleInput_BallSwap(u8);
+static void TryStartBallSwap(u8);
 static void PrintMonOTName(void);
 static void PrintMonOTID(void);
 static void PrintMonAbilityName(void);
@@ -1801,6 +1803,10 @@ static void Task_HandleInput(u8 taskId)
             StopPokemonAnimations();
             PlaySE(SE_SELECT);
             BeginCloseSummaryScreen(taskId);
+        }
+                else if (JOY_NEW(R_BUTTON))
+        {
+            TryStartBallSwap(taskId);
         }
         else if (DEBUG_POKEMON_SPRITE_VISUALIZER && JOY_NEW(SELECT_BUTTON) && !gMain.inBattle)
         {
@@ -3591,6 +3597,165 @@ static void BufferMonTrainerMemo(void)
 static void PrintMonTrainerMemo(void)
 {
     PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_MEMO), gStringVar4, 0, 1, 0, 0);
+}
+
+#define BALL_SWAP_MAX 32
+
+static const u8 sText_BallSwapSelect[]  = _("{STR_VAR_1}\n{LEFT_ARROW}{RIGHT_ARROW} Change  {A_BUTTON} OK\n{B_BUTTON} Cancel");
+static const u8 sText_BallSwapConfirm[] = _("Swap to {STR_VAR_1}?\nThe old ball is lost.\n{A_BUTTON} Yes  {B_BUTTON} No");
+
+static enum Item sBallSwapItems[BALL_SWAP_MAX];
+static u8 sBallSwapCount;
+static u8 sBallSwapIdx;
+static bool8 sBallSwapConfirm;
+
+static bool32 IsBallSwapExcluded(enum PokeBall ball)
+{
+    return ball == BALL_SAFARI || ball == BALL_PARK || ball == BALL_CHERISH;
+}
+
+static void BuildBallSwapList(enum PokeBall current)
+{
+    u32 item;
+
+    sBallSwapCount = 0;
+    for (item = ITEM_NONE + 1; item < ITEMS_COUNT && sBallSwapCount < BALL_SWAP_MAX; item++)
+    {
+        enum PokeBall ball;
+
+        if (GetItemPocket(item) != POCKET_POKE_BALLS || !CheckBagHasItem(item, 1))
+            continue;
+        ball = ItemIdToBallId(item);
+        if (ball == BALL_STRANGE || ball == current || IsBallSwapExcluded(ball))
+            continue;
+        sBallSwapItems[sBallSwapCount++] = item;
+    }
+}
+
+static void PrintBallSwapText(void)
+{
+    enum Item item = sBallSwapItems[sBallSwapIdx];
+    u8 windowId = AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_MEMO);
+
+    CopyItemName(item, gStringVar1);
+    if (!sBallSwapConfirm)
+    {
+        StringExpandPlaceholders(gStringVar4, sText_BallSwapSelect);
+    }
+    else
+    {
+        StringExpandPlaceholders(gStringVar4, sText_BallSwapConfirm);
+    }
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
+    PrintTextOnWindow(windowId, gStringVar4, 0, 1, 0, 0);
+    CopyWindowToVram(windowId, COPYWIN_GFX);
+}
+
+static void RestoreMemoText(void)
+{
+    u8 windowId = AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_MEMO);
+
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
+    BufferMonTrainerMemo();
+    PrintMonTrainerMemo();
+    CopyWindowToVram(windowId, COPYWIN_GFX);
+}
+
+static void SetCaughtBall(enum PokeBall ball)
+{
+    u32 value = ball;
+
+    if (!sMonSummaryScreen->isBoxMon)
+        SetMonData(&sMonSummaryScreen->monList.mons[sMonSummaryScreen->curMonIndex], MON_DATA_POKEBALL, &value);
+    else
+        SetBoxMonData(&sMonSummaryScreen->monList.boxMons[sMonSummaryScreen->curMonIndex], MON_DATA_POKEBALL, &value);
+    SetMonData(&sMonSummaryScreen->currentMon, MON_DATA_POKEBALL, &value);
+}
+
+static void TryStartBallSwap(u8 taskId)
+{
+    enum PokeBall current;
+
+    if (sMonSummaryScreen->currPageIndex != PSS_PAGE_INFO
+     || sMonSummaryScreen->summary.isEgg
+     || gMain.inBattle
+     || (sMonSummaryScreen->mode != SUMMARY_MODE_NORMAL && sMonSummaryScreen->mode != SUMMARY_MODE_BOX))
+        return;
+
+    current = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_POKEBALL);
+    if (IsBallSwapExcluded(current))
+    {
+        PlaySE(SE_FAILURE);
+        return;
+    }
+
+    BuildBallSwapList(current);
+    if (sBallSwapCount == 0)
+    {
+        PlaySE(SE_FAILURE);
+        return;
+    }
+
+    sBallSwapIdx = 0;
+    sBallSwapConfirm = FALSE;
+    PlaySE(SE_SELECT);
+    PrintBallSwapText();
+    gTasks[taskId].func = Task_HandleInput_BallSwap;
+}
+
+static void Task_HandleInput_BallSwap(u8 taskId)
+{
+    if (gPaletteFade.active)
+        return;
+
+    if (!sBallSwapConfirm)
+    {
+        if (JOY_NEW(DPAD_RIGHT))
+        {
+            sBallSwapIdx = (sBallSwapIdx + 1) % sBallSwapCount;
+            PlaySE(SE_SELECT);
+            PrintBallSwapText();
+        }
+        else if (JOY_NEW(DPAD_LEFT))
+        {
+            sBallSwapIdx = (sBallSwapIdx + sBallSwapCount - 1) % sBallSwapCount;
+            PlaySE(SE_SELECT);
+            PrintBallSwapText();
+        }
+        else if (JOY_NEW(A_BUTTON))
+        {
+            sBallSwapConfirm = TRUE;
+            PlaySE(SE_SELECT);
+            PrintBallSwapText();
+        }
+        else if (JOY_NEW(B_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            RestoreMemoText();
+            gTasks[taskId].func = Task_HandleInput;
+        }
+    }
+    else
+    {
+        if (JOY_NEW(A_BUTTON))
+        {
+            enum Item item = sBallSwapItems[sBallSwapIdx];
+
+            RemoveBagItem(item, 1);
+            SetCaughtBall(ItemIdToBallId(item));
+            DestroySpriteAndFreeResources(&gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_BALL]]);
+            CreateCaughtBallSprite(&sMonSummaryScreen->currentMon);
+            PlaySE(SE_USE_ITEM);
+            RestoreMemoText();
+            gTasks[taskId].func = Task_HandleInput;
+        }
+        else if (JOY_NEW(B_BUTTON))
+        {
+            sBallSwapConfirm = FALSE;
+            PlaySE(SE_SELECT);
+            PrintBallSwapText();
+        }
+    }
 }
 
 static void BufferNatureString(void)
