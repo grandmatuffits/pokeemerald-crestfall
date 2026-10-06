@@ -54,12 +54,12 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	waitfanfare
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_RECEIVED_POKENAV
-	setflag FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT
+	setflag FLAG_TEMP_1
 	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp, MSGBOX_DEFAULT
 	closemessage
 	call Common_EventScript_OutOfCenterPartyHeal
 	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare, MSGBOX_DEFAULT
-	setflag FLAG_HIDE_ROUTE_116_WANDAS_BOYFRIEND
+	setflag FLAG_TEMP_1
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_WANDA
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY

@@ -70,7 +70,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendan::
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanWest
 	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanEast
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL
+	setflag FLAG_TEMP_1
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
 	setvar VAR_LITTLEROOT_TOWN_STATE, 1
 	savebgm MUS_DUMMY

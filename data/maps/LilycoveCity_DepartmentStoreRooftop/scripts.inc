@@ -21,11 +21,11 @@ LilycoveCity_DepartmentStoreRooftop_StageScene::
 	clearflag FLAG_HIDE_DELMARK_ROOFTOP_SILVIO
 	end
 LilycoveCity_DepartmentStoreRooftop_EventScript_ShowSaleWoman::
-	clearflag FLAG_HIDE_LILYCOVE_DEPARTMENT_STORE_ROOFTOP_SALE_WOMAN
+	clearflag FLAG_TEMP_1
 	return
 
 LilycoveCity_DepartmentStoreRooftop_EventScript_HideSaleWoman::
-	setflag FLAG_HIDE_LILYCOVE_DEPARTMENT_STORE_ROOFTOP_SALE_WOMAN
+	setflag FLAG_TEMP_1
 	return
 
 LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman::

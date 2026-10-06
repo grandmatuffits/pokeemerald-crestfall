@@ -95,7 +95,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SootopolisCity_EventScript_Man",
-      "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_SOOTOPOLIS_STEVEN",

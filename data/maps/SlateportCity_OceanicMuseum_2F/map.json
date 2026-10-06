@@ -27,7 +27,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SlateportCity_OceanicMuseum_2F_EventScript_CaptStern",
-      "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_CAPTAIN_STERN"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_OCEANIC_MUSEUM_2F_ARCHIE",

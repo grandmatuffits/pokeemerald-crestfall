@@ -27,7 +27,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LilycoveCity_Harbor_EventScript_FerryAttendant",
-      "flag": "FLAG_HIDE_LILYCOVE_HARBOR_FERRY_ATTENDANT"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_LILYCOVE_HARBOR_SS_TIDAL",

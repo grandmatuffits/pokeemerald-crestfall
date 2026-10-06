@@ -18,7 +18,7 @@ MossdeepCity_House2_EventScript_Wingull::
 	waitmoncry
 	closemessage
 	setflag FLAG_WINGULL_DELIVERED_MAIL
-	clearflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL
+	clearflag FLAG_TEMP_1
 	call_if_eq VAR_FACING, DIR_NORTH, MossdeepCity_House2_EventScript_WingullExitNorth
 	call_if_eq VAR_FACING, DIR_WEST, MossdeepCity_House2_EventScript_WingullExitWest
 	removeobject LOCALID_MOSSDEEP_HOUSE_WINGULL

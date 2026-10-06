@@ -181,7 +181,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExitWestEast::
 	end
 
 SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGruntExited::
-	setflag FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_FAMILIAR_AQUA_GRUNT
+	setflag FLAG_TEMP_1
 	playse SE_EXIT
 	removeobject LOCALID_OCEANIC_MUSEUM_FAMILIAR_GRUNT
 	release

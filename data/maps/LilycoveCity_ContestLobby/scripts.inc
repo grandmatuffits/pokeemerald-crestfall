@@ -13,12 +13,12 @@ LilycoveCity_ContestLobby_OnTransition:
 LilycoveCity_ContestLobby_EventScript_TryShowBlendMaster::
 	getpokenewsactive POKENEWS_BLENDMASTER
 	goto_if_eq VAR_RESULT, TRUE, LilycoveCity_ContestLobby_EventScript_ShowBlendMaster
-	clearflag FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER_REPLACEMENT
+	clearflag FLAG_TEMP_1
 	setflag FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER
 	return
 
 LilycoveCity_ContestLobby_EventScript_ShowBlendMaster::
-	setflag FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER_REPLACEMENT
+	setflag FLAG_TEMP_1
 	clearflag FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER
 	return
 
@@ -28,7 +28,7 @@ LilycoveCity_ContestLobby_OnFrame:
 	.2byte 0
 
 LilycoveCity_ContestLobby_EventScript_TryDoContestArtist::
-	goto_if_set FLAG_HIDE_LILYCOVE_MUSEUM_CURATOR, LilycoveCity_ContestLobby_EventScript_ContestArtist
+	goto_if_set FLAG_TEMP_1, LilycoveCity_ContestLobby_EventScript_ContestArtist
 	setvar VAR_LILYCOVE_CONTEST_LOBBY_STATE, 0
 	end
 
@@ -198,7 +198,7 @@ LilycoveCity_ContestLobby_Movement_ArtistReturnToPlayer:
 	step_end
 
 LilycoveCity_ContestLobby_EventScript_TryDoLinkContestArtist::
-	goto_if_set FLAG_HIDE_LILYCOVE_MUSEUM_CURATOR, LilycoveCity_ContestLobby_EventScript_LinkContestArtist
+	goto_if_set FLAG_TEMP_1, LilycoveCity_ContestLobby_EventScript_LinkContestArtist
 	setvar VAR_LILYCOVE_CONTEST_LOBBY_STATE, 0
 	end
 
@@ -348,7 +348,7 @@ LilycoveCity_ContestLobby_EventScript_SetMasterContestType::
 
 @ Functionally unused
 LilycoveCity_ContestLobby_EventScript_SetDebug::
-	setflag FLAG_HIDE_LILYCOVE_MUSEUM_CURATOR
+	setflag FLAG_TEMP_1
 #ifdef UBFIX
 	setvar VAR_LILYCOVE_MUSEUM_2F_STATE, 1
 #else

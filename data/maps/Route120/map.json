@@ -231,7 +231,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_NUGGET",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_120_NUGGET"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_ROUTE120_TY_1",
@@ -313,7 +313,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_FULL_HEAL",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_120_FULL_HEAL"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
@@ -391,7 +391,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_NEST_BALL",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_120_NEST_BALL"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -404,7 +404,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_HYPER_POTION",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_120_HYPER_POTION"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_BRIDGE_KECLEON",
@@ -418,7 +418,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route120_EventScript_BridgeKecleon",
-      "flag": "FLAG_HIDE_ROUTE_120_KECLEON_BRIDGE"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_ROUTE120_STEVEN",
@@ -432,7 +432,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route120_EventScript_Steven",
-      "flag": "FLAG_HIDE_ROUTE_120_STEVEN"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
@@ -498,7 +498,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_ROUTE_120_KECLEON_BRIDGE_SHADOW"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KECLEON",
@@ -511,7 +511,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route120_EventScript_Kecleon1",
-      "flag": "FLAG_HIDE_ROUTE_120_KECLEON_1"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KECLEON",
@@ -524,7 +524,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route120_EventScript_Kecleon2",
-      "flag": "FLAG_HIDE_ROUTE_120_KECLEON_2"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KECLEON",
@@ -537,7 +537,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route120_EventScript_Kecleon3",
-      "flag": "FLAG_HIDE_ROUTE_120_KECLEON_3"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KECLEON",
@@ -550,7 +550,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route120_EventScript_Kecleon5",
-      "flag": "FLAG_HIDE_ROUTE_120_KECLEON_5"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KECLEON",
@@ -563,7 +563,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route120_EventScript_Kecleon4",
-      "flag": "FLAG_HIDE_ROUTE_120_KECLEON_4"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
@@ -602,7 +602,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_REVIVE",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_120_REVIVE"
+      "flag": "0"
     }
   ],
   "warp_events": [

@@ -69,7 +69,7 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMay::
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_MaysHouse_2F_EventScript_MeetMayWest
 	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_MaysHouse_2F_EventScript_MeetMayEast
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL
+	setflag FLAG_TEMP_1
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
 	setvar VAR_LITTLEROOT_TOWN_STATE, 1
 	savebgm MUS_DUMMY

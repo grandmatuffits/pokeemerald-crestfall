@@ -79,13 +79,13 @@ ShoalCave_LowTideEntranceRoom_EventScript_DeclineShellBell::
 	end
 
 ShoalCave_LowTideEntranceRoom_EventScript_ResetShoalItems::
-	clearflag FLAG_RECEIVED_SHOAL_SALT_1
-	clearflag FLAG_RECEIVED_SHOAL_SALT_2
-	clearflag FLAG_RECEIVED_SHOAL_SALT_3
-	clearflag FLAG_RECEIVED_SHOAL_SALT_4
-	clearflag FLAG_RECEIVED_SHOAL_SHELL_1
-	clearflag FLAG_RECEIVED_SHOAL_SHELL_2
-	clearflag FLAG_RECEIVED_SHOAL_SHELL_3
-	clearflag FLAG_RECEIVED_SHOAL_SHELL_4
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_1
 	clearflag FLAG_SYS_SHOAL_ITEM
 	return

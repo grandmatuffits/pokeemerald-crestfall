@@ -62,7 +62,7 @@ Route116_EventScript_GiveRepeatBall::
 	call_if_eq VAR_FACING, DIR_WEST, Route116_EventScript_DevonEmployeeExit
 	call_if_eq VAR_FACING, DIR_EAST, Route116_EventScript_DevonEmployeeExitEast
 	removeobject VAR_LAST_TALKED
-	clearflag FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_EMPLOYEE
+	clearflag FLAG_TEMP_1
 	setflag FLAG_RECEIVED_REPEAT_BALL
 	release
 	end

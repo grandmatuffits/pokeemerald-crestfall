@@ -21,7 +21,7 @@ Route119_OnTransition:
 	end
 
 Route119_EventScript_MoveInstituteWorkersDownstairs::
-	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS
+	setflag FLAG_TEMP_1
 	clearflag FLAG_HIDE_WEATHER_INSTITUTE_1F_WORKERS
 	setvar VAR_WEATHER_INSTITUTE_STATE, 2
 	return

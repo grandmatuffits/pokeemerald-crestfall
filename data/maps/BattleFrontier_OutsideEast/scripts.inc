@@ -20,7 +20,7 @@ BattleFrontier_OutsideEast_OnTransition:
 	end
 
 BattleFrontier_OutsideEast_EventScript_ShowSudowoodo::
-	clearflag FLAG_HIDE_BATTLE_FRONTIER_SUDOWOODO
+	clearflag FLAG_TEMP_1
 	return
 
 BattleFrontier_OutsideEast_EventScript_BattleTowerSign::

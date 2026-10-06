@@ -380,7 +380,7 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	setflag FLAG_BADGE05_GET
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
-	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
+	setflag FLAG_TEMP_1
 	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
 	setvar VAR_0x8008, 5
 	call Common_EventScript_SetGymTrainers

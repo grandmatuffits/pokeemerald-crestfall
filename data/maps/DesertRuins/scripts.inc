@@ -33,7 +33,7 @@ DesertRuins_OnTransition:
 	end
 
 DesertRuins_EventScript_ShowRegirock::
-	clearflag FLAG_HIDE_REGIROCK
+	clearflag FLAG_TEMP_1
 	return
 
 DesertRuins_EventScript_CaveEntranceMiddle::

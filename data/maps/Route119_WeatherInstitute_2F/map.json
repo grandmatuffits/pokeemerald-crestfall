@@ -27,7 +27,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "Route119_WeatherInstitute_2F_EventScript_Grunt2",
-      "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_WEATHER_INSTITUTE_2F_GRUNT_2",
@@ -41,7 +41,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route119_WeatherInstitute_2F_EventScript_Grunt3",
-      "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_WEATHER_INSTITUTE_2F_SHELLY",
@@ -55,7 +55,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route119_WeatherInstitute_2F_EventScript_Shelly",
-      "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
@@ -68,7 +68,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_WEATHER_INSTITUTE_2F_SCIENTIST",
@@ -95,7 +95,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_WEATHER_INSTITUTE_2F_GRUNT_3",
@@ -123,7 +123,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route119_WeatherInstitute_2F_EventScript_Grunt5",
-      "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
+      "flag": "0"
     }
   ],
   "warp_events": [

@@ -9,8 +9,8 @@ MirageTower_4F_EventScript_RootFossil::
 	giveitem ITEM_ROOT_FOSSIL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	closemessage
-	setflag FLAG_HIDE_MIRAGE_TOWER_ROOT_FOSSIL
-	setflag FLAG_HIDE_MIRAGE_TOWER_CLAW_FOSSIL
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_1
 	removeobject LOCALID_MIRAGE_ROOT_FOSSIL
 	delay 30
 	setflag FLAG_CHOSE_ROOT_FOSSIL
@@ -30,8 +30,8 @@ MirageTower_4F_EventScript_ClawFossil::
 	giveitem ITEM_CLAW_FOSSIL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	closemessage
-	setflag FLAG_HIDE_MIRAGE_TOWER_CLAW_FOSSIL
-	setflag FLAG_HIDE_MIRAGE_TOWER_ROOT_FOSSIL
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_1
 	removeobject LOCALID_MIRAGE_CLAW_FOSSIL
 	delay 30
 	setflag FLAG_CHOSE_CLAW_FOSSIL

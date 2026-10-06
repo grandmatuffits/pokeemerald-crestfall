@@ -137,7 +137,7 @@ SSTidalCorridor_EventScript_ExitSlateport::
 	end
 
 SSTidalCorridor_EventScript_HideSnatchGiver::
-	setflag FLAG_HIDE_SS_TIDAL_ROOMS_SNATCH_GIVER
+	setflag FLAG_TEMP_1
 	return
 
 SSTidalCorridor_EventScript_Porthole::

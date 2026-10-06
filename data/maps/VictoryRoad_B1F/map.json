@@ -246,7 +246,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_TM_PSYCHIC",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_VICTORY_ROAD_B1F_TM_PSYCHIC"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -259,7 +259,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_FULL_RESTORE",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_VICTORY_ROAD_B1F_FULL_RESTORE"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
