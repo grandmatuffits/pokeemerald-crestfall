@@ -19,3 +19,5 @@ ROSEBANK_TOWN_MOVE_REMINDER_HOUSE_Text_Intro:
 	.string "What'd you say?$"
 
 @ move_tutor MOVE_SCALE_SHOT	
+@ move_tutor MOVE_FLY
+@ move_tutor MOVE_FLASH

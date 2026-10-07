@@ -274,6 +274,8 @@ static bool32 Fishing_CheckForBite(struct Task *task)
     if (!bite)
         bite = Fishing_RollForBite(task->tFishingRod, firstMonHasSuctionOrSticky);
 
+    bite = TRUE; // guaranteed bite
+
     if (!bite)
         task->tStep = FISHING_NOT_EVEN_NIBBLE;
 
@@ -294,18 +296,13 @@ static bool32 Fishing_GotBite(struct Task *task)
 
 static bool32 Fishing_ChangeMinigame(struct Task *task)
 {
-    switch (I_FISHING_MINIGAME)
+    AlignFishingAnimationFrames();
+    if (++task->tFrameCounter >= 30) // short pause so "Oh! A bite!" is readable
     {
-    case GEN_1:
-    case GEN_2:
-        task->tStep = FISHING_A_PRESS_NO_MINIGAME;
-        break;
-    case GEN_3:
-    default:
-        task->tStep = FISHING_WAIT_FOR_A;
-        break;
+        task->tFrameCounter = 0;
+        task->tStep = FISHING_MON_ON_HOOK;
     }
-    return TRUE;
+    return FALSE;
 }
 
 // We have a bite. Now, wait for the player to press A, or the timer to expire.

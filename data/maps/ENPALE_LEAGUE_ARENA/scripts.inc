@@ -607,7 +607,7 @@ ENPALE_LEAGUE_ARENA_Text_RivalChampionDefeatSpeech:
 	.string "I'll be seein' ya!$"
 
 ENPALE_LEAGUE_ARENA_Text_HemlockRivalChampionSpeech:
-	.string "C'mon.$"  @ TODO		
+	.string "C'mon.$"		
 
 
 ENPALE_LEAGUE_ARENA_Text_BrutusRivalChampionSpeech:

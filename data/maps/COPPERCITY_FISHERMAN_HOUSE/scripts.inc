@@ -19,7 +19,7 @@ COPPERGATE_CITY_EventScript_FishermanRepeat::
 
 COPPERGATE_CITY_Text_FishermanGive:
 	.string "This OLD ROD sucks!\n"
-	.string "Here, you can have it.\p"
+	.string "Here, you can have it.$"
 
 COPPERGATE_CITY_Text_FishermanAfter:
 	.string "{PLAYER} received the OLD ROD!$"

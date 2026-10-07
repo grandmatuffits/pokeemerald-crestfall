@@ -90,6 +90,7 @@
 #define PSS_DATA_WINDOW_INFO_ID 1
 #define PSS_DATA_WINDOW_INFO_ABILITY 2
 #define PSS_DATA_WINDOW_INFO_MEMO 3
+#define PSS_DATA_WINDOW_INFO_BALL_HINT 4
 
 // Dynamic fields for the Pokémon Skills page
 #define PSS_DATA_WINDOW_SKILLS_HELD_ITEM 0
@@ -257,6 +258,7 @@ static void CreateTextPrinterTask(u8);
 static void PrintInfoPageText(void);
 static void Task_PrintInfoPage(u8);
 static void Task_HandleInput_BallSwap(u8);
+static void PrintBallSwapHint(void);
 static void TryStartBallSwap(u8);
 static void PrintMonOTName(void);
 static void PrintMonOTID(void);
@@ -651,6 +653,15 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .height = 6,
         .paletteNum = 6,
         .baseBlock = 575,
+    },
+    [PSS_DATA_WINDOW_INFO_BALL_HINT] = {
+        .bg = 0,
+        .tilemapLeft = 1,
+        .tilemapTop = 18,
+        .width = 9,
+        .height = 2,
+        .paletteNum = 6,
+        .baseBlock = 697,
     },
 };
 static const struct WindowTemplate sPageSkillsTemplate[] =
@@ -3597,6 +3608,7 @@ static void BufferMonTrainerMemo(void)
 static void PrintMonTrainerMemo(void)
 {
     PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_MEMO), gStringVar4, 0, 1, 0, 0);
+    PrintBallSwapHint();
 }
 
 #define BALL_SWAP_MAX 32
@@ -3630,6 +3642,28 @@ static void BuildBallSwapList(enum PokeBall current)
             continue;
         sBallSwapItems[sBallSwapCount++] = item;
     }
+}
+static const u8 sText_BallSwapHint[] = _("R: Ball");
+
+static void PrintBallSwapHint(void)
+{
+    enum PokeBall current;
+    u8 windowId = AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_BALL_HINT);
+
+    if (sMonSummaryScreen->summary.isEgg
+     || gMain.inBattle
+     || (sMonSummaryScreen->mode != SUMMARY_MODE_NORMAL && sMonSummaryScreen->mode != SUMMARY_MODE_BOX))
+        return;
+
+    current = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_POKEBALL);
+    if (IsBallSwapExcluded(current))
+        return;
+
+    BuildBallSwapList(current);
+    if (sBallSwapCount == 0)
+        return;
+
+    PrintTextOnWindow(windowId, sText_BallSwapHint, 0, 1, 0, 1);
 }
 
 static void PrintBallSwapText(void)

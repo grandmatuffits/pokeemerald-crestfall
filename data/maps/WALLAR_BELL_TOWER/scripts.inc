@@ -17,7 +17,7 @@ Wallar_Bell_Tower_EventScript_Claire::
 	end
 
 Wallar_Bell_Tower_Text_ClaireIntro:
-	.string "This bell tower belongs to \n the spirits!"
+	.string "This bell tower belongs to \n the spirits!$"
 Wallar_Bell_Tower_Text_ClaireDefeat:
 	.string "Can you see them?$"
 Wallar_Bell_Tower_Text_ClairePostBattle:

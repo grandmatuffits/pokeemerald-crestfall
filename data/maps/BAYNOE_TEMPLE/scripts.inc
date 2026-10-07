@@ -217,4 +217,4 @@ BAYNOE_TEMPLE_EventScript_BrighamNote::
 
 BAYNOE_TEMPLE_Text_BrighamNote:
 	.string "It's just a notepad with some poorly\n"
-	.string "drawn Pokemon and bad handwriting.$\n"
+	.string "drawn Pokemon and bad handwriting.$"

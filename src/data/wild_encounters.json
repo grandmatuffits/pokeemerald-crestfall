@@ -39793,7 +39793,7 @@
               {
                 "min_level": 30,
                 "max_level": 36,
-                "species": "SPECIES_TYMPOLE"
+                "species": "SPECIES_POLIWAG"
               },
               {
                 "min_level": 30,
@@ -39806,24 +39806,24 @@
                 "species": "SPECIES_BELLSPROUT"
               },
               {
-                "min_level": 34,
-                "max_level": 40,
+                "min_level": 30,
+                "max_level": 36,
                 "species": "SPECIES_METAPOD"
               },
               {
-                "min_level": 32,
-                "max_level": 38,
+                "min_level": 30,
+                "max_level": 36,
                 "species": "SPECIES_NYMBLE"
               },
               {
-                "min_level": 34,
-                "max_level": 40,
+                "min_level": 30,
+                "max_level": 36,
                 "species": "SPECIES_DUSKULL"
               },
               {
                 "min_level": 34,
                 "max_level": 40,
-                "species": "SPECIES_PALPITOAD"
+                "species": "SPECIES_POLIWHIRL"
               },
               {
                 "min_level": 38,
@@ -40217,6 +40217,70 @@
                 "min_level": 15,
                 "max_level": 15,
                 "species": "SPECIES_OSHAWOTT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_BELMONT_TOWN",
+          "base_label": "gBELMONT_TOWN",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SNIVY"
               }
             ]
           }

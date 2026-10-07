@@ -1364,8 +1364,6 @@
 #define FLAG_VALERYTOWN_BULKUP_RECEIVED                   0x2A8
 #define FLAG_ITEM_ENPALE_ROUTE_19_TM10                    0x2A9
 #define FLAG_ITEM_ROUTE_18_TM95                           0x2AA
-#define FLAG_ITEM_ENPALE_ROUTE_7_ULTRA_BALL   0x29F
-#define FLAG_ITEM_ENPALE_ROUTE_8_TM82         0x2A0
 #define FLAG_ITEM_DELMARK_SOUTH_TM99                      0x2AB
 #define FLAG_ITEM_ROUTE7_TM52                             0x2AC
 #define FLAG_ALLENWOOD_FOREST_TM76                        0x2AD

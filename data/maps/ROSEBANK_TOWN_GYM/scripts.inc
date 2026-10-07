@@ -200,7 +200,7 @@ ROSEBANK_GYM_Text_MabelPostBattle:
 	.string "Alright fine, but be nice, you!$"
 
 ROSEBANK_GYM_Text_RueIntro:
-	.string "FREEZE!\p"
+	.string "FREEZE!$"
 
 ROSEBANK_GYM_Text_RueDefeat:
 	.string "Hah, get it?$"

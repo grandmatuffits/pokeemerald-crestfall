@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_SAFARI_ZONE_AREA_1",
-      "offset": 10,
+      "offset": 22,
       "direction": "right"
     },
     {

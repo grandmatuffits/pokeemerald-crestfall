@@ -227,7 +227,7 @@ MIRAVEIL_ISLAND_EventScript_CasinoGuy::
 MIRAVEIL_ISLAND_Text_CasinoGuy:
 	.string "I just played some ROULETTE at the\n"	
 	.string "MIRAVEIL CASINO and won an HM!\p"
-	.string "I can't wait to use STRENGTH!\n"			
+	.string "I can't wait to use STRENGTH!$"			
 
 MIRAVEIL_ISLAND_EventScript_Cop::
 	msgbox MIRAVEIL_ISLAND_Text_Cop, MSGBOX_NPC

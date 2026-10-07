@@ -8015,10 +8015,7 @@ static void ComputeBallData(u32 wildMonBattler, u32 playerBattler, struct BallDa
             ball->multiplier = 400;
         break;
     case BALL_SAFARI:
-        if (B_SAFARI_BALL_MODIFIER == GEN_1)
-            ball->multiplier = 200;
-        else if (B_SAFARI_BALL_MODIFIER <= GEN_7)
-            ball->multiplier = 150;
+        ball->multiplier = 300;
         break;
     case BALL_SPORT:
         if (B_SPORT_BALL_MODIFIER <= GEN_7)
