@@ -872,6 +872,11 @@ void ItemUseOutOfBattle_Mint(u8 taskId)
     SetUpItemUseCallback(taskId);
 }
 
+void ItemUseOutOfBattle_TeraShard(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_TeraShard;
+    SetUpItemUseCallback(taskId);
+}
 void ItemUseOutOfBattle_ResetEVs(u8 taskId)
 {
     gItemUseCB = ItemUseCB_ResetEVs;

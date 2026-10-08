@@ -84,7 +84,7 @@
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
+#define FLAG_TERA_ORB_CHARGED         0x41
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
@@ -1476,11 +1476,16 @@
 
 #define FLAG_MIRAVEIL_HALL_AMULET_COIN              (SYSTEM_FLAGS + 0x27)
 
+#define FLAG_HIDE_MIRAVEIL_GYM_CROWD                0x2E
+#define FLAG_HIDE_MIRAVEIL_GYM_N                    0x2F
+#define FLAG_MIRAVEIL_GYM_ORB_GIVEN                 0x40
+
 #define FLAG_SAFARI_ZONE_REAPER_CLOTH	                            0x465
 #define FLAG_SAFARI_ZONE_KINGS_ROCK                                 0x466
 #define FLAG_SAFARI_ZONE_METAL_ALLOY                                0x467
 #define FLAG_BELMONT_LEADERS_CREST                                  0x468
 #define FLAG_BELMONT_PEAT_BLOCK                                     0x46D
+
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1

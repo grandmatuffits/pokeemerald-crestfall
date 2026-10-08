@@ -9066,8 +9066,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sMachokeLevelUpLearnset,
         .teachableLearnset = sMachokeTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ALAKAZAM},
-                        {EVO_LEVEL, 0, SPECIES_ALAKAZAM, CONDITIONS({IF_HOLD_ITEM, ITEM_LINKING_CORD})}),
+        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_MACHAMP},
+                        {EVO_LEVEL, 0, SPECIES_MACHAMP, CONDITIONS({IF_HOLD_ITEM, ITEM_LINKING_CORD})}),
     },
 
 #if P_UPDATED_EXP_YIELDS >= GEN_8
@@ -9808,8 +9808,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sGravelerLevelUpLearnset,
         .teachableLearnset = sGravelerTeachableLearnset,
         .formSpeciesIdTable = sGravelerFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ALAKAZAM},
-                        {EVO_LEVEL, 0, SPECIES_ALAKAZAM, CONDITIONS({IF_HOLD_ITEM, ITEM_LINKING_CORD})}),
+        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GOLEM},
+                        {EVO_LEVEL, 0, SPECIES_GOLEM, CONDITIONS({IF_HOLD_ITEM, ITEM_LINKING_CORD})}),
     },
 
     [SPECIES_GOLEM] =

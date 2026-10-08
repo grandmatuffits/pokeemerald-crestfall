@@ -1233,8 +1233,13 @@
 #define TRAINER_ROUTE_9_BIRDKEEPER_R2                 1227
 #define TRAINER_NANDAY0                               1228
 #define TRAINER_MIRAVEIL_N                            1229
+#define TRAINER_PLASMA_POSER_1                        1230
+#define TRAINER_PLASMA_POSER_2                        1231
+#define TRAINER_PLASMA_POSER_3                        1232
+#define TRAINER_PLASMA_POSER_4                        1233
+#define TRAINER_PLASMA_POSER_5                        1234
 
-#define TRAINERS_COUNT_EMERALD                 1230
+#define TRAINERS_COUNT_EMERALD                 1235
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

@@ -1,0 +1,34 @@
+BELMONT_TOWN_MART_MapScripts::
+	.byte 0
+
+BELMONT_SHOP_EventScript_Clerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart BELMONT_SHOP_Items
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+BELMONT_SHOP_Items:
+	.2byte ITEM_BUG_TERA_SHARD
+	.2byte ITEM_DARK_TERA_SHARD
+	.2byte ITEM_DRAGON_TERA_SHARD
+	.2byte ITEM_ELECTRIC_TERA_SHARD
+	.2byte ITEM_FAIRY_TERA_SHARD
+	.2byte ITEM_FIGHTING_TERA_SHARD
+	.2byte ITEM_FIRE_TERA_SHARD
+	.2byte ITEM_FLYING_TERA_SHARD
+	.2byte ITEM_GHOST_TERA_SHARD
+	.2byte ITEM_GRASS_TERA_SHARD
+	.2byte ITEM_GROUND_TERA_SHARD
+	.2byte ITEM_ICE_TERA_SHARD
+	.2byte ITEM_NORMAL_TERA_SHARD
+	.2byte ITEM_POISON_TERA_SHARD
+	.2byte ITEM_PSYCHIC_TERA_SHARD
+	.2byte ITEM_ROCK_TERA_SHARD
+	.2byte ITEM_STEEL_TERA_SHARD
+	.2byte ITEM_WATER_TERA_SHARD
+	pokemartlistend

@@ -24779,7 +24779,7 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
 
 Klinklang @ Leftovers
-Level: 68
+Level: 70
 Ability: Clear Body
 EVs: 108 HP / 252 Atk / 148 Spe
 Adamant Nature
@@ -24789,7 +24789,7 @@ Adamant Nature
 - Wild Charge
 
 Vanilluxe @ Life Orb
-Level: 69
+Level: 71
 Ability: Ice Body
 EVs: 4 Atk / 252 SpA / 252 Spe
 Rash Nature
@@ -24799,7 +24799,7 @@ Rash Nature
 - Ice Shard
 
 Archeops @ Flying Gem
-Level: 69
+Level: 71
 Ability: Defeatist
 EVs: 252 Atk / 4 SpA / 252 Spe
 Hasty Nature
@@ -24809,7 +24809,7 @@ Hasty Nature
 - Roost
 
 Reshiram @ Life Orb
-Level: 70
+Level: 72
 Ability: Turboblaze
 EVs: 4 Atk / 252 SpA / 252 Spe
 Timid Nature
@@ -24819,7 +24819,7 @@ Timid Nature
 - Tailwind
 
 Zekrom @ Shuca Berry
-Level: 70
+Level: 72
 Ability: Teravolt
 EVs: 136 HP / 252 Atk / 120 Spe
 Adamant Nature
@@ -24829,7 +24829,7 @@ Adamant Nature
 - Outrage
 
 Zoroark @ Life Orb
-Level: 72
+Level: 74
 Ability: Illusion
 EVs: 252 SpA / 4 SpD / 252 Spe
 Tera Type: Poison
@@ -24838,3 +24838,92 @@ Timid Nature
 - Dark Pulse
 - Focus Blast
 - Sludge Bomb
+
+=== TRAINER_PLASMA_POSER_1 ===
+Name: Todd
+Class: Poser
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Scrafty
+Level: 65
+
+Krokorok
+Level: 65
+
+Gurdurr
+Level: 67
+Tera Type: Dark
+
+=== TRAINER_PLASMA_POSER_2 ===
+Name: Shanda
+Class: Poser
+Pic: Cooltrainer F Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Bisharp
+Level: 68
+
+Palpitoad
+Level: 68
+Tera Type: Steel
+
+=== TRAINER_PLASMA_POSER_3 ===
+Name: Judy
+Class: Poser
+Pic: Cooltrainer F Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Lilligant
+Level: 68
+
+Eelektross
+Level: 69
+Tera Type: Fairy
+
+=== TRAINER_PLASMA_POSER_4 ===
+Name: Craig
+Class: Poser
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Krookodile
+Level: 67
+
+Klang
+Level: 66
+
+Darmanitan
+Level: 69
+Tera Type: Fire
+
+=== TRAINER_PLASMA_POSER_5 ===
+Name: Alec
+Class: Poser
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Conkeldurr
+Level: 68
+
+Seismitoad
+Level: 68
+
+Leavanny
+Level: 70
+Tera Type: Dragon

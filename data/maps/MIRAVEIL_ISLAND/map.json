@@ -186,7 +186,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MIRAVEIL_ISLAND_EventScript_Cop",
-      "flag": "0"
+      "flag": "FLAG_MIRAVEIL_GYM_ORB_GIVEN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TRUCK",
@@ -199,7 +199,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_MIRAVEIL_GYM_ORB_GIVEN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TRUCK",
@@ -212,7 +212,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_MIRAVEIL_GYM_ORB_GIVEN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
@@ -273,7 +273,7 @@
     },
     {
       "x": 32,
-      "y": 30,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_MIRAVEIL_GYM",
       "dest_warp_id": "0"

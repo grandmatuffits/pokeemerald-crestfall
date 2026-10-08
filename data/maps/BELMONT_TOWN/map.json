@@ -34,7 +34,22 @@
       "flag": "FLAG_BELMONT_LEADERS_CREST"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 28,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_BELMONT_TOWN_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_BELMONT_TOWN_POKEMONCENTER",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

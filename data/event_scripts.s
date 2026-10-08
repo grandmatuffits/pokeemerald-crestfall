@@ -2015,3 +2015,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/BELMONT_PARK/scripts.inc"
 
 	.include "data/maps/BELMONT_TOWN/scripts.inc"
+
+	.include "data/maps/BELMONT_TOWN_MART/scripts.inc"
+
+	.include "data/maps/BELMONT_TOWN_POKEMONCENTER/scripts.inc"

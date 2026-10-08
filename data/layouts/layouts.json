@@ -9407,7 +9407,7 @@
     {
       "id": "LAYOUT_KINNERET_TOWN",
       "name": "KINNERET_TOWN_Layout",
-      "width": 24,
+      "width": 26,
       "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
@@ -9487,7 +9487,7 @@
     {
       "id": "LAYOUT_COPPERGATE_CITY",
       "name": "COPPERGATE_CITY_Layout",
-      "width": 58,
+      "width": 62,
       "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -10637,7 +10637,7 @@
     {
       "id": "LAYOUT_COPPERGATE_CITY_WEST",
       "name": "COPPERGATE_CITY_WEST_Layout",
-      "width": 36,
+      "width": 32,
       "height": 22,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
@@ -10763,6 +10763,26 @@
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/BELMONT_TOWN/border.bin",
       "blockdata_filepath": "data/layouts/BELMONT_TOWN/map.bin"
+    },
+    {
+      "id": "LAYOUT_BELMONT_TOWN_MART",
+      "name": "BELMONT_TOWN_MART_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/BELMONT_TOWN_MART/border.bin",
+      "blockdata_filepath": "data/layouts/BELMONT_TOWN_MART/map.bin"
+    },
+    {
+      "id": "LAYOUT_BELMONT_TOWN_POKEMONCENTER",
+      "name": "BELMONT_TOWN_POKEMONCENTER_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/BELMONT_TOWN_POKEMONCENTER/border.bin",
+      "blockdata_filepath": "data/layouts/BELMONT_TOWN_POKEMONCENTER/map.bin"
     }
   ]
 }

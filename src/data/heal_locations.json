@@ -383,7 +383,7 @@
     {
       "id": "HEAL_LOCATION_COPPERGATE_CITY",
       "map": "MAP_COPPERGATE_CITY",
-      "x": 34,
+      "x": 38,
       "y": 27
     },
     {
@@ -395,7 +395,7 @@
     {
       "id": "HEAL_LOCATION_KINNERET_TOWN",
       "map": "MAP_KINNERET_TOWN",
-      "x": 12,
+      "x": 14,
       "y": 22
     },
     {
@@ -439,6 +439,12 @@
       "map": "MAP_GRANT_ISLAND",
       "x": 24,
       "y": 65
+    },
+    {
+      "id": "HEAL_LOCATION_BELMONT_TOWN",
+      "map": "MAP_BELMONT_TOWN",
+      "x": 23,
+      "y": 35
     }
   ]
 }

@@ -5136,6 +5136,106 @@ void ItemUseCB_AbilityPatch(u8 taskId, TaskFunc task)
 
 #define tState      data[0]
 #define tMonId      data[1]
+#define tOldType    data[2]
+#define tNewType    data[3]
+#define tOldFunc    4
+
+void Task_TeraShard(u8 taskId)
+{
+    static const u8 sText_askText[] = _("Change {STR_VAR_1}'s Tera Type to\n{STR_VAR_2}?");
+    static const u8 sText_doneText[] = _("{STR_VAR_1}'s Tera Type changed to\n{STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+    s16 *data = gTasks[taskId].data;
+
+    switch (tState)
+    {
+    case 0:
+        // Can't use.
+        if (tOldType == tNewType)
+        {
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            DisplayPartyMenuMessage(gText_WontHaveEffect, 1);
+            ScheduleBgCopyTilemapToVram(2);
+            gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+            return;
+        }
+        gPartyMenuUseExitCallback = TRUE;
+        GetMonNickname(&gParties[B_TRAINER_PLAYER][tMonId], gStringVar1);
+        StringCopy(gStringVar2, gTypesInfo[tNewType].name);
+        StringExpandPlaceholders(gStringVar4, sText_askText);
+        PlaySE(SE_SELECT);
+        DisplayPartyMenuMessage(gStringVar4, 1);
+        ScheduleBgCopyTilemapToVram(2);
+        tState++;
+        break;
+    case 1:
+        if (!IsPartyMenuTextPrinterActive())
+        {
+            PartyMenuDisplayYesNoMenu();
+            tState++;
+        }
+        break;
+    case 2:
+        switch (Menu_ProcessInputNoWrapClearOnChoose())
+        {
+        case 0:
+            tState++;
+            break;
+        case 1:
+        case MENU_B_PRESSED:
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            ScheduleBgCopyTilemapToVram(2);
+            // Don't exit party selections screen, return to choosing a mon.
+            ClearStdWindowAndFrameToTransparent(6, 0);
+            ClearWindowTilemap(6);
+            DisplayPartyMenuStdMessage(5);
+            gTasks[taskId].func = (void *)GetWordTaskArg(taskId, tOldFunc);
+            return;
+        }
+        break;
+    case 3:
+        PlaySE(SE_USE_ITEM);
+        StringExpandPlaceholders(gStringVar4, sText_doneText);
+        DisplayPartyMenuMessage(gStringVar4, 1);
+        ScheduleBgCopyTilemapToVram(2);
+        tState++;
+        break;
+    case 4:
+        if (!IsPartyMenuTextPrinterActive())
+            tState++;
+        break;
+    case 5:
+    {
+        u8 newType = tNewType;
+        SetMonData(&gParties[B_TRAINER_PLAYER][tMonId], MON_DATA_TERA_TYPE, &newType);
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+        gTasks[taskId].func = Task_ClosePartyMenu;
+        break;
+    }
+    }
+}
+
+void ItemUseCB_TeraShard(u8 taskId, TaskFunc task)
+{
+    s16 *data = gTasks[taskId].data;
+
+    tState = 0;
+    tMonId = gPartyMenu.slotId;
+    tOldType = GetMonData(&gParties[B_TRAINER_PLAYER][tMonId], MON_DATA_TERA_TYPE);
+    tNewType = GetItemSecondaryId(gSpecialVar_ItemId);
+    SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
+    gTasks[taskId].func = Task_TeraShard;
+}
+
+#undef tState
+#undef tMonId
+#undef tOldType
+#undef tNewType
+#undef tOldFunc
+
+#define tState      data[0]
+#define tMonId      data[1]
 #define tOldNature  data[2]
 #define tNewNature  data[3]
 #define tOldFunc    4

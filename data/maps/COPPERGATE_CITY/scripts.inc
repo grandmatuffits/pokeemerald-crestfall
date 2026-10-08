@@ -69,6 +69,7 @@ COPPERGATE_CITY_EventScript_RivalTalk::
 @ ======== shared finish ========
 
 COPPERGATE_CITY_EventScript_RivalDone::
+	setflag FLAG_HIDE_COPPERGATE_RIVAL
 	releaseall
 	end
 

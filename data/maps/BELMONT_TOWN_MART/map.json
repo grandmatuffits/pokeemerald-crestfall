@@ -1,9 +1,9 @@
 {
-  "id": "MAP_DELMARK_CITY_APT_307",
-  "name": "DELMARK_CITY_APT_307",
-  "layout": "LAYOUT_DELMARK_CITY_APT_307",
-  "music": "MUS_ENPALE_DELMARK",
-  "region_map_section": "MAPSEC_CELADON_CITY",
+  "id": "MAP_BELMONT_TOWN_MART",
+  "name": "BELMONT_TOWN_MART",
+  "layout": "LAYOUT_BELMONT_TOWN_MART",
+  "music": "MUS_ENPALE_POKEMART",
+  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -15,33 +15,33 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
-      "x": 3,
-      "y": 4,
+      "graphics_id": "OBJ_EVENT_GFX_CLERK",
+      "x": 1,
+      "y": 3,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DELMARK_CITY_APT_307_EventScript_Lucas",
+      "script": "BELMONT_SHOP_EventScript_Clerk",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
       "x": 3,
-      "y": 6,
+      "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_DELMARK_CITY_EAST_APARTMENT_BUILDING_3F",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_BELMONT_TOWN",
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
-      "y": 6,
+      "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_DELMARK_CITY_EAST_APARTMENT_BUILDING_3F",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_BELMONT_TOWN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
