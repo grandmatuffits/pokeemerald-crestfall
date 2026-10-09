@@ -552,7 +552,29 @@ void Script_GiveRandomBerry(struct ScriptContext *ctx)
     gSpecialVar_Result = BerryTypeToItemId(RandomUniform(RNG_RANDOM_BERRY, loBerry, hiBerry));
 }
 
+static const u8 sDefaultRivalName[] = _("JUDE");
+
+static void CB2_RivalNamed(void)
+{
+    u8 *name = gSaveBlock2Ptr->rivalName;
+    u32 i;
+    bool32 blank = TRUE;
+
+    for (i = 0; i < PLAYER_NAME_LENGTH && name[i] != EOS; i++)
+    {
+        if (name[i] != CHAR_SPACE)
+        {
+            blank = FALSE;
+            break;
+        }
+    }
+    if (blank)
+        StringCopy(name, sDefaultRivalName);
+    CB2_ReturnToFieldContinueScript();
+}
+
 void Special_NameRival(void)
 {
-    DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->rivalName, MALE, 0, 0, CB2_ReturnToFieldContinueScript);
+    StringCopy(gSaveBlock2Ptr->rivalName, sDefaultRivalName);
+    DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->rivalName, MALE, 0, 0, CB2_RivalNamed);
 }
