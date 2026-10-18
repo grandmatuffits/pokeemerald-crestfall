@@ -294,6 +294,7 @@ GRANT_ISLAND_EventScript_CynthiaGive::
 	msgbox GRANT_ISLAND_Text_CynthiaGive, MSGBOX_DEFAULT
 	closemessage
 	bufferspeciesname STR_VAR_1, SPECIES_SHAYMIN
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SHAYMIN
 	givemon SPECIES_SHAYMIN, 70
 	goto_if_eq VAR_RESULT, 2, GRANT_ISLAND_EventScript_CynthiaNoRoom
 	setflag FLAG_SHAYMIN_RECEIVED

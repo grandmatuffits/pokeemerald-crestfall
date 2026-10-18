@@ -637,10 +637,11 @@ MINSI_LAB_EventScript_FossilHelix::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_OMANYTE, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_HELIX_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_OMANYTE
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilDome::
@@ -652,10 +653,11 @@ MINSI_LAB_EventScript_FossilDome::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_KABUTO, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_DOME_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_KABUTO
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilAmber::
@@ -667,10 +669,11 @@ MINSI_LAB_EventScript_FossilAmber::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_AERODACTYL, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_OLD_AMBER
 	bufferspeciesname STR_VAR_1, SPECIES_AERODACTYL
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilRoot::
@@ -682,10 +685,11 @@ MINSI_LAB_EventScript_FossilRoot::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_LILEEP, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_ROOT_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_LILEEP
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilClaw::
@@ -697,10 +701,11 @@ MINSI_LAB_EventScript_FossilClaw::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_ANORITH, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_CLAW_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_ANORITH
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilSkull::
@@ -712,10 +717,11 @@ MINSI_LAB_EventScript_FossilSkull::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_CRANIDOS, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_SKULL_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_CRANIDOS
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilArmor::
@@ -727,10 +733,11 @@ MINSI_LAB_EventScript_FossilArmor::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_SHIELDON, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_ARMOR_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_SHIELDON
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilCover::
@@ -742,10 +749,11 @@ MINSI_LAB_EventScript_FossilCover::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_TIRTOUGA, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_COVER_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_TIRTOUGA
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilPlume::
@@ -757,10 +765,11 @@ MINSI_LAB_EventScript_FossilPlume::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_ARCHEN, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_PLUME_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_ARCHEN
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilJaw::
@@ -772,10 +781,11 @@ MINSI_LAB_EventScript_FossilJaw::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_TYRUNT, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_JAW_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_TYRUNT
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilSail::
@@ -787,10 +797,11 @@ MINSI_LAB_EventScript_FossilSail::
 	goto_if_eq MINSI_LAB_EventScript_FossilDecline
 	givemon SPECIES_AMAURA, 20
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_FossilNoRoom
+	copyvar VAR_0x8004, VAR_RESULT
 	removeitem ITEM_SAIL_FOSSIL
 	bufferspeciesname STR_VAR_1, SPECIES_AMAURA
-	goto_if_eq VAR_RESULT, 0, MINSI_LAB_EventScript_FossilNameParty
-	goto_if_eq VAR_RESULT, 1, MINSI_LAB_EventScript_FossilNamePC
+	goto_if_eq VAR_0x8004, 0, MINSI_LAB_EventScript_FossilNameParty
+	goto_if_eq VAR_0x8004, 1, MINSI_LAB_EventScript_FossilNamePC
 	end
 
 MINSI_LAB_EventScript_FossilSuccess::
@@ -972,6 +983,7 @@ MINSI_LAB_EventScript_OakGiveMew::
 	msgbox MINSI_LAB_Text_OakGive, MSGBOX_DEFAULT
 	closemessage
 	bufferspeciesname STR_VAR_1, SPECIES_MEW
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MEW
 	givemon SPECIES_MEW, 70
 	goto_if_eq VAR_RESULT, 2, MINSI_LAB_EventScript_OakNoRoom
 	setflag FLAG_MEW_RECEIVED
