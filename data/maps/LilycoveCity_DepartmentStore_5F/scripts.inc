@@ -38,6 +38,7 @@ LilycoveCity_DepartmentStore_5F_Pokemart_Dolls:
     .2byte ITEM_PROTECTOR
     .2byte ITEM_METAL_COAT
 	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_WHIPPED_DREAM
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidLeft::
