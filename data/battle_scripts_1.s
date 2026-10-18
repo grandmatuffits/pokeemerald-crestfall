@@ -4129,14 +4129,17 @@ BattleScript_PoisonTurnDmg::
 BattleScript_DoStatusTurnDmg::
 	statusanimation BS_ATTACKER
 BattleScript_DoTurnDmg:
-	healthbarupdate BS_ATTACKER
-	datahpupdate BS_ATTACKER, ASSURANCE_DOUBLE
-	tryfaintmon BS_ATTACKER
-	checkteamslost BattleScript_DoTurnDmgEnd
-	tryactivateitem BS_ATTACKER, ACTIVATION_ON_HP_THRESHOLD
+    healthbarupdate BS_ATTACKER
+    datahpupdate BS_ATTACKER, ASSURANCE_DOUBLE
+    tryfaintmon BS_ATTACKER
+    jumpiffainted BS_ATTACKER, FALSE, BattleScript_DoTurnDmgCheckTeams
+    setbyte sGIVEEXP_STATE, 0
+    getexp BS_ATTACKER
+BattleScript_DoTurnDmgCheckTeams:
+    checkteamslost BattleScript_DoTurnDmgEnd
+    tryactivateitem BS_ATTACKER, ACTIVATION_ON_HP_THRESHOLD
 BattleScript_DoTurnDmgEnd:
-	return
-
+    return
 BattleScript_PoisonHealActivates::
 	copybyte gBattlerAbility, gBattlerAttacker
 	call BattleScript_AbilityPopUp
