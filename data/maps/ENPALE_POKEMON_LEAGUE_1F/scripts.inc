@@ -3,7 +3,7 @@ ENPALE_POKEMON_LEAGUE_1F_MapScripts::
 	.byte 0
 
 ENPALE_POKEMON_LEAGUE_1F_OnTransition::
-    goto_if_set FLAG_FINAL_E4_UNLOCKED, ENPALE_POKEMON_LEAGUE_1F_OnTransition_ReopenedLeague
+    goto_if_set FLAG_FINAL_E4_UNLOCKED, ENPALE_POKEMON_LEAGUE_1F_OnTransition_Final
     goto_if_set FLAG_DEFEATED_ENPALE_CHAMP, ENPALE_POKEMON_LEAGUE_1F_OnTransition_PostChamp
     setvar VAR_ELITE_4_STATE, 0
     clearflag FLAG_DEFEATED_E4_FIRE
@@ -15,11 +15,25 @@ ENPALE_POKEMON_LEAGUE_1F_OnTransition::
     end
 
 ENPALE_POKEMON_LEAGUE_1F_OnTransition_PostChamp::
-    goto_if_set FLAG_SILVIO_REMATCH_DONE, ENPALE_POKEMON_LEAGUE_1F_OnTransition_ReopenedLeague
+    goto_if_set FLAG_SILVIO_REMATCH_DONE, ENPALE_POKEMON_LEAGUE_1F_OnTransition_Rematch
     setflag FLAG_HIDE_LEAGUE_GUARD1
     clearflag FLAG_HIDE_LEAGUE_GUARD2
     end
 
+ENPALE_POKEMON_LEAGUE_1F_OnTransition_Rematch::
+    clearflag FLAG_DEFEATED_E4_FIRE_REMATCH
+    clearflag FLAG_DEFEATED_E4_WATER_REMATCH
+    clearflag FLAG_DEFEATED_E4_GRASS_REMATCH
+    clearflag FLAG_DEFEATED_E4_BUG_REMATCH
+    goto ENPALE_POKEMON_LEAGUE_1F_OnTransition_ReopenedLeague
+
+ENPALE_POKEMON_LEAGUE_1F_OnTransition_Final::
+    clearflag FLAG_DEFEATED_E4_FIRE_FINAL
+    clearflag FLAG_DEFEATED_E4_WATER_FINAL
+    clearflag FLAG_DEFEATED_E4_GRASS_FINAL
+    clearflag FLAG_DEFEATED_E4_BUG_FINAL
+    goto ENPALE_POKEMON_LEAGUE_1F_OnTransition_ReopenedLeague
+    
 ENPALE_POKEMON_LEAGUE_1F_OnTransition_ReopenedLeague::
     clearflag FLAG_HIDE_LEAGUE_GUARD1
     setflag FLAG_HIDE_LEAGUE_GUARD2
