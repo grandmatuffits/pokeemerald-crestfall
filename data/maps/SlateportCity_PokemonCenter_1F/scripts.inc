@@ -5,7 +5,6 @@ SlateportCity_PokemonCenter_1F_MapScripts::
 
 SlateportCity_PokemonCenter_1F_OnTransition:
 	setrespawn HEAL_LOCATION_DELMARK_CITY_WEST
-	call Common_EventScript_UpdateBrineyLocation
 	end
 
 SlateportCity_PokemonCenter_1F_EventScript_Nurse::
