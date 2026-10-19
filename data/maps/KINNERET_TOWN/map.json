@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ALLENWOOD_FOREST",
-      "offset": -20,
+      "offset": -18,
       "direction": "up"
     },
     {
