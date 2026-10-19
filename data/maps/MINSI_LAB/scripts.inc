@@ -1325,3 +1325,88 @@ MINSI_LAB_Text_OakRematchAfter:
 MINSI_LAB_Text_OakPostRematch:
 	.string "You just might be the best like no\n"
 	.string "one ever was!$"
+
+MINSI_LAB_EventScript_DexScientist::
+    lock
+    faceplayer
+    goto_if_set FLAG_MINSI_DEX_BAGON_RECEIVED, MINSI_LAB_EventScript_DexScientistDone
+    special IsRegionalDexComplete
+    compare VAR_RESULT, TRUE
+    goto_if_eq MINSI_LAB_EventScript_DexScientistReward
+    msgbox MINSI_LAB_Text_DexScientistIntro, MSGBOX_DEFAULT
+    release
+    end
+
+MINSI_LAB_EventScript_DexScientistReward::
+    msgbox MINSI_LAB_Text_DexScientistComplete, MSGBOX_DEFAULT
+    setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_BAGON
+    givemon SPECIES_BAGON, 5, shinyMode=SHINY_MODE_ALWAYS
+    compare VAR_RESULT, 0
+    goto_if_eq MINSI_LAB_EventScript_DexScientistParty
+    compare VAR_RESULT, 1
+    goto_if_eq MINSI_LAB_EventScript_DexScientistPC
+    goto Common_EventScript_NoMoreRoomForPokemon
+
+MINSI_LAB_EventScript_DexScientistParty::
+    playfanfare MUS_OBTAIN_ITEM
+    message MINSI_LAB_Text_DexScientistReceivedBagon
+    waitmessage
+    waitfanfare
+    msgbox MINSI_LAB_Text_DexScientistNickname, MSGBOX_YESNO
+    compare VAR_RESULT, NO
+    goto_if_eq MINSI_LAB_EventScript_DexScientistFinish
+    call Common_EventScript_GetGiftMonPartySlot
+    call Common_EventScript_NameReceivedPartyMon
+    goto MINSI_LAB_EventScript_DexScientistFinish
+
+MINSI_LAB_EventScript_DexScientistPC::
+    playfanfare MUS_OBTAIN_ITEM
+    message MINSI_LAB_Text_DexScientistReceivedBagon
+    waitmessage
+    waitfanfare
+    msgbox MINSI_LAB_Text_DexScientistNickname, MSGBOX_YESNO
+    compare VAR_RESULT, NO
+    goto_if_eq MINSI_LAB_EventScript_DexScientistPCNoName
+    call Common_EventScript_NameReceivedBoxMon
+MINSI_LAB_EventScript_DexScientistPCNoName::
+    call Common_EventScript_TransferredToPC
+    goto MINSI_LAB_EventScript_DexScientistFinish
+
+MINSI_LAB_EventScript_DexScientistFinish::
+    setflag FLAG_MINSI_DEX_BAGON_RECEIVED
+    msgbox MINSI_LAB_Text_DexScientistDone, MSGBOX_DEFAULT
+    release
+    end
+MINSI_LAB_EventScript_DexScientistDone::
+    msgbox MINSI_LAB_Text_DexScientistDone, MSGBOX_DEFAULT
+    release
+    end
+
+MINSI_LAB_Text_DexScientistIntro:
+    .string "Hello, there!\p"
+    .string "I'm the scientist who helped\n"
+    .string "Professor Hemlock build his own\l"
+    .string "POKéDEX for the Enpale region!\p"
+    .string "So far, no one has been able to\n"
+    .string "gather all 300 POKéMON in the\l"
+    .string "region, but the first one who\p"
+    .string "does will get a very special\n"
+    .string "reward!$"
+
+MINSI_LAB_Text_DexScientistComplete:
+    .string "What's that? You finished the\n"
+    .string "POKéDEX!? My, what talent!\p"
+    .string "Here, for your extraordinary\n"
+    .string "efforts!$"
+
+MINSI_LAB_Text_DexScientistDone:
+    .string "I'm sure there are even more\n"
+    .string "POKéMON to find if you look\l"
+    .string "hard enough!$"
+
+MINSI_LAB_Text_DexScientistReceivedBagon:
+    .string "{PLAYER} received BAGON!$"	
+
+MINSI_LAB_Text_DexScientistNickname:
+    .string "Would you like to give BAGON a\n"
+    .string "nickname?$"

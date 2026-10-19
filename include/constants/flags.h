@@ -1485,6 +1485,7 @@
 #define FLAG_SAFARI_ZONE_METAL_ALLOY                                0x467
 #define FLAG_BELMONT_LEADERS_CREST                                  0x468
 #define FLAG_BELMONT_PEAT_BLOCK                                     0x46D
+#define FLAG_MINSI_DEX_BAGON_RECEIVED                               0x2D9
 
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0

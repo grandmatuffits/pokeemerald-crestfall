@@ -4522,6 +4522,10 @@ void CheckCaughtFeebas(void)
 {
     gSpecialVar_Result = GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_FEEBAS), FLAG_GET_CAUGHT);
 }
+void IsRegionalDexComplete(void)
+{
+    gSpecialVar_Result = (GetHoennPokedexCount(FLAG_GET_CAUGHT) >= HOENN_DEX_COUNT - 1);
+}
 
 u16 GetNationalPokedexCount(u8 caseID)
 {

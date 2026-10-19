@@ -664,3 +664,4 @@ gSpecials::
 	def_special RateFirstMonIVs3
 	def_special BufferLeadMonEVs1
 	def_special BufferLeadMonEVs2
+	def_special IsRegionalDexComplete
