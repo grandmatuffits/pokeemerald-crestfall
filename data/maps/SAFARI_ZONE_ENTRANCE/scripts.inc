@@ -38,11 +38,11 @@ SAFARI_GATE_EventScript_CounterTrigger::
 
 SAFARI_GATE_EventScript_TryEnter::
 	call SAFARI_GATE_EventScript_CheckHasRoom
-	checkmoney 10000
+	checkmoney 1000
 	goto_if_eq VAR_RESULT, 0, SAFARI_GATE_EventScript_NotEnoughMoney
 	playse SE_SHOP
 	msgbox SAFARI_GATE_Text_ThatWillBe500, MSGBOX_DEFAULT
-	removemoney 10000
+	removemoney 1000
 	updatemoneybox
 	msgbox SAFARI_GATE_Text_HereAreYourBalls, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
@@ -290,7 +290,7 @@ SAFARI_GATE_EventScript_VoucherDone::
 SAFARI_GATE_Text_WouldYouLikeToPlay:
 	.string "Welcome to the ENPALE SAFARI\n"
 	.string "RESERVE.\p"
-	.string "¥10000 buys you thirty SAFARI BALLS\n"
+	.string "¥1000 buys you thirty SAFARI BALLS\n"
 	.string "and the run of the grounds.\p"
 	.string "Would you like to play?$"
 
@@ -298,7 +298,7 @@ SAFARI_GATE_Text_AnotherTime:
 	.string "Another time, then.$"
 
 SAFARI_GATE_Text_ThatWillBe500:
-	.string "That'll be ¥10000, please.$"
+	.string "That'll be ¥1000, please.$"
 
 SAFARI_GATE_Text_HereAreYourBalls:
 	.string "Our stock only answers to SAFARI\n"
@@ -314,7 +314,7 @@ SAFARI_GATE_Text_EnjoyYourself:
 	.string "Good hunting.$"
 
 SAFARI_GATE_Text_NotEnoughMoney:
-	.string "You haven't got the ¥10000.$"
+	.string "You haven't got the ¥1000.$"
 
 SAFARI_GATE_Text_PCIsFull:
 	.string "Your party's full and so are your\n"
