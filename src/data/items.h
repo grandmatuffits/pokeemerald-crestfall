@@ -1614,7 +1614,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Ability Capsule"),
     #if I_PRICE >= GEN_9
-        .price = 50000,
+        .price = 25000,
     #elif I_PRICE >= GEN_7
         .price = 10000,
     #else
@@ -1636,7 +1636,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Ability Patch"),
         .pluralName = ITEM_PLURAL_NAME("Ability Patches"),
-        .price = (I_PRICE >= GEN_9) ? 100000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 50000 : 20,
         .holdEffectParam = 0,
         .description = COMPOUND_STRING(
             "Turns the ability\n"
@@ -1655,7 +1655,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LONELY_MINT] =
     {
         .name = ITEM_NAME("Lonely Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Attack, but\n"
@@ -1673,7 +1673,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ADAMANT_MINT] =
     {
         .name = ITEM_NAME("Adamant Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Attack, but\n"
@@ -1691,7 +1691,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_NAUGHTY_MINT] =
     {
         .name = ITEM_NAME("Naughty Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Attack, but\n"
@@ -1709,7 +1709,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BRAVE_MINT] =
     {
         .name = ITEM_NAME("Brave Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Attack, but\n"
@@ -1727,7 +1727,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BOLD_MINT] =
     {
         .name = ITEM_NAME("Bold Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Defense, but\n"
@@ -1745,7 +1745,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_IMPISH_MINT] =
     {
         .name = ITEM_NAME("Impish Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Defense, but\n"
@@ -1763,7 +1763,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LAX_MINT] =
     {
         .name = ITEM_NAME("Lax Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Defense, but\n"
@@ -1781,7 +1781,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RELAXED_MINT] =
     {
         .name = ITEM_NAME("Relaxed Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Defense, but\n"
@@ -1799,7 +1799,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MODEST_MINT] =
     {
         .name = ITEM_NAME("Modest Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Sp. Atk, but\n"
@@ -1817,7 +1817,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MILD_MINT] =
     {
         .name = ITEM_NAME("Mild Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Sp. Atk, but\n"
@@ -1835,7 +1835,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RASH_MINT] =
     {
         .name = ITEM_NAME("Rash Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Sp. Atk, but\n"
@@ -1853,7 +1853,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_QUIET_MINT] =
     {
         .name = ITEM_NAME("Quiet Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Sp. Atk, but\n"
@@ -1871,7 +1871,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CALM_MINT] =
     {
         .name = ITEM_NAME("Calm Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Sp. Def, but\n"
@@ -1889,7 +1889,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GENTLE_MINT] =
     {
         .name = ITEM_NAME("Gentle Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Sp. Def, but\n"
@@ -1907,7 +1907,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CAREFUL_MINT] =
     {
         .name = ITEM_NAME("Careful Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Sp. Def, but\n"
@@ -1925,7 +1925,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SASSY_MINT] =
     {
         .name = ITEM_NAME("Sassy Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Sp. Def, but\n"
@@ -1943,7 +1943,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TIMID_MINT] =
     {
         .name = ITEM_NAME("Timid Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Speed, but\n"
@@ -1961,7 +1961,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HASTY_MINT] =
     {
         .name = ITEM_NAME("Hasty Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Speed, but\n"
@@ -1979,7 +1979,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_JOLLY_MINT] =
     {
         .name = ITEM_NAME("Jolly Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Speed, but\n"
@@ -1997,7 +1997,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_NAIVE_MINT] =
     {
         .name = ITEM_NAME("Naive Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "ups Speed, but\n"
@@ -2015,7 +2015,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SERIOUS_MINT] =
     {
         .name = ITEM_NAME("Serious Mint"),
-        .price = (I_PRICE >= GEN_9) ? 20000 : 20,
+        .price = (I_PRICE >= GEN_9) ? 10000 : 20,
         .description = COMPOUND_STRING(
             "Can be smelled. It\n"
             "makes each stat\n"
@@ -3014,7 +3014,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HEART_SCALE] =
     {
         .name = ITEM_NAME("Heart Scale"),
-        .price = 100,
+        .price = 10000,
         .description = COMPOUND_STRING(
             "A lovely scale.\n"
             "It is coveted by\n"
@@ -15008,7 +15008,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BUG_TERA_SHARD] =
     {
         .name = ITEM_NAME("Bug Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15022,7 +15022,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DARK_TERA_SHARD] =
     {
         .name = ITEM_NAME("Dark Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15036,7 +15036,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DRAGON_TERA_SHARD] =
     {
         .name = ITEM_NAME("Dragon Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15050,7 +15050,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ELECTRIC_TERA_SHARD] =
     {
         .name = ITEM_NAME("Electric Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15064,7 +15064,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FAIRY_TERA_SHARD] =
     {
         .name = ITEM_NAME("Fairy Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15078,7 +15078,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FIGHTING_TERA_SHARD] =
     {
         .name = ITEM_NAME("Fighting Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15092,7 +15092,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FIRE_TERA_SHARD] =
     {
         .name = ITEM_NAME("Fire Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15106,7 +15106,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FLYING_TERA_SHARD] =
     {
         .name = ITEM_NAME("Flying Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15120,7 +15120,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GHOST_TERA_SHARD] =
     {
         .name = ITEM_NAME("Ghost Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15134,7 +15134,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GRASS_TERA_SHARD] =
     {
         .name = ITEM_NAME("Grass Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15148,7 +15148,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GROUND_TERA_SHARD] =
     {
         .name = ITEM_NAME("Ground Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15162,7 +15162,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ICE_TERA_SHARD] =
     {
         .name = ITEM_NAME("Ice Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15176,7 +15176,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_NORMAL_TERA_SHARD] =
     {
         .name = ITEM_NAME("Normal Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15190,7 +15190,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POISON_TERA_SHARD] =
     {
         .name = ITEM_NAME("Poison Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15204,7 +15204,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PSYCHIC_TERA_SHARD] =
     {
         .name = ITEM_NAME("Psychic Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15218,7 +15218,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ROCK_TERA_SHARD] =
     {
         .name = ITEM_NAME("Rock Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15232,7 +15232,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STEEL_TERA_SHARD] =
     {
         .name = ITEM_NAME("Steel Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
@@ -15246,7 +15246,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WATER_TERA_SHARD] =
     {
         .name = ITEM_NAME("Water Tera Shard"),
-        .price = 25000,
+        .price = 10000,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TERA_SHARD,
