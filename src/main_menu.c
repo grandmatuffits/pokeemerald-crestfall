@@ -244,6 +244,7 @@ static void MainMenu_FormatSavegamePlayer(void);
 static void MainMenu_FormatSavegamePokedex(void);
 static void MainMenu_FormatSavegameTime(void);
 static void MainMenu_FormatSavegameBadges(void);
+static void MainMenu_FormatSavegameVersion(void);
 
 // .rodata
 
@@ -275,7 +276,7 @@ static const u8 gText_ContinueMenuPlayer[] = _("PLAYER");
 static const u8 gText_ContinueMenuTime[] = _("TIME");
 static const u8 gText_ContinueMenuPokedex[] = _("POKéDEX");
 static const u8 gText_ContinueMenuBadges[] = _("BADGES");
-
+static const u8 gText_ContinueMenuVersion[] = _("v2.0.0");
 #define MENU_LEFT 2
 #define MENU_TOP_WIN0 1
 #define MENU_TOP_WIN1 5
@@ -2126,6 +2127,7 @@ static void MainMenu_FormatSavegameText(void)
     MainMenu_FormatSavegamePokedex();
     MainMenu_FormatSavegameTime();
     MainMenu_FormatSavegameBadges();
+    MainMenu_FormatSavegameVersion();
 }
 
 static void MainMenu_FormatSavegamePlayer(void)
@@ -2133,6 +2135,11 @@ static void MainMenu_FormatSavegamePlayer(void)
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPlayer);
     AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
     AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gSaveBlock2Ptr->playerName, 100), 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gSaveBlock2Ptr->playerName);
+}
+
+static void MainMenu_FormatSavegameVersion(void)
+{
+    AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_ContinueMenuVersion, 0xD0), 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_ContinueMenuVersion);
 }
 
 static void MainMenu_FormatSavegameTime(void)
