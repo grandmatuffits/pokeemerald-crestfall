@@ -43,6 +43,7 @@ MINSI_CITY_APARTMENT_EventScript_Catcher::
 	faceplayer
 	goto_if_set FLAG_MINSI_CATCHING_CHARM_RECEIVED, MINSI_CITY_APARTMENT_EventScript_CatcherDone
 	setvar VAR_0x8004, SPECIES_RALTS
+	setflag FLAG_MINSI_CATCHER_STARTED
 	special CheckCaughtSpecies
 	compare VAR_RESULT, TRUE
 	goto_if_eq MINSI_CITY_APARTMENT_EventScript_CatcherGive

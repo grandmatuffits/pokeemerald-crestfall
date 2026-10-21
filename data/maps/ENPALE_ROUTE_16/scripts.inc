@@ -1,5 +1,10 @@
 ENPALE_ROUTE_16_MapScripts::
-	.byte 0
+        map_script MAP_SCRIPT_ON_TRANSITION, ENPALE_ROUTE_16_OnTransition
+        .byte 0
+
+ENPALE_ROUTE_16_OnTransition::
+        call Crestfall_Journal_MarkMainland
+        end
 
 ENPALE_ROUTE_16_EventScript_BirdKeeper::
 	trainerbattle_single TRAINER_ENPALE_ROUTE_16_BIRDKEEPER, ENPALE_ROUTE_16_Text_BirdKeeper_Intro, ENPALE_ROUTE_16_Text_BirdKeeper_Defeat

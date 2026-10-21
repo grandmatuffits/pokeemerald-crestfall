@@ -1,0 +1,12 @@
+Crestfall_Journal_Return:
+	return
+
+Crestfall_Journal_MarkMainland::
+	goto_if_unset FLAG_BADGE07_GET, Crestfall_Journal_Return
+	setflag FLAG_JOURNAL_BACK_ON_MAINLAND
+	return
+
+Crestfall_Journal_MarkMinsi::
+	goto_if_unset FLAG_BAYNOE_TEMPLE_DONE, Crestfall_Journal_Return
+	setflag FLAG_JOURNAL_BACK_IN_MINSI
+	return

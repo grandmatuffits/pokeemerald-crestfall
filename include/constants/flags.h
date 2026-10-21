@@ -757,7 +757,6 @@
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
 
-#define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
 
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
 #define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
@@ -1326,6 +1325,8 @@
 #define FLAG_MINSI_OVAL_DELIVERED                         0x27D
 #define FLAG_MINSI_OVAL_RECEIVED                          0x27E
 #define FLAG_MINSI_NATDEX_RECEIVED                        0x27F
+#define FLAG_SAFARI_ZONE_ENTERED                          0x28F
+#define FLAG_MINSI_CATCHER_STARTED                        0x28E
 #define FLAG_MINSI_CATCHING_CHARM_RECEIVED                0x041
 #define FLAG_PORYGON_QUEST_STARTED                        0x042
 #define FLAG_PORYGON_MODULE_FOUND                         0x273
@@ -1479,6 +1480,9 @@
 #define FLAG_HIDE_MIRAVEIL_GYM_CROWD                0x2E
 #define FLAG_HIDE_MIRAVEIL_GYM_N                    0x2F
 #define FLAG_MIRAVEIL_GYM_ORB_GIVEN                 0x40
+
+#define FLAG_JOURNAL_BACK_ON_MAINLAND  0x28A
+#define FLAG_JOURNAL_BACK_IN_MINSI     0x28B
 
 #define FLAG_SAFARI_ZONE_REAPER_CLOTH	                            0x465
 #define FLAG_SAFARI_ZONE_KINGS_ROCK                                 0x466
