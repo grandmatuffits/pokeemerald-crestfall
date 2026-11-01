@@ -1060,6 +1060,7 @@ enum __attribute__((packed)) Item
     ITEM_ANTACID,
     ITEM_COPPER,
     ITEM_MOLASSES,
+    ITEM_SHINY_CANDY,
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

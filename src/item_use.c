@@ -912,7 +912,11 @@ void ItemUseOutOfBattle_RareCandy(u8 taskId)
     gItemUseCB = ItemUseCB_RareCandy;
     SetUpItemUseCallback(taskId);
 }
-
+void ItemUseOutOfBattle_ShinyCandy(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_ShinyCandy;
+    SetUpItemUseCallback(taskId);
+}
 void ItemUseOutOfBattle_DynamaxCandy(u8 taskId)
 {
     gItemUseCB = ItemUseCB_DynamaxCandy;
@@ -1586,8 +1590,14 @@ void ItemUseOutOfBattle_PokeFlute(u8 taskId)
     }
 }
 
-static void ItemUseOnFieldCB_TownMap(u8 taskId)
+void ItemUseOnFieldCB_TownMap(u8 taskId)
 {
+    if (CheckBagHasItem(ITEM_HM_FLY, 1)
+     && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType))
+    {
+        ItemUseOnFieldCB_Fly(taskId);   // SetMainCallback2(CB2_OpenFlyMap); DestroyTask
+        return;
+    }
     LockPlayerFieldControls();
     ScriptContext_SetupScript(EventScript_RegionMap);
     DestroyTask(taskId);

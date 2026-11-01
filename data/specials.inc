@@ -665,3 +665,6 @@ gSpecials::
 	def_special BufferLeadMonEVs1
 	def_special BufferLeadMonEVs2
 	def_special IsRegionalDexComplete
+	def_special InitEnpaleKeldeoRoamer
+	def_special CheckCaughtBeastTrio
+	def_special CheckCaughtKeldeo

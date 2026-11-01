@@ -53,7 +53,7 @@ KINNERET_TOWN_GYM_EventScript_RobinPostBattle::
 
 KINNERET_TOWN_GYM_EventScript_RobinBeaten::
 	goto_if_set FLAG_ROBIN_REMATCH_DONE, KINNERET_TOWN_GYM_EventScript_RobinRematchBeaten
-	goto_if_unset FLAG_ELDERS_ARC_STARTED, KINNERET_TOWN_GYM_EventScript_RobinAfterBattleRepeat
+	goto_if_unset FLAG_ROSS_REMATCH_DONE, KINNERET_TOWN_GYM_EventScript_RobinAfterBattleRepeat
 	lock
 	faceplayer
 	msgbox KINNERET_TOWN_GYM_Text_RobinRematchIntro, MSGBOX_DEFAULT

@@ -525,7 +525,7 @@
       "id": "MAPSEC_PALLET_TOWN",
       "name": "Kinneret Town",
       "x": 9,
-      "y": 8,
+      "y": 10,
       "width": 1,
       "height": 1
     },
@@ -533,7 +533,7 @@
       "id": "MAPSEC_VIRIDIAN_CITY",
       "name": "Valerytown",
       "x": 12,
-      "y": 13,
+      "y": 15,
       "width": 1,
       "height": 1
     },
@@ -541,7 +541,7 @@
       "id": "MAPSEC_PEWTER_CITY",
       "name": "Quarren Town",
       "x": 2,
-      "y": 7,
+      "y": 9,
       "width": 1,
       "height": 1
     },
@@ -549,7 +549,7 @@
       "id": "MAPSEC_CERULEAN_CITY",
       "name": "Veldtmoor City",
       "x": 9,
-      "y": 2,
+      "y": 4,
       "width": 1,
       "height": 1
     },
@@ -557,7 +557,7 @@
       "id": "MAPSEC_LAVENDER_TOWN",
       "name": "Coppergate City",
       "x": 4,
-      "y": 9,
+      "y": 11,
       "width": 1,
       "height": 1
     },
@@ -565,7 +565,7 @@
       "id": "MAPSEC_VERMILION_CITY",
       "name": "Lenox Town",
       "x": 5,
-      "y": 2,
+      "y": 4,
       "width": 1,
       "height": 1
     },
@@ -573,7 +573,7 @@
       "id": "MAPSEC_CELADON_CITY",
       "name": "Delmark City",
       "x": 8,
-      "y": 10,
+      "y": 12,
       "width": 2,
       "height": 2
     },
@@ -581,7 +581,7 @@
       "id": "MAPSEC_FUCHSIA_CITY",
       "name": "Rosebank Town",
       "x": 17,
-      "y": 9,
+      "y": 11,
       "width": 1,
       "height": 1
     },
@@ -589,7 +589,7 @@
       "id": "MAPSEC_CINNABAR_ISLAND",
       "name": "Miraveil Island",
       "x": 22,
-      "y": 4,
+      "y": 6,
       "width": 1,
       "height": 1
     },
@@ -597,17 +597,17 @@
       "id": "MAPSEC_INDIGO_PLATEAU",
       "name": "Baynoe Town",
       "x": 13,
-      "y": 5,
+      "y": 6,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_SAFFRON_CITY",
       "name": "Minsi City",
-      "x": 8,
-      "y": 5,
+      "x": 9,
+      "y": 6,
       "width": 1,
-      "height": 1
+      "height": 2
     },
     {
       "id": "MAPSEC_ROUTE_4_POKECENTER",
@@ -617,39 +617,41 @@
     },
     {
       "id": "MAPSEC_ROUTE_10_POKECENTER",
-      "name": "ROUTE 10",
-      "height": 1,
-      "width": 1
+      "name": "Belmont Town",
+      "x": 22,
+      "y": 4,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_1",
       "name": "Route 1",
-      "x": 8,
-      "y": 6,
+      "x": 9,
+      "y": 8,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_2",
       "name": "Route 2",
-      "x": 6,
-      "y": 9,
-      "width": 1,
-      "height": 1
+      "x": 5,
+      "y": 10,
+      "width": 4,
+      "height": 2
     },
     {
       "id": "MAPSEC_ROUTE_3",
       "name": "Route 3",
-      "x": 4,
-      "y": 7,
-      "width": 1,
+      "x": 3,
+      "y": 9,
+      "width": 4,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_4",
       "name": "Route 4",
       "x": 2,
-      "y": 5,
+      "y": 7,
       "width": 1,
       "height": 1
     },
@@ -657,104 +659,104 @@
       "id": "MAPSEC_ROUTE_5",
       "name": "Route 5",
       "x": 3,
-      "y": 5,
+      "y": 7,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_6",
       "name": "Route 6",
-      "x": 4,
-      "y": 3,
-      "width": 1,
+      "x": 3,
+      "y": 5,
+      "width": 3,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_7",
       "name": "Route 7",
-      "x": 7,
-      "y": 9,
+      "x": 8,
+      "y": 11,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_8",
       "name": "Route 8",
-      "x": 7,
-      "y": 8,
+      "x": 9,
+      "y": 11,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_9",
       "name": "Route 9",
-      "x": 13,
-      "y": 10,
-      "width": 1,
-      "height": 1
+      "x": 10,
+      "y": 11,
+      "width": 7,
+      "height": 2
     },
     {
       "id": "MAPSEC_ROUTE_10",
       "name": "Route 10",
-      "x": 17,
-      "y": 11,
-      "width": 1,
-      "height": 1
+      "x": 16,
+      "y": 12,
+      "width": 2,
+      "height": 2
     },
     {
       "id": "MAPSEC_ROUTE_11",
       "name": "Route 11",
-      "x": 13,
-      "y": 12,
-      "width": 1,
-      "height": 1
+      "x": 12,
+      "y": 13,
+      "width": 3,
+      "height": 2
     },
     {
       "id": "MAPSEC_ROUTE_12",
       "name": "Route 12",
       "x": 9,
-      "y": 12,
-      "width": 1,
-      "height": 1
+      "y": 14,
+      "width": 3,
+      "height": 2
     },
     {
       "id": "MAPSEC_ROUTE_13",
       "name": "Route 13",
-      "x": 18,
-      "y": 8,
-      "width": 1,
+      "x": 17,
+      "y": 10,
+      "width": 3,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_14",
       "name": "Route 14",
-      "x": 22,
-      "y": 6,
-      "width": 1,
+      "x": 21,
+      "y": 8,
+      "width": 2,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_15",
       "name": "Route 15",
-      "x": 19,
-      "y": 4,
-      "width": 1,
+      "x": 16,
+      "y": 6,
+      "width": 6,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_16",
       "name": "Route 16",
-      "x": 16,
-      "y": 5,
-      "width": 1,
+      "x": 14,
+      "y": 6,
+      "width": 2,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_17",
       "name": "Route 17",
-      "x": 11,
-      "y": 4,
-      "width": 1,
+      "x": 10,
+      "y": 6,
+      "width": 3,
       "height": 1
     },
     {
@@ -763,21 +765,21 @@
       "x": 6,
       "y": 4,
       "width": 1,
-      "height": 1
+      "height": 5
     },
     {
       "id": "MAPSEC_ROUTE_19",
       "name": "Route 19",
       "x": 6,
-      "y": 1,
+      "y": 3,
       "width": 1,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_20",
       "name": "Route  20",
-      "x": 8,
-      "y": 3,
+      "x": 9,
+      "y": 5,
       "width": 1,
       "height": 1
     },
@@ -815,7 +817,7 @@
       "id": "MAPSEC_VIRIDIAN_FOREST",
       "name": "Allenwood Forest",
       "x": 9,
-      "y": 7,
+      "y": 9,
       "width": 1,
       "height": 1
     },
@@ -823,7 +825,7 @@
       "id": "MAPSEC_MT_MOON",
       "name": "Lehigh Tunnel",
       "x": 2,
-      "y": 6,
+      "y": 8,
       "width": 1,
       "height": 1
     },
@@ -847,7 +849,7 @@
     },
     {
       "id": "MAPSEC_DIGLETTS_CAVE",
-      "name": "DIGLETT'S CAVE",
+      "name": "Belmont Cave",
       "height": 1,
       "width": 1
     },
@@ -859,7 +861,7 @@
     },
     {
       "id": "MAPSEC_ROCKET_HIDEOUT",
-      "name": "ROCKET HIDEOUT",
+      "name": "Belmont Park",
       "height": 1,
       "width": 1
     },
@@ -891,7 +893,7 @@
       "id": "MAPSEC_ROCK_TUNNEL",
       "name": "Bergen Hill",
       "x": 13,
-      "y": 4,
+      "y": 5,
       "width": 1,
       "height": 1
     },
@@ -899,7 +901,7 @@
       "id": "MAPSEC_SEAFOAM_ISLANDS",
       "name": "Grant Island",
       "x": 19,
-      "y": 7,
+      "y": 9,
       "width": 1,
       "height": 1
     },
@@ -907,7 +909,7 @@
       "id": "MAPSEC_POKEMON_TOWER",
       "name": "Wallar Marshlands",
       "x": 15,
-      "y": 11,
+      "y": 13,
       "width": 1,
       "height": 1
     },
@@ -915,7 +917,7 @@
       "id": "MAPSEC_CERULEAN_CAVE",
       "name": "Whitecaps",
       "x": 3,
-      "y": 4,
+      "y": 6,
       "width": 1,
       "height": 1
     },
@@ -923,7 +925,7 @@
       "id": "MAPSEC_POWER_PLANT",
       "name": "Ridley Cave",
       "x": 5,
-      "y": 7,
+      "y": 9,
       "width": 1,
       "height": 1
     },

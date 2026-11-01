@@ -288,6 +288,33 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "MINSI_CITY_EventScript_NorthCheckpoint"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 42,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MINSI_CITY_EventScript_DexNavGuy_X23"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 42,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MINSI_CITY_EventScript_DexNavGuy_X22"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 42,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MINSI_CITY_EventScript_DexNavGuy_X21"
     }
   ],
   "bg_events": [

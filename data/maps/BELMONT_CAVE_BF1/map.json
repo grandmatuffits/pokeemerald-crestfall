@@ -1,0 +1,81 @@
+{
+  "id": "MAP_BELMONT_CAVE_BF1",
+  "name": "BELMONT_CAVE_BF1",
+  "layout": "LAYOUT_BELMONT_CAVE_BF1",
+  "music": "MUS_ENPALE_CAVE",
+  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 26,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_MALICIOUS_ARMOR",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_BELMONT_MALICIOUS_ARMOR"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 17,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_AUSPICIOUS_ARMOR",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_BELMONT_AUSPACIOUS_ARMOR"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 25,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_FAIRY_TERA_SHARD",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_BELMONT_FAIRY_TERA_SHARD"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_DRAGON_TERA_SHARD",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_BELMONT_DRAGON_TERA_SHARD"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_BELMONT_CAVE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

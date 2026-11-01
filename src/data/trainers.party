@@ -17129,6 +17129,9 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
+Magikarp
+Level: 10
+
 Tentacool @ None
 Level: 10
 
@@ -17145,10 +17148,10 @@ Oddish @ None
 Level: 10
 
 Shroomish @ None
-Level: 10
+Level: 11
 
 Starly @ None
-Level: 10
+Level: 11
 
 === TRAINER_ROUTE_2_BEN ===
 Name: Ben
@@ -17206,6 +17209,9 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move
+
+Starly
+Level: 11
 
 Sentret @ None
 Level: 12
@@ -17422,6 +17428,9 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint
+
+Ducklett
+Level: 11
 
 Murkrow
 Level: 11
@@ -18141,6 +18150,9 @@ AI: Check Bad Move
 Piplup @ None
 Level: 23
 
+Dartrix
+Level: 23
+
 Luxio @ None
 Level: 24
 
@@ -18153,7 +18165,13 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
+Staravia
+Level: 23
+
 Houndour @ None
+Level: 24
+
+Furret
 Level: 24
 
 === TRAINER_ROUTE8_LILY ===
@@ -18164,6 +18182,9 @@ Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
+
+Gloom
+Level: 25
 
 Whimsicott @ None
 Level: 26
@@ -18184,6 +18205,9 @@ Level: 24
 Machop @ None
 Level: 24
 
+Makuhita
+Level: 25
+
 Aron @ None
 Level: 25
 
@@ -18197,6 +18221,9 @@ Double Battle: No
 AI: Check Bad Move
 
 Magnemite @ None
+Level: 26
+
+Voltorb
 Level: 26
 
 === TRAINER_JACK_AND_JILL ===
@@ -18239,6 +18266,9 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
+Gastly
+Level: 25
+
 Haunter @ None
 Level: 26
 
@@ -18250,6 +18280,9 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move
+
+Abra
+Level: 25
 
 Kadabra @ None
 Level: 26
@@ -18329,6 +18362,9 @@ AI: Check Bad Move
 Eevee @ None
 Level: 23
 
+Starly
+Level: 23 
+
 Trapinch @ None
 Level: 24
 
@@ -18341,8 +18377,14 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
+Shuppet
+Level: 24
+
 Gastly @ None
 Level: 24
+
+Haunter
+Level: 25
 
 Honedge @ None
 Level: 25
@@ -18386,10 +18428,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Ninjask @ None
-Level: 25
+Level: 26
+
+Voltorb
+Level: 27
 
 Staryu @ None
-Level: 26
+Level: 27
 
 === TRAINER_ROUTE_9_PICNICKER ===
 Name: Chelsea
@@ -18399,6 +18444,9 @@ Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
+
+Roselia
+Level: 27
 
 Togetic @ None
 Level: 28
@@ -18413,13 +18461,16 @@ Double Battle: No
 AI: Check Bad Move
 
 Dartrix @ None
-Level: 26
+Level: 27
+
+Staravia
+Level: 27
 
 Scyther @ None
-Level: 26
+Level: 27
 
 Gligar @ None
-Level: 26
+Level: 27
 
 === TRAINER_LEADER_FRIEDE ===
 Name: Friede
@@ -18479,6 +18530,9 @@ Level: 26
 Snorunt
 Level: 26
 
+Bergmite
+Level: 27
+
 === TRAINER_ROSEBANK_GWEN ===
 Name: Gwen
 Class: Beauty
@@ -18487,6 +18541,9 @@ Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint
+
+Smoochum
+Level: 26
 
 Jynx
 Level: 28
@@ -18499,6 +18556,9 @@ Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint
+
+Cubchoo
+Level: 26
 
 Cubchoo
 Level: 26
@@ -18558,6 +18618,12 @@ Double Battle: No
 AI: Check Bad Move
 
 Voltorb @ None
+Level: 29
+
+Yanma
+Level: 29
+
+Electrode
 Level: 30
 
 === TRAINER_ROUTE_10_JANICE ===
@@ -18570,10 +18636,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Leafeon @ None
-Level: 28
+Level: 29
 
 Vaporeon @ None
-Level: 28
+Level: 29
 
 === TRAINER_ROUTE_10_RODNEY ===
 Name: Rodney
@@ -18583,6 +18649,9 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move
+
+Dratini
+Level: 29
 
 Metang @ Sitrus Berry
 Level: 30
@@ -18597,10 +18666,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Roselia @ None
-Level: 26
+Level: 27
 
 Shuppet @ None
-Level: 27
+Level: 28
 
 === TRAINER_WALLAR_ACOLYTE_2 ===
 Name: Acolyte
@@ -18610,6 +18679,9 @@ Gender: Female
 Music: Aqua
 Double Battle: No
 AI: Check Bad Move
+
+Stufful
+Level: 28
 
 Mawile @ None
 Level: 29
@@ -18624,7 +18696,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Bewear @ None
-Level: 28
+Level: 30
 
 === TRAINER_WALLAR_ACOLYTE_4 ===
 Name: Acolyte
@@ -18636,13 +18708,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Swinub @ None
-Level: 26
-
-Cubchoo @ None
 Level: 27
 
-Kirlia @ None
+Cubchoo @ None
 Level: 28
+
+Kirlia @ None
+Level: 29
 
 === TRAINER_WALLAR_ACOLYTE_5 ===
 Name: Acolyte
@@ -18653,8 +18725,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
+Roselia 
+Level: 28
+
 Roserade @ None
-Level: 29
+Level: 30
 
 === TRAINER_WALLAR_ACOLYTE_6 ===
 Name: Acolyte
@@ -18665,8 +18740,11 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
+Flaaffy
+Level: 29
+
 Ampharos @ None
-Level: 28
+Level: 30
 
 === TRAINER_WALLAR_ACOLYTE_7 ===
 Name: Acolyte
@@ -18678,10 +18756,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Baltoy @ None
-Level: 27
+Level: 29
 
 Shuppet @ None
-Level: 27
+Level: 29
 
 === TRAINER_WALLAR_ACOLYTE_8 ===
 Name: Acolyte
@@ -18691,6 +18769,9 @@ Gender: Female
 Music: Aqua
 Double Battle: Yes
 AI: Check Bad Move
+
+Vulpix
+Level: 28
 
 Ninetales @ None
 Level: 30
@@ -18703,6 +18784,9 @@ Gender: Male
 Music: Aqua
 Double Battle: Yes
 AI: Check Bad Move
+
+Marill
+Level: 28
 
 Milotic @ None
 Level: 30
@@ -18774,10 +18858,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Litwick @ None
-Level: 28
+Level: 29
 
 Haunter @ None
-Level: 28
+Level: 29
 
 === TRAINER_WALLAR_BELL_TOWER_MARCI ===
 Name: Marci
@@ -18800,8 +18884,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
+Furret
+Level: 30
+
 Staravia @ None
-Level: 31
+Level: 32
 
 === TRAINER_ROUTE_11_TRIATHLETE ===
 Name: Janet
@@ -18813,10 +18900,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Wimpod @ None
-Level: 29
+Level: 30
+
+Yanmega
+Level: 31
 
 Emolga @ None
-Level: 30
+Level: 31
 
 === TRAINER_LEADER_RANDALL ===
 Name: Randall
@@ -18868,6 +18958,9 @@ AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
 Mienfoo
 Level: 32
 
+Meditite
+Level: 32
+
 === TRAINER_VALERYTOWN_HIKER ===
 Name: Dov
 Class: Hiker
@@ -18878,6 +18971,9 @@ Double Battle: No
 AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
 
 Machop
+Level: 32
+
+Machoke
 Level: 32
 
 === TRAINER_VALERYTOWN_BLACKBELT_2 ===
@@ -18892,6 +18988,9 @@ AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
 Croagunk
 Level: 33
 
+Makuhita
+Level: 33
+
 === TRAINER_VALERYTOWN_GUITARIST ===
 Name: Sy
 Class: Guitarist
@@ -18904,6 +19003,9 @@ AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
 Riolu
 Level: 32
 
+Hawlucha
+Level: 33
+
 === TRAINER_VALERYTOWN_EXPERT ===
 Name: Marn
 Class: Expert
@@ -18914,10 +19016,10 @@ Double Battle: No
 AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
 
 Meditite
-Level: 31
+Level: 32
 
 Scraggy
-Level: 31
+Level: 32
 
 === TRAINER_VALERYTOWN_BLACKBELT_3 ===
 Name: Osk
@@ -18927,6 +19029,9 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Machop
+Level: 31
 
 Machoke
 Level: 32
@@ -18940,8 +19045,11 @@ Music: Male
 Double Battle: No
 AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
 
+Clobbopus
+Level: 32
+
 Grapploct
-Level: 34
+Level: 33
 
 === TRAINER_VALERYTOWN_BLACKBELT_4 ===
 Name: Grull
@@ -18951,6 +19059,9 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT
+
+Machoke
+Level: 32
 
 Machamp
 Level: 33
@@ -18965,10 +19076,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Yanmega
-Level: 32
+Level: 33
 
 Whirlipede
-Level: 32
+Level: 33
+
+Beedrill
+Level: 33
 
 === TRAINER_ROUTE_12_COOLTRAINER ===
 Name: Rosa
@@ -18980,6 +19094,9 @@ Double Battle: No
 AI: Check Bad Move
 
 Braixen @ None
+Level: 33
+
+Nidoqueen
 Level: 34
 
 === TRAINER_ROUTE_12_NINJABOY ===
@@ -19020,6 +19137,9 @@ AI: Check Bad Move
 
 Furret @ None
 Level: 32
+
+Staravia
+Level: 33
 
 === TRAINER_COVENANT_PIA ===
 Name: Acolyte
@@ -19075,6 +19195,9 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
+Roserade
+Level: 34
+
 Ampharos @ None
 Level: 35
 
@@ -19086,6 +19209,9 @@ Gender: Female
 Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint
+
+Azumarill
+Level: 34
 
 Whimsicott @ None
 Level: 35
@@ -19135,6 +19261,9 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint
 
+Woobat
+Level: 34
+
 Swoobat @ None
 Level: 35
 
@@ -19161,6 +19290,9 @@ Gender: Male
 Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+
+Ninetales
+Level: 35
 
 Milotic @ None
 Level: 36
@@ -19361,7 +19493,7 @@ Bewear @ None
 Level: 40
 
 Azumarill @ None
-Level: 40
+Level: 41
 
 === TRAINER_COVENANT_WC_2 ===
 Name: Acolyte
@@ -19373,6 +19505,9 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint
 
 Flaaffy @ None
+Level: 41
+
+Ampharos
 Level: 42
 
 === TRAINER_COVENANT_WC_3 ===
@@ -19398,6 +19533,9 @@ Gender: Female
 Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint
+
+Staraptor
+Level: 41
 
 Swoobat @ None
 Level: 42
@@ -19426,6 +19564,9 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint
 
+Bewear
+Level: 42
+
 Mawile @ None
 Level: 43
 
@@ -19452,6 +19593,9 @@ Gender: Male
 Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+
+Shuppet
+Level: 42
 
 Banette @ None
 Level: 43
@@ -20396,6 +20540,9 @@ Toxicroak
 Level: 51
 
 Medicham @ None
+Level: 52
+
+Hariyama
 Level: 52
 
 === TRAINER_ENPALE_ROUTE_16_ROCKER ===
@@ -22690,6 +22837,7 @@ Level: 91
 Ability: Flame Body
 EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature
+Tera Type: Grass
 - Flamethrower
 - Hex
 - Toxic
@@ -22758,6 +22906,7 @@ Basculegion @ Choice Scarf
 Level: 93
 Ability: Swift Swim
 EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Ground
 Jolly Nature
 - Wave Crash
 - Last Respects
@@ -22827,6 +22976,7 @@ Breloom @ Toxic Orb
 Level: 95
 Ability: Poison Heal
 EVs: 252 HP / 80 Atk / 176 Spe
+Tera Type: Rock
 Adamant Nature
 - Close Combat
 - Seed Bomb
@@ -22896,6 +23046,7 @@ Lokix @ Heavy-Duty Boots
 Level: 97
 Ability: Tinted Lens
 EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Dragon
 Adamant Nature
 - First Impression
 - Knock Off
@@ -22973,6 +23124,7 @@ Mienshao @ Assault Vest
 Level: 100
 Ability: Reckless
 EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Steel
 Jolly Nature
 -High Jump Kick
 -Knock Off
@@ -23061,6 +23213,7 @@ Tauros @ Choice Band
 Level: 100
 Ability: Intimidate
 EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Ghost
 Jolly Nature
 - Double-Edge
 - Earthquake
@@ -23249,6 +23402,7 @@ Pikachu @ Light Ball
 Level: 100
 Ability: Static
 EVs: 252 Atk / 68 SpA / 188 Spe
+Tera Type: Flying
 Lonely Nature
 - Extreme Speed
 - Volt Switch
@@ -23347,6 +23501,7 @@ Aggron @ Choice Band
 Level: 100
 Ability: Rock Head
 EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Steel
 Adamant Nature
 - Head Smash
 - Heavy Slam
@@ -23506,6 +23661,7 @@ Garchomp @ Life Orb
 Level: 100
 Ability: Rough Skin
 EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Dragon
 Jolly Nature
 - Swords Dance
 - Earthquake
@@ -23997,6 +24153,9 @@ Level: 62
 Medicham @ None
 Level: 63
 
+Hariyama
+Level: 63
+
 === TRAINER_ENPALE_ROUTE_16_ROCKER_R2 ===
 Name: Dave
 Class: Rocker Frlg
@@ -24170,6 +24329,9 @@ Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint
+
+Ducklett
+Level: 15
 
 Murkrow
 Level: 16
@@ -24417,6 +24579,9 @@ Level: 78
 Tyranitar @ None
 Level: 78
 
+Wigglytuff
+Level: 80
+
 === TRAINER_VICTORY_ROAD_11_R2 ===
 Name: Odette
 Class: Expert
@@ -24433,6 +24598,9 @@ Mamoswine @ None
 Level: 78
 
 Garchomp @ None
+Level: 80
+
+Blissey
 Level: 80
 
 === TRAINER_VICTORY_ROAD_12_R2 ===
@@ -24678,6 +24846,9 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
+Roselia
+Level: 38
+
 Togetic @ None
 Level: 39
 
@@ -24779,7 +24950,7 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
 
 Klinklang @ Leftovers
-Level: 70
+Level: 68
 Ability: Clear Body
 EVs: 108 HP / 252 Atk / 148 Spe
 Adamant Nature
@@ -24789,7 +24960,7 @@ Adamant Nature
 - Wild Charge
 
 Vanilluxe @ Life Orb
-Level: 71
+Level: 68
 Ability: Ice Body
 EVs: 4 Atk / 252 SpA / 252 Spe
 Rash Nature
@@ -24799,7 +24970,7 @@ Rash Nature
 - Ice Shard
 
 Archeops @ Flying Gem
-Level: 71
+Level: 69
 Ability: Defeatist
 EVs: 252 Atk / 4 SpA / 252 Spe
 Hasty Nature
@@ -24809,7 +24980,7 @@ Hasty Nature
 - Roost
 
 Reshiram @ Life Orb
-Level: 72
+Level: 70
 Ability: Turboblaze
 EVs: 4 Atk / 252 SpA / 252 Spe
 Timid Nature
@@ -24819,7 +24990,7 @@ Timid Nature
 - Tailwind
 
 Zekrom @ Shuca Berry
-Level: 72
+Level: 70
 Ability: Teravolt
 EVs: 136 HP / 252 Atk / 120 Spe
 Adamant Nature
@@ -24829,7 +25000,7 @@ Adamant Nature
 - Outrage
 
 Zoroark @ Life Orb
-Level: 74
+Level: 72
 Ability: Illusion
 EVs: 252 SpA / 4 SpD / 252 Spe
 Tera Type: Poison
@@ -24868,10 +25039,10 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Bisharp
-Level: 68
+Level: 67
 
 Palpitoad
-Level: 68
+Level: 67
 Tera Type: Steel
 
 === TRAINER_PLASMA_POSER_3 ===
@@ -24884,10 +25055,10 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Lilligant
-Level: 68
+Level: 67
 
 Eelektross
-Level: 69
+Level: 68
 Tera Type: Fairy
 
 === TRAINER_PLASMA_POSER_4 ===
@@ -24903,10 +25074,10 @@ Krookodile
 Level: 67
 
 Klang
-Level: 66
+Level: 68
 
 Darmanitan
-Level: 69
+Level: 68
 Tera Type: Fire
 
 === TRAINER_PLASMA_POSER_5 ===
@@ -24919,11 +25090,493 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Conkeldurr
-Level: 68
+Level: 67
 
 Seismitoad
 Level: 68
 
 Leavanny
-Level: 70
+Level: 69
 Tera Type: Dragon
+
+=== TRAINER_BELMONT_POSER_1 ===
+Name: Tiffany
+Class: Poser
+Pic: Cooltrainer F Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Zebstrika
+Level: 65
+
+Tranquill
+Level: 65
+
+Lilligant
+Level: 66
+Tera Type: Water
+
+=== TRAINER_BELMONT_POSER_2 ===
+Name: Brett
+Class: Poser
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Seismitoad
+Level: 65
+
+Ursaring
+Level: 66
+
+Darmanitan
+Level: 66
+
+Unfezant
+Level: 67
+Tera Type: Ground
+
+=== TRAINER_BELMONT_POSER_3  ===
+Name: Jessica
+Class: Poser
+Pic: Cooltrainer F Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Darmanitan
+Level: 65
+
+Conkeldurr
+Level: 66
+
+Klinklang
+Level: 67
+Tera Type: Flying
+
+=== TRAINER_BELMONT_POSER_4  ===
+Name: Dale
+Class: Poser
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Bisharp
+Level: 66
+
+Leavanny
+Level: 66
+
+Clodsire
+Level: 67
+
+Krookodile
+Level: 68
+Tera Type: Steel
+
+=== TRAINER_BELMONT_POSER_5  ===
+Name: Gary
+Class: Poser
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Vanilluxe
+Level: 66
+
+Eelektross
+Level: 67
+
+Wugtrio
+Level: 67
+
+Gothitelle
+Level: 67
+Tera Type: Dark
+
+=== TRAINER_PLASMA_GHETSIS_FAKER ===
+Name: Kevin
+Class: Poser
+Pic: Collector
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+
+Ursaluna @ Flame Orb
+Level: 70
+Ability: Guts
+EVs: 248 HP / 252 Atk / 8 Def
+Adamant Nature
+- Facade
+- Headlong Rush
+- Fire Punch
+- Swords Dance
+
+Ceruledge @ Life Orb
+Level: 70
+Ability: Weak Armor
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Swords Dance
+- Bitter Blade
+- Shadow Sneak
+- Poltergeist
+
+Archaludon @ Choice Scarf
+Level: 71
+Ability: Stamina
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Draco Meteor
+- Thunder Wave
+- Flash Cannon
+- Thunderbolt
+
+Annihilape @ Leftovers
+Level: 71
+Ability: Defiant
+EVs: 240 HP / 252 SpD / 16 Spe
+Careful Nature
+- Bulk Up
+- Taunt
+- Drain Punch
+- Rage Fist
+
+Kingambit @ Leftovers
+Level: 72
+Ability: Supreme Overlord
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Fairy
+Adamant Nature
+- Swords Dance
+- Sucker Punch
+- Kowtow Cleave
+- Iron Head
+
+Victini @ Heavy-Duty Boots
+Level: 75
+Ability: Victory Star
+EVs: 252 Atk / 4 SpA / 252 Spe
+Jolly Nature
+- V-create
+- Bolt Strike
+- U-turn
+- Encore
+
+=== TRAINER_PLASMA_GUARD  ===
+Name: Bob
+Class: Poser
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Vanilluxe
+Level: 66
+
+Braviary
+Level: 66
+
+Reuniclus
+Level: 67
+Tera Type: Fighting
+
+=== TRAINER_RANDALL_SHADOW_QUEST ===
+Name: Randall
+Class: Leader
+Pic: Elite Four Bruno Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices
+
+Sneasler @ Choice Band
+Level: 75
+Ability: Poison Touch
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Close Combat
+- Dire Claw
+- Throat Chop
+- U-turn
+
+Conkeldurr @ Flame Orb
+Level: 76
+Ability: Guts
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Drain Punch
+- Facade
+- Knock Off
+- Mach Punch
+
+Toxicroak @ Life Orb
+Level: 76
+Ability: Dry Skin
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Close Combat
+- Gunk Shot
+- Swords Dance
+- Knock Off
+
+Annihilape @ Leftovers
+Level: 77
+Ability: Defiant
+EVs: 240 HP / 252 SpD / 16 Spe
+Tera Type: Fairy
+Careful Nature
+- Bulk Up
+- Taunt
+- Drain Punch
+- Rage Fist
+
+Lucario @ Life Orb
+Level: 77
+Ability: Inner Focus
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Nasty Plot
+- Focus Blast
+- Flash Cannon
+- Vacuum Wave
+
+Gallade @ Galladite
+Level: 78
+Ability: Justified
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Swords Dance
+- Close Combat
+- Zen Headbutt
+- Knock Off
+
+=== TRAINER_ANGEL ===
+Name: Azrael
+Class: Pkmn Trainer 1
+Pic: Azrael
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching
+
+Empoleon @ Leftovers
+Level: 100
+Ball: Beast
+Ability: Torrent
+Nature: Calm
+EVs: 252 HP / 4 Def / 252 SpD
+- Stealth Rock
+- Roar
+- Surf
+- Flash Cannon
+
+Corviknight @ Leftovers
+Level: 100
+Shiny: Yes
+Ball: Beast
+Ability: Mirror Armor
+Nature: Impish
+EVs: 252 HP / 252 Def / 4 SpD
+- Body Press
+- Roost
+- Brave Bird
+- Bulk Up
+
+Umbreon @ Leftovers
+Level: 100
+Shiny: Yes
+Ball: Beast
+Ability: Synchronize
+Nature: Calm
+EVs: 252 HP / 4 Def / 252 SpD
+- Wish
+- Protect
+- Foul Play
+- Toxic
+
+Golisopod @ Assault Vest
+Level: 100
+Shiny: Yes
+Ball: Beast
+Ability: Emergency Exit
+Nature: Adamant
+EVs: 252 HP / 252 Atk / 4 Def
+- First Impression
+- Liquidation
+- Knock Off
+- Leech Life
+
+Typhlosion-Hisui @ Life Orb
+Level: 100
+Shiny: Yes
+Ball: Beast
+Ability: Blaze
+Nature: Timid
+EVs: 4 HP / 252 SpA / 252 Spe
+- Nasty Plot
+- Eruption
+- Shadow Ball
+- Focus Blast
+
+Sceptile @ Sceptilite
+Level: 100
+Shiny: Yes
+Ball: Beast
+Ability: Overgrow
+Nature: Timid
+EVs: 4 HP / 252 SpA / 252 Spe
+- Energy Ball
+- Dragon Pulse
+- Focus Blast
+- Earth Power
+
+=== TRAINER_PASSIVE ===
+Name: Passive
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching
+
+Ninetales-Alola @ Light Clay
+Level: 100
+Ability: Snow Warning
+Nature: Timid
+EVs: 252 HP / 4 SpA / 252 Spe
+- Aurora Veil
+- Blizzard
+- Moonblast
+- Encore
+
+Mawile @ Mawilite
+Level: 100
+Ability: Intimidate
+Nature: Adamant
+EVs: 252 HP / 252 Atk / 4 SpD
+- Swords Dance
+- Play Rough
+- Iron Head
+- Sucker Punch
+
+Dragonite @ Heavy-Duty Boots
+Level: 100
+Ability: Multiscale
+Nature: Adamant
+EVs: 4 HP / 252 Atk / 252 Spe
+- Dragon Dance
+- Extreme Speed
+- Earthquake
+- Roost
+
+Skarmory @ Rocky Helmet
+Level: 100
+Ability: Sturdy
+Nature: Impish
+EVs: 252 HP / 252 Def / 4 SpD
+- Stealth Rock
+- Spikes
+- Whirlwind
+- Roost
+
+Skeledirge @ Leftovers
+Level: 100
+Ability: Unaware
+Nature: Bold
+Tera Type: Fairy
+EVs: 252 HP / 200 Def / 56 SpA
+- Torch Song
+- Shadow Ball
+- Will-O-Wisp
+- Slack Off
+
+Clefable @ Life Orb
+Level: 100
+Ability: Magic Guard
+Nature: Modest
+EVs: 252 HP / 252 SpA / 4 SpD
+- Calm Mind
+- Moonblast
+- Fire Blast
+- Soft-Boiled
+
+=== TRAINER_RANCHSTYLEBEAN ===
+Name: The ChamP
+Class: Cooltrainer
+Pic: Cooltrainer M Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching
+
+Galvantula @ Focus Sash
+Level: 100
+Ability: Compound Eyes
+Nature: Timid
+Tera Type: Electric
+EVs: 4 HP / 252 SpA / 252 Spe
+- Sticky Web
+- Thunder
+- Bug Buzz
+- Volt Switch
+
+Ogerpon-Hearthflame @ Hearthflame Mask
+Level: 100
+Ability: Mold Breaker
+Nature: Jolly
+EVs: 4 HP / 252 Atk / 252 Spe
+- Swords Dance
+- Ivy Cudgel
+- Horn Leech
+- Knock Off
+
+Chandelure @ Choice Specs
+Level: 100
+Ability: Flash Fire
+Nature: Timid
+EVs: 4 HP / 252 SpA / 252 Spe
+- Shadow Ball
+- Fire Blast
+- Energy Ball
+- Trick
+
+Kingambit @ Life Orb
+Level: 100
+Nature: Adamant
+EVs: 4 HP / 252 Atk / 252 Spe
+- Swords Dance
+- Sucker Punch
+- Kowtow Cleave
+- Iron Head
+
+Umbreon @ Leftovers
+Level: 100
+Ability: Synchronize
+Nature: Calm
+EVs: 252 HP / 4 Def / 252 SpD
+- Wish
+- Protect
+- Foul Play
+- Toxic
+
+Medicham @ Medichamite
+Level: 100
+Ability: Pure Power
+Nature: Jolly
+EVs: 4 HP / 252 Atk / 252 Spe
+- Fake Out
+- Bulk Up
+- Poison Jab
+- Drain Punch

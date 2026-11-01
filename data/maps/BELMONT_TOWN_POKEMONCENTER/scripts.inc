@@ -14,3 +14,22 @@ BELMONT_TOWN_POKEMONCENTER_EventScript_Nurse::
 	waitbuttonpress
 	release
 	end
+
+BelmontTown_PokemonCenter_1F_EventScript_Forgetful::
+	msgbox BelmontTown_PokemonCenter_1F_Text_Forgetful, MSGBOX_NPC
+	end
+
+BelmontTown_PokemonCenter_1F_EventScript_KnockOff::
+	msgbox BelmontTown_PokemonCenter_1F_Text_KnockOff, MSGBOX_NPC
+	end
+
+BelmontTown_PokemonCenter_1F_Text_Forgetful:
+	.string "Have you… Have you seen…\n"
+	.string "Have you seen the…\l"
+	.string "Have you… Uhh…$"
+
+BelmontTown_PokemonCenter_1F_Text_KnockOff:
+	.string "Did you know that using Knock Off\n"
+	.string "on a Pokémon that mega-evolved\l"
+	.string "will undo the Mega-Evolution?\p"
+	.string "I heard it on Reddit!$"

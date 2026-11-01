@@ -40305,7 +40305,7 @@
               {
                 "min_level": 32,
                 "max_level": 36,
-                "species": "SPECIES_PALPITOAD"
+                "species": "SPECIES_SKRELP"
               },
               {
                 "min_level": 22,
@@ -40366,6 +40366,70 @@
                 "min_level": 40,
                 "max_level": 45,
                 "species": "SPECIES_BASCULEGION"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_BELMONT_CAVE",
+          "base_label": "gBELMONT_CAVE",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_DARUMAKA"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_KLINK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_TYNAMO"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_CHARCADET"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_DARUMAKA"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_VANILLITE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 32,
+                "species": "SPECIES_DREEPY"
               }
             ]
           }

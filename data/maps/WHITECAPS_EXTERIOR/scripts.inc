@@ -212,11 +212,11 @@ Whitecaps_EventScript_SummitScene::
 	setflag FLAG_HIDE_WHITECAPS_FERRUS
 
 	setvar VAR_WHITECAPS_STATE, 2
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 	special SpawnCameraObject
 	setflag FLAG_HIDE_WHITECAPS_ACOLYTES
 	special RemoveCameraObject
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	clearflag FLAG_HIDE_WHITECAPS_SILVIO
 	addobject LOCALID_WHITECAPS_SILVIO
 	delay 15

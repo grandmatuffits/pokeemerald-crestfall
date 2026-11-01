@@ -1,5 +1,5 @@
 QUARREN_TOWN_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, QUARREN_TOWN_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, QUARREN_TOWN_OnTransition_Marshadow
 	.byte 0
 
 QUARREN_TOWN_OnTransition::
@@ -63,3 +63,52 @@ QUARREN_TOWN_Text_ScientistNotYet:
 QUARREN_TOWN_Text_ScientistDone:
     .string "Use that HM and keep your path ahead\n"
     .string "well lit!$"
+
+QUARREN_TOWN_OnTransition_Marshadow::
+	setflag FLAG_WORLD_MAP_PEWTER_CITY
+	goto_if_eq VAR_MARSHADOW_QUEST, 1, QUARREN_TOWN_OnTransition_MarshadowShow
+	setflag FLAG_HIDE_MARSHADOW_MAN_2
+	end
+
+QUARREN_TOWN_OnTransition_MarshadowShow::
+	clearflag FLAG_HIDE_MARSHADOW_MAN_2
+	end
+
+QUARREN_TOWN_EventScript_MarshadowMan2::
+	lock
+	faceplayer
+	msgbox QUARREN_TOWN_Text_MarshadowMan2, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, QUARREN_TOWN_Movement_MarshadowVanish
+	waitmovement 0
+	setflag FLAG_HIDE_MARSHADOW_MAN_2
+	removeobject VAR_LAST_TALKED
+	setvar VAR_MARSHADOW_QUEST, 2
+	release
+	end
+
+QUARREN_TOWN_Movement_MarshadowVanish:
+	set_invisible
+	delay_4
+	set_visible
+	delay_4
+	set_invisible
+	delay_8
+	set_visible
+	delay_2
+	set_invisible
+	step_end
+    
+QUARREN_TOWN_Text_MarshadowMan2:
+	.string "Oh, hello again.\p"
+	.string "I was given an opportunity to run\n"
+	.string "with the wrong crowd.\p"
+	.string "The work was questionable, but the\n"
+	.string "pay was good.\p"
+	.string "I gave up my morals to give my son\n"
+	.string "a good life. I just wish I would've\l"
+	.string "known that kind of power would go\l"
+	.string "straight to his head.\p"
+	.string "My family, ashamed of who I became,\n"
+	.string "buried me in secret beside dead\l"
+	.string "Pokémon.$"    

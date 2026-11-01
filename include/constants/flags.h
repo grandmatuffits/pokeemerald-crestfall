@@ -65,8 +65,6 @@
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
@@ -84,7 +82,6 @@
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_TERA_ORB_CHARGED         0x41
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
@@ -1477,9 +1474,10 @@
 
 #define FLAG_MIRAVEIL_HALL_AMULET_COIN              (SYSTEM_FLAGS + 0x27)
 
-#define FLAG_HIDE_MIRAVEIL_GYM_CROWD                0x2E
-#define FLAG_HIDE_MIRAVEIL_GYM_N                    0x2F
-#define FLAG_MIRAVEIL_GYM_ORB_GIVEN                 0x40
+#define FLAG_HIDE_MIRAVEIL_GYM_CROWD                0x402
+#define FLAG_HIDE_MIRAVEIL_GYM_N                    0x403
+#define FLAG_MIRAVEIL_GYM_ORB_GIVEN                 0x404
+#define FLAG_TERA_ORB_CHARGED                       0x405
 
 #define FLAG_JOURNAL_BACK_ON_MAINLAND  0x28A
 #define FLAG_JOURNAL_BACK_IN_MINSI     0x28B
@@ -1491,6 +1489,36 @@
 #define FLAG_BELMONT_PEAT_BLOCK                                     0x46D
 #define FLAG_MINSI_DEX_BAGON_RECEIVED                               0x2D9
 
+#define FLAG_HIDE_BELMONT_CAVE_PLASMA   0x420
+
+#define FLAG_HIDE_BELMONT_CAVE_VICTINI 0x421
+
+#define FLAG_HIDDEN_NORMAL_TERA_SHARD       0x422
+#define FLAG_HIDDEN_GRASS_TERA_SHARD        0x423
+#define FLAG_HIDDEN_FIRE_TERA_SHARD         0x424
+#define FLAG_HIDDEN_WATER_TERA_SHARD        0x425
+#define FLAG_HIDDEN_ELECTRIC_TERA_SHARD     0x426
+
+#define FLAG_RECEIVED_BELMONT_GOLD_CAP   0x427
+
+#define FLAG_BELMONT_HYPER_INTRO_DONE   0x428
+
+#define FLAG_BELMONT_BRAVIARY_TRADE_DONE 0x429
+
+#define FLAG_BELMONT_AUSPACIOUS_ARMOR   0x430
+#define FLAG_BELMONT_MALICIOUS_ARMOR    0x431
+#define FLAG_BELMONT_DRAGON_TERA_SHARD  0x432
+#define FLAG_BELMONT_FAIRY_TERA_SHARD   0x433
+
+#define FLAG_KELDEO_ROAMER_STARTED 0x434
+#define FLAG_KELDEO_REWARD_DONE 0x435
+
+#define FLAG_START_SHINY_HUNT 0x440
+
+#define FLAG_HIDE_MARSHADOW_MAN_1 0x436
+#define FLAG_HIDE_MARSHADOW_MAN_2 0x437
+#define FLAG_HIDE_MARSHADOW_MAN_3 0x438
+#define FLAG_HIDE_MARSHADOW_MON   0x439
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
@@ -1525,6 +1553,7 @@
 
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
+#define FLAG_SYS_DEXNAV_GET 0x400
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
 #define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
@@ -1696,45 +1725,28 @@
 // FLAG_UNUSED_0x8ED claimed as a FLAG_WORLD_MAP_* visited flag
 // FLAG_UNUSED_0x8EE claimed as a FLAG_WORLD_MAP_* visited flag
 // FLAG_UNUSED_0x8EF claimed as a FLAG_WORLD_MAP_* visited flag
-#define FLAG_UNUSED_0x8F0                           (SYSTEM_FLAGS + 0x90) // Unused Flag
-#define FLAG_UNUSED_0x8F1                           (SYSTEM_FLAGS + 0x91) // Unused Flag
-#define FLAG_UNUSED_0x8F2                           (SYSTEM_FLAGS + 0x92) // Unused Flag
-#define FLAG_UNUSED_0x8F3                           (SYSTEM_FLAGS + 0x93) // Unused Flag
-#define FLAG_UNUSED_0x8F4                           (SYSTEM_FLAGS + 0x94) // Unused Flag
-#define FLAG_UNUSED_0x8F5                           (SYSTEM_FLAGS + 0x95) // Unused Flag
-#define FLAG_UNUSED_0x8F6                           (SYSTEM_FLAGS + 0x96) // Unused Flag
-#define FLAG_UNUSED_0x8F7                           (SYSTEM_FLAGS + 0x97) // Unused Flag
-#define FLAG_UNUSED_0x8F8                           (SYSTEM_FLAGS + 0x98) // Unused Flag
-#define FLAG_UNUSED_0x8F9                           (SYSTEM_FLAGS + 0x99) // Unused Flag
-#define FLAG_UNUSED_0x8FA                           (SYSTEM_FLAGS + 0x9A) // Unused Flag
-#define FLAG_UNUSED_0x8FB                           (SYSTEM_FLAGS + 0x9B) // Unused Flag
-#define FLAG_UNUSED_0x8FC                           (SYSTEM_FLAGS + 0x9C) // Unused Flag
-#define FLAG_UNUSED_0x8FD                           (SYSTEM_FLAGS + 0x9D) // Unused Flag
-#define FLAG_UNUSED_0x8FE                           (SYSTEM_FLAGS + 0x9E) // Unused Flag
-#define FLAG_UNUSED_0x8FF                           (SYSTEM_FLAGS + 0x9F) // Unused Flag
-#define FLAG_UNUSED_0x900                           (SYSTEM_FLAGS + 0xA0) // Unused Flag
-#define FLAG_UNUSED_0x901                           (SYSTEM_FLAGS + 0xA1) // Unused Flag
-#define FLAG_UNUSED_0x902                           (SYSTEM_FLAGS + 0xA2) // Unused Flag
-#define FLAG_UNUSED_0x903                           (SYSTEM_FLAGS + 0xA3) // Unused Flag
-#define FLAG_UNUSED_0x904                           (SYSTEM_FLAGS + 0xA4) // Unused Flag
-#define FLAG_UNUSED_0x905                           (SYSTEM_FLAGS + 0xA5) // Unused Flag
-#define FLAG_UNUSED_0x906                           (SYSTEM_FLAGS + 0xA6) // Unused Flag
-#define FLAG_UNUSED_0x907                           (SYSTEM_FLAGS + 0xA7) // Unused Flag
-#define FLAG_UNUSED_0x908                           (SYSTEM_FLAGS + 0xA8) // Unused Flag
-#define FLAG_UNUSED_0x909                           (SYSTEM_FLAGS + 0xA9) // Unused Flag
-#define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA) // Unused Flag
-#define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB) // Unused Flag
-#define FLAG_UNUSED_0x90C                           (SYSTEM_FLAGS + 0xAC) // Unused Flag
-#define FLAG_UNUSED_0x90D                           (SYSTEM_FLAGS + 0xAD) // Unused Flag
-#define FLAG_UNUSED_0x90E                           (SYSTEM_FLAGS + 0xAE) // Unused Flag
-#define FLAG_UNUSED_0x90F                           (SYSTEM_FLAGS + 0xAF) // Unused Flag
-#define FLAG_UNUSED_0x910                           (SYSTEM_FLAGS + 0xB0) // Unused Flag
-#define FLAG_UNUSED_0x911                           (SYSTEM_FLAGS + 0xB1) // Unused Flag
-#define FLAG_UNUSED_0x912                           (SYSTEM_FLAGS + 0xB2) // Unused Flag
-#define FLAG_UNUSED_0x913                           (SYSTEM_FLAGS + 0xB3) // Unused Flag
-#define FLAG_UNUSED_0x914                           (SYSTEM_FLAGS + 0xB4) // Unused Flag
-#define FLAG_UNUSED_0x915                           (SYSTEM_FLAGS + 0xB5) // Unused Flag
-#define FLAG_UNUSED_0x916                           (SYSTEM_FLAGS + 0xB6) // Unused Flag
+#define FLAG_RAICHU_ALOLA_TRADE_DONE                           0x450
+#define FLAG_EXEGGUTOR_ALOLA_TRADE_DONE                        0x451
+#define FLAG_GEODUDE_ALOLA_TRADE_DONE                          0x452
+#define FLAG_SANDSHREW_ALOLA_TRADE_DONE                        0x453
+#define FLAG_VULPIX_ALOLA_TRADE_DONE                           0x454
+#define FLAG_GRIMER_ALOLA_TRADE_DONE                           0x455
+#define FLAG_RATTATA_ALOLA_TRADE_DONE                          0x456
+#define FLAG_DIGLETT_ALOLA_TRADE_DONE                          0x457
+#define FLAG_MAROWAK_ALOLA_TRADE_DONE                          0x458
+#define FLAG_GROWLITHE_HISUI_TRADE_DONE                        0x459
+#define FLAG_VOLTORB_HISUI_TRADE_DONE                          0x45A
+#define FLAG_TYPHLOSION_HISUI_TRADE_DONE                       0x45B
+#define FLAG_SNEASEL_HISUI_TRADE_DONE                          0x45C
+#define FLAG_SAMUROTT_HISUI_TRADE_DONE                         0x45D
+#define FLAG_LILLIGANT_HISUI_TRADE_DONE                        0x45E
+#define FLAG_ZORUA_HISUI_TRADE_DONE                            0x45F
+#define FLAG_AVALUGG_HISUI_TRADE_DONE                          0x460
+#define FLAG_DECIDUEYE_HISUI_TRADE_DONE                        0x461
+#define FLAG_PONYTA_GALAR_TRADE_DONE                           0x462
+#define FLAG_SLOWPOKE_GALAR_TRADE_DONE                         0x463
+#define FLAG_DARUMAKA_GALAR_TRADE_DONE                         0x464
+#define FLAG_WOOPER_PALDEA_TRADE_DONE                          0x449
 #define FLAG_UNUSED_0x917                           (SYSTEM_FLAGS + 0xB7) // Unused Flag
 #define FLAG_UNUSED_0x918                           (SYSTEM_FLAGS + 0xB8) // Unused Flag
 #define FLAG_UNUSED_0x919                           (SYSTEM_FLAGS + 0xB9) // Unused Flag
@@ -2579,7 +2591,7 @@
 #define FLAG_WORLD_MAP_SEVEN_ISLAND                                 0
 #define FLAG_WORLD_MAP_SIX_ISLAND                                   0
 #define FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F                     0
-#define FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F                    0
+#define FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F                    0x3B8
 #define FLAG_WORLD_MAP_VIRIDIAN_FOREST                              0
 #define FLAG_WORLD_MAP_MT_MOON_1F                                   0
 #define FLAG_WORLD_MAP_SSANNE_EXTERIOR                              0

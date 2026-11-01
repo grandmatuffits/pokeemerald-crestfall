@@ -20,7 +20,7 @@ ROSEBANK_GYM_EventScript_FriedeDefeated::
 
 ROSEBANK_GYM_EventScript_FriedeBeaten::
 	goto_if_set FLAG_FRIEDE_REMATCH_DONE, ROSEBANK_GYM_EventScript_FriedeRematchBeaten
-	goto_if_unset FLAG_ELDERS_ARC_STARTED, ROSEBANK_GYM_EventScript_FriedePostBadge
+	goto_if_unset FLAG_ROSS_REMATCH_DONE, ROSEBANK_GYM_EventScript_FriedePostBadge
 	lock
 	faceplayer
 	msgbox ROSEBANK_GYM_Text_FriedeRematchIntro, MSGBOX_DEFAULT

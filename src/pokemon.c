@@ -5074,32 +5074,82 @@ bool32 IsSpeciesInHoennDex(enum Species species)
 u16 GetBattleBGM(void)
 {
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        && (TRAINER_BATTLE_PARAM.opponentA == TRAINER_RIVALCF_1
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_RIVALCF_2
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_RIVALCF_3
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_RIVALCF_4
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_RIVALCF_5
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_RIVALCF_FINAL))
+        return MUS_ENPALE_RIVAL;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        && (TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_FIRE_REMATCH
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_WATER_REMATCH
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_GRASS_REMATCH
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_BUG_REMATCH
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_FIRE_FINAL
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_WATER_FINAL
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_GRASS_FINAL
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_ENPALE_E4_BUG_FINAL))
+        return MUS_ENPALE_E4;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_RIVALCF_CHAMP)
+        return MUS_ENPALE_RIVAL;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_UMBRA_REMATCH)
+        return MUS_ENPALE_UMBRA;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        && (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FERRUS_WALLAR
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_IRRUS_WALLAR
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_SAXUS_WALLAR
+         || TRAINER_BATTLE_PARAM.opponentA == TRAINER_PRAETUS_WALLAR))
+        return MUS_ENPALE_ELDER;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_PLASMA_GHETSIS_FAKER)
+        return MUS_ENPALE_PLASMA;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_MIRAVEIL_N)
+        return MUS_ENPALE_N;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         && (TRAINER_BATTLE_PARAM.opponentA == TRAINER_UMBRA_OPENING
          || TRAINER_BATTLE_PARAM.opponentA == TRAINER_UMBRA_BERGEN))
         return MUS_ENPALE_UMBRA;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         && TRAINER_BATTLE_PARAM.opponentA == TRAINER_ROBIN_1)
-        return MUS_ENPALE_ROBIN;;
+        return MUS_ENPALE_ROBIN;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_ROBIN_REMATCH)
+    return MUS_ENPALE_ROBIN;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
 		&& TRAINER_BATTLE_PARAM.opponentA == TRAINER_OMAR_1)
 		return MUS_ENPALE_OMAR;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_OMAR_REMATCH)
+    return MUS_ENPALE_OMAR;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) 
         && TRAINER_BATTLE_PARAM.opponentA == TRAINER_LEADER_INGRID) 
-        return MUS_ENPALE_INGRID;    
+        return MUS_ENPALE_INGRID;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_INGRID_REMATCH)
+    return MUS_ENPALE_INGRID;    
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_LEADER_FRIEDE)
+    return MUS_ENPALE_FRIEDE;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRIEDE_REMATCH)
     return MUS_ENPALE_FRIEDE;    
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_RANDALL_SHADOW_QUEST)
+    return MUS_ENPALE_RANDALL;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_LEADER_RANDALL)
+    return MUS_ENPALE_RANDALL;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_RANDALL_REMATCH)
     return MUS_ENPALE_RANDALL;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_LEADER_SILVIO)
     return MUS_ENPALE_SILVIO;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_SILVIO_REMATCH)
+    return MUS_ENPALE_SILVIO;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_MERYL)
+    return MUS_ENPALE_MERYL;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_MERYL_REMATCH)
     return MUS_ENPALE_MERYL;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         && TRAINER_BATTLE_PARAM.opponentA == TRAINER_BRIGHAM)
         return MUS_ENPALE_BRIGHAM;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         && TRAINER_BATTLE_PARAM.opponentA == TRAINER_ROSS)
-        return MUS_ENPALE_ROSS;    
+        return MUS_ENPALE_ROSS;
+    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && TRAINER_BATTLE_PARAM.opponentA == TRAINER_ROSS_REMATCH)
+    return MUS_ENPALE_ROSS;    
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         && TRAINER_BATTLE_PARAM.opponentA == TRAINER_BRUTUS)
         return MUS_ENPALE_BRUTUS;    

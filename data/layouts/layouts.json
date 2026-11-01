@@ -10758,7 +10758,7 @@
       "id": "LAYOUT_BELMONT_TOWN",
       "name": "BELMONT_TOWN_Layout",
       "width": 46,
-      "height": 40,
+      "height": 44,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/BELMONT_TOWN/border.bin",
@@ -10783,6 +10783,56 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/BELMONT_TOWN_POKEMONCENTER/border.bin",
       "blockdata_filepath": "data/layouts/BELMONT_TOWN_POKEMONCENTER/map.bin"
+    },
+    {
+      "id": "LAYOUT_BELMONT_TOWN_TERA_SHARD_HOUSE",
+      "name": "BELMONT_TOWN_TERA_SHARD_HOUSE_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BELMONT_TOWN_TERA_SHARD_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/BELMONT_TOWN_TERA_SHARD_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_BELMONT_TOWN_MAIN_HOUSE",
+      "name": "BELMONT_TOWN_MAIN_HOUSE_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BELMONT_TOWN_MAIN_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/BELMONT_TOWN_MAIN_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_BELMONT_CAVE",
+      "name": "BELMONT_CAVE_Layout",
+      "width": 30,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/BELMONT_CAVE/border.bin",
+      "blockdata_filepath": "data/layouts/BELMONT_CAVE/map.bin"
+    },
+    {
+      "id": "LAYOUT_COPPERGATE_CITY_WEST_TRADE_HOUSE",
+      "name": "COPPERGATE_CITY_WEST_TRADE_HOUSE_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/COPPERGATE_CITY_WEST_TRADE_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/COPPERGATE_CITY_WEST_TRADE_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_BELMONT_CAVE_BF1",
+      "name": "BELMONT_CAVE_BF1_Layout",
+      "width": 30,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/BELMONT_CAVE_BF1/border.bin",
+      "blockdata_filepath": "data/layouts/BELMONT_CAVE_BF1/map.bin"
     }
   ]
 }

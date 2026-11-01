@@ -176,7 +176,8 @@
     "ENPALE_ROUTE_20",
     "COPPERGATE_CITY_WEST",
     "SAFARI_ZONE_AREA_2",
-    "BELMONT_TOWN"
+    "BELMONT_TOWN",
+    "COPPERGATE_CITY_WEST_TRADE_HOUSE"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1282,7 +1283,11 @@
     "SAFARI_ZONE_AREA_4",
     "MINSI_CITY_CANDY_HOUSE",
     "COPPERGATE_CITY_APARTMENT_2F",
-    "MIRAVEIL_GYM"
+    "MIRAVEIL_GYM",
+    "BELMONT_TOWN_TERA_SHARD_HOUSE",
+    "BELMONT_TOWN_MAIN_HOUSE",
+    "BELMONT_CAVE",
+    "BELMONT_CAVE_BF1"
   ],
   "gMapGroup_Indoor_Delmark": [
     "DELMARK_CITY_FERRY_HOUSE",

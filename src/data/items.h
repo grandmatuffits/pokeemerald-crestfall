@@ -16057,6 +16057,23 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_Vitamin,
         .iconPalette = gItemIconPalette_Carbos,
     },
+        [ITEM_SHINY_CANDY] =
+    {
+        .name = ITEM_NAME("Shiny Candy"),
+        .pluralName = ITEM_PLURAL_NAME("Shiny Candy"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Makes a Pokémon\n"
+            "shiny. Used once\n"
+            "and consumed."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_FIELD_USE,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_ShinyCandy,
+        .importance = 0,
+        .iconPic = gItemIcon_ShinyCandy,            // placeholder
+        .iconPalette = gItemIconPalette_ShinyCandy, // placeholder
+    },
 };
 #undef ITEM_NAME
 #undef ITEM_PLURAL_NAME

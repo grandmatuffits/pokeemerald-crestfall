@@ -54,8 +54,51 @@ MINSI_CITY_GYM_EventScript_RossRematchEnd::
 	end
 
 MINSI_CITY_GYM_EventScript_RossRematchBeaten::
+	goto_if_set FLAG_KELDEO_REWARD_DONE, MINSI_CITY_GYM_EventScript_RossRematchRepeat
+	goto_if_set FLAG_KELDEO_ROAMER_STARTED, MINSI_CITY_GYM_EventScript_RossKeldeoCheck
+	special CheckCaughtBeastTrio
+	goto_if_eq VAR_RESULT, TRUE, MINSI_CITY_GYM_EventScript_RossKeldeoStart
+MINSI_CITY_GYM_EventScript_RossRematchRepeat::
 	setspeaker MINSI_CITY_GYM_Text_RossName
 	msgbox MINSI_CITY_GYM_Text_RossRematchRepeat, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_GYM_EventScript_RossKeldeoStart::
+	checkitemspace ITEM_MASTER_BALL
+	goto_if_eq VAR_RESULT, FALSE, MINSI_CITY_GYM_EventScript_RossKeldeoBagFull
+	setspeaker MINSI_CITY_GYM_Text_RossName
+	msgbox MINSI_CITY_GYM_Text_RossKeldeoIntro, MSGBOX_DEFAULT
+	setspeaker MINSI_CITY_GYM_Text_RossName
+	msgbox MINSI_CITY_GYM_Text_RossKeldeoBall, MSGBOX_DEFAULT
+	giveitem ITEM_MASTER_BALL
+	special InitEnpaleKeldeoRoamer
+	setseenmon SPECIES_KELDEO
+	setflag FLAG_KELDEO_ROAMER_STARTED
+	release
+	end
+
+MINSI_CITY_GYM_EventScript_RossKeldeoBagFull::
+	setspeaker MINSI_CITY_GYM_Text_RossName
+	msgbox MINSI_CITY_GYM_Text_RossKeldeoBagFull, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_GYM_EventScript_RossKeldeoCheck::
+	special CheckCaughtKeldeo
+	goto_if_eq VAR_RESULT, TRUE, MINSI_CITY_GYM_EventScript_RossKeldeoReward
+	setspeaker MINSI_CITY_GYM_Text_RossName
+	msgbox MINSI_CITY_GYM_Text_RossKeldeoReminder, MSGBOX_DEFAULT
+	release
+	end
+
+MINSI_CITY_GYM_EventScript_RossKeldeoReward::
+	setspeaker MINSI_CITY_GYM_Text_RossName
+	msgbox MINSI_CITY_GYM_Text_RossKeldeoReward, MSGBOX_DEFAULT
+	giveitem ITEM_GOLD_BOTTLE_CAP
+	goto_if_eq VAR_RESULT, FALSE, MINSI_CITY_GYM_EventScript_RossKeldeoRewardEnd
+	setflag FLAG_KELDEO_REWARD_DONE
+MINSI_CITY_GYM_EventScript_RossKeldeoRewardEnd::
 	release
 	end
 
@@ -154,3 +197,32 @@ MINSI_CITY_GYM_Text_RossBeasts:
 	.string "Their power might be just what you\n"
 	.string "need to finish the job on TEAM\l"
 	.string "COVENANT.$"
+
+MINSI_CITY_GYM_Text_RossKeldeoIntro:
+	.string "Oh, you're back?\p"
+	.string "So, you managed to find those\n"
+	.string "three roaming POKéMON. Good stuff.\p"
+	.string "I've been hearing reports of\n"
+	.string "another one running around.\p"
+	.string "Take a look. Report back if you\n"
+	.string "manage to snag it.$"
+
+MINSI_CITY_GYM_Text_RossKeldeoReminder:
+	.string "Still no luck with that other\n"
+	.string "one?\p"
+	.string "Keep looking. It's still running\n"
+	.string "around ENPALE.$"
+
+MINSI_CITY_GYM_Text_RossKeldeoReward:
+	.string "Wow, there it is.\p"
+	.string "You just don't quit, do you?\p"
+	.string "Anyways, here. For your trouble.$"	
+
+MINSI_CITY_GYM_Text_RossKeldeoBall:
+	.string "Also, take this. It'll help.$"
+
+MINSI_CITY_GYM_Text_RossKeldeoBagFull:
+	.string "I have something for you, but your\n"
+	.string "bag is full.\p"
+	.string "Make some room and come talk to\n"
+	.string "me again.$"	

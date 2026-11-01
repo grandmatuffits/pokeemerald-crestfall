@@ -2,8 +2,8 @@
   "id": "MAP_BELMONT_TOWN",
   "name": "BELMONT_TOWN",
   "layout": "LAYOUT_BELMONT_TOWN",
-  "music": "MUS_ENPALE_MIRAVEIL",
-  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
+  "music": "MUS_ENPALE_BELMONT",
+  "region_map_section": "MAPSEC_ROUTE_10",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
@@ -32,6 +32,72 @@
       "trainer_sight_or_berry_tree_id": "ITEM_LEADERS_CREST",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_BELMONT_LEADERS_CREST"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PLASMA_POSER_F",
+      "x": 26,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BelmontTown_EventScript_Plasma2",
+      "flag": "FLAG_HIDE_BELMONT_CAVE_PLASMA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PLASMA_POSER_M",
+      "x": 17,
+      "y": 38,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BelmontTown_EventScript_Plasma1",
+      "flag": "FLAG_HIDE_BELMONT_CAVE_PLASMA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PLASMA_POSER_F",
+      "x": 25,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BelmontTown_EventScript_Plasma3",
+      "flag": "FLAG_HIDE_BELMONT_CAVE_PLASMA"
+    },
+    {
+      "local_id": "LOCALID_PLASMA_GUARD",
+      "graphics_id": "OBJ_EVENT_GFX_PLASMA_POSER_M",
+      "x": 17,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BelmontTown_EventScript_Plasma4",
+      "flag": "FLAG_HIDE_BELMONT_CAVE_PLASMA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CRUSH_GIRL",
+      "x": 35,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BELMONT_TOWN_EventScript_SneaselTrader",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -48,8 +114,48 @@
       "elevation": 0,
       "dest_map": "MAP_BELMONT_TOWN_POKEMONCENTER",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_BELMONT_TOWN_TERA_SHARD_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_BELMONT_TOWN_MAIN_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_BELMONT_CAVE",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "BELMONT_CAVE_EventScript_GuardTile"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 34,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BelmontTown_EventScript_TownSign"
+    }
+  ]
 }

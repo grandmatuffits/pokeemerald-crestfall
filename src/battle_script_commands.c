@@ -8259,6 +8259,12 @@ static void Cmd_handleballthrow(void)
     }
 }
 
+static const u8 *GetSafeBoxNameToSendMon(void)
+{
+    u8 *name = GetBoxNamePtr(VarGet(VAR_PC_BOX_TO_SEND_MON));
+    return (name != NULL) ? name : GetBoxNamePtr(0);
+}
+
 static void Cmd_givecaughtmon(void)
 {
     CMD_ARGS(const u8 *passInstr);
@@ -8384,12 +8390,12 @@ static void Cmd_givecaughtmon(void)
             if (!ShouldShowBoxWasFullMessage())
             {
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SENT_SOMEONES_PC;
-                StringCopy(gStringVar1, GetBoxNamePtr(VarGet(VAR_PC_BOX_TO_SEND_MON)));
+                StringCopy(gStringVar1, GetSafeBoxNameToSendMon());
                 GetMonData(caughtMon, MON_DATA_NICKNAME, gStringVar2);
             }
             else
             {
-                StringCopy(gStringVar1, GetBoxNamePtr(VarGet(VAR_PC_BOX_TO_SEND_MON))); // box the mon was sent to
+                StringCopy(gStringVar1, GetSafeBoxNameToSendMon()); // box the mon was sent to
                 GetMonData(caughtMon, MON_DATA_NICKNAME, gStringVar2);
                 StringCopy(gStringVar3, GetBoxNamePtr(GetPCBoxToSendMon())); //box the mon was going to be sent to
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SOMEONES_BOX_FULL;

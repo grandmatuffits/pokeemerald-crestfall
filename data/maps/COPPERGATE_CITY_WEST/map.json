@@ -27,6 +27,13 @@
       "elevation": 0,
       "dest_map": "MAP_SAFARI_ZONE_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_COPPERGATE_CITY_WEST_TRADE_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

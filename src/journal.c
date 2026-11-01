@@ -9,6 +9,8 @@
 #include "string_util.h"
 #include "text.h"
 #include "window.h"
+#include "international_string_util.h"
+#include "constants/opponents.h"
 
 #define JOURNAL_LINE_H      16   // pixels per text line
 #define JOURNAL_ENTRY_GAP    6   // pixels between entries
@@ -46,11 +48,18 @@ enum JournalEntry
     JE_SILVIO_REMATCH,
     JE_UMBRA_REMATCH,
     JE_ELDERS,
+    JE_RIVAL_CHAMP,
     JE_SAFARI,
     JE_OAK,
     JE_RED,
     JE_STEVEN,
     JE_CYNTHIA,
+    JE_PLASMA_GYM,
+    JE_PLASMA_BELMONT,
+    JE_BEASTS,
+    JE_KELDEO,
+    JE_MARSHADOW,
+    JE_SHINY_HUNT,
     JE_COUNT
 };
 
@@ -61,14 +70,14 @@ static u8 sJournalActiveCount;
 static u8 sJournalActive[JE_COUNT];
 static u8 sJournalPageFirst[JE_COUNT + 1];
 static u8 sJournalCounterText[48];
+static bool8 sJournalOpenMap;
 
 static const u8 sJournalTitle[] = _("JOURNAL");
 static const u8 sJournalNone[] = _("No current objectives.");
 static const u8 sJournalPageOpen[] = _(" (");
 static const u8 sJournalSlash[] = _("/");
 static const u8 sJournalPageClose[] = _(")");
-static const u8 sJournalRematchA[] = _("Rematch the GYM LEADERS\n(");
-static const u8 sJournalRematchB[] = _("/6 done)");
+static const u8 sJournalMapHint[] = _("{SELECT_BUTTON} MAP");
 
 static const u8 *const sJournalText[JE_COUNT] =
 {
@@ -96,15 +105,22 @@ static const u8 *const sJournalText[JE_COUNT] =
     [JE_UMBRA] = COMPOUND_STRING("Speak to UMBRA in\nVELDTMOOR CITY."),
     [JE_HEMLOCK] = COMPOUND_STRING("Speak to PROFESSOR HEMLOCK\nin MINSI CITY."),
     [JE_ROSS] = COMPOUND_STRING("Speak to ROSS in the\nMINSI CITY GYM."),
-    [JE_REMATCHES] = NULL, // built at runtime (counter)
-    [JE_SILVIO_REMATCH] = COMPOUND_STRING("Speak to SILVIO in the\nDELMARK CITY GYM."),
-    [JE_UMBRA_REMATCH] = COMPOUND_STRING("Face the POKéMON LEAGUE."),
-    [JE_ELDERS] = COMPOUND_STRING("Find and stop the ELDERS in\nthe WALLAR BELLTOWER."),
+    [JE_REMATCHES] = COMPOUND_STRING("Speak to all other GYM\nLEADERS except SILVIO."),
+    [JE_SILVIO_REMATCH] = COMPOUND_STRING("Speak to SILVIO."),
+    [JE_UMBRA_REMATCH] = COMPOUND_STRING("Re-enter the POKéMON LEAGUE."),
+    [JE_ELDERS] = COMPOUND_STRING("Investigate the BELL TOWER\nin WALLAR MARSHLANDS."),
+    [JE_RIVAL_CHAMP] = COMPOUND_STRING("Re-enter the POKéMON LEAGUE."),
     [JE_SAFARI] = COMPOUND_STRING("Visit the SAFARI ZONE in\nCOPPERGATE CITY."),
     [JE_OAK] = COMPOUND_STRING("Speak to PROFESSOR OAK in\nthe MINSI CITY POKéMON LAB."),
     [JE_RED] = COMPOUND_STRING("Speak to RED in the\nWALLAR MARSHLANDS."),
     [JE_STEVEN] = COMPOUND_STRING("Speak to STEVEN in\nWHITECAPS."),
     [JE_CYNTHIA] = COMPOUND_STRING("Speak to CYNTHIA on\nGRANT ISLAND."),
+    [JE_PLASMA_GYM] = COMPOUND_STRING("Investigate the\nMIRAVEIL GYM."),
+    [JE_PLASMA_BELMONT] = COMPOUND_STRING("Find the TEAM PLASMA\nposers' hideout."),
+    [JE_BEASTS] = COMPOUND_STRING("Find and catch all 3\nroaming beasts and bring\nthem to ROSS."),
+    [JE_KELDEO] = COMPOUND_STRING("Find and catch KELDEO and\nbring it to ROSS."),
+    [JE_MARSHADOW] = NULL, // text depends on VAR_MARSHADOW_QUEST
+    [JE_SHINY_HUNT] = COMPOUND_STRING("Bring a shiny POKéMON to\nMINSI CITY."),
 };
 
 static const struct WindowTemplate sJournalWindowTemplate =
@@ -161,26 +177,39 @@ static bool8 IsJournalEntryActive(u8 id)
     case JE_SILVIO_REMATCH: return CountRematchesDone() >= 7 && !FlagGet(FLAG_SILVIO_REMATCH_DONE);
     case JE_UMBRA_REMATCH: return FlagGet(FLAG_SILVIO_REMATCH_DONE) && !FlagGet(FLAG_DEFEATED_UMBRA_REMATCH);
     case JE_ELDERS: return FlagGet(FLAG_DEFEATED_UMBRA_REMATCH) && !FlagGet(FLAG_ELDERS_ARC_COMPLETE);
+    case JE_RIVAL_CHAMP: return FlagGet(FLAG_ELDERS_ARC_COMPLETE) && !FlagGet(FLAG_DEFEATED_RIVAL_CHAMPION);
     case JE_SAFARI: return FlagGet(FLAG_MINSI_NATDEX_RECEIVED) && !FlagGet(FLAG_SAFARI_ZONE_ENTERED);
     case JE_OAK: return FlagGet(FLAG_MINSI_NATDEX_RECEIVED) && !FlagGet(FLAG_OAK_BEATEN);
     case JE_RED: return FlagGet(FLAG_OAK_BEATEN) && !FlagGet(FLAG_RED_BEATEN);
     case JE_STEVEN: return FlagGet(FLAG_OAK_BEATEN) && !FlagGet(FLAG_STEVEN_BEATEN);
     case JE_CYNTHIA: return FlagGet(FLAG_OAK_BEATEN) && !FlagGet(FLAG_CYNTHIA_BEATEN);
+    case JE_PLASMA_GYM: return FlagGet(FLAG_MINSI_NATDEX_RECEIVED) && !FlagGet(TRAINER_FLAGS_START + TRAINER_MIRAVEIL_N);
+    case JE_PLASMA_BELMONT: return FlagGet(TRAINER_FLAGS_START + TRAINER_MIRAVEIL_N) && !FlagGet(FLAG_HIDE_BELMONT_CAVE_PLASMA);
+    case JE_BEASTS: return FlagGet(FLAG_ROSS_REMATCH_DONE) && !FlagGet(FLAG_KELDEO_ROAMER_STARTED);
+    case JE_KELDEO: return FlagGet(FLAG_KELDEO_ROAMER_STARTED) && !FlagGet(FLAG_KELDEO_REWARD_DONE);
+    case JE_MARSHADOW: return VarGet(VAR_MARSHADOW_QUEST) != 0 && VarGet(VAR_MARSHADOW_QUEST) != 5;
+    case JE_SHINY_HUNT: return FlagGet(FLAG_START_SHINY_HUNT) && !FlagGet(FLAG_MINSI_SHINY_CHARM_RECEIVED);
     }
     return FALSE;
 }
 
+static const u8 sJournalMarshadowA[] = _("Investigate the strange man.");
+static const u8 sJournalMarshadowB[] = _("Bring the letter to RANDALL.");
+static const u8 sJournalMarshadowC[] = _("Return the letter to the\nstrange man.");
+
 static const u8 *GetJournalEntryText(u8 id)
 {
-    u8 *dst;
-
-    if (id != JE_REMATCHES)
-        return sJournalText[id];
-
-    dst = StringCopy(sJournalCounterText, sJournalRematchA);
-    dst = ConvertIntToDecimalStringN(dst, CountRematchesDone(), STR_CONV_MODE_LEFT_ALIGN, 1);
-    StringCopy(dst, sJournalRematchB);
-    return sJournalCounterText;
+    if (id == JE_MARSHADOW)
+    {
+        switch (VarGet(VAR_MARSHADOW_QUEST))
+        {
+        case 1:
+        case 2: return sJournalMarshadowA;
+        case 3: return sJournalMarshadowB;
+        default: return sJournalMarshadowC;
+        }
+    }
+    return sJournalText[id];
 }
 
 static u8 CountTextLines(const u8 *s)
@@ -266,6 +295,11 @@ static void PrintJournalPage(void)
     }
     AddTextPrinterParameterized(sJournalWindowId, FONT_NORMAL, gStringVar4, 0, 1, 0, NULL);
 
+        AddTextPrinterParameterized(sJournalWindowId, FONT_NORMAL, gStringVar4, 0, 1, 0, NULL);
+
+    AddTextPrinterParameterized(sJournalWindowId, FONT_NORMAL, sJournalMapHint,
+        GetStringRightAlignXOffset(FONT_NORMAL, sJournalMapHint, 224), 1, 0, NULL);
+
     if (sJournalActiveCount == 0)
     {
         AddTextPrinterParameterized(sJournalWindowId, FONT_NORMAL, sJournalNone, 0, JOURNAL_BODY_Y, 0, NULL);
@@ -292,6 +326,7 @@ void ShowJournalWindow(void)
     DrawStdWindowFrame(sJournalWindowId, FALSE);
     BuildJournalPages();
     sJournalPage = 0;
+    sJournalOpenMap = FALSE;
     PrintJournalPage();
     PutWindowTilemap(sJournalWindowId);
     CopyWindowToVram(sJournalWindowId, COPYWIN_FULL);
@@ -316,6 +351,12 @@ bool8 JournalProcessInput(void)
         }
         return TRUE;
     }
+    if (JOY_NEW(SELECT_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+        sJournalOpenMap = TRUE;
+        return TRUE;
+    }
     if (JOY_NEW(DPAD_DOWN | DPAD_RIGHT) && sJournalPage + 1 < sJournalPageCount)
     {
         PlaySE(SE_SELECT);
@@ -329,6 +370,10 @@ bool8 JournalProcessInput(void)
         PrintJournalPage();
     }
     return FALSE;
+}
+bool8 JournalShouldOpenMap(void)
+{
+    return sJournalOpenMap;
 }
 
 void HideJournalWindow(void)

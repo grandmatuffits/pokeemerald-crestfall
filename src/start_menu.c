@@ -50,6 +50,7 @@
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "item_use.h"
 
 // Menu actions
 enum
@@ -822,12 +823,20 @@ static bool8 StartMenuSafariZoneRetireCallback(void)
 void ShowJournalWindow(void);
 void HideJournalWindow(void);
 bool8 JournalProcessInput(void);
+bool8 JournalShouldOpenMap(void);
 
 static bool8 JournalInputCallback(void)
 {
     if (JournalProcessInput())
     {
         HideJournalWindow();
+        if (JournalShouldOpenMap())
+        {
+            RemoveExtraStartMenuWindows();
+            HideStartMenuWindow();   // clears menu, unfreezes, unlocks
+            CreateTask(ItemUseOnFieldCB_TownMap, 8);
+            return TRUE;             // Task_ShowStartMenu destroys itself
+        }
         InitStartMenu();
         gMenuCallback = HandleStartMenuInput;
     }

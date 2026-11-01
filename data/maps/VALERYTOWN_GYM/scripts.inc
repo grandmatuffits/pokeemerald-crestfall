@@ -25,10 +25,9 @@ VALERYTOWN_GYM_EventScript_RandallReward::
 	msgbox VALERYTOWN_GYM_Text_RandallTM, MSGBOX_DEFAULT
 	release
 	end
-
 VALERYTOWN_GYM_EventScript_RandallBeaten::
 	goto_if_set FLAG_RANDALL_REMATCH_DONE, VALERYTOWN_GYM_EventScript_RandallRematchBeaten
-	goto_if_unset FLAG_ELDERS_ARC_STARTED, VALERYTOWN_GYM_EventScript_RandallRematch
+	goto_if_unset FLAG_ROSS_REMATCH_DONE, VALERYTOWN_GYM_EventScript_RandallRematch
 	msgbox VALERYTOWN_GYM_Text_RandallRematchIntro, MSGBOX_DEFAULT
 	closemessage
 	trainerbattle_no_intro TRAINER_RANDALL_REMATCH, VALERYTOWN_GYM_Text_RandallRematchDefeat
@@ -42,7 +41,17 @@ VALERYTOWN_GYM_EventScript_RandallRematchEnd::
 	end
 
 VALERYTOWN_GYM_EventScript_RandallRematchBeaten::
+	goto_if_eq VAR_MARSHADOW_QUEST, 3, VALERYTOWN_GYM_EventScript_RandallNote
 	msgbox VALERYTOWN_GYM_Text_RandallRematchRepeat, MSGBOX_DEFAULT
+	release
+	end
+
+VALERYTOWN_GYM_EventScript_RandallNote::
+	msgbox VALERYTOWN_GYM_Text_RandallNoteHandOver, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_RANDALL_SHADOW_QUEST, VALERYTOWN_GYM_Text_RandallMobDefeat
+	msgbox VALERYTOWN_GYM_Text_RandallMobAfter, MSGBOX_DEFAULT
+	setvar VAR_MARSHADOW_QUEST, 4
 	release
 	end
 
@@ -267,3 +276,20 @@ VALERYTOWN_GYM_Text_RandallRematchRepeat:
 
 VALERYTOWN_GYM_Text_RandallStoneGiven:
 	.string "Also, you can have this.$"	
+
+VALERYTOWN_GYM_Text_RandallNoteHandOver:
+	.string "Huh!? What's this?\p"
+	.string "HEY! WHAT THE HELL\n"
+	.string "IS THIS!?\p"
+	.string "YOU THINK YOU'RE\n"
+	.string "FUNNY, HUH!?\p"
+	.string "That's it! Let's go!$"
+
+VALERYTOWN_GYM_Text_RandallMobDefeat:
+	.string "Tch…$"
+
+VALERYTOWN_GYM_Text_RandallMobAfter:
+	.string "If this is your idea of some\n"
+	.string "stupid prank, it isn't funny.\p"
+	.string "Take this crap back to wherever\n"
+	.string "you found it.$"

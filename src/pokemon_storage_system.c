@@ -9608,7 +9608,7 @@ u8 *GetBoxNamePtr(u8 boxId)
     if (boxId < TOTAL_BOXES_COUNT)
         return gPokemonStoragePtr->boxNames[boxId];
     else
-        return NULL;
+        return gPokemonStoragePtr->boxNames[0];
 }
 
 static u8 GetBoxWallpaper(u8 boxId)

@@ -246,6 +246,9 @@ const u16 gItemIconPalette_YellowMint[] = INCGFX_U16("graphics/items/icon_palett
 const u32 gItemIcon_RareCandy[] = INCGFX_U32("graphics/items/icons/rare_candy.png", ".4bpp.smol");
 const u16 gItemIconPalette_RareCandy[] = INCGFX_U16("graphics/items/icon_palettes/rare_candy.pal", ".gbapal");
 
+const u32 gItemIcon_ShinyCandy[] = INCGFX_U32("graphics/items/icons/shiny_candy.png", ".4bpp.smol");
+const u16 gItemIconPalette_ShinyCandy[] = INCGFX_U16("graphics/items/icon_palettes/shiny_candy.pal", ".gbapal");
+
 const u32 gItemIcon_ExpCandyXS[] = INCGFX_U32("graphics/items/icons/exp_candy_xs.png", ".4bpp.smol");
 const u32 gItemIcon_ExpCandyS[] = INCGFX_U32("graphics/items/icons/exp_candy_s.png", ".4bpp.smol");
 const u32 gItemIcon_ExpCandyM[] = INCGFX_U32("graphics/items/icons/exp_candy_m.png", ".4bpp.smol");

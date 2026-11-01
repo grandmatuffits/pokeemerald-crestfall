@@ -25,7 +25,7 @@ LENOX_TOWN_GYM_EventScript_IngridDefeated::
 
 LENOX_TOWN_GYM_EventScript_IngridBeaten::
 	goto_if_set FLAG_INGRID_REMATCH_DONE, LENOX_TOWN_GYM_EventScript_IngridRematchBeaten
-	goto_if_unset FLAG_ELDERS_ARC_STARTED, LENOX_TOWN_GYM_EventScript_IngridAfterBattleRepeat
+	goto_if_unset FLAG_ROSS_REMATCH_DONE, LENOX_TOWN_GYM_EventScript_IngridAfterBattleRepeat
 	lock
 	faceplayer
 	msgbox LENOX_TOWN_GYM_Text_IngridRematchIntro, MSGBOX_DEFAULT

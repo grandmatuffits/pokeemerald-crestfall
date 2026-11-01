@@ -13,11 +13,8 @@ BERGEN_HILL_OnTransition_SceneDone::
 	end
 
 BERGEN_HILL_EventScript_FogLift::
-	lockall
-	setweather WEATHER_NONE
-	doweather
-	releaseall
-	end
+	end	
+
 
 BERGEN_HILL_EventScript_Acolyte1::
 	trainerbattle_single TRAINER_BERGEN_ACOLYTE_1, BERGEN_HILL_Text_Acolyte1Intro, BERGEN_HILL_Text_Acolyte1Defeat, BERGEN_HILL_EventScript_Acolyte1After

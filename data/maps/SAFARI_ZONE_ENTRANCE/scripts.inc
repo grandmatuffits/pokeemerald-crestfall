@@ -446,3 +446,56 @@ SAFARI_GATE_Text_BountyRerollUsed:
 
 SAFARI_GATE_Text_BountyRerollBroke:
 	.string "You haven't got ¥15000.$"
+
+SAFARI_ZONE_ENTRANCE_EventScript_WooperTrader::
+	lock
+	faceplayer
+	goto_if_set FLAG_WOOPER_PALDEA_TRADE_DONE, SAFARI_ZONE_ENTRANCE_EventScript_WooperTraderDone
+	ingame_trade INGAME_TRADE_WOOPER_PALDEA, SAFARI_ZONE_ENTRANCE_Text_WooperTradeOffer, SAFARI_ZONE_ENTRANCE_EventScript_WooperTradeDecline, SAFARI_ZONE_ENTRANCE_EventScript_WooperTradeWrongMon, SAFARI_ZONE_ENTRANCE_Text_WooperTradeSuccess
+	setflag FLAG_WOOPER_PALDEA_TRADE_DONE
+	msgbox SAFARI_ZONE_ENTRANCE_Text_WooperTradeAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SAFARI_ZONE_ENTRANCE_EventScript_WooperTradeDecline::
+	msgbox SAFARI_ZONE_ENTRANCE_Text_WooperTradeDecline, MSGBOX_DEFAULT
+	release
+	end
+
+SAFARI_ZONE_ENTRANCE_EventScript_WooperTradeWrongMon::
+	msgbox SAFARI_ZONE_ENTRANCE_Text_WooperTradeWrongMon, MSGBOX_DEFAULT
+	release
+	end
+
+SAFARI_ZONE_ENTRANCE_EventScript_WooperTraderDone::
+	msgbox SAFARI_ZONE_ENTRANCE_Text_WooperTraderDone, MSGBOX_DEFAULT
+	release
+	end
+
+SAFARI_ZONE_ENTRANCE_Text_WooperTradeOffer:
+	.string "I just want one of those\n"
+	.string "Water-Type Woopers, but I'm too\l"
+	.string "broke to get in the Safari Zone!\p"
+	.string "I have a Wooper from Paldea if you\n"
+	.string "wanna swap?$"
+
+SAFARI_ZONE_ENTRANCE_Text_WooperTradeDecline:
+	.string "No Wooper?\p"
+	.string "That's alright, the offer still\n"
+	.string "stands!$"
+
+SAFARI_ZONE_ENTRANCE_Text_WooperTradeWrongMon:
+	.string "That's not a Wooper!\p"
+	.string "I want one of the Water-Type\n"
+	.string "ones.$"
+
+SAFARI_ZONE_ENTRANCE_Text_WooperTradeSuccess:
+	.string "Awesome, a Water-Type Wooper!\p"
+	.string "Take good care of my one from\n"
+	.string "Paldea!$"
+
+SAFARI_ZONE_ENTRANCE_Text_WooperTradeAfter:
+	.string "Now I don't need the Safari Zone!$"
+
+SAFARI_ZONE_ENTRANCE_Text_WooperTraderDone:
+	.string "I love my Water-Type Wooper!$"	

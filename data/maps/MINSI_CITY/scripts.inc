@@ -162,7 +162,7 @@ MINSI_CITY_Text_GymLocked:
 	.string "The gym is currently closed.$"
 
 MINSI_CITY_EventScript_SouthTrigger::
-	goto_if_set FLAG_SYS_POKEDEX_GET, MINSI_CITY_EventScript_SouthTrigger_End
+	goto_if_set FLAG_SYS_POKEDEX_GET, MINSI_CITY_EventScript_SouthTrigger_Dex
 	lockall
 	applymovement LOCALID_POKELABGUY, MINSI_CITY_Movement_PokeLabGuyFace
 	waitmovement 0
@@ -276,15 +276,11 @@ MINSI_CITY_Text_City_Sign:
 	.string "Fresh air and fresh beginnings$"
 
 MINSI_CITY_EventScript_SouthBlock::
-	lock
-	faceplayer
-	goto_if_set FLAG_MINSI_TOWN_MAP_RECEIVED, MINSI_CITY_EventScript_SouthBlockDone
-	msgbox MINSI_CITY_Text_SouthBlockGift, MSGBOX_DEFAULT
-	giveitem ITEM_TOWN_MAP
-	goto_if_eq VAR_RESULT, FALSE, MINSI_CITY_EventScript_SouthBlockNoRoom
-	setflag FLAG_MINSI_TOWN_MAP_RECEIVED
-	release
-	end
+    lock
+    faceplayer
+    msgbox MINSI_CITY_Text_SouthBlock, MSGBOX_DEFAULT
+    release
+    end
 
 MINSI_CITY_EventScript_SouthBlockNoRoom::
 	msgbox MINSI_CITY_Text_SouthBlockNoRoom, MSGBOX_DEFAULT
@@ -316,3 +312,107 @@ MINSI_CITY_EventScript_GymSign::
 MINSI_CITY_Text_Gym_Sign:
 	.string "Minsi Gym\n"
 	.string "Don't forget your Antidotes!$"	
+
+MINSI_CITY_EventScript_SouthTrigger_Dex::
+    goto_if_set FLAG_SYS_DEXNAV_GET, MINSI_CITY_EventScript_SouthTrigger_End
+    getplayerxy VAR_0x8004, VAR_0x8005
+    goto_if_eq VAR_0x8004, 21, MINSI_CITY_EventScript_DexNavGuy_X21
+    goto_if_eq VAR_0x8004, 22, MINSI_CITY_EventScript_DexNavGuy_X22
+    goto MINSI_CITY_EventScript_DexNavGuy_X23
+
+MINSI_CITY_EventScript_DexNavGuy_X23::
+    lockall
+	applymovement LOCALID_POKELABGUY, MINSI_CITY_Movement_PokeLabGuyFace
+    applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerFaceRight
+    msgbox MINSI_CITY_Text_DexNavCall, MSGBOX_DEFAULT
+    closemessage
+    waitmovement 0
+    call MINSI_CITY_EventScript_DexNavGuy_Give
+    releaseall
+    end
+
+MINSI_CITY_EventScript_DexNavGuy_X22::
+    lockall
+	applymovement LOCALID_POKELABGUY, MINSI_CITY_Movement_DexNavGuyApproach1
+    applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerFaceRight
+    msgbox MINSI_CITY_Text_DexNavCall, MSGBOX_DEFAULT
+    closemessage
+    waitmovement 0
+    call MINSI_CITY_EventScript_DexNavGuy_Give
+    applymovement LOCALID_POKELABGUY, MINSI_CITY_Movement_DexNavGuyReturn1
+    waitmovement 0
+    releaseall
+    end
+
+MINSI_CITY_EventScript_DexNavGuy_X21::
+    lockall
+	applymovement LOCALID_POKELABGUY, MINSI_CITY_Movement_DexNavGuyApproach2
+    applymovement OBJ_EVENT_ID_PLAYER, MINSI_CITY_Movement_PlayerFaceRight
+    msgbox MINSI_CITY_Text_DexNavCall, MSGBOX_DEFAULT
+    closemessage
+    waitmovement 0
+    call MINSI_CITY_EventScript_DexNavGuy_Give
+    applymovement LOCALID_POKELABGUY, MINSI_CITY_Movement_DexNavGuyReturn2
+    waitmovement 0
+    releaseall
+    end
+
+MINSI_CITY_EventScript_DexNavGuy_Give::
+    msgbox MINSI_CITY_Text_DexNavGift, MSGBOX_DEFAULT
+    setflag FLAG_SYS_DEXNAV_GET
+    playfanfare MUS_OBTAIN_ITEM
+    msgbox MINSI_CITY_Text_DexNavObtained, MSGBOX_DEFAULT
+    waitfanfare
+    msgbox MINSI_CITY_Text_DexNavFarewell, MSGBOX_DEFAULT
+    closemessage
+    return
+
+MINSI_CITY_Movement_PlayerFaceRight:
+    face_right
+    step_end
+
+MINSI_CITY_Movement_DexNavGuyApproach1:
+    walk_left
+    step_end
+
+MINSI_CITY_Movement_DexNavGuyApproach2:
+    walk_left
+    walk_left
+    step_end
+
+MINSI_CITY_Movement_DexNavGuyReturn1:
+    walk_right
+    face_left
+    step_end
+
+MINSI_CITY_Movement_DexNavGuyReturn2:
+    walk_right
+    walk_right
+    face_left
+    step_end	
+
+MINSI_CITY_Text_DexNavCall:
+    .string "Hey there, champ!$"
+
+MINSI_CITY_Text_DexNavObtained:
+    .string "{PLAYER} received the DEXNAV!$"
+
+MINSI_CITY_Text_DexNavFarewell:
+    .string "Good luck out there, champ!$"	
+
+MINSI_CITY_Text_DexNavGift:
+    .string "Looks like you got yourself your\n"
+    .string "own Pokédex!\p"
+    .string "Must be courtesy of Professor\n"
+    .string "Hemlock, no doubt!\p"
+    .string "Well, to help you kickstart your\n"
+    .string "adventure, I present to you your\l"
+    .string "own DexNav!\p"
+    .string "The ultimate Pokémon Trainer\n"
+    .string "companion!\p"
+    .string "With just a few button presses,\n"
+    .string "this baby will help you find any\l"
+    .string "specific Pokémon in any given\l"
+    .string "area!\p"
+    .string "Play around with it and watch\n"
+    .string "that Pokédex fill up instantly!$"	

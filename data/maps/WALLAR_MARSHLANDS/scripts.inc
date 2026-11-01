@@ -116,7 +116,8 @@ WALLAR_MARSHLANDS_EventScript_SaxusBattle::
 	msgbox WALLAR_MARSHLANDS_Text_SaxusIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_ELDER_SAXUS, WALLAR_MARSHLANDS_Text_SaxusDefeat
 	msgbox WALLAR_MARSHLANDS_Text_SaxusPost, MSGBOX_DEFAULT
-	fadescreen FADE_TO_BLACK
+	closemessage
+	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject WALLAR_ELDER_SAXUS
 	removeobject WALLAR_BRIGHAM
 	removeobject WALLAR_ACOLYTE_CAPTOR1
@@ -124,8 +125,8 @@ WALLAR_MARSHLANDS_EventScript_SaxusBattle::
 	removeobject WALLAR_ACOLYTE1
 	removeobject WALLAR_ACOLYTE2
 	setflag FLAG_WALLAR_SAXUS_DONE
-	fadescreen FADE_FROM_BLACK
 	delay 30
+	fadescreenswapbuffers FADE_FROM_BLACK
 	return
 
 WALLAR_MARSHLANDS_Movement_SaxusApproach48:

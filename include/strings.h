@@ -282,6 +282,7 @@ extern const u8 gText_PkmnCuredOfParalysis[];
 extern const u8 gText_PkmnGotOverInfatuation[];
 extern const u8 gText_PkmnTransformed[];
 extern const u8 gText_PkmnBecameHealthy[];
+extern const u8 gText_PkmnBecameShiny[];
 extern const u8 gText_HP3[];
 extern const u8 gText_SpAtk3[];
 extern const u8 gText_SpDef3[];

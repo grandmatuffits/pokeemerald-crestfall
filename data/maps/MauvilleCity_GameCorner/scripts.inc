@@ -808,8 +808,8 @@ Miraveil_Casino_EventScript_CancelRedeem::
 	end
 
 Roulette_Text_WonVoucher:
-	.string "Three wins! The house owes you an\n"
-	.string "HM Voucher. …How quaint.$"
+	.string "Three wins! You won an\n"
+	.string "HM Voucher!$"
 
 Miraveil_Casino_EventScript_NoVoucherToRedeem::
 	msgbox Miraveil_Casino_Text_NoVoucher, MSGBOX_DEFAULT

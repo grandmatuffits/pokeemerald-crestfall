@@ -166,6 +166,9 @@ const u16 gTrainerPalette_PokefanM[] = INCGFX_U16("graphics/trainers/front_pics/
 const u32 gTrainerFrontPic_PokefanF[] = INCGFX_U32("graphics/trainers/front_pics/pokefan_f.png", ".4bpp.smol");
 const u16 gTrainerPalette_PokefanF[] = INCGFX_U16("graphics/trainers/front_pics/pokefan_f.png", ".gbapal");
 
+const u32 gTrainerFrontPic_Azrael[] = INCGFX_U32("graphics/trainers/front_pics/azrael.png", ".4bpp.smol");
+const u16 gTrainerPalette_Azrael[] = INCGFX_U16("graphics/trainers/palettes/azrael.pal", ".gbapal");
+
 const u32 gTrainerFrontPic_Youngster[] = INCGFX_U32("graphics/trainers/front_pics/youngster.png", ".4bpp.smol");
 const u16 gTrainerPalette_Youngster[] = INCGFX_U16("graphics/trainers/front_pics/youngster.png", ".gbapal");
 
@@ -673,6 +676,10 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_COLLECTOR] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Collector, gTrainerPalette_Collector),
+    },
+        [TRAINER_PIC_AZRAEL] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Azrael, gTrainerPalette_Azrael),
     },
     [TRAINER_PIC_AQUA_GRUNT_F] =
     {

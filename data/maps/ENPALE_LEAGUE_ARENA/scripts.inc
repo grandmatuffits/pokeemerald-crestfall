@@ -1,6 +1,4 @@
 #define LOCALID_UMBRA 1
-#define LOCALID_BRUTUS 2
-#define LOCALID_HEMLOCK 3
 #define LOCALID_UMBRA_CHAMPION 4
 #define LOCALID_RIVAL_CHAMPION 5
 
@@ -55,7 +53,7 @@ ENPALE_LEAGUE_ARENA_EventScript_ChampionTrigger::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerFace
 	waitmovement 0
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_BrutusFace
+	applymovement LOCALID_ARENA_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_BrutusFace
 	waitmovement 0
 	special SpawnCameraObject
 	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanToBrutus
@@ -121,7 +119,7 @@ ENPALE_LEAGUE_ARENA_ChampionScene_Continue::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_ChampPlayerFace
 	waitmovement 0
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_BrutusFace
+	applymovement LOCALID_ARENA_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_BrutusFace
 	waitmovement 0
 	special SpawnCameraObject
 	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanToBrutus
@@ -149,17 +147,17 @@ ENPALE_LEAGUE_ARENA_BrutusAftermath::
 	msgbox ENPALE_LEAGUE_ARENA_Text_BrutusRage, MSGBOX_SIGN
 	closemessage
 	@ Brutus storms off, camera pans back to player
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_BrutusStormOff
+	applymovement LOCALID_ARENA_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_BrutusStormOff
 	waitmovement 0
-	removeobject LOCALID_BRUTUS
+	removeobject LOCALID_ARENA_BRUTUS
 	applymovement LOCALID_CAMERA, ENPALE_LEAGUE_ARENA_Movement_CameraPanBackToPlayer
 	waitmovement 0
 	special RemoveCameraObject
 	delay 30
 	@ Hemlock enters and gives his speech
 	clearflag FLAG_HIDE_ARENA_HEMLOCK
-	addobject LOCALID_HEMLOCK
-	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
+	addobject LOCALID_ARENA_HEMLOCK
+	applymovement LOCALID_ARENA_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerFaceDown
 	waitmovement 0
@@ -169,11 +167,11 @@ ENPALE_LEAGUE_ARENA_BrutusAftermath::
 	@ choreographed walk to the center door
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepRightFaceLeft
 	waitmovement 0
-	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
+	applymovement LOCALID_ARENA_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepLeftBehind
 	waitmovement 0
-	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
+	applymovement LOCALID_ARENA_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerToDoor
 	waitmovement 0
 	setflag FLAG_SYS_GAME_CLEAR
@@ -453,8 +451,8 @@ ENPALE_LEAGUE_ARENA_UmbraChampionAftermath::
 	special RemoveCameraObject
 	delay 30
 	clearflag FLAG_HIDE_ARENA_HEMLOCK
-	addobject LOCALID_HEMLOCK
-	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
+	addobject LOCALID_ARENA_HEMLOCK
+	applymovement LOCALID_ARENA_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerFaceDown
 	waitmovement 0
@@ -463,11 +461,11 @@ ENPALE_LEAGUE_ARENA_UmbraChampionAftermath::
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepRightFaceLeft
 	waitmovement 0
-	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
+	applymovement LOCALID_ARENA_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepLeftBehind
 	waitmovement 0
-	applymovement LOCALID_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
+	applymovement LOCALID_ARENA_HEMLOCK, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerToDoor
 	waitmovement 0
 	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
@@ -554,10 +552,10 @@ ENPALE_LEAGUE_ARENA_RivalChampionAftermath::
 	waitmovement 0
 	special RemoveCameraObject
 	delay 30
-	setobjectxyperm LOCALID_BRUTUS, 12, 11
+	setobjectxyperm LOCALID_ARENA_BRUTUS, 12, 11
 	clearflag FLAG_HIDE_ARENA_BRUTUS
-	addobject LOCALID_BRUTUS
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
+	addobject LOCALID_ARENA_BRUTUS
+	applymovement LOCALID_ARENA_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_HemlockApproach
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerFaceDown
 	waitmovement 0
@@ -566,11 +564,11 @@ ENPALE_LEAGUE_ARENA_RivalChampionAftermath::
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepRightFaceLeft
 	waitmovement 0
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
+	applymovement LOCALID_ARENA_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_HemlockLeadUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerStepLeftBehind
 	waitmovement 0
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
+	applymovement LOCALID_ARENA_BRUTUS, ENPALE_LEAGUE_ARENA_Movement_HemlockToDoor
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_ARENA_Movement_PlayerToDoor
 	waitmovement 0
 	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16

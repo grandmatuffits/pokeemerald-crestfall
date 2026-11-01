@@ -4522,6 +4522,17 @@ void CheckCaughtFeebas(void)
 {
     gSpecialVar_Result = GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_FEEBAS), FLAG_GET_CAUGHT);
 }
+void CheckCaughtBeastTrio(void)
+{
+    gSpecialVar_Result = GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_COBALION), FLAG_GET_CAUGHT)
+                      && GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_TERRAKION), FLAG_GET_CAUGHT)
+                      && GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_VIRIZION), FLAG_GET_CAUGHT);
+}
+
+void CheckCaughtKeldeo(void)
+{
+    gSpecialVar_Result = GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_KELDEO), FLAG_GET_CAUGHT);
+}
 void IsRegionalDexComplete(void)
 {
     gSpecialVar_Result = (GetHoennPokedexCount(FLAG_GET_CAUGHT) >= HOENN_DEX_COUNT - 1);

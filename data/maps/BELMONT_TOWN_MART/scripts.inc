@@ -13,22 +13,28 @@ BELMONT_SHOP_EventScript_Clerk::
 
 	.align 2
 BELMONT_SHOP_Items:
-	.2byte ITEM_BUG_TERA_SHARD
-	.2byte ITEM_DARK_TERA_SHARD
-	.2byte ITEM_DRAGON_TERA_SHARD
-	.2byte ITEM_ELECTRIC_TERA_SHARD
-	.2byte ITEM_FAIRY_TERA_SHARD
-	.2byte ITEM_FIGHTING_TERA_SHARD
-	.2byte ITEM_FIRE_TERA_SHARD
-	.2byte ITEM_FLYING_TERA_SHARD
-	.2byte ITEM_GHOST_TERA_SHARD
-	.2byte ITEM_GRASS_TERA_SHARD
-	.2byte ITEM_GROUND_TERA_SHARD
-	.2byte ITEM_ICE_TERA_SHARD
-	.2byte ITEM_NORMAL_TERA_SHARD
-	.2byte ITEM_POISON_TERA_SHARD
-	.2byte ITEM_PSYCHIC_TERA_SHARD
-	.2byte ITEM_ROCK_TERA_SHARD
-	.2byte ITEM_STEEL_TERA_SHARD
-	.2byte ITEM_WATER_TERA_SHARD
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_MAX_POTION
+	.2byte ITEM_FULL_RESTORE
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_MAX_REPEL
 	pokemartlistend
+
+BelmontTown_PokemonCenter_1F_EventScript_Canes::
+	msgbox BelmontTown_PokemonCenter_1F_Text_Canes, MSGBOX_NPC
+	end
+
+BelmontTown_PokemonCenter_1F_Text_Canes:
+	.string "This town doesn't even have a\n"
+	.string "Cane's in it…$"

@@ -2020,3 +2020,13 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/BELMONT_TOWN_MART/scripts.inc"
 
 	.include "data/maps/BELMONT_TOWN_POKEMONCENTER/scripts.inc"
+
+	.include "data/maps/BELMONT_TOWN_TERA_SHARD_HOUSE/scripts.inc"
+
+	.include "data/maps/BELMONT_TOWN_MAIN_HOUSE/scripts.inc"
+
+	.include "data/maps/BELMONT_CAVE/scripts.inc"
+
+	.include "data/maps/COPPERGATE_CITY_WEST_TRADE_HOUSE/scripts.inc"
+
+	.include "data/maps/BELMONT_CAVE_BF1/scripts.inc"

@@ -178,6 +178,33 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TM99",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_DELMARK_SOUTH_TM99"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 58,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DELMARK_CITY_SOUTH_EventScript_MarshadowMan3",
+      "flag": "FLAG_HIDE_MARSHADOW_MAN_3"
+    },
+    {
+      "local_id": "LOCALID_DELMARK_MARSHADOW",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MARSHADOW)",
+      "x": 58,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DELMARK_CITY_SOUTH_EventScript_MarshadowMon",
+      "flag": "FLAG_HIDE_MARSHADOW_MON"
     }
   ],
   "warp_events": [

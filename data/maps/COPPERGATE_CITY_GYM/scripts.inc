@@ -56,7 +56,7 @@ COPPERGATE_CITY_GYM_EventScript_OmarPostBattle::
 
 COPPERGATE_CITY_GYM_EventScript_OmarBeaten::
 	goto_if_set FLAG_OMAR_REMATCH_DONE, COPPERGATE_CITY_GYM_EventScript_OmarRematchBeaten
-	goto_if_unset FLAG_ELDERS_ARC_STARTED, COPPERGATE_CITY_GYM_EventScript_OmarAfterBattleRepeat
+	goto_if_unset FLAG_ROSS_REMATCH_DONE, COPPERGATE_CITY_GYM_EventScript_OmarAfterBattleRepeat
 	lock
 	faceplayer
 	msgbox COPPERGATE_CITY_GYM_Text_OmarRematchIntro, MSGBOX_DEFAULT

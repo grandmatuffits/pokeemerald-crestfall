@@ -149,7 +149,7 @@ MIRAVEIL_BANQUET_2F_EventScript_MerylReward::
 
 MIRAVEIL_BANQUET_2F_EventScript_MerylBeaten::
 	goto_if_set FLAG_MERYL_REMATCH_DONE, MIRAVEIL_BANQUET_2F_EventScript_MerylRematchBeaten
-	goto_if_unset FLAG_ELDERS_ARC_STARTED, MIRAVEIL_BANQUET_2F_EventScript_MerylDone
+	goto_if_unset FLAG_ROSS_REMATCH_DONE, MIRAVEIL_BANQUET_2F_EventScript_MerylDone
 	lock
 	faceplayer
 	msgbox MIRAVEIL_BANQUET_2F_Text_MerylRematchIntro, MSGBOX_DEFAULT

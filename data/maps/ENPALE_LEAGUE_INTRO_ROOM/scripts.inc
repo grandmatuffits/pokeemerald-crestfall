@@ -1,4 +1,3 @@
-#define LOCALID_BRUTUS 1
 
 ENPALE_LEAGUE_INTRO_ROOM_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ENPALE_LEAGUE_INTRO_ROOM_OnFrame
@@ -10,7 +9,7 @@ ENPALE_LEAGUE_INTRO_ROOM_OnFrame:
 
 ENPALE_LEAGUE_INTRO_ROOM_Intro::
 	setvar VAR_ENPALE_INTRO_STATE, 1
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkIn
+	applymovement LOCALID_INTRO_BRUTUS, ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkIn
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_INTRO_ROOM_Movement_PlayerFace
 	waitmovement 0
@@ -23,10 +22,10 @@ ENPALE_LEAGUE_INTRO_ROOM_Intro::
 	setspeaker ENPALE_LEAGUE_INTRO_ROOM_Text_BrutusName
 	msgbox ENPALE_LEAGUE_INTRO_ROOM_Text_Brutus3, MSGBOX_SIGN
 	closemessage
-	applymovement LOCALID_BRUTUS, ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkOut
+	applymovement LOCALID_INTRO_BRUTUS, ENPALE_LEAGUE_INTRO_ROOM_Movement_BrutusWalkOut
 	waitmovement 0
 	setflag FLAG_HIDE_BRUTUS_INTRO
-	removeobject LOCALID_BRUTUS
+	removeobject LOCALID_INTRO_BRUTUS
 	applymovement OBJ_EVENT_ID_PLAYER, ENPALE_LEAGUE_INTRO_ROOM_Movement_PlayerWalkSouth
 	waitmovement 0
 	warp MAP_ENPALE_LEAGUE_ARENA, 3, 11

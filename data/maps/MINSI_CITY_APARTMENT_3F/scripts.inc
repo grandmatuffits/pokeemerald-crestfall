@@ -9,6 +9,7 @@ MINSI_CITY_APARTMENT_EventScript_ShinyWoman::
 	compare VAR_RESULT, TRUE
 	goto_if_eq MINSI_CITY_APARTMENT_EventScript_ShinyWomanGive
 	msgbox MINSI_CITY_APARTMENT_Text_ShinyNotYet, MSGBOX_DEFAULT
+	setflag FLAG_START_SHINY_HUNT
 	release
 	end
 

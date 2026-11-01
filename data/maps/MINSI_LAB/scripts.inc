@@ -1,4 +1,3 @@
-#define LOCALID_HEMLOCK 4
 #define LOCALID_STARTERBALL_1 1
 #define LOCALID_STARTERBALL_2 2
 #define LOCALID_STARTERBALL_3 3
@@ -1082,7 +1081,11 @@ MINSI_LAB_Text_HemlockAwarded:
 	.string "One of my coworkers even runs a\n"
 	.string "fossil resurrection machine.\p"
 	.string "Go check with him if you have any\n"
-	.string "fossils.$"
+	.string "fossils.\p"
+	.string "Also, have you heard?\n"
+	.string "The Miraveil Gym seems to be up and\n"
+	.string "running again.\p"
+	.string "Maybe go check that out, too.$"
 
 MINSI_LAB_Text_HemlockNotYet:
 	.string "Still filling that POKéDEX?\p"

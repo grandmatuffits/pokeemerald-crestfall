@@ -15,7 +15,7 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "LOCALID_BRUTUS",
+      "local_id": "LOCALID_INTRO_BRUTUS",
       "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
       "x": 7,
       "y": 1,

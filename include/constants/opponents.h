@@ -1238,8 +1238,19 @@
 #define TRAINER_PLASMA_POSER_3                        1232
 #define TRAINER_PLASMA_POSER_4                        1233
 #define TRAINER_PLASMA_POSER_5                        1234
+#define TRAINER_BELMONT_POSER_1                       1235
+#define TRAINER_BELMONT_POSER_2                       1236
+#define TRAINER_BELMONT_POSER_3                       1237
+#define TRAINER_BELMONT_POSER_4                       1238
+#define TRAINER_BELMONT_POSER_5                       1239
+#define TRAINER_PLASMA_GHETSIS_FAKER                  1240
+#define TRAINER_PLASMA_GUARD                          1241
+#define TRAINER_RANDALL_SHADOW_QUEST                  1242
+#define TRAINER_ANGEL                                 1243
+#define TRAINER_PASSIVE                               1244
+#define TRAINER_RANCHSTYLEBEAN                        1245
 
-#define TRAINERS_COUNT_EMERALD                 1235
+#define TRAINERS_COUNT_EMERALD                 1246
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

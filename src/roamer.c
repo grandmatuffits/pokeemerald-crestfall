@@ -166,6 +166,10 @@ void InitEnpaleBeastRoamers(void)
     TryAddRoamer(SPECIES_TERRAKION, 60);
     TryAddRoamer(SPECIES_VIRIZION, 60);
 }
+void InitEnpaleKeldeoRoamer(void)
+{
+    TryAddRoamer(SPECIES_KELDEO, 70);
+}
 
 void UpdateLocationHistoryForRoamer(void)
 {

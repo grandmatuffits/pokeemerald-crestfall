@@ -47,11 +47,14 @@
 #define MAPCURSOR_Y_MAX (MAPCURSOR_Y_MIN + MAP_HEIGHT - 1)
 
 #define FLYDESTICON_RED_OUTLINE 6
+#define FLYDESTICON_16x16_CAN  7
+#define FLYDESTICON_16x16_CANT 8
 
 enum {
     TAG_CURSOR,
     TAG_PLAYER_ICON,
     TAG_FLY_ICON,
+    TAG_FLY_ICON_BIG,
 };
 
 // Window IDs for the fly map
@@ -75,7 +78,7 @@ static EWRAM_DATA struct {
     u16 state;
     mapsec_u16_t mapSecId;
     struct RegionMap regionMap;
-    u8 tileBuffer[0x1c0];
+    u8 tileBuffer[0x400];
     u8 nameBuffer[0x26]; // never read
     bool8 choseFlyLocation;
 } *sFlyMap = NULL;
@@ -292,6 +295,7 @@ static const u32 sRegionMapFrameGfxLZ[] = INCGFX_U32("graphics/pokenav/region_ma
 static const u32 sRegionMapFrameTilemapLZ[] = INCGFX_U32("graphics/pokenav/region_map/frame.bin", ".smolTM");
 static const u16 sFlyTargetIcons_Pal[] = INCGFX_U16("graphics/pokenav/region_map/fly_target_icons.png", ".gbapal");
 static const u32 sFlyTargetIcons_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/fly_target_icons.png", ".4bpp.smol");
+static const u32 sFlyTargetIconsBig_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/fly_target_icons_big.png", ".4bpp.smol");
 
 static const u16 ALIGNED(4) sPokedexAreaMap_Pal[] = INCGFX_U16("graphics/pokedex/region_map.pal", ".gbapal");
 static const u32 sPokedexAreaMap_Gfx[] = INCGFX_U32("graphics/pokedex/region_map.png", ".8bpp.smol", "-num_tiles 232 -Wnum_tiles");
@@ -443,7 +447,7 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_INDIGO_PLATEAU] = {MAP_GROUP(MAP_BAYNOE_TOWN), MAP_NUM(MAP_BAYNOE_TOWN), HEAL_LOCATION_BAYNOE_TOWN},
     [MAPSEC_SAFFRON_CITY] = {MAP_GROUP(MAP_MINSI_CITY), MAP_NUM(MAP_MINSI_CITY), HEAL_LOCATION_MINSI_CITY},
     [MAPSEC_ROUTE_4_POKECENTER] = {MAP_GROUP(MAP_ROUTE4), MAP_NUM(MAP_ROUTE4), HEAL_LOCATION_ROUTE4},
-    [MAPSEC_ROUTE_10_POKECENTER] = {MAP_GROUP(MAP_ROUTE10), MAP_NUM(MAP_ROUTE10), HEAL_LOCATION_ROUTE10},
+    [MAPSEC_ROUTE_10_POKECENTER] = {MAP_GROUP(MAP_BELMONT_TOWN), MAP_NUM(MAP_BELMONT_TOWN), HEAL_LOCATION_BELMONT_TOWN},
     [MAPSEC_ROUTE_1] = {MAP_GROUP(MAP_ROUTE1), MAP_NUM(MAP_ROUTE1), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_2] = {MAP_GROUP(MAP_ROUTE2), MAP_NUM(MAP_ROUTE2), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_3] = {MAP_GROUP(MAP_ROUTE3), MAP_NUM(MAP_ROUTE3), HEAL_LOCATION_NONE},
@@ -679,7 +683,17 @@ static const union AnimCmd sFlyDestIcon_Anim_RedOutline[] =
     ANIMCMD_FRAME(10, 5),
     ANIMCMD_END
 };
+static const union AnimCmd sFlyDestIcon_Anim_16x16CanFly[] =
+{
+    ANIMCMD_FRAME(14, 5),
+    ANIMCMD_END
+};
 
+static const union AnimCmd sFlyDestIcon_Anim_16x16CantFly[] =
+{
+    ANIMCMD_FRAME(18, 5),
+    ANIMCMD_END
+};
 static const union AnimCmd *const sFlyDestIcon_Anims[] =
 {
     [SPRITE_SHAPE(8x8)]       = sFlyDestIcon_Anim_8x8CanFly,
@@ -688,7 +702,9 @@ static const union AnimCmd *const sFlyDestIcon_Anims[] =
     [SPRITE_SHAPE(8x8)  + 3]  = sFlyDestIcon_Anim_8x8CantFly,
     [SPRITE_SHAPE(16x8) + 3]  = sFlyDestIcon_Anim_16x8CantFly,
     [SPRITE_SHAPE(8x16) + 3]  = sFlyDestIcon_Anim_8x16CantFly,
-    [FLYDESTICON_RED_OUTLINE] = sFlyDestIcon_Anim_RedOutline
+    [FLYDESTICON_RED_OUTLINE] = sFlyDestIcon_Anim_RedOutline,
+    [FLYDESTICON_16x16_CAN]   = sFlyDestIcon_Anim_16x16CanFly,
+    [FLYDESTICON_16x16_CANT]  = sFlyDestIcon_Anim_16x16CantFly,
 };
 
 static const struct SpriteTemplate sFlyDestIconSpriteTemplate =
@@ -697,6 +713,38 @@ static const struct SpriteTemplate sFlyDestIconSpriteTemplate =
     .paletteTag = TAG_FLY_ICON,
     .oam = &sFlyDestIcon_OamData,
     .anims = sFlyDestIcon_Anims,
+};
+static const struct OamData sFlyDestIconBig_OamData =
+{
+    .shape = SPRITE_SHAPE(8x8),
+    .size = SPRITE_SIZE(32x32),
+    .priority = 2
+};
+
+static const union AnimCmd sFlyDestIcon_Anim_BigCanFly[] =
+{
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sFlyDestIcon_Anim_BigCantFly[] =
+{
+    ANIMCMD_FRAME(16, 5),
+    ANIMCMD_END
+};
+
+static const union AnimCmd *const sFlyDestIconBig_Anims[] =
+{
+    sFlyDestIcon_Anim_BigCanFly,
+    sFlyDestIcon_Anim_BigCantFly
+};
+
+static const struct SpriteTemplate sFlyDestIconBigSpriteTemplate =
+{
+    .tileTag = TAG_FLY_ICON_BIG,
+    .paletteTag = TAG_FLY_ICON,
+    .oam = &sFlyDestIconBig_OamData,
+    .anims = sFlyDestIconBig_Anims,
 };
 
 void InitRegionMap(struct RegionMap *regionMap, bool8 zoomed)
@@ -2122,9 +2170,16 @@ static void LoadFlyDestIcons(void)
 
     DecompressDataWithHeaderWram(sFlyTargetIcons_Gfx, sFlyMap->tileBuffer);
     sheet.data = sFlyMap->tileBuffer;
-    sheet.size = sizeof(sFlyMap->tileBuffer);
+    sheet.size = 0x2c0;
     sheet.tag = TAG_FLY_ICON;
     LoadSpriteSheet(&sheet);
+
+    DecompressDataWithHeaderWram(sFlyTargetIconsBig_Gfx, sFlyMap->tileBuffer);
+    sheet.data = sFlyMap->tileBuffer;
+    sheet.size = 0x400;
+    sheet.tag = TAG_FLY_ICON_BIG;
+    LoadSpriteSheet(&sheet);
+
     LoadSpritePalette(&sFlyTargetIconsSpritePalette);
     CreateFlyDestIcons();
     TryCreateRedOutlineFlyDestIcons();
@@ -2346,6 +2401,25 @@ static void CreateFlyDestIcons(void)
         x = (x + MAPCURSOR_X_MIN) * 8 + 4;
         y = (y + MAPCURSOR_Y_MIN) * 8 + 4;
 
+        if (width == 2 && height == 2)
+        {
+            spriteId = CreateSpriteUnchecked(&sFlyDestIconBigSpriteTemplate, x + 12, y + 12, 10);
+            if (spriteId != MAX_SPRITES)
+            {
+                if (FlagGet(sFlyLocations[i].flag))
+                {
+                    gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
+                    StartSpriteAnim(&gSprites[spriteId], 0);
+                }
+                else
+                {
+                    StartSpriteAnim(&gSprites[spriteId], 1);
+                }
+                gSprites[spriteId].sIconMapSec = sFlyLocations[i].mapsec;
+            }
+            continue;
+        }
+
         if (width == 2)
             shape = SPRITE_SHAPE(16x8);
         else if (height == 2)
@@ -2368,7 +2442,6 @@ static void CreateFlyDestIcons(void)
         }
     }
 }
-
 // Draw a red outline box on the mapsec if its corresponding flag has been set
 // Only used for Battle Frontier, but set up to handle more
 static void TryCreateRedOutlineFlyDestIcons(void)
@@ -2491,7 +2564,7 @@ static void CB_ExitFlyMap(void)
             }
             else
             {
-                SetMainCallback2(CB2_ReturnToPartyMenuFromFlyMap);
+                SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
             }
             TRY_FREE_AND_SET_NULL(sFlyMap);
             FreeAllWindowBuffers();
