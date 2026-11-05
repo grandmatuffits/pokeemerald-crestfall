@@ -3,10 +3,10 @@ MauvilleCity_GameCorner_MapScripts::
 
 	@ Game Corner prices
 	.set DOLL_COINS, 1000
-    .set TM_SWORDS_DANCE_COINS, 4000
-    .set TM_NASTY_PLOT_COINS, 4000
-    .set TM_CALM_MIND_COINS, 4000
-    .set TM_DRAGON_DANCE_COINS, 4000
+    .set TM_SWORDS_DANCE_COINS, 1000
+    .set TM_NASTY_PLOT_COINS, 1000
+    .set TM_CALM_MIND_COINS, 1000
+    .set TM_DRAGON_DANCE_COINS, 1000
 
 	.set COINS_PRICE_50,  1000
 	.set COINS_PRICE_500, 10000

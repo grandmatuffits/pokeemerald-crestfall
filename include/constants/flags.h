@@ -1520,6 +1520,10 @@
 #define FLAG_HIDE_MARSHADOW_MAN_3 0x438
 #define FLAG_HIDE_MARSHADOW_MON   0x439
 
+#define FLAG_NEW_GAME_PLUS 0x441
+
+#define FLAG_COOP_NO_WHITEOUT 0x442
+
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2

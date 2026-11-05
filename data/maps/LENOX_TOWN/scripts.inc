@@ -421,3 +421,10 @@ LENOX_TOWN_EventScript_GymSign::
 LENOX_TOWN_Text_GymSign:
 	.string "Lenox Town Gym\n"
 	.string "Caution: Unstable ground!$"		
+
+LENOX_TOWN_EventScript_HouseSign::
+	msgbox LENOX_TOWN_Text_HouseSign, MSGBOX_SIGN
+	end
+
+LENOX_TOWN_Text_HouseSign:
+	.string "It's locked.$"

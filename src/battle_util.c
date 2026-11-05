@@ -9495,8 +9495,16 @@ bool32 CanTargetBattler(enum BattlerId battlerAtk, enum BattlerId battlerDef, en
     &&  IsBattlerAlly(battlerAtk, battlerDef)
     &&  gBattleMons[battlerAtk].volatiles.healBlockTimer)
         return FALSE;   // Pokémon affected by Heal Block cannot target allies with Pollen Puff
-    if (!IsBattlerAlive(battlerDef))
+        if ((gBattleTypeFlags & BATTLE_TYPE_LINK) && !(gBattleTypeFlags & BATTLE_TYPE_IS_MASTER))
+    {
+        // Link member: the engine doesn't run here, so gBattleMons is empty. Use synced party HP.
+        if (battlerDef >= gBattlersCount || GetMonData(GetBattlerMon(battlerDef), MON_DATA_HP) == 0)
+            return FALSE;
+    }
+    else if (!IsBattlerAlive(battlerDef))
+    {
         return FALSE;
+    }
     if (IsBattlerAlly(battlerAtk, battlerDef) && (GetActiveGimmick(battlerAtk) == GIMMICK_DYNAMAX
                                                || IsGimmickSelected(battlerAtk, GIMMICK_DYNAMAX)))
         return FALSE;
@@ -10845,6 +10853,12 @@ bool32 IsBattlerInvalidForSpreadMove(enum BattlerId battlerAtk, enum BattlerId b
 
 bool32 IsAllowedToUseBag(void)
 {
+    if (FlagGet(FLAG_NEW_GAME_PLUS) && (gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+        return FALSE;
+
+    if ((gBattleTypeFlags & BATTLE_TYPE_MULTI) && (gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+        return FALSE;
+
     switch (VarGet(B_VAR_NO_BAG_USE))
     {
     case NO_BAG_RESTRICTION:

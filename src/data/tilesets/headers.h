@@ -40,6 +40,16 @@ const struct Tileset gTileset_General =
     .metatileAttributes = gMetatileAttributes_General,
     .callback = InitTilesetAnim_General,
 };
+const struct Tileset gTileset_Lenox =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Lenox,
+    .palettes = gTilesetPalettes_Lenox,
+    .metatiles = gMetatiles_Lenox,
+    .metatileAttributes = gMetatileAttributes_Lenox,
+    .callback = NULL,
+};
 const struct Tileset gTileset_Delmark =
 {
     .isCompressed = TRUE,

@@ -401,8 +401,8 @@
     {
       "id": "HEAL_LOCATION_LENOX_TOWN",
       "map": "MAP_LENOX_TOWN",
-      "x": 22,
-      "y": 30
+      "x": 32,
+      "y": 36
     },
     {
       "id": "HEAL_LOCATION_MIRAVEIL_ISLAND",

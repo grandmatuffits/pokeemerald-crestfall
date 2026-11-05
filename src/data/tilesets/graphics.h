@@ -66,6 +66,24 @@ const u16 gTilesetPalettes_Petalburg[][16] =
     INCGFX_U16("data/tilesets/secondary/petalburg/palettes/15.pal", ".gbapal"),
 };
 
+const u16 gTilesetPalettes_Lenox[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lenox/palettes/12.pal", ".gbapal"),
+};
+const u32 gTilesetTiles_Lenox[] = INCGFX_U32("data/tilesets/secondary/lenox/tiles.png", ".4bpp.fastSmol", "-num_tiles 512 -Wnum_tiles");
+
 const u16 gTilesetPalettes_DelmarkWest[][16] =
 {
     INCGFX_U16("data/tilesets/secondary/delmark_west/palettes/00.pal", ".gbapal"),

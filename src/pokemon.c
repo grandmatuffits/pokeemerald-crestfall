@@ -888,6 +888,9 @@ bool32 ComputePlayerShinyOdds(u32 personality, u32 value)
     if (LURE_STEP_COUNT != 0)
         totalRerolls += 1;
 
+    if (FlagGet(FLAG_NEW_GAME_PLUS))
+        totalRerolls += 63;
+
     totalRerolls += CalculateChainFishingShinyRolls();
 
     if (gDexNavSpecies)

@@ -6,6 +6,8 @@ extern bool8 gDifferentSaveFile;
 // in contest.c.
 extern bool8 gEnableContestDebugging;
 
+extern bool8 gNewGamePlusPending;
+
 void SetTrainerId(u32 trainerId, u8 *dst);
 u32 GetTrainerId(u8 *trainerId);
 void CopyTrainerId(u8 *dst, u8 *src);

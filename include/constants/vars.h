@@ -134,7 +134,6 @@
 #define VAR_ROUTE117_STATE                               0x4070 // Unused Var
 #define VAR_ROUTE118_STATE                               0x4071
 #define VAR_ROUTE119_STATE                               0x4072
-#define VAR_ROUTE120_STATE                               0x4073 // Unused Var
 #define VAR_ROUTE121_STATE                               0x4074
 #define VAR_ROUTE122_STATE                               0x4075 // Unused Var
 #define VAR_ROUTE123_STATE                               0x4076 // Unused Var
@@ -276,6 +275,7 @@
 #define VAR_SAFARI_BOUNTY_2                              0x40FE  // was VAR_UNUSED_0x40FE
 #define VAR_SAFARI_BOUNTY_3                              0x40FF  // was VAR_UNUSED_0x40FF
 #define VAR_SAFARI_BOUNTY_COUNT                          0x40DB  // was VAR_UNUSED_0x40DB
+#define VAR_COOP_STREAK                                  0x4073
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

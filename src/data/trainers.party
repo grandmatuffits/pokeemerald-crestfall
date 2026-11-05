@@ -16937,6 +16937,7 @@ IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 - Scratch
 - Defense Curl
 
+
 === TRAINER_SALLY_101 ===
 Name: Sally
 Class: Lass
@@ -25580,3 +25581,2947 @@ EVs: 4 HP / 252 Atk / 252 Spe
 - Bulk Up
 - Poison Jab
 - Drain Punch
+
+=== TRAINER_RIVALCF_1 ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Mienfoo @ None
+Level: 5
+- Pound
+- Meditate
+
+=== TRAINER_RIVALCF_2 ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Items: Potion / Potion
+Difficulty: Hard
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+
+Murkrow
+Level: 14
+- Gust
+- Haze
+- Thief
+- Confuse Ray
+
+Munna
+Level: 14
+
+Shuppet
+Level: 14
+
+Pikachu
+Level: 15
+
+Sandshrew-Alola
+Level: 15
+
+Mienfoo
+Level: 16
+- Fake Out
+- Detect
+- Reversal
+- Dig
+
+=== TRAINER_RIVALCF_3 ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Items: Super Potion / Super Potion
+Difficulty: Hard
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+
+Murkrow
+Level: 28
+- Assurance
+- Wing Attack
+- Whirlwind
+- Taunt
+
+Munna
+Level: 29
+- Calm Mind
+- Psybeam
+- Moonlight
+- Hypnosis 
+
+Shuppet
+Level: 29
+
+Raichu
+Level: 28
+
+Sandslash-Alola
+Level: 29
+
+Mienfoo
+Level: 30
+- U-Turn
+- Force Palm
+- Fake Out
+- Detect
+
+=== TRAINER_RIVALCF_4 ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+Items: Hyper Potion / Hyper Potion / Revive
+Difficulty: Hard
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+
+Honchkrow @ Focus Sash
+Level: 38
+- Sucker Punch
+- Taunt
+- Mean look
+- Wing Attack
+
+Raichu
+Level: 38
+
+Musharna @ Leftovers
+Level: 39
+- Calm Mind
+- Moonlight
+- Hypnosis
+- Stored Power
+
+Shuppet @ Life Orb
+Level: 39
+- Sucker Punch
+- Shadow Claw
+- Curse
+- Shadow Sneak
+
+Sandslash-Alola
+Level: 39
+
+Mienfoo @ Lum Berry
+Level: 40
+- Bulk Up
+- Drain Punch
+- Fake Out
+- Detect
+
+=== TRAINER_RIVALCF_5 ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+Items: Max Potion / Max Potion / Revive
+Difficulty: Hard
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+
+Honchkrow @ Life Orb
+Level: 48
+-Brave Bird
+-Sucker Punch
+-Pursuit
+-Superpower
+
+Sandslash-Alola
+Level: 48
+
+Musharna @ Leftovers
+Level: 49
+-Psychic
+-Dazzling Gleam
+-Moonlight
+-Healing Wish
+
+Raichu @ Life Orb
+Level: 49
+-Nasty Plot
+-Thunderbolt
+-Grass Knot
+-Focus Blast
+
+Banette @ Quick Claw
+Level: 50
+-Destiny Bond
+-Shadow Claw
+-Gunk Shot
+-Knock Off
+
+Mienshao @ Assault Vest
+Level: 52
+-High Jump Kick
+-Knock Off
+-U-Turn
+-Fake Out
+
+=== TRAINER_RIVALCF_FINAL ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Items: Full Restore / Full Restore / Full Restore / Max Revive
+Difficulty: Hard
+
+
+Honchkrow @ Life Orb
+Level: 60
+-Brave Bird
+-Sucker Punch
+-Pursuit
+-Superpower
+
+Musharna @ Leftovers
+Level: 62
+-Psychic
+-Dazzling Gleam
+-Moonlight
+-Healing Wish
+
+Raichu @ Life Orb
+Level: 62
+-Nasty Plot
+-Thunderbolt
+-Grass Knot
+-Focus Blast
+
+Sandslash-Alola @ Shuca Berry
+Level: 62
+-Swords Dance
+-Icicle Crash
+-Iron Head
+-Earthquake  
+
+Banette @ Banettite
+Level: 64
+-Destiny Bond
+-Shadow Claw
+-Gunk Shot
+-Knock Off
+
+Mienshao @ Assault Vest
+Level: 65
+-High Jump Kick
+-Knock Off
+-U-Turn
+-Fake Out
+
+=== TRAINER_RIVALCF_CHAMP ===
+Name: Rival
+Class: Rival
+Pic: Rival Early Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Honchkrow @ Life Orb
+Ability: Moxie
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+Level: 97
+-Brave Bird
+-Sucker Punch
+-Pursuit
+-Superpower
+
+Cresselia @ Light Clay
+Level: 98
+EVs: 248 HP / 84 Def / 176 SpD
+Relaxed Nature
+-Light Screen
+-Reflect
+-Moonlight
+-Psychic
+
+Raichu @ Life Orb
+Ability: Lightning Rod
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+Level: 98
+-Nasty Plot
+-Thunderbolt
+-Grass Knot
+-Focus Blast
+
+Heatran @ Leftovers
+Level: 98
+Ability: Flash Fire
+EVs: 252 HP / 236 SpD / 20 Spe
+Calm Nature
+- Magma Storm
+- Earth Power
+- Taunt
+- Stealth Rock 
+
+Banette @ Banettite
+Level: 99
+EVs: 228 HP / 252 Atk / 28 Spe
+Adamant Nature
+-Destiny Bond
+-Shadow Sneak
+-Will-O-Wisp
+-Sucker Punch
+
+Mienshao @ Assault Vest
+Level: 100
+Ability: Reckless
+EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Steel
+Jolly Nature
+-High Jump Kick
+-Knock Off
+-U-Turn
+-Fake Out
+
+=== TRAINER_ROBIN_1 ===
+Name: Robin
+Class: Leader
+Pic: Leader Roxanne
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Ducklett @ None
+Level: 12
+- Quick Attack
+- Water Gun
+- Aerial Ace
+- Tailwind
+
+Murkrow
+Level: 12
+
+Togetic
+Level: 13
+
+Gligar
+Level: 13
+
+Scyther
+Level: 13
+
+Staravia @ None
+Level: 14
+- Quick Attack
+- Double Team
+- Aerial Ace
+- Growl
+
+=== TRAINER_OMAR_1 ===
+Name: Omar
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Intense
+Difficulty: Hard
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+
+Magnemite
+Level: 17
+Ability: Sturdy
+- Volt Switch
+- Magnet Rise
+- Magnet Bomb
+- Thunder Wave
+
+Flaaffy
+Level: 18
+
+Voltorb
+Level: 18
+
+Jolteon
+Level: 19
+
+Electabuzz
+Level: 19
+
+Emolga
+Level: 20
+- Volt Switch
+- Quick Attack
+- Thunder Wave
+- Pursuit
+
+=== TRAINER_LEADER_INGRID ===
+Name: Ingrid
+Class: Leader
+Pic: Leader Wattson
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Swinub @ None
+Level: 24
+- Bulldoze
+- Ice Shard
+- Stealth Rock
+- Mist
+
+Quagsire @ None
+Level: 24
+- Surf
+- Bulldoze
+- Yawn
+- Amnesia
+
+Sandygast
+Level: 25
+
+Baltoy
+Level: 25
+
+Dugtrio
+Level: 26
+
+Nidoking @ None
+Level: 26
+- Bulldoze
+- Poison Jab
+- Megahorn
+- Fire Punch
+
+=== TRAINER_LEADER_FRIEDE ===
+Name: Friede
+Class: Leader
+Pic: Leader Winona
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Sneasel @ Focus Sash
+Level: 29
+- Avalanche
+- Night Slash
+- Swords Dance
+- Ice Shard
+
+Lapras @ Leftovers
+Level: 30
+
+Cloyster @ Focus Sash
+Level: 30
+- Shell Smash
+- Icicle Spear
+- Rock Blast
+- Scald
+
+Jynx @ Choice Specs
+Level: 31
+
+Glalie @ Life Orb
+Level: 31
+
+Froslass @ Focus Sash
+Level: 32
+- Shadow Ball
+- Ice Beam
+- Destiny Bond
+- Will-O-Wisp
+
+=== TRAINER_LEADER_RANDALL ===
+Name: Randall
+Class: Leader
+Pic: Elite Four Bruno Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Hawlucha @ Flying Gem
+Level: 35
+Ability: Unburden
+- Acrobatics
+- Drain Punch
+- Swords Dance
+- Roost
+
+Heracross @ Choice Band
+Level: 35
+- Drain Punch
+- Megahorn
+- Rock Slide
+- Earthquake
+
+Lucario @ Lum Berry
+Level: 36
+- Aura Sphere
+- Bullet Punch
+- Nasty Plot
+- Extreme Speed
+
+Toxicroak @ Life Orb
+Level: 37
+Ability: Dry Skin
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Swords Dance
+- Gunk Shot
+- Low Kick
+- Sucker Punch
+
+Grapploct @ Leftovers
+Level: 37
+Ability: Limber
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Octolock
+- Drain Punch
+- Ice Punch
+- Substitute
+
+Gallade @ Life Orb
+Level: 38
+- Drain Punch
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
+
+=== TRAINER_LEADER_SILVIO ===
+Name: Silvio
+Class: Leader
+Pic: Leader Koga Frlg
+Gender: Male
+Music: Male 
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Skarmory @ Rocky Helmet
+Level: 42
+-Roost
+-Spikes
+-Whirlwind
+-Toxic
+
+Bisharp @ Life Orb
+Level: 42
+-Swords Dance
+-Knock Off
+-Iron Head
+-Sucker Punch
+
+Klefki @ Leftovers
+Level: 43
+Ability: Prankster
+EVs: 252 HP / 240 SpD / 16 Spe
+IVs: 0 Atk
+Calm Nature
+- Spikes
+- Dazzling Gleam
+- Thunder Wave
+- Toxic
+
+Excadrill @ Leftovers
+Level: 43
+-Swords Dance
+-Earthquake
+-Iron Head
+-Rock Slide
+
+Aggron @ Choice Band
+Level: 43
+Ability: Rock Head
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Head Smash
+- Heavy Slam
+- Aqua Tail
+- Earthquake
+
+Aegislash @ Leftovers
+Level: 44
+-King's Shield
+-Toxic
+-Gyro Ball
+-Shadow Ball
+
+=== TRAINER_MERYL ===
+Name: Meryl
+Class: Leader
+Pic: Elite Four Lorelei Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Togekiss @ Focus Sash
+Level: 52
+- Air Slash
+- Moonblast
+- Thunder Wave
+- Aura Sphere
+
+Gardevoir @ Choice Specs
+Level: 52
+- Moonblast
+- Psychic
+- Thunderbolt
+- Shadow Ball
+
+Clefable @ Leftovers
+Level: 53
+- Stealth Rock
+- Moonblast
+- Soft-Boiled
+- Heal Bell
+
+Sylveon @ Life Orb
+Level: 54
+- Moonblast
+- Shadow Ball
+- Calm Mind
+- Hyper Voice
+
+Whimsicott @ Choice Specs
+Level: 55
+Ability: Prankster
+EVs: 252 SpA / 4 SpD / 252 Spe
+IVs: 0 Atk
+Timid Nature
+- Moonblast
+- Energy Ball
+- Shadow Ball
+- Switcheroo
+
+Mimikyu @ Lum Berry
+Level: 56
+- Play Rough
+- Shadow Sneak
+- Swords Dance
+- Wood Hammer
+
+=== TRAINER_ROSS ===
+Name: Ross
+Class: Leader
+Pic: Leader Juan
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Amoonguss @ Black Sludge
+Level: 56
+Ability: Effect Spore
+- Spore
+- Giga Drain
+- Sludge Bomb
+- Clear Smog
+
+Toxicroak @ Life Orb
+Level: 58
+Ability: Dry Skin
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Ice Punch
+
+Toxapex @ Black Sludge
+Level: 58
+Ability: Merciless
+- Sludge Wave
+- Scald
+- Baneful Bunker
+- Recover
+
+Gengar @ Life Orb
+Level: 60
+Ability: Cursed Body
+- Shadow Ball
+- Sludge Wave
+- Taunt
+- Focus Blast
+
+Muk @ Black Sludge
+Level: 60
+Ability: Poison Touch
+- Toxic
+- Sludge Wave
+- Minimize
+- Shadow Sneak
+
+Salazzle @ Focus Sash
+Level: 62
+Ability: Corrosion
+- Flamethrower
+- Sludge Wave
+- Dragon Pulse
+- Nasty Plot
+
+=== TRAINER_ROBIN_REMATCH ===
+Name: Robin
+Class: Leader
+Pic: Leader Roxanne
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Gliscor @ Toxic Orb
+Level: 71
+Ability: Poison Heal
+EVs: 244 HP / 252 Def / 12 SpD
+Impish Nature
+- Earthquake
+- Toxic
+- Spikes
+- Knock Off
+
+Talonflame @ Sharp Beak
+Level: 72
+Ability: Gale Wings
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Tailwind
+- Roost
+- Flare Blitz
+- Brave Bird
+
+Aerodactyl @ Focus Sash
+Level: 72
+Ability: Unnerve
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Rock Slide
+- Tailwind
+- Dual Wingbeat
+- Fire Fang
+
+Corviknight @ Leftovers
+Level: 72
+Ability: Pressure
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Iron Defense
+- Body Press
+- Roost
+- Brave Bird
+
+Dragonite @ Lum Berry
+Level: 73
+Ability: Multiscale
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Earthquake
+- Ice Spinner
+- Extreme Speed
+
+Staraptor @ Staraptite
+Level: 74
+Ability: Intimidate
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Close Combat
+- Brave Bird
+- Roost
+- Blaze Kick
+
+=== TRAINER_OMAR_REMATCH ===
+Name: Omar
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Galvantula @ Focus Sash
+Level: 71
+Ability: Compound Eyes
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+- Sticky Web
+- Volt Switch
+- Bug Buzz
+- Thunder
+
+Luxray @ Flame Orb
+Level: 72
+Ability: Guts
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Wild Charge
+- Facade
+- Superpower
+- Volt Switch
+
+Emolga @ Rocky Helmet
+Level: 72
+Ability: Motor Drive
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Acrobatics
+- Knock Off
+- U-turn
+- Roost
+
+Electivire @ Choice Scarf
+Level: 72
+Ability: Motor Drive
+EVs: 252 Atk / 4 Def / 252 Spe
+Naive Nature
+- Volt Switch
+- Wild Charge
+- Earthquake
+- Ice Punch
+
+Magnezone @ Choice Specs
+Level: 73
+Ability: Analytic
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Ampharos-Mega @ Ampharosite
+Level: 74
+EVs: 4 HP / 252 SpA / 252 Spe
+Modest Nature
+- Volt Switch
+- Dragon Pulse
+- Focus Blast
+- Thunderbolt
+
+=== TRAINER_INGRID_REMATCH ===
+Name: Ingrid
+Class: Leader
+Pic: Leader Wattson
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Quagsire @ Rocky Helmet
+Level: 71
+Ability: Unaware
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Stealth Rock
+- Recover
+- Toxic
+- Counter
+
+Dugtrio @ Choice Band
+Level: 72
+Ability: Arena Trap
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Stone Edge
+- Memento
+- Sucker Punch
+
+Flygon @ Choice Scarf
+Level: 72
+Ability: Levitate
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Earthquake
+- Outrage
+- U-turn
+- Stone Edge
+
+Mamoswine @ Leftovers
+Level: 72
+Ability: Thick Fat
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Substitute
+- Earthquake
+- Icicle Crash
+- Trailblaze
+
+Nidoking @ Life Orb
+Level: 73
+Ability: Sheer Force
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Earth Power
+- Ice Beam
+- Flamethrower
+- Thunderbolt
+
+Excadrill @ Excadrite
+Level: 74
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Swords Dance
+- Iron Head
+- Earthquake
+- Rock Slide
+
+=== TRAINER_FRIEDE_REMATCH ===
+Name: Friede
+Class: Leader
+Pic: Leader Winona
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Ninetales-Alola @ Light Clay
+Level: 71
+Ability: Snow Warning
+EVs: 252 HP / 4 Def / 252 Spe
+Bold Nature
+- Aurora Veil
+- Freeze-Dry
+- Blizzard
+- Encore
+
+Beartic @ Loaded Dice
+Level: 72
+Ability: Slush Rush
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Swords Dance
+- Icicle Spear
+- Close Combat
+- Earthquake
+
+Baxcalibur @ Loaded Dice
+Level: 72
+Ability: Thermal Exchange
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Icicle Spear
+- Glaive Rush
+- Earthquake
+- Dragon Dance
+
+Cloyster @ White Herb
+Level: 72
+Ability: Skill Link
+EVs: 252 Atk / 4 SpA / 252 Spe
+Adamant Nature
+- Shell Smash
+- Icicle Spear
+- Drill Run
+- Rock Blast
+
+Weavile @ Focus Sash
+Level: 73
+Ability: Pressure
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Triple Axel
+- Knock Off
+- Ice Shard
+- Swords Dance
+
+Froslass @ Froslassite
+Level: 74
+Ability: Cursed Body
+EVs: 4 HP / 252 SpA / 252 Spe
+Timid Nature
+- Nasty Plot
+- Blizzard
+- Shadow Ball
+- Thunderbolt
+
+=== TRAINER_RANDALL_REMATCH ===
+Name: Randall
+Class: Leader
+Pic: Elite Four Bruno Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Hawlucha @ Flying Gem
+Level: 71
+Ability: Unburden
+EVs: 12 HP / 244 Atk / 252 Spe
+Jolly Nature
+- Substitute
+- Swords Dance
+- High Jump Kick
+- Acrobatics
+
+Hariyama @ Assault Vest
+Level: 72
+Ability: Thick Fat
+EVs: 252 Atk / 4 Def / 252 SpD
+Adamant Nature
+- Close Combat
+- Knock Off
+- Bullet Punch
+- Fake Out
+
+Medicham @ Choice Scarf
+Level: 72
+Ability: Pure Power
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- High Jump Kick
+- Zen Headbutt
+- Thunder Punch
+- Trick
+
+Heracross @ Choice Band
+Level: 72
+Ability: Guts
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Close Combat
+- Megahorn
+- Knock Off
+- Stone Edge
+
+Lucario @ Life Orb
+Level: 73
+Ability: Inner Focus
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Nasty Plot
+- Focus Blast
+- Flash Cannon
+- Vacuum Wave
+
+Gallade @ Galladite
+Level: 74
+Ability: Justified
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Swords Dance
+- Close Combat
+- Zen Headbutt
+- Knock Off
+
+=== TRAINER_SILVIO_REMATCH ===
+Name: Silvio
+Class: Leader
+Pic: Leader Koga Frlg
+Gender: Male
+Music: Male 
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Forretress @ Rocky Helmet
+Level: 74
+Ability: Sturdy
+EVs: 252 HP / 164 Def / 92 SpD
+Relaxed Nature
+- Spikes
+- Body Press
+- Volt Switch
+- Gyro Ball
+
+Ferrothorn @ Rocky Helmet
+Level: 74
+Ability: Iron Barbs
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Stealth Rock
+- Leech Seed
+- Power Whip
+- Gyro Ball
+
+Skarmory @ Rocky Helmet
+Level: 75
+Ability: Sturdy
+EVs: 252 HP / 252 Def / 4 Spe
+Impish Nature
+- Iron Defense
+- Body Press
+- Roost
+- Brave Bird
+
+Kingambit @ Leftovers
+Level: 75
+Ability: Supreme Overlord
+EVs: 252 HP / 252 Atk / 4 SpD
+Adamant Nature
+- Swords Dance
+- Sucker Punch
+- Kowtow Cleave
+- Iron Head
+
+Aegislash @ Leftovers
+Level: 76
+Ability: Stance Change
+EVs: 252 HP / 252 Atk / 4 Def
+Adamant Nature
+- Swords Dance
+- Shadow Sneak
+- Gyro Ball
+- King's Shield
+
+Metagross @ Metagrossite
+Level: 77
+EVs: 232 HP / 60 Atk / 40 SpD / 176 Spe
+Jolly Nature
+- Meteor Mash
+- Ice Punch
+- Rock Slide
+- Bullet Punch
+
+=== TRAINER_MERYL_REMATCH ===
+Name: Meryl
+Class: Leader
+Pic: Elite Four Lorelei Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Togekiss @ Focus Sash
+Level: 71
+Ability: Serene Grace
+EVs: 252 HP / 120 Def / 136 Spe
+Timid Nature
+- Air Slash
+- Moonblast
+- Thunder Wave
+- Aura Sphere
+
+Clefable @ Rocky Helmet
+Level: 72
+Ability: Magic Guard
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Stealth Rock
+- Moonblast
+- Moonlight
+- Thunder Wave
+
+Sylveon @ Choice Specs
+Level: 72
+Ability: Pixilate
+EVs: 4 Def / 252 SpA / 252 Spe
+Modest Nature
+- Hyper Voice
+- Psychic
+- Shadow Ball
+- Draining Kiss
+
+Mimikyu @ Life Orb
+Level: 72
+Ability: Disguise
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Shadow Claw
+- Play Rough
+- Shadow Sneak
+
+Azumarill @ Sitrus Berry
+Level: 73
+Ability: Huge Power
+EVs: 4 HP / 252 Atk / 252 Spe
+Adamant Nature
+- Belly Drum
+- Play Rough
+- Liquidation
+- Aqua Jet
+
+Gardevoir @ Gardevoirite
+Level: 74
+Ability: Trace
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Will-O-Wisp
+- Psyshock
+- Hyper Voice
+- Focus Blast
+
+=== TRAINER_ROSS_REMATCH ===
+Name: Ross
+Class: Leader
+Pic: Leader Juan
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Amoonguss @ Black Sludge
+Level: 69
+Ability: Regenerator
+EVs: 252 HP / 176 Def / 80 SpD
+Bold Nature
+- Spore
+- Giga Drain
+- Sludge Bomb
+- Clear Smog
+
+Toxicroak @ Choice Band
+Level: 70
+Ability: Dry Skin
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Ice Punch
+
+Toxapex @ Black Sludge
+Level: 70
+Ability: Regenerator
+EVs: 252 HP / 36 Def / 220 SpD
+Calm Nature
+- Toxic Spikes
+- Scald
+- Baneful Bunker
+- Recover
+
+Muk-Alola @ Assault Vest
+Level: 70
+Ability: Poison Touch
+EVs: 4 HP / 252 Atk / 252 SpD
+Adamant Nature
+- Toxic
+- Gunk Shot
+- Knock Off
+- Pursuit
+
+Salazzle @ Life Orb
+Level: 71
+Ability: Corrosion
+EVs: 4 Def / 252 SpA / 252 Spe
+Timid Nature
+- Flamethrower
+- Sludge Wave
+- Dragon Pulse
+- Nasty Plot
+
+Gengar @ Gengarite
+Level: 72
+EVs: 252 SpA / 4 SpD / 252 Spe
+IVs: 0 Atk
+Timid Nature
+- Sludge Wave
+- Shadow Ball
+- Ice Beam
+- Substitute
+
+=== TRAINER_RANDALL_SHADOW_QUEST ===
+Name: Randall
+Class: Leader
+Pic: Elite Four Bruno Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Sneasler @ Choice Band
+Level: 75
+Ability: Poison Touch
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Close Combat
+- Dire Claw
+- Throat Chop
+- U-turn
+
+Conkeldurr @ Flame Orb
+Level: 76
+Ability: Guts
+EVs: 252 Atk / 4 Def / 252 Spe
+Adamant Nature
+- Drain Punch
+- Facade
+- Knock Off
+- Mach Punch
+
+Toxicroak @ Life Orb
+Level: 76
+Ability: Dry Skin
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Close Combat
+- Gunk Shot
+- Swords Dance
+- Knock Off
+
+Annihilape @ Leftovers
+Level: 77
+Ability: Defiant
+EVs: 240 HP / 252 SpD / 16 Spe
+Tera Type: Fairy
+Careful Nature
+- Bulk Up
+- Taunt
+- Drain Punch
+- Rage Fist
+
+Lucario @ Life Orb
+Level: 77
+Ability: Inner Focus
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Nasty Plot
+- Focus Blast
+- Flash Cannon
+- Vacuum Wave
+
+Gallade @ Galladite
+Level: 78
+Ability: Justified
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Swords Dance
+- Close Combat
+- Zen Headbutt
+- Knock Off
+
+=== TRAINER_ENPALE_E4_FIRE ===
+Name: Redding
+Class: Elite Four
+Pic: Elite Four Sidney
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Ninetales @ Heat Rock
+Level: 60
+Ability: Drought
+- Flamethrower
+- Nasty Plot
+- Dark Pulse
+- Solar Beam
+
+Camerupt @ Leftovers
+Level: 60
+Ability: Solid Rock
+- Eruption
+- Earth Power
+- Flash Cannon
+- Will-O-Wisp
+
+Chandelure @ Choice Specs
+Level: 61
+Ability: Flash Fire
+- Shadow Ball
+- Flamethrower
+- Energy Ball
+- Trick
+
+Houndoom @ Life Orb
+Level: 61
+Ability: Flash Fire
+- Fire Blast
+- Nasty Plot
+- Dark Pulse
+- Sludge Bomb
+
+Blaziken @ Life Orb
+Level: 62
+Ability: Speed Boost
+- Close Combat
+- Flare Blitz
+- Stone Edge
+- Swords Dance
+
+Charizard @ Charizardite Y
+Level: 63
+Ability: Blaze
+- Flamethrower
+- Air Slash
+- Dragon Pulse
+- Roost
+
+=== TRAINER_ENPALE_E4_WATER ===
+Name: Bluto
+Class: Elite Four
+Pic: Elite Four Phoebe
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Cloyster @ Focus Sash
+Level: 62
+Ability: Skill Link
+- Shell Smash
+- Icicle Spear
+- Rock Blast
+- Hydro Pump
+
+Azumarill @ Sitrus Berry
+Level: 62
+Ability: Huge Power
+- Belly Drum
+- Aqua Jet
+- Play Rough
+- Knock Off
+
+Toxapex @ Leftovers
+Level: 63
+Ability: Regenerator
+- Scald
+- Recover
+- Toxic
+- Haze
+
+Milotic @ Leftovers
+Level: 63
+Ability: Marvel Scale
+- Scald
+- Ice Beam
+- Recover
+- Dragon Pulse
+
+Swampert @ Leftovers
+Level: 64
+Ability: Torrent
+- Earthquake
+- Waterfall
+- Ice Punch
+- Stealth Rock
+
+Blastoise @ Blastoisinite
+Level: 65
+Ability: Torrent
+- Scald
+- Ice Beam
+- Dark Pulse
+- Aura Sphere
+
+=== TRAINER_ENPALE_E4_GRASS ===
+Name: Gretle
+Class: Elite Four
+Pic: Elite Four Glacia
+Gender: Female    
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Ferrothorn @ Rocky Helmet
+Level: 64
+Ability: Iron Barbs
+- Stealth Rock
+- Spikes
+- Power Whip
+- Gyro Ball
+
+Tangrowth @ Leftovers
+Level: 64
+Ability: Regenerator
+- Giga Drain
+- Knock Off
+- Sleep Powder
+- Ancient Power
+
+Vileplume @ Leftovers
+Level: 65
+Ability: Effect Spore
+- Giga Drain
+- Sludge Bomb
+- Strength Sap
+- Sleep Powder
+
+Whimsicott @ Pixie Plate
+Level: 65
+Ability: Prankster
+- Moonblast
+- Taunt
+- Tailwind
+- Stun Spore
+
+Sceptile @ None
+Level: 66
+Ability: Overgrow
+- Leaf Storm
+- Dragon Pulse
+- Focus Blast
+- Acrobatics
+
+Venusaur @ Venusaurite
+Level: 67
+Ability: Overgrow
+- Sludge Bomb
+- Giga Drain
+- Leech Seed
+- Synthesis
+
+=== TRAINER_ENPALE_E4_BUG ===
+Name: Rick
+Class: Elite Four
+Pic: Elite Four Drake
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Galvantula @ Focus Sash
+Level: 66
+Ability: Compound Eyes
+- Thunder
+- Bug Buzz
+- Energy Ball
+- Sticky Web
+
+Volcarona @ Focus Sash
+Level: 67
+Ability: Flame Body
+- Quiver Dance
+- Flamethrower
+- Bug Buzz
+- Giga Drain
+
+Golisopod @ Insect Plate
+Level: 67
+Ability: Emergency Exit
+- First Impression
+- Leech Life
+- Aqua Jet
+- Liquidation
+
+Durant @ Leftovers
+Level: 68
+Ability: Truant
+- Entrainment
+- Iron Head
+- X-Scissor
+- Superpower
+
+Shedinja @ Heavy Duty Boots
+Level: 68
+Ability: Wonder Guard
+- Shadow Sneak
+- X-Scissor
+- Will-O-Wisp
+- Protect
+
+Scizor @ Scizorite
+Level: 69
+Ability: Technician
+- Bullet Punch
+- U-turn
+- Swords Dance
+- Dual Wingbeat
+
+=== TRAINER_ENPALE_E4_FIRE_REMATCH ===
+Name: Redding
+Class: Elite Four
+Pic: Elite Four Sidney
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Torkoal @ Heat Rock
+Level: 75
+Ability: Drought
+EVs: 248 HP / 252 Def / 8 SpD
+Bold Nature
+- Stealth Rock
+- Lava Plume
+- Rapid Spin
+- Toxic
+
+Blaziken @ Life Orb
+Level: 76
+Ability: Speed Boost
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Flare Blitz
+- High Jump Kick
+- Protect
+- Swords Dance
+
+Incineroar @ Sitrus Berry
+Level: 76
+Ability: Intimidate
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Fake Out
+- Flare Blitz
+- Throat Chop
+- Parting Shot
+
+Delphox @ Life Orb
+Level: 76
+Ability: Blaze
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Calm Mind
+- Fire Blast
+- Psychic
+- Grass Knot
+
+Chandelure @ Heavy-Duty Boots
+Level: 77
+Ability: Flame Body
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Flamethrower
+- Hex
+- Toxic
+- Protect
+
+Charizard @ Charizardite Y
+Level: 78
+Ability: Blaze
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Weather Ball
+- Solar Beam
+- Air Slash
+- Roost
+
+=== TRAINER_ENPALE_E4_WATER_REMATCH ===
+Name: Bluto
+Class: Elite Four
+Pic: Elite Four Phoebe
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Pelipper @ Damp Rock
+Level: 77
+Ability: Drizzle
+EVs: 248 HP / 252 Def / 8 SpD
+Relaxed Nature
+- Hurricane
+- Tailwind
+- Weather Ball
+- Roost
+
+Empoleon @ Leftovers
+Level: 78
+Ability: Competitive
+EVs: 72 HP / 72 Def / 148 SpA / 216 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Grass Knot
+- Roost
+
+Primarina @ Assault Vest
+Level: 78
+Ability: Torrent
+EVs: 252 HP / 208 SpA / 48 SpD
+Modest Nature
+- Moonblast
+- Psychic Noise
+- Surf
+- Flip Turn
+
+Swampert @ Leftovers
+Level: 78
+Ability: Torrent
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Stealth Rock
+- Earthquake
+- Flip Turn
+- Knock Off
+
+Basculegion @ Choice Scarf
+Level: 79
+Ability: Swift Swim
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Wave Crash
+- Last Respects
+- Flip Turn
+- Aqua Jet
+
+Blastoise @ Blastoisinite
+Level: 80
+Ability: Torrent
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Shell Smash
+- Aura Sphere
+- Dark Pulse
+- Water Pulse
+
+=== TRAINER_ENPALE_E4_GRASS_REMATCH ===
+Name: Gretle
+Class: Elite Four
+Pic: Elite Four Glacia
+Gender: Female    
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Rillaboom @ Leftovers
+Level: 79
+Ability: Grassy Surge
+EVs: 240 HP / 252 Atk / 16 Spe
+Adamant Nature
+- Swords Dance
+- Grassy Glide
+- Knock Off
+- Drain Punch
+
+Whimsicott @ Focus Sash
+Level: 80
+Ability: Prankster
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Moonblast
+- Encore
+- Tailwind
+- Protect
+
+Decidueye @ Choice Band
+Level: 80
+Ability: Long Reach
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- U-Turn
+- Spirit Shackle
+- Leaf Blade
+- Shadow Sneak
+
+Sceptile @ Grassy Seed
+Level: 80
+Ability: Unburden
+EVs: 248 HP / 252 Atk / 8 Def
+Adamant Nature
+- Swords Dance
+- Leaf Blade
+- Acrobatics
+- Earthquake
+
+Breloom @ Toxic Orb
+Level: 81
+Ability: Poison Heal
+EVs: 252 HP / 80 Atk / 176 Spe
+Adamant Nature
+- Close Combat
+- Seed Bomb
+- Facade
+- Protect
+
+Venusaur @ Venusaurite
+Level: 82
+Ability: Chlorophyll
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Synthesis
+- Sludge Bomb
+- Earth Power
+- Leech Seed
+
+=== TRAINER_ENPALE_E4_BUG_REMATCH ===
+Name: Rick
+Class: Elite Four
+Pic: Elite Four Drake
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Galvantula @ Focus Sash
+Level: 81
+Ability: Compound Eyes
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Sticky Web
+- Energy Ball
+- Thunder
+- Thunder Wave
+
+Volcarona @ Heavy-Duty Boots
+Level: 82
+Ability: Flame Body
+EVs: 80 HP / 252 Def / 176 Spe
+Timid Nature
+- Quiver Dance
+- Flamethrower
+- Morning Sun
+- Will-O-Wisp
+
+Golisopod @ Heavy-Duty Boots
+Level: 82
+Ability: Emergency Exit
+EVs: 156 HP / 252 Atk / 100 Spe
+Adamant Nature
+- First Impression
+- Leech Life
+- Liquidation
+- Knock Off
+
+Shedinja @ Heavy-Duty Boots
+Level: 82
+Ability: Wonder Guard
+EVs: 252 Atk / 252 Spe
+Lonely Nature
+- Protect
+- Will-O-Wisp
+- Toxic
+- Shadow Sneak
+
+Lokix @ Heavy-Duty Boots
+Level: 83
+Ability: Tinted Lens
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- First Impression
+- Knock Off
+- Sucker Punch
+- U-turn
+
+Scizor @ Scizorite
+Level: 84
+Ability: Light Metal
+EVs: 248 HP / 16 Def / 244 SpD
+Impish Nature
+- Swords Dance
+- Roost
+- Bullet Punch
+- U-turn
+
+=== TRAINER_ENPALE_E4_FIRE_FINAL ===
+Name: Redding
+Class: Elite Four
+Pic: Elite Four Sidney
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Torkoal @ Heat Rock
+Level: 89
+Ability: Drought
+EVs: 248 HP / 252 Def / 8 SpD
+Bold Nature
+- Stealth Rock
+- Lava Plume
+- Rapid Spin
+- Toxic
+
+Blaziken @ Life Orb
+Level: 90
+Ability: Speed Boost
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Flare Blitz
+- High Jump Kick
+- Protect
+- Swords Dance
+
+Incineroar @ Sitrus Berry
+Level: 90
+Ability: Intimidate
+EVs: 252 Atk / 4 Def / 252 Spe
+Jolly Nature
+- Fake Out
+- Flare Blitz
+- Throat Chop
+- Parting Shot
+
+Delphox @ Life Orb
+Level: 90
+Ability: Blaze
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Calm Mind
+- Fire Blast
+- Psychic
+- Grass Knot
+
+Chandelure @ Heavy-Duty Boots
+Level: 91
+Ability: Flame Body
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+Tera Type: Grass
+- Flamethrower
+- Hex
+- Toxic
+- Protect
+
+Charizard @ Charizardite Y
+Level: 92
+Ability: Blaze
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Weather Ball
+- Solar Beam
+- Air Slash
+- Roost
+
+=== TRAINER_ENPALE_E4_WATER_FINAL ===
+Name: Bluto
+Class: Elite Four
+Pic: Elite Four Phoebe
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Pelipper @ Damp Rock
+Level: 91
+Ability: Drizzle
+EVs: 248 HP / 252 Def / 8 SpD
+Relaxed Nature
+- Hurricane
+- Tailwind
+- Weather Ball
+- Roost
+
+Empoleon @ Leftovers
+Level: 92
+Ability: Competitive
+EVs: 72 HP / 72 Def / 148 SpA / 216 Spe
+Modest Nature
+- Surf
+- Ice Beam
+- Grass Knot
+- Roost
+
+Primarina @ Assault Vest
+Level: 92
+Ability: Torrent
+EVs: 252 HP / 208 SpA / 48 SpD
+Modest Nature
+- Moonblast
+- Psychic Noise
+- Surf
+- Flip Turn
+
+Swampert @ Leftovers
+Level: 92
+Ability: Torrent
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Stealth Rock
+- Earthquake
+- Flip Turn
+- Knock Off
+
+Basculegion @ Choice Scarf
+Level: 93
+Ability: Swift Swim
+EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Ground
+Jolly Nature
+- Wave Crash
+- Last Respects
+- Flip Turn
+- Aqua Jet
+
+Blastoise @ Blastoisinite
+Level: 94
+Ability: Torrent
+EVs: 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Shell Smash
+- Aura Sphere
+- Dark Pulse
+- Water Pulse
+
+=== TRAINER_ENPALE_E4_GRASS_FINAL ===
+Name: Gretle
+Class: Elite Four
+Pic: Elite Four Glacia
+Gender: Female    
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Rillaboom @ Leftovers
+Level: 93
+Ability: Grassy Surge
+EVs: 240 HP / 252 Atk / 16 Spe
+Adamant Nature
+- Swords Dance
+- Grassy Glide
+- Knock Off
+- Drain Punch
+
+Whimsicott @ Focus Sash
+Level: 94
+Ability: Prankster
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Moonblast
+- Encore
+- Tailwind
+- Protect
+
+Decidueye @ Choice Band
+Level: 94
+Ability: Long Reach
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- U-Turn
+- Spirit Shackle
+- Leaf Blade
+- Shadow Sneak
+
+Sceptile @ Grassy Seed
+Level: 94
+Ability: Unburden
+EVs: 248 HP / 252 Atk / 8 Def
+Adamant Nature
+- Swords Dance
+- Leaf Blade
+- Acrobatics
+- Earthquake
+
+Breloom @ Toxic Orb
+Level: 95
+Ability: Poison Heal
+EVs: 252 HP / 80 Atk / 176 Spe
+Tera Type: Rock
+Adamant Nature
+- Close Combat
+- Seed Bomb
+- Facade
+- Protect
+
+Venusaur @ Venusaurite
+Level: 96
+Ability: Chlorophyll
+EVs: 252 HP / 4 Def / 252 SpD
+Calm Nature
+- Synthesis
+- Sludge Bomb
+- Earth Power
+- Leech Seed
+
+=== TRAINER_ENPALE_E4_BUG_FINAL ===
+Name: Rick
+Class: Elite Four
+Pic: Elite Four Drake
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Galvantula @ Focus Sash
+Level: 95
+Ability: Compound Eyes
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Sticky Web
+- Energy Ball
+- Thunder
+- Thunder Wave
+
+Volcarona @ Heavy-Duty Boots
+Level: 96
+Ability: Flame Body
+EVs: 80 HP / 252 Def / 176 Spe
+Timid Nature
+- Quiver Dance
+- Flamethrower
+- Morning Sun
+- Will-O-Wisp
+
+Golisopod @ Heavy-Duty Boots
+Level: 96
+Ability: Emergency Exit
+EVs: 156 HP / 252 Atk / 100 Spe
+Adamant Nature
+- First Impression
+- Leech Life
+- Liquidation
+- Knock Off
+
+Shedinja @ Heavy-Duty Boots
+Level: 96
+Ability: Wonder Guard
+EVs: 252 Atk / 252 Spe
+Lonely Nature
+- Protect
+- Will-O-Wisp
+- Toxic
+- Shadow Sneak
+
+Lokix @ Heavy-Duty Boots
+Level: 97
+Ability: Tinted Lens
+EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Dragon
+Adamant Nature
+- First Impression
+- Knock Off
+- Sucker Punch
+- U-turn
+
+Scizor @ Scizorite
+Level: 98
+Ability: Light Metal
+EVs: 248 HP / 16 Def / 244 SpD
+Impish Nature
+- Swords Dance
+- Roost
+- Bullet Punch
+- U-turn
+
+=== TRAINER_BRUTUS ===
+Name: Brutus
+Class: Champion
+Pic: Leader Giovanni Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Dragonite @ Leftovers
+Level: 68
+Ability: Multiscale
+- Outrage
+- Dragon Dance
+- Fire Punch
+- Extreme Speed
+
+Kingdra @ Choice Specs
+Level: 68
+Ability: Sniper
+- Flip Turn
+- Hydro Pump
+- Ice Beam
+- Draco Meteor
+
+Garchomp @ Life Orb
+Level: 69
+Ability: Rough Skin
+- Earthquake
+- Scale Shot
+- Stone Edge
+- Swords Dance
+
+Hydreigon @ Choice Scarf
+Level: 69
+Ability: Levitate
+- Draco Meteor
+- Dark Pulse
+- U-turn
+- Fire Blast
+
+Haxorus @ Life Orb
+Level: 70
+Ability: Mold Breaker
+- Dragon Dance
+- Outrage
+- Earthquake
+- Poison Jab
+
+Salamence @ Salamencite
+Level: 71
+Ability: Intimidate
+- Hyper Voice
+- Dragon Dance
+- Earthquake
+- Dragon Claw
+
+=== TRAINER_UMBRA_OPENING ===
+Name: Umbra
+Class: Pkmn Trainer 1
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+Difficulty: Hard
+
+Gyarados @ Choice Band
+Level: 50
+- Ice Fang
+- Ice Fang
+- Ice Fang
+- Ice Fang
+
+Tyranitar @ Choice Band
+Level: 50
+- Ice Punch
+- Ice Punch
+- Ice Punch
+- Ice Punch
+
+Gengar @ None
+Level: 50
+- Ice Beam
+- Ice Beam
+- Ice Beam
+- Ice Beam
+
+=== TRAINER_UMBRA_BERGEN ===
+Name: Umbra
+Class: Pkmn Trainer 1
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Skarmory @ Leftovers
+Level: 54
+-Spikes
+-Toxic
+-Roar
+-Drill Peck
+
+Tyranitar @ Leftovers
+Level: 56
+-Dragon Dance
+-Earthquake
+-Rock Slide
+-Crunch
+
+Swampert @ Leftovers
+Level: 56
+-Stealth Rock
+-Earthquake
+-Waterfall
+-Ice Punch
+
+Gengar @ Black Sludge
+Level: 57
+-Will-O-Wisp
+-Taunt
+-Thunderbolt
+-Shadow Ball
+
+Blissey @ Leftovers
+Level: 58
+-Soft-Boiled
+-Seismic Toss
+-Thunder Wave
+-Heal Bell
+
+Gyarados @ Gyaradosite
+Level: 60
+-Dragon Dance
+-Waterfall
+-Ice Fang
+-Earthquake
+
+=== TRAINER_UMBRA_REMATCH ===
+Name: Umbra
+Class: Champion
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Glimmora @ Focus Sash
+Level: 83
+Ability: Toxic Debris
+EVs: 252 HP / 252 Def / 4 SpD
+Timid Nature
+- Stealth Rock
+- Power Gem
+- Mortal Spin
+- Earth Power
+
+Grimmsnarl @ Light Clay
+Level: 84
+Ability: Prankster
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Light Screen
+- Reflect
+- Parting Shot
+- Spirit Break
+
+Corviknight @ Rocky Helmet
+Level: 84
+Ability: Pressure
+EVs: 248 HP / 252 Def / 8 SpD
+Impish Nature
+- Iron Defense
+- Body Press
+- Roost
+- Defog
+
+Garchomp @ Life Orb
+Level: 84
+Ability: Rough Skin
+EVs: 252 HP / 4 SpD / 252 Spe
+Jolly Nature
+- Swords Dance
+- Scale Shot
+- Earthquake
+- Fire Fang
+
+Gholdengo @ Life Orb
+Level: 85
+Ability: Good as Gold
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Make It Rain
+- Shadow Ball
+- Nasty Plot
+- Protect
+
+Gyarados @ Gyaradosite
+Level: 86
+Ability: Intimidate
+EVs: 4 HP / 252 Atk / 252 Spe
+Jolly Nature
+- Dragon Dance
+- Waterfall
+- Crunch
+- Power Whip
+
+=== TRAINER_BRIGHAM ===
+Name: Brigham
+Class: Pkmn Trainer 1
+Pic: Leader Lt Surge Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Celebi @ None
+Level: 60
+-Leech Seed
+-Recover
+-Calm Mind
+-Psychic
+
+Jirachi @ None
+Level: 60
+-Iron Head
+-Body Slam
+-Fire Punch
+-Wish
+
+Shaymin @ None
+Level: 60
+-Seed Flare
+-Earth Power
+-Air Slash
+-Synthesis
+
+Mew @ None
+Level: 60
+-Rock Polish
+-Nasty Plot
+-Psychic
+-Focus Blast
+
+Wobbuffet @ None
+Level: 60
+Ability: Shadow Tag
+-Counter
+-Mirror Coat
+-Encore
+-Destiny Bond
+
+Ditto @ None
+Level: 60
+Ability: Imposter
+
+=== TRAINER_COVENANT_ELDER_FERRUS ===
+Name: Ferrus
+Class: Covenant Elder
+Pic: Ferrus
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Ferroseed @ None
+Level: 20
+- Metal Claw
+- Ingrain
+- Leech Seed
+- Spikes
+
+Foongus @ None
+Level: 20
+- Clear Smog
+- Mega Drain
+- Stun Spore
+- Synthesis
+
+Lileep @ None
+Level: 22
+- Ancient Power
+- Ingrain
+- Mega Drain
+- Confuse Ray
+
+=== TRAINER_DELMARK_ELDER_IRRUS ===
+Name: Irrus
+Class: Covenant Elder
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Frillish
+Level: 26
+- Hex
+- Strength Sap
+- Brine
+- Will-O-Wisp
+
+Carvanha
+Level: 27
+- Ice Fang
+- Aqua Jet
+- Bite
+- Poison Fang
+
+Tirtouga
+Level: 28
+- Crunch
+- Rock Slide
+- Brine
+- Body Slam
+
+=== TRAINER_ELDER_SAXUS ===
+Name: Saxus
+Class: Covenant Elder
+Pic: Magma Grunt F
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Rhyhorn @ Sitrus Berry
+Level: 32
+- Rock Blast
+- Bulldoze
+- Thunder Fang
+- Fire Fang
+
+Boldore @ Lum Berry
+Level: 32
+- Spikes
+- Stealth Rock
+- Rock Slide
+- Heavy Slam
+
+Tyrunt @ Life Orb
+Level: 34
+- Dragon Tail
+- Crunch
+- Rock Slide
+- Bulldoze
+
+=== TRAINER_ELDER_PRAETUS ===
+Name: Praetus
+Class: Covenant Elder
+Pic: Champion Wallace
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Bronzong @ Leftovers
+Level: 39
+- Heavy Slam
+- Extrasensory
+- Hypnosis
+- Trick Room
+
+
+Durant @ Life Orb
+Level: 40
+Ability: Hustle
+- First Impression
+- X-Scissor
+- Crunch
+- Iron Head
+
+Magneton @ Magnet
+Level: 40
+- Thunderbolt
+- Flash Cannon
+- Thunder Wave
+- Volt Switch
+
+Bastiodon @ Sitrus Berry
+Level: 42
+- Heavy Slam
+- Body Press
+- Iron Defense
+- Rock Slide
+
+=== TRAINER_ELDER_FERRUS_2 ===
+Name: Ferrus
+Class: Covenant Elder
+Pic: Ferrus
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Ferrothorn @ Rocky Helmet
+Level: 44
+- Heavy Slam
+- Iron Defense
+- Body Press
+- Stealth Rock
+
+Amoonguss @ Black Sludge
+Level: 45
+- Spore
+- Ingrain
+- Giga Drain
+- Sludge Bomb
+
+Breloom @ Life Orb
+Level: 45
+- Seed Bomb
+- Spore
+- Drain Punch
+- Swords Dance
+
+Cradily @ Leftovers
+Level: 46
+- Stockpile
+- Giga Drain
+- Stone Edge
+- Leech Seed
+
+=== TRAINER_ELDER_IRRUS_2 ===
+Name: Irrus
+Class: Covenant Elder
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Jellicent @ Sitrus Berry
+Level: 46
+- Hydro Pump
+- Shadow Ball
+- Recover
+- Rain Dance
+
+Tentacruel @ Black Sludge
+Level: 47
+- Surf
+- Sludge Bomb
+- Rapid Spin
+- Toxic Spikes
+
+Sharpedo @ Life Orb
+Level: 47
+- Crunch
+- Liquidation
+- Ice Fang
+- Swagger
+
+Carracosta @ White Herb
+Level: 48
+- Shell Smash
+- Aqua Tail
+- Rock Slide
+- Crunch
+
+=== TRAINER_ELDER_SAXUS_2 ===
+Name: Saxus
+Class: Covenant Elder
+Pic: Magma Grunt F
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Crustle @ Sitrus Berry
+Level: 44
+- X-Scissor
+- Stealth Rock
+- Rock Slide
+- Spikes
+
+Gigalith @ Leftovers
+Level: 44
+- Rock Slide
+- Bulldoze
+- Curse
+- Body Press
+
+Rhydon @ Life Orb
+Level: 45
+- Rock Slide
+- Earthquake
+- Hammer Arm
+- Avalanche
+
+Tyrantrum @ Choice Scarf
+Level: 46
+- Dragon Claw
+- Crunch
+- Stone Edge
+- Fire Fang
+
+=== TRAINER_ELDER_PRAETUS_2 ===
+Name: Praetus
+Class: Covenant Elder
+Pic: Champion Wallace
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Bronzong @ Leftovers
+Level: 46
+- Trick Room
+- Calm Mind
+- Iron Defense
+- Stored Power
+
+Durant @ Life Orb
+Level: 47
+Ability: Hustle
+- First Impression
+- X-Scissor
+- Crunch
+- Iron Head
+
+Magnezone @ Magnet
+Level: 47
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Thunder Wave
+
+Bastiodon @ Leftovers
+Level: 48
+- Heavy Slam
+- Rock Slide
+- Roar
+- Earthquake
+
+=== TRAINER_FERRUS_WALLAR ===
+Name: Ferrus
+Class: Covenant Elder
+Pic: Ferrus
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Amoonguss @ Black Sludge
+Level: 83
+Ability: Regenerator
+EVs: 252 HP / 220 Def / 36 SpD
+Bold Nature
+- Spore
+- Giga Drain
+- Sludge Bomb
+- Foul Play
+
+Ferrothorn @ Rocky Helmet
+Level: 84
+Ability: Iron Barbs
+EVs: 252 HP / 252 Def / 4 SpD
+Impish Nature
+- Spikes
+- Leech Seed
+- Power Whip
+- Knock Off
+
+Breloom @ Focus Sash
+Level: 85
+Ability: Technician
+EVs: 252 Atk / 4 SpD / 252 Spe
+Jolly Nature
+- Spore
+- Mach Punch
+- Bullet Seed
+- Swords Dance
+
+Sceptile @ Sceptilite
+Level: 85
+Ability: Overgrow
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Leaf Storm
+- Dragon Pulse
+- Earthquake
+- Focus Blast
+
+Deoxys @ Life Orb
+Level: 85
+Ability: Pressure
+EVs: 4 Atk / 252 SpA / 252 Spe
+Naive Nature
+- Psycho Boost
+- Shadow Ball
+- Ice Beam
+- Extreme Speed
+
+Cradily @ Leftovers
+Level: 86
+Ability: Storm Drain
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Giga Drain
+- Toxic
+- Stealth Rock
+- Recover
+
+=== TRAINER_IRRUS_WALLAR ===
+Name: Irrus
+Class: Covenant Elder
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Toxapex @ Rocky Helmet
+Level: 83
+Ability: Regenerator
+EVs: 248 HP / 252 Def / 8 SpD
+Bold Nature
+- Knock Off
+- Haze
+- Recover
+- Scald
+
+Golisopod @ Bright Powder
+Level: 84
+Ability: Emergency Exit
+EVs: 168 HP / 252 Atk / 88 Spe
+Adamant Nature
+- First Impression
+- Liquidation
+- Leech Life
+- Aqua Jet
+
+Dracovish @ Choice Band
+Level: 85
+Ability: Strong Jaw
+EVs: 252 Atk / 4 SpD / 252 Spe
+Adamant Nature
+- Fishious Rend
+- Psychic Fangs
+- Crunch
+- Outrage
+
+Swampert @ Swampertite
+Level: 85
+Ability: Damp
+EVs: 4 HP / 244 Atk / 8 SpD / 252 Spe
+Jolly Nature
+- Waterfall
+- Earthquake
+- Ice Punch
+- Stealth Rock
+
+Giratina-Origin @ Griseous Orb
+Level: 85
+Ability: Levitate
+EVs: 248 HP / 208 SpA / 52 SpD
+IVs: 0 Atk
+Modest Nature
+- Defog
+- Hex
+- Dragon Pulse
+- Thunder Wave
+
+Carracosta @ Life Orb
+Level: 86
+Ability: Solid Rock
+EVs: 252 Atk / 4 Def / 252 Spe
+Naughty Nature
+- Shell Smash
+- Stone Edge
+- Aqua Jet
+- Hydro Pump
+
+=== TRAINER_SAXUS_WALLAR ===
+Name: Saxus
+Class: Covenant Elder
+Pic: Magma Grunt F
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Glimmora @ Red Card
+Level: 83
+Ability: Toxic Debris
+EVs: 252 HP / 252 Def / 4 SpD
+Bold Nature
+- Stealth Rock
+- Mortal Spin
+- Earth Power
+- Power Gem
+
+Gigalith @ Leftovers
+Level: 84
+Ability: Sand Stream
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Stealth Rock
+- Rock Blast
+- Earthquake
+- Toxic
+
+Rhyperior @ Leftovers
+Level: 85
+Ability: Solid Rock
+EVs: 252 HP / 4 Atk / 252 SpD
+Careful Nature
+- Stone Edge
+- Earthquake
+- Heat Crash
+- Iron Head
+
+Tyranitar @ Tyranitarite
+Level: 85
+Ability: Sand Stream
+EVs: 132 HP / 252 Atk / 124 Spe
+Adamant Nature
+- Ice Punch
+- Stone Edge
+- Pursuit
+- Fire Punch
+
+Kyurem @ Leftovers
+Level: 85
+Ability: Pressure
+EVs: 56 HP / 236 Def / 216 Spe
+Jolly Nature
+- Substitute
+- Roost
+- Icicle Spear
+- Dragon Dance
+
+Tyrantrum @ Choice Scarf
+Level: 86
+EVs: 4 Def / 252 SpA / 252 Spe
+Adamant Nature
+- Head Smash
+- Dragon Claw
+- Earthquake
+- Crunch
+
+=== TRAINER_PRAETUS_WALLAR ===
+Name: Praetus
+Class: Covenant Elder
+Pic: Champion Wallace
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
+Difficulty: Hard
+
+Corviknight @ Leftovers
+Level: 83
+Ability: Pressure
+EVs: 248 HP / 136 Def / 124 SpD
+Impish Nature
+- Body Press
+- U-turn
+- Roost
+- Defog
+
+Magnezone @ Choice Specs
+Level: 84
+Ability: Analytic
+EVs: 252 SpA / 4 SpD / 252 Spe
+IVs: 0 Atk
+Modest Nature
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Archaludon @ Choice Scarf
+Level: 85
+Ability: Stamina
+EVs: 252 SpA / 4 SpD / 252 Spe
+IVs: 0 Atk
+Timid Nature
+- Draco Meteor
+- Thunder Wave
+- Flash Cannon
+- Thunderbolt
+
+Metagross @ Metagrossite
+Level: 85
+Ability: Clear Body
+EVs: 232 HP / 60 Atk / 40 SpD / 176 Spe
+Jolly Nature
+- Meteor Mash
+- Ice Punch
+- Rock Slide
+- Bullet Punch
+
+Yveltal @ Life Orb
+Level: 85
+Ability: Dark Aura
+EVs: 4 Atk / 252 SpA / 252 Spe
+Mild Nature
+- Dark Pulse
+- Oblivion Wing
+- Taunt
+- Sucker Punch
+
+Bastiodon @ Leftovers
+Level: 86
+Ability: Soundproof
+EVs: 252 HP / 4 Def / 252 SpD
+Careful Nature
+- Roar
+- Body Press
+- Heavy Slam
+- Foul Play

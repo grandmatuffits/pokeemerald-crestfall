@@ -463,6 +463,18 @@ static void HandleInputChooseAction(enum BattlerId battler)
     }
 }
 
+// On a link member console gBattleMons isn't filled in, so fall back to the synced party HP.
+static bool32 IsBattlerAliveForSelection(enum BattlerId battler)
+{
+    if ((gBattleTypeFlags & BATTLE_TYPE_LINK) && !(gBattleTypeFlags & BATTLE_TYPE_IS_MASTER))
+    {
+        if (battler >= gBattlersCount)
+            return FALSE;
+        return GetMonData(GetBattlerMon(battler), MON_DATA_HP) != 0;
+    }
+    return IsBattlerAlive(battler);
+}
+
 void HandleInputChooseTarget(enum BattlerId battler)
 {
     enum BattlerId i;
@@ -764,14 +776,14 @@ void HandleInputChooseMove(enum BattlerId battler)
         {
             if (!CanSelectBattler(moveTarget))
                 canSelectTarget = 1; // either selected or user
-            if (moveTarget == TARGET_USER_OR_ALLY && IsBattlerAlive(partner))
+            if (moveTarget == TARGET_USER_OR_ALLY && IsBattlerAliveForSelection(partner))
                 canSelectTarget = 1;
 
             if (moveInfo->currentPP[gMoveSelectionCursor[battler]] == 0)
             {
                 canSelectTarget = 0;
             }
-            else if (isUserOrAlly && !IsBattlerAlive(partner))
+            else if (isUserOrAlly && !IsBattlerAliveForSelection(partner))
             {
                 gMultiUsePlayerCursor = battler;
                 canSelectTarget = 0;
@@ -815,7 +827,7 @@ void HandleInputChooseMove(enum BattlerId battler)
 
             if (moveTarget == TARGET_USER || moveTarget == TARGET_USER_OR_ALLY)
                 gMultiUsePlayerCursor = battler;
-            else if (!IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)))
+            else if (!IsBattlerAliveForSelection(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)))
                 gMultiUsePlayerCursor = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
             else
                 gMultiUsePlayerCursor = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
@@ -2429,6 +2441,8 @@ static bool32 ShouldShowTypeEffectiveness(u32 targetId)
 
 static u32 CheckTypeEffectiveness(enum BattlerId battlerAtk, enum BattlerId battlerDef)
 {
+    if ((gBattleTypeFlags & BATTLE_TYPE_LINK) && !(gBattleTypeFlags & BATTLE_TYPE_IS_MASTER))
+        return EFFECTIVENESS_CANNOT_VIEW; // no gBattleMons data on the link member
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battlerAtk][4]);
     struct DamageContext ctx = {0};
     ctx.battlerAtk = battlerAtk;

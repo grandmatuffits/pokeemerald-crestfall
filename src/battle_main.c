@@ -2749,6 +2749,8 @@ static void ClearSetBScriptingStruct(void)
 
     gBattleScripting.windowsType = temp;
     gBattleScripting.battleStyle = gSaveBlock2Ptr->optionsBattleStyle;
+        if (FlagGet(FLAG_NEW_GAME_PLUS))
+        gBattleScripting.battleStyle = OPTIONS_BATTLE_STYLE_SET;
     #if TESTING
     gBattleScripting.battleStyle = OPTIONS_BATTLE_STYLE_SET;
     #endif
@@ -2835,7 +2837,7 @@ static void BattleStartClearSetData(void)
     gBattleStruct->safariCatchFactor = gSpeciesInfo[GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_SPECIES)].catchRate * 100 / 1275;
     gBattleStruct->safariEscapeFactor = 3;
     gBattleStruct->wildVictorySong = 0;
-    gBattleStruct->moneyMultiplier = 1;
+    gBattleStruct->moneyMultiplier = FlagGet(FLAG_NEW_GAME_PLUS) ? 2 : 1;
 
     gBattleStruct->givenExpMons[0] = 0;
     gBattleStruct->givenExpMons[1] = 0;
@@ -5835,6 +5837,9 @@ s32 Factorial(s32 n)
 
 bool32 CanPlayerForfeitNormalTrainerBattle(void)
 {
+    if (gBattleTypeFlags & BATTLE_TYPE_MULTI)
+        return FALSE;
+        
     if (!B_RUN_TRAINER_BATTLE)
         return FALSE;
 

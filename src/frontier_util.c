@@ -1783,6 +1783,14 @@ u8 GetFrontierBrainStatus(void)
 
 void CopyFrontierTrainerText(u8 whichText, u16 trainerId)
 {
+        if (gCoopLinkBattle)
+    {
+        if (whichText == FRONTIER_PLAYER_WON_TEXT)
+            StringCopy(gStringVar4, COMPOUND_STRING("Well fought! You two make a fine team."));
+        else
+            StringCopy(gStringVar4, COMPOUND_STRING("Not bad, but you can do better."));
+        return;
+    }
     switch (whichText)
     {
     case FRONTIER_BEFORE_TEXT:
@@ -3029,6 +3037,8 @@ u16 GetBattleFacilityTrainerGfxId(u16 trainerId)
 
 u8 GetFrontierTrainerFrontSpriteId(u16 trainerId)
 {
+        if (gCoopLinkBattle && trainerId < MAX_TRAINERS_COUNT)
+        return GetTrainerPicFromId(trainerId);
     SetFacilityPtrsGetLevel();
 
 #if FREE_BATTLE_TOWER_E_READER == FALSE
@@ -3068,6 +3078,8 @@ enum TrainerClassID GetFrontierOpponentClass(u16 trainerId)
     u8 trainerClass = 0;
     enum DifficultyLevel difficulty = GetBattlePartnerDifficultyLevel(trainerId);
     SetFacilityPtrsGetLevel();
+        if (gCoopLinkBattle && trainerId < MAX_TRAINERS_COUNT)
+        return GetTrainerClassFromId(trainerId);
 
 #if FREE_BATTLE_TOWER_E_READER == FALSE
     if (trainerId == TRAINER_EREADER)
@@ -3155,6 +3167,11 @@ void GetFrontierTrainerName(u8 *dst, u16 trainerId)
     s32 i = 0;
     enum DifficultyLevel difficulty = GetBattlePartnerDifficultyLevel(trainerId);
     SetFacilityPtrsGetLevel();
+        if (gCoopLinkBattle && trainerId < MAX_TRAINERS_COUNT)
+    {
+        StringCopy(dst, GetTrainerNameFromId(trainerId));
+        return;
+    }
 
     if (trainerId == TRAINER_EREADER)
     {

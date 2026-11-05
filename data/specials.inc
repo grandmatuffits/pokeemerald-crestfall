@@ -668,3 +668,5 @@ gSpecials::
 	def_special InitEnpaleKeldeoRoamer
 	def_special CheckCaughtBeastTrio
 	def_special CheckCaughtKeldeo
+	def_special CoopLinkSync, waitstate=1
+	def_special CoopLinkClose, waitstate=1

@@ -3718,6 +3718,77 @@ void LinkRetireStatusWithBattleTowerPartner(void)
     CreateTask(Task_LinkRetireStatusWithBattleTowerPartner, 5);
 }
 
+static void Task_CoopLinkSync(u8 taskId)
+{
+    switch (gTasks[taskId].tState)
+    {
+    case 0:
+        if (IsLinkTaskFinished() == TRUE)
+        {
+            SetLinkStandbyCallback();
+            gTasks[taskId].tState++;
+        }
+        break;
+    case 1:
+        if (IsLinkTaskFinished() == TRUE)
+        {
+            DestroyTask(taskId);
+            ScriptContext_Enable();
+        }
+        break;
+    }
+}
+// Co-op link teardown.
+// VAR_0x8004 = 0: a close is already in progress (after the continue exchange), just wait for it.
+// VAR_0x8004 = 1: the link may be open; sync with the partner and close it together.
+static void Task_CoopLinkClose(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    switch (data[0])
+    {
+    case 0:
+        if (FuncIsActiveTask(Task_ReconnectWithLinkPlayers))
+            break;
+        if (!gReceivedRemoteLinkPlayers)
+            data[0] = 3;
+        else if (data[1] == 0)
+            data[0] = 2;
+        else if (IsLinkTaskFinished() == TRUE)
+        {
+            SetLinkStandbyCallback();
+            data[0] = 1;
+        }
+        break;
+    case 1:
+        if (IsLinkTaskFinished() == TRUE)
+        {
+            SetCloseLinkCallback();
+            data[0] = 2;
+        }
+        break;
+    case 2:
+        if (!gReceivedRemoteLinkPlayers)
+            data[0] = 3;
+        break;
+    case 3:
+        CloseLink();          // already closed gracefully; this just guarantees the link is fully reset
+        gBattleTypeFlags = 0; // drop the leftover link battle flags from the continue exchange
+        DestroyTask(taskId);
+        ScriptContext_Enable();
+        break;
+    }
+}
+
+void CoopLinkClose(void)
+{
+    u8 taskId = CreateTask(Task_CoopLinkClose, 5);
+    gTasks[taskId].data[1] = gSpecialVar_0x8004;
+}
+void CoopLinkSync(void)
+{
+    CreateTask(Task_CoopLinkSync, 5);
+}
 // Communicate with a Battle Tower link partner to tell them
 // whether or not the player chose to continue or retire,
 // and determine what the partner chose to do

@@ -64,6 +64,7 @@ static void ResetItemFlags(void);
 static void ResetDexNav(void);
 
 EWRAM_DATA bool8 gDifferentSaveFile = FALSE;
+EWRAM_DATA bool8 gNewGamePlusPending = FALSE;
 EWRAM_DATA bool8 gEnableContestDebugging = FALSE;
 
 static const struct ContestWinner sContestWinnerPicDummy =
@@ -159,17 +160,127 @@ void ResetMenuAndMonGlobals(void)
     ResetPokeblockScrollPositions();
 }
 
+#define NGP_BASE_LEVEL 5
+
+static enum Species NGP_GetBaseSpecies(enum Species species)
+{
+    u32 i;
+
+    // Walk back through the evolution line (max 4 steps as a safety cap)
+    for (i = 0; i < 4; i++)
+    {
+        enum Species pre = GetSpeciesPreEvolution(species);
+        if (pre == SPECIES_NONE)
+            break;
+        species = pre;
+    }
+    return species;
+}
+
+static void NGP_ReduceBoxMon(struct BoxPokemon *box)
+{
+    u32 value;
+    u32 i;
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
+    enum Species oldSpecies = GetBoxMonData(box, MON_DATA_SPECIES);
+    enum Species newSpecies = NGP_GetBaseSpecies(oldSpecies);
+    u32 targetExp;
+    bool32 hadDefaultNickname;
+
+    // Remember whether the nickname is just the species name
+    GetBoxMonData(box, MON_DATA_NICKNAME, nickname);
+    hadDefaultNickname = (StringCompare(nickname, GetSpeciesName(oldSpecies)) == 0);
+
+    // Species
+    if (newSpecies != oldSpecies)
+    {
+        value = newSpecies;
+        SetBoxMonData(box, MON_DATA_SPECIES, &value);
+        if (hadDefaultNickname)
+            SetBoxMonData(box, MON_DATA_NICKNAME, GetSpeciesName(newSpecies));
+    }
+
+    // Level 5 (never raise a mon that is already lower)
+    targetExp = gExperienceTables[gSpeciesInfo[newSpecies].growthRate][NGP_BASE_LEVEL];
+    if (GetBoxMonData(box, MON_DATA_EXP) > targetExp)
+    {
+        value = targetExp;
+        SetBoxMonData(box, MON_DATA_EXP, &value);
+    }
+
+    // Held item removed
+    value = ITEM_NONE;
+    SetBoxMonData(box, MON_DATA_HELD_ITEM, &value);
+
+    // EVs zeroed
+    value = 0;
+    SetBoxMonData(box, MON_DATA_HP_EV, &value);
+    SetBoxMonData(box, MON_DATA_ATK_EV, &value);
+    SetBoxMonData(box, MON_DATA_DEF_EV, &value);
+    SetBoxMonData(box, MON_DATA_SPEED_EV, &value);
+    SetBoxMonData(box, MON_DATA_SPATK_EV, &value);
+    SetBoxMonData(box, MON_DATA_SPDEF_EV, &value);
+
+    // Friendship back to the species default
+    value = gSpeciesInfo[newSpecies].friendship;
+    SetBoxMonData(box, MON_DATA_FRIENDSHIP, &value);
+
+    // Moves reset to the level-5 learnset
+    value = MOVE_NONE;
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        SetBoxMonData(box, MON_DATA_MOVE1 + i, &value);
+        SetBoxMonData(box, MON_DATA_PP1 + i, &value);
+    }
+    value = 0;
+    SetBoxMonData(box, MON_DATA_PP_BONUSES, &value);
+    GiveBoxMonInitialMoveset(box);
+    BoxMonRestorePP(box);
+}
+
+static void NGP_ReduceStorage(void)
+{
+    u32 box, slot;
+
+    for (box = 0; box < TOTAL_BOXES_COUNT; box++)
+    {
+        for (slot = 0; slot < IN_BOX_COUNT; slot++)
+        {
+            struct BoxPokemon *mon = &gPokemonStoragePtr->boxes[box][slot];
+
+            if (GetBoxMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
+                continue;
+            if (GetBoxMonData(mon, MON_DATA_IS_EGG))
+                continue;
+            NGP_ReduceBoxMon(mon);
+        }
+    }
+}
+
 void NewGameInitData(void)
 {
 #if IS_FRLG
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
 #endif
+    bool8 ngp = TRUE; // TEST ONLY: put back to gNewGamePlusPending
+    struct Pokedex dexBackup;
+    u8 dexSeenBackup[sizeof(gSaveBlock1Ptr->dexSeen)];
+    u8 dexCaughtBackup[sizeof(gSaveBlock1Ptr->dexCaught)];
+    u8 trainerIdBackup[TRAINER_ID_LENGTH];
+
     if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
         RtcReset();
 
 #if IS_FRLG
     StringCopy(rivalName, gSaveBlock1Ptr->rivalName);
 #endif
+    if (ngp)
+    {
+        dexBackup = gSaveBlock2Ptr->pokedex;
+        memcpy(dexSeenBackup, gSaveBlock1Ptr->dexSeen, sizeof(dexSeenBackup));
+        memcpy(dexCaughtBackup, gSaveBlock1Ptr->dexCaught, sizeof(dexCaughtBackup));
+        memcpy(trainerIdBackup, gSaveBlock2Ptr->playerTrainerId, TRAINER_ID_LENGTH);
+    }
     gDifferentSaveFile = TRUE;
     gSaveBlock2Ptr->encryptionKey = 0;
     ZeroPlayerPartyMons();
@@ -200,6 +311,7 @@ void NewGameInitData(void)
     InitLotadSizeRecord();
     gPartiesCount[B_TRAINER_PLAYER] = 0;
     ZeroPlayerPartyMons();
+    if (!ngp)
     ResetPokemonStorageSystem();
     DeactivateAllRoamers();
     gSaveBlock1Ptr->registeredItem = ITEM_NONE;
@@ -236,6 +348,16 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+        if (ngp)
+    {
+        gSaveBlock2Ptr->pokedex = dexBackup;
+        memcpy(gSaveBlock1Ptr->dexSeen, dexSeenBackup, sizeof(dexSeenBackup));
+        memcpy(gSaveBlock1Ptr->dexCaught, dexCaughtBackup, sizeof(dexCaughtBackup));
+        memcpy(gSaveBlock2Ptr->playerTrainerId, trainerIdBackup, TRAINER_ID_LENGTH);
+        FlagSet(FLAG_NEW_GAME_PLUS);
+        gNewGamePlusPending = FALSE;
+        NGP_ReduceStorage();
+    }
     
 }
 

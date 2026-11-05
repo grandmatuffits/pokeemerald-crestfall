@@ -416,3 +416,165 @@ MINSI_CITY_Text_DexNavGift:
     .string "area!\p"
     .string "Play around with it and watch\n"
     .string "that Pokédex fill up instantly!$"	
+
+CoopLink_EventScript_Start::
+	lock
+	faceplayer
+	msgbox CoopLink_Text_Intro, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CoopLink_EventScript_Decline
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle
+	goto_if_eq VAR_RESULT, 0, CoopLink_EventScript_Decline
+	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
+	setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_LINK_MULTIS
+	setvar VAR_RESULT, FRONTIER_LVL_OPEN
+	frontier_set FRONTIER_DATA_LVL_MODE, VAR_RESULT
+	setvar VAR_0x8004, USING_BATTLE_TOWER
+	message gText_PleaseWaitForLink
+	waitmessage
+	setvar VAR_0x8005, 0
+	special TryBattleLinkup
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, CoopLink_EventScript_Linked
+	goto_if_eq VAR_RESULT, LINKUP_SOMEONE_NOT_READY, CableClub_EventScript_AbortLinkSomeoneNotReady
+	goto_if_eq VAR_RESULT, LINKUP_CONNECTION_ERROR, CableClub_EventScript_AbortLinkConnectionError
+	goto CoopLink_EventScript_LinkFailed
+
+CoopLink_EventScript_Decline::
+	release
+	end
+
+CoopLink_EventScript_LinkFailed::
+	special CloseLink
+	msgbox CoopLink_Text_LinkFailed, MSGBOX_DEFAULT
+	release
+	end
+
+CoopLink_EventScript_Linked::
+	special ReducePlayerPartyToSelectedMons
+	setflag FLAG_COOP_NO_WHITEOUT
+	setvar VAR_COOP_STREAK, 0
+	message gText_LinkStandby3
+	waitmessage
+	special CoopLinkSync
+	delay 30
+
+CoopLink_EventScript_NextBattle::
+	special HealPlayerParty
+	closemessage
+	dofacilitytrainerbattle FACILITY_BATTLE_TOWER
+	waitstate
+	call BattleFrontier_BattleTowerBattleRoom_EventScript_EndTowerBattle
+	goto_if_ne VAR_RESULT, B_OUTCOME_WON, CoopLink_EventScript_Lost
+	addvar VAR_COOP_STREAK, 1
+	special BattleTowerReconnectLink
+	switch VAR_COOP_STREAK
+	case 3, CoopLink_EventScript_Reward3
+	case 5, CoopLink_EventScript_Reward5
+	case 7, CoopLink_EventScript_Reward7
+	case 9, CoopLink_EventScript_Reward9
+	case 10, CoopLink_EventScript_Reward10
+	goto CoopLink_EventScript_AskContinue
+
+CoopLink_EventScript_Reward3::
+	random 6
+	switch VAR_RESULT
+	case 0, CoopLink_EventScript_V0
+	case 1, CoopLink_EventScript_V1
+	case 2, CoopLink_EventScript_V2
+	case 3, CoopLink_EventScript_V3
+	case 4, CoopLink_EventScript_V4
+	setvar VAR_0x8004, ITEM_CARBOS
+	goto CoopLink_EventScript_GiveReward
+CoopLink_EventScript_V0::
+	setvar VAR_0x8004, ITEM_HP_UP
+	goto CoopLink_EventScript_GiveReward
+CoopLink_EventScript_V1::
+	setvar VAR_0x8004, ITEM_PROTEIN
+	goto CoopLink_EventScript_GiveReward
+CoopLink_EventScript_V2::
+	setvar VAR_0x8004, ITEM_IRON
+	goto CoopLink_EventScript_GiveReward
+CoopLink_EventScript_V3::
+	setvar VAR_0x8004, ITEM_CALCIUM
+	goto CoopLink_EventScript_GiveReward
+CoopLink_EventScript_V4::
+	setvar VAR_0x8004, ITEM_ZINC
+	goto CoopLink_EventScript_GiveReward
+
+CoopLink_EventScript_Reward5::
+	setvar VAR_0x8004, ITEM_BOTTLE_CAP
+	goto CoopLink_EventScript_GiveReward
+CoopLink_EventScript_Reward7::
+	setvar VAR_0x8004, ITEM_GOLD_BOTTLE_CAP
+	goto CoopLink_EventScript_GiveReward
+CoopLink_EventScript_Reward9::
+	setvar VAR_0x8004, ITEM_MASTER_BALL
+	goto CoopLink_EventScript_GiveReward
+
+CoopLink_EventScript_GiveReward::
+	giveitem VAR_0x8004
+	goto CoopLink_EventScript_AskContinue
+
+CoopLink_EventScript_Reward10::
+	giveitem ITEM_SHINY_CANDY
+	msgbox CoopLink_Text_Cleared, MSGBOX_DEFAULT
+	setvar VAR_0x8004, 1
+	goto CoopLink_EventScript_EndRun
+
+CoopLink_EventScript_AskContinue::
+	buffernumberstring STR_VAR_1, VAR_COOP_STREAK
+	msgbox CoopLink_Text_AskContinue, MSGBOX_YESNO
+	setvar VAR_0x8004, BATTLE_TOWER_LINK_CONTINUE
+	call_if_eq VAR_RESULT, NO, CoopLink_EventScript_SetRetire
+	setvar VAR_0x8005, 0
+	message gText_LinkStandby3
+	waitmessage
+	special LinkRetireStatusWithBattleTowerPartner
+	delay 48
+	goto_if_ne VAR_RESULT, BATTLE_TOWER_LINKSTAT_CONTINUE, CoopLink_EventScript_Retired
+	goto CoopLink_EventScript_NextBattle
+
+CoopLink_EventScript_SetRetire::
+	setvar VAR_0x8004, BATTLE_TOWER_LINK_RETIRE
+	return
+
+CoopLink_EventScript_Lost::
+	msgbox CoopLink_Text_Lost, MSGBOX_DEFAULT
+	setvar VAR_0x8004, 1
+	goto CoopLink_EventScript_EndRun
+
+CoopLink_EventScript_Retired::
+	setvar VAR_0x8004, 0
+	goto CoopLink_EventScript_EndRun
+
+CoopLink_EventScript_EndRun::
+	clearflag FLAG_COOP_NO_WHITEOUT
+	setvar VAR_COOP_STREAK, 0
+	message gText_LinkStandby3
+	waitmessage
+	special CoopLinkClose
+	closemessage
+	special LoadPlayerParty
+	release
+	end
+
+CoopLink_Text_Intro:
+	.string "Team up with a friend and take on\n"
+	.string "ten tough trainer pairs in a row!\p"
+	.string "Each of you brings three Pokémon.\n"
+	.string "Ready to link up?$"
+
+CoopLink_Text_LinkFailed:
+	.string "The link failed. Both of you must\n"
+	.string "bring different Pokémon.$"
+
+CoopLink_Text_AskContinue:
+	.string "Streak: {STR_VAR_1}. Take on the next\n"
+	.string "battle? Both of you must agree.$"
+
+CoopLink_Text_Lost:
+	.string "You were defeated. The run is over.$"
+
+CoopLink_Text_Cleared:
+	.string "Ten in a row! Incredible teamwork!$"

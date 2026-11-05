@@ -15,14 +15,14 @@
   "connections": [
     {
       "map": "MAP_LENOX_TOWN",
-      "offset": -40,
+      "offset": -48,
       "direction": "down"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER_FRLG",
-      "x": 15,
+      "x": 16,
       "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -35,7 +35,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 10,
+      "x": 11,
       "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -49,7 +49,7 @@
   ],
   "warp_events": [
     {
-      "x": 15,
+      "x": 16,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_FORGOTTEN_TOMB",

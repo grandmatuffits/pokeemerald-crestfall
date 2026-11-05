@@ -6,6 +6,9 @@
 
 enum DifficultyLevel GetCurrentDifficultyLevel(void)
 {
+    if (FlagGet(FLAG_NEW_GAME_PLUS))
+        return DIFFICULTY_HARD;
+
     if (!B_VAR_DIFFICULTY)
         return DIFFICULTY_NORMAL;
 

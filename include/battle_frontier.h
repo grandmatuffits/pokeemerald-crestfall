@@ -22,6 +22,7 @@ extern const struct BattleFrontierTrainer *gFacilityTrainers;
 extern const struct TrainerMon *gFacilityTrainerMons;
 extern const struct BattleFrontierTrainer gBattleFrontierTrainers[];
 extern const struct TrainerMon gBattleFrontierMons[];
+extern bool8 gCoopLinkBattle;
 
 void DoFacilityTrainerBattle(struct ScriptContext *ctx);
 void FillFrontierTrainerParty(u8 monsCount);

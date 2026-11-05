@@ -1867,6 +1867,11 @@ static void ValidateApprenticesChecksums(void)
 
 void GetBattleTowerTrainerLanguage(u8 *dst, u16 trainerId)
 {
+        if (gCoopLinkBattle)
+    {
+        *dst = gGameLanguage;
+        return;
+    }
     if (trainerId == TRAINER_EREADER)
     {
         *dst = gGameLanguage;
@@ -2032,6 +2037,9 @@ static void FillTentTrainerParty_(u16 trainerId, u8 firstMonId, u8 monCount)
 
 void TrySetLinkBattleTowerEnemyPartyLevel(void)
 {
+    if (gCoopLinkBattle)
+        return; // co-op uses the trainers' own levels from trainers.party
+        
     if (!TESTING)
     {
         if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))

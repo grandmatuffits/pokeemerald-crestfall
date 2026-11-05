@@ -9677,20 +9677,20 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_6",
       "name": "ENPALE_ROUTE_6_Layout",
-      "width": 21,
-      "height": 41,
+      "width": 36,
+      "height": 50,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mossdeep",
+      "secondary_tileset": "gTileset_Lenox",
       "border_filepath": "data/layouts/ENPALE_ROUTE_6/border.bin",
       "blockdata_filepath": "data/layouts/ENPALE_ROUTE_6/map.bin"
     },
     {
       "id": "LAYOUT_LENOX_TOWN",
       "name": "LENOX_TOWN_Layout",
-      "width": 68,
-      "height": 44,
+      "width": 86,
+      "height": 50,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
+      "secondary_tileset": "gTileset_Lenox",
       "border_filepath": "data/layouts/LENOX_TOWN/border.bin",
       "blockdata_filepath": "data/layouts/LENOX_TOWN/map.bin"
     },
@@ -10487,20 +10487,20 @@
     {
       "id": "LAYOUT_ENPALE_ROUTE_18",
       "name": "ENPALE_ROUTE_18_Layout",
-      "width": 24,
+      "width": 40,
       "height": 120,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_Lenox",
       "border_filepath": "data/layouts/ENPALE_ROUTE_18/border.bin",
       "blockdata_filepath": "data/layouts/ENPALE_ROUTE_18/map.bin"
     },
     {
       "id": "LAYOUT_ENPALE_ROUTE_19",
       "name": "ENPALE_ROUTE_19_Layout",
-      "width": 32,
+      "width": 33,
       "height": 70,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_Lenox",
       "border_filepath": "data/layouts/ENPALE_ROUTE_19/border.bin",
       "blockdata_filepath": "data/layouts/ENPALE_ROUTE_19/map.bin"
     },

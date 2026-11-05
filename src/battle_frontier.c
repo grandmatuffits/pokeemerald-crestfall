@@ -20,18 +20,27 @@
 #include "constants/abilities.h"
 #include "constants/battle_frontier.h"
 #include "constants/battle_frontier_mons.h"
+#include "constants/opponents.h"
 
 static void FillTrainerParty(u16 trainerId, enum BattleTrainer trainer, u8 monCount);
 
 // EWRAM vars.
 EWRAM_DATA const struct BattleFrontierTrainer *gFacilityTrainers = NULL;
 EWRAM_DATA const struct TrainerMon *gFacilityTrainerMons = NULL;
+EWRAM_DATA bool8 gCoopLinkBattle = FALSE;
 
 // IWRAM common
 COMMON_DATA u16 gFrontierTempParty[MAX_FRONTIER_PARTY_SIZE] = {0};
 
+static const u16 sCoopLinkPairs[][2] =
+{
+    { TRAINER_ROBIN_1,       TRAINER_OMAR_1 },
+    { TRAINER_LEADER_INGRID, TRAINER_LEADER_FRIEDE },
+};
+
 static void HandleFacilityTrainerBattleEnd(void)
 {
+    gCoopLinkBattle = FALSE;
     u8 facility = gBattleScripting.specialTrainerBattleType;
     switch (facility)
     {
@@ -75,6 +84,7 @@ static void Task_StartBattleAfterTransition(u8 taskId)
 static void DoFacilityTrainerBattleInternal(u8 facility)
 {
     gBattleScripting.specialTrainerBattleType = facility;
+    gCoopLinkBattle = FALSE;
 
     switch (facility)
     {
@@ -95,9 +105,25 @@ static void DoFacilityTrainerBattleInternal(u8 facility)
             FillPartnerParty(gPartnerTrainerId);
             gBattleTypeFlags |= BATTLE_TYPE_DOUBLE | BATTLE_TYPE_INGAME_PARTNER | BATTLE_TYPE_MULTI | BATTLE_TYPE_TWO_OPPONENTS;
             break;
-        case FRONTIER_MODE_LINK_MULTIS:
+                case FRONTIER_MODE_LINK_MULTIS:
             gBattleTypeFlags |= BATTLE_TYPE_DOUBLE | BATTLE_TYPE_LINK | BATTLE_TYPE_MULTI | BATTLE_TYPE_TOWER_LINK_MULTI;
-            FillFrontierTrainersParties(FRONTIER_MULTI_PARTY_SIZE);
+            if (FlagGet(FLAG_COOP_NO_WHITEOUT))
+            {
+                u32 pair = VarGet(VAR_COOP_STREAK) % ARRAY_COUNT(sCoopLinkPairs);
+
+                gCoopLinkBattle = TRUE;
+                TRAINER_BATTLE_PARAM.opponentA = sCoopLinkPairs[pair][0];
+                TRAINER_BATTLE_PARAM.opponentB = sCoopLinkPairs[pair][1];
+                ZeroEnemyPartyMons();
+                gBattleTypeFlags |= BATTLE_TYPE_TWO_OPPONENTS; // temporary, caps teams at 3
+                CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_OPPONENT_A], GetTrainerStructFromId(TRAINER_BATTLE_PARAM.opponentA));
+                CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_OPPONENT_B], GetTrainerStructFromId(TRAINER_BATTLE_PARAM.opponentB));
+                gBattleTypeFlags &= ~BATTLE_TYPE_TWO_OPPONENTS;
+            }
+            else
+            {
+                FillFrontierTrainersParties(FRONTIER_MULTI_PARTY_SIZE);
+            }
             break;
         }
         CreateTask(Task_StartBattleAfterTransition, 1);

@@ -7,20 +7,26 @@
 
 u32 GetCurrentLevelCap(void)
 {
+    // New Game+ caps: the first unset flag decides the cap
     static const u32 sLevelCapFlagMap[][2] =
     {
-        {FLAG_BADGE01_GET, 15},
-        {FLAG_BADGE02_GET, 19},
-        {FLAG_BADGE03_GET, 24},
-        {FLAG_BADGE04_GET, 29},
-        {FLAG_BADGE05_GET, 31},
-        {FLAG_BADGE06_GET, 33},
-        {FLAG_BADGE07_GET, 42},
-        {FLAG_BADGE08_GET, 46},
-        {FLAG_IS_CHAMPION, 58},
+        {FLAG_BADGE01_GET, 14},
+        {FLAG_BADGE02_GET, 20},
+        {FLAG_BADGE03_GET, 26},
+        {FLAG_BADGE04_GET, 32},
+        {FLAG_BADGE05_GET, 38},
+        {FLAG_BADGE06_GET, 44},
+        {FLAG_BADGE07_GET, 56},
+        {FLAG_BADGE08_GET, 62},
+        {FLAG_IS_CHAMPION, 70},
+        {FLAG_DEFEATED_UMBRA_REMATCH, 85},
     };
 
     u32 i;
+
+    // Normal playthrough: no level cap
+    if (!FlagGet(FLAG_NEW_GAME_PLUS))
+        return MAX_LEVEL;
 
     if (B_LEVEL_CAP_TYPE == LEVEL_CAP_FLAG_LIST)
     {
