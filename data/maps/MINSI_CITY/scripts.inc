@@ -578,3 +578,49 @@ CoopLink_Text_Lost:
 
 CoopLink_Text_Cleared:
 	.string "Ten in a row! Incredible teamwork!$"
+
+@ Paste at the end of a map's scripts.inc (e.g. data/maps/MINSI_CITY/scripts.inc),
+@ then add an NPC in Porymap with Script = CrestfallNet_EventScript_PingNpc.
+@ Result values match NET_PING_* in include/net_link.h.
+
+CrestfallNet_EventScript_PingNpc::
+	lock
+	faceplayer
+	special NetPingCheck
+	goto_if_eq VAR_RESULT, TRUE, CrestfallNet_EventScript_GotPing
+	special NetPingSend
+	goto_if_eq VAR_RESULT, 0, CrestfallNet_EventScript_NoHost
+	goto_if_eq VAR_RESULT, 1, CrestfallNet_EventScript_NoPartner
+	msgbox CrestfallNet_Text_Sent, MSGBOX_DEFAULT
+	release
+	end
+
+CrestfallNet_EventScript_GotPing::
+	msgbox CrestfallNet_Text_GotPing, MSGBOX_DEFAULT
+	release
+	end
+
+CrestfallNet_EventScript_NoHost::
+	msgbox CrestfallNet_Text_NoHost, MSGBOX_DEFAULT
+	release
+	end
+
+CrestfallNet_EventScript_NoPartner::
+	msgbox CrestfallNet_Text_NoPartner, MSGBOX_DEFAULT
+	release
+	end
+
+CrestfallNet_Text_Sent:
+	.string "Ping sent to your partner!$"
+
+CrestfallNet_Text_GotPing:
+	.string "Got a ping from {STR_VAR_1}!$"
+
+CrestfallNet_Text_NoHost:
+	.string "No network host found.\n"
+	.string "Load crestfall_net.lua in mGBA's\l"
+	.string "Scripting window first.$"
+
+CrestfallNet_Text_NoPartner:
+	.string "Connected to the relay, but your\n"
+	.string "partner isn't in the room yet.$"

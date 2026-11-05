@@ -670,3 +670,5 @@ gSpecials::
 	def_special CheckCaughtKeldeo
 	def_special CoopLinkSync, waitstate=1
 	def_special CoopLinkClose, waitstate=1
+	def_special NetPingSend
+  	def_special NetPingCheck

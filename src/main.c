@@ -25,6 +25,7 @@
 #include "trainer_hill.h"
 #include "test_runner.h"
 #include "constants/rgb.h"
+#include "net_link.h"
 
 static void VBlankIntr(void);
 static void HBlankIntr(void);
@@ -112,6 +113,7 @@ void AgbMain(void)
     ResetBgs();
     SetDefaultFontsPointer();
     InitHeap(gHeap, HEAP_SIZE);
+    NetLink_Init();
 
     gSoftResetDisabled = FALSE;
 
