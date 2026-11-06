@@ -2,7 +2,7 @@
 -- Bridge between Pokemon Crestfall's NetMailbox (EWRAM) and relay.js.
 -- Load in mGBA: Tools > Scripting... > File > Load script...
 
-local HOST = "172.22.65.205"   -- relay address
+local HOST = "127.0.0.1"   -- relay address
 local PORT = 9000
 local ROOM = "test"        -- both players must use the same room code
 
@@ -18,6 +18,7 @@ local OFF_STATUS   = 0x012
 local OFF_PID      = 0x013
 local OFF_OUT      = 0x014
 local OFF_IN       = 0x124
+local OFF_HEARTBEAT = 0x234
 
 local STATUS_NONE, STATUS_ALONE, STATUS_PARTNERED = 0, 1, 2
 
@@ -31,6 +32,7 @@ local status = STATUS_NONE
 local playerId = 0
 local scanTimer = 0
 local retryTimer = 0
+local heartbeat = 0
 
 local function log(s) console:log("[crestfall-net] " .. s) end
 
@@ -129,10 +131,13 @@ callbacks:add("frame", function()
       parse()
     end
   end
+
   -- 3. Keep host state written (a soft reset re-runs NetLink_Init and clears it)
   emu:write32(base + OFF_MAGIC, HOST_MAGIC)
   emu:write8(base + OFF_STATUS, status)
   emu:write8(base + OFF_PID, playerId)
+  heartbeat = (heartbeat + 1) & 0xFF
+  emu:write8(base + OFF_HEARTBEAT, heartbeat)  -- lets the game notice if this script stops
 
   -- 4. Outgoing: game -> relay
   if emu:read8(base + OFF_OUTREADY) == 1 then
@@ -155,4 +160,3 @@ callbacks:add("frame", function()
 end)
 
 log("loaded, looking for Crestfall's mailbox...")
-

@@ -25,6 +25,7 @@
 #include "battle.h"
 #include "link.h"
 #include "link_rfu.h"
+#include "net_link.h"
 #include "constants/rgb.h"
 #include "constants/trade.h"
 
@@ -355,6 +356,7 @@ void OpenLink(void)
 {
     int i;
 
+    NetLink_Open(); // Crestfall: picks network mode if crestfall_net.lua is attached
     if (!gWirelessCommType)
     {
         ResetSerial();
@@ -383,6 +385,8 @@ void OpenLink(void)
 
 void CloseLink(void)
 {
+    if (gNetLinkActive)
+        NetLink_Close();
     gReceivedRemoteLinkPlayers = FALSE;
     if (gWirelessCommType)
         LinkRfu_Shutdown();
@@ -985,6 +989,9 @@ u8 GetMultiplayerId(void)
 {
     if (gWirelessCommType == TRUE)
         return Rfu_GetMultiplayerId();
+
+    if (gNetLinkActive)
+        return NetLink_GetMultiplayerId();
 
     return SIO_MULTI_CNT->id;
 }
@@ -1680,6 +1687,8 @@ static void CB2_PrintErrorMessage(void)
 
 bool8 GetSioMultiSI(void)
 {
+    if (gNetLinkActive)
+        return FALSE;
     return (REG_SIOCNT & SIO_MULTI_SI) != 0;
 }
 
@@ -1738,7 +1747,10 @@ bool8 HandleLinkConnection(void)
 
     if (gWirelessCommType == 0)
     {
-        gLinkStatus = LinkMain1(&gShouldAdvanceLinkState, gSendCmd, gRecvCmds);
+        if (gNetLinkActive)
+            gLinkStatus = NetLink_Main1(&gShouldAdvanceLinkState, gSendCmd, gRecvCmds);
+        else
+            gLinkStatus = LinkMain1(&gShouldAdvanceLinkState, gSendCmd, gRecvCmds);
         LinkMain2(&gMain.heldKeys);
         if ((gLinkStatus & LINK_STAT_RECEIVED_NOTHING) && IsSendingKeysOverCable() == TRUE)
             return TRUE;
