@@ -33,8 +33,27 @@ local playerId = 0
 local scanTimer = 0
 local retryTimer = 0
 local heartbeat = 0
+local refusedReason = nil
 
 local function log(s) console:log("[crestfall-net] " .. s) end
+
+-- Build fingerprint: CRC32 of the loaded ROM, so the relay never pairs two different builds
+local buildId = nil
+local function getBuildId()
+  if buildId then return buildId end
+  local ok, v = pcall(function() return emu:checksum(C.CHECKSUM.CRC32) end)
+  if ok and type(v) == "string" and #v > 0 then
+    local h = {}
+    for i = 1, #v do h[#h + 1] = string.format("%02x", v:byte(i)) end
+    buildId = table.concat(h)
+  elseif ok and type(v) == "number" then
+    buildId = string.format("%08x", v)
+  else
+    buildId = ""   -- can't tell; relay treats it as unknown
+  end
+  log("game build " .. (buildId ~= "" and buildId or "unknown"))
+  return buildId
+end
 
 local function u16be(n) return string.char((n >> 8) & 0xFF, n & 0xFF) end
 
@@ -61,6 +80,9 @@ local function onFrame(p)
     log(status == STATUS_PARTNERED and "partner connected" or "waiting for partner...")
   elseif t == "D" then
     table.insert(inbox, p:sub(2))
+  elseif t == "X" then
+    refusedReason = p:sub(2)
+    log("relay refused: " .. refusedReason)
   end
 end
 
@@ -79,7 +101,8 @@ local function disconnect(reason)
   rx = ""
   inbox = {}
   status = STATUS_NONE
-  retryTimer = 300
+  retryTimer = refusedReason and 1800 or 300  -- wait 30s after a refusal, 5s otherwise
+  refusedReason = nil
 end
 
 local function connect()
@@ -91,7 +114,8 @@ local function connect()
   end
   sock = s
   status = STATUS_ALONE
-  sendFrame("J" .. ROOM)
+  local b = getBuildId()
+  sendFrame("J" .. ROOM .. (b ~= "" and ("|" .. b) or ""))
   log("connected to relay")
 end
 
@@ -107,6 +131,7 @@ callbacks:add("frame", function()
   end
   if emu:readRange(base, #SIG) ~= SIG then
     base = nil
+    buildId = nil
     return
   end
 
@@ -118,17 +143,19 @@ callbacks:add("frame", function()
 
   -- 2b. Pull anything the relay sent (polled every frame, no callbacks)
   if sock then
+    local closed = false
     local ok, err = pcall(function()
       while sock:hasdata() do
         local data = sock:receive(4096)
-        if not data or #data == 0 then break end
+        if not data or #data == 0 then closed = true; break end  -- readable but empty = closed
         rx = rx .. data
       end
     end)
     if not ok then
-      disconnect("relay read failed (" .. tostring(err) .. "), retrying in 5s")
+      disconnect("relay read failed (" .. tostring(err) .. "), retrying")
     else
       parse()
+      if closed then disconnect("relay closed the connection, retrying") end
     end
   end
 
