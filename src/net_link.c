@@ -91,6 +91,8 @@ void NetLink_Init(void)
     gNetMailbox.relayStatus = NET_STATUS_NONE;
     gNetMailbox.playerId = 0;
     gNetMailbox.hostHeartbeat = 0;
+    gNetMailbox.roomSerial = 0;
+    gNetMailbox.roomCode[0] = 0;
     for (i = 0; i < NET_SIG_LEN; i++)
         gNetMailbox.sig[i] = sNetSig[i];
     gNetLinkActive = FALSE;
@@ -461,6 +463,51 @@ u32 NetLink_Main1(u8 *shouldAdvanceLinkState, u16 *sendCmd, u16 (*recvCmds)[CMD_
     if (sNet.queueFull)
         status |= 1 << LINK_STAT_ERROR_QUEUE_FULL_SHIFT;
     return status;
+}
+
+// ---------------------------------------------------------------------------
+// Room codes (co-op NPC)
+// ---------------------------------------------------------------------------
+
+// Result: TRUE if crestfall_net.lua is attached (online play), FALSE for cable/offline.
+void NetIsOnline(void)
+{
+    gSpecialVar_Result = NetLink_HostPresent();
+}
+
+// Takes the code typed in EnterCode (gStringVar2) and hands it to the Lua host as
+// uppercase ASCII, so "jared1" and "JARED1" match. Letters and digits only.
+// Result: TRUE if a usable code was entered, FALSE if it was empty.
+void NetSetRoomCode(void)
+{
+    u32 i, n = 0;
+
+    for (i = 0; gStringVar2[i] != EOS && n < NET_ROOM_CODE_MAX; i++)
+    {
+        u8 c = gStringVar2[i];
+        u8 ascii = 0;
+
+        if (c >= CHAR_0 && c <= CHAR_9)
+            ascii = '0' + (c - CHAR_0);
+        else if (c >= CHAR_A && c <= CHAR_Z)
+            ascii = 'A' + (c - CHAR_A);
+        else if (c >= CHAR_a && c <= CHAR_z)
+            ascii = 'A' + (c - CHAR_a);
+
+        if (ascii != 0)
+            gNetMailbox.roomCode[n++] = ascii;
+    }
+    gNetMailbox.roomCode[n] = 0;
+
+    if (n == 0)
+    {
+        gSpecialVar_Result = FALSE;
+        return;
+    }
+    // Bump last: the host reads the code once the serial changes
+    if (++gNetMailbox.roomSerial == 0)
+        gNetMailbox.roomSerial = 1;
+    gSpecialVar_Result = TRUE;
 }
 
 // ---------------------------------------------------------------------------

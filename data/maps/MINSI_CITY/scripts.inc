@@ -422,6 +422,16 @@ CoopLink_EventScript_Start::
 	faceplayer
 	msgbox CoopLink_Text_Intro, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CoopLink_EventScript_Decline
+	special NetIsOnline
+	goto_if_eq VAR_RESULT, FALSE, CoopLink_EventScript_ChooseTeam
+	msgbox CoopLink_Text_EnterRoomCode, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	special EnterCode
+	waitstate
+	special NetSetRoomCode
+	goto_if_eq VAR_RESULT, FALSE, CoopLink_EventScript_NoRoomCode
+CoopLink_EventScript_ChooseTeam::
 	special SavePlayerParty
 	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
@@ -624,3 +634,16 @@ CrestfallNet_Text_NoHost:
 CrestfallNet_Text_NoPartner:
 	.string "Connected to the relay, but your\n"
 	.string "partner isn't in the room yet.$"
+
+CoopLink_EventScript_NoRoomCode::
+	msgbox CoopLink_Text_NoRoomCode, MSGBOX_DEFAULT
+	release
+	end
+
+CoopLink_Text_EnterRoomCode:
+	.string "Enter a room code to team up online.\p"
+	.string "You and your partner need to enter\n"
+	.string "the same code.$"
+
+CoopLink_Text_NoRoomCode:
+	.string "No code was entered.$"

@@ -4,7 +4,7 @@
 
 local HOST = "100.87.131.115"   -- relay address
 local PORT = 9000
-local ROOM = "test"        -- both players must use the same room code
+local ROOM = ""          -- leave empty: the co-op NPC asks for a room code in-game
 
 -- Must match include/net_link.h
 local SIG          = "CRSTNET1"
@@ -19,6 +19,8 @@ local OFF_PID      = 0x013
 local OFF_OUT      = 0x014
 local OFF_IN       = 0x124
 local OFF_HEARTBEAT = 0x234
+local OFF_ROOMSERIAL = 0x235
+local OFF_ROOMCODE = 0x236
 
 local STATUS_NONE, STATUS_ALONE, STATUS_PARTNERED = 0, 1, 2
 
@@ -34,6 +36,8 @@ local scanTimer = 0
 local retryTimer = 0
 local heartbeat = 0
 local refusedReason = nil
+local currentRoom = (ROOM ~= "") and ROOM or nil
+local lastRoomSerial = 0
 
 local function log(s) console:log("[crestfall-net] " .. s) end
 
@@ -67,6 +71,7 @@ local function findMailbox()
   if pos then
     base = EWRAM + pos - 1
     log(string.format("mailbox found at 0x%08X", base))
+    if not currentRoom then log("waiting for a room code (talk to the co-op NPC)") end
   end
 end
 
@@ -74,7 +79,7 @@ local function onFrame(p)
   local t = p:sub(1, 1)
   if t == "I" then
     playerId = p:byte(2)
-    log("joined room '" .. ROOM .. "' as player " .. playerId)
+    log("joined room '" .. currentRoom .. "' as player " .. playerId)
   elseif t == "P" then
     status = (p:byte(2) == 1) and STATUS_PARTNERED or STATUS_ALONE
     log(status == STATUS_PARTNERED and "partner connected" or "waiting for partner...")
@@ -105,6 +110,11 @@ local function disconnect(reason)
   refusedReason = nil
 end
 
+local function joinRoom()
+  local b = getBuildId()
+  sendFrame("J" .. currentRoom .. (b ~= "" and ("|" .. b) or ""))
+end
+
 local function connect()
   local s, err = socket.connect(HOST, PORT)
   if not s then
@@ -114,8 +124,7 @@ local function connect()
   end
   sock = s
   status = STATUS_ALONE
-  local b = getBuildId()
-  sendFrame("J" .. ROOM .. (b ~= "" and ("|" .. b) or ""))
+  joinRoom()
   log("connected to relay")
 end
 
@@ -135,8 +144,28 @@ callbacks:add("frame", function()
     return
   end
 
-  -- 2. Relay connection
-  if not sock then
+  -- 2a. Room code entered at the co-op NPC
+  local serial = emu:read8(base + OFF_ROOMSERIAL)
+  if serial ~= lastRoomSerial then
+    lastRoomSerial = serial
+    if serial ~= 0 then
+      local code = emu:readRange(base + OFF_ROOMCODE, 16):match("^[%w_-]+")
+      if code and code ~= currentRoom then
+        currentRoom = code
+        log("room code: " .. code)
+        if sock then
+          status = STATUS_ALONE
+          inbox = {}
+          joinRoom()
+        else
+          retryTimer = 0
+        end
+      end
+    end
+  end
+
+  -- 2. Relay connection (only once there's a room to join)
+  if not sock and currentRoom then
     retryTimer = retryTimer - 1
     if retryTimer <= 0 then connect() end
   end

@@ -672,3 +672,5 @@ gSpecials::
 	def_special CoopLinkClose, waitstate=1
 	def_special NetPingSend
   	def_special NetPingCheck
+	def_special NetIsOnline
+	def_special NetSetRoomCode

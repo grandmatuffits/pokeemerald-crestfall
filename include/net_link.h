@@ -12,6 +12,7 @@
 #define NET_SIG_LEN       8
 #define NET_HOST_MAGIC    0x4E455431  // "NET1", written every frame by the Lua host
 #define NET_PAYLOAD_MAX   272
+#define NET_ROOM_CODE_MAX 16
 
 #define NET_STATUS_NONE        0  // no relay connection
 #define NET_STATUS_ALONE       1  // in a room, waiting for partner
@@ -35,6 +36,8 @@ struct NetMailbox
     u8  outData[NET_PAYLOAD_MAX];    // 0x014
     u8  inData[NET_PAYLOAD_MAX];     // 0x124
     u8  hostHeartbeat;               // 0x234 host increments every frame
+    u8  roomSerial;                  // 0x235 game bumps this each time a room code is entered
+    u8  roomCode[NET_ROOM_CODE_MAX + 1]; // 0x236 uppercase ASCII, NUL-terminated
 };
 
 extern volatile struct NetMailbox gNetMailbox;
@@ -50,6 +53,10 @@ void NetLink_Open(void);
 void NetLink_Close(void);
 u8 NetLink_GetMultiplayerId(void);
 u32 NetLink_Main1(u8 *shouldAdvanceLinkState, u16 *sendCmd, u16 (*recvCmds)[CMD_LENGTH]);
+
+// Room code specials (co-op NPC)
+void NetIsOnline(void);
+void NetSetRoomCode(void);
 
 // Debug specials (step 1 ping test)
 void NetPingSend(void);
