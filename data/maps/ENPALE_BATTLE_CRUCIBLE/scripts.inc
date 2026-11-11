@@ -137,13 +137,13 @@ BattleCrucible_Lobby_EventScript_SinglesContinuePrompt::
 BattleCrucible_Lobby_EventScript_SinglesLost::
 	special Crucible_EndRun
 	msgbox BattleCrucible_Lobby_Text_Lost, MSGBOX_DEFAULT
-	release
+	goto BattleCrucible_Arena_EventScript_ReturnToLobby
 	end
 
 BattleCrucible_Lobby_EventScript_SinglesCleared::
 	special Crucible_EndRun
 	msgbox BattleCrucible_Lobby_Text_Cleared, MSGBOX_DEFAULT
-	release
+	goto BattleCrucible_Arena_EventScript_ReturnToLobby
 	end
 
 @ ---- text ------------------------------------------------------------------

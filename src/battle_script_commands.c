@@ -4050,21 +4050,21 @@ static void Cmd_getmoneyreward(void)
 {
     CMD_ARGS();
 
-    u32 money = 0;
+        u32 money = 0;
     u8 sPartyLevel = 1;
 
-    if (gBattleOutcome == B_OUTCOME_WON)
+    if (Crucible_IsActive())
+    {
+        money = 0; // no prize money or money lost in the Battle Crucible
+    }
+    else if (gBattleOutcome == B_OUTCOME_WON)
     {
         money = GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentA);
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
             money += GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentB);
         AddMoney(&gSaveBlock1Ptr->money, money);
     }
-        if (Crucible_IsActive())
-    {
-        money = 0; // no prize money or money lost in the Battle Crucible
-    }
-    else if (gBattleOutcome == B_OUTCOME_WON)
+    else
     {
         if (B_WHITEOUT_MONEY <= GEN_3)
         {
