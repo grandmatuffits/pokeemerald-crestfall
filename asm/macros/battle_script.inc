@@ -2057,6 +2057,11 @@
 	.4byte \jumpInstr
 	.endm
 
+	.macro jumpifcrucible jumpInstr:req
+	callnative BS_JumpIfCrucible
+	.4byte \jumpInstr
+	.endm
+	
 	.macro tryboosterenergy onFieldStatus:req
 	callnative BS_TryBoosterEnergy
 	.byte \onFieldStatus

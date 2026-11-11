@@ -1,6 +1,7 @@
 #include "global.h"
 #include "main.h"
 #include "battle.h"
+#include "battle_crucible.h"
 #include "battle_records.h"
 #include "battle_setup.h"
 #include "cable_club.h"
@@ -597,7 +598,7 @@ void TryBattleLinkup(void)
 
         break;
     }
-
+    gLinkType = Crucible_AdjustPvpLinkType(gLinkType);
     CreateLinkupTask(minPlayers, maxPlayers);
 }
 
@@ -992,6 +993,7 @@ void CB2_ReturnFromCableClubBattle(void)
     gBattleTypeFlags &= ~BATTLE_TYPE_LINK_IN_BATTLE;
     Overworld_ResetMapMusic();
     LoadPlayerParty();
+    Crucible_RecordPvpResult();
     SavePlayerBag();
     UpdateTrainerFansAfterLinkBattle();
 

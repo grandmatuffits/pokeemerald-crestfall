@@ -1524,6 +1524,10 @@
 
 #define FLAG_COOP_NO_WHITEOUT 0x442
 
+#define FLAG_ITEM_EELEKTROSSITE 0x443
+
+#define FLAG_ITEM_DRAGALGITE 0x444
+
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2

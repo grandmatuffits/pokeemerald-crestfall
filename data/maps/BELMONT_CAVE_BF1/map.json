@@ -3,7 +3,7 @@
   "name": "BELMONT_CAVE_BF1",
   "layout": "LAYOUT_BELMONT_CAVE_BF1",
   "music": "MUS_ENPALE_CAVE",
-  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
+  "region_map_section": "MAPSEC_DIGLETTS_CAVE",
   "requires_flash": true,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -49,7 +49,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_FAIRY_TERA_SHARD",
+      "trainer_sight_or_berry_tree_id": "ITEM_AUDINITE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_BELMONT_FAIRY_TERA_SHARD"
     },
@@ -62,9 +62,35 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_DRAGON_TERA_SHARD",
+      "trainer_sight_or_berry_tree_id": "ITEM_EMBOARITE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_BELMONT_DRAGON_TERA_SHARD"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 24,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_EELEKTROSSITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_EELEKTROSSITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 12,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_DRAGALGITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_DRAGALGITE"
     }
   ],
   "warp_events": [

@@ -196,7 +196,8 @@ MINSI_CITY_GYM_Text_RossBeasts:
 	.string "Keep your eyes open.\p"
 	.string "Their power might be just what you\n"
 	.string "need to finish the job on TEAM\l"
-	.string "COVENANT.$"
+	.string "COVENANT.\p"
+	.string "If you find them, report back.$"
 
 MINSI_CITY_GYM_Text_RossKeldeoIntro:
 	.string "Oh, you're back?\p"

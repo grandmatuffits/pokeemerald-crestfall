@@ -2,6 +2,7 @@
 #include "data.h"
 #include "main.h"
 #include "battle.h"
+#include "battle_crucible.h"
 #include "battle_frontier.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
@@ -1346,6 +1347,11 @@ void ConfigureTrainerBattle(struct ScriptContext *ctx)
 
     TrainerBattleParameter *battleParams = (TrainerBattleParameter*)(ctx->scriptPtr);
     TrainerBattleLoadArgs(battleParams->data);
+        if (Crucible_IsActive())
+    {
+        TRAINER_BATTLE_PARAM.opponentA = Crucible_GetOpponentId();
+        TRAINER_BATTLE_PARAM.skipFlagCheck = TRUE;
+    }
 
     BattleSetup_ConfigureTrainerBattle(&gTrainerBattleParameter, &trainerBattleScriptStack);
     ScriptContext_SetupContextFromStack(&trainerBattleScriptStack, ctx);
@@ -1581,6 +1587,8 @@ void BattleSetup_StartTrainerBattle(void)
     {
         gBattleTypeFlags |= BATTLE_TYPE_DOUBLE;
     }
+         if (Crucible_IsDoubles())
+        gBattleTypeFlags |= BATTLE_TYPE_DOUBLE;
 
     sNoOfPossibleTrainerRetScripts = gNoOfApproachingTrainers;
     gNoOfApproachingTrainers = 0;
@@ -1691,7 +1699,7 @@ static void CB2_EndTrainerBattle(void)
     }
     else if (IsPlayerDefeated(gBattleOutcome))
     {
-        if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || InTrainerHillChallenge() || FlagGet(B_FLAG_NO_WHITEOUT))
+        if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || InTrainerHillChallenge() || FlagGet(B_FLAG_NO_WHITEOUT) || Crucible_IsActive())
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         else if (FlagGet(FLAG_UNUSED_0x026))
         {

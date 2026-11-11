@@ -3,7 +3,7 @@
   "name": "BELMONT_TOWN_POKEMONCENTER",
   "layout": "LAYOUT_BELMONT_TOWN_POKEMONCENTER",
   "music": "MUS_ENPALE_POKEMART",
-  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
+  "region_map_section": "MAPSEC_ROUTE_10_POKECENTER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

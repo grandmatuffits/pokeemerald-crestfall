@@ -94,7 +94,7 @@ LENOX_TOWN_EventScript_CovenantScene::
 @ ===== AFTERMATH — fade so the decorative acolytes vanish off-screen =====
 	setflag FLAG_LENOX_COVENANT_DONE
 	fadescreen FADE_TO_BLACK
-	warpsilent MAP_LENOX_TOWN, 7, 14
+	warpsilent MAP_LENOX_TOWN, 16, 20
 	waitstate
 	releaseall
 	end
@@ -360,6 +360,7 @@ LENOX_TOWN_Mart_Merchant4:
 	.2byte ITEM_FALINKSITE
 	.2byte ITEM_HAWLUCHANITE
 	.2byte ITEM_DRAGONINITE
+	.2byte ITEM_AERODACTYLITE
 	.2byte ITEM_NONE
 	pokemartlistend
 

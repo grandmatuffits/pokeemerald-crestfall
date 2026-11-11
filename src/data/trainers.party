@@ -25620,12 +25620,6 @@ Level: 14
 Shuppet
 Level: 14
 
-Pikachu
-Level: 15
-
-Sandshrew-Alola
-Level: 15
-
 Mienfoo
 Level: 16
 - Fake Out
@@ -25662,9 +25656,6 @@ Level: 29
 
 Raichu
 Level: 28
-
-Sandslash-Alola
-Level: 29
 
 Mienfoo
 Level: 30
@@ -25913,12 +25904,6 @@ Level: 12
 Togetic
 Level: 13
 
-Gligar
-Level: 13
-
-Scyther
-Level: 13
-
 Staravia @ None
 Level: 14
 - Quick Attack
@@ -25945,12 +25930,6 @@ Ability: Sturdy
 
 Flaaffy
 Level: 18
-
-Voltorb
-Level: 18
-
-Jolteon
-Level: 19
 
 Electabuzz
 Level: 19
@@ -25992,9 +25971,6 @@ Level: 25
 Baltoy
 Level: 25
 
-Dugtrio
-Level: 26
-
 Nidoking @ None
 Level: 26
 - Bulldoze
@@ -26018,9 +25994,6 @@ Level: 29
 - Night Slash
 - Swords Dance
 - Ice Shard
-
-Lapras @ Leftovers
-Level: 30
 
 Cloyster @ Focus Sash
 Level: 30
@@ -27982,6 +27955,13 @@ Level: 20
 - Stun Spore
 - Synthesis
 
+Shroomish
+Level: 21
+- Spore
+- Giga Drain
+- Leech Seed
+- Headbutt
+
 Lileep @ None
 Level: 22
 - Ancient Power
@@ -28013,6 +27993,13 @@ Level: 27
 - Bite
 - Poison Fang
 
+Tentacool
+Level: 27
+- Surf
+- Poison Jab
+- Aqua Ring
+- Haze 
+
 Tirtouga
 Level: 28
 - Crunch
@@ -28029,6 +28016,13 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Smart Mon Choices / Prefer Highest Damage Move / Smart Switching / Ace Pokemon
 Difficulty: Hard
+
+Dwebble @ Leftovers
+Level: 32
+- X-Scissor
+- Stealth Rock
+- Rock Slide
+- Spikes
 
 Rhyhorn @ Sitrus Berry
 Level: 32
@@ -28068,7 +28062,6 @@ Level: 39
 - Hypnosis
 - Trick Room
 
-
 Durant @ Life Orb
 Level: 40
 Ability: Hustle
@@ -28083,6 +28076,16 @@ Level: 40
 - Flash Cannon
 - Thunder Wave
 - Volt Switch
+
+Metang @ Life Orb
+Level: 41
+Ability: Clear Body
+EVs: 232 HP / 60 Atk / 40 SpD / 176 Spe
+Jolly Nature
+- Meteor Mash
+- Ice Punch
+- Rock Slide
+- Earthquake
 
 Bastiodon @ Sitrus Berry
 Level: 42
@@ -28122,6 +28125,16 @@ Level: 45
 - Drain Punch
 - Swords Dance
 
+Sceptile @ Choice Specs
+Level: 45
+Ability: Overgrow
+EVs: 252 SpA / 4 SpD / 252 Spe
+Timid Nature
+- Leaf Storm
+- Dragon Pulse
+- Earth Power
+- Focus Blast
+
 Cradily @ Leftovers
 Level: 46
 - Stockpile
@@ -28159,6 +28172,16 @@ Level: 47
 - Liquidation
 - Ice Fang
 - Swagger
+
+Swampert @ Leftovers
+Level: 47
+Ability: Damp
+EVs: 4 HP / 244 Atk / 8 SpD / 252 Spe
+Jolly Nature
+- Waterfall
+- Earthquake
+- Ice Punch
+- Stealth Rock
 
 Carracosta @ White Herb
 Level: 48
@@ -28198,6 +28221,12 @@ Level: 45
 - Hammer Arm
 - Avalanche
 
+Pupitar @ Choice Band
+- Earthquake
+- Stone Edge
+- Crunch
+- Iron Head
+
 Tyrantrum @ Choice Scarf
 Level: 46
 - Dragon Claw
@@ -28236,6 +28265,16 @@ Level: 47
 - Flash Cannon
 - Volt Switch
 - Thunder Wave
+
+Metagross @ Choice Band
+Level: 47
+Ability: Clear Body
+EVs: 232 HP / 60 Atk / 40 SpD / 176 Spe
+Jolly Nature
+- Meteor Mash
+- Ice Punch
+- Earthquake
+- Bullet Punch
 
 Bastiodon @ Leftovers
 Level: 48

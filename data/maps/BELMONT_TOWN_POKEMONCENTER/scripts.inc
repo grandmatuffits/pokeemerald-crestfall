@@ -16,11 +16,23 @@ BELMONT_TOWN_POKEMONCENTER_EventScript_Nurse::
 	end
 
 BelmontTown_PokemonCenter_1F_EventScript_Forgetful::
+	goto_if_set FLAG_DEFEATED_RIVAL_CHAMPION, BelmontTown_PokemonCenter_1F_EventScript_ForgetfulBattle
 	msgbox BelmontTown_PokemonCenter_1F_Text_Forgetful, MSGBOX_NPC
 	end
 
+BelmontTown_PokemonCenter_1F_EventScript_ForgetfulBattle::
+	trainerbattle_single TRAINER_ANGEL, BelmontTown_PokemonCenter_1F_Text_ForgetfulIntro, BelmontTown_PokemonCenter_1F_Text_ForgetfulDefeat
+	msgbox BelmontTown_PokemonCenter_1F_Text_ForgetfulPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 BelmontTown_PokemonCenter_1F_EventScript_KnockOff::
+	goto_if_set FLAG_DEFEATED_RIVAL_CHAMPION, BelmontTown_PokemonCenter_1F_EventScript_KnockOffBattle
 	msgbox BelmontTown_PokemonCenter_1F_Text_KnockOff, MSGBOX_NPC
+	end
+
+BelmontTown_PokemonCenter_1F_EventScript_KnockOffBattle::
+	trainerbattle_single TRAINER_RANCHSTYLEBEAN, BelmontTown_PokemonCenter_1F_Text_KnockOffIntro, BelmontTown_PokemonCenter_1F_Text_KnockOffDefeat
+	msgbox BelmontTown_PokemonCenter_1F_Text_KnockOffPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 BelmontTown_PokemonCenter_1F_Text_Forgetful:
@@ -33,3 +45,22 @@ BelmontTown_PokemonCenter_1F_Text_KnockOff:
 	.string "on a Pokémon that mega-evolved\l"
 	.string "will undo the Mega-Evolution?\p"
 	.string "I heard it on Reddit!$"
+
+	BelmontTown_PokemonCenter_1F_Text_ForgetfulIntro:
+	.string "I remember now!$"
+
+BelmontTown_PokemonCenter_1F_Text_ForgetfulDefeat:
+	.string "Oh.$"
+
+BelmontTown_PokemonCenter_1F_Text_ForgetfulPostBattle:
+	.string "Well, have you?$"
+
+BelmontTown_PokemonCenter_1F_Text_KnockOffIntro:
+	.string "Nothing personnel, kiddo...$"
+
+BelmontTown_PokemonCenter_1F_Text_KnockOffDefeat:
+	.string "Okay.$"
+
+BelmontTown_PokemonCenter_1F_Text_KnockOffPostBattle:
+	.string "TSM! TSM! TSM!$"
+

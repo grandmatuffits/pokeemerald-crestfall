@@ -4814,6 +4814,11 @@ void CheckCaughtSpecies(void)
 {
     gSpecialVar_Result = GetSetPokedexFlag(SpeciesToNationalPokedexNum(gSpecialVar_0x8004), FLAG_GET_CAUGHT);
 }
+void SwapPlayerGender(void)
+{
+    gSaveBlock2Ptr->playerGender ^= 1;
+    gPlayerAvatar.gender = gSaveBlock2Ptr->playerGender;
+}
 void CheckPartyForShiny(void)
 {
     u32 i;

@@ -889,7 +889,7 @@ bool32 ComputePlayerShinyOdds(u32 personality, u32 value)
         totalRerolls += 1;
 
     if (FlagGet(FLAG_NEW_GAME_PLUS))
-        totalRerolls += 63;
+        totalRerolls += 255;
 
     totalRerolls += CalculateChainFishingShinyRolls();
 

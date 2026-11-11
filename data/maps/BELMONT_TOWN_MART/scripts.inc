@@ -32,9 +32,24 @@ BELMONT_SHOP_Items:
 	pokemartlistend
 
 BelmontTown_PokemonCenter_1F_EventScript_Canes::
+	goto_if_set FLAG_DEFEATED_RIVAL_CHAMPION, BelmontTown_PokemonCenter_1F_EventScript_CanesBattle
 	msgbox BelmontTown_PokemonCenter_1F_Text_Canes, MSGBOX_NPC
+	end
+
+BelmontTown_PokemonCenter_1F_EventScript_CanesBattle::
+	trainerbattle_single TRAINER_PASSIVE, BelmontTown_PokemonCenter_1F_Text_CanesIntro, BelmontTown_PokemonCenter_1F_Text_CanesDefeat
+	msgbox BelmontTown_PokemonCenter_1F_Text_CanesPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 BelmontTown_PokemonCenter_1F_Text_Canes:
 	.string "This town doesn't even have a\n"
 	.string "Cane's in it…$"
+
+BelmontTown_PokemonCenter_1F_Text_CanesIntro:
+	.string "HEEEH!?$"
+
+BelmontTown_PokemonCenter_1F_Text_CanesDefeat:
+	.string "No!$"
+
+BelmontTown_PokemonCenter_1F_Text_CanesPostBattle:
+	.string "But I was the best Cho-Gath in NA!$"

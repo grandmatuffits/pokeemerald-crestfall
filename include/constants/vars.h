@@ -135,7 +135,6 @@
 #define VAR_ROUTE118_STATE                               0x4071
 #define VAR_ROUTE119_STATE                               0x4072
 #define VAR_ROUTE121_STATE                               0x4074
-#define VAR_ROUTE122_STATE                               0x4075 // Unused Var
 #define VAR_ROUTE123_STATE                               0x4076 // Unused Var
 #define VAR_ROUTE124_STATE                               0x4077 // Unused Var
 #define VAR_ROUTE125_STATE                               0x4078 // Unused Var
@@ -276,6 +275,21 @@
 #define VAR_SAFARI_BOUNTY_3                              0x40FF  // was VAR_UNUSED_0x40FF
 #define VAR_SAFARI_BOUNTY_COUNT                          0x40DB  // was VAR_UNUSED_0x40DB
 #define VAR_COOP_STREAK                                  0x4073
+#define VAR_CRUCIBLE_SINGLES_BEST                        0x40A1
+#define VAR_CRUCIBLE_SINGLES_CLEARS                      0x40A8
+#define VAR_CRUCIBLE_HELL_BEST                           0x4065
+#define VAR_CRUCIBLE_HELL_CLEARS                         0x4064
+#define VAR_STYLIST_STATE                                0x4075
+#define VAR_CRUCIBLE_NO_BAG                              0x4066   // was VAR_UNUSED_0x40XX
+#define VAR_CRUCIBLE_DOUBLES_BEST                        0x4067
+#define VAR_CRUCIBLE_DOUBLES_CLEARS                      0x4068
+#define VAR_CRUCIBLE_DOUBLES_HELL_BEST                   0x406A
+#define VAR_CRUCIBLE_DOUBLES_HELL_CLEARS                 0x406B
+#define VAR_CRUCIBLE_COOP_BEST                           0x406C
+#define VAR_CRUCIBLE_COOP_CLEARS                         0x406D
+#define VAR_CRUCIBLE_PVP_WINS                            0x406E
+#define VAR_CRUCIBLE_PVP_LOSSES                          0x404E
+#define VAR_CRUCIBLE_ARENA_STATE                         0x4078
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

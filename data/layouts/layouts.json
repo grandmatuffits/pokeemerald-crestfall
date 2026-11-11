@@ -10833,6 +10833,36 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/BELMONT_CAVE_BF1/border.bin",
       "blockdata_filepath": "data/layouts/BELMONT_CAVE_BF1/map.bin"
+    },
+    {
+      "id": "LAYOUT_LENOX_TOWN_GENDER_CHANGE_HOUSE",
+      "name": "LENOX_TOWN_GENDER_CHANGE_HOUSE_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LENOX_TOWN_GENDER_CHANGE_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/LENOX_TOWN_GENDER_CHANGE_HOUSE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_BATTLE_CRUCIBLE",
+      "name": "ENPALE_BATTLE_CRUCIBLE_Layout",
+      "width": 54,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePalace",
+      "border_filepath": "data/layouts/ENPALE_BATTLE_CRUCIBLE/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_BATTLE_CRUCIBLE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ENPALE_BATTLE_CRUCIBLE_ARENA",
+      "name": "ENPALE_BATTLE_CRUCIBLE_ARENA_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattlePalace",
+      "border_filepath": "data/layouts/ENPALE_BATTLE_CRUCIBLE_ARENA/border.bin",
+      "blockdata_filepath": "data/layouts/ENPALE_BATTLE_CRUCIBLE_ARENA/map.bin"
     }
   ]
 }

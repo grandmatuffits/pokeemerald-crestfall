@@ -674,3 +674,18 @@ gSpecials::
   	def_special NetPingCheck
 	def_special NetIsOnline
 	def_special NetSetRoomCode
+	def_special SwapPlayerGender
+	def_special Crucible_CheckParty
+	def_special Crucible_BeginRun
+	def_special Crucible_AfterBattle
+	def_special Crucible_GetBattleNum
+	def_special Crucible_GetReward
+	def_special Crucible_IsHellMode
+	def_special Crucible_EndRun
+	def_special Crucible_PrepareBattle
+	def_special Crucible_SetPartyToLevel100
+	def_special Crucible_CheckPvpParty
+	def_special Crucible_BeginPvp
+	def_special Crucible_EndPvp
+	def_special Crucible_MarkPvpLink
+	def_special Crucible_GetFormat

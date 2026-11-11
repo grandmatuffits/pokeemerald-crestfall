@@ -207,7 +207,11 @@ static void NGP_ReduceBoxMon(struct BoxPokemon *box)
         value = targetExp;
         SetBoxMonData(box, MON_DATA_EXP, &value);
     }
-
+    if (GetBoxMonData(box, MON_DATA_MET_LEVEL) > 5)
+    {
+        u8 metLevel = 5;
+        SetBoxMonData(box, MON_DATA_MET_LEVEL, &metLevel);
+    }
     // Held item removed
     value = ITEM_NONE;
     SetBoxMonData(box, MON_DATA_HELD_ITEM, &value);

@@ -850,8 +850,10 @@
     {
       "id": "MAPSEC_DIGLETTS_CAVE",
       "name": "Belmont Cave",
-      "height": 1,
-      "width": 1
+      "x": 22,
+      "y": 3,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_KANTO_VICTORY_ROAD",
@@ -862,8 +864,10 @@
     {
       "id": "MAPSEC_ROCKET_HIDEOUT",
       "name": "Belmont Park",
-      "height": 1,
-      "width": 1
+      "x": 22,
+      "y": 5,
+      "width": 1,
+      "height": 1
     },
     {
       "id": "MAPSEC_SILPH_CO",

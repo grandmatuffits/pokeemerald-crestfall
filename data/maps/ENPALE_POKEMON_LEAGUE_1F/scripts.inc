@@ -65,3 +65,11 @@ EnpalePokemonLeague1F_EventScript_Lady::
 
 EnpalePokemonLeague1F_Text_Lady:
 	.string "Welcome home, {PLAYER}!$"	    
+
+EnpalePokemonLeague1F_EventScript_Block::
+	msgbox EnpalePokemonLeague1F_Text_Block, MSGBOX_SIGN
+	end
+
+EnpalePokemonLeague1F_Text_Block:
+	.string "Sorry, this area is still\l"
+    .string "under construction!$"	        

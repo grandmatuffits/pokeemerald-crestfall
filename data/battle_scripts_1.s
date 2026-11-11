@@ -2870,6 +2870,7 @@ BattleScript_LocalBattleWonLoseTexts::
 	waitstate
 	printstring STRINGID_TRAINER2LOSETEXT
 BattleScript_LocalBattleWonReward::
+	jumpifcrucible BattleScript_PayDayMoneyAndPickUpItems
 	getmoneyreward
 	printstring STRINGID_PLAYERGOTMONEY
 	waitmessage B_WAIT_TIME_LONG
@@ -2892,6 +2893,7 @@ BattleScript_RivalBattleLostSkipMonRecall::
 	end
 
 BattleScript_LocalBattleLost::
+	jumpifcrucible BattleScript_LocalBattleLostEnd_
 	jumpifbattletype BATTLE_TYPE_DOME, BattleScript_CheckDomeDrew
 	jumpifbattletype BATTLE_TYPE_FRONTIER, BattleScript_LocalBattleLostPrintTrainersWinText
 	jumpifbattletype BATTLE_TYPE_TRAINER_HILL, BattleScript_LocalBattleLostPrintTrainersWinText
@@ -2901,6 +2903,7 @@ BattleScript_LocalBattleLost::
 	jumpifnowhiteout BattleScript_LocalBattleLostEnd_
 	jumpifbattletype BATTLE_TYPE_INGAME_PARTNER, BattleScript_LocalBattleLostPrintWhiteOut
 BattleScript_LocalBattleLostPrintWhiteOut::
+	jumpifcrucible BattleScript_LocalBattleLostEnd_
 	getmoneyreward
 	printstring STRINGID_PLAYERWHITEOUT
 	waitmessage B_WAIT_TIME_LONG
@@ -6347,6 +6350,7 @@ BattleScript_QuestionForfeitBattle::
 	endselectionscript
 
 BattleScript_ForfeitBattleGaveMoney::
+	jumpifcrucible BattleScript_ForfeitBattleGaveMoneyEnd
 	getmoneyreward
 .if B_WHITEOUT_MONEY >= GEN_4
 	printstring STRINGID_PLAYERWHITEOUT2_TRAINER
@@ -6354,6 +6358,7 @@ BattleScript_ForfeitBattleGaveMoney::
 	printstring STRINGID_PLAYERWHITEOUT3
 .endif
 	waitmessage B_WAIT_TIME_LONG
+BattleScript_ForfeitBattleGaveMoneyEnd::
 	end
 
 BattleScript_Attackstring::

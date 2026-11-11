@@ -1341,11 +1341,12 @@ static void TransitionMapMusic(void)
         u16 currentMusic = GetCurrentMapMusic();
         if (newMusic != MUS_ABNORMAL_WEATHER && newMusic != MUS_NONE)
         {
-            if (currentMusic == MUS_UNDERWATER || currentMusic == (IS_FRLG ? MUS_RG_SURF : MUS_ENPALE_SURF))
-            if (currentMusic == MUS_ENPALE_SURF);
+            if (currentMusic == MUS_UNDERWATER
+             || currentMusic == (IS_FRLG ? MUS_RG_SURF : MUS_ENPALE_SURF)
+             || currentMusic == MUS_ENPALE_BICYCLE)
                 return;
             if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
-                newMusic = (IS_FRLG ? MUS_RG_SURF : MUS_SURF);
+                newMusic = (IS_FRLG ? MUS_RG_SURF : MUS_ENPALE_SURF);
         }
         newMusic = GetNightMusicFromTrack(newMusic);
         if (newMusic != currentMusic)

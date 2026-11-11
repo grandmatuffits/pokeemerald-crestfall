@@ -1,0 +1,168 @@
+{
+  "id": "MAP_ENPALE_BATTLE_CRUCIBLE",
+  "name": "ENPALE_BATTLE_CRUCIBLE",
+  "layout": "LAYOUT_ENPALE_BATTLE_CRUCIBLE",
+  "music": "MUS_ENPALE_STARVED",
+  "region_map_section": "MAPSEC_CERULEAN_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_CRUCIBLE_PVP_ATTENDANT",
+      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_RECEPTIONIST",
+      "x": 19,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BattleCrucible_Lobby_EventScript_PvpAttendant",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_RECEPTIONIST",
+      "x": 33,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BattleCrucible_Lobby_EventScript_SinglesAttendant",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_RECEPTIONIST",
+      "x": 47,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BattleCrucible_Lobby_EventScript_DoublesAttendant",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_RECEPTIONIST",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CoopLink_EventScript_Start",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 26,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ENPALE_POKEMON_LEAGUE_1F",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 27,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ENPALE_POKEMON_LEAGUE_1F",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 33,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ENPALE_BATTLE_CRUCIBLE_ARENA",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 47,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ENPALE_BATTLE_CRUCIBLE_ARENA",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "BattleCrucible_Lobby_EventScript_RecordsPC"
+    },
+    {
+      "type": "sign",
+      "x": 44,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "BattleCrucible_Lobby_EventScript_DoublesRecordsPC"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleCrucible_Lobby_EventScript_CoopRecordsPC"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleCrucible_Lobby_EventScript_PvpRecordsPC"
+    },
+    {
+      "type": "sign",
+      "x": 38,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleCrucible_Lobby_EventScript_SinglesRules"
+    },
+    {
+      "type": "sign",
+      "x": 52,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleCrucible_Lobby_EventScript_DoublesRules"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleCrucible_Lobby_EventScript_PvpRules"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleCrucible_Lobby_EventScript_CoopRules"
+    }
+  ]
+}

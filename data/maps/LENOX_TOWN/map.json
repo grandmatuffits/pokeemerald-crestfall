@@ -378,8 +378,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
-      "x": 26,
-      "y": 26,
+      "x": 24,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -405,8 +405,8 @@
   ],
   "warp_events": [
     {
-      "x": 26,
-      "y": 25,
+      "x": 24,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_LENOX_TOWN_CUT_HOUSE",
       "dest_warp_id": "0"
@@ -445,6 +445,13 @@
       "elevation": 0,
       "dest_map": "MAP_LENOX_TOWN_TRADE_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_LENOX_TOWN_GENDER_CHANGE_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -478,7 +485,7 @@
     {
       "type": "sign",
       "x": 25,
-      "y": 35,
+      "y": 33,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LENOX_TOWN_EventScript_HouseSign"

@@ -4,6 +4,7 @@ MINSI_CITY_CANDY_HOUSE_MapScripts::
 MINSI_CITY_CANDY_HOUSE_EventScript_RareCandyGuy::
 	lock
 	faceplayer
+	goto_if_set FLAG_NEW_GAME_PLUS, MINSI_CITY_CANDY_HOUSE_EventScript_RareCandyGuyNGP
 	goto_if_set FLAG_MINSI_RARE_CANDY_RECEIVED, MINSI_CITY_CANDY_HOUSE_EventScript_RareCandyGuyDone
 	msgbox MINSI_CITY_CANDY_HOUSE_Text_RareCandyOffer, MSGBOX_YESNO
 	compare VAR_RESULT, NO
@@ -23,6 +24,11 @@ MINSI_CITY_CANDY_HOUSE_EventScript_RareCandyGuyDone::
 	release
 	end
 
+MINSI_CITY_CANDY_HOUSE_EventScript_RareCandyGuyNGP::
+	msgbox MINSI_CITY_CANDY_HOUSE_Text_GetOutOfMyHouse, MSGBOX_DEFAULT
+	release
+	end
+
 MINSI_CITY_CANDY_HOUSE_Text_RareCandyOffer:
 .string "Life is hard, but I found\n"
 .string "a fix!\p"
@@ -37,4 +43,7 @@ MINSI_CITY_CANDY_HOUSE_Text_RareCandyDecline:
 .string "Suit yourself, boss!$"
 
 MINSI_CITY_CANDY_HOUSE_Text_RareCandyDone:
-.string "Enjoy the easy life!$"	
+.string "Enjoy the easy life!$"
+
+MINSI_CITY_CANDY_HOUSE_Text_GetOutOfMyHouse:
+	.string "Get the hell out of my house!$"

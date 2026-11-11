@@ -3,7 +3,6 @@
   "name": "RecordCorner_Frlg",
   "layout": "LAYOUT_RECORD_CORNER_FRLG",
   "music": "MUS_RG_POKE_CENTER",
-  "region": "REGION_KANTO",
   "region_map_section": "MAPSEC_SPECIAL_AREA",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -12,12 +11,10 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_RECEPTIONIST",
       "x": 10,
       "y": 5,
@@ -99,5 +96,7 @@
       "script": "RecordCorner_EventScript_Spot3"
     }
   ],
-  "bg_events": []
+  "bg_events": [],
+  "floor_number": 0,
+  "region": "REGION_KANTO"
 }

@@ -3,7 +3,7 @@
   "name": "BELMONT_TOWN",
   "layout": "LAYOUT_BELMONT_TOWN",
   "music": "MUS_ENPALE_BELMONT",
-  "region_map_section": "MAPSEC_ROUTE_10",
+  "region_map_section": "MAPSEC_ROUTE_10_POKECENTER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",

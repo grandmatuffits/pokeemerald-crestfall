@@ -6,6 +6,7 @@
 #include "constants/apricorn_tree.h"
 #include "constants/battle.h"
 #include "constants/battle_arena.h"
+#include "constants/battle_crucible.h"
 #include "constants/battle_dome.h"
 #include "constants/battle_factory.h"
 #include "constants/battle_frontier.h"
@@ -2030,3 +2031,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/COPPERGATE_CITY_WEST_TRADE_HOUSE/scripts.inc"
 
 	.include "data/maps/BELMONT_CAVE_BF1/scripts.inc"
+
+	.include "data/maps/LENOX_TOWN_GENDER_CHANGE_HOUSE/scripts.inc"
+
+	.include "data/maps/ENPALE_BATTLE_CRUCIBLE/scripts.inc"
+
+	.include "data/maps/ENPALE_BATTLE_CRUCIBLE_ARENA/scripts.inc"

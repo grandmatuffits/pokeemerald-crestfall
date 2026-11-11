@@ -6,6 +6,7 @@
 #include "battle_anim_scripts.h"
 #include "battle_ai_record.h"
 #include "battle_ai_util.h"
+#include "battle_crucible.h"
 #include "battle_scripts.h"
 #include "battle_switch_in.h"
 #include "battle_environment.h"
@@ -4049,7 +4050,7 @@ static void Cmd_getmoneyreward(void)
 {
     CMD_ARGS();
 
-    u32 money;
+    u32 money = 0;
     u8 sPartyLevel = 1;
 
     if (gBattleOutcome == B_OUTCOME_WON)
@@ -4059,7 +4060,11 @@ static void Cmd_getmoneyreward(void)
             money += GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentB);
         AddMoney(&gSaveBlock1Ptr->money, money);
     }
-    else
+        if (Crucible_IsActive())
+    {
+        money = 0; // no prize money or money lost in the Battle Crucible
+    }
+    else if (gBattleOutcome == B_OUTCOME_WON)
     {
         if (B_WHITEOUT_MONEY <= GEN_3)
         {
@@ -10332,7 +10337,17 @@ void BS_JumpIfNoWhiteOut(void)
 {
     NATIVE_ARGS(const u8 *jumpInstr);
 
-    if (FlagGet(B_FLAG_NO_WHITEOUT))
+    if (FlagGet(B_FLAG_NO_WHITEOUT) || Crucible_IsActive())
+        gBattlescriptCurrInstr = cmd->jumpInstr;
+    else
+        gBattlescriptCurrInstr = cmd->nextInstr;
+}
+
+void BS_JumpIfCrucible(void)
+{
+    NATIVE_ARGS(const u8 *jumpInstr);
+
+    if (Crucible_IsActive())
         gBattlescriptCurrInstr = cmd->jumpInstr;
     else
         gBattlescriptCurrInstr = cmd->nextInstr;
