@@ -2959,7 +2959,7 @@ u8 GiveCapturedMonToPlayer(struct Pokemon *mon)
         return CopyMonToPC(mon);
 
     CopyMon(&gParties[B_TRAINER_PLAYER][i], mon, sizeof(*mon));
-    gPartiesCount[B_TRAINER_PLAYER] = i + 1;
+    CalculatePlayerPartyCount();
     return MON_GIVEN_TO_PARTY;
 }
 
