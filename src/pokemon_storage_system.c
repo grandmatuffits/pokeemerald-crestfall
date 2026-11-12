@@ -1719,7 +1719,28 @@ void ResetPokemonStorageSystem(void)
 
     ResetWaldaWallpaper();
 }
+void RepairBrokenStorage_201(void)
+{
+    u16 boxId, boxPosition;
 
+    SetCurrentBox(0);
+    for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
+    {
+        u8 *dest = StringCopy(GetBoxNamePtr(boxId), gText_Box);
+        ConvertIntToDecimalStringN(dest, boxId + 1, STR_CONV_MODE_LEFT_ALIGN, 2);
+        SetBoxWallpaper(boxId, boxId % (MAX_DEFAULT_WALLPAPER + 1));
+
+        for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++)
+        {
+            struct BoxPokemon *mon = GetBoxedMonPtr(boxId, boxPosition);
+            // Reading species runs the checksum check, which flags junk as a Bad Egg
+            if (GetBoxMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE
+             && GetBoxMonData(mon, MON_DATA_SANITY_IS_BAD_EGG))
+                ZeroBoxMonAt(boxId, boxPosition);
+        }
+    }
+    ResetWaldaWallpaper();
+}
 
 //------------------------------------------------------------------------------
 //  SECTION: Choose Box menu

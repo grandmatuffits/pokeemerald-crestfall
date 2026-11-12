@@ -266,7 +266,7 @@ void NewGameInitData(void)
 #if IS_FRLG
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
 #endif
-    bool8 ngp = TRUE; // TEST ONLY: put back to gNewGamePlusPending
+    bool8 ngp = gNewGamePlusPending;
     struct Pokedex dexBackup;
     u8 dexSeenBackup[sizeof(gSaveBlock1Ptr->dexSeen)];
     u8 dexCaughtBackup[sizeof(gSaveBlock1Ptr->dexCaught)];
@@ -301,6 +301,7 @@ void NewGameInitData(void)
     ClearPokedexFlags();
     InitEventData();
     FlagSet(FLAG_SYS_B_DASH);
+    FlagSet(FLAG_SAVE_REPAIRED_201);
     ClearTVShowData();
     ResetGabbyAndTy();
     ClearSecretBases();

@@ -2124,6 +2124,15 @@ void CB2_ContinueSavedGame(void)
         ResetWinStreaks();
 
     LoadSaveblockMapHeader();
+    if (!FlagGet(FLAG_SAVE_REPAIRED_201))
+    {
+        if (FlagGet(FLAG_NEW_GAME_PLUS))
+        {
+            RepairBrokenStorage_201();
+            FlagClear(FLAG_NEW_GAME_PLUS);
+        }
+        FlagSet(FLAG_SAVE_REPAIRED_201);
+    }
     ClearDiveAndHoleWarps();
     trainerHillMapId = GetCurrentTrainerHillMapId();
     if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
