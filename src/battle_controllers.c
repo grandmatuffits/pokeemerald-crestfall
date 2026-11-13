@@ -771,6 +771,10 @@ void TryReceiveLinkBattleData(void)
                     u8 *dest, *src;
                     u16 dataSize = gBlockRecvBuffer[i][2];
 
+                    // Crestfall: bounds - drop impossible sizes instead of overrunning gLinkBattleRecvBuffer
+                    if (dataSize + 8 > BLOCK_BUFFER_SIZE)
+                        continue;
+
                     if (gTasks[sLinkReceiveTaskId].tCurrentBlock_End + 9 + dataSize > 0x1000)
                     {
                         gTasks[sLinkReceiveTaskId].tCurrentBlock_WrapFrom = gTasks[sLinkReceiveTaskId].tCurrentBlock_End;
@@ -810,6 +814,14 @@ static void Task_HandleCopyReceivedLinkBuffersData(u8 taskId)
         battler = BYTE_TO_RECEIVE(LINK_BUFF_ACTIVE_BATTLER);
         blockSize = BYTE_TO_RECEIVE(LINK_BUFF_SIZE_LO) | (BYTE_TO_RECEIVE(LINK_BUFF_SIZE_HI) << 8);
 
+        // Crestfall: bounds - a message naming a battler or size that can't exist means the
+        // stream is garbage; discard everything queued rather than write outside the buffers
+        if (battler >= MAX_BATTLERS_COUNT || blockSize + LINK_BUFF_DATA > BLOCK_BUFFER_SIZE)
+        {
+            gTasks[taskId].tCurrentBlock_Start = gTasks[taskId].tCurrentBlock_End;
+            return;
+        }
+
         switch (BYTE_TO_RECEIVE(0))
         {
         case B_COMM_TO_CONTROLLER:
@@ -821,10 +833,14 @@ static void Task_HandleCopyReceivedLinkBuffersData(u8 taskId)
 
             if (!(gBattleTypeFlags & BATTLE_TYPE_IS_MASTER))
             {
-                gBattlerAttacker    = BYTE_TO_RECEIVE(LINK_BUFF_ATTACKER);
-                gBattlerTarget      = BYTE_TO_RECEIVE(LINK_BUFF_TARGET);
-                gAbsentBattlerFlags = BYTE_TO_RECEIVE(LINK_BUFF_ABSENT_BATTLER_FLAGS);
-                gEffectBattler      = BYTE_TO_RECEIVE(LINK_BUFF_EFFECT_BATTLER);
+                // Crestfall: bounds - only take battler ids that exist
+                if (BYTE_TO_RECEIVE(LINK_BUFF_ATTACKER) < MAX_BATTLERS_COUNT)
+                    gBattlerAttacker = BYTE_TO_RECEIVE(LINK_BUFF_ATTACKER);
+                if (BYTE_TO_RECEIVE(LINK_BUFF_TARGET) < MAX_BATTLERS_COUNT)
+                    gBattlerTarget = BYTE_TO_RECEIVE(LINK_BUFF_TARGET);
+                gAbsentBattlerFlags = BYTE_TO_RECEIVE(LINK_BUFF_ABSENT_BATTLER_FLAGS) & ((1u << MAX_BATTLERS_COUNT) - 1);
+                if (BYTE_TO_RECEIVE(LINK_BUFF_EFFECT_BATTLER) < MAX_BATTLERS_COUNT)
+                    gEffectBattler = BYTE_TO_RECEIVE(LINK_BUFF_EFFECT_BATTLER);
             }
             break;
         case B_COMM_TO_ENGINE:
@@ -832,7 +848,8 @@ static void Task_HandleCopyReceivedLinkBuffersData(u8 taskId)
             break;
         case B_COMM_CONTROLLER_IS_DONE:
             playerId = BYTE_TO_RECEIVE(LINK_BUFF_DATA);
-            MarkBattleControllerIdleForPlayer(battler, playerId);
+            if (playerId < MAX_LINK_PLAYERS) // Crestfall: bounds
+                MarkBattleControllerIdleForPlayer(battler, playerId);
             break;
         }
 
