@@ -19,6 +19,8 @@ SlateportCity_Mart_Pokemart:
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_ETHER
+	.2byte ITEM_ELIXIR
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_METAL_COAT

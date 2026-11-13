@@ -38,6 +38,10 @@ local heartbeat = 0
 local refusedReason = nil
 local currentRoom = (ROOM ~= "") and ROOM or nil
 local lastRoomSerial = 0
+local guardFrames = 0        -- frames since the mailbox was found
+local lastHbWritten = nil    -- heartbeat value this copy wrote last
+local foreignWrites = 0      -- times another writer was seen
+local disabled = false
 
 local function log(s) console:log("[crestfall-net] " .. s) end
 
@@ -129,6 +133,7 @@ local function connect()
 end
 
 callbacks:add("frame", function()
+  if disabled then return end
   -- 1. Find the mailbox (rescans after a ROM change / reset wipes it)
   if not base then
     scanTimer = scanTimer - 1
@@ -141,6 +146,25 @@ callbacks:add("frame", function()
   if emu:readRange(base, #SIG) ~= SIG then
     base = nil
     buildId = nil
+    return
+  end
+
+  -- 1b. Only one copy of this script may drive the mailbox
+  local hbNow = emu:read8(base + OFF_HEARTBEAT)
+  if lastHbWritten ~= nil and hbNow ~= lastHbWritten then
+    foreignWrites = foreignWrites + 1
+  end
+  if guardFrames < 90 then
+    guardFrames = guardFrames + 1
+    if foreignWrites >= 3 then
+      disabled = true
+      log("another copy of this script is already running in this window, so this copy is disabled.")
+      log("to reload the script, restart mGBA first.")
+      return
+    end
+    heartbeat = (heartbeat + 1) & 0xFF
+    emu:write8(base + OFF_HEARTBEAT, heartbeat)
+    lastHbWritten = heartbeat
     return
   end
 
@@ -194,6 +218,7 @@ callbacks:add("frame", function()
   emu:write8(base + OFF_PID, playerId)
   heartbeat = (heartbeat + 1) & 0xFF
   emu:write8(base + OFF_HEARTBEAT, heartbeat)  -- lets the game notice if this script stops
+  lastHbWritten = heartbeat
 
   -- 4. Outgoing: game -> relay
   if emu:read8(base + OFF_OUTREADY) == 1 then

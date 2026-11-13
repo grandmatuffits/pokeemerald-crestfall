@@ -26,6 +26,10 @@ LavaridgeTown_Mart_Pokemart:
 	.2byte ITEM_BURN_HEAL
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
+	.2byte ITEM_ETHER
+	.2byte ITEM_MAX_ETHER
+	.2byte ITEM_ELIXIR
+	.2byte ITEM_MAX_ELIXIR
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_MAX_REPEL

@@ -22,6 +22,9 @@ FortreeCity_Mart_Pokemart:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_ICE_HEAL
 	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_ETHER
+	.2byte ITEM_MAX_ETHER
+	.2byte ITEM_ELIXIR
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_TM_SHADOW_BALL

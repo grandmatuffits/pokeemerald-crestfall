@@ -20,6 +20,8 @@ FallarborTown_Mart_Pokemart:
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_REVIVE
+	.2byte ITEM_ETHER
+	.2byte ITEM_ELIXIR
 	.2byte ITEM_REPEL
 	.2byte ITEM_TM17
 	.2byte ITEM_TM31
