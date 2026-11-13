@@ -26,6 +26,7 @@
 #include "link.h"
 #include "link_rfu.h"
 #include "net_link.h"
+#include "constants/characters.h"
 #include "constants/rgb.h"
 #include "constants/trade.h"
 
@@ -548,21 +549,24 @@ static void ProcessRecvCmds(u8 unused)
             blockRecv->pos = 0;
             blockRecv->size = gRecvCmds[i][1];
             blockRecv->multiplayerId = gRecvCmds[i][2];
+            // Crestfall: bounds - only accept transfers that fit the buffer
+            blockRecv->active = (blockRecv->size != 0 && blockRecv->size <= BLOCK_BUFFER_SIZE);
             break;
         }
         case LINKCMD_CONT_BLOCK:
             {
-                if (sBlockRecv[i].size > BLOCK_BUFFER_SIZE)
-                {
-                    // Too large block was sent.
-                }
-                else
+                // Crestfall: bounds - ignore data outside an active transfer, and never
+                // write past this player's row (vanilla also spilled 10 bytes on a full block)
+                if (!sBlockRecv[i].active)
+                    break;
                 {
                     u32 j;
 
                     for (j = 0; j < CMD_LENGTH - 1; j++)
                     {
-                        gBlockRecvBuffer[i][(sBlockRecv[i].pos / 2) + j] = gRecvCmds[i][j + 1];
+                        u32 idx = (sBlockRecv[i].pos / 2) + j;
+                        if (idx < BLOCK_BUFFER_SIZE / 2)
+                            gBlockRecvBuffer[i][idx] = gRecvCmds[i][j + 1];
                     }
                 }
 
@@ -570,6 +574,7 @@ static void ProcessRecvCmds(u8 unused)
 
                 if (sBlockRecv[i].pos >= sBlockRecv[i].size)
                 {
+                    sBlockRecv[i].active = FALSE;
                     if (gRemoteLinkPlayersNotReceived[i] == TRUE)
                     {
                         struct LinkPlayerBlock *block;
@@ -578,6 +583,7 @@ static void ProcessRecvCmds(u8 unused)
                         block = (struct LinkPlayerBlock *)&gBlockRecvBuffer[i];
                         linkPlayer = &gLinkPlayers[i];
                         *linkPlayer = block->linkPlayer;
+                        linkPlayer->name[ARRAY_COUNT(linkPlayer->name) - 1] = EOS; // Crestfall: bounds
                         if ((linkPlayer->version & 0xFF) == VERSION_RUBY || (linkPlayer->version & 0xFF) == VERSION_SAPPHIRE)
                         {
                             linkPlayer->progressFlagsCopy = 0;
@@ -612,7 +618,8 @@ static void ProcessRecvCmds(u8 unused)
             SetBerryBlenderLinkCallback();
             break;
         case LINKCMD_SEND_BLOCK_REQ:
-            SendBlock(0, sBlockRequests[gRecvCmds[i][1]].address, sBlockRequests[gRecvCmds[i][1]].size);
+            if (gRecvCmds[i][1] < ARRAY_COUNT(sBlockRequests)) // Crestfall: bounds
+                SendBlock(0, sBlockRequests[gRecvCmds[i][1]].address, sBlockRequests[gRecvCmds[i][1]].size);
             break;
         case LINKCMD_SEND_HELD_KEYS:
             gLinkPartnersHeldKeys[i] = gRecvCmds[i][1];
@@ -1733,6 +1740,7 @@ void LinkPlayerFromBlock(u32 who)
     block = (struct LinkPlayerBlock *)gBlockRecvBuffer[who_];
     player = &gLinkPlayers[who_];
     *player = block->linkPlayer;
+    player->name[ARRAY_COUNT(player->name) - 1] = EOS; // Crestfall: bounds
     ConvertLinkPlayerName(player);
 
     if (strcmp(block->magic1, sASCIIGameFreakInc) != 0
