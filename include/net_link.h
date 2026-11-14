@@ -53,6 +53,12 @@ void NetLink_Open(void);
 void NetLink_Close(void);
 u8 NetLink_GetMultiplayerId(void);
 u32 NetLink_Main1(u8 *shouldAdvanceLinkState, u16 *sendCmd, u16 (*recvCmds)[CMD_LENGTH]);
+bool8 NetLink_IsEstablished(void);
+bool8 NetLink_SendBlock(const void *data, u16 size);
+
+// In link.c: hands a whole received block to the link layer (network fast path)
+void Link_DeliverNetBlock(u8 who, const void *data, u16 size);
+bool8 Link_NetBlockSlotFree(u8 who);
 
 // Room code specials (co-op NPC)
 void NetIsOnline(void);

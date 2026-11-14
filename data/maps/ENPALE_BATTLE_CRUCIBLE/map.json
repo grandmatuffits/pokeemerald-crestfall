@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_CRUCIBLE_PVP_ATTENDANT",
-      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_RECEPTIONIST",
+      "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
       "x": 19,
       "y": 6,
       "elevation": 0,
@@ -55,7 +55,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_RECEPTIONIST",
+      "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
       "x": 5,
       "y": 6,
       "elevation": 0,

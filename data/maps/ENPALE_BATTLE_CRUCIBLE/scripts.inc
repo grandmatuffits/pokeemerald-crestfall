@@ -630,6 +630,16 @@ BattleCrucible_Lobby_EventScript_PvpDoubles::
 
 BattleCrucible_Lobby_EventScript_PvpLink::
 	msgbox BattleCrucible_Lobby_Text_PvpSameRules, MSGBOX_DEFAULT
+	special NetIsOnline
+	goto_if_eq VAR_RESULT, FALSE, BattleCrucible_Lobby_EventScript_PvpSave
+	msgbox BattleCrucible_Lobby_Text_PvpEnterRoomCode, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	special EnterCode
+	waitstate
+	special NetSetRoomCode
+	goto_if_eq VAR_RESULT, FALSE, CoopLink_EventScript_NoRoomCode
+BattleCrucible_Lobby_EventScript_PvpSave::
 	call Common_EventScript_SaveGame
 	goto_if_eq VAR_RESULT, 0, CableClub_EventScript_AbortLink
 	message gText_PleaseWaitForLink
@@ -658,9 +668,7 @@ BattleCrucible_Lobby_EventScript_PvpEnterColosseum::
 	delay 30
 	closemessage
 	release
-	setdynamicwarp MAP_ENPALE_BATTLE_CRUCIBLE, 19, 4
-	applymovement LOCALID_CRUCIBLE_PVP_ATTENDANT, BattleCrucible_Lobby_Movement_PvpAttendantAside
-	waitmovement 0
+	setdynamicwarp MAP_ENPALE_BATTLE_CRUCIBLE, 19, 7 @ Crestfall exit v3
 	applymovement OBJ_EVENT_ID_PLAYER, BattleCrucible_Lobby_Movement_PvpPlayerToDoor
 	waitmovement 0
 	warp MAP_BATTLE_COLOSSEUM_2P, 6, 8
@@ -868,8 +876,32 @@ BattleCrucible_Lobby_Movement_PvpAttendantAside:
 	face_right
 	step_end
 
+@ Crestfall exit v2
+BattleCrucible_Lobby_Movement_PvpAttendantExitAside:
+	walk_up
+	walk_right
+	face_left
+	step_end
+
+BattleCrucible_Lobby_Movement_PvpPlayerExit:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+BattleCrucible_Lobby_Movement_PvpAttendantBack:
+	walk_left
+	walk_down
+	face_down
+	step_end
+
 BattleCrucible_Lobby_Movement_PvpPlayerToDoor:
 	walk_up
 	walk_up
 	walk_up
 	step_end	
+
+BattleCrucible_Lobby_Text_PvpEnterRoomCode:
+	.string "Enter a room code to battle online.\p"
+	.string "You and your opponent need to enter\n"
+	.string "the same code.$"

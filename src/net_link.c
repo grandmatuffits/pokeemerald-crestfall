@@ -33,13 +33,23 @@
 #define NETREC_HELLO       1     // "I'm handshaking", resent while handshaking
 #define NETREC_ESTABLISH   2     // master -> slave: connection established
 #define NETREC_CMD         3     // one link command (CMD_LENGTH u16s follow)
+#define NETREC_BLOCK       4     // a whole link block: u16 size, then the bytes (fast path)
 
 #define NET_CMD_BYTES          (CMD_LENGTH * 2)
 #define NET_OUT_RING_SIZE      24
 #define NET_IN_RING_SIZE       72
-#define NET_HELLO_INTERVAL     30   // frames between HELLOs
-#define NET_HELLO_TIMEOUT      60   // partner counts as handshaking if heard within this
+#define NET_HELLO_INTERVAL     15   // frames between HELLOs
+#define NET_BLOCK_STALL_MAX    900  // frames a block may wait for the game to read the last one
+                                    // before it's a link error (never overwrite an unread block)
+#define NET_HELLO_TIMEOUT      240  // partner counts as handshaking if heard within this
+                                    // (long enough to ride out internet jitter; the relay
+                                    // still reports a partner who actually leaves right away)
 #define NET_HEARTBEAT_TIMEOUT  60   // Lua host counts as gone after this many frozen frames
+#define NET_OUT_BLOCKS         4    // whole blocks waiting to go out
+#define NET_IN_BLOCKS          8    // whole blocks received, waiting their turn
+#define NET_NO_SLOT            0xFF
+#define NET_KEY_WINDOW         10   // own held-key commands in flight before we wait (input lag cap)
+#define NET_PARTNER_KEYS       64   // partner held-key commands waiting to be paired
 
 enum {
     NET_STATE_IDLE,
@@ -51,6 +61,7 @@ enum {
 struct NetRow
 {
     u8 type;
+    u8 slot;              // NETREC_BLOCK: which block pool slot holds the data
     u16 cmd[CMD_LENGTH];
 };
 
@@ -69,9 +80,25 @@ static EWRAM_DATA struct {
     u8 state;
     u8 helloTimer;
     u8 partnerHelloAge;
+    u16 blockStall;
     u8 lastHeartbeat;
     u8 heartbeatAge;
     bool8 queueFull;
+    u8 outBlocks[NET_OUT_BLOCKS][BLOCK_BUFFER_SIZE];
+    u16 outBlockSize[NET_OUT_BLOCKS];
+    bool8 outBlockUsed[NET_OUT_BLOCKS];
+    u8 inBlocks[NET_IN_BLOCKS][BLOCK_BUFFER_SIZE];
+    u16 inBlockSize[NET_IN_BLOCKS];
+    bool8 inBlockUsed[NET_IN_BLOCKS];
+    // Key-sync lockstep (Colosseum / link rooms): the cable gives both players' keys in
+    // the same row every frame. Over the network we pair our k-th held-key command with
+    // the partner's k-th, so both games run the exact same sequence.
+    u16 selfKeys[NET_KEY_WINDOW];
+    u16 partnerKeys[NET_PARTNER_KEYS];
+    u8 selfKeyPos;
+    u8 selfKeyCount;
+    u8 partnerKeyPos;
+    u8 partnerKeyCount;
 } sNet = {0};
 
 // ---------------------------------------------------------------------------
@@ -155,9 +182,56 @@ static void OutPush(u8 type, const u16 *cmd)
     if (idx >= NET_OUT_RING_SIZE)
         idx -= NET_OUT_RING_SIZE;
     sNet.outRows[idx].type = type;
+    sNet.outRows[idx].slot = NET_NO_SLOT;
     for (i = 0; i < CMD_LENGTH; i++)
         sNet.outRows[idx].cmd[i] = (cmd != NULL) ? cmd[i] : 0;
     sNet.outCount++;
+}
+
+static u32 CountFree(const bool8 *used, u32 n)
+{
+    u32 i, free = 0;
+    for (i = 0; i < n; i++)
+        if (!used[i])
+            free++;
+    return free;
+}
+
+static u8 TakeSlot(bool8 *used, u32 n)
+{
+    u32 i;
+    for (i = 0; i < n; i++)
+    {
+        if (!used[i])
+        {
+            used[i] = TRUE;
+            return i;
+        }
+    }
+    return NET_NO_SLOT;
+}
+
+// Queue a whole block to go out as one record. FALSE = no room (caller falls back).
+static bool8 OutPushBlock(const void *data, u16 size)
+{
+    u32 idx;
+    u8 slot;
+
+    if (size > BLOCK_BUFFER_SIZE || sNet.outCount >= NET_OUT_RING_SIZE)
+        return FALSE;
+    slot = TakeSlot(sNet.outBlockUsed, NET_OUT_BLOCKS);
+    if (slot == NET_NO_SLOT)
+        return FALSE;
+    memcpy(sNet.outBlocks[slot], data, size);
+    sNet.outBlockSize[slot] = size;
+
+    idx = sNet.outPos + sNet.outCount;
+    if (idx >= NET_OUT_RING_SIZE)
+        idx -= NET_OUT_RING_SIZE;
+    sNet.outRows[idx].type = NETREC_BLOCK;
+    sNet.outRows[idx].slot = slot;
+    sNet.outCount++;
+    return TRUE;
 }
 
 static void InPush(u8 type, const u16 *cmd)
@@ -173,9 +247,68 @@ static void InPush(u8 type, const u16 *cmd)
     if (idx >= NET_IN_RING_SIZE)
         idx -= NET_IN_RING_SIZE;
     sNet.inRows[idx].type = type;
+    sNet.inRows[idx].slot = NET_NO_SLOT;
     for (i = 0; i < CMD_LENGTH; i++)
         sNet.inRows[idx].cmd[i] = (cmd != NULL) ? cmd[i] : 0;
     sNet.inCount++;
+}
+
+static void InPushBlock(u8 slot)
+{
+    u32 idx;
+
+    if (sNet.inCount >= NET_IN_RING_SIZE)
+    {
+        sNet.inBlockUsed[slot] = FALSE;
+        sNet.queueFull = TRUE;
+        return;
+    }
+    idx = sNet.inPos + sNet.inCount;
+    if (idx >= NET_IN_RING_SIZE)
+        idx -= NET_IN_RING_SIZE;
+    sNet.inRows[idx].type = NETREC_BLOCK;
+    sNet.inRows[idx].slot = slot;
+    sNet.inCount++;
+}
+
+static void InFlush(void)
+{
+    u32 i;
+    sNet.inPos = 0;
+    sNet.inCount = 0;
+    sNet.blockStall = 0;
+    for (i = 0; i < NET_IN_BLOCKS; i++)
+        sNet.inBlockUsed[i] = FALSE;
+    sNet.selfKeyPos = 0;
+    sNet.selfKeyCount = 0;
+    sNet.partnerKeyPos = 0;
+    sNet.partnerKeyCount = 0;
+}
+
+static void PartnerKeyPush(u16 code)
+{
+    u32 idx;
+
+    if (sNet.partnerKeyCount >= NET_PARTNER_KEYS)
+    {
+        sNet.queueFull = TRUE;
+        return;
+    }
+    idx = sNet.partnerKeyPos + sNet.partnerKeyCount;
+    if (idx >= NET_PARTNER_KEYS)
+        idx -= NET_PARTNER_KEYS;
+    sNet.partnerKeys[idx] = code;
+    sNet.partnerKeyCount++;
+}
+
+static void SelfKeyPush(u16 code)
+{
+    u32 idx = sNet.selfKeyPos + sNet.selfKeyCount;
+
+    if (idx >= NET_KEY_WINDOW)
+        idx -= NET_KEY_WINDOW;
+    sNet.selfKeys[idx] = code;
+    sNet.selfKeyCount++;
 }
 
 static struct NetRow *InPeek(void)
@@ -187,8 +320,13 @@ static struct NetRow *InPeek(void)
 
 static void InPop(void)
 {
+    struct NetRow *row;
+
     if (sNet.inCount == 0)
         return;
+    row = &sNet.inRows[sNet.inPos];
+    if (row->type == NETREC_BLOCK && row->slot < NET_IN_BLOCKS)
+        sNet.inBlockUsed[row->slot] = FALSE;
     if (++sNet.inPos >= NET_IN_RING_SIZE)
         sNet.inPos = 0;
     sNet.inCount--;
@@ -207,7 +345,14 @@ static void PumpOut(void)
     while (sNet.outCount != 0)
     {
         struct NetRow *row = &sNet.outRows[sNet.outPos];
-        u32 need = (row->type == NETREC_CMD) ? 1 + NET_CMD_BYTES : 1;
+        u32 need;
+
+        if (row->type == NETREC_CMD)
+            need = 1 + NET_CMD_BYTES;
+        else if (row->type == NETREC_BLOCK)
+            need = 1 + 2 + sNet.outBlockSize[row->slot];
+        else
+            need = 1;
 
         if (len + need > NET_PAYLOAD_MAX)
             break;
@@ -219,6 +364,15 @@ static void PumpOut(void)
                 gNetMailbox.outData[len++] = row->cmd[i] & 0xFF;
                 gNetMailbox.outData[len++] = row->cmd[i] >> 8;
             }
+        }
+        else if (row->type == NETREC_BLOCK)
+        {
+            u16 size = sNet.outBlockSize[row->slot];
+            gNetMailbox.outData[len++] = size & 0xFF;
+            gNetMailbox.outData[len++] = size >> 8;
+            for (i = 0; i < size; i++)
+                gNetMailbox.outData[len++] = sNet.outBlocks[row->slot][i];
+            sNet.outBlockUsed[row->slot] = FALSE;
         }
         if (++sNet.outPos >= NET_OUT_RING_SIZE)
             sNet.outPos = 0;
@@ -246,8 +400,11 @@ static void PumpIn(void)
         return;
     }
 
-    // One message holds at most a full partner out-queue; wait until that fits.
-    if (NET_IN_RING_SIZE - sNet.inCount < NET_OUT_RING_SIZE)
+    // One message holds at most a full partner out-queue (and at most NET_OUT_BLOCKS
+    // whole blocks); wait until that fits.
+    if (NET_IN_RING_SIZE - sNet.inCount < NET_OUT_RING_SIZE
+     || NET_PARTNER_KEYS - sNet.partnerKeyCount < NET_OUT_RING_SIZE
+     || CountFree(sNet.inBlockUsed, NET_IN_BLOCKS) < NET_OUT_BLOCKS)
         return;
 
     len = gNetMailbox.inLen;
@@ -271,7 +428,30 @@ static void PumpIn(void)
             for (i = 0; i < CMD_LENGTH; i++)
                 cmd[i] = gNetMailbox.inData[pos + i * 2] | (gNetMailbox.inData[pos + i * 2 + 1] << 8);
             pos += NET_CMD_BYTES;
-            InPush(NETREC_CMD, cmd);
+            if (cmd[0] == LINKCMD_SEND_HELD_KEYS)
+                PartnerKeyPush(cmd[1]); // paired with ours in NetLink_Main1
+            else
+                InPush(NETREC_CMD, cmd);
+        }
+        else if (type == NETREC_BLOCK && pos + 2 <= len)
+        {
+            u16 size = gNetMailbox.inData[pos] | (gNetMailbox.inData[pos + 1] << 8);
+            u8 slot;
+
+            pos += 2;
+            if (size == 0 || size > BLOCK_BUFFER_SIZE || pos + size > len)
+                break; // malformed
+            slot = TakeSlot(sNet.inBlockUsed, NET_IN_BLOCKS);
+            if (slot == NET_NO_SLOT)
+            {
+                sNet.queueFull = TRUE;
+                break;
+            }
+            for (i = 0; i < size; i++)
+                sNet.inBlocks[slot][i] = gNetMailbox.inData[pos + i];
+            sNet.inBlockSize[slot] = size;
+            pos += size;
+            InPushBlock(slot);
         }
         else
         {
@@ -306,6 +486,19 @@ void NetLink_Close(void)
     sNet.state = NET_STATE_IDLE;
 }
 
+bool8 NetLink_IsEstablished(void)
+{
+    return gNetLinkActive && sNet.state == NET_STATE_ESTABLISHED;
+}
+
+// Fast path: queue a whole block as one network record. FALSE = use the normal path.
+bool8 NetLink_SendBlock(const void *data, u16 size)
+{
+    if (!NetLink_IsEstablished())
+        return FALSE;
+    return OutPushBlock(data, size);
+}
+
 u8 NetLink_GetMultiplayerId(void)
 {
     return gNetMailbox.playerId & 1;
@@ -320,6 +513,7 @@ u32 NetLink_Main1(u8 *shouldAdvanceLinkState, u16 *sendCmd, u16 (*recvCmds)[CMD_
     bool32 partnered;
     bool32 gotRow = FALSE;
     bool32 error = FALSE;
+    bool32 keySync, selfEchoed = FALSE;
     struct NetRow *row;
     u8 self = NetLink_GetMultiplayerId();
     u8 partner = self ^ 1;
@@ -358,8 +552,7 @@ u32 NetLink_Main1(u8 *shouldAdvanceLinkState, u16 *sendCmd, u16 (*recvCmds)[CMD_
         if (*shouldAdvanceLinkState == 1)
         {
             sNet.state = NET_STATE_HANDSHAKE;
-            sNet.inPos = 0;     // drop leftovers from an earlier session
-            sNet.inCount = 0;
+            InFlush();          // drop leftovers from an earlier session
             sNet.helloTimer = 0;
         }
         break;
@@ -410,7 +603,12 @@ u32 NetLink_Main1(u8 *shouldAdvanceLinkState, u16 *sendCmd, u16 (*recvCmds)[CMD_
             break;
         }
 
-        // Our command: send it, and echo it into our own slot
+        keySync = IsSendingKeysToLink();
+        if (!keySync)
+            sNet.selfKeyCount = 0; // left key-sync: our unpaired keys are moot
+
+        // Our command: send it. Held keys in key-sync wait to be paired with the
+        // partner's; anything else is echoed into our own slot right away.
         for (i = 0; i < CMD_LENGTH; i++)
         {
             if (sendCmd[i] != 0)
@@ -418,14 +616,74 @@ u32 NetLink_Main1(u8 *shouldAdvanceLinkState, u16 *sendCmd, u16 (*recvCmds)[CMD_
         }
         if (i < CMD_LENGTH)
         {
-            OutPush(NETREC_CMD, sendCmd);
-            for (i = 0; i < CMD_LENGTH; i++)
-                recvCmds[self][i] = sendCmd[i];
-            gotRow = TRUE;
+            if (keySync && sendCmd[0] == LINKCMD_SEND_HELD_KEYS)
+            {
+                // Window full: we're waiting on the partner, and while we wait the game
+                // just repeats the same key code, so this one can be skipped.
+                if (sNet.selfKeyCount < NET_KEY_WINDOW)
+                {
+                    OutPush(NETREC_CMD, sendCmd);
+                    SelfKeyPush(sendCmd[1]);
+                }
+            }
+            else
+            {
+                OutPush(NETREC_CMD, sendCmd);
+                for (i = 0; i < CMD_LENGTH; i++)
+                    recvCmds[self][i] = sendCmd[i];
+                selfEchoed = TRUE;
+                gotRow = TRUE;
+            }
+        }
+
+        if (keySync && sNet.partnerKeyCount != 0)
+        {
+            // Lockstep: a row only when both players' next keys are here. Otherwise
+            // nothing this frame, and the game waits like a cable with lag.
+            if (!selfEchoed && sNet.selfKeyCount != 0)
+            {
+                recvCmds[self][0] = LINKCMD_SEND_HELD_KEYS;
+                recvCmds[self][1] = sNet.selfKeys[sNet.selfKeyPos];
+                if (++sNet.selfKeyPos >= NET_KEY_WINDOW)
+                    sNet.selfKeyPos = 0;
+                sNet.selfKeyCount--;
+
+                recvCmds[partner][0] = LINKCMD_SEND_HELD_KEYS;
+                recvCmds[partner][1] = sNet.partnerKeys[sNet.partnerKeyPos];
+                if (++sNet.partnerKeyPos >= NET_PARTNER_KEYS)
+                    sNet.partnerKeyPos = 0;
+                sNet.partnerKeyCount--;
+                gotRow = TRUE;
+            }
+            break; // partner rows behind their keys wait their turn
+        }
+        // (Partner keys that arrive while we're not in key-sync are held: either we're
+        // about to start key-sync, or they're leftovers dropped at the next handshake.)
+
+        // A whole block at the front of the queue goes to the link layer, but only
+        // once the game has read the previous one (the cable can't deliver blocks
+        // faster than ~1 per 19 frames; the network can bunch several into one frame).
+        // Anything queued behind it waits, so order is kept.
+        row = InPeek();
+        if (row != NULL && row->type == NETREC_BLOCK)
+        {
+            if (Link_NetBlockSlotFree(partner))
+            {
+                Link_DeliverNetBlock(partner, sNet.inBlocks[row->slot], sNet.inBlockSize[row->slot]);
+                InPop();
+                sNet.blockStall = 0;
+                gotRow = TRUE;
+            }
+            else if (++sNet.blockStall >= NET_BLOCK_STALL_MAX)
+            {
+                // Overwriting would silently lose battle data and freeze both games;
+                // a clean "Communication error" is better.
+                sNet.queueFull = TRUE;
+            }
+            break; // commands behind a block wait until next frame
         }
 
         // One partner command per frame, like one row per frame on the cable
-        row = InPeek();
         if (row != NULL && row->type == NETREC_CMD)
         {
             for (i = 0; i < CMD_LENGTH; i++)

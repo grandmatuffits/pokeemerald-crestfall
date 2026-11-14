@@ -118,6 +118,7 @@ static void InitLocalLinkPlayer(void);
 static void VBlankCB_LinkError(void);
 static void CB2_LinkTest(void);
 static void ProcessRecvCmds(u8);
+static void FinishBlockReceive(u8 who);
 static void LinkCB_SendHeldKeys(void);
 static void ResetBlockSend(void);
 static bool32 InitBlockSend(const void *, size_t);
@@ -509,6 +510,63 @@ static void HandleReceiveRemoteLinkPlayer(u8 who)
     }
 }
 
+// A whole block from player `who` is now in gBlockRecvBuffer[who]: handle it.
+// (Shared by the cable path below and the network fast path.)
+static void FinishBlockReceive(u8 who)
+{
+    if (gRemoteLinkPlayersNotReceived[who] == TRUE)
+    {
+        struct LinkPlayerBlock *block;
+        struct LinkPlayer *linkPlayer;
+
+        block = (struct LinkPlayerBlock *)&gBlockRecvBuffer[who];
+        linkPlayer = &gLinkPlayers[who];
+        *linkPlayer = block->linkPlayer;
+        linkPlayer->name[ARRAY_COUNT(linkPlayer->name) - 1] = EOS; // Crestfall: bounds
+        if ((linkPlayer->version & 0xFF) == VERSION_RUBY || (linkPlayer->version & 0xFF) == VERSION_SAPPHIRE)
+        {
+            linkPlayer->progressFlagsCopy = 0;
+            linkPlayer->neverRead = 0;
+            linkPlayer->progressFlags = 0;
+        }
+        ConvertLinkPlayerName(linkPlayer);
+        if (strcmp(block->magic1, sASCIIGameFreakInc) != 0
+            || strcmp(block->magic2, sASCIIGameFreakInc) != 0)
+        {
+            SetMainCallback2(CB2_LinkError);
+        }
+        else
+        {
+            HandleReceiveRemoteLinkPlayer(who);
+        }
+    }
+    else
+    {
+        SetBlockReceivedFlag(who);
+    }
+}
+
+// Crestfall: fast block - a whole block arrived in one network message
+void Link_DeliverNetBlock(u8 who, const void *data, u16 size)
+{
+    if (who >= MAX_LINK_PLAYERS || size == 0 || size > BLOCK_BUFFER_SIZE)
+        return;
+    memcpy(gBlockRecvBuffer[who], data, size);
+    sBlockRecv[who].pos = size;
+    sBlockRecv[who].size = size;
+    sBlockRecv[who].active = FALSE;
+    FinishBlockReceive(who);
+}
+
+// Crestfall: block gate - TRUE if a new block from `who` won't overwrite one the game
+// hasn't read yet (link-player blocks don't use the flag, so they can always go).
+bool8 Link_NetBlockSlotFree(u8 who)
+{
+    if (who >= MAX_LINK_PLAYERS)
+        return FALSE;
+    return gRemoteLinkPlayersNotReceived[who] == TRUE || !gBlockReceivedStatus[who];
+}
+
 static void ProcessRecvCmds(u8 unused)
 {
     u16 i;
@@ -575,36 +633,7 @@ static void ProcessRecvCmds(u8 unused)
                 if (sBlockRecv[i].pos >= sBlockRecv[i].size)
                 {
                     sBlockRecv[i].active = FALSE;
-                    if (gRemoteLinkPlayersNotReceived[i] == TRUE)
-                    {
-                        struct LinkPlayerBlock *block;
-                        struct LinkPlayer *linkPlayer;
-
-                        block = (struct LinkPlayerBlock *)&gBlockRecvBuffer[i];
-                        linkPlayer = &gLinkPlayers[i];
-                        *linkPlayer = block->linkPlayer;
-                        linkPlayer->name[ARRAY_COUNT(linkPlayer->name) - 1] = EOS; // Crestfall: bounds
-                        if ((linkPlayer->version & 0xFF) == VERSION_RUBY || (linkPlayer->version & 0xFF) == VERSION_SAPPHIRE)
-                        {
-                            linkPlayer->progressFlagsCopy = 0;
-                            linkPlayer->neverRead = 0;
-                            linkPlayer->progressFlags = 0;
-                        }
-                        ConvertLinkPlayerName(linkPlayer);
-                        if (strcmp(block->magic1, sASCIIGameFreakInc) != 0
-                            || strcmp(block->magic2, sASCIIGameFreakInc) != 0)
-                        {
-                            SetMainCallback2(CB2_LinkError);
-                        }
-                        else
-                        {
-                            HandleReceiveRemoteLinkPlayer(i);
-                        }
-                    }
-                    else
-                    {
-                        SetBlockReceivedFlag(i);
-                    }
+                    FinishBlockReceive(i);
                 }
             }
             break;
@@ -914,6 +943,22 @@ static bool32 InitBlockSend(const void *src, size_t size)
     if (sBlockSend.active)
     {
         return FALSE;
+    }
+
+    // Crestfall: fast block - over the network, send the whole block as one message
+    // instead of 14 bytes per frame. Falls back to the normal path if the queue is full.
+    if (gNetLinkActive && size <= BLOCK_BUFFER_SIZE && NetLink_IsEstablished()
+     && Link_NetBlockSlotFree(GetMultiplayerId())) // Crestfall: block gate - else the slow path paces it
+    {
+        if (src != gBlockSendBuffer)
+            memcpy(gBlockSendBuffer, src, size);
+        if (NetLink_SendBlock(gBlockSendBuffer, size))
+        {
+            // Our own copy, like the cable echoing our data back to us
+            Link_DeliverNetBlock(GetMultiplayerId(), gBlockSendBuffer, size);
+            return TRUE;
+        }
+        src = gBlockSendBuffer;
     }
     sBlockSend.multiplayerId = GetMultiplayerId();
     sBlockSend.active = TRUE;
