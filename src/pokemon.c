@@ -1,4 +1,5 @@
 #include "global.h"
+#include "battle_crucible.h"
 #include "malloc.h"
 #include "apprentice.h"
 #include "battle.h"
@@ -5076,6 +5077,9 @@ bool32 IsSpeciesInHoennDex(enum Species species)
 
 u16 GetBattleBGM(void)
 {
+    // Battle Crucible: every Crucible battle (Singles/Doubles, Co-op, PvP)
+    if (Crucible_IsActive() || FlagGet(FLAG_COOP_NO_WHITEOUT) || Crucible_IsPvpActive())
+        return MUS_ENPALE_CRUCIBLE_BATTLE;
     if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER)
         && (TRAINER_BATTLE_PARAM.opponentA == TRAINER_RIVALCF_1
          || TRAINER_BATTLE_PARAM.opponentA == TRAINER_RIVALCF_2

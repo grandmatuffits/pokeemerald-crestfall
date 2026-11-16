@@ -669,6 +669,8 @@ BattleCrucible_Lobby_EventScript_PvpEnterColosseum::
 	closemessage
 	release
 	setdynamicwarp MAP_ENPALE_BATTLE_CRUCIBLE, 19, 7 @ Crestfall exit v3
+	applymovement LOCALID_CRUCIBLE_PVP_ATTENDANT, BattleCrucible_Lobby_Movement_PvpAttendantAside @ Crestfall pvp enter restore
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, BattleCrucible_Lobby_Movement_PvpPlayerToDoor
 	waitmovement 0
 	warp MAP_BATTLE_COLOSSEUM_2P, 6, 8

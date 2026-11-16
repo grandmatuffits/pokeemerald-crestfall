@@ -1,4 +1,5 @@
 #include "global.h"
+#include "battle_crucible.h"
 #include "debug.h"
 #include "malloc.h"
 #include "battle.h"
@@ -3718,6 +3719,7 @@ void LinkRetireStatusWithBattleTowerPartner(void)
     CreateTask(Task_LinkRetireStatusWithBattleTowerPartner, 5);
 }
 
+// Crestfall: coop opponents - the host picks the run's 10 opponent pairs and sends them
 static void Task_CoopLinkSync(u8 taskId)
 {
     switch (gTasks[taskId].tState)
@@ -3725,11 +3727,31 @@ static void Task_CoopLinkSync(u8 taskId)
     case 0:
         if (IsLinkTaskFinished() == TRUE)
         {
-            SetLinkStandbyCallback();
+            if (GetMultiplayerId() == 0)
+            {
+                Crucible_BuildCoopSchedule();
+                SendBlock(BitmaskAllOtherLinkPlayers(), Crucible_GetCoopSchedule(), Crucible_GetCoopScheduleSize());
+            }
             gTasks[taskId].tState++;
         }
         break;
     case 1:
+        if (GetBlockReceivedStatus() & 1) // the host's block (the host gets its own copy too)
+        {
+            if (GetMultiplayerId() != 0)
+                Crucible_SetCoopSchedule(gBlockRecvBuffer[0]);
+            ResetBlockReceivedFlags();
+            gTasks[taskId].tState++;
+        }
+        break;
+    case 2:
+        if (IsLinkTaskFinished() == TRUE)
+        {
+            SetLinkStandbyCallback();
+            gTasks[taskId].tState++;
+        }
+        break;
+    case 3:
         if (IsLinkTaskFinished() == TRUE)
         {
             DestroyTask(taskId);

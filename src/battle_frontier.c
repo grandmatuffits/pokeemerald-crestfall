@@ -1,4 +1,5 @@
 #include "global.h"
+#include "battle_crucible.h"
 #include "main.h"
 #include "battle.h"
 #include "battle_main.h"
@@ -32,11 +33,19 @@ EWRAM_DATA bool8 gCoopLinkBattle = FALSE;
 // IWRAM common
 COMMON_DATA u16 gFrontierTempParty[MAX_FRONTIER_PARTY_SIZE] = {0};
 
-static const u16 sCoopLinkPairs[][2] =
+// Crestfall: coop opponents - builds a co-op opponent from the LAST 3 Pokemon of
+// the trainer's party (their strongest). Levels are forced to 100 elsewhere.
+static void CreateCoopOpponentParty(struct Pokemon *party, u16 trainerId)
 {
-    { TRAINER_ROBIN_1,       TRAINER_OMAR_1 },
-    { TRAINER_LEADER_INGRID, TRAINER_LEADER_FRIEDE },
-};
+    struct Trainer trainer = *GetTrainerStructFromId(trainerId);
+
+    if (trainer.partySize > (PARTY_SIZE / 2))
+    {
+        trainer.party += trainer.partySize - (PARTY_SIZE / 2);
+        trainer.partySize = (PARTY_SIZE / 2);
+    }
+    CreateNPCTrainerPartyFromTrainer(party, &trainer);
+}
 
 static void HandleFacilityTrainerBattleEnd(void)
 {
@@ -109,15 +118,13 @@ static void DoFacilityTrainerBattleInternal(u8 facility)
             gBattleTypeFlags |= BATTLE_TYPE_DOUBLE | BATTLE_TYPE_LINK | BATTLE_TYPE_MULTI | BATTLE_TYPE_TOWER_LINK_MULTI;
             if (FlagGet(FLAG_COOP_NO_WHITEOUT))
             {
-                u32 pair = VarGet(VAR_COOP_STREAK) % ARRAY_COUNT(sCoopLinkPairs);
-
                 gCoopLinkBattle = TRUE;
-                TRAINER_BATTLE_PARAM.opponentA = sCoopLinkPairs[pair][0];
-                TRAINER_BATTLE_PARAM.opponentB = sCoopLinkPairs[pair][1];
+                TRAINER_BATTLE_PARAM.opponentA = Crucible_GetCoopOpponent(VarGet(VAR_COOP_STREAK), 0);
+                TRAINER_BATTLE_PARAM.opponentB = Crucible_GetCoopOpponent(VarGet(VAR_COOP_STREAK), 1);
                 ZeroEnemyPartyMons();
                 gBattleTypeFlags |= BATTLE_TYPE_TWO_OPPONENTS; // temporary, caps teams at 3
-                CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_OPPONENT_A], GetTrainerStructFromId(TRAINER_BATTLE_PARAM.opponentA));
-                CreateNPCTrainerPartyFromTrainer(gParties[B_TRAINER_OPPONENT_B], GetTrainerStructFromId(TRAINER_BATTLE_PARAM.opponentB));
+                CreateCoopOpponentParty(gParties[B_TRAINER_OPPONENT_A], TRAINER_BATTLE_PARAM.opponentA);
+                CreateCoopOpponentParty(gParties[B_TRAINER_OPPONENT_B], TRAINER_BATTLE_PARAM.opponentB);
                 gBattleTypeFlags &= ~BATTLE_TYPE_TWO_OPPONENTS;
             }
             else

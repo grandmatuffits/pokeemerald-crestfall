@@ -122,6 +122,7 @@ static void FinishBlockReceive(u8 who);
 static void LinkCB_SendHeldKeys(void);
 static void ResetBlockSend(void);
 static bool32 InitBlockSend(const void *, size_t);
+static void LinkCB_NetBlockSendWait(void);
 static void LinkCB_BlockSendBegin(void);
 static void LinkCB_BlockSend(void);
 static void LinkCB_BlockSendEnd(void);
@@ -954,8 +955,15 @@ static bool32 InitBlockSend(const void *src, size_t size)
             memcpy(gBlockSendBuffer, src, size);
         if (NetLink_SendBlock(gBlockSendBuffer, size))
         {
-            // Our own copy, like the cable echoing our data back to us
-            Link_DeliverNetBlock(GetMultiplayerId(), gBlockSendBuffer, size);
+            // Crestfall: cable timing - our own copy arrives, and the send counts as
+            // finished, after as many frames as the cable would take (3 + 1 per 14 bytes)
+            sBlockSend.multiplayerId = GetMultiplayerId();
+            sBlockSend.active = TRUE;
+            sBlockSend.size = size;
+            sBlockSend.pos = 0;
+            sBlockSend.src = gBlockSendBuffer;
+            sBlockSendDelayCounter = 3 + (size + 13) / 14;
+            gLinkCallback = LinkCB_NetBlockSendWait;
             return TRUE;
         }
         src = gBlockSendBuffer;
@@ -979,6 +987,21 @@ static bool32 InitBlockSend(const void *src, size_t size)
     gLinkCallback = LinkCB_BlockSendBegin;
     sBlockSendDelayCounter = 0;
     return TRUE;
+}
+
+// Crestfall: cable timing - finish a network block send on the cable's schedule
+static void LinkCB_NetBlockSendWait(void)
+{
+    if (sBlockSendDelayCounter > 1)
+    {
+        sBlockSendDelayCounter--;
+        return;
+    }
+    if (!Link_NetBlockSlotFree(sBlockSend.multiplayerId))
+        return; // the game hasn't read our previous block yet
+    Link_DeliverNetBlock(sBlockSend.multiplayerId, gBlockSendBuffer, sBlockSend.size);
+    sBlockSend.active = FALSE;
+    gLinkCallback = NULL;
 }
 
 static void LinkCB_BlockSendBegin(void)

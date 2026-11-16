@@ -658,6 +658,8 @@ gSongTable::
 			song mus_enpale_belmont, MUSIC_PLAYER_BGM, 0
 			song mus_enpale_n, MUSIC_PLAYER_BGM, 0
 			song mus_enpale_plasma, MUSIC_PLAYER_BGM, 0
+			song mus_enpale_crucible, MUSIC_PLAYER_BGM, 0
+			song mus_enpale_crucible_battle, MUSIC_PLAYER_BGM, 0
 	
 	.align 2
 dummy_song_header:

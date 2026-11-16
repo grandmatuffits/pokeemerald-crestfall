@@ -588,6 +588,8 @@
 #define MUS_ENPALE_BELMONT           649
 #define MUS_ENPALE_N           650
 #define MUS_ENPALE_PLASMA           651
+#define MUS_ENPALE_CRUCIBLE           652
+#define MUS_ENPALE_CRUCIBLE_BATTLE    653
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

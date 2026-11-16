@@ -81,6 +81,7 @@ static EWRAM_DATA struct {
     u8 helloTimer;
     u8 partnerHelloAge;
     u16 blockStall;
+    u16 frame;            // counts NetLink_Main1 calls (for cable-speed block pacing)
     u8 lastHeartbeat;
     u8 heartbeatAge;
     bool8 queueFull;
@@ -268,6 +269,9 @@ static void InPushBlock(u8 slot)
         idx -= NET_IN_RING_SIZE;
     sNet.inRows[idx].type = NETREC_BLOCK;
     sNet.inRows[idx].slot = slot;
+    // Cable timing: a block can't arrive sooner than the cable would deliver it
+    // (3 frames + 1 per 14 bytes), counted from when it reaches us.
+    sNet.inRows[idx].cmd[0] = sNet.frame + 3 + (sNet.inBlockSize[slot] + 13) / 14;
     sNet.inCount++;
 }
 
@@ -518,6 +522,8 @@ u32 NetLink_Main1(u8 *shouldAdvanceLinkState, u16 *sendCmd, u16 (*recvCmds)[CMD_
     u8 self = NetLink_GetMultiplayerId();
     u8 partner = self ^ 1;
 
+    sNet.frame++;
+
     // Is the Lua host still running?
     if (gNetMailbox.hostHeartbeat != sNet.lastHeartbeat)
     {
@@ -667,7 +673,11 @@ u32 NetLink_Main1(u8 *shouldAdvanceLinkState, u16 *sendCmd, u16 (*recvCmds)[CMD_
         row = InPeek();
         if (row != NULL && row->type == NETREC_BLOCK)
         {
-            if (Link_NetBlockSlotFree(partner))
+            if ((s16)(sNet.frame - row->cmd[0]) < 0)
+            {
+                // still "on the wire" at cable speed
+            }
+            else if (Link_NetBlockSlotFree(partner))
             {
                 Link_DeliverNetBlock(partner, sNet.inBlocks[row->slot], sNet.inBlockSize[row->slot]);
                 InPop();

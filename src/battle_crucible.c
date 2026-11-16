@@ -156,6 +156,81 @@ static const struct CrucibleTier sTiers[] = {
 
 enum { TIER_1, TIER_2, TIER_3, TIER_FINAL, TIER_FINAL_HELL, TIER_COUNT };
 
+// ---------------------------------------------------------------------------
+// Co-op (Crestfall: coop opponents): two trainers per battle, same tiers as Singles.
+// The host builds the schedule; the partner gets a copy over the link.
+// ---------------------------------------------------------------------------
+
+static EWRAM_DATA u16 sCoopSchedule[CRUCIBLE_COOP_BATTLES][2] = {0};
+
+static u16 PickFromTierNoRepeat(u8 tier, u32 *usedMask)
+{
+    const struct CrucibleTier *t = &sTiers[tier];
+    u8 avail[32];
+    u8 n = 0, i;
+
+    for (i = 0; i < t->count && i < 32; i++)
+    {
+        if (!(*usedMask & (1u << i)))
+            avail[n++] = i;
+    }
+    if (n == 0) // pool exhausted: allow repeats
+    {
+        *usedMask = 0;
+        for (i = 0; i < t->count && i < 32; i++)
+            avail[n++] = i;
+    }
+    i = avail[Random() % n];
+    *usedMask |= (1u << i);
+    return t->list[i];
+}
+
+// Host only: picks both opponents for all 10 battles, no trainer twice in a run.
+void Crucible_BuildCoopSchedule(void)
+{
+    u32 used[TIER_COUNT] = {0};
+    u8 b, tier;
+
+    for (b = 0; b < CRUCIBLE_COOP_BATTLES; b++)
+    {
+        u8 battleNum = b + 1;
+
+        if (battleNum <= 4)
+            tier = TIER_1;
+        else if (battleNum <= 7)
+            tier = TIER_2;
+        else if (battleNum <= 9)
+            tier = TIER_3;
+        else
+            tier = TIER_FINAL;
+        sCoopSchedule[b][0] = PickFromTierNoRepeat(tier, &used[tier]);
+        sCoopSchedule[b][1] = PickFromTierNoRepeat(tier, &used[tier]);
+    }
+}
+
+const void *Crucible_GetCoopSchedule(void)
+{
+    return sCoopSchedule;
+}
+
+u16 Crucible_GetCoopScheduleSize(void)
+{
+    return sizeof(sCoopSchedule);
+}
+
+void Crucible_SetCoopSchedule(const void *src)
+{
+    memcpy(sCoopSchedule, src, sizeof(sCoopSchedule));
+}
+
+// battleIdx = wins so far (VAR_COOP_STREAK), which = 0 for opponent A, 1 for B
+u16 Crucible_GetCoopOpponent(u16 battleIdx, u8 which)
+{
+    if (battleIdx >= CRUCIBLE_COOP_BATTLES)
+        battleIdx = CRUCIBLE_COOP_BATTLES - 1;
+    return sCoopSchedule[battleIdx][which & 1];
+}
+
 static const u16 sVitamins[] = {
     ITEM_HP_UP, ITEM_PROTEIN, ITEM_IRON, ITEM_CALCIUM, ITEM_ZINC, ITEM_CARBOS,
 };
@@ -533,6 +608,11 @@ void Crucible_BeginPvp(void)
     }
     HealPlayerParty();
     sPvpActive = TRUE;
+}
+
+bool32 Crucible_IsPvpActive(void)
+{
+    return sPvpActive;
 }
 
 void Crucible_EndPvp(void)

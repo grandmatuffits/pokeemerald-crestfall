@@ -2,7 +2,7 @@
   "id": "MAP_ENPALE_BATTLE_CRUCIBLE",
   "name": "ENPALE_BATTLE_CRUCIBLE",
   "layout": "LAYOUT_ENPALE_BATTLE_CRUCIBLE",
-  "music": "MUS_ENPALE_STARVED",
+  "music": "MUS_ENPALE_CRUCIBLE",
   "region_map_section": "MAPSEC_CERULEAN_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

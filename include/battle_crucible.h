@@ -27,4 +27,14 @@ bool32 Crucible_IsActive(void);
 bool32 Crucible_IsDoubles(void);
 u16 Crucible_GetOpponentId(void);
 
+// Crestfall: coop opponents
+#define CRUCIBLE_COOP_BATTLES 10
+void Crucible_BuildCoopSchedule(void);
+const void *Crucible_GetCoopSchedule(void);
+u16 Crucible_GetCoopScheduleSize(void);
+void Crucible_SetCoopSchedule(const void *src);
+u16 Crucible_GetCoopOpponent(u16 battleIdx, u8 which);
+
+bool32 Crucible_IsPvpActive(void);
+
 #endif // GUARD_BATTLE_CRUCIBLE_H
