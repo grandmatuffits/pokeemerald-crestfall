@@ -7964,9 +7964,30 @@ u8 GetPartyIdFromBattlePartyId(u8 battlePartyId)
 static const u8 sMultiBattlePartyIdToMenuId_Left[PARTY_SIZE] = { 0, 2, 3, 1, 4, 5};
 static const u8 sMultiBattlePartyIdToMenuId_Right[PARTY_SIZE] = { 1, 4, 5, 0, 2, 3};
 
+// Crestfall 2.0.2: a bad gBattlePartyCurrentOrder (same party id in several
+// slots) makes the copy below clone one mon over the whole party. Rebuild it.
+static bool32 IsBattlePartyOrderValid(void)
+{
+    u32 i, seen = 0;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u32 id = GetPartyIdFromBattleSlot(i);
+        if (id >= PARTY_SIZE || (seen & (1u << id)))
+            return FALSE;
+        seen |= 1u << id;
+    }
+    return TRUE;
+}
+
 static void UpdatePartyToBattleOrder(void)
 {
     struct Pokemon *partyBuffer = Alloc(sizeof(gParties[B_TRAINER_PLAYER]));
+
+    if (!IsBattlePartyOrderValid())
+        BufferBattlePartyCurrentOrder();
+    if (partyBuffer == NULL)
+        return;
     u8 i;
     const u8 *multiBattlePartyIdToMenuId = sMultiBattlePartyIdToMenuId_Left;
 
@@ -8000,6 +8021,11 @@ static void UpdatePartyToBattleOrder(void)
 static void UpdatePartyToFieldOrder(void)
 {
     struct Pokemon *partyBuffer = Alloc(sizeof(gParties[B_TRAINER_PLAYER]));
+
+    if (!IsBattlePartyOrderValid())
+        BufferBattlePartyCurrentOrder();
+    if (partyBuffer == NULL)
+        return;
     u8 i;
 
     const u8 *multiBattlePartyIdToMenuId = sMultiBattlePartyIdToMenuId_Left;

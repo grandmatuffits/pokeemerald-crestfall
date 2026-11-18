@@ -302,6 +302,7 @@ void NewGameInitData(void)
     InitEventData();
     FlagSet(FLAG_SYS_B_DASH);
     FlagSet(FLAG_SAVE_REPAIRED_201);
+    FlagSet(FLAG_SAVE_MIGRATED_202);
     ClearTVShowData();
     ResetGabbyAndTy();
     ClearSecretBases();

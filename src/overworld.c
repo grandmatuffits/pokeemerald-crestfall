@@ -52,6 +52,7 @@
 #include "play_time.h"
 #include "random.h"
 #include "roamer.h"
+#include "pokedex.h"
 #include "rotating_gate.h"
 #include "rtc.h"
 #include "safari_zone.h"
@@ -2113,6 +2114,59 @@ static void FieldCB_FadeTryShowMapPopup(void)
     FieldCB_WarpExitFadeFromBlack();
 }
 
+// 2.0 raised ROAMER_COUNT 3 -> 4. That pushed everything after roamer[] in
+// SaveBlock1 (dexSeen, dexCaught, ...) back by sizeof(struct Roamer). A 1.x save
+// still has that data at the old offset, which is now the start of roamer[3].
+static void MigrateSaveBlock1Tail_1x(void)
+{
+    u8 *oldStart = (u8 *)&gSaveBlock1Ptr->roamer[ROAMER_COUNT - 1];
+    u8 *newStart = oldStart + sizeof(struct Roamer);
+    u32 len = ((u8 *)gSaveBlock1Ptr + sizeof(struct SaveBlock1)) - newStart;
+
+    memmove(newStart, oldStart, len);
+    memset(oldStart, 0, sizeof(struct Roamer));
+}
+
+// For 1.x saves already loaded + saved under 2.0.x: roamer[3] still holds the
+// old dexSeen bytes. On a native 2.0 save it is all zero until Keldeo roams.
+static bool32 SaveLooksLike1xLayout(void)
+{
+    u32 i;
+    const u8 *r = (const u8 *)&gSaveBlock1Ptr->roamer[ROAMER_COUNT - 1];
+
+    if (FlagGet(FLAG_KELDEO_ROAMER_STARTED))
+        return FALSE;
+    for (i = 0; i < sizeof(struct Roamer); i++)
+    {
+        if (r[i] != 0)
+            return TRUE;
+    }
+    return FALSE;
+}
+
+static void RegisterOwnedSpeciesInDex(struct BoxPokemon *boxMon)
+{
+    enum Species species = GetBoxMonData(boxMon, MON_DATA_SPECIES);
+    u32 dexNum;
+
+    if (species == SPECIES_NONE || GetBoxMonData(boxMon, MON_DATA_IS_EGG))
+        return;
+    dexNum = SpeciesToNationalPokedexNum(species);
+    GetSetPokedexFlag(dexNum, FLAG_SET_SEEN);
+    GetSetPokedexFlag(dexNum, FLAG_SET_CAUGHT);
+}
+
+static void RegisterAllOwnedMonsInDex(void)
+{
+    u32 box, slot;
+
+    for (slot = 0; slot < PARTY_SIZE; slot++)
+        RegisterOwnedSpeciesInDex(&gPlayerParty[slot].box);
+    for (box = 0; box < TOTAL_BOXES_COUNT; box++)
+        for (slot = 0; slot < IN_BOX_COUNT; slot++)
+            RegisterOwnedSpeciesInDex(&gPokemonStoragePtr->boxes[box][slot]);
+}
+
 void CB2_ContinueSavedGame(void)
 {
     u8 trainerHillMapId;
@@ -2128,10 +2182,28 @@ void CB2_ContinueSavedGame(void)
     {
         if (FlagGet(FLAG_NEW_GAME_PLUS))
         {
+            // 2.0.0 save (every 2.0.0 game started with NG+ on)
             RepairBrokenStorage_201();
             FlagClear(FLAG_NEW_GAME_PLUS);
         }
+        else
+        {
+            // 1.x save loading into 2.0 for the first time
+            MigrateSaveBlock1Tail_1x();
+            RegisterAllOwnedMonsInDex();
+        }
         FlagSet(FLAG_SAVE_REPAIRED_201);
+        FlagSet(FLAG_SAVE_MIGRATED_202);
+    }
+    else if (!FlagGet(FLAG_SAVE_MIGRATED_202))
+    {
+        // 1.x save that was already loaded + saved under 2.0.1
+        if (SaveLooksLike1xLayout())
+        {
+            MigrateSaveBlock1Tail_1x();
+            RegisterAllOwnedMonsInDex();
+        }
+        FlagSet(FLAG_SAVE_MIGRATED_202);
     }
     ClearDiveAndHoleWarps();
     trainerHillMapId = GetCurrentTrainerHillMapId();

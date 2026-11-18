@@ -280,7 +280,7 @@ static const u8 gText_ContinueMenuPlayer[] = _("PLAYER");
 static const u8 gText_ContinueMenuTime[] = _("TIME");
 static const u8 gText_ContinueMenuPokedex[] = _("POKéDEX");
 static const u8 gText_ContinueMenuBadges[] = _("BADGES");
-static const u8 gText_ContinueMenuVersion[] = _("v2.0.0");
+static const u8 gText_ContinueMenuVersion[] = _("v2.1.0");
 static const u8 gText_NewGamePlus_Intro1[] = _("Well, you seem quite sure of\nyourself.\pSo, you think things have\nbeen too easy?");
 static const u8 gText_NewGamePlus_Intro2[] = _("Hmph! I will not tolerate\nsuch hubris!\pBe prepared to face\nreal challenges!");
 #define MENU_LEFT 2
