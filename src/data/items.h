@@ -14819,12 +14819,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Armor inhabited by\n"
             "auspicious wishes.\n"
-            "Causes evolution."),
+            "Held by Charcadet."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
-        .effect = gItemEffect_EvoItem,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
         .iconPic = gItemIcon_AuspiciousArmor,
         .iconPalette = gItemIconPalette_AuspiciousArmor,
@@ -14905,12 +14904,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Armor inhabited by\n"
             "malicious will.\n"
-            "Causes evolution."),
+            "Held by Charcadet."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
-        .effect = gItemEffect_EvoItem,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
         .iconPic = gItemIcon_MaliciousArmor,
         .iconPalette = gItemIconPalette_MaliciousArmor,
@@ -15355,14 +15353,13 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Peat Block"),
         .price = 10000,
         .description = COMPOUND_STRING(
-            "A block of material\n"
-            "that makes some\n"
-            "Pokémon evolve."),
+            "A block of muddy\n"
+            "material. Held by\n"
+            "Ursaring."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
-        .effect = gItemEffect_EvoItem,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
         .iconPic = gItemIcon_PeatBlock,
         .iconPalette = gItemIconPalette_PeatBlock,
@@ -15651,13 +15648,12 @@ const struct ItemInfo gItemsInfo[] =
         .price = 6000,
         .description = COMPOUND_STRING(
             "A peculiar metal\n"
-            "that makes certain\n"
-            "Pokémon evolve."),
+            "alloy. Held by\n"
+            "Duraludon."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
-        .effect = gItemEffect_EvoItem,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_MetalAlloy,
         .iconPalette = gItemIconPalette_MetalAlloy,
     },

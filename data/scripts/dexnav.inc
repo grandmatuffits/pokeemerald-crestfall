@@ -34,7 +34,7 @@ sText_NotFoundNearby:
 
 sText_TryMovingSlower:
 	.string "The Pokémon got away!\n"
-	.string "Try moving more slowly.$"
+	.string "Hold A to sneak up on it.$"
 
 sText_PokemonGotAway:
 	.string "The Pokémon got away!$"

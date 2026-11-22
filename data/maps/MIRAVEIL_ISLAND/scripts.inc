@@ -157,14 +157,16 @@ MIRAVEIL_ISLAND_EventScript_Lady::
 	end
 
 MIRAVEIL_ISLAND_Text_Lady:
-	.string "Brigham is quite the philanthropist.\nHis aunt likes to keep her money to herself.$"	
+	.string "Brigham is quite the philanthropist.\nHis aunt likes to keep her money to\p" 
+	.string "herself.$"	
 
 MIRAVEIL_ISLAND_EventScript_Man::
 	msgbox MIRAVEIL_ISLAND_Text_Man, MSGBOX_NPC
 	end
 
 MIRAVEIL_ISLAND_Text_Man:
-	.string "That Meryl is quite the snoot, but she sure is fancy.$"		
+	.string "That Meryl is quite the snoot, but she\n"
+	.string "sure is fancy.$"		
 
 MIRAVEIL_ISLAND_EventScript_Block1::
 	msgbox MIRAVEIL_ISLAND_Text_Block1, MSGBOX_NPC

@@ -2,7 +2,7 @@
 -- Bridge between Pokemon Crestfall's NetMailbox (EWRAM) and relay.js.
 -- Load in mGBA: Tools > Scripting... > File > Load script...
 
-local HOST = "100.87.131.115"   -- relay address
+local HOST = "crestfall-coop.duckdns.org"   -- relay address
 local PORT = 9000
 local ROOM = ""          -- leave empty: the co-op NPC asks for a room code in-game
 

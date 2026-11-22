@@ -364,7 +364,7 @@ ENPALE_LEAGUE_ARENA_Text_HemlockHoF:
 	.string "Heh, good ol' Brutus. We go back\n"
 	.string "pretty far. He's never been\l"
 	.string "good about taking a loss.\p"
-	.string "What you just didn't wasn't luck.\n"
+	.string "What you just did wasn't luck.\n"
 	.string "That was just good battling.\l"
 	.string "Truth be told, the League's.\p"
 	.string "been stale for a while with\n"
